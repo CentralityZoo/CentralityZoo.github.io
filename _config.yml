@@ -45,7 +45,7 @@ defaults:
       path: ""   # applies to all files
       type: "pages"
     values:
-      layout: "single"
+      layout: "wide"
       css: ["custom"]
 
 # Exclude from processing.
