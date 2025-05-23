@@ -104,8 +104,8 @@ defaults:
       path: "_pages"
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: wide
+      author_profile: false
 
 category_archive:
   type: liquid
