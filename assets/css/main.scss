@@ -48,19 +48,17 @@ body {
 
 
 .page__footer {
-  padding-top: 0.5em;  // reduce from default ~1.5em
-  padding-bottom: 0.5em;
+  padding-top: 0.0em;  // reduce from default ~1.5em
+  padding-bottom: 0.0em;
 
-  // If you want even less space:
-  // padding: 0.25em 0;
 
   .page__footer-copyright {
-    margin-top: 0.5em; // reduce top margin
-    margin-bottom: 0.5em;
+    margin-top: 0.0em; // reduce top margin
+    margin-bottom: 0.0em;
   }
 
   .page__footer-follow {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.0em;
+    margin-bottom: 0.0em;
   }
 }
