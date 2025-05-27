@@ -33,4 +33,16 @@ body {
 .site-title {
   margin-left: 10px !important;
   padding-left: 10px !important;
+  color: #ffffff;  /* or #f0f0f0 for a softer look */
+}
+
+
+/* Color for the navigation links */
+.masthead__menu-item a {
+  color: #ffffff; /* white text for better contrast on dark background */
+}
+
+/* Optional: color on hover for navigation links */
+.masthead__menu-item a:hover {
+  color: #cccccc; /* subtle change on hover for interaction */
 }
