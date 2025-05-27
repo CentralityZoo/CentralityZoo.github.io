@@ -115,7 +115,6 @@ defaults:
       type: "pages"
     values:
       layout: wide
-      css: ["custom"]
       show_nav: true
 
 
