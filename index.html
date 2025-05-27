@@ -3,5 +3,32 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
+title: Welcome to Centrality Zoo
 author_profile: false
+permalink: /
 ---
+
+<div class="homepage-intro">
+  <h1>Welcome to Centrality Zoo!</h1>
+  <p>This is our new homepage. Here's a cool animation and some images!</p>
+
+  <img src="/assets/images/your-image.jpg" alt="Description" style="width:300px; border-radius: 10px;">
+
+  <div class="animated-box"></div>
+</div>
+
+<style>
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: pulse 2s infinite;
+  border-radius: 8px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+</style>
