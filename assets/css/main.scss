@@ -49,20 +49,20 @@ body {
 
 
 .page__footer {
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0.1 !important;
+  margin: 0.1 !important;
 }
 
 /* Remove any extra padding from the inner footer elements */
 .page__footer footer {
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0.1 !important;
+  margin: 0.1 !important;
 }
 
 /* Remove margin from copyright area */
 .page__footer-copyright {
   margin: 0 !important;
   padding: 0.2em 0 !important; /* Adjust for slight breathing room, or set to 0 */
-  font-size: 0.85em; /* Optional: slightly smaller text */
-  text-align: center; /* Optional: keep it centered */
+  /*font-size: 0.85em;  Optional: slightly smaller text */
+  /*text-align: center; Optional: keep it centered */
 }
