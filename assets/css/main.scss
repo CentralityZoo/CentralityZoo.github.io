@@ -21,7 +21,7 @@ body {
 #site-nav {
   max-width: 100% !important;
   width: 100% !important;
-  padding-left: 0 !important;
+  padding-left: 5% !important;
   padding-right: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -29,5 +29,11 @@ body {
 
 
 .masthead {
-  background-color: #fff; // or your desired color
+  background-color: #F8F8F8; // or your desired color
+}
+
+
+.site-title {
+  margin-left: 20px !important;
+  padding-left: 20px !important;
 }
