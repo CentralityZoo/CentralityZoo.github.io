@@ -109,6 +109,7 @@ defaults:
     values:
       layout: single
       author_profile: false
+      css: ["custom"]
       show_nav: true
   # all other pages
   - scope:
@@ -116,6 +117,7 @@ defaults:
       type: "pages"
     values:
       layout: wide
+      css: ["custom"]
       show_nav: true
 
 
