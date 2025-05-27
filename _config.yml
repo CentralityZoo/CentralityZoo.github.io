@@ -100,14 +100,23 @@ defaults:
       comments: true
       share: true
       related: true
+      show_nav: true
   # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
-      layout: wide
+      layout: single
       author_profile: false
+      show_nav: true
+  # all other pages
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: wide
       css: ["custom"]
+      show_nav: true
 
 
 sass:
