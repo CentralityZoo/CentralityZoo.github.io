@@ -48,21 +48,21 @@ body {
 
 
 
-// Reduce footer height
 .page__footer {
-  padding: 0.0em 0 !important; // significantly reduce padding
-  margin: 0 !important;
-}
-
-// Remove default spacing in the footer content
-.page__footer .page__footer-follow,
-.page__footer .page__footer-copyright {
-  margin: 0 !important;
   padding: 0 !important;
+  margin: 0 !important;
 }
 
-// Remove top and bottom padding of the wrapper within footer
-.page__footer .wrapper {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+/* Remove any extra padding from the inner footer elements */
+.page__footer footer {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove margin from copyright area */
+.page__footer-copyright {
+  margin: 0 !important;
+  padding: 0.2em 0 !important; /* Adjust for slight breathing room, or set to 0 */
+  font-size: 0.85em; /* Optional: slightly smaller text */
+  text-align: center; /* Optional: keep it centered */
 }
