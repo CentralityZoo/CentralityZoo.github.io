@@ -1,10 +1,23 @@
-.site-header .wrap {
+.masthead {
   max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
-
-.site-header {
-  background-color: rgb(45, 67, 89); /* Replace with your desired color */
+/* Remove the default container width constraint for nav bar */
+.masthead .wrap {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 1rem; /* Optional: add some horizontal padding */
 }
+
+/* Make sure the menu items are spaced properly */
+.site-nav {
+  justify-content: space-between;
+}
+
+/* Optional: tweak background color or add box-shadow */
+.masthead {
+  background-color: rgb(240, 240, 240); /* Replace with your RGB color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
