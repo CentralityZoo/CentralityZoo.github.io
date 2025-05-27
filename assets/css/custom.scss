@@ -10,6 +10,25 @@
   margin-right: 0 !important;
 }
 
+
+.masthead {
+  background-color: #2F4F4F; /* or your preferred color */
+  width: 100vw;  /* full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: 9999; /* make sure it's on top */
+}
+
+.masthead__inner-wrap {
+  max-width: 1200px; /* or whatever container width you want */
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .masthead {
   background-color: #fff; /* optional: make sure header background spans full width */
 }
