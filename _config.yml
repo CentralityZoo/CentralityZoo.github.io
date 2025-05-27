@@ -21,7 +21,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 twitter_username: username
 github_username: username
-show_nav: true
 minimal_mistakes_skin: default
 search: true
 
@@ -37,8 +36,6 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 include:
   - _pages
 
-sass:
-  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -111,6 +108,10 @@ defaults:
       layout: wide
       author_profile: false
       css: ["custom"]
+
+
+sass:
+  style: compressed
 
 
 category_archive:
