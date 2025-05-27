@@ -78,6 +78,7 @@ plugins:
 #      url: "https://instagram.com/"
 
 footer:
+  copyright: ""
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
