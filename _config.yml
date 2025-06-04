@@ -64,7 +64,7 @@ author:
   name   : "Sergey Shvydun"
   avatar : "/assets/images/bio-photo.jpg"
   links:
-      - label: "Google Scholar"
+    - label: "Google Scholar"
       icon: "ai ai-google-scholar"  # Requires Academicons
       url: "https://scholar.google.com/citations?hl=en&user=_VidLIkAAAAJ"
     - label: "ORCID"
