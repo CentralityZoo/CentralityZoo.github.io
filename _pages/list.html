@@ -1,28 +1,20 @@
 ---
 title: Centralities
 permalink: /list/
-layout: default
 ---
 
 <h1>Centralities</h1>
 
-<p>
-  There is no unique definition of centrality. It depends on the type of network, the dynamics or process running on it and the context in which it is applied.
-</p>
-
-<p>
-  Over time, researchers have developed a vast array of centrality measures, resulting in a rich and diverse collection of methods to analyze complex networks.
-</p>
+There is no unique definition of centrality. It depends on the type of network, the dynamics or process running on it and the context in which it is applied. Over time, researchers have developed a vast array of centrality measures, resulting in a rich and diverse collection of methods to analyze complex networks.
 
 <div class="image-row">
   <figure>
-    <img src="CentralityZoo.github.io/assets/images/zoo_image.png" alt="Zoo of Centralities" />
+    <img src="https://centralityzoo.github.io/assets/images/zoo_image.png" alt="Zoo of Centralities" />
   </figure>
 </div>
 
 <p>
-  This page provides a verified list of various metrics for nodes. While some, such as the clustering coefficient, are not centrality measures, they all quantify important properties of nodes within a network. Detailed descriptions will be available on their dedicated pages soon.<br>
-  If you have developed or contributed to a centrality measure that you believe should be included, please <a href="https://forms.gle/8mesci7x1qYaQedSA" target="_blank" rel="noopener noreferrer">submit it through this form</a>.
+  This page provides a verified list of various metrics for nodes. While some, such as the clustering coefficient, are not centrality measures, they all quantify important properties of nodes within a network. Detailed descriptions will be available on their dedicated pages soon. If you have developed or contributed to a centrality measure that you believe should be included, please <a href="https://forms.gle/8mesci7x1qYaQedSA" target="_blank" rel="noopener noreferrer">submit it through this form</a>.
 </p>
 
 <style>
@@ -30,16 +22,20 @@ layout: default
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.5rem 1.5rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     list-style-type: disc;
     padding-left: 1.2rem;
   }
-  .centrality-list li {
-    margin-bottom: 0.3rem;
-  }
-</style>
+  ol {
+  margin-left: 1.2em;  /* smaller left margin */
+  padding-left: 0;
+}
 
-<h2>List of Centrality Measures (Alphabetical)</h2>
+ol li {
+  margin-bottom: 0.05em;  /* less space between items */
+  font-size: 0.8em;      /* optional: slightly smaller font */
+}
+</style>
 
 <ol class="centrality-list">
   <li>Access information</li>
