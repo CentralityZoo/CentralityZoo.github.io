@@ -5,7 +5,7 @@ permalink: /list/
 
 <h1>Centralities</h1>
 
-There is no unique definition of centrality. It depends on the type of network, the dynamics or process running on it and the context in which it is applied. Over time, researchers have developed a vast array of centrality measures, resulting in a rich and diverse collection of methods to analyze complex networks.
+Centrality has no single definition—it depends on the network, its dynamics, and context. This has led to a “zoo” of diverse centrality measures used to analyze complex networks.
 
 <div class="image-row">
   <figure>
@@ -20,9 +20,9 @@ There is no unique definition of centrality. It depends on the type of network, 
 <style>
   .centrality-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem 1.5rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     list-style-type: disc;
     padding-left: 1.2rem;
   }
@@ -40,125 +40,135 @@ ol li {
 
 <ol class="centrality-list">
   <li>Access information</li>
-  <li>Absorbing random-walk (ARW)</li>
-  <li>Adaptive LeaderRank (ALR)</li>
-  <li>Algebraic centrality</li>
-  <li>AIC</li>
-  <li>ArticleRank</li>
-  <li>Betweenness</li>
-  <li>BG-index</li>
-  <li>BottleNeck</li>
-  <li>Bridging capital</li>
-  <li>Bridging Centrality</li>
-  <li>Bridging Coefficient</li>
-  <li>Borgatti's effective size</li>
-  <li>Burt's constraint</li>
-  <li>Centroid</li>
-  <li>Closeness</li>
-  <li>Closeness vitality</li>
-  <li>ClusterRank</li>
-  <li>Collective Influence</li>
-  <li>Community-based centrality (CbC)</li>
-  <li>Community centrality</li>
-  <li>Communicability betweenness</li>
-  <li>CON Score</li>
-  <li>Counting betweenness (CBET)</li>
-  <li>Cross-Clique Connectivity</li>
-  <li>Decay</li>
-  <li>Degree</li>
-  <li>Degree mass</li>
-  <li>Diffusion centrality</li>
-  <li>Diffusion Degree</li>
-  <li>DMNC</li>
-  <li>Dynamical influence</li>
-  <li>Dynamical importance</li>
-  <li>DST</li>
-  <li>Effective distance gravity (EffG)</li>
-  <li>Effective size</li>
-  <li>Eccentricity</li>
-  <li>Edge clustering coefficient centrality (NC)</li>
-  <li>Edge-disjoint k-path</li>
-  <li>Eigentrust</li>
-  <li>Eigenvector</li>
-  <li>Entropy</li>
-  <li>Exogenous centrality</li>
-  <li>Flow betweenness</li>
-  <li>Game centrality</li>
-  <li>Gil-Schmidt Power Index</li>
-  <li>Godfather Index</li>
-  <li>Graph-theoretic power index (GPI)</li>
-  <li>Graphlet degree centrality (GDC)</li>
-  <li>Gravity centrality</li>
-  <li>Gravity model</li>
-  <li>Harmonic</li>
-  <li>Heatmap centrality</li>
-  <li>Hide information</li>
-  <li>HITS (hubs and authorities)</li>
-  <li>Hubbel</li>
-  <li>Immediate effects centrality (IEC)</li>
-  <li>Intra-module degree</li>
-  <li>Isolating centrality (ISC)</li>
-  <li>Katz</li>
-  <li>KED</li>
-  <li>k-path</li>
-  <li>k-shell</li>
-  <li>k-betweenness</li>
-  <li>Length-scaled betweenness</li>
-  <li>LeaderRank</li>
-  <li>Leverage</li>
-  <li>LineRank</li>
-  <li>Linearly scaled betweenness</li>
-  <li>Local H-index</li>
-  <li>Local gravity model</li>
-  <li>Local reaching</li>
-  <li>LocalRank</li>
-  <li>Localized bridging centrality (LBC)</li>
-  <li>Local clustering coefficient</li>
-  <li>Lobby index</li>
-  <li>Load</li>
-  <li>MCC</li>
-  <li>Mediative effects centrality (MEC)</li>
-  <li>MNC</li>
-  <li>Markov</li>
-  <li>Mixed degree decomposition (MDD)</li>
-  <li>Mu-power community index (μ-PCI)</li>
-  <li>Neighborhood connectivity</li>
-  <li>Nieminen's closeness</li>
-  <li>Non-backtracking centrality</li>
-  <li>Node contraction (IMC)</li>
-  <li>Outward accessibility</li>
-  <li>PageRank</li>
-  <li>Pairwise disconnectivity</li>
-  <li>Participation coefficient</li>
-  <li>Percolation</li>
-  <li>Proximal betwenness</li>
-  <li>Radiality</li>
-  <li>Rank centrality</li>
-  <li>Random walk accessibility (RWA)</li>
-  <li>Random walk centrality (RWC)</li>
-  <li>Random walk decay</li>
-  <li>Redundancy</li>
-  <li>Residual closeness</li>
-  <li>Routing Betweenness</li>
-  <li>Rumor centrality</li>
-  <li>SALSA</li>
-  <li>Second order centrality</li>
-  <li>Seeley’s index</li>
-  <li>Shapley value (game 1)</li>
-  <li>Shapley value (game 2)</li>
-  <li>Shapley value (game 3)</li>
-  <li>SpectralRank (SR)</li>
-  <li>SRIC</li>
-  <li>Stress</li>
-  <li>Subgraph</li>
-  <li>Support</li>
-  <li>Trophic level</li>
-  <li>Total centrality</li>
-  <li>Total Communicability (TTC)</li>
-  <li>Total Effects Centrality (TEC)</li>
-  <li>Topological</li>
-  <li>VoteRank</li>
-  <li>ViralRank</li>
-  <li>WKPaths</li>
-  <li>Zeta vector centrality</li>
+<li>Absorbing random-walk (ARW)</li>
+<li>AIC</li>
+<li>Adaptive LeaderRank (ALR)</li>
+<li>Algebraic centrality</li>
+<li>ArticleRank</li>
+<li>BG-index</li>
+<li>Betweenness</li>
+<li>Bridging capital</li>
+<li>Bridging Centrality</li>
+<li>Bridging Coefficient</li>
+<li>BottleNeck</li>
+<li>Borgatti's effective size</li>
+<li>Burt's constraint</li>
+<li>CBET (Counting betweenness)</li>
+<li>Centroid</li>
+<li>ClusterRank</li>
+<li>Closeness</li>
+<li>Closeness vitality</li>
+<li>Collective Influence</li>
+<li>Community-based centrality (CbC)</li>
+<li>Community centrality</li>
+<li>CON Score</li>
+<li>Cross-Clique Connectivity</li>
+<li>Cumulative contact probability (CCP)</li>
+<li>Decay</li>
+<li>Degree</li>
+<li>Degree mass</li>
+<li>Diffusion centrality</li>
+<li>Diffusion Degree</li>
+<li>DMNC</li>
+<li>Dynamical importance</li>
+<li>Dynamical influence</li>
+<li>DST</li>
+<li>Edge clustering coefficient centrality (NC)</li>
+<li>Edge-disjoint k-path</li>
+<li>Eccentricity</li>
+<li>Effective distance gravity (EffG)</li>
+<li>Effective size</li>
+<li>Eigentrust</li>
+<li>Eigenvector</li>
+<li>Entropy</li>
+<li>Exogenous centrality</li>
+<li>Extended LBC</li>
+<li>Extended neighborhood coreness</li>
+<li>Flow betweenness</li>
+<li>Game centrality</li>
+<li>Gil-Schmidt Power Index</li>
+<li>Godfather Index</li>
+<li>Graph-theoretic power index (GPI)</li>
+<li>Graphlet degree centrality (GDC)</li>
+<li>Gravity centrality</li>
+<li>Gravity model</li>
+<li>Gromov centrality</li>
+<li>HITS (hubs and authorities)</li>
+<li>Heatmap centrality</li>
+<li>Harmonic</li>
+<li>Hide information</li>
+<li>Immediate effects centrality (IEC)</li>
+<li>Improved IMC</li>
+<li>Improved neighbors’ k-core (INK)</li>
+<li>Intra-module degree</li>
+<li>Isolating centrality (ISC)</li>
+<li>KED</li>
+<li>Katz</li>
+<li>k-betweenness</li>
+<li>k-path</li>
+<li>k-shell</li>
+<li>Length-scaled betweenness</li>
+<li>LeaderRank</li>
+<li>Leverage</li>
+<li>Lin's index</li>
+<li>LineRank</li>
+<li>Linearly scaled betweenness</li>
+<li>Local H-index</li>
+<li>Local gravity model</li>
+<li>Local clustering coefficient</li>
+<li>LocalRank</li>
+<li>Localized bridging centrality (LBC)</li>
+<li>Local reaching</li>
+<li>Lobby index</li>
+<li>Load</li>
+<li>LRIC(max)</li>
+<li>LRIC(maxmin)</li>
+<li>LRIC(PPR)</li>
+<li>LRIC-sim</li>
+<li>MCC</li>
+<li>Markov</li>
+<li>Mediative effects centrality (MEC)</li>
+<li>Mixed degree decomposition (MDD)</li>
+<li>MNC</li>
+<li>Neighborhood connectivity</li>
+<li>Nieminen's closeness</li>
+<li>Node contraction (IMC)</li>
+<li>Non-backtracking centrality</li>
+<li>Outward accessibility</li>
+<li>PageRank</li>
+<li>Pairwise disconnectivity</li>
+<li>Participation coefficient</li>
+<li>Percolation</li>
+<li>Proximal betwenness</li>
+<li>Radiality</li>
+<li>Random walk accessibility (RWA)</li>
+<li>Random walk centrality (RWC)</li>
+<li>Random walk decay</li>
+<li>Rank centrality</li>
+<li>Redundancy</li>
+<li>Residual closeness</li>
+<li>Routing Betweenness</li>
+<li>Rumor centrality</li>
+<li>SALSA</li>
+<li>Second order centrality</li>
+<li>Seeley’s index</li>
+<li>Shapley value (game 1)</li>
+<li>Shapley value (game 2)</li>
+<li>Shapley value (game 3)</li>
+<li>SpectralRank (SR)</li>
+<li>SRIC</li>
+<li>Stress</li>
+<li>Subgraph</li>
+<li>Support</li>
+<li>Trophic level</li>
+<li>Total centrality</li>
+<li>Total Communicability (TTC)</li>
+<li>Total Effects Centrality (TEC)</li>
+<li>Topological</li>
+<li>VoteRank</li>
+<li>ViralRank</li>
+<li>Vertex-disjoint k-path</li>
+<li>Weighted LeaderRank</li>
+<li>WKPaths</li>
+<li>Zeta vector centrality</li>
 </ol>
