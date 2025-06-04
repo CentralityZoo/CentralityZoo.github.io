@@ -60,23 +60,25 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
-#author:
-#  name   : "First Lastname"
-#  avatar : "/assets/images/bio-photo.jpg"
-#  bio    : "My awesome biography constrained to a sentence or two goes here."
-#  links:
-#    - label: "Website"
-#      icon: "fas fa-fw fa-link"
-#      url: "https://"
-#    - label: "Twitter"
-#      icon: "fab fa-fw fa-twitter-square"
-#      url: "https://twitter.com/"
-#    - label: "GitHub"
-#      icon: "fab fa-fw fa-github"
-#      url: "https://github.com/"
-#    - label: "Instagram"
-#      icon: "fab fa-fw fa-instagram"
-#      url: "https://instagram.com/"
+author:
+  name   : "Sergey Shvydun"
+  avatar : "/assets/images/bio-photo.jpg"
+  links:
+      - label: "Google Scholar"
+      icon: "ai ai-google-scholar"  # Requires Academicons
+      url: "https://scholar.google.com/citations?hl=en&user=_VidLIkAAAAJ"
+    - label: "ORCID"
+      icon: "ai ai-orcid"  # Requires Academicons
+      url: "https://orcid.org/0000-0002-6031-8614"
+    - label: "Scopus"
+      icon: "ai ai-scopus"  # Requires Academicons
+      url: "https://www.scopus.com/authid/detail.uri?partnerID=HzOxMe3b&authorId=55862150500&origin=inward"
+    - label: "ResearchGate"
+      icon: "ai ai-researchgate"  # Requires Academicons
+      url: "http://www.researchgate.net/profile/Sergey_Shvydun"   
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/SergSHV"
 
 footer:
   copyright: ""
