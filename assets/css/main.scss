@@ -14,7 +14,6 @@ body {
 .masthead,
 .masthead__inner-wrap,
 .masthead__menu,
-.masthead__menu-item,
 #site-nav {
   max-width: 100% !important;
   width: 100% !important;
@@ -22,6 +21,10 @@ body {
   padding-right: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
+  background-color: #1D3A50;
+}
+
+.masthead__menu-item {
   background-color: #1D3A50;
 }
 
