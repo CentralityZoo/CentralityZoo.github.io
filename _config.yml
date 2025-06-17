@@ -24,7 +24,12 @@ twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
 css: ["custom"]
-search: true
+search:
+  enabled: true
+  scope:
+    - posts
+    - pages
+
 
 # Build settings
 markdown: kramdown
@@ -135,10 +140,4 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-search:
-  enabled: true
-  scope:
-    - posts
-    - pages
 
