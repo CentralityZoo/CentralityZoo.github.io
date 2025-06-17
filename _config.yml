@@ -26,8 +26,8 @@ minimal_mistakes_skin: default
 css: ["custom"]
 search: true
 search_scope:
-  - posts
-  - pages
+  - _posts
+  - _pages
 
 
 # Build settings
@@ -140,3 +140,5 @@ tag_archive:
   type: liquid
   path: /tags/
 
+lunr:
+  search_within_pages: true
