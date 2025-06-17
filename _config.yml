@@ -136,3 +136,9 @@ tag_archive:
   type: liquid
   path: /tags/
 
+search:
+  enabled: true
+  scope:
+    - posts
+    - pages
+
