@@ -24,7 +24,7 @@ twitter_username: username
 github_username: username
 minimal_mistakes_skin: default
 css: ["custom"]
-search: false
+search: true
 
 # Build settings
 markdown: kramdown
