@@ -27,6 +27,9 @@ css: ["custom"]
 search: true
 lunr:
   search_within_pages: true
+search_scope:
+  - posts
+  - pages
 
 
 # Build settings
