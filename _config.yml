@@ -25,6 +25,7 @@ github_username: username
 minimal_mistakes_skin: default
 css: ["custom"]
 search: true
+search_full_content: true
 search_scope:
   - _posts
   - _pages
@@ -142,4 +143,3 @@ tag_archive:
 
 lunr:
   search_within_pages: true
-  search_full_content: true
