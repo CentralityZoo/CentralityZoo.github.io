@@ -25,8 +25,6 @@ github_username: username
 minimal_mistakes_skin: default
 css: ["custom"]
 search: true
-lunr:
-  search_within_pages: true
 search_scope:
   - posts
   - pages
@@ -34,8 +32,7 @@ search_scope:
 
 # Build settings
 markdown: kramdown
-# remote_theme: mmistakes/minimal-mistakes
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
