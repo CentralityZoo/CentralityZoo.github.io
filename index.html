@@ -36,6 +36,45 @@ search: true
     </figcaption>
     </figure>
   <p>
+    <section>
+  <h2>Yearly Data Chart</h2>
+  <canvas id="barChart" width="600" height="400"></canvas>
+</section>
+
+<!-- Chart.js script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  fetch('{{ "/assets/data/data_centiserver.json" | relative_url }}')
+    .then(response => response.json())
+    .then(dataDict => {
+      const labels = Object.keys(dataDict);
+      const values = Object.values(dataDict);
+
+      const ctx = document.getElementById('barChart').getContext('2d');
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Value by Year',
+            data: values,
+            backgroundColor: 'rgba(255, 159, 64, 0.6)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+</script>
   <p>
   The vast number of centrality measures introduced over time has created several key challenges:
 </p>
