@@ -35,14 +35,15 @@ search: true
       Source: <a href="https://www.centiserver.ir/" target="_blank" rel="noopener noreferrer">Centiserver</a> (site not updated after 2021)
     </figcaption>
     </figure>
+  <figure style="text-align: center;">
+    <canvas id="barChart" width="1020" height="520"></canvas>
+    <figcaption>
+      Source: <a href="https://www.centiserver.ir/" target="_blank" rel="noopener noreferrer">Centiserver</a> (site not updated after 2021)
+    </figcaption>
+  </figure>
   <p>
-    <section>
-  <h2>Yearly Data Chart</h2>
-  <canvas id="barChart" width="600" height="400"></canvas>
-</section>
 
-<!-- Chart.js script -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
   fetch('{{ "/assets/data/data_centiserver.json" | relative_url }}')
     .then(response => response.json())
@@ -57,24 +58,41 @@ search: true
         data: {
           labels: labels,
           datasets: [{
+            // Legend label is ignored since we disable legend
             label: 'Value by Year',
             data: values,
-            backgroundColor: 'rgba(255, 159, 64, 0.6)',
-            borderColor: 'rgba(255, 159, 64, 1)',
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1
           }]
         },
         options: {
           responsive: true,
+          plugins: {
+            legend: {
+              display: false  // ✅ Hides the legend
+            }
+          },
           scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Year'  // ✅ X-axis title
+              }
+            },
             y: {
-              beginAtZero: true
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Number of proposed measures'  // ✅ Y-axis title
+              }
             }
           }
         }
       });
     });
 </script>
+    
   <p>
   The vast number of centrality measures introduced over time has created several key challenges:
 </p>
