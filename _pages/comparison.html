@@ -11,7 +11,7 @@ permalink: /comparison/
   </figure>
 </div>
 
-<input type="text" id="filterInput" placeholder="Filter labels" oninput="filterMatrix()" />
+<input type="text" id="filterInput" placeholder="Filter labels (comma-separated)" oninput="filterMatrix()" />
 
 <div id="matrix"></div>
 
@@ -19,6 +19,7 @@ permalink: /comparison/
   let data;
   let filteredLabels = [];
 
+  // Load JSON
   fetch('/assets/data/correlation.json')
     .then(response => response.json())
     .then(json => {
@@ -27,32 +28,42 @@ permalink: /comparison/
       renderMatrix();
     });
 
+  // Render table
   function renderMatrix() {
     const container = document.getElementById('matrix');
     container.innerHTML = '';
 
+    // Filter indices
     const indices = filteredLabels.map(label => data.labels.indexOf(label)).filter(i => i !== -1);
 
+    // Create table
     const table = document.createElement('table');
+    table.classList.add('correlation-table');
+
+    // Header row
     const headerRow = document.createElement('tr');
-    headerRow.appendChild(document.createElement('th'));
+    headerRow.appendChild(document.createElement('th')); // empty corner
 
     filteredLabels.forEach(label => {
       const th = document.createElement('th');
       th.textContent = label;
+      th.classList.add('rotated-header');
       headerRow.appendChild(th);
     });
     table.appendChild(headerRow);
 
+    // Data rows
     indices.forEach(rowIdx => {
       const row = document.createElement('tr');
-      const th = document.createElement('th');
-      th.textContent = data.labels[rowIdx];
-      row.appendChild(th);
+      const rowHeader = document.createElement('th');
+      rowHeader.textContent = data.labels[rowIdx];
+      row.appendChild(rowHeader);
 
       indices.forEach(colIdx => {
+        const val = data.matrix[rowIdx][colIdx];
         const td = document.createElement('td');
-        td.textContent = data.matrix[rowIdx][colIdx].toFixed(2);
+        td.textContent = val.toFixed(2);
+        td.style.backgroundColor = getColor(val);
         row.appendChild(td);
       });
 
@@ -62,16 +73,56 @@ permalink: /comparison/
     container.appendChild(table);
   }
 
+  // Filtering multiple columns
   function filterMatrix() {
     const input = document.getElementById('filterInput').value.toLowerCase();
-    filteredLabels = data.labels.filter(label => label.toLowerCase().includes(input));
+    if (!input.trim()) {
+      filteredLabels = [...data.labels];
+    } else {
+      const terms = input.split(',').map(s => s.trim().toLowerCase());
+      filteredLabels = data.labels.filter(label =>
+        terms.some(term => label.toLowerCase().includes(term))
+      );
+    }
     renderMatrix();
+  }
+
+  // Color mapping: 0 = white, 1 = red
+  function getColor(value) {
+    const r = Math.round(255 * value);
+    const g = 255 * (1 - value);
+    const b = 255 * (1 - value);
+    return `rgb(${r},${g},${g})`; 
   }
 </script>
 
 <style>
-  table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
-  th { background-color: #eee; }
+  /* Smaller font size */
+  table.correlation-table {
+    font-size: 12px;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  table.correlation-table th,
+  table.correlation-table td {
+    border: 1px solid #ccc;
+    padding: 4px;
+    text-align: center;
+    min-width: 30px;
+  }
+
+  /* Rotated column headers */
+  .rotated-header {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+
+  /* Nice header background */
+  table.correlation-table th {
+    background-color: #f0f0f0;
+  }
 </style>
 
 <p>More detailed and interactive comparisons and analysis will be added soon (TBA).</p>
