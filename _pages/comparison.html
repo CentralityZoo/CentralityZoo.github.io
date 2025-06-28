@@ -14,7 +14,21 @@ permalink: /comparison/
 <h1> Interactive matrix
 </h1>
 
-<input type="text" id="filterInput" placeholder="Filter labels (comma-separated exact match)" oninput="filterMatrix()" />
+<input
+  type="text"
+  id="filterInput"
+  placeholder="Filter labels (comma-separated)"
+  oninput="filterMatrix()"
+/>
+<label>
+  <input
+    type="checkbox"
+    id="exactMatchCheckbox"
+    checked
+    onchange="filterMatrix()"
+  />
+  Exact match
+</label>
 
 <div id="matrix"></div>
 
@@ -22,6 +36,7 @@ permalink: /comparison/
   let data;
   let filteredLabels = [];
 
+  // Load JSON
   fetch('/assets/data/correlation.json')
     .then(response => response.json())
     .then(json => {
@@ -30,16 +45,20 @@ permalink: /comparison/
       renderMatrix();
     });
 
+  // Render the matrix table
   function renderMatrix() {
     const container = document.getElementById('matrix');
     container.innerHTML = '';
 
-    // Filter indices
-    const indices = filteredLabels.map(label => data.labels.indexOf(label)).filter(i => i !== -1);
+    // Filtered indices
+    const indices = filteredLabels
+      .map(label => data.labels.indexOf(label))
+      .filter(i => i !== -1);
 
-    // Dynamically set font size
+    // Dynamically adjust font size
     const numCols = indices.length;
     const fontSize = Math.max(4, 20 - 0.15 * numCols);
+
     const table = document.createElement('table');
     table.classList.add('correlation-table');
     table.style.fontSize = fontSize + 'px';
@@ -77,26 +96,37 @@ permalink: /comparison/
     container.appendChild(table);
   }
 
-  // Exact match filtering
+  // Filtering with exact/partial match
   function filterMatrix() {
     const input = document.getElementById('filterInput').value.trim().toLowerCase();
+    const exactMatch = document.getElementById('exactMatchCheckbox').checked;
+
     if (!input) {
       filteredLabels = [...data.labels];
     } else {
       const terms = input.split(',').map(s => s.trim().toLowerCase());
-      filteredLabels = data.labels.filter(label =>
-        terms.includes(label.toLowerCase())
-      );
+
+      if (exactMatch) {
+        // Exact match
+        filteredLabels = data.labels.filter(label =>
+          terms.includes(label.toLowerCase())
+        );
+      } else {
+        // Partial match
+        filteredLabels = data.labels.filter(label =>
+          terms.some(term => label.toLowerCase().includes(term))
+        );
+      }
     }
     renderMatrix();
   }
 
-  // Color scale: 0 = blue, 0.5 = white, 1 = red
+  // Color mapping: 0 = white, 1 = red
   function getColor(value) {
-  const g = Math.round(255 * (1 - value));
-  const b = Math.round(255 * (1 - value));
-  return `rgb(255,${g},${b})`;
-}
+    const g = Math.round(255 * (1 - value));
+    const b = Math.round(255 * (1 - value));
+    return `rgb(255,${g},${b})`;
+  }
 </script>
 
 <style>
@@ -124,10 +154,15 @@ permalink: /comparison/
   }
 
   #filterInput {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     padding: 4px;
     width: 300px;
     font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-left: 10px;
   }
 </style>
 
