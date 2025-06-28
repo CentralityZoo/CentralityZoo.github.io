@@ -7,12 +7,12 @@ permalink: /comparison/
 
 <div class="image-row">
   <figure>
-    <img src="https://centralityzoo.github.io/assets/images/full_corr_matrix.png" alt="Zoo of Centralities" />
+    <img src="https://centralityzoo.github.io/assets/images/full_corr_matrix.jpg" alt="Zoo of Centralities" />
   </figure>
 </div>
 
-<h1> Interactive matrix
-</h1>
+<h2> Interactive matrix
+</h2>
 
 <input
   type="text"
@@ -20,21 +20,16 @@ permalink: /comparison/
   placeholder="Filter labels (comma-separated)"
   oninput="filterMatrix()"
 />
-<label>
-  <input
-    type="checkbox"
-    id="exactMatchCheckbox"
-    checked
-    onchange="filterMatrix()"
-  />
-  Exact match
-</label>
+<button id="exactMatchToggle" onclick="toggleExactMatch()">
+  Exact match: ON
+</button>
 
 <div id="matrix"></div>
 
 <script>
   let data;
   let filteredLabels = [];
+  let exactMatch = true;
 
   // Load JSON
   fetch('/assets/data/correlation.json')
@@ -45,7 +40,39 @@ permalink: /comparison/
       renderMatrix();
     });
 
-  // Render the matrix table
+  // Toggle exact/partial match
+  function toggleExactMatch() {
+    exactMatch = !exactMatch;
+    document.getElementById('exactMatchToggle').textContent = exactMatch
+      ? 'Exact match: ON'
+      : 'Exact match: OFF';
+    filterMatrix();
+  }
+
+  // Filter matrix rows/cols
+  function filterMatrix() {
+    const input = document.getElementById('filterInput').value.trim().toLowerCase();
+
+    if (!input) {
+      filteredLabels = [...data.labels];
+    } else {
+      const terms = input.split(',').map(s => s.trim().toLowerCase());
+      if (exactMatch) {
+        // Exact match
+        filteredLabels = data.labels.filter(label =>
+          terms.includes(label.toLowerCase())
+        );
+      } else {
+        // Partial match
+        filteredLabels = data.labels.filter(label =>
+          terms.some(term => label.toLowerCase().includes(term))
+        );
+      }
+    }
+    renderMatrix();
+  }
+
+  // Render the table
   function renderMatrix() {
     const container = document.getElementById('matrix');
     container.innerHTML = '';
@@ -55,7 +82,7 @@ permalink: /comparison/
       .map(label => data.labels.indexOf(label))
       .filter(i => i !== -1);
 
-    // Dynamically adjust font size
+    // Dynamic font size based on number of columns
     const numCols = indices.length;
     const fontSize = Math.max(4, 20 - 0.15 * numCols);
 
@@ -96,32 +123,7 @@ permalink: /comparison/
     container.appendChild(table);
   }
 
-  // Filtering with exact/partial match
-  function filterMatrix() {
-    const input = document.getElementById('filterInput').value.trim().toLowerCase();
-    const exactMatch = document.getElementById('exactMatchCheckbox').checked;
-
-    if (!input) {
-      filteredLabels = [...data.labels];
-    } else {
-      const terms = input.split(',').map(s => s.trim().toLowerCase());
-
-      if (exactMatch) {
-        // Exact match
-        filteredLabels = data.labels.filter(label =>
-          terms.includes(label.toLowerCase())
-        );
-      } else {
-        // Partial match
-        filteredLabels = data.labels.filter(label =>
-          terms.some(term => label.toLowerCase().includes(term))
-        );
-      }
-    }
-    renderMatrix();
-  }
-
-  // Color mapping: 0 = white, 1 = red
+  // Heatmap coloring: 0 = white, 1 = red
   function getColor(value) {
     const g = Math.round(255 * (1 - value));
     const b = Math.round(255 * (1 - value));
@@ -160,9 +162,11 @@ permalink: /comparison/
     font-size: 14px;
   }
 
-  label {
-    font-size: 14px;
+  #exactMatchToggle {
     margin-left: 10px;
+    padding: 4px 8px;
+    font-size: 14px;
+    cursor: pointer;
   }
 </style>
 
