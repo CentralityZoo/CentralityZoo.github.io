@@ -3,13 +3,16 @@ title: Comparison of Centrality Measures
 permalink: /comparison/
 ---
 
-<p>Currently, we provide correlation comparisons between different centrality measures on 54 empirical networks from Index of Complex Networks (ICON).</p>
+<p>Currently, we provide correlation comparisons between different centrality measures on 648 empirical networks from <a href="https://icon.colorado.edu/">Index of Complex Networks (ICON)</a>.</p>
 
 <div class="image-row">
   <figure>
-    <img src="https://centralityzoo.github.io/assets/images/correlation300_2.png" alt="Zoo of Centralities" />
+    <img src="https://centralityzoo.github.io/assets/images/full_corr_matrix.png" alt="Zoo of Centralities" />
   </figure>
 </div>
+
+<h1> Interactive matrix
+</h1>
 
 <input type="text" id="filterInput" placeholder="Filter labels (comma-separated exact match)" oninput="filterMatrix()" />
 
@@ -90,20 +93,10 @@ permalink: /comparison/
 
   // Color scale: 0 = blue, 0.5 = white, 1 = red
   function getColor(value) {
-    if (value < 0.5) {
-      const ratio = value / 0.5;
-      const r = Math.round(255 * ratio);
-      const g = Math.round(255 * ratio);
-      const b = 255;
-      return `rgb(${r},${g},${b})`;
-    } else {
-      const ratio = (value - 0.5) / 0.5;
-      const r = 255;
-      const g = Math.round(255 * (1 - ratio));
-      const b = Math.round(255 * (1 - ratio));
-      return `rgb(${r},${g},${b})`;
-    }
-  }
+  const g = Math.round(255 * (1 - value));
+  const b = Math.round(255 * (1 - value));
+  return `rgb(255,${g},${b})`;
+}
 </script>
 
 <style>
