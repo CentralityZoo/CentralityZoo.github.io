@@ -11,5 +11,67 @@ permalink: /comparison/
   </figure>
 </div>
 
+<input type="text" id="filterInput" placeholder="Filter labels" oninput="filterMatrix()" />
+
+<div id="matrix"></div>
+
+<script>
+  let data;
+  let filteredLabels = [];
+
+  fetch('/assets/data/correlation.json')
+    .then(response => response.json())
+    .then(json => {
+      data = json;
+      filteredLabels = [...data.labels];
+      renderMatrix();
+    });
+
+  function renderMatrix() {
+    const container = document.getElementById('matrix');
+    container.innerHTML = '';
+
+    const indices = filteredLabels.map(label => data.labels.indexOf(label)).filter(i => i !== -1);
+
+    const table = document.createElement('table');
+    const headerRow = document.createElement('tr');
+    headerRow.appendChild(document.createElement('th'));
+
+    filteredLabels.forEach(label => {
+      const th = document.createElement('th');
+      th.textContent = label;
+      headerRow.appendChild(th);
+    });
+    table.appendChild(headerRow);
+
+    indices.forEach(rowIdx => {
+      const row = document.createElement('tr');
+      const th = document.createElement('th');
+      th.textContent = data.labels[rowIdx];
+      row.appendChild(th);
+
+      indices.forEach(colIdx => {
+        const td = document.createElement('td');
+        td.textContent = data.matrix[rowIdx][colIdx].toFixed(2);
+        row.appendChild(td);
+      });
+
+      table.appendChild(row);
+    });
+
+    container.appendChild(table);
+  }
+
+  function filterMatrix() {
+    const input = document.getElementById('filterInput').value.toLowerCase();
+    filteredLabels = data.labels.filter(label => label.toLowerCase().includes(input));
+    renderMatrix();
+  }
+</script>
+
+<style>
+  table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+  th { background-color: #eee; }
+</style>
 
 <p>More detailed and interactive comparisons and analysis will be added soon (TBA).</p>
