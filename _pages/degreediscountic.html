@@ -4,88 +4,68 @@ permalink: /degreediscountic/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   DegreeDiscountIC
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   DegreeDiscountIC
-  </h2>
-  <p>
-   <br/>
-   <i>
-    DegreeDiscountIC
-   </i>
-   is a degree-discount heuristic for identifying influential nodes in a network [2]. The main idea is that if a node \(i\) is selected as a seed, the edges connecting \(i\) to its neighbors should not be fully counted when evaluating the degrees of those neighbors for further seed selection. In other words, the degree of each neighbor of a selected seed is discounted to account for the presence of the seed node.
-   <br/>
-   The algorithm proceeds iteratively as follows:
-   <br/>
-   <ol>
-    <br/>
-    <li>
-     Compute the degree \(d_i\) of each node \(i\), and initialize \(t_i = 0\) and \(dd_i = d_i\), where \(t_i\) is the number of selected neighbors of \(i\) and \(dd_i\) is the discounted degree.
-    </li>
-    <br/>
-    <li>
-     Select the node \(i\) with the largest \(dd_i\) and add it to the seed set. Then, for each neighbor \(j\) of node \(i\), update
+</style>
+<p>
+ <br/>
+ <i>
+  DegreeDiscountIC
+ </i>
+ is a degree-discount heuristic for identifying influential nodes in a network [2]. The main idea is that if a node \(i\) is selected as a seed, the edges connecting \(i\) to its neighbors should not be fully counted when evaluating the degrees of those neighbors for further seed selection. In other words, the degree of each neighbor of a selected seed is discounted to account for the presence of the seed node.
+ <br/>
+ The algorithm proceeds iteratively as follows:
+ <br/>
+ <ol>
+  <br/>
+  <li>
+   Compute the degree \(d_i\) of each node \(i\), and initialize \(t_i = 0\) and \(dd_i = d_i\), where \(t_i\) is the number of selected neighbors of \(i\) and \(dd_i\) is the discounted degree.
+  </li>
+  <br/>
+  <li>
+   Select the node \(i\) with the largest \(dd_i\) and add it to the seed set. Then, for each neighbor \(j\) of node \(i\), update
     \[
     t_j \gets t_j + 1, \quad
     dd_j = d_j - 2 t_j - (d_j - t_j) t_j p,
     \]
     where \(p\) is the propagation probability (e.g., \(p=0.01\)). The value \(dd_j\) approximates the expected number of additional nodes influenced by selecting node \(j\), considering the presence of already selected neighbors.
-    </li>
-    <br/>
-    <li>
-     Repeat step 2 until \(k\) nodes are selected for the seed set.
-    </li>
-    <br/>
-   </ol>
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Chen, W., Wang, Y., &amp; Yang, S. (2009). Efficient influence maximization in social networks. In Proceedings of the 15th ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 199-208).
-    <a href="https://doi.org/10.1145/1557019.1557047">
-     doi: 10.1145/1557019.1557047.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+  </li>
+  <br/>
+  <li>
+   Repeat step 2 until \(k\) nodes are selected for the seed set.
+  </li>
+  <br/>
+ </ol>
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Chen, W., Wang, Y., &amp; Yang, S. (2009). Efficient influence maximization in social networks. In Proceedings of the 15th ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 199-208).
+  <a href="https://doi.org/10.1145/1557019.1557047">
+   doi: 10.1145/1557019.1557047.
+  </a>
+ </div>
+</div>

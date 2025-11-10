@@ -4,82 +4,62 @@ permalink: /density-of-the-maximum-neighborhood-component-dmnc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Density of the Maximum Neighborhood Component (DMNC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Density of the Maximum Neighborhood Component (DMNC)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    Density of the Maximum Neighborhood Component
-   </i>
-   (DMNC) centrality extends the maximum neighborhood component (MNC) measure by incorporating the internal link density of the largest connected component within a node’s neighborhood [2].
-   <br/>
-   While MNC centrality considers only the size of the largest connected subgraph among the neighbors of a node, DMNC additionally evaluates how densely those neighbors are connected to each other.
-   <br/>
-   Formally, for a given node \( i \), let \( C_{\max}(G_{\mathcal{N}(i)}) \) denote the largest connected component of the induced subgraph \( G_{\mathcal{N}(i)} \).
-   <br/>
-   Then the DMNC centrality \( c_{\mathrm{dmnc}}(i) \) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{dmnc}(i) = \frac{|E(MNC(G_{\mathcal{N}(i)}))|}{|V(MNC(G_{\mathcal{N}(i)}))|^ε},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(|E(MNC(G_{\mathcal{N}(i)}))|\) and \(|V(MNC(G_{\mathcal{N}(i)}))|\) denote the number of edges and vertices, respectively, within the largest connected component, and
-   <br/>
-   \( ε \) is a tunable scaling parameter such that \( 1 \leq ε \leq 2 \) (typically \( ε = 1.67 \)). Thus, the DMNC centrality measures how large and how tightly connected a node’s neighbourhood is, giving higher scores to nodes whose neighbours form large, well-connected groups.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Lin, C. Y., Chin, C. H., Wu, H. H., Chen, S. H., Ho, C. W., &amp; Ko, M. T. (2008). Hubba: hub objects analyzer—a framework of interactome hubs identification for network biology. Nucleic acids research, 36, W438-W443.
-    <a href="https://doi.org/10.1093/nar/gkn257">
-     doi: 10.1093/nar/gkn257.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  Density of the Maximum Neighborhood Component
+ </i>
+ (DMNC) centrality extends the maximum neighborhood component (MNC) measure by incorporating the internal link density of the largest connected component within a node’s neighborhood [2].
+ <br/>
+ While MNC centrality considers only the size of the largest connected subgraph among the neighbors of a node, DMNC additionally evaluates how densely those neighbors are connected to each other.
+ <br/>
+ Formally, for a given node \( i \), let \( C_{\max}(G_{\mathcal{N}(i)}) \) denote the largest connected component of the induced subgraph \( G_{\mathcal{N}(i)} \).
+ <br/>
+ Then the DMNC centrality \( c_{\mathrm{dmnc}}(i) \) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{dmnc}(i) = \frac{|E(MNC(G_{\mathcal{N}(i)}))|}{|V(MNC(G_{\mathcal{N}(i)}))|^ε},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(|E(MNC(G_{\mathcal{N}(i)}))|\) and \(|V(MNC(G_{\mathcal{N}(i)}))|\) denote the number of edges and vertices, respectively, within the largest connected component, and
+ <br/>
+ \( ε \) is a tunable scaling parameter such that \( 1 \leq ε \leq 2 \) (typically \( ε = 1.67 \)). Thus, the DMNC centrality measures how large and how tightly connected a node’s neighbourhood is, giving higher scores to nodes whose neighbours form large, well-connected groups.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Lin, C. Y., Chin, C. H., Wu, H. H., Chen, S. H., Ho, C. W., &amp; Ko, M. T. (2008). Hubba: hub objects analyzer—a framework of interactome hubs identification for network biology. Nucleic acids research, 36, W438-W443.
+  <a href="https://doi.org/10.1093/nar/gkn257">
+   doi: 10.1093/nar/gkn257.
+  </a>
+ </div>
+</div>

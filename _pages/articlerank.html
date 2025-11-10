@@ -4,79 +4,59 @@ permalink: /articlerank/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   ArticleRank
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   ArticleRank
-  </h2>
-  <p>
-   <br/>
-   <i>
-    ArticleRank
-   </i>
-   is a variation of the PageRank algorithm designed to measure the influence of journal articles [2]. It follows the general PageRank methodology but modifies the normalization term in the transition probability to prevent nodes with very few outgoing links from exerting disproportionately high influence on their neighbors.
-   <br/>
-   Formally, the ArticleRank \(c_{\text{AR}}(i)\) of a node \(i\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\text{AR}}(i) = (1 - p)
-   <br/>
-   + p \sum_{j : a_{ij} = 1}
-   <br/>
-   \frac{c_{\text{AR}}(j)}{\sum_{k = 1}^{N} a_{jk} + \overline{a}_{\text{out}}},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(p \in [0, 1]\) is a damping factor, \(a_{ij}\) is the adjacency matrix element indicating the presence of a link from node \(j\) to node \(i\), and \(\overline{a}_{\text{out}}\) denotes the average out-degree of the network \(G\). The ArticleRank values represent the relative influence or importance of articles within the citation network, where higher scores indicate articles that are cited by other influential papers.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Li, J., &amp; Willett, P. (2009). ArticleRank: a PageRank‐based alternative to numbers of citations for analysing citation networks. In Aslib Proceedings (Vol. 61, No. 6, pp. 605-618). Emerald Group Publishing Limited.
-    <a href="https://doi.org/10.1108/00012530911005544">
-     doi: 10.1108/00012530911005544.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  ArticleRank
+ </i>
+ is a variation of the PageRank algorithm designed to measure the influence of journal articles [2]. It follows the general PageRank methodology but modifies the normalization term in the transition probability to prevent nodes with very few outgoing links from exerting disproportionately high influence on their neighbors.
+ <br/>
+ Formally, the ArticleRank \(c_{\text{AR}}(i)\) of a node \(i\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\text{AR}}(i) = (1 - p)
+ <br/>
+ + p \sum_{j : a_{ij} = 1}
+ <br/>
+ \frac{c_{\text{AR}}(j)}{\sum_{k = 1}^{N} a_{jk} + \overline{a}_{\text{out}}},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(p \in [0, 1]\) is a damping factor, \(a_{ij}\) is the adjacency matrix element indicating the presence of a link from node \(j\) to node \(i\), and \(\overline{a}_{\text{out}}\) denotes the average out-degree of the network \(G\). The ArticleRank values represent the relative influence or importance of articles within the citation network, where higher scores indicate articles that are cited by other influential papers.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Li, J., &amp; Willett, P. (2009). ArticleRank: a PageRank‐based alternative to numbers of citations for analysing citation networks. In Aslib Proceedings (Vol. 61, No. 6, pp. 605-618). Emerald Group Publishing Limited.
+  <a href="https://doi.org/10.1108/00012530911005544">
+   doi: 10.1108/00012530911005544.
+  </a>
+ </div>
+</div>

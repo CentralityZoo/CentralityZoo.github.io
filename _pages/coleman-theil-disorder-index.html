@@ -4,91 +4,71 @@ permalink: /coleman-theil-disorder-index/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Coleman-Theil disorder index
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Coleman-Theil disorder index
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    Coleman-Theil disorder index
-   </i>
-   , also known as the hierarchy index, quantifies the extent to which a node's aggregate Burt's constraint is concentrated on a single contact [2]. High values indicate that most of the constraint arises from a single relationship, whereas low values reflect a more even distribution of constraint across multiple contacts.
-   <br/>
-   For node \(i\), the Coleman-Theil disorder index \(c_{\mathrm{CTDI}}(i)\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\mathrm{CTDI}}(i) = \frac{\sum_{j \in \mathcal{N}(i)} \tilde{c}_{ij} \ln(\tilde{c}_{ij})}{N_i \ln(N_i)},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(N_i = |\mathcal{N}(i)|\) is the number of neighbors and \(\tilde{c}_{ij}\) represents the relative contribution of contact \(j\) to the total constraint of node \(i\), defined as
-   <br/>
-   \[
-   <br/>
-   \tilde{c}_{ij} = \frac{c_{ij}}{\frac{1}{N_i} \sum_{k \in \mathcal{N}(i)} c_{ik}}.
-   <br/>
-   \]
-   <br/>
-   The term \(c_{ij}\) denotes the Burt's constraint imposed by contact \(j\) and is given by
-   <br/>
-   \[
-   <br/>
-   c_{ij} = \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{kj} \right)^2,
-   <br/>
-   \]
-   <br/>
-   where \(p_{ij} = \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}}\) is the proportion of node \(i\)'s connections invested in contact \(j\), and \(w_{ij}\) represents the weight of the edge between nodes \(i\) and \(j\) (equal to 1 for unweighted networks).
-   <br/>
-   The Coleman-Theil disorder index attains its minimum value of 0 when constraint is equally distributed among all neighbors, and reaches its maximum of 1 when all constraint is concentrated on a single neighbor.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Burt, R.S. &amp; Holes, S. (1992). Structural Holes: The Social Structure of Competition. Harvard University Press, Cambridge, MA.
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  Coleman-Theil disorder index
+ </i>
+ , also known as the hierarchy index, quantifies the extent to which a node's aggregate Burt's constraint is concentrated on a single contact [2]. High values indicate that most of the constraint arises from a single relationship, whereas low values reflect a more even distribution of constraint across multiple contacts.
+ <br/>
+ For node \(i\), the Coleman-Theil disorder index \(c_{\mathrm{CTDI}}(i)\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\mathrm{CTDI}}(i) = \frac{\sum_{j \in \mathcal{N}(i)} \tilde{c}_{ij} \ln(\tilde{c}_{ij})}{N_i \ln(N_i)},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(N_i = |\mathcal{N}(i)|\) is the number of neighbors and \(\tilde{c}_{ij}\) represents the relative contribution of contact \(j\) to the total constraint of node \(i\), defined as
+ <br/>
+ \[
+ <br/>
+ \tilde{c}_{ij} = \frac{c_{ij}}{\frac{1}{N_i} \sum_{k \in \mathcal{N}(i)} c_{ik}}.
+ <br/>
+ \]
+ <br/>
+ The term \(c_{ij}\) denotes the Burt's constraint imposed by contact \(j\) and is given by
+ <br/>
+ \[
+ <br/>
+ c_{ij} = \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{kj} \right)^2,
+ <br/>
+ \]
+ <br/>
+ where \(p_{ij} = \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}}\) is the proportion of node \(i\)'s connections invested in contact \(j\), and \(w_{ij}\) represents the weight of the edge between nodes \(i\) and \(j\) (equal to 1 for unweighted networks).
+ <br/>
+ The Coleman-Theil disorder index attains its minimum value of 0 when constraint is equally distributed among all neighbors, and reaches its maximum of 1 when all constraint is concentrated on a single neighbor.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Burt, R.S. &amp; Holes, S. (1992). Structural Holes: The Social Structure of Competition. Harvard University Press, Cambridge, MA.
+ </div>
+</div>

@@ -4,110 +4,90 @@ permalink: /curvature-index/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Curvature index
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Curvature index
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    curvature index
-   </i>
-   quantifies the local curvature properties of nodes in a network [2]. It is defined based on the Euler characteristic \(χ(G)\) of a graph \(G\), given by
-   <br/>
-   \[
-   <br/>
-   χ(G) = \sum_{k=0}^{N-1} (-1)^k v_k,
-   <br/>
-   \]
-   <br/>
-   where \(v_k\) denotes the number of \((k{+}1)\)-cliques in \(G\). The curvature \(K(i)\) at node \(i\) is then defined as
-   <br/>
-   \[
-   <br/>
-   K(i) = \sum_{k=0}^{N-1} (-1)^k \frac{V_{k-1}(i)}{k+1},
-   <br/>
-   \]
-   <br/>
-   where \(V_k(i)\) represents the number of \((k{+}1)\)-cliques incident to node \(i\).
-   <br/>
-   According to the discrete Gauss-Bonnet theorem [3], the Euler characteristic of a graph equals the sum of the curvatures of all its nodes, i.e.,
-   <br/>
-   \[
-   <br/>
-   χ(G) = \sum_{i=1}^{N} K(i).
-   <br/>
-   \]
-   <br/>
-   A truncated version of the curvature index, where the summation is limited to simplices of dimension \(d \leq 2\) (i.e., cliques of size up to three), was proposed by Wu et al. [4] to reduce computational complexity while retaining essential geometric information.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Knill, O. (2012). On index expectation and curvature for networks. arXiv preprint arXiv:1202.4514.
-    <a href="https://doi.org/10.48550/arXiv.1202.4514">
-     doi: 10.48550/arXiv.1202.4514.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Knill, O. (2011). A graph theoretical Gauss-Bonnet-Chern theorem. arXiv preprint arXiv:1111.5395.
-    <a href="https://doi.org/10.48550/arXiv.1111.5395">
-     doi: 10.48550/arXiv.1111.5395.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [4]
-    </span>
-    Wu, Z., Menichetti, G., Rahmede, C., &amp; Bianconi, G. (2015). Emergent complex network geometry. Scientific reports, 5(1), 10073.
-    <a href="https://doi.org/10.1038/srep10073">
-     doi: 10.1038/srep10073.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  curvature index
+ </i>
+ quantifies the local curvature properties of nodes in a network [2]. It is defined based on the Euler characteristic \(χ(G)\) of a graph \(G\), given by
+ <br/>
+ \[
+ <br/>
+ χ(G) = \sum_{k=0}^{N-1} (-1)^k v_k,
+ <br/>
+ \]
+ <br/>
+ where \(v_k\) denotes the number of \((k{+}1)\)-cliques in \(G\). The curvature \(K(i)\) at node \(i\) is then defined as
+ <br/>
+ \[
+ <br/>
+ K(i) = \sum_{k=0}^{N-1} (-1)^k \frac{V_{k-1}(i)}{k+1},
+ <br/>
+ \]
+ <br/>
+ where \(V_k(i)\) represents the number of \((k{+}1)\)-cliques incident to node \(i\).
+ <br/>
+ According to the discrete Gauss-Bonnet theorem [3], the Euler characteristic of a graph equals the sum of the curvatures of all its nodes, i.e.,
+ <br/>
+ \[
+ <br/>
+ χ(G) = \sum_{i=1}^{N} K(i).
+ <br/>
+ \]
+ <br/>
+ A truncated version of the curvature index, where the summation is limited to simplices of dimension \(d \leq 2\) (i.e., cliques of size up to three), was proposed by Wu et al. [4] to reduce computational complexity while retaining essential geometric information.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Knill, O. (2012). On index expectation and curvature for networks. arXiv preprint arXiv:1202.4514.
+  <a href="https://doi.org/10.48550/arXiv.1202.4514">
+   doi: 10.48550/arXiv.1202.4514.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Knill, O. (2011). A graph theoretical Gauss-Bonnet-Chern theorem. arXiv preprint arXiv:1111.5395.
+  <a href="https://doi.org/10.48550/arXiv.1111.5395">
+   doi: 10.48550/arXiv.1111.5395.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Wu, Z., Menichetti, G., Rahmede, C., &amp; Bianconi, G. (2015). Emergent complex network geometry. Scientific reports, 5(1), 10073.
+  <a href="https://doi.org/10.1038/srep10073">
+   doi: 10.1038/srep10073.
+  </a>
+ </div>
+</div>

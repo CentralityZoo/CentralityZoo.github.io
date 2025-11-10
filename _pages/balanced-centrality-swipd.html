@@ -4,125 +4,105 @@ permalink: /balanced-centrality-swipd/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Balanced centrality (SWIPD)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Balanced centrality (SWIPD)
-  </h2>
-  <p>
-   <br/>
+</style>
+<p>
+ <br/>
+ <i>
+  Balanced centrality
+ </i>
+ , also known as SWIPD, is a hybrid centrality measure that combines multiple classical centrality indices into a single vector [2]. The centrality of node \(i\), denoted \(c_{\text{SWIPD}}(i)\), is defined as
+ <br/>
+ \[
+ <br/>
+ c_{\text{SWIPD}}(i) =
+ <br/>
+ γ_1 A^2 D^{-1} A u \; + \;
+ <br/>
+ γ_2 (D - α D A)^{-1} A u \; + \;
+ <br/>
+ γ_3 A D^{-2} u \; + \;
+ <br/>
+ γ_4 A D^{-1} A u,
+ <br/>
+ \]
+ <br/>
+ where the four terms correspond, respectively, to
+ <i>
+  square centrality
+ </i>
+ ,
+ <i>
+  walk centrality
+ </i>
+ ,
+ <i>
+  power-like centrality
+ </i>
+ , and
+ <i>
+  degree-weighted centrality
+ </i>
+ .  Specifically, \(D\) is the degree diagonal matrix, \(u\) is the \(N \times 1\) vector of ones, and the coefficients \(γ_i\) control the relative contribution of each component. The attenuation factor in the walk centrality is \(α = \frac{1}{d_{\max}+1}\), where \(d_{\max}\) is the maximum node degree in the network. Each of these terms captures a distinct aspect of node importance, which can be summarized as follows:
+ <ul>
+  <li>
    <i>
-    Balanced centrality
+    Square centrality:
    </i>
-   , also known as SWIPD, is a hybrid centrality measure that combines multiple classical centrality indices into a single vector [2]. The centrality of node \(i\), denoted \(c_{\text{SWIPD}}(i)\), is defined as
-   <br/>
-   \[
-   <br/>
-   c_{\text{SWIPD}}(i) =
-   <br/>
-   γ_1 A^2 D^{-1} A u \; + \;
-   <br/>
-   γ_2 (D - α D A)^{-1} A u \; + \;
-   <br/>
-   γ_3 A D^{-2} u \; + \;
-   <br/>
-   γ_4 A D^{-1} A u,
-   <br/>
-   \]
-   <br/>
-   where the four terms correspond, respectively, to
+   emphasizes the influence of two-hop neighbors.
+  </li>
+  <li>
    <i>
-    square centrality
+    Walk centrality:
    </i>
-   ,
+   incorporates attenuated walks starting from each node.
+  </li>
+  <li>
    <i>
-    walk centrality
+    Power-like centrality:
    </i>
-   ,
+   highlights nodes with strong direct connections while penalizing high-degree nodes.
+  </li>
+  <li>
    <i>
-    power-like centrality
+    Degree-weighted centrality:
    </i>
-   , and
-   <i>
-    degree-weighted centrality
-   </i>
-   .  Specifically, \(D\) is the degree diagonal matrix, \(u\) is the \(N \times 1\) vector of ones, and the coefficients \(γ_i\) control the relative contribution of each component. The attenuation factor in the walk centrality is \(α = \frac{1}{d_{\max}+1}\), where \(d_{\max}\) is the maximum node degree in the network. Each of these terms captures a distinct aspect of node importance, which can be summarized as follows:
-   <ul>
-    <li>
-     <i>
-      Square centrality:
-     </i>
-     emphasizes the influence of two-hop neighbors.
-    </li>
-    <li>
-     <i>
-      Walk centrality:
-     </i>
-     incorporates attenuated walks starting from each node.
-    </li>
-    <li>
-     <i>
-      Power-like centrality:
-     </i>
-     highlights nodes with strong direct connections while penalizing high-degree nodes.
-    </li>
-    <li>
-     <i>
-      Degree-weighted centrality:
-     </i>
-     captures the influence of a node based on the degree-weighted connectivity of its neighbors.
-    </li>
-   </ul>
-   <br/>
-   Balanced centrality combines several centrality measures, allowing the relative contributions of different aspects of node importance to be analyzed within a single measure.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Debono, M., Lauri, J., &amp; Sciriha, I. (2014). Balanced centrality of networks. International Scholarly Research Notices, 2014(1), 871038.
-    <a href="https://doi.org/10.1155/2014/871038">
-     doi: 10.1155/2014/871038.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+   captures the influence of a node based on the degree-weighted connectivity of its neighbors.
+  </li>
+ </ul>
+ <br/>
+ Balanced centrality combines several centrality measures, allowing the relative contributions of different aspects of node importance to be analyzed within a single measure.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Debono, M., Lauri, J., &amp; Sciriha, I. (2014). Balanced centrality of networks. International Scholarly Research Notices, 2014(1), 871038.
+  <a href="https://doi.org/10.1155/2014/871038">
+   doi: 10.1155/2014/871038.
+  </a>
+ </div>
+</div>

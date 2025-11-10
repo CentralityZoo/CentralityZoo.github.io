@@ -4,88 +4,68 @@ permalink: /community-based-mediator-cbm/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Community-based mediator (CbM)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Community-based mediator (CbM)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    community-based mediator
-   </i>
-   (CbM) is a community-aware centrality measure that evaluates a node’s influence based on the entropy of its connections across different communities [2].
-   <br/>
-   Let the network \(G\) consist of \(K\) communities \(C_1, C_2, \dots, C_K\).
-   <br/>
-   The CbM centrality \(c_{CbM}(i)\) of node \(i\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{CbM}(i) = H_i \frac{d_i}{2L},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(L\) is the total number of edges in \(G\), \(d_i\) is the degree of node \(i\), and \(H_i\) is the entropy associated with the distribution of its connections among the communities:
-   <br/>
-   \begin{equation*}
-   <br/>
-   H_i = -\sum_{k=1}^{K} \frac{d_i(C_k)}{d_i} \log \frac{d_i(C_k)}{d_i}.
-   <br/>
-   \end{equation*}
-   <br/>
-   Here, \(d_i(C_k) = \sum_{j \in C_k} a_{ij}\) denotes the number of links from node \(i\) to nodes in community \(C_k\).
-   <br/>
-   Nodes that distribute their links more evenly across different communities have higher entropy \(H_i\) and thus higher \(c_{CbM}(i)\), reflecting their stronger mediating role in inter-community connectivity.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Tulu, M. M., Hou, R., &amp; Younas, T. (2018). Identifying influential nodes based on community structure to speed up the dissemination of information in complex network. IEEE access, 6, 7390-7401.
-    <a href="https://doi.org/10.1109/ACCESS.2018.2794324">
-     doi: 10.1109/ACCESS.2018.2794324.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  community-based mediator
+ </i>
+ (CbM) is a community-aware centrality measure that evaluates a node’s influence based on the entropy of its connections across different communities [2].
+ <br/>
+ Let the network \(G\) consist of \(K\) communities \(C_1, C_2, \dots, C_K\).
+ <br/>
+ The CbM centrality \(c_{CbM}(i)\) of node \(i\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{CbM}(i) = H_i \frac{d_i}{2L},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(L\) is the total number of edges in \(G\), \(d_i\) is the degree of node \(i\), and \(H_i\) is the entropy associated with the distribution of its connections among the communities:
+ <br/>
+ \begin{equation*}
+ <br/>
+ H_i = -\sum_{k=1}^{K} \frac{d_i(C_k)}{d_i} \log \frac{d_i(C_k)}{d_i}.
+ <br/>
+ \end{equation*}
+ <br/>
+ Here, \(d_i(C_k) = \sum_{j \in C_k} a_{ij}\) denotes the number of links from node \(i\) to nodes in community \(C_k\).
+ <br/>
+ Nodes that distribute their links more evenly across different communities have higher entropy \(H_i\) and thus higher \(c_{CbM}(i)\), reflecting their stronger mediating role in inter-community connectivity.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Tulu, M. M., Hou, R., &amp; Younas, T. (2018). Identifying influential nodes based on community structure to speed up the dissemination of information in complex network. IEEE access, 6, 7390-7401.
+  <a href="https://doi.org/10.1109/ACCESS.2018.2794324">
+   doi: 10.1109/ACCESS.2018.2794324.
+  </a>
+ </div>
+</div>

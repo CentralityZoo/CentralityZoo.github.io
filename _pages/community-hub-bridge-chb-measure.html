@@ -4,89 +4,69 @@ permalink: /community-hub-bridge-chb-measure/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Community hub-bridge (CHB) measure
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Community hub-bridge (CHB) measure
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Community hub-bridge (CHB) measure
-   </i>
-   is a community-based centrality metric that evaluates the importance of a node by considering both its intra- and inter-community connections [2].
-   <br/>
-   Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities.
-   <br/>
-   For a node \(i\) belonging to community \(C_k\), the CHB centrality \(c_{CHB}(i)\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{CHB}(i) = |C_k|\, d_i^{in} + d_i^{out} \sum_{l \neq k} \left( \lor_{j \in C_l} a_{ij} \right),
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(d_i^{in}\) is the number of intra-community links of node \(i\) (connections within \(C_k\)), \(d_i^{out}\) is the number of inter-community links (connections to nodes in other communities), and \(\lor\) denotes the logical OR operator.
-   <br/>
-   The expression \(\left( \lor_{j \in C_l} a_{ij} \right) = 1\) if and only if node \(i\) is connected to at least one node \(j\) in community \(C_l\); otherwise, it equals zero.
-   <br/>
-   Nodes with high CHB values act as both
-   <i>
-    hubs
-   </i>
-   (densely connected within their own community) and
-   <i>
-    bridges
-   </i>
-   (linking multiple communities), making them crucial for information flow and inter-community connectivity.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Ghalmane, Z., Hassouni, M. E., &amp; Cherifi, H. (2019). Immunization of networks with non-overlapping community structure. Social Network Analysis and Mining, 9, 1-22.
-    <a href="https://doi.org/10.1007/s13278-019-0591-9">
-     doi: 10.1007/s13278-019-0591-9.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Community hub-bridge (CHB) measure
+ </i>
+ is a community-based centrality metric that evaluates the importance of a node by considering both its intra- and inter-community connections [2].
+ <br/>
+ Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities.
+ <br/>
+ For a node \(i\) belonging to community \(C_k\), the CHB centrality \(c_{CHB}(i)\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{CHB}(i) = |C_k|\, d_i^{in} + d_i^{out} \sum_{l \neq k} \left( \lor_{j \in C_l} a_{ij} \right),
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(d_i^{in}\) is the number of intra-community links of node \(i\) (connections within \(C_k\)), \(d_i^{out}\) is the number of inter-community links (connections to nodes in other communities), and \(\lor\) denotes the logical OR operator.
+ <br/>
+ The expression \(\left( \lor_{j \in C_l} a_{ij} \right) = 1\) if and only if node \(i\) is connected to at least one node \(j\) in community \(C_l\); otherwise, it equals zero.
+ <br/>
+ Nodes with high CHB values act as both
+ <i>
+  hubs
+ </i>
+ (densely connected within their own community) and
+ <i>
+  bridges
+ </i>
+ (linking multiple communities), making them crucial for information flow and inter-community connectivity.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Ghalmane, Z., Hassouni, M. E., &amp; Cherifi, H. (2019). Immunization of networks with non-overlapping community structure. Social Network Analysis and Mining, 9, 1-22.
+  <a href="https://doi.org/10.1007/s13278-019-0591-9">
+   doi: 10.1007/s13278-019-0591-9.
+  </a>
+ </div>
+</div>
