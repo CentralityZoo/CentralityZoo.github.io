@@ -4,75 +4,55 @@ permalink: /local-and-global-centrality-lgc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Local and global centrality (LGC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Local and global centrality (LGC)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Local and global centrality
-   </i>
-   (LGC) identifies influential nodes by integrating both local and global topological properties of a network [2]. The centrality of a node \(i\) is defined as
-   <br/>
-   \[
-   <br/>
-   c_{LGC}(i) = \frac{d_i}{N} \sum_{j \neq i} \frac{\sqrt{d_j + α}}{d_{ij}},
-   <br/>
-   \]
-   <br/>
-   where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(α \in [0,1]\) is a parameter that controls the relative influence of neighboring node degrees (e.g., \(α=0.4\)).
-   <br/>
-   Nodes with high LGC scores are those that not only have many connections but are also closely connected to other well-connected nodes, making them critical for information spreading and network cohesion. The effectiveness of LGC has been evaluated on six real-world networks and validated using the Susceptible-Infected-Recovered (SIR) epidemic model.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Ullah, A., Wang, B., Sheng, J., Long, J., Khan, N., &amp; Sun, Z. (2021). Identifying vital nodes from local and global perspectives in complex networks. Expert Systems with Applications, 186, 115778.
-    <a href="https://doi.org/10.1016/j.eswa.2021.115778">
-     doi: 10.1016/j.eswa.2021.115778.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Local and global centrality
+ </i>
+ (LGC) identifies influential nodes by integrating both local and global topological properties of a network [2]. The centrality of a node \(i\) is defined as
+ <br/>
+ \[
+ <br/>
+ c_{LGC}(i) = \frac{d_i}{N} \sum_{j \neq i} \frac{\sqrt{d_j + α}}{d_{ij}},
+ <br/>
+ \]
+ <br/>
+ where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(α \in [0,1]\) is a parameter that controls the relative influence of neighboring node degrees (e.g., \(α=0.4\)).
+ <br/>
+ Nodes with high LGC scores are those that not only have many connections but are also closely connected to other well-connected nodes, making them critical for information spreading and network cohesion. The effectiveness of LGC has been evaluated on six real-world networks and validated using the Susceptible-Infected-Recovered (SIR) epidemic model.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Ullah, A., Wang, B., Sheng, J., Long, J., Khan, N., &amp; Sun, Z. (2021). Identifying vital nodes from local and global perspectives in complex networks. Expert Systems with Applications, 186, 115778.
+  <a href="https://doi.org/10.1016/j.eswa.2021.115778">
+   doi: 10.1016/j.eswa.2021.115778.
+  </a>
+ </div>
+</div>

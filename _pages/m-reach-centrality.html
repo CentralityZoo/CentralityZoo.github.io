@@ -4,108 +4,82 @@ permalink: /m-reach-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   <i>
-    m
-   </i>
-   -reach centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   <i>
-    m
-   </i>
-   -reach centrality
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    \(m\)-reach centrality
-   </i>
-   -reach centrality}, also referred to as \(m\)-step reach centrality or the \(K\)-order propagation number [2], quantifies the extent of a node’s influence by counting the number of nodes that can be reached within \(m\) steps from it [3].  Formally, for a node \(i\), the \(m\)-reach centrality \(c_{m\text{-reach}}(i)\) is defined as
-   <br/>
-   \[
-   <br/>
-   c_{m\text{-reach}}(i) = |\{ j \in \mathcal{N} : d_{ij} \le m \}| = |N^{(\le m)}(i)|,
-   <br/>
-   \]
-   <br/>
-   where \(\mathcal{N}\) is the set of all nodes in the network and \(d_{ij}\) denotes the shortest-path distance between nodes \(i\) and \(j\). The \(m\)-reach centrality generalizes several well-known measures:
-   <ul>
-    <li>
-     For \(m = 1\), it coincides with the degree centrality.
-    </li>
-    <li>
-     For \(m = 2\), it is equivalent to the reachability measure [4].
-    </li>
-   </ul>
-   <br/>
-   The parameter \(m\) should not exceed the diameter of the network, as values larger than the diameter would include all nodes and thus provide no further discrimination between nodes.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Li-Ya, H., Ping-Chuan, T., You-Liang, H., Yi, Z., &amp; Xie-Feng, C. (2019). Node importance based on the weighted K-order propagation number algorithm. Acta Physica Sinica, 68(12).
-    <a href="https://doi.org/10.3390/e22030364">
-     doi: 10.3390/e22030364.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Borgatti, S. P. (2003). The key player problem. Washington, D.C.: National Academy of Sciences Press. pp. 241-252.
-    <a href="https://doi.org/10.2139/ssrn.1149843">
-     doi: 10.2139/ssrn.1149843.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [4]
-    </span>
-    Higley, J., Hoffmann-Lange, U., Kadushin, C., &amp; Moore, G. (1991). Elite integration in stable democracies: a reconsideration. European Sociological Review, 7(1), 35-53.
-    <a href="https://doi.org/10.1093/oxfordjournals.esr.a036576">
-     doi: 10.1093/oxfordjournals.esr.a036576.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  \(m\)-reach centrality
+ </i>
+ -reach centrality}, also referred to as \(m\)-step reach centrality or the \(K\)-order propagation number [2], quantifies the extent of a node’s influence by counting the number of nodes that can be reached within \(m\) steps from it [3].  Formally, for a node \(i\), the \(m\)-reach centrality \(c_{m\text{-reach}}(i)\) is defined as
+ <br/>
+ \[
+ <br/>
+ c_{m\text{-reach}}(i) = |\{ j \in \mathcal{N} : d_{ij} \le m \}| = |N^{(\le m)}(i)|,
+ <br/>
+ \]
+ <br/>
+ where \(\mathcal{N}\) is the set of all nodes in the network and \(d_{ij}\) denotes the shortest-path distance between nodes \(i\) and \(j\). The \(m\)-reach centrality generalizes several well-known measures:
+ <ul>
+  <li>
+   For \(m = 1\), it coincides with the degree centrality.
+  </li>
+  <li>
+   For \(m = 2\), it is equivalent to the reachability measure [4].
+  </li>
+ </ul>
+ <br/>
+ The parameter \(m\) should not exceed the diameter of the network, as values larger than the diameter would include all nodes and thus provide no further discrimination between nodes.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Li-Ya, H., Ping-Chuan, T., You-Liang, H., Yi, Z., &amp; Xie-Feng, C. (2019). Node importance based on the weighted K-order propagation number algorithm. Acta Physica Sinica, 68(12).
+  <a href="https://doi.org/10.3390/e22030364">
+   doi: 10.3390/e22030364.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Borgatti, S. P. (2003). The key player problem. Washington, D.C.: National Academy of Sciences Press. pp. 241-252.
+  <a href="https://doi.org/10.2139/ssrn.1149843">
+   doi: 10.2139/ssrn.1149843.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Higley, J., Hoffmann-Lange, U., Kadushin, C., &amp; Moore, G. (1991). Elite integration in stable democracies: a reconsideration. European Sociological Review, 7(1), 35-53.
+  <a href="https://doi.org/10.1093/oxfordjournals.esr.a036576">
+   doi: 10.1093/oxfordjournals.esr.a036576.
+  </a>
+ </div>
+</div>

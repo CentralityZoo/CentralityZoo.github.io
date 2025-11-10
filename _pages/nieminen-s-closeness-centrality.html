@@ -4,91 +4,71 @@ permalink: /nieminen-s-closeness-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Nieminen's closeness centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Nieminen's closeness centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Nieminen's closeness centrality
-   </i>
-   , originally designed for weakly connected directed graphs, measures a node's centrality by combining the total distance from node \(i\) to all other reachable nodes with the ability to reach a large number of nodes [2]. Let \(RP(i)\) denote the set of nodes reachable from \(i\) in the network \(G\). By definition, \(i \in RP(i)\). Then, the Nieminen's closeness centrality of node \(i\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{Nieminen}(i) =
-   <br/>
-   \begin{cases}
-   <br/>
-   \sum_{j \in RP(i)} \left(|RP(i)| - d_{ij} \right), &amp; \text{if } |RP(i)| \geq 2,\\
-   <br/>
-   0, &amp; \text{otherwise}.
-   <br/>
-   \end{cases}
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(d_{ij}\) denotes the shortest-path distance between nodes \(i\) and \(j\).
-   <br/>
-   For unweighted and strongly connected networks, the Nieminen's closeness centrality can be expressed as
-   <br/>
-   \[
-   <br/>
-   c_{Nieminen}(i) = N^2 - \sum_{j=1}^N d_{ij},
-   <br/>
-   \]
-   <br/>
-   which is directly related to the sum of shortest-path distances from node \(i\) to all other nodes. In this case, the ranking of nodes by Nieminen's closeness is identical to the ranking obtained from the closeness centrality.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Nieminen, U. J. (1973). On the centrality in a directed graph. Social science research, 2(4), 371-378.
-    <a href="https://doi.org/10.1016/0049-089X(73)90010-0">
-     doi: 10.1016/0049-089X(73)90010-0.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Nieminen's closeness centrality
+ </i>
+ , originally designed for weakly connected directed graphs, measures a node's centrality by combining the total distance from node \(i\) to all other reachable nodes with the ability to reach a large number of nodes [2]. Let \(RP(i)\) denote the set of nodes reachable from \(i\) in the network \(G\). By definition, \(i \in RP(i)\). Then, the Nieminen's closeness centrality of node \(i\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{Nieminen}(i) =
+ <br/>
+ \begin{cases}
+ <br/>
+ \sum_{j \in RP(i)} \left(|RP(i)| - d_{ij} \right), &amp; \text{if } |RP(i)| \geq 2,\\
+ <br/>
+ 0, &amp; \text{otherwise}.
+ <br/>
+ \end{cases}
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(d_{ij}\) denotes the shortest-path distance between nodes \(i\) and \(j\).
+ <br/>
+ For unweighted and strongly connected networks, the Nieminen's closeness centrality can be expressed as
+ <br/>
+ \[
+ <br/>
+ c_{Nieminen}(i) = N^2 - \sum_{j=1}^N d_{ij},
+ <br/>
+ \]
+ <br/>
+ which is directly related to the sum of shortest-path distances from node \(i\) to all other nodes. In this case, the ranking of nodes by Nieminen's closeness is identical to the ranking obtained from the closeness centrality.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Nieminen, U. J. (1973). On the centrality in a directed graph. Social science research, 2(4), 371-378.
+  <a href="https://doi.org/10.1016/0049-089X(73)90010-0">
+   doi: 10.1016/0049-089X(73)90010-0.
+  </a>
+ </div>
+</div>

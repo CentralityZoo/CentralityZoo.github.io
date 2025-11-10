@@ -4,104 +4,84 @@ permalink: /local-information-dimensionality-lid/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Local information dimensionality (LID)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Local information dimensionality (LID)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    local information dimensionality
-   </i>
-   (LID) is an entropy-based, semi-local centrality measure derived from the concept of local dimension [2]. It characterizes the structural complexity of the neighborhood around each node by quantifying how local information changes with scale.
-   <br/>
-   For a given node \(i\), the local information dimensionality \(D_{I_i}\) is defined as
-   <br/>
-   \[
-   <br/>
-   D_{I_i} = - \frac{dI_i(r)}{d \ln r},
-   <br/>
-   \]
-   <br/>
-   where the derivative is taken with respect to the logarithm of the topological distance \(r\), which represents the scale of locality around node \(i\). The information content \(I_i(r)\) is computed based on the number of nodes \(B_i(r)\) within a topological distance \(r\) from node \(i\) as
-   <br/>
-   \[
-   <br/>
-   I_i(r) = - \frac{B_i(r)}{N}\ln \frac{B_i(r)}{N},
-   <br/>
-   \]
-   <br/>
-   where \(N\) is the total number of nodes in the network.
-   <br/>
-   The local information dimensionality \(D_{I_i}\) can be estimated from the slope of the relationship between \(I_i(r)\) and \(\ln r\) on a logarithmic scale, and discretized as
-   <br/>
-   \[
-   <br/>
-   D_{I_i} \simeq \frac{n_i(r)\left[1 + \ln \frac{B_i(r)}{N}\right]r}{N},
-   <br/>
-   \]
-   <br/>
-   where \(n_i(r)\) denotes the number of nodes located exactly at distance \(r\) from the reference node \(i\).
-   <br/>
-   The scale of locality \(r\) is typically chosen as half of the maximum shortest-path distance from node \(i\), defined as
-   <br/>
-   \[
-   <br/>
-   r = \lceil d_{\max}(i)/2 \rceil,
-   <br/>
-   \]
-   <br/>
-   where \(d_{\max}(i)\) is the maximum geodesic distance from node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Wen, T., &amp; Deng, Y. (2020). Identification of influencers in complex networks by local information dimensionality. Information Sciences, 512, 549-562.
-    <a href="https://doi.org/10.1016/j.ins.2019.10.003">
-     doi: 10.1016/j.ins.2019.10.003.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  local information dimensionality
+ </i>
+ (LID) is an entropy-based, semi-local centrality measure derived from the concept of local dimension [2]. It characterizes the structural complexity of the neighborhood around each node by quantifying how local information changes with scale.
+ <br/>
+ For a given node \(i\), the local information dimensionality \(D_{I_i}\) is defined as
+ <br/>
+ \[
+ <br/>
+ D_{I_i} = - \frac{dI_i(r)}{d \ln r},
+ <br/>
+ \]
+ <br/>
+ where the derivative is taken with respect to the logarithm of the topological distance \(r\), which represents the scale of locality around node \(i\). The information content \(I_i(r)\) is computed based on the number of nodes \(B_i(r)\) within a topological distance \(r\) from node \(i\) as
+ <br/>
+ \[
+ <br/>
+ I_i(r) = - \frac{B_i(r)}{N}\ln \frac{B_i(r)}{N},
+ <br/>
+ \]
+ <br/>
+ where \(N\) is the total number of nodes in the network.
+ <br/>
+ The local information dimensionality \(D_{I_i}\) can be estimated from the slope of the relationship between \(I_i(r)\) and \(\ln r\) on a logarithmic scale, and discretized as
+ <br/>
+ \[
+ <br/>
+ D_{I_i} \simeq \frac{n_i(r)\left[1 + \ln \frac{B_i(r)}{N}\right]r}{N},
+ <br/>
+ \]
+ <br/>
+ where \(n_i(r)\) denotes the number of nodes located exactly at distance \(r\) from the reference node \(i\).
+ <br/>
+ The scale of locality \(r\) is typically chosen as half of the maximum shortest-path distance from node \(i\), defined as
+ <br/>
+ \[
+ <br/>
+ r = \lceil d_{\max}(i)/2 \rceil,
+ <br/>
+ \]
+ <br/>
+ where \(d_{\max}(i)\) is the maximum geodesic distance from node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Wen, T., &amp; Deng, Y. (2020). Identification of influencers in complex networks by local information dimensionality. Information Sciences, 512, 549-562.
+  <a href="https://doi.org/10.1016/j.ins.2019.10.003">
+   doi: 10.1016/j.ins.2019.10.003.
+  </a>
+ </div>
+</div>

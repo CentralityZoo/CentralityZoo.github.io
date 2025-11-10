@@ -4,82 +4,62 @@ permalink: /maximum-neighborhood-component-mnc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Maximum Neighborhood Component (MNC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Maximum Neighborhood Component (MNC)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    Maximum Neighborhood Component
-   </i>
-   (MNC) centrality quantifies the importance of a node based on the internal connectivity structure among its immediate neighbors [2].
-   <br/>
-   For a given node \( i \), let its neighborhood be denoted by \( \mathcal{N}(i) \), that is, the set of nodes directly connected to \( i \).
-   <br/>
-   The neighborhood \( \mathcal{N}(i) \) induces a subgraph \( G_{\mathcal{N}(i)} \) composed solely of these neighboring nodes and the edges between them. The MNC centrality \( c_{\mathrm{MNC}}(i) \) of node \( i \) is then defined as the size of the largest connected component within this induced subgraph, formally expressed as:
-   <br/>
-   \[
-   <br/>
-   c_{\mathrm{MNC}}(i)
-   <br/>
-   = \max_{\substack{C \subseteq \mathcal{N}(i)\\ C\text{ is connected in } G_{\mathcal{N}(i)} }}|C|.
-   <br/>
-   \]
-   <br/>
-   Intuitively, the MNC centrality measures how well the neighbors of a node are connected to each other.
-   <br/>
-   Nodes whose neighbors form a densely connected group (i.e., a large maximum connected component) receive higher MNC scores, reflecting their structural significance within the network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Lin, C. Y., Chin, C. H., Wu, H. H., Chen, S. H., Ho, C. W., &amp; Ko, M. T. (2008). Hubba: hub objects analyzer—a framework of interactome hubs identification for network biology. Nucleic acids research, 36, W438-W443.
-    <a href="https://doi.org/10.1093/nar/gkn257">
-     doi: 10.1093/nar/gkn257.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  Maximum Neighborhood Component
+ </i>
+ (MNC) centrality quantifies the importance of a node based on the internal connectivity structure among its immediate neighbors [2].
+ <br/>
+ For a given node \( i \), let its neighborhood be denoted by \( \mathcal{N}(i) \), that is, the set of nodes directly connected to \( i \).
+ <br/>
+ The neighborhood \( \mathcal{N}(i) \) induces a subgraph \( G_{\mathcal{N}(i)} \) composed solely of these neighboring nodes and the edges between them. The MNC centrality \( c_{\mathrm{MNC}}(i) \) of node \( i \) is then defined as the size of the largest connected component within this induced subgraph, formally expressed as:
+ <br/>
+ \[
+ <br/>
+ c_{\mathrm{MNC}}(i)
+ <br/>
+ = \max_{\substack{C \subseteq \mathcal{N}(i)\\ C\text{ is connected in } G_{\mathcal{N}(i)} }}|C|.
+ <br/>
+ \]
+ <br/>
+ Intuitively, the MNC centrality measures how well the neighbors of a node are connected to each other.
+ <br/>
+ Nodes whose neighbors form a densely connected group (i.e., a large maximum connected component) receive higher MNC scores, reflecting their structural significance within the network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Lin, C. Y., Chin, C. H., Wu, H. H., Chen, S. H., Ho, C. W., &amp; Ko, M. T. (2008). Hubba: hub objects analyzer—a framework of interactome hubs identification for network biology. Nucleic acids research, 36, W438-W443.
+  <a href="https://doi.org/10.1093/nar/gkn257">
+   doi: 10.1093/nar/gkn257.
+  </a>
+ </div>
+</div>

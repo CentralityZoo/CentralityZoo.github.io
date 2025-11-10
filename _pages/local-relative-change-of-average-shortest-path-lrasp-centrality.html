@@ -4,84 +4,64 @@ permalink: /local-relative-change-of-average-shortest-path-lrasp-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Local relative change of average shortest path (LRASP) centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Local relative change of average shortest path (LRASP) centrality
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    local relative change of average shortest path
-   </i>
-   (LRASP) centrality is a modification of the average shortest path centrality (AC or RASP) [2]. Let \(G_{N_i(l)}\) denote the subgraph containing node \(i\) and all nodes within \(l\) hops from \(i\). The LRASP centrality of node \(i\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{LRASP}(i) = \frac{ASP(G'_{N_i(l)}) - ASP(G_{N_i(l)})}{ASP(G_{N_i(l)})},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(ASP(G_{N_i(l)})\) is the average shortest path length of \(G_{N_i(l)}\):
-   <br/>
-   \begin{equation*}
-   <br/>
-   ASP(G_{N_i(l)}) = \frac{\sum_{j \neq k \in N_i(l)} d_{jk}}{|N_i(l)|(|N_i(l)|-1)},
-   <br/>
-   \end{equation*}
-   <br/>
-   with \(d_{jk}\) being the shortest path distance between nodes \(j\) and \(k\) if reachable; otherwise, \(d_{jk}\) is set to the diameter of \(G_{N_i(l)}\). The subgraph \(G'_{N_i(l)}\) is obtained by removing all links adjacent to node \(i\).
-   <br/>
-   LRASP quantifies the relative change in average shortest path when the immediate connections of node \(i\) are removed, capturing its local structural importance. When \(l\) equals the network diameter \(d(G)\), LRASP reduces to the standard AC centrality. In [2], the authors use \(l = d(G)/2\) to balance local and semi-global structural effects.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Hajarathaiah, K., Enduri, M. K., &amp; Anamalamudi, S. (2022). Efficient algorithm for finding the influential nodes using local relative change of average shortest path. Physica A: Statistical Mechanics and its Applications, 591, 126708.
-    <a href="https://doi.org/10.1016/j.physa.2021.126708">
-     doi: 10.1016/j.physa.2021.126708.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  local relative change of average shortest path
+ </i>
+ (LRASP) centrality is a modification of the average shortest path centrality (AC or RASP) [2]. Let \(G_{N_i(l)}\) denote the subgraph containing node \(i\) and all nodes within \(l\) hops from \(i\). The LRASP centrality of node \(i\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{LRASP}(i) = \frac{ASP(G'_{N_i(l)}) - ASP(G_{N_i(l)})}{ASP(G_{N_i(l)})},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(ASP(G_{N_i(l)})\) is the average shortest path length of \(G_{N_i(l)}\):
+ <br/>
+ \begin{equation*}
+ <br/>
+ ASP(G_{N_i(l)}) = \frac{\sum_{j \neq k \in N_i(l)} d_{jk}}{|N_i(l)|(|N_i(l)|-1)},
+ <br/>
+ \end{equation*}
+ <br/>
+ with \(d_{jk}\) being the shortest path distance between nodes \(j\) and \(k\) if reachable; otherwise, \(d_{jk}\) is set to the diameter of \(G_{N_i(l)}\). The subgraph \(G'_{N_i(l)}\) is obtained by removing all links adjacent to node \(i\).
+ <br/>
+ LRASP quantifies the relative change in average shortest path when the immediate connections of node \(i\) are removed, capturing its local structural importance. When \(l\) equals the network diameter \(d(G)\), LRASP reduces to the standard AC centrality. In [2], the authors use \(l = d(G)/2\) to balance local and semi-global structural effects.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Hajarathaiah, K., Enduri, M. K., &amp; Anamalamudi, S. (2022). Efficient algorithm for finding the influential nodes using local relative change of average shortest path. Physica A: Statistical Mechanics and its Applications, 591, 126708.
+  <a href="https://doi.org/10.1016/j.physa.2021.126708">
+   doi: 10.1016/j.physa.2021.126708.
+  </a>
+ </div>
+</div>

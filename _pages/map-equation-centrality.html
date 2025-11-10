@@ -4,85 +4,65 @@ permalink: /map-equation-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Map equation centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Map equation centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Map equation centrality
-   </i>
-   is a vitality-based centrality measure derived from the information-theoretic community detection framework known as the
-   <i>
-    map equation
-   </i>
-   [2]. It quantifies the importance of a node based on how much it contributes to the overall description length of flow on the network.
-   <br/>
-   Assume that the network \(G\) has a non-overlapping community structure represented by the partition \(M\). The map equation centrality \(c_{ME}(i)\) of node \(i\) measures the reduction in the average codeword length if node \(i\) is silenced, meaning that when a random walker visits \(i\), no codeword for \(i\) is transmitted. Formally,
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{ME}(i) = L(G, M) - L^{*}_i(G, M),
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(L(G, M)\) denotes the optimal description length of flow for the original network under partition \(M\), and \(L^{*}_i(G, M)\) is the optimal description length when node \(i\) is silenced.
-   <br/>
-   Hence, \(c_{ME}(i)\) represents the
-   <i>
-    marginal contribution
-   </i>
-   of node \(i\) to the total information cost of describing flow on the network. Nodes with higher \(c_{ME}(i)\) values are more important for maintaining the network’s information flow structure, while nodes with lower or negative values have less or even disruptive influence on modular information dynamics.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Blöcker, C., Nieves, J. C., &amp; Rosvall, M. (2022). Map equation centrality: community-aware centrality based on the map equation. Applied Network Science, 7(1), 56.
-    <a href="https://doi.org/10.1007/s41109-022-00477-9">
-     doi: 10.1007/s41109-022-00477-9.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Map equation centrality
+ </i>
+ is a vitality-based centrality measure derived from the information-theoretic community detection framework known as the
+ <i>
+  map equation
+ </i>
+ [2]. It quantifies the importance of a node based on how much it contributes to the overall description length of flow on the network.
+ <br/>
+ Assume that the network \(G\) has a non-overlapping community structure represented by the partition \(M\). The map equation centrality \(c_{ME}(i)\) of node \(i\) measures the reduction in the average codeword length if node \(i\) is silenced, meaning that when a random walker visits \(i\), no codeword for \(i\) is transmitted. Formally,
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{ME}(i) = L(G, M) - L^{*}_i(G, M),
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(L(G, M)\) denotes the optimal description length of flow for the original network under partition \(M\), and \(L^{*}_i(G, M)\) is the optimal description length when node \(i\) is silenced.
+ <br/>
+ Hence, \(c_{ME}(i)\) represents the
+ <i>
+  marginal contribution
+ </i>
+ of node \(i\) to the total information cost of describing flow on the network. Nodes with higher \(c_{ME}(i)\) values are more important for maintaining the network’s information flow structure, while nodes with lower or negative values have less or even disruptive influence on modular information dynamics.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Blöcker, C., Nieves, J. C., &amp; Rosvall, M. (2022). Map equation centrality: community-aware centrality based on the map equation. Applied Network Science, 7(1), 56.
+  <a href="https://doi.org/10.1007/s41109-022-00477-9">
+   doi: 10.1007/s41109-022-00477-9.
+  </a>
+ </div>
+</div>
