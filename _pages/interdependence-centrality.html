@@ -1,0 +1,119 @@
+---
+title: Interdependence centrality
+permalink: /interdependence-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Interdependence centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Interdependence centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Interdependence centrality
+   </i>
+   considers the possibility that two nodes may influence each other through the same link [2, 3]. A typical example of such networks is a trade network, where a reduction in trade flow between two countries can lead to both economic and non-economic losses for the exporter and/or the importer.
+   <br/>
+   Interdependence centrality generalizes the concept of individual and group influence from the long-range interaction centrality (LRIC) [2] by introducing two node-specific parameters, \(q_i^{\mathrm{in}}\) and \(q_i^{\mathrm{out}}\), which represent the threshold levels at which node \(i\) becomes affected. Using these thresholds, the importance of a link \((i,j)\) can be evaluated in two complementary dimensions:
+   <i>
+    influence
+   </i>
+   (the effect of \(i\) on \(j\)) and
+   <i>
+    dependence
+   </i>
+   (the effect of \(j\) on \(i\)). The direct influence of node \(i\) on node \(j\) through link \((i,j)\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{ij}^{\mathrm{in}} = \max_{\Omega_k(j):\, i \in \Omega_k^{P}(j)}
+   <br/>
+   \frac{w_{ij}}{\sum_{h \in \Omega_k(j)} w_{hj}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(\Omega_k(j)\) denotes a critical group of node \(j\), and \(\Omega_k^{P}(j)\) is the subset of its pivotal nodes. The value \(c_{ij}^{\mathrm{in}} \in [0,1]\) measures the relative importance of node \(i\) for node \(j\): \(c_{ij}^{\mathrm{in}} = 0\) indicates that \(i\) has no direct influence on \(j\), while \(c_{ij}^{\mathrm{in}} = 1\) implies that node \(i\) alone can exceed the influence threshold of node \(j\).
+   <br/>
+   Analogously, to quantify how critical the same link \((i,j)\) is for node \(i\), we consider node \(i\)’s own influence threshold \(q_i^{\mathrm{out}}\). The direct dependence of node \(i\) on node \(j\) is given by
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{ji}^{\mathrm{out}} = \max_{\Omega_k(i):\, j \in \Omega_k^{P}(i)}
+   <br/>
+   \frac{w_{ij}}{\sum_{h \in \Omega_k(i)} w_{ih}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(\Omega_k(i)\) and \(\Omega_k^{P}(i)\) are defined analogously for node \(i\). This formulation enables representing the network as a two-layer structure, consisting of an
+   <i>
+    influence layer
+   </i>
+   , capturing how nodes affect others, and a
+   <i>
+    dependence layer
+   </i>
+   , capturing how nodes are affected in return.
+   <br/>
+   Once the direct influence of each edge is defined, the indirect influence between nodes can be estimated along different paths that traverse both layers. Building on this framework, Shvydun [3] proposes three models to evaluate indirect influence and subsequently aggregate these estimates into the interdependence centrality measure.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Aleskerov, F., Shvydun, S. and Meshcheryakova, N. (2021). New centrality measures in networks: how to take into account the parameters of the nodes and group influence of nodes to nodes (1st ed.). Chapman and Hall/CRC.
+    <a href="https://doi.org/10.1201/9781003203421">
+     doi: 10.1201/9781003203421.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Shvydun, S. (2020). Power of Nodes Based on Their Interdependence. In Complex Networks XI: Proceedings of the 11th Conference on Complex Networks CompleNet 2020 (pp. 70-82). Cham: Springer International Publishing.
+    <a href="https://doi.org/10.1007/978-3-030-40943-2_7">
+     doi: 10.1007/978-3-030-40943-2\_7.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

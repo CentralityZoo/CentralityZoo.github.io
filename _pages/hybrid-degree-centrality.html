@@ -1,7 +1,94 @@
 ---
-title: "Hybrid degree centrality"
+title: Hybrid degree centrality
 permalink: /hybrid-degree-centrality/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Hybrid degree centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Hybrid degree centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Hybrid degree centrality
+   </i>
+   (HDC) [2] quantifies a node's influence by combining contributions from both near-source and distal effects under varying spreading probabilities.
+   <br/>
+   The near-source influence of node \(i\) is represented by its degree, while the distal influence is captured by the
+   <i>
+    modified local centrality
+   </i>
+   (MLC). Specifically, MLC adjusts the semi-local LocalRank centrality by subtracting the contribution of neighbors' direct connections:
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{MLC}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k) - 2 \sum_{j \in \mathcal{N}(i)} |\mathcal{N}(j)|,
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(n(k)=|\mathcal{N}^{(\leq 2)}(k)|\) denotes the number of nearest and next-nearest neighbors of node \(k\).
+   <br/>
+   The hybrid degree centrality of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{HDC}(i) = (β - p) \, α \, |\mathcal{N}(i)| + p \, c_{MLC}(i),
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(p\) is the spreading probability, and \(α\) and \(β\) are parameters controlling the relative contributions of near-source and distal influence.
+   <br/>
+   Ma and Ma [2] suggest \(α = 1000\), \(β \in [0.1, 0.2]\), and \(p &lt; 0.6\). When \(β = 0.2\) and \(p = 0.1\), the contributions from degree centrality (DC) and modified local centrality (MLC) in the hybrid centrality (HDC) are each approximately half of the total HDC value.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Ma, Q., &amp; Ma, J. (2017). Identifying and ranking influential spreaders in complex networks with consideration of spreading probability. Physica A: Statistical Mechanics and its Applications, 465, 312-330.
+    <a href="https://doi.org/10.1016/j.physa.2016.08.041">
+     doi: 10.1016/j.physa.2016.08.041.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>
