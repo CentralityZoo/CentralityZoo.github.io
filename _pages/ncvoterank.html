@@ -1,7 +1,126 @@
 ---
-title: "NCVoteRank"
+title: NCVoteRank
 permalink: /ncvoterank/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   NCVoteRank
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   NCVoteRank
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    NCVoteRank
+   </i>
+   centrality is a modification of VoteRank that incorporates the coreness values of neighbors into the voting process [2]. Each node \(i\) is represented by the tuple \((s_i, v_i)\), where \(s_i\) is the voting score and \(v_i\) is the voting ability, initialized as \((s_i, v_i) = (0, 1)\) for all \(i \in \mathcal{N}\). The voting procedure iteratively performs the following steps:
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     <i>
+      Vote:
+     </i>
+     Each node votes for its neighbors using its voting ability. The voting score of node \(i\) is updated as
+    \begin{equation*}
+        s_i = \sum_{j=1}^{N} a_{ji} \, v_j \, \big(θ + (1-θ)c_{INK}(j)\big),
+    \end{equation*}
+    where \(c_{INK}(j)\) is the improved neighbors’
+     <i>
+      k
+     </i>
+     -core (INK) score of node \(j\), which is defined in [3, 4], while \(θ\) is a parameter. Kumar and Panda [2] suggest \(θ = 0.5\).
+    </li>
+    <br/>
+    <li>
+     <i>
+      Select:
+     </i>
+     The node \(k\) with the highest voting score \(s_k\) is elected. Node \(k\) will not participate in subsequent voting turns, meaning its voting ability is set to zero (\(v_k = 0\)).
+    </li>
+    <br/>
+    <li>
+     <i>
+      Update:
+     </i>
+     The voting ability of 1-hop and 2-hop neighbors of node \(k\) is reduced to account for influence spread. Specifically, for each neighbor \(i \in \mathcal{N}(k)\), the updated voting ability is
+    \begin{equation*}
+        v_i \leftarrow \max\big(0, v_i - f\big),
+    \end{equation*}
+    where \(f = 1 / \langle d \rangle\) for 1-hop neighbors and \(f = 1 / (2 \langle d \rangle)\) for 2-hop neighbors, with \(\langle d \rangle\) denoting the average degree of the network.
+    </li>
+    <br/>
+   </ol>
+   <br/>
+   NCVoteRank identifies influential nodes by combining local coreness information with iterative voting, ensuring that nodes with high coreness and connectivity are prioritized while the influence of selected nodes propagates through their neighbors.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Kumar, S., &amp; Panda, B. S. (2020). Identifying influential nodes in Social Networks: Neighborhood Coreness based voting approach. Physica A: Statistical Mechanics and its Applications, 553, 124215.
+    <a href="https://doi.org/10.1016/j.physa.2020.124215">
+     doi: 10.1016/j.physa.2020.124215.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Bae, J., &amp; Kim, S. (2014). Identifying and ranking influential spreaders in complex networks by neighborhood coreness. Physica A: Statistical Mechanics and its Applications, 395, 549-559.
+    <a href="https://doi.org/10.1016/j.physa.2013.10.047">
+     doi: 10.1016/j.physa.2013.10.047.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [4]
+    </span>
+    Lin, J. H., Guo, Q., Dong, W. Z., Tang, L. Y., &amp; Liu, J. G. (2014). Identifying the node spreading influence with largest k-core values. Physics Letters A, 378(45), 3279-3284.
+    <a href="https://doi.org/10.1016/j.physleta.2014.09.054">
+     doi: 10.1016/j.physleta.2014.09.054.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

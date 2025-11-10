@@ -1,0 +1,157 @@
+---
+title: Long-Range Interaction Centrality (LRIC)
+permalink: /long-range-interaction-centrality-lric/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Long-Range Interaction Centrality (LRIC)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Long-Range Interaction Centrality (LRIC)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    Long-Range Interaction Centrality (LRIC)
+   </i>
+   index is an extension of SRIC that accounts for the indirect influence of nodes [2, 3]. LRIC is based on the concepts of direct and group influence, as in SRIC, where each node \(i\) has an individual threshold of influence \(q_i\), while \(\Omega(i)\) and \(\Omega^{p}(i)\) denote, respectively, the sets of critical and pivotal neighbours of node \(i\). However, the direct influence \(c_{ij}\) of node \(i\) on node \(j\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{ij} =
+   <br/>
+   \begin{cases}
+   <br/>
+   \max_{i \in \Omega^{p}_k(j)} \frac{a_{ij}}{\sum_{h \in \Omega_k(j)} a_{hj}}, &amp; \text{if } \exists k: i \in \Omega^{p}_k(j),\\
+   <br/>
+   0, &amp; \text{otherwise}.
+   <br/>
+   \end{cases}
+   <br/>
+   \end{equation*}
+   <br/>
+   The direct influence \(c_{ij}\) can be interpreted as the maximal possible influence of node \(i\) within any group \(\Omega_k(j)\) where it is pivotal. LRIC further considers the indirect influence of nodes by examining paths of length \(\leq s\) in the network of direct influences. There are three common variations of the LRIC index:
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     <i>
+      LRIC(max)
+     </i>
+     : the influence \(f(P_{i \rightarrow j})\) of node \(i\) on node \(j\) along a path \(P_{i \rightarrow j}\), characterized by a sequence of edges \((i,k_1),(k_1,k_2),\ldots,(k_{s-1},j)\), is defined as the
+     <i>
+      joint probability
+     </i>
+     of the edges:
+    \begin{equation*}
+        f(P_{i \rightarrow j}) = c_{ik_1} \times c_{k_1k_2} \times \ldots \times c_{k_{s-1}j}.
+    \end{equation*}
+    </li>
+    <br/>
+    <li>
+     <i>
+      LRIC(maxmin)
+     </i>
+     : the influence \(f(P_{i \rightarrow j})\) of node \(i\) on node \(j\) along a path \(P_{i \rightarrow j}\) is defined by the
+     <i>
+      bottleneck capacity
+     </i>
+     :
+    \begin{equation*}
+        f(P_{i \rightarrow j}) = \min(c_{ik_1}, c_{k_1k_2}, \ldots, c_{k_{s-1}j}).
+    \end{equation*}
+    In both LRIC(max) and LRIC(maxmin), the indirect influence \(\Tilde{c}_{ij}\) of node \(i\) on node \(j\) is determined by the path with the greatest strength, i.e.,
+    \[
+        \Tilde{c}_{ij} = \max_{P_{i \rightarrow j}}f(P_{i \rightarrow j}).
+    \]
+    </li>
+    <br/>
+    <li>
+     <i>
+      LRIC(PPR)
+     </i>
+     : the influence \(f(P_{i \rightarrow j})\) of node \(i\) on node \(j\) along a path \(P_{i \rightarrow j}\) is determined by considering all paths between them [4]. Specifically, the indirect influence \(\tilde{c}_{ij}\) of node \(i\) on node \(j\) is quantified using the personalized PageRank (PPR) algorithm, which estimates the probability of reaching node \(j\) starting from node \(i\). This computation uses a modified graph of direct influences, where an additional link is introduced from each node \(k\) to node \(i\) with strength
+    \begin{equation*}
+        c_{ki} = N-1 - \sum_{j \neq i} c_{kj}.
+    \end{equation*}
+    </li>
+    <br/>
+   </ol>
+   <br/>
+   The final LRIC score of node \(i\) is obtained by aggregating its indirect influence on all other nodes in the network. For instance, one possible aggregation is given by
+   <br/>
+   \[
+   <br/>
+   c_{\mathrm{LRIC}}(i) = \sum_{j=1}^{N} \Tilde{c}_{ij}.
+   <br/>
+   \]
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Aleskerov, F., Meshcheryakova, N. and Shvydun, S. (2017). Power in Network Structures. In: Springer Proceedings in Mathematics &amp; Statistics, vol 197. Springer, Cham.
+    <a href="https://doi.org/10.1007/978-3-319-56829-4_7">
+     doi: 10.1007/978-3-319-56829-4\_7.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Aleskerov, F., Shvydun, S. and Meshcheryakova, N. (2021). New centrality measures in networks: how to take into account the parameters of the nodes and group influence of nodes to nodes (1st ed.). Chapman and Hall/CRC.
+    <a href="https://doi.org/10.1201/9781003203421">
+     doi: 10.1201/9781003203421.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [4]
+    </span>
+    Aleskerov, F., Meshcheryakova, N., &amp; Shvydun, S. (2020). Indirect influence assessment in the context of retail food network. In Network Algorithms, Data Mining, and Applications: NET, Moscow, Russia, May 2018 8 (pp. 143-160). Springer International Publishing.
+    <a href="https://doi.org/10.1007/978-3-030-37157-9_10">
+     doi: 10.1007/978-3-030-37157-9\_10.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

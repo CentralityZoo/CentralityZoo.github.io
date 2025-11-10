@@ -1,7 +1,84 @@
 ---
-title: "Normalized local centrality (NLC)"
+title: Normalized local centrality (NLC)
 permalink: /normalized-local-centrality-nlc/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Normalized local centrality (NLC)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Normalized local centrality (NLC)
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Normalized local centrality
+   </i>
+   (NLC) considers the topology of the local network around a node as well as the influence feedback of the node’s nearest neighbor nodes [2]. The centrality \(c_{NLC}(i)\) of node \(i\) is given by
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{NLC}(i) = \sum_{j \in \mathcal{N}(i)}{Q(j)|\mathcal{N}^{(\leq 2)}(j)|},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(\mathcal{N}^{(\leq 2)}(j)\) denotes the set of nearest and next nearest neighbors of node \(j\) and \(Q(j)\) is the influence feedback of nearest neighbor node \(j\) with
+   <br/>
+   \begin{equation*}
+   <br/>
+   Q(j) = \sum_{l \in \mathcal{N}^{(\leq 2)}(j)}{\left(\frac{d_l}{\sqrt{\sum_{u \in \mathcal{N}^{(\leq 2)}(j)}{d_u^2}}} + \frac{c_l}{\sqrt{\sum_{u \in \mathcal{N}^{(\leq 2)}(j)}{c_u^2}}} \right)},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(d_l\) and \(c_l\) are the degree and the clustering coefficient of node \(l\). Hence, \(Q(j)\) is the normalized sum of the number of nodes in the local network and the local clustering coefficient that denotes the tightness of node topology connections, which represents the local structural attribute of the network.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Zhao, X., Liu, F. A., Xing, S., &amp; Wang, Q. (2018). Identifying influential spreaders in social networks via normalized local structure attributes. IEEE Access, 6, 66095-66104.
+    <a href="https://doi.org/10.1109/ACCESS.2018.2879116">
+     doi: 10.1109/ACCESS.2018.2879116.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

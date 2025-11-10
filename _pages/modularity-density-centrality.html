@@ -1,0 +1,78 @@
+---
+title: Modularity density centrality
+permalink: /modularity-density-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Modularity density centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Modularity density centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Modularity density centrality
+   </i>
+   is a variant of modularity centrality based on the spectral optimization of modularity density [2]. Unlike modularity centrality, which relies on the modularity matrix \(M\), modularity density centrality is derived from the kernel matrix \(K\) defined as
+   <br/>
+   \[
+   <br/>
+   K = σ I + 2A - D,
+   <br/>
+   \]
+   <br/>
+   where \(I\) is the identity matrix, \(D\) is the diagonal degree matrix, and \(σ\) is a real number chosen sufficiently large to make \(K\) positive definite. The centrality of a node is determined by the corresponding component in the leading eigenvector of \(K\), i.e., the eigenvector associated with the eigenvalue of largest magnitude.
+   <br/>
+   Standard modularity suffers from a resolution limit, which can prevent the detection of smaller communities and may overemphasize node degree rather than the structural role of nodes. Modularity density centrality addresses this limitation by optimizing a spectral relaxation of modularity density using \(K\). The centrality score of a node is given by its component in the dominant eigenvector of \(K\), reflecting how strongly the node contributes to the network's community structure under the modularity density criterion.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Fu, L., Gao, L., &amp; Ma, X. (2010). A centrality measure based on spectral optimization of modularity density. Science China Information Sciences, 53, 1727-1737.
+    <a href="https://doi.org/10.1007/s11432-010-4043-4">
+     doi: 10.1007/s11432-010-4043-4.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

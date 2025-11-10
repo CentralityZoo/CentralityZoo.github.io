@@ -1,7 +1,79 @@
 ---
-title: "Local gravity model"
+title: Local gravity model
 permalink: /local-gravity-model/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Local gravity model
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Local gravity model
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    local gravity model
+   </i>
+   is a variant of the gravity model in which a node’s centrality depends only on its \(l\)-hop neighborhood [2]. Let \(\mathcal{N}^{(\geq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\). The centrality \(c_{\text{Local-Gravity}}(i)\) of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\text{Local-Gravity}}(i) = \sum_{j \in \mathcal{N}^{(\geq l)}(i)} \frac{d_i\,d_j}{d_{ij}^2},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(d_{ij}\) represents the shortest path distance between nodes \(i\) and \(j\), and \(d_i\) is the degree of node \(i\).
+   <br/>
+   Thus, the local gravity model incorporates only local structural information within an \(l\)-hop neighborhood. When \(l\) equals the diameter of the network, the local gravity model becomes equivalent to the original gravity model.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Li, Z., Ren, T., Ma, X., Liu, S., Zhang, Y. &amp; Zhou, T. Identifying influential spreaders by gravity model. Sci Rep 9, 8387 (2019).
+    <a href="https://doi.org/10.1038/s41598-019-44930-9">
+     doi: 10.1038/s41598-019-44930-9.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

@@ -1,7 +1,104 @@
 ---
-title: "Node information dimension (NID)"
+title: Node information dimension (NID)
 permalink: /node-information-dimension-nid/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Node information dimension (NID)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Node information dimension (NID)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    node information dimension
+   </i>
+   (NID) is a centrality measure for identifying influential nodes based on the local dimension framework [2]. Let \(d_{\max}(i) = \max_j d_{ij}\) denote the maximal shortest-path distance between node \(i\) and all other nodes in the network. Similar to the local dimension (LD) in [3], the local dimension coefficient \(d_j(r)\) is computed for each topological distance scale \(r = 1, \dots, d_{\max}(i)\) as
+   <br/>
+   \[
+   <br/>
+   d_j(r) = j \frac{n_r(j)}{B_r(j)}, \quad \forall j = 1, \dots, S_i(r),
+   <br/>
+   \]
+   <br/>
+   where \(B_r(j)\) is the number of nodes within distance \(j\) from node \(i\) with respect to topological distance scale \(r\), \(n_r(j)\) is the number of nodes at exact distance \(j\) from node \(i\), and \(S_i(r) = \lceil d_{\max}(i)/r \rceil\).
+   <br/>
+   The information entropy of node \(i\) at distance \(r\) is
+   <br/>
+   \[
+   <br/>
+   I_i(r) = - \sum_{j=1}^{S_i(r)} \frac{d_j(r)}{\sum_{k=1}^{S_i(r)} d_k(r)} \ln \frac{d_j(r)}{\sum_{k=1}^{S_i(r)} d_k(r)}.
+   <br/>
+   \]
+   <br/>
+   The node information dimension of node \(i\) is then defined as
+   <br/>
+   \[
+   <br/>
+   c_{\textsc{NID}}(i) = -\lim_{r \to 0} \frac{I_i(r)}{\ln r}.
+   <br/>
+   \]
+   <br/>
+   The NID centrality of node \(i\) is estimated numerically as the slope of the linear regression of \(I_i(r)\) against \(\ln r\).
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Bian, T., &amp; Deng, Y. (2018). Identifying influential nodes in complex networks: A node information dimension approach. Chaos: An Interdisciplinary Journal of Nonlinear Science, 28(4).
+    <a href="https://doi.org/10.1063/1.5030894">
+     doi: 10.1063/1.5030894.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Silva, F. N., &amp; Costa, L. D. F. (2012). Local dimension of complex networks. arXiv preprint arXiv:1209.2476.
+    <a href="https://doi.org/10.48550/arXiv.1209.2476">
+     doi: 10.48550/arXiv.1209.2476.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

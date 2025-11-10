@@ -1,0 +1,82 @@
+---
+title: Odd subgraph centrality
+permalink: /odd-subgraph-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Odd subgraph centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Odd subgraph centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Odd subgraph centrality
+   </i>
+   is a variant of subgraph centrality that counts the number of closed walks of
+   <i>
+    odd
+   </i>
+   length in a network [2]. Focusing on odd-length walks highlights genuine cycles, since even-length walks can arise from trivial back-and-forth movements in acyclic subgraphs. The odd subgraph centrality of node \(i\), denoted \(c_{odd}(i)\), is defined as
+   <br/>
+   \[
+   <br/>
+   c_{odd}(i) = \sum_{k=0}^{\infty} \frac{(A^{2k+1})_{ii}}{(2k+1)!}
+   <br/>
+   = \sum_{j=1}^{N} \left( v_j(i) \right)^2 \sinh(λ_j),
+   <br/>
+   \]
+   <br/>
+   where \(A\) is the adjacency matrix of the network, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\), and \(N\) is the number of nodes. Odd subgraph centrality has been applied to empirical food web networks to identify keystone species involved in cyclic trophic interactions.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Estrada, E. (2007). Characterization of topological keystone species: Local, global and “meso-scale” centralities in food webs. Ecological Complexity, 4(1-2), 48-57.
+    <a href="https://doi.org/10.1016/j.ecocom.2007.02.018">
+     doi: 10.1016/j.ecocom.2007.02.018.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

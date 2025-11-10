@@ -1,7 +1,130 @@
 ---
-title: "Lobby index"
+title: Lobby index
 permalink: /lobby-index/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Lobby index
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Lobby index
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    lobby index
+   </i>
+   , or \(l\)-index, is inspired by Hirsch’s h-index-index}, which quantifies the scientific output of a researcher [2, 3]. For a node \(i\), the lobby centrality \(c_{\mathrm{Lobby}}(i)\) is defined as the largest integer \(k\) such that \(i\) has at least \(k\) neighbors with degree at least \(k\):
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{Lobby}}(i) = \max \{ k \mid d_{i(k)} \ge k \},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(i(k)\) denotes the neighbor of \(i\) with the \(k\)-th largest degree.
+   <br/>
+   Several extensions of the lobby index to weighted networks have been proposed:
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     The
+     <i>
+      collaboration index
+     </i>
+     (\(c\)-index) computes the Hirsch h-index of the sequence formed by multiplying each neighbor’s strength by the weight of the connecting edge [4].
+    </li>
+    <br/>
+    <li>
+     The
+     <i>
+      communication ability
+     </i>
+     replaces each neighbor’s degree with the product of its
+     <i>
+      weighted lobby index
+     </i>
+     (also called \(h\)-degree), which is the lobby index calculated using the strengths of the incident edges, and the weight of the edge connecting it to the node [5].
+    </li>
+    <br/>
+   </ol>
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Korn, A., Schubert, A., &amp; Telcs, A. (2009). Lobby index in networks. Physica A: Statistical Mechanics and its Applications, 388(11), 2221-2226.
+    <a href="https://doi.org/10.1016/j.physa.2009.02.013">
+     doi: 10.1016/j.physa.2009.02.013.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Lü, L., Zhou, T., Zhang, Q. M., &amp; Stanley, H. E. (2016). The H-index of a network node and its relation to degree and coreness. Nature communications, 7(1), 10168.
+    <a href="https://doi.org/10.1038/ncomms10168">
+     doi: 10.1038/ncomms10168.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [4]
+    </span>
+    Yan, X., Zhai, L., &amp; Fan, W. (2013). C-index: A weighted network node centrality measure for collaboration competence. Journal of Informetrics, 7(1), 223-239.
+    <a href="https://doi.org/10.1016/j.joi.2012.11.004">
+     doi: 10.1016/j.joi.2012.11.004.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [5]
+    </span>
+    Zhai, L., Yan, X., &amp; Zhang, G. (2013). A centrality measure for communication ability in weighted network. Physica A: Statistical Mechanics and its Applications, 392(23), 6107-6117.
+    <a href="https://doi.org/10.1016/j.physa.2013.07.056">
+     doi: 10.1016/j.physa.2013.07.056.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

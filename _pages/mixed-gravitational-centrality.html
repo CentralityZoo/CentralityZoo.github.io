@@ -1,7 +1,83 @@
 ---
-title: "Mixed gravitational centrality"
+title: Mixed gravitational centrality
 permalink: /mixed-gravitational-centrality/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Mixed gravitational centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Mixed gravitational centrality
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    mixed gravitational centrality
+   </i>
+   (MGC), also referred to as the
+   <i>
+    improved gravitational centrality
+   </i>
+   , represents an enhanced formulation of the classical gravitational centrality measure. In this variant, the mass of the focal node is determined by its \(k\)-shell index, while the masses of its neighboring nodes are characterized by their degrees [2]. The centrality score \( c_{\mathrm{MGC}}(i) \) for node \( i \) is expressed as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{MGC}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{k_s(i)\,d_j}{d_{ij}^2},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \), \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( k_s(i) \) is the \(k\)-shell index of node \( i \), and \( d_j \) is the degree of node \( j \).
+   <br/>
+   The mixed gravitational centrality integrates the hierarchical structure of the network, captured by the \(k\)-shell decomposition, with local connectivity information, represented by node degrees, thereby providing a more comprehensive quantification of node influence within complex networks.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Wang, J., Li, C., &amp; Xia, C. (2018). Improved centrality indicators to characterize the nodal spreading capability in complex networks. Applied Mathematics and Computation, 334, 388-400.
+    <a href="https://doi.org/10.1016/j.amc.2018.04.028">
+     doi: 10.1016/j.amc.2018.04.028.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

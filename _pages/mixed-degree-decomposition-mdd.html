@@ -1,7 +1,92 @@
 ---
-title: "Mixed degree decomposition (MDD)"
+title: Mixed degree decomposition (MDD)
 permalink: /mixed-degree-decomposition-mdd/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Mixed degree decomposition (MDD)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Mixed degree decomposition (MDD)
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Mixed degree decomposition (MDD)
+   </i>
+   , also referred to as the \(m\)-shell method, is an extension of the classical \(k\)-shell method that introduces a tunable parameter \(λ\) to better rank the spreading ability of nodes in complex networks [2]. MDD decomposes the network based on both the residual and exhausted degrees of nodes.
+   <br/>
+   The
+   <i>
+    residual degree
+   </i>
+   \(d_i^{(r)}\) of node \(i\) is defined as the number of links connecting it to nodes that remain in the network, while the
+   <i>
+    exhausted degree
+   </i>
+   \(d_i^{(e)}\) counts the links connecting node \(i\) to nodes that have already been removed. The
+   <i>
+    mixed degree
+   </i>
+   is then given by
+   <br/>
+   \begin{equation*}
+   <br/>
+   d_i^{(m)} = d_i^{(r)} + λ d_i^{(e)},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(λ \in [0,1]\) controls the relative contribution of exhausted links.
+   <br/>
+   The MDD procedure performs a \(k\)-shell decomposition using \(d_i^{(m)}\) to iteratively remove nodes. In the limiting cases, when \(λ = 0\), the MDD score reduces to the standard \(k\)-shell centrality, and when \(λ = 1\), it is equivalent to the degree centrality. Zeng and Zhang [2] suggest using \(λ = 0.7\) for optimal performance.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Zeng, A., &amp; Zhang, C. J. (2013). Ranking spreaders by decomposing complex networks. Physics letters A, 377(14), 1031-1035.
+    <a href="https://doi.org/10.1016/j.physleta.2013.02.039">
+     doi: 10.1016/j.physleta.2013.02.039.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>
