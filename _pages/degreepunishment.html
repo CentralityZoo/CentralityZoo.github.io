@@ -1,7 +1,94 @@
 ---
-title: "DegreePunishment"
+title: DegreePunishment
 permalink: /degreepunishment/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   DegreePunishment
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   DegreePunishment
+  </h2>
+  <p>
+   <br/>
+   <i>
+    DegreePunishment
+   </i>
+   is a degree-based heuristic for identifying influential nodes in a network [2]. The central idea is that once a node \(i\) is selected as a seed, it should “punish” or restrict the selection of its neighbors in the subsequent steps. DegreePunishment iteratively performs the following steps:
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     Compute the degree \(d_i\) of each node \(i\) and initialize \(dp_i = d_i\).
+    </li>
+    <br/>
+    <li>
+     Select the node \(i\) with the largest \(dp_i\) and add it to the seed set. The punishment that node \(i\) imposes on node \(j\) is calculated as
+    \[
+    p_{ij} = d_i \sum_{h=1}^{r} (A^h)_{ij} \, ω^h,
+    \]
+    where \(r\) defines the radius of influence (maximum path length) and \(ω\) is a weakening factor. The value of \(dp_j\) is then updated for each node \(j\) as
+    \[
+    dp_j = d_j - \sum_{i \neq j} p_{ij} \, σ_i,
+    \]
+    where \(σ_i\) is an indicator function such that \(σ_i = 1\) if node \(i\) has already been selected as a seed, and \(σ_i = 0\) otherwise.
+    </li>
+    <br/>
+    <li>
+     Repeat step 2 until \(k\) nodes have been selected for the seed set.
+    </li>
+    <br/>
+   </ol>
+   <br/>
+   Due to computational complexity, Wang et al. [2] restrict the punishment to paths of length \(r \le 2\) and suggest using \(ω = β_c\), where \(β_c\) is the spreading threshold of the graph \(G\).
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Wang, X., Su, Y., Zhao, C., &amp; Yi, D. (2016). Effective identification of multiple influential spreaders by DegreePunishment. Physica A: Statistical Mechanics and its Applications, 461, 238-247.
+    <a href="https://doi.org/10.1016/j.physa.2016.05.020">
+     doi: 10.1016/j.physa.2016.05.020.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

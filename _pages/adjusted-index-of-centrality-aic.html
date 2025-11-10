@@ -1,0 +1,77 @@
+---
+title: Adjusted Index of Centrality (AIC)
+permalink: /adjusted-index-of-centrality-aic/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Adjusted Index of Centrality (AIC)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Adjusted Index of Centrality (AIC)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    Adjusted Index of Centrality
+   </i>
+   (AIC) is a closeness-based centrality measure introduced by Moxley [2]. For a node \(i\), its AIC centrality, denoted \(c_{AIC}(i)\), is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{AIC}(i) = \frac{\sum_{j=1}^N \sum_{k=1}^N (d_{jk} + p \cdot n_j)}{\sum_{j=1}^N (d_{ij} + p \cdot n_i)},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(d_{jk}\) is the shortest-path distance from node \(j\) to node \(k\), \(n_i\) is the number of nodes unreachable from \(i\), and \(p\) is a penalty parameter chosen such that \(p &gt; \max_{i,j} d_{ij}\). The penalty ensures that nodes with unreachable nodes receive appropriately lower centrality scores.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Moxley, R. L., &amp; Moxley, N. F. (1974). Determining Point-Centrality in Uncontrived Social Networks. Sociometry, 37(1), 122-130.
+    <a href="https://doi.org/10.2307/2786472">
+     doi: 10.2307/2786472.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

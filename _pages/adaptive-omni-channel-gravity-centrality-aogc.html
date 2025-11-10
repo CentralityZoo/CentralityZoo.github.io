@@ -1,0 +1,119 @@
+---
+title: Adaptive omni-channel gravity centrality (AOGC)
+permalink: /adaptive-omni-channel-gravity-centrality-aogc/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Adaptive omni-channel gravity centrality (AOGC)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Adaptive omni-channel gravity centrality (AOGC)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    adaptive omni-channel gravity centrality
+   </i>
+   (AOGC), originally termed the Gravity Centrality method based on an Adaptive Truncation radius and Omni-channel paths, is a gravity-based centrality measure that combines an adaptive truncation radius with omni-channel path analysis to identify influential nodes in complex networks [2]. For a node \(i \in \mathcal{N}\), the AOGC score is defined as
+   <br/>
+   \[
+   <br/>
+   c_{AOGC}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} c_{ij} \frac{m_i m_j}{LD_{ij}^2},
+   <br/>
+   \]
+   <br/>
+   where
+   <br/>
+   \[
+   <br/>
+   c_{ij} = \exp\Bigg(\frac{k_s(i) - k_s(j)}{\max(k_s) - \min(k_s)}\Bigg)
+   <br/>
+   \]
+   <br/>
+   is the attraction coefficient based on the \(k\)-shell centrality of nodes \(i\) and \(j\),  \(\mathcal{N}^{(\leq r)}(i)\) denote the set of nodes within \(r\)-hop neighborhood of node \(i\), \(m_i\) is the mass of node \(i\) defined by the neighborhood structure-based centrality (NSC) [2] and \(LD_{ij}\) is the
+   <i>
+    looseness distance
+   </i>
+   between nodes \(i\) and \(j\):
+   <br/>
+   \[
+   <br/>
+   LD_{ij} = \frac{1}{\sum_{l=1}^{r} σ^l (A^l)_{ij}},
+   <br/>
+   \]
+   <br/>
+   where \(σ \in (0,1)\) is a free parameter controlling the weight of paths of different lengths, \(A\) is the adjacency matrix, and \(r\) is the truncation radius.
+   <br/>
+   The adaptive truncation radius \(r\) is determined based on the average shortest path length \(\langle d \rangle\) of the network as
+   <br/>
+   \[
+   <br/>
+   r =
+   <br/>
+   \begin{cases}
+   <br/>
+   3, &amp; \text{if } \langle d \rangle \leq 3, \\
+   <br/>
+   \lfloor \langle d \rangle \rfloor, &amp; \text{if } 3 &lt; \langle d \rangle \leq \Theta, \\
+   <br/>
+   \Theta + \lfloor \ln(\langle d \rangle - \Theta + 1) \rfloor, &amp; \text{if } \langle d \rangle &gt; \Theta,
+   <br/>
+   \end{cases}
+   <br/>
+   \]
+   <br/>
+   where \(\Theta\) is a threshold parameter, set to 6.
+   <br/>
+   Nodes with high AOGC values are those that have large mass (high NSC), are well-connected to other influential nodes, and are reachable via multiple strong omni-channel paths, making them particularly important for spreading processes and maintaining network cohesion.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Yang, P., Meng, F., Zhao, L., &amp; Zhou, L. (2023). AOGC: An improved gravity centrality based on an adaptive truncation radius and omni-channel paths for identifying key nodes in complex networks. Chaos, Solitons &amp; Fractals, 166, 112974.
+    <a href="https://doi.org/10.1016/j.chaos.2022.112974">
+     doi: 10.1016/j.chaos.2022.112974.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

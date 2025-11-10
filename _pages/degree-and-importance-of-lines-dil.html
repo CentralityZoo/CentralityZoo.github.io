@@ -1,7 +1,85 @@
 ---
-title: "Degree and Importance of Lines (DIL)"
+title: Degree and Importance of Lines (DIL)
 permalink: /degree-and-importance-of-lines-dil/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Degree and Importance of Lines (DIL)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Degree and Importance of Lines (DIL)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    Degree and Importance of Lines (DIL) centrality
+   </i>
+   evaluates the importance of a node based on its degree and the significance of its adjacent links [2]. The DIL measure reflects that the influence of a node depends on both its degree and the structural roles of its adjacent links. The centrality \( c_{\mathrm{DIL}}(i) \) of node \( i \) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{DIL}}(i) = d_i + \sum_{j \in \mathcal{N}(i)}
+   <br/>
+   \left( \frac{(d_i - \Delta_{ij} - 1)(d_j - \Delta_{ij} - 1)}{\Delta_{ij}/2 + 1} \right)
+   <br/>
+   \left( \frac{d_i - 1}{d_i + d_j - 2} \right),
+   <br/>
+   \end{equation*}
+   <br/>
+   where \( d_i \) is the degree of node \( i \),
+   <br/>
+   \( \mathcal{N}(i) \) is the set of neighbors of \( i \), and
+   <br/>
+   \( \Delta_{ij} \) is the number of triangles that include the link \((i,j)\).
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Liu, J., Xiong, Q., Shi, W., Shi, X., &amp; Wang, K. (2016). Evaluating the importance of nodes in complex networks. Physica A: Statistical Mechanics and its Applications, 452, 209-219.
+    <a href="https://doi.org/10.1016/j.physa.2016.02.049">
+     doi: 10.1016/j.physa.2016.02.049.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

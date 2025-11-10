@@ -1,7 +1,81 @@
 ---
-title: "Dynamical influence"
+title: Dynamical influence
 permalink: /dynamical-influence/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Dynamical influence
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Dynamical influence
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    dynamical influence
+   </i>
+   (DI) quantifies how strongly a node's dynamical state can affect the collective behavior of a networked system, explicitly accounting for the interplay between structure and dynamics [2]. Conceptually, it estimates the potential impact of a node on a spreading process before the contagion begins, given the system dynamics.
+   <br/>
+   Klemm et al. [2] consider the SIR model, where each node can be susceptible, infected, or recovered. Linearizing the dynamics around the stationary state in which all nodes are susceptible, small perturbations obey
+   <br/>
+   \begin{equation*}
+   <br/>
+   \dot{x} = -x[t] + β A^T x[t],
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(x_j[t]\) is the probability that node \(j\) is infected at time \(t\), \(β\) is the infection probability and \(A\) is the adjacency matrix. This equation can be rewritten as \(\dot{x} = M x\) with \(M = β A^T - I\). At the epidemic threshold, \(β = 1/λ_{\max}(A)\), the largest eigenvalue of \(M\) is zero, i.e., \(\dot{x} = 0\).
+   <br/>
+   The dynamical influence of nodes, \(c_{DI}\), is given by the leading left eigenvector of \(M\). Equivalently, under the linearization and threshold assumption, \(c_{DI}\) corresponds to the right eigenvector of \(A\) associated with its largest eigenvalue, meaning that, in this case, dynamical influence reduces to eigenvector centrality.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Klemm, K., Serrano, M. Á., Eguíluz, V. M., &amp; Miguel, M. S. (2012). A measure of individual role in collective dynamics. Scientific reports, 2(1), 292.
+    <a href="https://doi.org/10.1038/srep00292">
+     doi: 10.1038/srep00292.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

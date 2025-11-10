@@ -1,7 +1,99 @@
 ---
-title: "BG-index"
+title: BG-index
 permalink: /bg-index/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   BG-index
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   BG-index
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    BG-index
+   </i>
+   , also known as the \(β\)-measure [2, 3], is a social power index that quantifies a node's centrality based on its position within a network  [4, 2]. Van den Brink and Gilles assume that the network represents a social structure, in which each node may dominate some nodes while being dominated by others.
+   <br/>
+   The BG-index of node \(i\) measures the expected number of times it will be selected as a predecessor by its neighbors, assuming that each neighbor chooses one of its predecessors uniformly at random. Formally,
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{BG{-}index}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{1}{|\{k : j \in \mathcal{N}(k)\}|} = \sum_{j \in \mathcal{N}(i)} \frac{1}{|\mathcal{N}(i)|} = \sum_{j \in \mathcal{N}(i)} \frac{1}{d_j} = \sum_{j=1}^{N} \frac{a_{ij}}{\sum_{k=1}^{N} a_{kj}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_j\) is the degree of node \(j\) and \(a_{ij}\) are entries of the adjacency matrix \(A\).
+   <br/>
+   For directed graphs, the BG-index has two versions: the positive \(β\)-measure (computed on the original graph \(G\)) and the negative \(β\)-measure (computed on the reverse graph of \(G\)) [3].
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Van Den Brink, R., Borm, P., Hendrickx, R., &amp; Owen, G. (2008). Characterizations of the $\beta$-and the degree network power measure. Theory and Decision, 64(4), 519-536.
+    <a href="https://doi.org/10.1007/s11238-007-9077-8">
+     doi: 10.1007/s11238-007-9077-8.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Boldi, P., &amp; Vigna, S. (2014). Axioms for centrality. Internet Mathematics, 10(3-4), 222-262.
+    <a href="https://doi.org/10.1080/15427951.2013.865686">
+     doi: 10.1080/15427951.2013.865686.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [4]
+    </span>
+    van den Brink, R., &amp; Gilles, R. P. (1994). A social power index for hierarchically structured populations of economic agents. In Imperfections and Behavior in Economic Organizations (pp. 279-318). Dordrecht: Springer Netherlands.
+    <a href="https://doi.org/10.1007/978-94-011-1370-0_12">
+     doi: 10.1007/978-94-011-1370-0\_12.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

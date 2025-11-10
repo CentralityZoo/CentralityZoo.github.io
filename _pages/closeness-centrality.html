@@ -1,0 +1,137 @@
+---
+title: Closeness centrality
+permalink: /closeness-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Closeness centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Closeness centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Closeness centrality
+   </i>
+   is a measure of how central a node is within a network, based on its shortest-path distances to all other nodes [2, 3, 4].  Intuitively, a node is central in terms of closeness if it can efficiently reach all other nodes in the network, reflecting its potential to access and disseminate information, as well as to exert influence across the network. The closeness centrality \(c_{cl}(i)\) of a node \(i\) is defined as the inverse of the average shortest-path distance from \(i\) to all other nodes in the network:
+   <br/>
+   \begin{equation*} \label{eq_closeness}
+   <br/>
+   c_{cl}(i) = \frac{N-1}{\sum_{j \neq i} d_{ij}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). Closeness centrality is typically interpreted as an indicator of either access efficiency or independence from intermediaries [5]. Nodes with shorter average distances to others can exchange information with fewer transmissions, in less time, and at lower cost [4].
+   <br/>
+   Closeness centrality is defined only for connected graphs, since shortest-path distances between nodes in different components are undefined. Extensions of closeness centrality to graphs with multiple connected components are discussed in [6]. The closeness centrality without \(N-1\) in the numerator is also known as the
+   <i>
+    barycenter
+   </i>
+   centrality [7]. The inverse of the barycenter centrality is also known as the
+   <i>
+    Wiener index
+   </i>
+   centrality [8].
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Bavelas, A. (1950). Communication patterns in task-oriented groups. Journal of the acoustical society of America.
+    <a href="https://doi.org/10.1121/1.1906679">
+     doi: 10.1121/1.1906679.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Sabidussi, G. (1966). The centrality index of a graph. Psychometrika, 31(4), 581-603.
+    <a href="https://doi.org/10.1007/BF02289527">
+     doi: 10.1007/BF02289527.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [4]
+    </span>
+    Freeman, L. C. (1978). Centrality in social networks conceptual clarification. Social networks, 1(3), 215-239.
+    <a href="https://doi.org/10.1016/0378-8733(78)90021-7">
+     doi: 10.1016/0378-8733(78)90021-7.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [5]
+    </span>
+    Brandes, U., Borgatti, S. P., &amp; Freeman, L. C. (2016). Maintaining the duality of closeness and betweenness centrality. Social networks, 44, 153-159.
+    <a href="https://doi.org/10.1016/j.socnet.2015.08.003">
+     doi: 10.1016/j.socnet.2015.08.003.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [6]
+    </span>
+    Wasserman, S., &amp; Faust, K. (1994). Social network analysis: Methods and applications.
+    <a href="https://doi.org/10.1017/CBO9780511815478">
+     doi: 10.1017/CBO9780511815478.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [7]
+    </span>
+    Viswanath M. Ontology-based automatic text summarization (Doctoral dissertation, uga). 2009.
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [8]
+    </span>
+    Rocco, C. M., &amp; Barker, K. (2022). Deriving a minimum set of indicators to assess network component importance. Decision Analytics Journal, 5, 100145.
+    <a href="https://doi.org/10.1016/j.dajour.2022.100145">
+     doi: 10.1016/j.dajour.2022.100145.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

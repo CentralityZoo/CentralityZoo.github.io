@@ -1,0 +1,84 @@
+---
+title: Cc-Burt centrality
+permalink: /cc-burt-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Cc-Burt centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Cc-Burt centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Cc-Burt
+   </i>
+   centrality is a hybrid centrality measure that combines the concept of
+   <i>
+    structural holes
+   </i>
+   with closeness centrality to identify key nodes in a network [2]. The structural hole theory accounts for both a node's degree and the topological relationships among its neighbors, while closeness centrality reflects the node's global position in the network.
+   <br/>
+   For a node \(i\), the \textsc{Cc-Burt} centrality \(c_{\textsc{Cc-Burt}}(i)\) is defined as
+   <br/>
+   \[
+   <br/>
+   c_{\textsc{Cc-Burt}}(i) = \frac{1}{N} \left( \frac{1}{c_{cl}(i)} + \sum_{j \in \mathcal{N}(i)} \frac{c_{\mathrm{Burt}}(j)}{c_{cl}(j)} \right),
+   <br/>
+   \]
+   <br/>
+   where \(c_{cl}(i)\) is the closeness centrality of node \(i\) and \(c_{\mathrm{Burt}}(i)\) is the Burt's constraint of node \(i\).
+   <br/>
+   The Cc-Burt centrality integrates local structural constraints and global network position to provide a more comprehensive evaluation of node influence.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Zhu, C., Wang, X., &amp; Zhu, L. (2017). A novel method of evaluating key nodes in complex networks. Chaos, Solitons &amp; Fractals, 96, 43-50.
+    <a href="https://doi.org/10.1016/j.chaos.2017.01.007">
+     doi: 10.1016/j.chaos.2017.01.007.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

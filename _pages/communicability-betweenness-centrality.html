@@ -1,0 +1,90 @@
+---
+title: Communicability betweenness centrality
+permalink: /communicability-betweenness-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Communicability betweenness centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Communicability betweenness centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Communicability betweenness centrality
+   </i>
+   extends traditional betweenness centrality by considering information flow along all possible walks in the network, with longer walks weighted less heavily [2]. The communicability betweenness centrality of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\text{comm-betw}}(i) = \frac{1}{(N-1)(N-2)} \sum_{j \neq i} \sum_{k \neq i} \frac{G_{jik}}{G_{jk}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(G_{jk} = (e^{A})_{jk}\) is the
+   <i>
+    communicability
+   </i>
+   between nodes \(j\) and \(k\), obtained from the matrix exponential of the adjacency matrix \(A\). It represents the total contribution of all possible walks between \(j\) and \(k\), with longer walks weighted less due to the factorial scaling in the series expansion of \(e^{A}\). The term
+   <br/>
+   \[
+   <br/>
+   G_{jik} = (e^{A})_{jk} - (e^{A + E(i)})_{jk}
+   <br/>
+   \]
+   <br/>
+   quantifies the reduction in communicability between \(j\) and \(k\) when node \(i\) is removed from the network. Here, \(E(i)\) is an \(N \times N\) matrix whose nonzero entries appear only in row and column \(i\), taking the value \(-1\) wherever the corresponding element of \(A\) equals \(+1\). Consequently, the matrix \(A + E(i)\) corresponds to the adjacency matrix of the graph in which all edges incident to node \(i\) have been deleted. Thus, \(G_{jik}\) captures the portion of walks between \(j\) and \(k\) that rely on node \(i\). A node with a high communicability betweenness plays a crucial intermediary role in facilitating indirect information flow across the network.
+   <br/>
+   Intuitively, communicability betweenness quantifies how much a node contributes to the overall flow of information across the network, accounting for both direct and indirect paths while penalizing longer walks.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Estrada, E., Higham, D. J., &amp; Hatano, N. (2009). Communicability betweenness in complex networks. Physica A: Statistical Mechanics and its Applications, 388(5), 764-774.
+    <a href="https://doi.org/10.1016/j.physa.2008.11.011">
+     doi: 10.1016/j.physa.2008.11.011.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

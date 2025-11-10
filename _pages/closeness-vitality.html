@@ -1,7 +1,98 @@
 ---
-title: "Closeness vitality"
+title: Closeness vitality
 permalink: /closeness-vitality/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Closeness vitality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Closeness vitality
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    closeness vitality
+   </i>
+   measures how the overall efficiency of a network changes when a given node is removed [2]. Specifically, it quantifies the variation in the total sum of shortest-path distances between all pairs of nodes after excluding node \(i\) from the graph \(G\). Let \(G_i\) denote the subgraph obtained by removing node \(i\) and its incident edges. The closeness vitality of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\text{vitality}}(i) = W(G) - W(G_i)
+   <br/>
+   = \sum_{j=1}^{N} d_G(i,j)
+   <br/>
+   + \sum_{j \neq i} \sum_{k \neq i} \big( d_G(j,k) - d_{G_i}(j,k) \big),
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(W(G)\) is the
+   <i>
+    Wiener index
+   </i>
+   of \(G\), defined as the total sum of shortest-path distances between all pairs of nodes in the network [3]. Here, \(d_G(i,j)\) denotes the shortest-path distance between nodes \(i\) and \(j\) in \(G\). A lower closeness vitality value indicates a more central node, since its removal causes a smaller increase in the total pairwise distances. However, if node \(i\) is a
+   <i>
+    cut-vertex
+   </i>
+   (or bridge endpoint), its removal disconnects the network, resulting in \(c_{\text{vitality}}(i) = -\infty\).
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Brandes, U. (2005). Network analysis: methodological foundations (Vol. 3418). Springer Science &amp; Business Media.
+    <a href="https://doi.org/10.1007/b106453">
+     doi: 10.1007/b106453.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Wiener, H. (1947) Structural Determination of Paraffin Boiling Points. Journal of the American Chemical Society, 69, 17-20.
+    <a href="https://doi.org/10.1021/ja01193a005">
+     doi: 10.1021/ja01193a005.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

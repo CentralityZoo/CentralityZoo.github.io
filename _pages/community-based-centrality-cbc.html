@@ -1,7 +1,86 @@
 ---
-title: "Community-based centrality (CbC)"
+title: Community-based centrality (CbC)
 permalink: /community-based-centrality-cbc/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Community-based centrality (CbC)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Community-based centrality (CbC)
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Community-based centrality
+   </i>
+   (CbC) is a measure designed to identify influential spreaders in complex networks [2]. The method distinguishes two types of links for each node:
+   <i>
+    strong links
+   </i>
+   , which connect nodes within the same community, and
+   <i>
+    weak links
+   </i>
+   , which connect nodes across different communities. The importance of a node is determined by both its link characteristics and the sizes of the communities to which it is connected. Mathematically, the CbC of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{CbC}}(i) = \sum_{s=1}^{K} k_{is} \frac{|C_s|}{N} = \sum_{s=1}^{K} \sum_{j \in C_s \setminus \{i\}} a_{ij} \frac{|C_s|}{N},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(k_{is}\) is the number of links from node \(i\) to nodes in community \(C_s\), \(K\) is the total number of communities \(C_1, \dots, C_K\), \(|C_s|\) denotes the size of community \(C_s\), and \(a_{ij}\) are elements of the adjacency matrix. In [2], communities are identified using the CNM algorithm, which employs the Clauset-Newman-Moore greedy modularity maximization method.
+   <br/>
+   CbC generalizes classical degree centrality by incorporating community structure. In the limiting case where the entire network forms a single community, CbC reduces to the standard degree centrality. Conversely, when each node constitutes its own community, CbC corresponds to the degree of the node normalized by the total number of nodes in the network.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Zhao, Z., Wang, X., Zhang, W., &amp; Zhu, Z. (2015). A community-based approach to identifying influential spreaders. Entropy, 17(4), 2228-2252.
+    <a href="https://doi.org/10.3390/e17042228">
+     doi: 10.3390/e17042228.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>
