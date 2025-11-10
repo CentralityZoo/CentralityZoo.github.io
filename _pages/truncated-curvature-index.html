@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Truncated curvature index
+permalink: /truncated-curvature-index/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Truncated curvature index
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +24,25 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Truncated curvature index
   </h2>
   <p>
    <br/>
    The
    <i>
-    VMM algorithm
+    truncated curvature index
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   is a simplified version of the curvature index that limits the computation to simplices of dimension \(d \leq 2\), i.e., cliques of size up to three [2]. For a node \(i\), it is defined as
    <br/>
    \[
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
-   <br/>
-   \quad
-   <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
+   K_{\mathrm{trunc}}(i) = \sum_{k=0}^{2} (-1)^k \frac{V_{k-1}(i)}{k+1} =1 - \frac{d_i}{2} + \frac{t_i}{3},
    <br/>
    \]
    <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
+   where \(V_k(i)\) denotes the number of \((k{+}1)\)-cliques incident to node \(i\), \(d_i\) is the degree of node \(i\) and \(t_i\) is the number of triangles passing through node \(i\).
    <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   The truncated curvature index is particularly useful for analyzing large-scale networks where computing higher-dimensional cliques is computationally expensive, yet the essential topological and curvature properties of nodes are still captured.
    <br/>
   </p>
   <h3>
@@ -66,9 +62,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    Wu, Z., Menichetti, G., Rahmede, C., &amp; Bianconi, G. (2015). Emergent complex network geometry. Scientific reports, 5(1), 10073.
+    <a href="https://doi.org/10.1038/srep10073">
+     doi: 10.1038/srep10073.
     </a>
    </div>
   </div>

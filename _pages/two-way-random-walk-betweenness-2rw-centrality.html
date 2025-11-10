@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Two-way random walk betweenness (2RW) centrality
+permalink: /two-way-random-walk-betweenness-2rw-centrality/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Two-way random walk betweenness (2RW) centrality
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +24,32 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Two-way random walk betweenness (2RW) centrality
   </h2>
   <p>
    <br/>
-   The
    <i>
-    VMM algorithm
+    Two-way random walk betweenness
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   (2RW) centrality is a variant of betweenness centrality based on two-way random walks [2]. For a pair of nodes \(i\) and \(j\), the probability of reaching \(j\) from \(i\) through a transition node \(t\) is defined as
    <br/>
    \[
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
-   <br/>
-   \quad
-   <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
+   p_{itj} = \frac{a_{it} a_{tj}}{d_i d_t},
    <br/>
    \]
    <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
+   where \(a_{ij}\) is the adjacency matrix entry and \(d_i\) is the degree of node \(i\).
    <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   The most likely two-way random walk between nodes \(i\) and \(j\) passes through a pair of transition nodes \((t^*, k^*)\) that maximizes the probability
+   <br/>
+   \[
+   <br/>
+   (t^*, k^*) = \arg\max_{t,k} \, p_{itj} \, p_{jki}.
+   <br/>
+   \]
+   <br/>
+   The 2RW betweenness centrality of a node counts how often it appears as one of these optimal transition nodes \((t^*\) or \(k^*)\) for all pairs of nodes \((i,j)\) in the network. Nodes that frequently serve as high-probability intermediate steps are considered more central.
    <br/>
   </p>
   <h3>
@@ -66,9 +69,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    Curado, M., Rodriguez, R., Tortosa, L., &amp; Vicent, J. F. (2022). A new centrality measure in dense networks based on two-way random walk betweenness. Applied Mathematics and Computation, 412, 126560.
+    <a href="https://doi.org/10.1016/j.amc.2021.126560">
+     doi: 10.1016/j.amc.2021.126560.
     </a>
    </div>
   </div>

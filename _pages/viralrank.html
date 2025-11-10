@@ -1,7 +1,95 @@
 ---
-title: "ViralRank"
+title: ViralRank
 permalink: /viralrank/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   ViralRank
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   ViralRank
+  </h2>
+  <p>
+   <br/>
+   <i>
+    ViralRank
+   </i>
+   ranks nodes based on the random-walk effective distance, which closely approximates the hitting time of a reaction-diffusion process on the network [2]. The ViralRank score of node \(i\) is the average effective distance from all sources to all targets:
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{VR}(i) = \frac{1}{N} \sum_{j} \left[ D_{ij}^{RW}(λ) + D_{ji}^{RW}(λ) \right],
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(λ\) is a parameter and \(D_{ji}^{RW}(λ)\) is the effective distance [3]:
+   <br/>
+   \[
+   <br/>
+   D_{ji}^{RW}(λ) = -\ln \left[ \sum_{k \neq j} \left( I^{(j)} - e^{-λ} P^{(j)} \right)^{-1}_{ik} e^{-λ} p_k^{(j)} \right], \quad i \neq j,
+   <br/>
+   \]
+   <br/>
+   with \(D_{ii}^{RW}(λ) = 0\). Here, \(P^{(j)}\) and \(I^{(j)}\) are the \((N-1) \times (N-1)\) matrices obtained by removing the \(j\)th row and column from the Markov matrix \(P\), which is the row-normalized adjacency matrix \((P_{ij} = a_{ij} / \sum_k a_{ik})\), and from the identity matrix \(I\), respectively. The vector \(p^{(j)}\) is the \(j\)th column of \(P\) with the \(j\)th entry removed.
+   <br/>
+   The logarithm term counts all random walks starting at \(i\) and terminating at \(j\). In the limit \(λ \to 0\), the ViralRank score reduces to the sum of mean first-passage times (MFPT): the average time for a random walk starting at \(i\) to reach other nodes, plus the average time for a walk starting at other nodes to reach \(i\) [2].
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Iannelli, F., Mariani, M. S., &amp; Sokolov, I. M. (2018). Influencers identification in complex networks through reaction-diffusion dynamics. Physical Review E, 98(6), 062302.
+    <a href="https://doi.org/10.1103/PhysRevE.98.062302">
+     doi: 10.1103/PhysRevE.98.062302.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Iannelli, F., Koher, A., Brockmann, D., Hövel, P., &amp; Sokolov, I. M. (2017). Effective distances for epidemics spreading on complex networks. Physical Review E, 95(1), 012313.
+    <a href="https://doi.org/10.1103/PhysRevE.95.012313">
+     doi: 10.1103/PhysRevE.95.012313.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

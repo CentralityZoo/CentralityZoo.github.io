@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Wide ranking (WRank)
+permalink: /wide-ranking-wrank/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Wide ranking (WRank)
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +24,29 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Wide ranking (WRank)
   </h2>
   <p>
    <br/>
    The
    <i>
-    VMM algorithm
+    Wide Ranking
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   (WRank) algorithm simultaneously ranks the nodes and links of a network [2]. The method is based on the principle that an important node is incident to many critical links, and a critical link connects important nodes. Let \(x\) be an \(N \times 1\) vector of node centralities and \(y\) an \(L \times 1\) vector of link centralities. The relationship between nodes and links is expressed as
    <br/>
-   \[
+   \begin{equation*}
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
+   \begin{cases}
    <br/>
-   \quad
+   x = Wy, \\
    <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
+   y = Zx,
    <br/>
-   \]
+   \end{cases}
    <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
+   \end{equation*}
    <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   where \(W\) is an \(N \times L\) incidence matrix with entries \(w_{il} = 1\) if node \(i\) is an endpoint of link \(l\) and 0 otherwise, and \(Z = W^T\). Substituting, we obtain \(x = WZ x\), so the principal eigenvector of \(WZ\) defines the centralities of the nodes, while the centralities of links follow from \(y = Zx\).
    <br/>
   </p>
   <h3>
@@ -66,9 +66,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    Wang, Z., Duenas-Osorio, L., &amp; Padgett, J. E. (2015). A new mutually reinforcing network node and link ranking algorithm. Scientific reports, 5(1), 15141.
+    <a href="https://doi.org/10.1038/srep15141">
+     doi: 10.1038/srep15141.
     </a>
    </div>
   </div>

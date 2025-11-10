@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Third Laplacian energy centrality (LC)
+permalink: /third-laplacian-energy-centrality-lc/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Third Laplacian energy centrality (LC)
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +24,33 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Third Laplacian energy centrality (LC)
   </h2>
   <p>
    <br/>
    The
    <i>
-    VMM algorithm
+    third Laplacian energy centrality
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   (LC) is an eigenvalue-based method for identifying influential nodes in complex networks, derived from the concept of Laplacian energy [2]. It represents a special case of the \(k\)-th Laplacian energy centrality with \(k = 3\). The centrality \(c_{LC}(i)\) of node \(i\) is defined as
    <br/>
    \[
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
-   <br/>
-   \quad
-   <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
+   c_{LC}(i) = E^k_L(G) - E^k_L(G_i),
    <br/>
    \]
    <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
+   where \(G_i\) denotes the subgraph of \(G\) obtained by removing node \(i\), and \(E^k_L(G)\) is the \(k\)-th Laplacian energy of the network \(G\), given by
    <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   \[
+   <br/>
+   E^k_L(G) = \sum_{j=1}^{N} μ_j^k,
+   <br/>
+   \]
+   <br/>
+   where \(μ_1, \dots, μ_N\) are the eigenvalues of the Laplacian matrix of \(G\).
+   <br/>
+   Zhao and Sun [2] demonstrated that the case \(k = 3\) yields superior performance in identifying influential nodes compared with other values of \(k\). The third Laplacian energy centrality is particularly effective for detecting influential spreaders in complex networks and is typically evaluated using the susceptible-infected-recovered (SIR) epidemic model.
    <br/>
   </p>
   <h3>
@@ -66,9 +70,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    Zhao, S., &amp; Sun, S. (2023). Identification of node centrality based on Laplacian energy of networks. Physica A: Statistical Mechanics and its Applications, 609, 128353.
+    <a href="https://doi.org/10.1016/j.physa.2022.128353">
+     doi: 10.1016/j.physa.2022.128353.
     </a>
    </div>
   </div>

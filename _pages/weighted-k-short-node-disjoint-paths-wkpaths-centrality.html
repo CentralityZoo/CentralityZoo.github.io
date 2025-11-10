@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Weighted <i>k</i>-short node-disjoint paths (WKPaths) centrality
+permalink: /weighted-k-short-node-disjoint-paths-wkpaths-centrality/
 search: true
 ---
 
@@ -8,7 +8,11 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Weighted
+   <i>
+    k
+   </i>
+   -short node-disjoint paths (WKPaths) centrality
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +28,27 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Weighted
+   <i>
+    k
+   </i>
+   -short node-disjoint paths (WKPaths) centrality
   </h2>
   <p>
    <br/>
    The
    <i>
-    VMM algorithm
+    weighted \(k\)-short node-disjoint paths (WKPaths) centrality
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   was introduced by White and Smith [2] as a variant of closeness centrality. Rather than considering all shortest paths between nodes, WKPaths considers the set of \(k\)-short paths, defined as all paths of length at most \(k\) with no shared intermediate nodes. The WKPaths centrality of a node \(i\), denoted \(c_{WKPaths}(i)\), is defined as
    <br/>
-   \[
+   \begin{equation*}
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
+   c_{WKPaths}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}} \sum_{P \in \mathcal{P}_k(j,i)} δ^{-|P|},
    <br/>
-   \quad
+   \end{equation*}
    <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
-   <br/>
-   \]
-   <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
-   <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   where \(\mathcal{P}_k(j,i)\) is the set of \(k\)-short paths from node \(j\) to node \(i\), \(|P|\) is the length of path \(P\), and \(δ\) is a scalar weighting factor with \(1 \leq δ \leq \infty\) (e.g., \(δ = 2\)). Shorter paths contribute more heavily to the centrality due to the exponential decay factor \(δ^{-|P|}\).
    <br/>
   </p>
   <h3>
@@ -66,9 +68,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    White, S., &amp; Smyth, P. (2003). Algorithms for estimating relative importance in networks. In Proceedings of the ninth ACM SIGKDD international conference on Knowledge discovery and data mining, pp. 266-275.
+    <a href="https://doi.org/10.1145/956750.956782">
+     doi: 10.1145/956750.956782.
     </a>
    </div>
   </div>

@@ -1,0 +1,129 @@
+---
+title: Trust-PageRank
+permalink: /trust-pagerank/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Trust-PageRank
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Trust-PageRank
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Trust-PageRank
+   </i>
+   combines the traditional PageRank algorithm with a trust-value that reflects the reliability of information transmission between nodes [2]. The trust-value \(T_{ij}\) from node \(i\) to its adjacent node \(j\) is defined as a weighted combination of a similarity ratio and a degree ratio:
+   <br/>
+   \begin{equation*}
+   <br/>
+   T_{ij} = (1-β) R_{s_{ij}} + β R_{d_{ij}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where the degree ratio is
+   <br/>
+   \begin{equation*}
+   <br/>
+   R_{d_{ij}} = \frac{d_i}{\sum_{l \in \mathcal{N}(j)} d_l},
+   <br/>
+   \end{equation*}
+   <br/>
+   and the similarity ratio is
+   <br/>
+   \begin{equation*}
+   <br/>
+   R_{s_{ij}} = \frac{s_{ij}}{\sum_{l \in \mathcal{N}(j)} s_{jl}}.
+   <br/>
+   \end{equation*}
+   <br/>
+   The similarity \(s_{ij}\) between nodes \(i\) and \(j\) is computed using the SimRank algorithm [3]:
+   <br/>
+   \begin{equation*}
+   <br/>
+   s_{ij} =
+   <br/>
+   \begin{cases}
+   <br/>
+   1, &amp; i = j, \\
+   <br/>
+   \frac{C}{d_i d_j} \sum_{a \in \mathcal{N}(i)} \sum_{b \in \mathcal{N}(j)} s_{ab}, &amp; i \neq j,
+   <br/>
+   \end{cases}
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(C\) is an attenuation factor.
+   <br/>
+   Analogous to PageRank, the Trust-PageRank influence of node \(i\) at time \(t\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   TPR(i,t) = \frac{1-α}{N} + α \sum_{j \in \mathcal{N}(i)} T_{ij} \, TPR(j,t-1),
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(α\) is the damping (jump) probability. The Trust-PageRank centrality of node \(i\) is given by its influence \(TPR(i,t^*)\) when the network reaches a steady state (\(t^* \to \infty\)) or after a fixed number of iterations (\(t^* = t^{\mathrm{max}}\)).
+   <br/>
+   Hence, Trust-PageRank integrates structural connectivity and node-level trust, assigning higher centrality to nodes that are both well-connected and linked to trustworthy neighbors, reflecting their importance and reliability in information propagation.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Sheng, J., Dai, J., Wang, B., Duan, G., Long, J., Zhang, J., Guan, K., Hu, S., Chen, L. &amp; Guan, W. (2020). Identifying influential nodes in complex networks based on global and local structure. Physica A: Statistical Mechanics and its Applications, 541, 123262.
+    <a href="https://doi.org/10.1016/j.physa.2019.123262">
+     doi: 10.1016/j.physa.2019.123262.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Jeh, G., &amp; Widom, J. (2002). Simrank: a measure of structural-context similarity. In Proceedings of the eighth ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 538-543).
+    <a href="https://doi.org/10.1145/775047.775126">
+     doi: 10.1145/775047.775126.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

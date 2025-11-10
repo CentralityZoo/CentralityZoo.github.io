@@ -1,6 +1,6 @@
 ---
-title: Weighted <i>k</i>-shell degree neighborhood (Wksd)
-permalink: /weighted-k-shell-degree-neighborhood-wksd/
+title: Weighted <i>k</i>-shell degree neighborhood (WKSDN)
+permalink: /weighted-k-shell-degree-neighborhood-wksdn/
 search: true
 ---
 
@@ -12,7 +12,7 @@ search: true
    <i>
     k
    </i>
-   -shell degree neighborhood (Wksd)
+   -shell degree neighborhood (WKSDN)
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -32,34 +32,39 @@ search: true
    <i>
     k
    </i>
-   -shell degree neighborhood (Wksd)
+   -shell degree neighborhood (WKSDN)
   </h2>
   <p>
    <br/>
+   The
    <i>
-    Weighted
-    <i>
-     k
-    </i>
-    -shell degree neighborhood
+    weighted \textit{k
    </i>
-   -shell degree neighborhood!weighted (Wksd)} (Wksd) is a hybrid centrality measure that combines node degree and \(k\)-shell values [2, 3]. The motivation is to capture nodes that are central both in terms of local connectivity and their position in the network’s hierarchical core. The edge weight between nodes \(i\) and \(j\) is defined as
+   -shell degree neighborhood}-shell degree neighborhood!weighted (WKSDN)} (WKSDN) is a parameter-free hybrid centrality measure that integrates both the degree and \(k\)-shell index of nodes in a network [2]. Unlike the weighted \(k\)-shell degree (Wksd) measure proposed by Namtirtha et al. [3], Maji's formulation estimates the weight of each edge \((i,j)\) as
    <br/>
    \[
    <br/>
-   w_{ij} = (α d_i + μ k_s(i)) (α d_j + μ k_s(j)),
+   w_{ij} = (k_s(i) + k_s(j)) + λ (d_i + d_j),
    <br/>
    \]
    <br/>
-   where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell value of node \(i\), and \(α\), \(μ\) are tunable parameters (typically \(α \in \{0.2, 0.4\}\) and \(μ = 0.9\)). The Wksd centrality of node \(i\) is given by
+   where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell index of node \(i\), respectively. The parameter \(λ\) serves as a normalization factor and is defined as
    <br/>
    \[
    <br/>
-   c_{Wksd}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},
+   λ = \frac{\sum_{i=1}^{N} k_s(i)}{\sum_{i=1}^{N} d_i}.
    <br/>
    \]
    <br/>
-   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\). Hence, Wksd reflects the cumulative weighted influence of its neighbors and emphasize nodes that combine high connectivity with strategic placement in the network core.
+   The centrality of node \(i\) is then calculated as the sum of the weights of all its incident edges:
+   <br/>
+   \[
+   <br/>
+   c_{\mathrm{WKSDN}}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},
+   <br/>
+   \]
+   <br/>
+   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
    <br/>
   </p>
   <h3>
@@ -79,9 +84,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Namtirtha, A., Dutta, A., &amp; Dutta, B. (2018). Weighted kshell degree neighborhood method: An approach independent of completeness of global network structure for identifying the influential spreaders. In 2018 10th international conference on communication systems &amp; networks (COMSNETS) (pp. 81-88). IEEE.
-    <a href="https://doi.org/10.1109/COMSNETS.2018.8328183">
-     doi: 10.1109/COMSNETS.2018.8328183.
+    Maji, G. (2020). Influential spreaders identification in complex networks with potential edge weight based k-shell degree neighborhood method. Journal of Computational Science, 39, 101055.
+    <a href="https://doi.org/10.1016/j.jocs.2019.101055">
+     doi: 10.1016/j.jocs.2019.101055.
     </a>
    </div>
    <div class="ref-item">

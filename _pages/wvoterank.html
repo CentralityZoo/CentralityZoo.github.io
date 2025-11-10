@@ -1,7 +1,104 @@
 ---
-title: "WVoteRank"
+title: WVoteRank
 permalink: /wvoterank/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   WVoteRank
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   WVoteRank
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    WVoteRank
+   </i>
+   centrality is a modification of VoteRank that incorporates both the number of neighbors and the weight of each link [2]. Each node \(i\) is represented by the tuple \((s_i, v_i)\), where \(s_i\) is the voting score and \(v_i\) is the voting ability, initialized as \((s_i, v_i) = (0, 1)\) for all \(i \in \mathcal{N}\). The voting procedure iteratively performs the following steps:
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     <i>
+      Vote:
+     </i>
+     Each node votes for its neighbors based on its voting ability. The voting score of node \(i\) is updated as
+    \begin{equation*}
+        s_i = \sqrt{d_i \sum_{j=1}^{N} w_{ji} v_j},
+    \end{equation*}
+    where \(w_{ji}\) is the weight of the link from node \(j\) to node \(i\) and \(d_i\) is the degree of node \(i\).
+    </li>
+    <br/>
+    <li>
+     <i>
+      Select:
+     </i>
+     The node \(k\) with the highest voting score \(s_k\) is elected. Node \(k\) will not participate in subsequent voting turns, i.e., its voting ability is set to zero (\(v_k = 0\)).
+    </li>
+    <br/>
+    <li>
+     <i>
+      Update:
+     </i>
+     The voting ability of nodes that voted for \(k\) is reduced to account for influence spread. For each neighbor \(i \in \mathcal{N}(k)\), the updated voting ability is
+    \begin{equation*}
+        v_i \leftarrow \max(0, v_i - f),
+    \end{equation*}
+    where \(f\) is typically set to the inverse of the average degree of the network, i.e. \(f=1/\langle d \rangle\).
+    </li>
+    <br/>
+   </ol>
+   <br/>
+   WVoteRank prioritizes nodes that are both well-connected and linked through high-weight edges, ensuring that influential nodes are identified while accounting for the propagation of influence through their neighbors.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Sun, H. L., Chen, D. B., He, J. L., &amp; Ch’ng, E. (2019). A voting approach to uncover multiple influential spreaders on weighted networks. Physica A: Statistical Mechanics and its Applications, 519, 303-312.
+    <a href="https://doi.org/10.1016/j.physa.2018.12.001">
+     doi: 10.1016/j.physa.2018.12.001.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

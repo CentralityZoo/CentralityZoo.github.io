@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Total communicability centrality (TCC)
+permalink: /total-communicability-centrality-tcc/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Total communicability centrality (TCC)
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +24,27 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Total communicability centrality (TCC)
   </h2>
   <p>
    <br/>
    The
    <i>
-    VMM algorithm
+    total communicability centrality
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   (TCC) quantifies how effectively each node communicates with all other nodes in a network [2]. It extends the concept of subgraph centrality, which evaluates all possible closed walks of different lengths. The centrality of node \(i\), \(c_{\mathrm{TTC}}(i)\), is defined as the sum of weighted walks of all lengths starting at node \(i\) and ending at any node \(j\):
    <br/>
-   \[
+   \begin{equation*}
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
+   c_{\mathrm{TTC}}(i) = \sum_{k=0}^{\infty} \sum_{j=1}^{N} \frac{(A^k)_{ij}}{k!}
    <br/>
-   \quad
+   = \sum_{j=1}^{N} [e^A]_{ij}
    <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
+   = \sum_{j=1}^{N} \sum_{l=1}^{N} v_j(i) v_l(i) e^{λ_j},
    <br/>
-   \]
+   \end{equation*}
    <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
-   <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   where \(A\) is the adjacency matrix, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\). Benzi and Klymko [2] show that for networks with a large spectral gap (\(λ_1 \gg λ_2\)), the TTC and subgraph centralities converge to the eigenvector centrality, and they illustrate graph types for which TTC and subgraph centrality yield identical node rankings.
    <br/>
   </p>
   <h3>
@@ -66,9 +64,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    Benzi, M., &amp; Klymko, C. (2013). Total communicability as a centrality measure. Journal of Complex Networks, 1(2), 124-149.
+    <a href="https://doi.org/10.1093/comnet/cnt007">
+     doi: 10.1093/comnet/cnt007.
     </a>
    </div>
   </div>

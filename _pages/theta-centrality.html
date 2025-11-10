@@ -1,6 +1,6 @@
 ---
-title: Weighted <i>h</i>-index
-permalink: /weighted-h-index/
+title: θ-Centrality
+permalink: /theta-centrality/
 search: true
 ---
 
@@ -8,11 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   Weighted
-   <i>
-    h
-   </i>
-   -index
+   θ-Centrality
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -28,47 +24,31 @@ search: true
  </head>
  <body>
   <h2>
-   Weighted
-   <i>
-    h
-   </i>
-   -index
+   θ-Centrality
   </h2>
   <p>
    <br/>
    The
    <i>
-    weighted h-index
+    \(θ\)-centrality
    </i>
-   is an extension of the classical h-index to weighted networks [2]. First, the weight \(w_{ij}\) of the edge \((i,j)\) is defined as
+   , also known as the improved method \(θ\), the KS-\(k\) method, the \(k\)-shell distance method, or the distance-to-network-core (DNC) method, is a \(k\)-shell decomposition-based approach designed to differentiate the spreading influence of nodes that share the same \(k\)-core value [2]. Denote by \(k_s(i)\) the \(k\)-shell index of node \(i\). The \(θ\)-centrality of node \(i\), denoted by \(c_{θ}(i)\), depends both on its \(k\)-core value and on its distance from the network core:
    <br/>
    \begin{equation*}
    <br/>
-   w_{ij} = d_i d_j,
+   c_{θ}(i) = \bigl(\max_{l} k_s(l) - k_s(i) + 1\bigr) \sum_{j \in J} d_{ij},
    <br/>
    \end{equation*}
    <br/>
-   where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\).
+   where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(J\) denotes the set of nodes with the maximum \(k\)-shell index, i.e., the innermost core of the network:
    <br/>
-   Next, each neighbor \(j\) of node \(i\) is conceptually cloned \(d_j\) times. Each cloned neighbor \(j_c\) is assigned a virtual edge weight \(w_{ij_c} = w_{ij}\), effectively repeating the original edge weight \(d_j\) times.
+   \[
    <br/>
-   The weighted h-index \(c_{wh}(i)\) of node \(i\) is then calculated as
+   J = \{\, j \in \mathcal{N} \mid k_s(j) = \max_{l} k_s(l) \,\}.
    <br/>
-   \begin{equation*}
+   \]
    <br/>
-   c_{wh}(i) = H(w_{ij_1,1}, \dots, w_{ij_1,d_{j_1}}, \dots, w_{ij_{d_i},1}, \dots, w_{ij_{d_i},d_{j_{d_i}}}),
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(H\) is the
-   <i>
-    h
-   </i>
-   -index operator, which returns the largest integer \(h\) such that there are at least \(h\) elements in the set with value no less than \(h\).  In other words, the weighted
-   <i>
-    h
-   </i>
-   -index reflects both the degrees of a node’s neighbors and the multiplicity of their connections, capturing a more nuanced measure of local influence.
+   Nodes with lower \(θ\)-centrality values are considered more influential, as they are closer to the network core and occupy structurally central positions. If the network is disconnected, \(θ\)-centrality is undefined because shortest-path distances cannot be computed between all node pairs.
    <br/>
   </p>
   <h3>
@@ -88,9 +68,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Gao, L., Yu, S., Li, M., Shen, Z., &amp; Gao, Z. (2019). Weighted H-index for identifying influential spreaders. Symmetry, 11(10), 1263.
-    <a href="https://doi.org/10.3390/sym11101263">
-     doi: 10.3390/sym11101263.
+    Liu, J. G., Ren, Z. M., &amp; Guo, Q. (2013). Ranking the spreading influence in complex networks. Physica A: Statistical Mechanics and its Applications, 392(18), 4154-4159.
+    <a href="https://doi.org/10.1016/j.physa.2013.04.037">
+     doi: 10.1016/j.physa.2013.04.037.
     </a>
    </div>
   </div>

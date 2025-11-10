@@ -1,6 +1,6 @@
 ---
-title: VMM algorithm
-permalink: /vmm-algorithm/
+title: Weight degree centrality (WDC, Liu)
+permalink: /weight-degree-centrality-wdc-liu/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   VMM algorithm
+   Weight degree centrality (WDC, Liu)
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,29 +24,39 @@ search: true
  </head>
  <body>
   <h2>
-   VMM algorithm
+   Weight degree centrality (WDC, Liu)
   </h2>
   <p>
    <br/>
    The
    <i>
-    VMM algorithm
+    weight degree centrality
    </i>
-   is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
+   (WDC) quantifies the influence of a node by considering both its own degree and the degrees of its neighbors [2]. The centrality of node \(i\) is defined as
    <br/>
-   \[
+   \begin{equation*}
    <br/>
-   v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
+   c_{Wdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} d_j - d_i \right) d_i^{α},
    <br/>
-   \quad
+   \end{equation*}
    <br/>
-   s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
+   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\), while \(α\) is a tunable parameter that regulates the contribution of node \(i\)'s degree relative to its neighbors. Liu et al. [2] suggest setting \(α = |r|\), where \(r\) is the degree assortativity coefficient. This allows the centrality measure to adapt to the network type: in
+   <i>
+    assortative
+   </i>
+   networks (\(r&gt;0\)), high-degree nodes connecting to other high-degree nodes are emphasized;
    <br/>
-   \]
+   in
+   <i>
+    disassortative
+   </i>
+   networks (\(r&lt;0\)), high-degree nodes connecting to low-degree nodes are emphasized;
    <br/>
-   where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
-   <br/>
-   At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
+   and in
+   <i>
+    neutral
+   </i>
+   networks (\(r \approx 0\)), node degrees have uniform influence.
    <br/>
   </p>
   <h3>
@@ -66,9 +76,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Wang, G., Parthasarathy, R., &amp; Li, Y. (2023). Key node identification voting method based on multi-attributes in social complex networks. In Proceedings of the 2023 3rd Guangdong-Hong Kong-Macao Greater Bay Area Artificial Intelligence and Big Data Forum (pp. 394-399).
-    <a href="https://doi.org/10.1145/3660395.3660462">
-     doi: 10.1145/3660395.3660462.
+    Liu, Y., Wei, B., Du, Y., Xiao, F., &amp; Deng, Y. (2016). Identifying influential spreaders by weight degree centrality in complex networks. Chaos, Solitons &amp; Fractals, 86, 1-7.
+    <a href="https://doi.org/10.1016/j.chaos.2016.01.030">
+     doi: 10.1016/j.chaos.2016.01.030.
     </a>
    </div>
   </div>

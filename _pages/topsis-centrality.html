@@ -1,7 +1,100 @@
 ---
-title: "TOPSIS centrality"
+title: TOPSIS centrality
 permalink: /topsis-centrality/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   TOPSIS centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   TOPSIS centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    TOPSIS centrality
+   </i>
+   is a hybrid centrality measure that ranks nodes based on their similarity to an ideal solution using the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) approach [2]. Let \(R\) denote the normalized \(N \times m\) decision matrix, where each entry characterizes the normalized influence of a node with respect to \(m\) centrality metrics. Du et al. [2] consider \(m=3\) (degree, closeness and betweenness/eigenvector centralities).
+   <br/>
+   The positive ideal solution \(A^{+}\) and negative ideal solution \(A^{-}\) are defined as
+   <br/>
+   \[
+   <br/>
+   A^{+} = [\max_{i} w_1 r_{i1}, \dots, \max_{i} w_m r_{im}], \quad
+   <br/>
+   A^{-} = [\min_{i} w_1 r_{i1}, \dots, \min_{i} w_m r_{im}],
+   <br/>
+   \]
+   <br/>
+   where \(w_j\) is the weight of the \(j\)-th centrality metric (e.g., \(w_j = 1/m\) for equal weighting).
+   <br/>
+   The TOPSIS centrality of node \(i\) is then given by its relative closeness to the ideal solution:
+   <br/>
+   \[
+   <br/>
+   c_{\mathrm{TOPSIS}}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},
+   <br/>
+   \]
+   <br/>
+   where \(S_i^{+}\) and \(S_i^{-}\) are the Euclidean distances from node \(i\) to the positive and negative ideal solutions, respectively:
+   <br/>
+   \[
+   <br/>
+   S_i^{+} = \sqrt{\sum_{j=1}^m (A_j^{+} - w_j r_{ij})^2}, \quad
+   <br/>
+   S_i^{-} = \sqrt{\sum_{j=1}^m (A_j^{-} - w_j r_{ij})^2}.
+   <br/>
+   \]
+   <br/>
+   Nodes with higher TOPSIS centrality scores are simultaneously closer to the positive ideal solution and farther from the negative ideal solution, reflecting high overall importance across the selected centrality metrics.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Du, Y., Gao, C., Hu, Y., Mahadevan, S., &amp; Deng, Y. (2014). A new method of identifying influential nodes in complex networks based on TOPSIS. Physica A: Statistical Mechanics and its Applications, 399, 57-69.
+    <a href="https://doi.org/10.1016/j.physa.2013.12.031">
+     doi: 10.1016/j.physa.2013.12.031.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

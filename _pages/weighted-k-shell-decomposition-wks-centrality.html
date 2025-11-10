@@ -1,6 +1,6 @@
 ---
-title: Weighted <i>h</i>-index
-permalink: /weighted-h-index/
+title: Weighted <i>k</i>-shell decomposition (Wks) centrality
+permalink: /weighted-k-shell-decomposition-wks-centrality/
 search: true
 ---
 
@@ -10,9 +10,9 @@ search: true
   <title>
    Weighted
    <i>
-    h
+    k
    </i>
-   -index
+   -shell decomposition (Wks) centrality
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -30,45 +30,38 @@ search: true
   <h2>
    Weighted
    <i>
-    h
+    k
    </i>
-   -index
+   -shell decomposition (Wks) centrality
   </h2>
   <p>
    <br/>
-   The
    <i>
-    weighted h-index
+    Weighted
+    <i>
+     k
+    </i>
+    -shell decomposition
    </i>
-   is an extension of the classical h-index to weighted networks [2]. First, the weight \(w_{ij}\) of the edge \((i,j)\) is defined as
+   -shell decomposition!weighted (Wks)} (Wks)
    <br/>
-   \begin{equation*}
+   extends the classical \(k\)-shell method by incorporating edge weights [2]. The motivation is to identify central nodes not only by their position in the network core but also by the strength of their connections. For nodes \(i\) and \(j\), the potential edge weight is defined as
    <br/>
-   w_{ij} = d_i d_j,
+   \[
    <br/>
-   \end{equation*}
+   w_{ij} = d_i + d_j,
    <br/>
-   where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\).
+   \]
    <br/>
-   Next, each neighbor \(j\) of node \(i\) is conceptually cloned \(d_j\) times. Each cloned neighbor \(j_c\) is assigned a virtual edge weight \(w_{ij_c} = w_{ij}\), effectively repeating the original edge weight \(d_j\) times.
+   where \(d_i\) denotes the degree of node \(i\). The weighted degree of node \(i\) is then
    <br/>
-   The weighted h-index \(c_{wh}(i)\) of node \(i\) is then calculated as
+   \[
    <br/>
-   \begin{equation*}
+   k^w_i = α d_i + (1 - α) \sum_{j \in \mathcal{N}(i)} w_{ij} = α d_i + (1-α)d_i^2 +(1-α) \sum_{j \in \mathcal{N}(i)} d_j,
    <br/>
-   c_{wh}(i) = H(w_{ij_1,1}, \dots, w_{ij_1,d_{j_1}}, \dots, w_{ij_{d_i},1}, \dots, w_{ij_{d_i},d_{j_{d_i}}}),
+   \]
    <br/>
-   \end{equation*}
-   <br/>
-   where \(H\) is the
-   <i>
-    h
-   </i>
-   -index operator, which returns the largest integer \(h\) such that there are at least \(h\) elements in the set with value no less than \(h\).  In other words, the weighted
-   <i>
-    h
-   </i>
-   -index reflects both the degrees of a node’s neighbors and the multiplicity of their connections, capturing a more nuanced measure of local influence.
+   with \(α \in (0,1)\) as a tunable parameter (typically \(α = 0.5\)) and \(\mathcal{N}(i)\) as the set of neighbors of node \(i\). The Wks centrality is obtained by performing \(k\)-shell decomposition using the weighted degree \(k^w\), allowing nodes with stronger connectivity to be placed more accurately within the core-periphery structure.
    <br/>
   </p>
   <h3>
@@ -88,9 +81,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Gao, L., Yu, S., Li, M., Shen, Z., &amp; Gao, Z. (2019). Weighted H-index for identifying influential spreaders. Symmetry, 11(10), 1263.
-    <a href="https://doi.org/10.3390/sym11101263">
-     doi: 10.3390/sym11101263.
+    Wei, B., Liu, J., Wei, D., Gao, C., &amp; Deng, Y. (2015). Weighted k-shell decomposition for complex networks based on potential edge weights. Physica A: Statistical Mechanics and its Applications, 420, 277-283.
+    <a href="https://doi.org/10.1016/j.physa.2014.11.012">
+     doi: 10.1016/j.physa.2014.11.012.
     </a>
    </div>
   </div>
