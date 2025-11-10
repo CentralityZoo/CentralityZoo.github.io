@@ -4,104 +4,84 @@ permalink: /edge-clustering-coefficient-nc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Edge clustering coefficient (NC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Edge clustering coefficient (NC)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Edge clustering coefficient centrality
-   </i>
-   (NC), also known as the sum of ECC (SoECC) [2], is used to identify essential proteins in networks based on the clustering of edges [3]. The NC centrality of a node \(i\), denoted \(c_{\mathrm{NC}}(i)\), is defined as
-   <br/>
-   \[
-   <br/>
-   c_{\mathrm{NC}}(i) = \sum_{j \in \mathcal{N}(i)} \mathrm{ECC}(i,j),
-   <br/>
-   \]
-   <br/>
-   where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(\mathrm{ECC}(i,j)\) is the edge clustering coefficient of edge \((i,j)\), given by
-   <br/>
-   \[
-   <br/>
-   \mathrm{ECC}(i,j) = \frac{z_{i,j}}{\min(d_i-1, d_j-1)}.
-   <br/>
-   \]
-   <br/>
-   Here, \(z_{i,j}\) denotes the number of triangles that include the edge \((i,j)\) and \(d_i\) is the degree of node \(i\). The denominator \(\min(d_i - 1, d_j - 1)\) represents the
-   <i>
-    maximum number of triangles
-   </i>
-   in which the edge \((i,j)\) can potentially participate.
-   <br/>
-   Thus, the NC centrality accounts for both the
-   <i>
-    degree of the node
-   </i>
-   \(d_i\) (i.e., the number of edges incident to node \(i\)) and the
-   <i>
-    clustering coefficients
-   </i>
-   of its edges, capturing the node’s involvement in tightly connected regions of the network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Wang, H., Li, M., Wang, J., &amp; Pan, Y. (2011). A new method for identifying essential proteins based on edge clustering coefficient. In International Symposium on Bioinformatics Research and Applications (pp. 87-98). Berlin, Heidelberg: Springer Berlin Heidelberg.
-    <a href="https://doi.org/10.1007/978-3-642-21260-4_12">
-     doi: 10.1007/978-3-642-21260-4\_12.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Wang, J., Li, M., Wang, H., &amp; Pan, Y. (2011). Identification of essential proteins based on edge clustering coefficient. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 9(4), 1070-1080.
-    <a href="https://doi.org/10.1109/TCBB.2011.147">
-     doi: 10.1109/TCBB.2011.147.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Edge clustering coefficient centrality
+ </i>
+ (NC), also known as the sum of ECC (SoECC) [2], is used to identify essential proteins in networks based on the clustering of edges [3]. The NC centrality of a node \(i\), denoted \(c_{\mathrm{NC}}(i)\), is defined as
+ <br/>
+ \[
+ <br/>
+ c_{\mathrm{NC}}(i) = \sum_{j \in \mathcal{N}(i)} \mathrm{ECC}(i,j),
+ <br/>
+ \]
+ <br/>
+ where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(\mathrm{ECC}(i,j)\) is the edge clustering coefficient of edge \((i,j)\), given by
+ <br/>
+ \[
+ <br/>
+ \mathrm{ECC}(i,j) = \frac{z_{i,j}}{\min(d_i-1, d_j-1)}.
+ <br/>
+ \]
+ <br/>
+ Here, \(z_{i,j}\) denotes the number of triangles that include the edge \((i,j)\) and \(d_i\) is the degree of node \(i\). The denominator \(\min(d_i - 1, d_j - 1)\) represents the
+ <i>
+  maximum number of triangles
+ </i>
+ in which the edge \((i,j)\) can potentially participate.
+ <br/>
+ Thus, the NC centrality accounts for both the
+ <i>
+  degree of the node
+ </i>
+ \(d_i\) (i.e., the number of edges incident to node \(i\)) and the
+ <i>
+  clustering coefficients
+ </i>
+ of its edges, capturing the node’s involvement in tightly connected regions of the network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Wang, H., Li, M., Wang, J., &amp; Pan, Y. (2011). A new method for identifying essential proteins based on edge clustering coefficient. In International Symposium on Bioinformatics Research and Applications (pp. 87-98). Berlin, Heidelberg: Springer Berlin Heidelberg.
+  <a href="https://doi.org/10.1007/978-3-642-21260-4_12">
+   doi: 10.1007/978-3-642-21260-4\_12.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Wang, J., Li, M., Wang, H., &amp; Pan, Y. (2011). Identification of essential proteins based on edge clustering coefficient. IEEE/ACM Transactions on Computational Biology and Bioinformatics, 9(4), 1070-1080.
+  <a href="https://doi.org/10.1109/TCBB.2011.147">
+   doi: 10.1109/TCBB.2011.147.
+  </a>
+ </div>
+</div>

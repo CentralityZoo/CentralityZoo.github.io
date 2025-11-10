@@ -4,86 +4,66 @@ permalink: /generalized-degree-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Generalized degree centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Generalized degree centrality
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    generalized degree centrality
-   </i>
-   extends standard degree centrality by incorporating the influence of a node's neighbors [2]. Rather than counting only direct connections, it redistributes the total sum of degrees across the network, assigning greater importance to nodes connected to highly central neighbors. A positive parameter \(\varepsilon &gt; 0\) controls the strength of neighbor influence, interpolating between standard degree centrality (\(\varepsilon \to 0\)) and equal centrality for all nodes within a connected component (\(\varepsilon \to \infty\)).
-   <br/>
-   Formally, the generalized degree centrality vector \(\mathbf{x}(\varepsilon)\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   (I + \varepsilon L) \, \mathbf{x}(\varepsilon) = d,
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(I\) is the identity matrix, \(L\) is the graph Laplacian, and \(d\) is the vector of node degrees. For an individual node \(i\), the generalized degree centrality can also be expressed as
-   <br/>
-   \begin{equation*}
-   <br/>
-   d_i = x_i(\varepsilon) + \varepsilon \sum_{j \in \mathcal{N}(i)} a_{ij} \big(x_i(\varepsilon) - x_j(\varepsilon)\big),
-   <br/>
-   \end{equation*}
-   <br/>
-   illustrating that a node's centrality increases if it is connected to less central neighbors and decreases if it is connected to more central neighbors.
-   <br/>
-   Nodes with high generalized degree centrality are not only well-connected themselves but are also linked to other influential nodes, providing a more nuanced reflection of their global importance in the network. In practice, small values of \(\varepsilon\) are recommended to preserve the properties of standard degree centrality while enhancing differentiation among nodes.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Csató, L. (2017). Measuring centrality by a generalization of degree. Central European Journal of Operations Research, 25(4), 771-790.
-    <a href="https://doi.org/10.1007/s10100-016-0439-6">
-     doi: 10.1007/s10100-016-0439-6.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  generalized degree centrality
+ </i>
+ extends standard degree centrality by incorporating the influence of a node's neighbors [2]. Rather than counting only direct connections, it redistributes the total sum of degrees across the network, assigning greater importance to nodes connected to highly central neighbors. A positive parameter \(\varepsilon &gt; 0\) controls the strength of neighbor influence, interpolating between standard degree centrality (\(\varepsilon \to 0\)) and equal centrality for all nodes within a connected component (\(\varepsilon \to \infty\)).
+ <br/>
+ Formally, the generalized degree centrality vector \(\mathbf{x}(\varepsilon)\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ (I + \varepsilon L) \, \mathbf{x}(\varepsilon) = d,
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(I\) is the identity matrix, \(L\) is the graph Laplacian, and \(d\) is the vector of node degrees. For an individual node \(i\), the generalized degree centrality can also be expressed as
+ <br/>
+ \begin{equation*}
+ <br/>
+ d_i = x_i(\varepsilon) + \varepsilon \sum_{j \in \mathcal{N}(i)} a_{ij} \big(x_i(\varepsilon) - x_j(\varepsilon)\big),
+ <br/>
+ \end{equation*}
+ <br/>
+ illustrating that a node's centrality increases if it is connected to less central neighbors and decreases if it is connected to more central neighbors.
+ <br/>
+ Nodes with high generalized degree centrality are not only well-connected themselves but are also linked to other influential nodes, providing a more nuanced reflection of their global importance in the network. In practice, small values of \(\varepsilon\) are recommended to preserve the properties of standard degree centrality while enhancing differentiation among nodes.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Csató, L. (2017). Measuring centrality by a generalization of degree. Central European Journal of Operations Research, 25(4), 771-790.
+  <a href="https://doi.org/10.1007/s10100-016-0439-6">
+   doi: 10.1007/s10100-016-0439-6.
+  </a>
+ </div>
+</div>

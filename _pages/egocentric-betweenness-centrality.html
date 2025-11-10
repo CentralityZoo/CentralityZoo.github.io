@@ -4,95 +4,75 @@ permalink: /egocentric-betweenness-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Egocentric betweenness centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Egocentric betweenness centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Egocentric betweenness centrality
-   </i>
-   measures the betweenness role of a node within its egocentric network [2]. The egocentric (or centered) network of node \(i\) is defined as the subgraph of \(G\) consisting of \(i\) and its 1-hop neighbors.  Formally, the egocentric betweenness centrality of node \(i\) is defined as the betweenness centrality of \(i\) within its egocentric network.
-   <br/>
-   For computational purposes, the egocentric betweenness of node \(i\) can be expressed directly using the adjacency matrix \(A\) of the full graph \(G\) [3, 4]:
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\mathrm{ego}}(i) = \sum_{j \neq i} \sum_{k \neq i} \frac{1}{\left( A^2 \cdot (1-A) \right)_{jk}},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(\left( A^2 \cdot (1-A) \right)_{jk}\) counts the number of 2-step paths between neighbors \(j\) and \(k\) that pass through \(i\) but exclude direct connections between \(j\) and \(k\).
-   <br/>
-   The egocentric betweenness centrality captures how much node \(i\) mediates interactions among its neighbors, reflecting its local brokerage role.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Freeman, L. C. (1982). Centered graphs and the construction of ego networks. Mathematical Social Sciences 3, 291-304.
-    <a href="https://doi.org/10.1016/0165-4896(82)90076-2">
-     doi: 10.1016/0165-4896(82)90076-2.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Marsden, P. V. (2002). Egocentric and sociocentric measures of network centrality. Social networks, 24(4), 407-422.
-    <a href="https://doi.org/10.1016/S0378-8733(02)00016-3">
-     doi: 10.1016/S0378-8733(02)00016-3.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [4]
-    </span>
-    Everett, M., &amp; Borgatti, S. P. (2005). Ego network betweenness. Social networks, 27(1), 31-38.
-    <a href="https://doi.org/10.1016/j.socnet.2004.11.007">
-     doi: 10.1016/j.socnet.2004.11.007.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Egocentric betweenness centrality
+ </i>
+ measures the betweenness role of a node within its egocentric network [2]. The egocentric (or centered) network of node \(i\) is defined as the subgraph of \(G\) consisting of \(i\) and its 1-hop neighbors.  Formally, the egocentric betweenness centrality of node \(i\) is defined as the betweenness centrality of \(i\) within its egocentric network.
+ <br/>
+ For computational purposes, the egocentric betweenness of node \(i\) can be expressed directly using the adjacency matrix \(A\) of the full graph \(G\) [3, 4]:
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\mathrm{ego}}(i) = \sum_{j \neq i} \sum_{k \neq i} \frac{1}{\left( A^2 \cdot (1-A) \right)_{jk}},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(\left( A^2 \cdot (1-A) \right)_{jk}\) counts the number of 2-step paths between neighbors \(j\) and \(k\) that pass through \(i\) but exclude direct connections between \(j\) and \(k\).
+ <br/>
+ The egocentric betweenness centrality captures how much node \(i\) mediates interactions among its neighbors, reflecting its local brokerage role.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Freeman, L. C. (1982). Centered graphs and the construction of ego networks. Mathematical Social Sciences 3, 291-304.
+  <a href="https://doi.org/10.1016/0165-4896(82)90076-2">
+   doi: 10.1016/0165-4896(82)90076-2.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Marsden, P. V. (2002). Egocentric and sociocentric measures of network centrality. Social networks, 24(4), 407-422.
+  <a href="https://doi.org/10.1016/S0378-8733(02)00016-3">
+   doi: 10.1016/S0378-8733(02)00016-3.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Everett, M., &amp; Borgatti, S. P. (2005). Ego network betweenness. Social networks, 27(1), 31-38.
+  <a href="https://doi.org/10.1016/j.socnet.2004.11.007">
+   doi: 10.1016/j.socnet.2004.11.007.
+  </a>
+ </div>
+</div>

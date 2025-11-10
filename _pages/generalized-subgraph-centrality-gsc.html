@@ -4,99 +4,79 @@ permalink: /generalized-subgraph-centrality-gsc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Generalized subgraph centrality (GSC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Generalized subgraph centrality (GSC)
-  </h2>
-  <p>
-   <br/>
-   The
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  generalized subgraph centrality
+ </i>
+ (GSC), also referred to as \(t\)-subgraph centrality, extends the classical subgraph centrality by allowing a flexible weighting of closed walks based on their length, capturing both local and global aspects of a node's influence [2].
+ <br/>
+ The subgraph centrality of node \(i\), denoted \(c_s(i)\), is defined as
+ <br/>
+ \[
+ <br/>
+ c_s(i) = \sum_{k=0}^{\infty} \frac{(A^k)_{ii}}{k!} = [e^A]_{ii},
+ <br/>
+ \]
+ <br/>
+ where \(A\) is the adjacency matrix and \((A^k)_{ii}\) counts the number of closed walks of length \(k\) starting and ending at node \(i\).  In the generalized form, the factorial weighting is rescaled by a parameter \(t\), allowing the emphasis on short or long walks to be adjusted:
+ <ul>
+  <li>
    <i>
-    generalized subgraph centrality
+    Positive rescaling
    </i>
-   (GSC), also referred to as \(t\)-subgraph centrality, extends the classical subgraph centrality by allowing a flexible weighting of closed walks based on their length, capturing both local and global aspects of a node's influence [2].
-   <br/>
-   The subgraph centrality of node \(i\), denoted \(c_s(i)\), is defined as
-   <br/>
-   \[
-   <br/>
-   c_s(i) = \sum_{k=0}^{\infty} \frac{(A^k)_{ii}}{k!} = [e^A]_{ii},
-   <br/>
-   \]
-   <br/>
-   where \(A\) is the adjacency matrix and \((A^k)_{ii}\) counts the number of closed walks of length \(k\) starting and ending at node \(i\).  In the generalized form, the factorial weighting is rescaled by a parameter \(t\), allowing the emphasis on short or long walks to be adjusted:
-   <ul>
-    <li>
-     <i>
-      Positive rescaling
-     </i>
-     (\(t \geq 0\)): longer walks are increasingly penalized, yielding a more localized centrality measure
+   (\(t \geq 0\)): longer walks are increasingly penalized, yielding a more localized centrality measure
     \[
     c_{GSC}(i) = \sum_{k=0}^{\infty} \frac{(A^k)_{ii}}{(t+k)!}.
     \]
-    </li>
-    <li>
-     <i>
-      Negative rescaling
-     </i>
-     (\(t &lt; 0\)): the emphasis shifts toward longer walks, capturing a node's global environment
+  </li>
+  <li>
+   <i>
+    Negative rescaling
+   </i>
+   (\(t &lt; 0\)): the emphasis shifts toward longer walks, capturing a node's global environment
     \[
     c_{GSC}(i) = \sum_{k=0}^{|t|-1} (A^k)_{ii} + \sum_{k=0}^{\infty} \frac{(A^{|t|+k})_{ii}}{k!} 
     = \sum_{k=0}^{|t|-1} (A^k)_{ii} + [A^{|t|} e^A]_{ii}.
     \]
-    </li>
-   </ul>
-   <br/>
-   By varying \(t\), one can tune the centrality to emphasize either local structure (large positive \(t\)) or global network connectivity (negative \(t\)). The generalized subgraph centrality has been applied to protein-protein interaction (PPI) networks, with \(t = 7\) shown to outperform subgraph centrality and other measures in identifying essential proteins in the yeast network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Estrada, E. (2010). Generalized walks-based centrality measures for complex biological networks. Journal of theoretical biology, 263(4), 556-565.
-    <a href="https://doi.org/10.1016/j.jtbi.2010.01.014">
-     doi: 10.1016/j.jtbi.2010.01.014.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+  </li>
+ </ul>
+ <br/>
+ By varying \(t\), one can tune the centrality to emphasize either local structure (large positive \(t\)) or global network connectivity (negative \(t\)). The generalized subgraph centrality has been applied to protein-protein interaction (PPI) networks, with \(t = 7\) shown to outperform subgraph centrality and other measures in identifying essential proteins in the yeast network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Estrada, E. (2010). Generalized walks-based centrality measures for complex biological networks. Journal of theoretical biology, 263(4), 556-565.
+  <a href="https://doi.org/10.1016/j.jtbi.2010.01.014">
+   doi: 10.1016/j.jtbi.2010.01.014.
+  </a>
+ </div>
+</div>

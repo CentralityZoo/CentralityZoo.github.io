@@ -4,74 +4,54 @@ permalink: /global-structure-model-gsm/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Global Structure Model (GSM)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Global Structure Model (GSM)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    Global Structure Model
-   </i>
-   (GSM) centrality accounts for self-influence (SI) and global influence (GI) [2]. For node \(i\), the GSM score is defined as
-   <br/>
-   \[
-   <br/>
-   c_{GSM}(i) = SI(i) \cdot GI(i) = e^{k_s(i)/N} \cdot \sum_{j \neq i} \frac{k_s(j)}{d_{ij}},
-   <br/>
-   \]
-   <br/>
-   where \(k_s(i)\) is the \(k\)-shell value of \(i\), \(d_{ij}\) is the shortest-path distance between \(i\) and \(j\) and \(N\) is the total number of nodes in the network. The term \(SI(i)\) reflects intrinsic influence based on the core-periphery position, while \(GI(i)\) captures contributions from all other nodes weighted by distance.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Ullah, A., Wang, B., Sheng, J., Long, J., Khan, N., &amp; Sun, Z. (2021). Identification of nodes influence based on global structure model in complex networks. Scientific Reports, 11(1), 6173.
-    <a href="https://doi.org/10.1038/s41598-021-84684-x">
-     doi: 10.1038/s41598-021-84684-x.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  Global Structure Model
+ </i>
+ (GSM) centrality accounts for self-influence (SI) and global influence (GI) [2]. For node \(i\), the GSM score is defined as
+ <br/>
+ \[
+ <br/>
+ c_{GSM}(i) = SI(i) \cdot GI(i) = e^{k_s(i)/N} \cdot \sum_{j \neq i} \frac{k_s(j)}{d_{ij}},
+ <br/>
+ \]
+ <br/>
+ where \(k_s(i)\) is the \(k\)-shell value of \(i\), \(d_{ij}\) is the shortest-path distance between \(i\) and \(j\) and \(N\) is the total number of nodes in the network. The term \(SI(i)\) reflects intrinsic influence based on the core-periphery position, while \(GI(i)\) captures contributions from all other nodes weighted by distance.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Ullah, A., Wang, B., Sheng, J., Long, J., Khan, N., &amp; Sun, Z. (2021). Identification of nodes influence based on global structure model in complex networks. Scientific Reports, 11(1), 6173.
+  <a href="https://doi.org/10.1038/s41598-021-84684-x">
+   doi: 10.1038/s41598-021-84684-x.
+  </a>
+ </div>
+</div>

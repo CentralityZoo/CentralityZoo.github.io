@@ -4,98 +4,78 @@ permalink: /extended-diversity-strength-ranking-edsr/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Extended diversity-strength ranking (EDSR)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Extended diversity-strength ranking (EDSR)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Extended diversity-strength ranking
-   </i>
-   (EDSR) further extends the diversity-strength ranking (DSR) measure by incorporating the influence potential of nodes over a wider network range, as proposed by Zareie et al. [2]. The EDSR value of node \(i\) is given by
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\text{EDSR}}(i) =\sum_{j \in \mathcal{N}(i)}  c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)}
-   <br/>
-   \left[
-   <br/>
-   \sum_{k \in \mathcal{N}(j)}
-   <br/>
-   \left(
-   <br/>
-   \sum_{p \in \mathcal{N}(k)}
-   <br/>
-   \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}
-   <br/>
-   \log \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}
-   <br/>
-   \right)
-   <br/>
-   \right],
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(IKs(p)\) is the improved \(k\)-shell index of node \(p\) as defined by Liu et al. [3]. The innermost term represents the diversity-strength centrality of node \(k\), the middle summation yields the DSR of node \(j\), and the outermost summation aggregates these across the neighbors of node \(i\). EDSR thus captures multi-level influence by integrating local, second-order, and higher-order structural information. Nodes with high EDSR values lie within regions of strong and diverse influence, indicating their importance in diffusion and spreading processes across the network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Zareie, A., Sheikhahmadi, A., &amp; Jalili, M. (2019). Influential node ranking in social networks based on neighborhood diversity. Future Generation Computer Systems, 94, 120-129.
-    <a href="https://doi.org/10.1016/j.future.2018.11.023">
-     doi: 10.1016/j.future.2018.11.023.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Liu, Z., Jiang, C., Wang, J., &amp; Yu, H. (2015). The node importance in actual complex networks based on a multi-attribute ranking method. Knowledge-Based Systems, 84, 56-66.
-    <a href="https://doi.org/10.1016/j.knosys.2015.03.026">
-     doi: 10.1016/j.knosys.2015.03.026.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Extended diversity-strength ranking
+ </i>
+ (EDSR) further extends the diversity-strength ranking (DSR) measure by incorporating the influence potential of nodes over a wider network range, as proposed by Zareie et al. [2]. The EDSR value of node \(i\) is given by
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\text{EDSR}}(i) =\sum_{j \in \mathcal{N}(i)}  c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)}
+ <br/>
+ \left[
+ <br/>
+ \sum_{k \in \mathcal{N}(j)}
+ <br/>
+ \left(
+ <br/>
+ \sum_{p \in \mathcal{N}(k)}
+ <br/>
+ \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}
+ <br/>
+ \log \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}
+ <br/>
+ \right)
+ <br/>
+ \right],
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(IKs(p)\) is the improved \(k\)-shell index of node \(p\) as defined by Liu et al. [3]. The innermost term represents the diversity-strength centrality of node \(k\), the middle summation yields the DSR of node \(j\), and the outermost summation aggregates these across the neighbors of node \(i\). EDSR thus captures multi-level influence by integrating local, second-order, and higher-order structural information. Nodes with high EDSR values lie within regions of strong and diverse influence, indicating their importance in diffusion and spreading processes across the network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Zareie, A., Sheikhahmadi, A., &amp; Jalili, M. (2019). Influential node ranking in social networks based on neighborhood diversity. Future Generation Computer Systems, 94, 120-129.
+  <a href="https://doi.org/10.1016/j.future.2018.11.023">
+   doi: 10.1016/j.future.2018.11.023.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Liu, Z., Jiang, C., Wang, J., &amp; Yu, H. (2015). The node importance in actual complex networks based on a multi-attribute ranking method. Knowledge-Based Systems, 84, 56-66.
+  <a href="https://doi.org/10.1016/j.knosys.2015.03.026">
+   doi: 10.1016/j.knosys.2015.03.026.
+  </a>
+ </div>
+</div>
