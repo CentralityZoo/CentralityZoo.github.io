@@ -1,0 +1,93 @@
+---
+title: Electrical closeness centrality
+permalink: /electrical-closeness-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Electrical closeness centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Electrical closeness centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Electrical closeness
+   </i>
+   (EleClose) centrality is a variant of the classical closeness centrality that uses the effective resistance to measure the distance between pairs of nodes [2, 3]. The EleClose centrality of node \(i\) is defined as
+   <br/>
+   \[
+   <br/>
+   c_{\mathrm{EleClose}}(i) = \frac{1}{\sum_{j=1}^N \Omega_{ij}},
+   <br/>
+   \]
+   <br/>
+   where
+   <br/>
+   \[
+   <br/>
+   \Omega_{ij} = Q^{\dagger}_{ii} + Q^{\dagger}_{jj} - 2 Q^{\dagger}_{ij}
+   <br/>
+   \]
+   <br/>
+   denotes the effective resistance between nodes \(i\) and \(j\), and \(Q^{\dagger}\) is the Moore-Penrose pseudo-inverse of the Laplacian matrix of the graph \(G\). This measure accounts for all paths in the network weighted by their effective resistance, capturing both direct and indirect connections between nodes and providing a centrality value that reflects the node's influence on the overall network connectivity.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Wang, H., Li, M., Wang, J., &amp; Pan, Y. (2011). A new method for identifying essential proteins based on edge clustering coefficient. In International Symposium on Bioinformatics Research and Applications (pp. 87-98). Berlin, Heidelberg: Springer Berlin Heidelberg.
+    <a href="https://doi.org/10.1007/978-3-642-21260-4_12">
+     doi: 10.1007/978-3-642-21260-4\_12.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Ellens, W., Spieksma, F. M., Van Mieghem, P., Jamakovic, A., &amp; Kooij, R. E. (2011). Effective graph resistance. Linear algebra and its applications, 435(10), 2491-2506.
+    <a href="https://doi.org/10.1016/j.laa.2011.02.024">
+     doi: 10.1016/j.laa.2011.02.024.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

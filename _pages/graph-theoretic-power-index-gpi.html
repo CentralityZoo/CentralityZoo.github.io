@@ -1,7 +1,77 @@
 ---
-title: "Graph-theoretic power index (GPI)"
+title: Graph-theoretic power index (GPI)
 permalink: /graph-theoretic-power-index-gpi/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Graph-theoretic power index (GPI)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Graph-theoretic power index (GPI)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    graph-theoretic power index
+   </i>
+   (GPI) was proposed by Markovsky et al. [2] to measure power in exchange networks. Here, power is conceived as an unobservable, structurally determined potential for obtaining relatively favorable resource levels. Let \(m_{ik}\) denote the number of nonintersecting paths (i.e., paths that share only the source node) of length \(k\) originating from node \(i\).
+   <br/>
+   Markovsky et al. [2] observed that odd-length nonintersecting paths are advantageous, while even-length paths are disadvantageous. Advantageous paths provide direct exchange alternatives or mitigate the effects of disadvantageous paths. The GPI of node \(i\) is defined as the difference between the number of advantageous and disadvantageous paths:
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{GPI}(i) = \sum_{k=1}^8 (-1)^{k-1} m_{ik}.
+   <br/>
+   \end{equation*}
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Markovsky, B., Willer, D., &amp; Patton, T. (1988). Power relations in exchange networks. American sociological review, 220-236.
+    <a href="https://doi.org/10.2307/2095634">
+     doi: 10.2307/2095634.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

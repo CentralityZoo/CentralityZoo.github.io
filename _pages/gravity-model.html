@@ -1,7 +1,90 @@
 ---
-title: "Gravity model"
+title: Gravity model
 permalink: /gravity-model/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Gravity model
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Gravity model
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    gravity model
+   </i>
+   (originally proposed in [2] as the inverse-square law method), inspired by Newton’s law of gravitation, evaluates a node’s importance in spreading dynamics by incorporating both neighborhood and path information [3]. In this model, the degree of a node is regarded as its mass, while the shortest path length between two nodes represents their distance.
+   <br/>
+   The centrality \(c_{\text{GM}}(i)\) of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\text{GM}}(i) = \sum_{j \neq i} \frac{d_i\,d_j}{d_{ij}^2},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(d_{ij}\) denotes the shortest path distance between nodes \(i\) and \(j\) and \(d_i\) represents the degree of \(i\).
+   <br/>
+   According to the gravity model, a node with a larger degree (reflecting stronger local connectivity) and shorter average distances to other nodes (indicating higher global accessibility) is considered more influential in the network.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Fei, L., Zhang, Q., &amp; Deng, Y. (2018). Identifying influential nodes in complex networks based on the inverse-square law. Physica A: Statistical Mechanics and its Applications, 512, 1044-1059.
+    <a href="https://doi.org/10.1016/j.physa.2018.08.135">
+     doi: 10.1016/j.physa.2018.08.135.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Li, Z., Ren, T., Ma, X., Liu, S., Zhang, Y. &amp; Zhou, T. Identifying influential spreaders by gravity model. Sci Rep 9, 8387 (2019).
+    <a href="https://doi.org/10.1038/s41598-019-44930-9">
+     doi: 10.1038/s41598-019-44930-9.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

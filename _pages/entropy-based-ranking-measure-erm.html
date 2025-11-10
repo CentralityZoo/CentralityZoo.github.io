@@ -1,7 +1,117 @@
 ---
-title: "Entropy-Based Ranking Measure (ERM)"
+title: Entropy-based ranking measure (ERM)
 permalink: /entropy-based-ranking-measure-erm/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Entropy-based ranking measure (ERM)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Entropy-based ranking measure (ERM)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    Entropy-Based Ranking Measure
+   </i>
+   (ERM) is a centrality metric that quantifies the influence of a node based on the degrees of its first- and second-order neighbors [2]. Let \(d_i^{(1)}\) denote the total degree of the neighbors of node \(i\), defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   d_i^{(1)} = \sum_{j \in \mathcal{N}(i)} d_j,
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(d_j\) is the degree of neighbor \(j\). Similarly, let \(d_i^{(2)}\) be the total degree of the neighbors of node \(i\)'s neighbors:
+   <br/>
+   \begin{equation*}
+   <br/>
+   d_i^{(2)} = \sum_{j \in \mathcal{N}(i)} d_j^{(1)}.
+   <br/>
+   \end{equation*}
+   <br/>
+   The ERM centrality of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{ERM}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} EC(i),
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(EC(i)\) represents
+   <i>
+    the entropy centrality
+   </i>
+   of node \(i\), given by
+   <br/>
+   \begin{equation*}
+   <br/>
+   EC(i) = E_1(i) + λ_i E_2(i)
+   <br/>
+   = -\sum_{j \in \mathcal{N}(i)} \frac{d_j}{d_i^{(1)}} \log{\frac{d_j}{d_i^{(1)}}}
+   <br/>
+   + λ_i \left(-\sum_{j \in \mathcal{N}(i)} \frac{d_j^{(1)}}{d_i^{(2)}} \log{\frac{d_j^{(1)}}{d_i^{(2)}}} \right).
+   <br/>
+   \end{equation*}
+   <br/>
+   Here, \(E_1(i)\) and \(E_2(i)\) denote the entropy of the degrees of the first- and second-order neighbors of node \(i\), respectively, and \(λ_i \in [0,1]\) is a tunable parameter that balances their contributions. Following [2], \(λ_i\) can be set as
+   <br/>
+   \begin{equation*}
+   <br/>
+   λ_i = \frac{d_i^{(2)}}{\max_k d_k^{(2)}},
+   <br/>
+   \end{equation*}
+   <br/>
+   so that nodes with larger second-order neighborhoods give proportionally more weight to \(E_2(i)\).
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Zareie, A., Sheikhahmadi, A., &amp; Fatemi, A. (2017). Influential nodes ranking in complex networks: An entropy-based approach. Chaos, Solitons &amp; Fractals, 104, 485-494.
+    <a href="https://doi.org/10.1016/j.chaos.2017.09.010">
+     doi: 10.1016/j.chaos.2017.09.010.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

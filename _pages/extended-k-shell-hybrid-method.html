@@ -1,7 +1,101 @@
 ---
-title: "Extended k-shell hybrid method"
+title: Extended <i>k</i>-shell hybrid method
 permalink: /extended-k-shell-hybrid-method/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Extended
+   <i>
+    k
+   </i>
+   -shell hybrid method
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Extended
+   <i>
+    k
+   </i>
+   -shell hybrid method
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    extended \(k\)-shell hybrid method
+   </i>
+   -shell hybrid method!extended (ESKH)} (ESKH), proposed by Namtirtha et al. [2], is an extension of the \(k\)-shell hybrid method (ksh) in which the centrality of a node depends on the hybrid centralities of its neighbors. The centrality \( c_{\mathrm{ESKH}}(i) \) of node \( i \) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{ESKH}}(i)
+   <br/>
+   = \sum_{j \in \mathcal{N}(i)} c_{\mathrm{ksh}}(j)
+   <br/>
+   = \sum_{j \in \mathcal{N}(i)} \sum_{t \in \mathcal{N}^{(\leq l)}(j)}
+   <br/>
+   \frac{\sqrt{k_s(j) + k_s(t)} + μ\,k_t}{d_{jt}^2},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \),
+   <br/>
+   \( \mathcal{N}^{(\leq l)}(j) \) represents the set of nodes within the \( l \)-hop neighborhood of node \( j \),
+   <br/>
+   \( d_{jt} \) is the shortest path distance between nodes \( j \) and \( t \),
+   <br/>
+   \( k_s(j) \) and \( k_s(t) \) are the \(k\)-shell indices of nodes \( j \) and \( t \), respectively,
+   <br/>
+   \( k_t \) is the degree of node \( t \),
+   <br/>
+   and \( μ \in (0,1) \) is a tunable parameter that balances the relative influence of the two components.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Namtirtha, A., Dutta, A., &amp; Dutta, B. (2018). Identifying influential spreaders in complex networks based on kshell hybrid method. Physica A: Statistical Mechanics and Its Applications, 499, 310-324.
+    <a href="https://doi.org/10.1016/j.physa.2018.02.016">
+     doi: 10.1016/j.physa.2018.02.016.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>
