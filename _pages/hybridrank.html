@@ -4,77 +4,57 @@ permalink: /hybridrank/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   HybridRank
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   HybridRank
-  </h2>
-  <p>
-   <br/>
-   <i>
-    HybridRank
-   </i>
-   is a hybrid centrality measure designed to identify a set of influential spreaders in a network by combining topological properties of nodes [2]. The method operates in two main steps: computing a hybrid centrality score for each node and selecting a subset of influential spreaders.
-   <br/>
-   The hybrid centrality \( c_{HC}(i) \) of node \( i \) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{HC}(i) = c_{EV}(i) \sum_{j \in \mathcal{N}(i)} k_s(j),
-   <br/>
-   \end{equation*}
-   <br/>
-   where \( c_{EV}(i) \) denotes the eigenvector centrality of node \( i \), \( k_s(j) \) is the \(k\)-shell index of neighbor \( j \), and \( \mathcal{N}(i) \) represents the set of neighbors of \( i \).
-   <br/>
-   In the second step, nodes are ranked according to their hybrid centrality scores. The algorithm then iteratively selects the node with the highest \( c_{HC} \) value as a seed and removes it along with its immediate neighbors from consideration. This process continues until the desired number of non-adjacent influential spreaders is obtained.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Ahajjam, S., &amp; Badir, H. (2018). Identification of influential spreaders in complex networks using HybridRank algorithm. Scientific reports, 8(1), 11932.
-    <a href="https://doi.org/10.1038/s41598-018-30310-2">
-     doi: 10.1038/s41598-018-30310-2.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  HybridRank
+ </i>
+ is a hybrid centrality measure designed to identify a set of influential spreaders in a network by combining topological properties of nodes [2]. The method operates in two main steps: computing a hybrid centrality score for each node and selecting a subset of influential spreaders.
+ <br/>
+ The hybrid centrality \( c_{HC}(i) \) of node \( i \) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{HC}(i) = c_{EV}(i) \sum_{j \in \mathcal{N}(i)} k_s(j),
+ <br/>
+ \end{equation*}
+ <br/>
+ where \( c_{EV}(i) \) denotes the eigenvector centrality of node \( i \), \( k_s(j) \) is the \(k\)-shell index of neighbor \( j \), and \( \mathcal{N}(i) \) represents the set of neighbors of \( i \).
+ <br/>
+ In the second step, nodes are ranked according to their hybrid centrality scores. The algorithm then iteratively selects the node with the highest \( c_{HC} \) value as a seed and removes it along with its immediate neighbors from consideration. This process continues until the desired number of non-adjacent influential spreaders is obtained.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Ahajjam, S., &amp; Badir, H. (2018). Identification of influential spreaders in complex networks using HybridRank algorithm. Scientific reports, 8(1), 11932.
+  <a href="https://doi.org/10.1038/s41598-018-30310-2">
+   doi: 10.1038/s41598-018-30310-2.
+  </a>
+ </div>
+</div>

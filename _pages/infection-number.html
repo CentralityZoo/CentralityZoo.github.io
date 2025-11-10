@@ -4,84 +4,64 @@ permalink: /infection-number/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Infection number
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Infection number
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    infection number
-   </i>
-   quantifies the expected impact of a node \(i\) as the initial source of infection [2]. Under the assumption that all infection walks are independent, Bauer and Lizier [2] approximate the infection number using
-   <i>
-    self-avoiding walks
-   </i>
-   (SAWs) in a graph \(G\), which is also referred to as the walks-based method.
-   <br/>
-   For the SIR (susceptible/infected/removed) model, where an infected node is removed from the network with probability \(λ = 1\) (representing either death or full recovery with immunity), the expected number of resulting infections from node \(i\) is
-   <br/>
-   \[
-   <br/>
-   I_i^{SIR} = \sum_{k=1}^{N-1} \sum_{j=1}^{N} \Bigl( 1 - (1 - β^k)^{s_{ij}^{k,0}} \Bigr)
-   <br/>
-   \Bigl( 1 - \sum_{t=1}^{k-1} \bigl( 1 - (1 - β^t)^{(A^t)_{ij}} \bigr) \Bigr),
-   <br/>
-   \]
-   <br/>
-   where \((A^k)_{ij}\) is the total number of paths of length \(k\) from \(i\) to \(j\), \(s_{ij}^{k,0}\) is the number of self-avoiding walks of length \(k\) from \(i\) to \(j\) and \(β\) is the infection probability.
-   <br/>
-   The infection number of node \(i\), considering only paths up to a maximum length \(K\), is denoted \(I_i^{SIR}(K)\). Bauer and Lizier [2] show that \(I_i^{SIR}(K)\) with \(K=4\) provides a good approximation of the true infection spread across a wide range of \(β\) values.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Bauer, F., &amp; Lizier, J. T. (2012). Identifying influential spreaders and efficiently estimating infection numbers in epidemic models: A walk counting approach. Europhysics Letters, 99(6), 68007.
-    <a href="https://doi.org/10.1209/0295-5075/99/68007">
-     doi: 10.1209/0295-5075/99/68007.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  infection number
+ </i>
+ quantifies the expected impact of a node \(i\) as the initial source of infection [2]. Under the assumption that all infection walks are independent, Bauer and Lizier [2] approximate the infection number using
+ <i>
+  self-avoiding walks
+ </i>
+ (SAWs) in a graph \(G\), which is also referred to as the walks-based method.
+ <br/>
+ For the SIR (susceptible/infected/removed) model, where an infected node is removed from the network with probability \(λ = 1\) (representing either death or full recovery with immunity), the expected number of resulting infections from node \(i\) is
+ <br/>
+ \[
+ <br/>
+ I_i^{SIR} = \sum_{k=1}^{N-1} \sum_{j=1}^{N} \Bigl( 1 - (1 - β^k)^{s_{ij}^{k,0}} \Bigr)
+ <br/>
+ \Bigl( 1 - \sum_{t=1}^{k-1} \bigl( 1 - (1 - β^t)^{(A^t)_{ij}} \bigr) \Bigr),
+ <br/>
+ \]
+ <br/>
+ where \((A^k)_{ij}\) is the total number of paths of length \(k\) from \(i\) to \(j\), \(s_{ij}^{k,0}\) is the number of self-avoiding walks of length \(k\) from \(i\) to \(j\) and \(β\) is the infection probability.
+ <br/>
+ The infection number of node \(i\), considering only paths up to a maximum length \(K\), is denoted \(I_i^{SIR}(K)\). Bauer and Lizier [2] show that \(I_i^{SIR}(K)\) with \(K=4\) provides a good approximation of the true infection spread across a wide range of \(β\) values.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Bauer, F., &amp; Lizier, J. T. (2012). Identifying influential spreaders and efficiently estimating infection numbers in epidemic models: A walk counting approach. Europhysics Letters, 99(6), 68007.
+  <a href="https://doi.org/10.1209/0295-5075/99/68007">
+   doi: 10.1209/0295-5075/99/68007.
+  </a>
+ </div>
+</div>

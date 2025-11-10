@@ -4,150 +4,130 @@ permalink: /katz-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Katz centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Katz centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Katz centrality
-   </i>
-   , also known as Katz prestige, is a generalization of eigenvector centrality [2, 3]. In the original formulation, the influence of a node \(i\) is measured by a weighted sum of all powers of the adjacency matrix \(A\), with an attenuation factor \(α\):
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\mathrm{Katz}}(i) = \sum_{k=1}^{\infty} \sum_{j=1}^{N} α^k \, (A^k)_{ij},
-   <br/>
-   \end{equation*}
-   <br/>
-   or, equivalently, in vector form:
-   <br/>
-   \begin{equation*}
-   <br/>
-   \mathbf{c}_{\mathrm{Katz}} = (I - α A)^{-1} \mathbf{1},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(\mathbf{1}\) is the vector of all ones. The series converges only if the attenuation factor \(α\) is smaller than the reciprocal of the largest eigenvalue of the adjacency matrix \(A\), i.e., \(α &lt; 1 / λ_{\max}\), where \(λ_{\max}\) denotes the principal eigenvalue of \(A\).
-   <br/>
-   Katz centrality is closely related to Bonacich’s power centrality \(c_{\mathrm{power}}\) [4], which is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\mathrm{power}} = \sum_{k=0}^{\infty} \sum_{j=1}^{N} α^k \, (A^{k+1})_{ij}.
-   <br/>
-   \end{equation*}
-   <br/>
-   The two measures are directly proportional, with Bonacich's power centrality expressed in terms of Katz centrality as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\mathrm{power}} = α \, c_{\mathrm{Katz}}.
-   <br/>
-   \end{equation*}
-   <br/>
-   A further generalization, often referred to as
-   <i>
-    alpha centrality
-   </i>
-   or
-   <i>
-    Bonacich alpha centrality
-   </i>
-   , introduces an exogenous factor \(β\) and allows \(α\) to take negative values to model negative influence [4, 5, 6]. The centrality of node \(i\) is then defined by
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{α}(i) = α \sum_{j=1}^{N} a_{ij} \, c_{α}(j) + β,
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(α\) and \(β\) are positive constants. This formulation balances the contribution from the eigenvector-like term with the constant \(β\). In most current implementations, \(α\) is set to \(0.1\) and \(β\) to \(1.0\). Bonacich and Lloyd [5] demonstrated that Katz and alpha centralities differ only by a constant \(β\) under the condition
-   <br/>
-   \(α &lt; \frac{1}{λ_{\max}}\), with \(λ_{\max}\) being the principal eigenvalue of \(A\).
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Katz, L. (1953). A new status index derived from sociometric analysis. Psychometrika, 18(1), 39-43.
-    <a href="https://doi.org/10.1007/BF02289026">
-     doi: 10.1007/BF02289026.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Newman, M. (2018). Networks. Oxford university press.
-    <a href="https://doi.org/10.1093/oso/9780198805090.001.0001">
-     doi: 10.1093/oso/9780198805090.001.0001.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [4]
-    </span>
-    Bonacich, P. (1987). Power and centrality: A family of measures. American journal of sociology, 92(5), 1170-1182.
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [5]
-    </span>
-    Bonacich, P., &amp; Lloyd, P. (2001). Eigenvector-like measures of centrality for asymmetric relations. Social networks, 23(3), 191-201.
-    <a href="https://doi.org/10.1016/S0378-8733(01)00038-7">
-     doi: 10.1016/S0378-8733(01)00038-7.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [6]
-    </span>
-    Poulin, R., Boily, M. C., &amp; Mâsse, B. R. (2000). Dynamical systems to define centrality in social networks. Social networks, 22(3), 187-220.
-    <a href="https://doi.org/10.1016/S0378-8733(00)00020-4">
-     doi: 10.1016/S0378-8733(00)00020-4.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Katz centrality
+ </i>
+ , also known as Katz prestige, is a generalization of eigenvector centrality [2, 3]. In the original formulation, the influence of a node \(i\) is measured by a weighted sum of all powers of the adjacency matrix \(A\), with an attenuation factor \(α\):
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\mathrm{Katz}}(i) = \sum_{k=1}^{\infty} \sum_{j=1}^{N} α^k \, (A^k)_{ij},
+ <br/>
+ \end{equation*}
+ <br/>
+ or, equivalently, in vector form:
+ <br/>
+ \begin{equation*}
+ <br/>
+ \mathbf{c}_{\mathrm{Katz}} = (I - α A)^{-1} \mathbf{1},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(\mathbf{1}\) is the vector of all ones. The series converges only if the attenuation factor \(α\) is smaller than the reciprocal of the largest eigenvalue of the adjacency matrix \(A\), i.e., \(α &lt; 1 / λ_{\max}\), where \(λ_{\max}\) denotes the principal eigenvalue of \(A\).
+ <br/>
+ Katz centrality is closely related to Bonacich’s power centrality \(c_{\mathrm{power}}\) [4], which is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\mathrm{power}} = \sum_{k=0}^{\infty} \sum_{j=1}^{N} α^k \, (A^{k+1})_{ij}.
+ <br/>
+ \end{equation*}
+ <br/>
+ The two measures are directly proportional, with Bonacich's power centrality expressed in terms of Katz centrality as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\mathrm{power}} = α \, c_{\mathrm{Katz}}.
+ <br/>
+ \end{equation*}
+ <br/>
+ A further generalization, often referred to as
+ <i>
+  alpha centrality
+ </i>
+ or
+ <i>
+  Bonacich alpha centrality
+ </i>
+ , introduces an exogenous factor \(β\) and allows \(α\) to take negative values to model negative influence [4, 5, 6]. The centrality of node \(i\) is then defined by
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{α}(i) = α \sum_{j=1}^{N} a_{ij} \, c_{α}(j) + β,
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(α\) and \(β\) are positive constants. This formulation balances the contribution from the eigenvector-like term with the constant \(β\). In most current implementations, \(α\) is set to \(0.1\) and \(β\) to \(1.0\). Bonacich and Lloyd [5] demonstrated that Katz and alpha centralities differ only by a constant \(β\) under the condition
+ <br/>
+ \(α &lt; \frac{1}{λ_{\max}}\), with \(λ_{\max}\) being the principal eigenvalue of \(A\).
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Katz, L. (1953). A new status index derived from sociometric analysis. Psychometrika, 18(1), 39-43.
+  <a href="https://doi.org/10.1007/BF02289026">
+   doi: 10.1007/BF02289026.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Newman, M. (2018). Networks. Oxford university press.
+  <a href="https://doi.org/10.1093/oso/9780198805090.001.0001">
+   doi: 10.1093/oso/9780198805090.001.0001.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Bonacich, P. (1987). Power and centrality: A family of measures. American journal of sociology, 92(5), 1170-1182.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [5]
+  </span>
+  Bonacich, P., &amp; Lloyd, P. (2001). Eigenvector-like measures of centrality for asymmetric relations. Social networks, 23(3), 191-201.
+  <a href="https://doi.org/10.1016/S0378-8733(01)00038-7">
+   doi: 10.1016/S0378-8733(01)00038-7.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [6]
+  </span>
+  Poulin, R., Boily, M. C., &amp; Mâsse, B. R. (2000). Dynamical systems to define centrality in social networks. Social networks, 22(3), 187-220.
+  <a href="https://doi.org/10.1016/S0378-8733(00)00020-4">
+   doi: 10.1016/S0378-8733(00)00020-4.
+  </a>
+ </div>
+</div>

@@ -4,106 +4,86 @@ permalink: /independent-set-is-method/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Independent set (IS) method
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Independent set (IS) method
-  </h2>
-  <p>
-   <br/>
-   The
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  independent set
+ </i>
+ (IS) method is a widely used approach for identifying multiple influential spreaders in complex networks [2]. The method leverages the concept of
+ <i>
+  independent sets
+ </i>
+ , which are groups of nodes in which no two nodes are directly connected. The IS method consists of the following steps:
+ <br/>
+ <ol>
+  <br/>
+  <li>
+   <i>
+    Node ranking:
+   </i>
+   all nodes in the network \(G\) are ranked according to a chosen centrality measure, typically the node degree.
+  </li>
+  <br/>
+  <li>
+   <i>
+    Network coloring:
+   </i>
+   the network is colored using the Welsh-Powell algorithm. This algorithm assigns colors to nodes such that no two adjacent nodes share the same color. The computational complexity of this step is \(O(N^2)\).
+  </li>
+  <br/>
+  <li>
+   <i>
+    Independent set formation:
+   </i>
+   Nodes with the same color form an
    <i>
     independent set
    </i>
-   (IS) method is a widely used approach for identifying multiple influential spreaders in complex networks [2]. The method leverages the concept of
+   , guaranteeing that the selected nodes are not directly connected to one another.
+  </li>
+  <br/>
+  <li>
    <i>
-    independent sets
+    Spreader selection:
    </i>
-   , which are groups of nodes in which no two nodes are directly connected. The IS method consists of the following steps:
-   <br/>
-   <ol>
-    <br/>
-    <li>
-     <i>
-      Node ranking:
-     </i>
-     all nodes in the network \(G\) are ranked according to a chosen centrality measure, typically the node degree.
-    </li>
-    <br/>
-    <li>
-     <i>
-      Network coloring:
-     </i>
-     the network is colored using the Welsh-Powell algorithm. This algorithm assigns colors to nodes such that no two adjacent nodes share the same color. The computational complexity of this step is \(O(N^2)\).
-    </li>
-    <br/>
-    <li>
-     <i>
-      Independent set formation:
-     </i>
-     Nodes with the same color form an
-     <i>
-      independent set
-     </i>
-     , guaranteeing that the selected nodes are not directly connected to one another.
-    </li>
-    <br/>
-    <li>
-     <i>
-      Spreader selection:
-     </i>
-     within each independent set, the node with the highest centrality is chosen as an initial spreader. This strategy ensures that multiple spreaders are both influential and spatially well-distributed across the network.
-    </li>
-    <br/>
-   </ol>
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Zhao, X. Y., Huang, B., Tang, M., Zhang, H. F., &amp; Chen, D. B. (2015). Identifying effective multiple spreaders by coloring complex networks. Europhysics Letters, 108(6), 68005.
-    <a href="https://doi.org/10.1209/0295-5075/108/68005">
-     doi: 10.1209/0295-5075/108/68005.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+   within each independent set, the node with the highest centrality is chosen as an initial spreader. This strategy ensures that multiple spreaders are both influential and spatially well-distributed across the network.
+  </li>
+  <br/>
+ </ol>
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Zhao, X. Y., Huang, B., Tang, M., Zhang, H. F., &amp; Chen, D. B. (2015). Identifying effective multiple spreaders by coloring complex networks. Europhysics Letters, 108(6), 68005.
+  <a href="https://doi.org/10.1209/0295-5075/108/68005">
+   doi: 10.1209/0295-5075/108/68005.
+  </a>
+ </div>
+</div>

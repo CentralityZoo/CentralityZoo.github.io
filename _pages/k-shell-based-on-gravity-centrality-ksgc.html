@@ -4,93 +4,67 @@ permalink: /k-shell-based-on-gravity-centrality-ksgc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   <i>
-    k
-   </i>
-   -shell based on gravity centrality (KSGC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   <i>
-    k
-   </i>
-   -shell based on gravity centrality (KSGC)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    <i>
-     k
-    </i>
-    -shell based on gravity centrality
-   </i>
-   (KSGC) is an extension of the local gravity model that integrates both \(k\)-shell and degree centralities to identify influential nodes in complex networks [2].
-   <br/>
-   Let \(\mathcal{N}^{(\leq k)}(i)\) denote set of nodes within the \(k\)-hop neighbourhood of node \(i\). The centrality \( c_{\textsc{KSGC}}(i) \) of node \( i \) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\textsc{KSGC}}(i) =
-   <br/>
-   \sum_{j \in \mathcal{N}^{(\leq k)}(i)}
-   <br/>
-   e^{\frac{k_s(i) - k_s(j)}{ks_{\max} - ks_{\min}}}
-   <br/>
-   \cdot
-   <br/>
-   \frac{d_i d_j}{d_{ij}^2},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \( d_{ij} \) is the shortest-path distance between nodes \( i \) and \( j \), \( d_i \) is the degree of node \( i \) and \( k_s(i) \) is the \(k\)-shell index of node \( i \). The terms \( ks_{\max} \) and \( ks_{\min} \) represent the maximum and minimum \(k\)-shell values in the network, respectively. Yang and Xiao [2] consider \( l = 2 \) as the truncated radius.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Yang, X., &amp; Xiao, F. (2021). An improved gravity model to identify influential nodes in complex networks based on k-shell method. Knowledge-Based Systems, 227, 107198.
-    <a href="https://doi.org/10.1016/j.knosys.2021.107198">
-     doi: 10.1016/j.knosys.2021.107198.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  <i>
+   k
+  </i>
+  -shell based on gravity centrality
+ </i>
+ (KSGC) is an extension of the local gravity model that integrates both \(k\)-shell and degree centralities to identify influential nodes in complex networks [2].
+ <br/>
+ Let \(\mathcal{N}^{(\leq k)}(i)\) denote set of nodes within the \(k\)-hop neighbourhood of node \(i\). The centrality \( c_{\textsc{KSGC}}(i) \) of node \( i \) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\textsc{KSGC}}(i) =
+ <br/>
+ \sum_{j \in \mathcal{N}^{(\leq k)}(i)}
+ <br/>
+ e^{\frac{k_s(i) - k_s(j)}{ks_{\max} - ks_{\min}}}
+ <br/>
+ \cdot
+ <br/>
+ \frac{d_i d_j}{d_{ij}^2},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \( d_{ij} \) is the shortest-path distance between nodes \( i \) and \( j \), \( d_i \) is the degree of node \( i \) and \( k_s(i) \) is the \(k\)-shell index of node \( i \). The terms \( ks_{\max} \) and \( ks_{\min} \) represent the maximum and minimum \(k\)-shell values in the network, respectively. Yang and Xiao [2] consider \( l = 2 \) as the truncated radius.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Yang, X., &amp; Xiao, F. (2021). An improved gravity model to identify influential nodes in complex networks based on k-shell method. Knowledge-Based Systems, 227, 107198.
+  <a href="https://doi.org/10.1016/j.knosys.2021.107198">
+   doi: 10.1016/j.knosys.2021.107198.
+  </a>
+ </div>
+</div>

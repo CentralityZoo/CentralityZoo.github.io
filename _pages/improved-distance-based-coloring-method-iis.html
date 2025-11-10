@@ -4,109 +4,89 @@ permalink: /improved-distance-based-coloring-method-iis/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Improved distance-based coloring method (IIS)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Improved distance-based coloring method (IIS)
-  </h2>
-  <p>
-   <br/>
-   The
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  improved distance-based coloring (IIS) method
+ </i>
+ builds upon the independent set (IS) approach in [2] by introducing a distance constraint to further enhance the spatial dispersiveness of the selected spreaders [3]. The IIS procedure can be summarized as follows:
+ <br/>
+ <ol>
+  <br/>
+  <li>
    <i>
-    improved distance-based coloring (IIS) method
+    Node ranking:
    </i>
-   builds upon the independent set (IS) approach in [2] by introducing a distance constraint to further enhance the spatial dispersiveness of the selected spreaders [3]. The IIS procedure can be summarized as follows:
-   <br/>
-   <ol>
-    <br/>
-    <li>
-     <i>
-      Node ranking:
-     </i>
-     all nodes are ranked based on a selected centrality measure, such as degree, betweenness, closeness, or coreness centrality.
-    </li>
-    <br/>
-    <li>
-     <i>
-      Distance-based coloring:
-     </i>
-     nodes are sequentially assigned colors with the rule that any two nodes sharing the same color must be separated by a network distance of at least \(r\). The parameter \(r\) can be set, for example, to the average shortest path length in the network. This step ensures that nodes with the same color are sufficiently dispersed.
-    </li>
-    <br/>
-    <li>
-     <i>
-      Independent set construction:
-     </i>
-     after coloring, nodes with the same color form an independent set, similar to the IS method.
-    </li>
-    <br/>
-    <li>
-     <i>
-      Spreader selection:
-     </i>
-     within each independent set, the node with the highest centrality is selected. Priority is often given to the set containing the node with the maximum centrality value in the network. This guarantees that the chosen spreaders are both highly influential and well-distributed.
-    </li>
-    <br/>
-   </ol>
-   <br/>
-   By introducing the distance constraint, the IIS method improves upon the IS method by reducing overlap between the influence regions of multiple spreaders, which can enhance overall spreading efficiency.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Zhao, X. Y., Huang, B., Tang, M., Zhang, H. F., &amp; Chen, D. B. (2015). Identifying effective multiple spreaders by coloring complex networks. Europhysics Letters, 108(6), 68005.
-    <a href="https://doi.org/10.1209/0295-5075/108/68005">
-     doi: 10.1209/0295-5075/108/68005.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Guo, L., Lin, J. H., Guo, Q., &amp; Liu, J. G. (2016). Identifying multiple influential spreaders in term of the distance-based coloring. Physics Letters A, 380(7-8), 837-842.
-    <a href="https://doi.org/10.1016/j.physleta.2015.12.031">
-     doi: 10.1016/j.physleta.2015.12.031.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+   all nodes are ranked based on a selected centrality measure, such as degree, betweenness, closeness, or coreness centrality.
+  </li>
+  <br/>
+  <li>
+   <i>
+    Distance-based coloring:
+   </i>
+   nodes are sequentially assigned colors with the rule that any two nodes sharing the same color must be separated by a network distance of at least \(r\). The parameter \(r\) can be set, for example, to the average shortest path length in the network. This step ensures that nodes with the same color are sufficiently dispersed.
+  </li>
+  <br/>
+  <li>
+   <i>
+    Independent set construction:
+   </i>
+   after coloring, nodes with the same color form an independent set, similar to the IS method.
+  </li>
+  <br/>
+  <li>
+   <i>
+    Spreader selection:
+   </i>
+   within each independent set, the node with the highest centrality is selected. Priority is often given to the set containing the node with the maximum centrality value in the network. This guarantees that the chosen spreaders are both highly influential and well-distributed.
+  </li>
+  <br/>
+ </ol>
+ <br/>
+ By introducing the distance constraint, the IIS method improves upon the IS method by reducing overlap between the influence regions of multiple spreaders, which can enhance overall spreading efficiency.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Zhao, X. Y., Huang, B., Tang, M., Zhang, H. F., &amp; Chen, D. B. (2015). Identifying effective multiple spreaders by coloring complex networks. Europhysics Letters, 108(6), 68005.
+  <a href="https://doi.org/10.1209/0295-5075/108/68005">
+   doi: 10.1209/0295-5075/108/68005.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Guo, L., Lin, J. H., Guo, Q., &amp; Liu, J. G. (2016). Identifying multiple influential spreaders in term of the distance-based coloring. Physics Letters A, 380(7-8), 837-842.
+  <a href="https://doi.org/10.1016/j.physleta.2015.12.031">
+   doi: 10.1016/j.physleta.2015.12.031.
+  </a>
+ </div>
+</div>
