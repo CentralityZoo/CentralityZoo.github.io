@@ -4,107 +4,81 @@ permalink: /x-degree-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   <i>
-    X
-   </i>
-   -degree centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   <i>
-    X
-   </i>
-   -degree centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    X-degree centrality
-   </i>
-   quantifies a contribution of each node to non-backtracking paths in a network [2]. A
-   <i>
-    non-backtracking
-   </i>
-   path is a sequence of edges in which the path never immediately revisits the previous node: for a path \(v_1 \to v_2 \to \dots \to v_m\), we require \(v_{k+1} \neq v_{k-1}\) for all \(k = 2,\dots,m-1\).
-   <br/>
-   Let \(G\) be a graph with adjacency matrix \(A\) and node degrees \(d_j = \sum_k a_{jk}\). For node \(i\), let \(F\) be the NB matrix of the star graph centered at \(i\), \(D\) the matrix with rows indexed by edges not incident to \(i\) and columns by edges incident to \(i\), and \(E\) the matrix with rows indexed by edges incident to \(i\) and columns by edges not incident to \(i\). The entries of \(D\) and \(E\) enforce the non-backtracking condition:
-   <br/>
-   \[
-   <br/>
-   D_{k \to l, i \to j} = a_{ik} a_{ij} (1 - δ_{kj}), \qquad
-   <br/>
-   E_{i \to j, k \to l} = a_{ik} a_{ij} (1 - δ_{kj}),
-   <br/>
-   \]
-   <br/>
-   where \(δ_{kj}\) is the Kronecker delta preventing immediate backtracking.
-   <br/>
-   Define \(X = D F E\) and \(P = \begin{bmatrix} 0 &amp; I \\ I &amp; 0 \end{bmatrix}\). The
-   <i>
-    X
-   </i>
-   -degree centrality of node \(i\) is
-   <br/>
-   \[
-   <br/>
-   c_{X\text{-degree}}(i) = \mathbf{1}^T P X \mathbf{1}
-   <br/>
-   = \Big( \sum_j a_{ij} (d_j - 1) \Big)^2 - \sum_j a_{ij} (d_j - 1)^2,
-   <br/>
-   \]
-   <br/>
-   where \(\mathbf{1}\) is the all-ones vector. This measure captures the node’s importance in supporting non-backtracking paths using only local degree information and serves as an upper bound for the
-   <i>
-    X
-   </i>
-   -non-backtracking centrality, providing a computationally simpler approximation.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Torres, L., Chan, K. S., Tong, H., &amp; Eliassi-Rad, T. (2021). Nonbacktracking eigenvalues under node removal: X-centrality and targeted immunization. SIAM Journal on Mathematics of Data Science, 3(2), 656-675.
-    <a href="https://doi.org/10.1137/20M1352132">
-     doi: 10.1137/20M1352132.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  X-degree centrality
+ </i>
+ quantifies a contribution of each node to non-backtracking paths in a network [2]. A
+ <i>
+  non-backtracking
+ </i>
+ path is a sequence of edges in which the path never immediately revisits the previous node: for a path \(v_1 \to v_2 \to \dots \to v_m\), we require \(v_{k+1} \neq v_{k-1}\) for all \(k = 2,\dots,m-1\).
+ <br/>
+ Let \(G\) be a graph with adjacency matrix \(A\) and node degrees \(d_j = \sum_k a_{jk}\). For node \(i\), let \(F\) be the NB matrix of the star graph centered at \(i\), \(D\) the matrix with rows indexed by edges not incident to \(i\) and columns by edges incident to \(i\), and \(E\) the matrix with rows indexed by edges incident to \(i\) and columns by edges not incident to \(i\). The entries of \(D\) and \(E\) enforce the non-backtracking condition:
+ <br/>
+ \[
+ <br/>
+ D_{k \to l, i \to j} = a_{ik} a_{ij} (1 - δ_{kj}), \qquad
+ <br/>
+ E_{i \to j, k \to l} = a_{ik} a_{ij} (1 - δ_{kj}),
+ <br/>
+ \]
+ <br/>
+ where \(δ_{kj}\) is the Kronecker delta preventing immediate backtracking.
+ <br/>
+ Define \(X = D F E\) and \(P = \begin{bmatrix} 0 &amp; I \\ I &amp; 0 \end{bmatrix}\). The
+ <i>
+  X
+ </i>
+ -degree centrality of node \(i\) is
+ <br/>
+ \[
+ <br/>
+ c_{X\text{-degree}}(i) = \mathbf{1}^T P X \mathbf{1}
+ <br/>
+ = \Big( \sum_j a_{ij} (d_j - 1) \Big)^2 - \sum_j a_{ij} (d_j - 1)^2,
+ <br/>
+ \]
+ <br/>
+ where \(\mathbf{1}\) is the all-ones vector. This measure captures the node’s importance in supporting non-backtracking paths using only local degree information and serves as an upper bound for the
+ <i>
+  X
+ </i>
+ -non-backtracking centrality, providing a computationally simpler approximation.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Torres, L., Chan, K. S., Tong, H., &amp; Eliassi-Rad, T. (2021). Nonbacktracking eigenvalues under node removal: X-centrality and targeted immunization. SIAM Journal on Mathematics of Data Science, 3(2), 656-675.
+  <a href="https://doi.org/10.1137/20M1352132">
+   doi: 10.1137/20M1352132.
+  </a>
+ </div>
+</div>

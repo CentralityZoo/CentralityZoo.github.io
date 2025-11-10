@@ -4,78 +4,58 @@ permalink: /total-communicability-centrality-tcc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Total communicability centrality (TCC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Total communicability centrality (TCC)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    total communicability centrality
-   </i>
-   (TCC) quantifies how effectively each node communicates with all other nodes in a network [2]. It extends the concept of subgraph centrality, which evaluates all possible closed walks of different lengths. The centrality of node \(i\), \(c_{\mathrm{TTC}}(i)\), is defined as the sum of weighted walks of all lengths starting at node \(i\) and ending at any node \(j\):
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{\mathrm{TTC}}(i) = \sum_{k=0}^{\infty} \sum_{j=1}^{N} \frac{(A^k)_{ij}}{k!}
-   <br/>
-   = \sum_{j=1}^{N} [e^A]_{ij}
-   <br/>
-   = \sum_{j=1}^{N} \sum_{l=1}^{N} v_j(i) v_l(i) e^{λ_j},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(A\) is the adjacency matrix, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\). Benzi and Klymko [2] show that for networks with a large spectral gap (\(λ_1 \gg λ_2\)), the TTC and subgraph centralities converge to the eigenvector centrality, and they illustrate graph types for which TTC and subgraph centrality yield identical node rankings.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Benzi, M., &amp; Klymko, C. (2013). Total communicability as a centrality measure. Journal of Complex Networks, 1(2), 124-149.
-    <a href="https://doi.org/10.1093/comnet/cnt007">
-     doi: 10.1093/comnet/cnt007.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  total communicability centrality
+ </i>
+ (TCC) quantifies how effectively each node communicates with all other nodes in a network [2]. It extends the concept of subgraph centrality, which evaluates all possible closed walks of different lengths. The centrality of node \(i\), \(c_{\mathrm{TTC}}(i)\), is defined as the sum of weighted walks of all lengths starting at node \(i\) and ending at any node \(j\):
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{\mathrm{TTC}}(i) = \sum_{k=0}^{\infty} \sum_{j=1}^{N} \frac{(A^k)_{ij}}{k!}
+ <br/>
+ = \sum_{j=1}^{N} [e^A]_{ij}
+ <br/>
+ = \sum_{j=1}^{N} \sum_{l=1}^{N} v_j(i) v_l(i) e^{λ_j},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(A\) is the adjacency matrix, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\). Benzi and Klymko [2] show that for networks with a large spectral gap (\(λ_1 \gg λ_2\)), the TTC and subgraph centralities converge to the eigenvector centrality, and they illustrate graph types for which TTC and subgraph centrality yield identical node rankings.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Benzi, M., &amp; Klymko, C. (2013). Total communicability as a centrality measure. Journal of Complex Networks, 1(2), 124-149.
+  <a href="https://doi.org/10.1093/comnet/cnt007">
+   doi: 10.1093/comnet/cnt007.
+  </a>
+ </div>
+</div>

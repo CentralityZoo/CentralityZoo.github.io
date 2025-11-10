@@ -4,76 +4,56 @@ permalink: /weighted-gravity-model-wgravity/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Weighted gravity model (WGravity)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Weighted gravity model (WGravity)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    weighted gravity model
-   </i>
-   (WGravity) is a variant of the traditional gravity model that incorporates a truncation radius and the eigenvector centrality of nodes [2]. The WGravity centrality of node \(i\) is defined as
-   <br/>
-   \[
-   <br/>
-   c_{WGravity}(i) = e_i \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_i d_j}{d_{ij}^2},
-   <br/>
-   \]
-   <br/>
-   where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), \(e_i\) is the eigenvector centrality of node \(i\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within \(r\) hops of \(i\). The parameter \(r\) defines the radius of influence for each node.
-   <br/>
-   Liu et al. [2] suggest setting \(r = 0.5 \langle d \rangle\), where \(\langle d \rangle\) is the average shortest path length of the network \(G\). This truncation balances local and semi-local information while incorporating the global influence captured by eigenvector centrality.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Liu, F., Wang, Z., &amp; Deng, Y. (2020). GMM: A generalized mechanics model for identifying the importance of nodes in complex networks. Knowledge-Based Systems, 193, 105464.
-    <a href="https://doi.org/10.1016/j.knosys.2019.105464">
-     doi: 10.1016/j.knosys.2019.105464.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  weighted gravity model
+ </i>
+ (WGravity) is a variant of the traditional gravity model that incorporates a truncation radius and the eigenvector centrality of nodes [2]. The WGravity centrality of node \(i\) is defined as
+ <br/>
+ \[
+ <br/>
+ c_{WGravity}(i) = e_i \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_i d_j}{d_{ij}^2},
+ <br/>
+ \]
+ <br/>
+ where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), \(e_i\) is the eigenvector centrality of node \(i\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within \(r\) hops of \(i\). The parameter \(r\) defines the radius of influence for each node.
+ <br/>
+ Liu et al. [2] suggest setting \(r = 0.5 \langle d \rangle\), where \(\langle d \rangle\) is the average shortest path length of the network \(G\). This truncation balances local and semi-local information while incorporating the global influence captured by eigenvector centrality.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Liu, F., Wang, Z., &amp; Deng, Y. (2020). GMM: A generalized mechanics model for identifying the importance of nodes in complex networks. Knowledge-Based Systems, 193, 105464.
+  <a href="https://doi.org/10.1016/j.knosys.2019.105464">
+   doi: 10.1016/j.knosys.2019.105464.
+  </a>
+ </div>
+</div>

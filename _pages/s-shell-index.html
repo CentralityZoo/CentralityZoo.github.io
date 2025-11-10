@@ -4,99 +4,73 @@ permalink: /s-shell-index/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   <i>
-    s
-   </i>
-   -shell index
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   <i>
-    s
-   </i>
-   -shell index
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    <i>
-     s
-    </i>
-    -shell index
-   </i>
-   -shell index} is an extension of the traditional \(k\)-shell decomposition, designed to identify influential spreaders in weighted networks [2]. Unlike the \(k\)-shell method, which removes nodes based on degree, the \(s\)-shell decomposition relies on node strength, incorporating asymmetric edge weights that reflect the potential of each link to facilitate spreading.
-   <br/>
-   The strength \( s_i \) of node \( i \) is defined as the sum of the asymmetric weights of its outgoing links:
-   <br/>
-   \[
-   <br/>
-   s_i = \sum_{j \in \mathcal{N}(i)} w_{ij} = \sum_{j \in \mathcal{N}(i)} \left[ 1 + (d_i d_j^{out})^{a} \right],
-   <br/>
-   \]
-   <br/>
-   where \( w_{ij} \) quantifies the influence of edge \( (i,j) \) in the spreading process, \( d_i \) is the degree of node \( i \), \( d_j^{out}\) denotes the number of neighbors of node \( j \) not shared with \( i \), i.e.,
-   <br/>
-   \[
-   <br/>
-   d_j^{out} = \left| \{\, l \in \mathcal{N}(j) : l \notin \mathcal{N}(i) \cup \{i\} \,\} \right|,
-   <br/>
-   \]
-   <br/>
-   and \( a \) is a tunable parameter controlling the weight contribution (\( a = 0.5 \) in [2]).
-   <br/>
-   The formulation of
-   <i>
-    s
-   </i>
-   -shell index reflects the idea that edges leading to new regions of the network contribute more to spreading than those confined within a node's local neighborhood. The resulting edge weights are asymmetric (\(w_{ij} \neq w_{ji}\)), capturing directional spreading potential. When \(a = 0\), the \(s\)-shell index reduces to the standard \(k\)-shell index.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Liu, Y., Tang, M., Do, Y., &amp; Hui, P. M. (2017). Accurate ranking of influential spreaders in networks based on dynamically asymmetric link weights. Physical Review E, 96(2), 022323.
-    <a href="https://doi.org/10.1103/PhysRevE.96.022323">
-     doi: 10.1103/PhysRevE.96.022323.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  <i>
+   s
+  </i>
+  -shell index
+ </i>
+ -shell index} is an extension of the traditional \(k\)-shell decomposition, designed to identify influential spreaders in weighted networks [2]. Unlike the \(k\)-shell method, which removes nodes based on degree, the \(s\)-shell decomposition relies on node strength, incorporating asymmetric edge weights that reflect the potential of each link to facilitate spreading.
+ <br/>
+ The strength \( s_i \) of node \( i \) is defined as the sum of the asymmetric weights of its outgoing links:
+ <br/>
+ \[
+ <br/>
+ s_i = \sum_{j \in \mathcal{N}(i)} w_{ij} = \sum_{j \in \mathcal{N}(i)} \left[ 1 + (d_i d_j^{out})^{a} \right],
+ <br/>
+ \]
+ <br/>
+ where \( w_{ij} \) quantifies the influence of edge \( (i,j) \) in the spreading process, \( d_i \) is the degree of node \( i \), \( d_j^{out}\) denotes the number of neighbors of node \( j \) not shared with \( i \), i.e.,
+ <br/>
+ \[
+ <br/>
+ d_j^{out} = \left| \{\, l \in \mathcal{N}(j) : l \notin \mathcal{N}(i) \cup \{i\} \,\} \right|,
+ <br/>
+ \]
+ <br/>
+ and \( a \) is a tunable parameter controlling the weight contribution (\( a = 0.5 \) in [2]).
+ <br/>
+ The formulation of
+ <i>
+  s
+ </i>
+ -shell index reflects the idea that edges leading to new regions of the network contribute more to spreading than those confined within a node's local neighborhood. The resulting edge weights are asymmetric (\(w_{ij} \neq w_{ji}\)), capturing directional spreading potential. When \(a = 0\), the \(s\)-shell index reduces to the standard \(k\)-shell index.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Liu, Y., Tang, M., Do, Y., &amp; Hui, P. M. (2017). Accurate ranking of influential spreaders in networks based on dynamically asymmetric link weights. Physical Review E, 96(2), 022323.
+  <a href="https://doi.org/10.1103/PhysRevE.96.022323">
+   doi: 10.1103/PhysRevE.96.022323.
+  </a>
+ </div>
+</div>

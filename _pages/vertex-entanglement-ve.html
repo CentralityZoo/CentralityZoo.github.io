@@ -4,87 +4,67 @@ permalink: /vertex-entanglement-ve/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Vertex Entanglement (VE)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Vertex Entanglement (VE)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Vertex entanglement
-   </i>
-   (VE) is an induced centrality measure designed to quantify the influence of individual nodes based on their impact on the network's functional diversity [2]. To evaluate the influence of a node \(v \in \mathcal{N}\), the network is locally perturbed to form the \(v\)-control network \(G_v\), where \(v\) and its neighbors are merged into a super-vertex represented as a fully connected probabilistic graph. The original total link weights are evenly redistributed within the super-vertex, while the remainder of the network remains unchanged.
-   <br/>
-   The VE score \(c_{VE}(v)\) of node \(v\) is defined as the change in spectral entropy caused by this local perturbation:
-   <br/>
-   \[
-   <br/>
-   c_{VE}(v) = S(G) - S(G_v),
-   <br/>
-   \]
-   <br/>
-   where \(S(G)\) and \(S(G_v)\) denote the von Neumann entropies of the original and perturbed networks, respectively. The spectral entropy of \(G\) is computed from a density matrix \(ρ\) derived from the network Laplacian \(L(G)\):
-   <br/>
-   \[
-   <br/>
-   ρ = \frac{e^{-τ L(G)}}{\mathrm{tr}(e^{-τ L(G)})}, \qquad
-   <br/>
-   S(G) = -\mathrm{tr}(ρ \log ρ),
-   <br/>
-   \]
-   <br/>
-   with \(τ &gt; 0\) being a diffusion time parameter that controls the scale of information propagation.
-   <br/>
-   Intuitively, VE quantifies how strongly a single node affects the global structure and information flow in the network. Nodes with high VE substantially influence network connectivity and functional diversity, highlighting their critical role. The VE method has been validated on various empirical networks, including social, biological, and infrastructure systems, demonstrating its effectiveness in identifying critical nodes for network dismantling and capturing functional diversity.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Huang, Y., Wang, H., Ren, X. L., &amp; Lü, L. (2024). Identifying key players in complex networks via network entanglement. Communications physics, 7(1), 19.
-    <a href="https://doi.org/10.1038/s42005-023-01483-8">
-     doi: 10.1038/s42005-023-01483-8.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Vertex entanglement
+ </i>
+ (VE) is an induced centrality measure designed to quantify the influence of individual nodes based on their impact on the network's functional diversity [2]. To evaluate the influence of a node \(v \in \mathcal{N}\), the network is locally perturbed to form the \(v\)-control network \(G_v\), where \(v\) and its neighbors are merged into a super-vertex represented as a fully connected probabilistic graph. The original total link weights are evenly redistributed within the super-vertex, while the remainder of the network remains unchanged.
+ <br/>
+ The VE score \(c_{VE}(v)\) of node \(v\) is defined as the change in spectral entropy caused by this local perturbation:
+ <br/>
+ \[
+ <br/>
+ c_{VE}(v) = S(G) - S(G_v),
+ <br/>
+ \]
+ <br/>
+ where \(S(G)\) and \(S(G_v)\) denote the von Neumann entropies of the original and perturbed networks, respectively. The spectral entropy of \(G\) is computed from a density matrix \(ρ\) derived from the network Laplacian \(L(G)\):
+ <br/>
+ \[
+ <br/>
+ ρ = \frac{e^{-τ L(G)}}{\mathrm{tr}(e^{-τ L(G)})}, \qquad
+ <br/>
+ S(G) = -\mathrm{tr}(ρ \log ρ),
+ <br/>
+ \]
+ <br/>
+ with \(τ &gt; 0\) being a diffusion time parameter that controls the scale of information propagation.
+ <br/>
+ Intuitively, VE quantifies how strongly a single node affects the global structure and information flow in the network. Nodes with high VE substantially influence network connectivity and functional diversity, highlighting their critical role. The VE method has been validated on various empirical networks, including social, biological, and infrastructure systems, demonstrating its effectiveness in identifying critical nodes for network dismantling and capturing functional diversity.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Huang, Y., Wang, H., Ren, X. L., &amp; Lü, L. (2024). Identifying key players in complex networks via network entanglement. Communications physics, 7(1), 19.
+  <a href="https://doi.org/10.1038/s42005-023-01483-8">
+   doi: 10.1038/s42005-023-01483-8.
+  </a>
+ </div>
+</div>

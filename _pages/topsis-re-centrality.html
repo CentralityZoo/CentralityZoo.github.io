@@ -4,119 +4,99 @@ permalink: /topsis-re-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   TOPSIS-RE centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   TOPSIS-RE centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    TOPSIS-RE
-   </i>
-   centrality is a hybrid method that combines relative entropy and the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) to evaluate node influence in a network [2]. Let \(R\) denote the normalized \(N \times m\) decision matrix, where each row corresponds to a node and each column represents a normalized centrality measure. Liu et al. [2] consider \(m=4\) centralities: degree, closeness, betweenness and IKSD.
-   <br/>
-   The
-   <i>
-    positive ideal solution
-   </i>
-   \(A^{+}\) and
-   <i>
-    negative ideal solution
-   </i>
-   \(A^{-}\) are defined as
-   <br/>
-   \[
-   <br/>
-   A^{+} = [\max_{i}{w_{1} r_{i1}}, \dots, \max_{i}{w_{m} r_{im}}], \quad
-   <br/>
-   A^{-} = [\min_{i}{w_{1} r_{i1}}, \dots, \min_{i}{w_{m} r_{im}}],
-   <br/>
-   \]
-   <br/>
-   where \(w_j\) is the weight assigned to centrality \(j\). Liu et al. [2] set
-   <br/>
-   \[
-   <br/>
-   [w_1, w_2, w_3, w_4] = [0.0625, 0.1875, 0.1875, 0.5625]
-   <br/>
-   \]
-   <br/>
-   using the Analytic Hierarchy Process (AHP). The centrality \(c_{TOPSIS-RE}(i)\) of node \(i\) is calculated as the
-   <i>
-    relative closeness
-   </i>
-   to the ideal solution:
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{TOPSIS-RE}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(S_i^{+}\) and \(S_i^{-}\) measure the relative entropy between node \(i\) and the positive and negative ideal solutions, respectively:
-   <br/>
-   \[
-   <br/>
-   S_i^{+} = \sqrt{\sum_{j=1}^m \left( A_j^{+} \log \frac{A_j^{+}}{w_j r_{ij}} + (1-A_j^{+}) \log \frac{1-A_j^{+}}{1-w_j r_{ij}} \right)},
-   <br/>
-   \]
-   <br/>
-   \[
-   <br/>
-   S_i^{-} = \sqrt{\sum_{j=1}^m \left( A_j^{-} \log \frac{A_j^{-}}{w_j r_{ij}} + (1-A_j^{-}) \log \frac{1-A_j^{-}}{1-w_j r_{ij}} \right)}.
-   <br/>
-   \]
-   <br/>
-   Nodes with higher TOPSIS-RE scores are considered more influential, being closer to the positive ideal solution and farther from the negative ideal solution.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Liu, Z., Jiang, C., Wang, J., &amp; Yu, H. (2015). The node importance in actual complex networks based on a multi-attribute ranking method. Knowledge-Based Systems, 84, 56-66.
-    <a href="https://doi.org/10.1016/j.knosys.2015.03.026">
-     doi: 10.1016/j.knosys.2015.03.026.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  TOPSIS-RE
+ </i>
+ centrality is a hybrid method that combines relative entropy and the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) to evaluate node influence in a network [2]. Let \(R\) denote the normalized \(N \times m\) decision matrix, where each row corresponds to a node and each column represents a normalized centrality measure. Liu et al. [2] consider \(m=4\) centralities: degree, closeness, betweenness and IKSD.
+ <br/>
+ The
+ <i>
+  positive ideal solution
+ </i>
+ \(A^{+}\) and
+ <i>
+  negative ideal solution
+ </i>
+ \(A^{-}\) are defined as
+ <br/>
+ \[
+ <br/>
+ A^{+} = [\max_{i}{w_{1} r_{i1}}, \dots, \max_{i}{w_{m} r_{im}}], \quad
+ <br/>
+ A^{-} = [\min_{i}{w_{1} r_{i1}}, \dots, \min_{i}{w_{m} r_{im}}],
+ <br/>
+ \]
+ <br/>
+ where \(w_j\) is the weight assigned to centrality \(j\). Liu et al. [2] set
+ <br/>
+ \[
+ <br/>
+ [w_1, w_2, w_3, w_4] = [0.0625, 0.1875, 0.1875, 0.5625]
+ <br/>
+ \]
+ <br/>
+ using the Analytic Hierarchy Process (AHP). The centrality \(c_{TOPSIS-RE}(i)\) of node \(i\) is calculated as the
+ <i>
+  relative closeness
+ </i>
+ to the ideal solution:
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{TOPSIS-RE}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(S_i^{+}\) and \(S_i^{-}\) measure the relative entropy between node \(i\) and the positive and negative ideal solutions, respectively:
+ <br/>
+ \[
+ <br/>
+ S_i^{+} = \sqrt{\sum_{j=1}^m \left( A_j^{+} \log \frac{A_j^{+}}{w_j r_{ij}} + (1-A_j^{+}) \log \frac{1-A_j^{+}}{1-w_j r_{ij}} \right)},
+ <br/>
+ \]
+ <br/>
+ \[
+ <br/>
+ S_i^{-} = \sqrt{\sum_{j=1}^m \left( A_j^{-} \log \frac{A_j^{-}}{w_j r_{ij}} + (1-A_j^{-}) \log \frac{1-A_j^{-}}{1-w_j r_{ij}} \right)}.
+ <br/>
+ \]
+ <br/>
+ Nodes with higher TOPSIS-RE scores are considered more influential, being closer to the positive ideal solution and farther from the negative ideal solution.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Liu, Z., Jiang, C., Wang, J., &amp; Yu, H. (2015). The node importance in actual complex networks based on a multi-attribute ranking method. Knowledge-Based Systems, 84, 56-66.
+  <a href="https://doi.org/10.1016/j.knosys.2015.03.026">
+   doi: 10.1016/j.knosys.2015.03.026.
+  </a>
+ </div>
+</div>

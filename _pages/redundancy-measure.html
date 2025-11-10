@@ -4,115 +4,95 @@ permalink: /redundancy-measure/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Redundancy measure
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Redundancy measure
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    redundancy measure
-   </i>
-   , originally proposed in [2], is a simplified version of Burt's redundancy [3]. The redundancy \(c_r(i)\) of a node \(i\) quantifies the average number of connections that a neighbor of \(i\) has to other neighbors of \(i\), and is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_r(i) =
-   <br/>
-   \begin{cases}
-   <br/>
-   \dfrac{\sum_{j \in \mathcal{N}(i)} \sum_{\substack{k \in \mathcal{N}(i) , \ k \neq j}} a_{jk}}{d_i}, &amp; \text{if } d_i &gt; 1, \\
-   <br/>
-   0, &amp; \text{otherwise,}
-   <br/>
-   \end{cases}
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(d_i = |\mathcal{N}(i)|\) is the degree of node \(i\).  As shown by Newman [4], the redundancy measure is related to the clustering coefficient \(c_{cl}(i)\) via
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_r(i) = c_{cl}(i) \, (d_i - 1).
-   <br/>
-   \end{equation*}
-   <br/>
-   The redundancy measure was later independently introduced as the
-   <i>
-    local average connectivity (LAC)
-   </i>
-   in [5].
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Borgatti, S. P. (1997). Structural holes: Unpacking Burt’s redundancy measures. Connections, 20(1), 35-38.
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Burt, R.S. &amp; Holes, S. (1992). Structural Holes: The Social Structure of Competition. Harvard University Press, Cambridge, MA.
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [4]
-    </span>
-    Newman, M. (2018). Networks. Oxford university press.
-    <a href="https://doi.org/10.1093/oso/9780198805090.001.0001">
-     doi: 10.1093/oso/9780198805090.001.0001.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [5]
-    </span>
-    Li, M., Wang, J., Chen, X., Wang, H., &amp; Pan, Y. (2011). A local average connectivity-based method for identifying essential proteins from the network level. Computational biology and chemistry, 35(3), 143-150.
-    <a href="https://doi.org/10.1016/j.compbiolchem.2011.04.002">
-     doi: 10.1016/j.compbiolchem.2011.04.002.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  redundancy measure
+ </i>
+ , originally proposed in [2], is a simplified version of Burt's redundancy [3]. The redundancy \(c_r(i)\) of a node \(i\) quantifies the average number of connections that a neighbor of \(i\) has to other neighbors of \(i\), and is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_r(i) =
+ <br/>
+ \begin{cases}
+ <br/>
+ \dfrac{\sum_{j \in \mathcal{N}(i)} \sum_{\substack{k \in \mathcal{N}(i) , \ k \neq j}} a_{jk}}{d_i}, &amp; \text{if } d_i &gt; 1, \\
+ <br/>
+ 0, &amp; \text{otherwise,}
+ <br/>
+ \end{cases}
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(d_i = |\mathcal{N}(i)|\) is the degree of node \(i\).  As shown by Newman [4], the redundancy measure is related to the clustering coefficient \(c_{cl}(i)\) via
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_r(i) = c_{cl}(i) \, (d_i - 1).
+ <br/>
+ \end{equation*}
+ <br/>
+ The redundancy measure was later independently introduced as the
+ <i>
+  local average connectivity (LAC)
+ </i>
+ in [5].
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Borgatti, S. P. (1997). Structural holes: Unpacking Burt’s redundancy measures. Connections, 20(1), 35-38.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Burt, R.S. &amp; Holes, S. (1992). Structural Holes: The Social Structure of Competition. Harvard University Press, Cambridge, MA.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Newman, M. (2018). Networks. Oxford university press.
+  <a href="https://doi.org/10.1093/oso/9780198805090.001.0001">
+   doi: 10.1093/oso/9780198805090.001.0001.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [5]
+  </span>
+  Li, M., Wang, J., Chen, X., Wang, H., &amp; Pan, Y. (2011). A local average connectivity-based method for identifying essential proteins from the network level. Computational biology and chemistry, 35(3), 143-150.
+  <a href="https://doi.org/10.1016/j.compbiolchem.2011.04.002">
+   doi: 10.1016/j.compbiolchem.2011.04.002.
+  </a>
+ </div>
+</div>

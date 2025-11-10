@@ -4,101 +4,81 @@ permalink: /similarity-based-pagerank/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Similarity-based PageRank
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Similarity-based PageRank
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    similarity-based PageRank
-   </i>
-   is a variant of the PageRank algorithm designed to identify influential nodes by guiding random walks according to the structural similarity between nodes [2, 3].
-   <br/>
-   Let \(d_{\max}\) denote the largest degree in the graph \(G\). For each node \(i\), a \((d_{\max}+1)\)-dimensional vector is constructed containing the degree of node \(i\) and the degrees of its \(|\mathcal{N}(i)|\) neighbors; any remaining entries are set to a small constant \(10^{-8}\). The vector entries are
-   <i>
-    sorted
-   </i>
-   to ensure a consistent alignment for KL-divergence computation. This vector is then normalized to form a probability vector \(p(i)\).
-   <br/>
-   The dissimilarity between nodes \(i\) and \(j\) is quantified using the symmetric Kullback-Leibler (KL) divergence:
-   <br/>
-   \[
-   <br/>
-   r_{ij} = D_{\mathrm{KL}}(p(i)\,\|\,p(j)) + D_{\mathrm{KL}}(p(j)\,\|\,p(i)),
-   <br/>
-   \]
-   <br/>
-   where larger values of \(r_{ij}\) indicate greater structural differences between nodes \(i\) and \(j\).
-   <br/>
-   The structural similarity between nodes \(i\) and \(j\) is defined as
-   <br/>
-   \[
-   <br/>
-   s_{ij} = 1 - \frac{r_{ij}}{r_{\max}+1},
-   <br/>
-   \]
-   <br/>
-   where \(r_{\max} = \max_{(i,j)} r_{ij}\). Higher structural similarity \(s_{ij}\) corresponds to a higher probability of transition between adjacent nodes. The resulting similarity matrix \(S = [s_{ij}]\) is then used to generate the transition probability matrix \(P\) for the PageRank algorithm, which in turn determines the importance of each node.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Zhang, Q., Li, M., &amp; Deng, Y. (2018). Measure the structure similarity of nodes in complex networks based on relative entropy. Physica A: Statistical Mechanics and its Applications, 491, 749-763.
-    <a href="https://doi.org/10.1016/j.physa.2017.09.042">
-     doi: 10.1016/j.physa.2017.09.042.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Zhao, J., Song, Y., Liu, F., &amp; Deng, Y. (2021). The identification of influential nodes based on structure similarity. Connection science, 33(2), 201-218.
-    <a href="https://doi.org/10.1080/09540091.2020.1806203">
-     doi: 10.1080/09540091.2020.1806203.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  similarity-based PageRank
+ </i>
+ is a variant of the PageRank algorithm designed to identify influential nodes by guiding random walks according to the structural similarity between nodes [2, 3].
+ <br/>
+ Let \(d_{\max}\) denote the largest degree in the graph \(G\). For each node \(i\), a \((d_{\max}+1)\)-dimensional vector is constructed containing the degree of node \(i\) and the degrees of its \(|\mathcal{N}(i)|\) neighbors; any remaining entries are set to a small constant \(10^{-8}\). The vector entries are
+ <i>
+  sorted
+ </i>
+ to ensure a consistent alignment for KL-divergence computation. This vector is then normalized to form a probability vector \(p(i)\).
+ <br/>
+ The dissimilarity between nodes \(i\) and \(j\) is quantified using the symmetric Kullback-Leibler (KL) divergence:
+ <br/>
+ \[
+ <br/>
+ r_{ij} = D_{\mathrm{KL}}(p(i)\,\|\,p(j)) + D_{\mathrm{KL}}(p(j)\,\|\,p(i)),
+ <br/>
+ \]
+ <br/>
+ where larger values of \(r_{ij}\) indicate greater structural differences between nodes \(i\) and \(j\).
+ <br/>
+ The structural similarity between nodes \(i\) and \(j\) is defined as
+ <br/>
+ \[
+ <br/>
+ s_{ij} = 1 - \frac{r_{ij}}{r_{\max}+1},
+ <br/>
+ \]
+ <br/>
+ where \(r_{\max} = \max_{(i,j)} r_{ij}\). Higher structural similarity \(s_{ij}\) corresponds to a higher probability of transition between adjacent nodes. The resulting similarity matrix \(S = [s_{ij}]\) is then used to generate the transition probability matrix \(P\) for the PageRank algorithm, which in turn determines the importance of each node.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Zhang, Q., Li, M., &amp; Deng, Y. (2018). Measure the structure similarity of nodes in complex networks based on relative entropy. Physica A: Statistical Mechanics and its Applications, 491, 749-763.
+  <a href="https://doi.org/10.1016/j.physa.2017.09.042">
+   doi: 10.1016/j.physa.2017.09.042.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Zhao, J., Song, Y., Liu, F., &amp; Deng, Y. (2021). The identification of influential nodes based on structure similarity. Connection science, 33(2), 201-218.
+  <a href="https://doi.org/10.1080/09540091.2020.1806203">
+   doi: 10.1080/09540091.2020.1806203.
+  </a>
+ </div>
+</div>

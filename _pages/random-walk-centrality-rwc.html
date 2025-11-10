@@ -4,92 +4,72 @@ permalink: /random-walk-centrality-rwc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Random walk centrality (RWC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Random walk centrality (RWC)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    random walk centrality
-   </i>
-   (RWC) measures how quickly a node can be reached by information diffusing randomly through a network, accounting for all paths rather than only shortest paths [2].
-   <br/>
-   Let \(A\) be the adjacency matrix of a network and \(D = \mathrm{diag}(d_1, \dots, d_N)\) the degree matrix. The transition probability matrix of a classical random walk is
-   <br/>
-   \[
-   <br/>
-   M = D^{-1} A,
-   <br/>
-   \]
-   <br/>
-   so that a walker at node \(i\) moves to a randomly chosen neighbor at each step.
-   <br/>
-   Let \(P_{ij}(t)\) denote the probability that a walker starting at \(i\) is at node \(j\) after \(t\) steps, and let \(P_i^\infty = d_i / \sum_j d_j\) be the stationary probability. The random-walk centrality of node \(i\) is defined as
-   <br/>
-   \[
-   <br/>
-   c_{\rm RWC}(i) = \frac{P_i^\infty}{\sum_{t=0}^{\infty} \bigl(P_{ii}(t) - P_i^\infty\bigr)} = \frac{P_i^\infty}{τ_i},
-   <br/>
-   \]
-   <br/>
-   where \(τ_i\) is the
-   <i>
-    characteristic relaxation time
-   </i>
-   of node \(i\), i.e., the expected time for a random walker starting at \(i\) to approach its stationary distribution.
-   <br/>
-   Nodes with larger RWC are, on average, reached more quickly by diffusive processes and thus serve as more effective recipients in network communication.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Noh, J. D., &amp; Rieger, H. (2004). Random walks on complex networks. Physical review letters, 92(11), 118701.
-    <a href="https://doi.org/10.1103/PhysRevLett.92.118701">
-     doi: 10.1103/PhysRevLett.92.118701.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  random walk centrality
+ </i>
+ (RWC) measures how quickly a node can be reached by information diffusing randomly through a network, accounting for all paths rather than only shortest paths [2].
+ <br/>
+ Let \(A\) be the adjacency matrix of a network and \(D = \mathrm{diag}(d_1, \dots, d_N)\) the degree matrix. The transition probability matrix of a classical random walk is
+ <br/>
+ \[
+ <br/>
+ M = D^{-1} A,
+ <br/>
+ \]
+ <br/>
+ so that a walker at node \(i\) moves to a randomly chosen neighbor at each step.
+ <br/>
+ Let \(P_{ij}(t)\) denote the probability that a walker starting at \(i\) is at node \(j\) after \(t\) steps, and let \(P_i^\infty = d_i / \sum_j d_j\) be the stationary probability. The random-walk centrality of node \(i\) is defined as
+ <br/>
+ \[
+ <br/>
+ c_{\rm RWC}(i) = \frac{P_i^\infty}{\sum_{t=0}^{\infty} \bigl(P_{ii}(t) - P_i^\infty\bigr)} = \frac{P_i^\infty}{τ_i},
+ <br/>
+ \]
+ <br/>
+ where \(τ_i\) is the
+ <i>
+  characteristic relaxation time
+ </i>
+ of node \(i\), i.e., the expected time for a random walker starting at \(i\) to approach its stationary distribution.
+ <br/>
+ Nodes with larger RWC are, on average, reached more quickly by diffusive processes and thus serve as more effective recipients in network communication.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Noh, J. D., &amp; Rieger, H. (2004). Random walks on complex networks. Physical review letters, 92(11), 118701.
+  <a href="https://doi.org/10.1103/PhysRevLett.92.118701">
+   doi: 10.1103/PhysRevLett.92.118701.
+  </a>
+ </div>
+</div>

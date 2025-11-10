@@ -4,118 +4,98 @@ permalink: /silent-node-rank-snr/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Silent node rank (SNR)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Silent node rank (SNR)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Silent node rank
-   </i>
-   (SNR), also known as LurkerRank (LR) [2], is a spectral centrality measure designed to identify nodes that play a passive role in information networks, which are the nodes that consume more information than they produce and often remain unnoticed [3]. Such silent nodes typically have low connectivity and are common in many systems, including leechers in P2P networks or lurkers in online social networks.
-   <br/>
-   While the in-degree/out-degree ratio provides a simple measure of silence, it ignores the influence of neighbors and often produces many nodes with identical scores. SNR improves upon this by incorporating neighbor behavior: a node is considered more silent if its in-neighbors are active and its out-neighbors are themselves silent. This network-aware approach yields a more accurate and diversified ranking of silent nodes.
-   <br/>
-   Formally, the SNR score \(r_i\) of node \(i\) in a weighted, directed network is given by
-   <br/>
-   \begin{equation*}
-   <br/>
-   \begin{split}
-   <br/>
-   r_i &amp;= α \Bigg(
-   <br/>
-   \frac{1}{d_i^{\mathrm{out}} + 1}
-   <br/>
-   \sum_{j \in \mathcal{N}^{\mathrm{in}}(i)} w_{ji} \frac{d_j^{\mathrm{out}} {+} 1}{d_j^{\mathrm{in}} {+} 1} r_j
-   <br/>
-   \Bigg)
-   <br/>
-   \Bigg(
-   <br/>
-   1 {+} \frac{d_i^{\mathrm{in}} {+} 1}{\sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} (d_j^{\mathrm{in}} {+} 1)}
-   <br/>
-   \sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} w_{ij} \frac{d_j^{\mathrm{in}} {+} 1}{d_j^{\mathrm{out}} {+} 1} r_j
-   <br/>
-   \Bigg) \\
-   <br/>
-   &amp;\quad + \frac{1{-}α}{N},
-   <br/>
-   \end{split}
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(w_{ij}\) is the edge weight, \(α\) is the damping factor, \(\mathcal{N}^{\mathrm{in}}(i)\) and \(\mathcal{N}^{\mathrm{out}}(i)\) are the in- and out-neighbors of \(i\), and \(d_j^{\mathrm{in}}\) and \(d_j^{\mathrm{out}}\) are the in- and out-degrees of node \(j\). The first term downweights the influence of node \(i\)’s in-neighbors based on its out-degree, while the second term boosts the score according to how silent its out-neighbors are, adjusted by \(i\)’s in-degree.
-   <br/>
-   For undirected and unweighted networks, the SNR score simplifies to
-   <br/>
-   \begin{equation*}
-   <br/>
-   r_i = α \left( \frac{1}{d_i + 1} \sum_{j \in \mathcal{N}(i)} r_j \right)
-   <br/>
-   \left( 1 + \frac{d_i + 1}{d_i + \sum_{j \in \mathcal{N}(i)} d_j} \sum_{j \in \mathcal{N}(i)} r_j \right)
-   <br/>
-   + \frac{1-α}{N}.
-   <br/>
-   \end{equation*}
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Tagarelli, A., &amp; Interdonato, R. (2013). "Who's out there?" identifying and ranking lurkers in social networks. In Proceedings of the 2013 IEEE/ACM international conference on advances in social networks analysis and mining (pp. 215-222).
-    <a href="https://doi.org/10.1145/2492517.2492542">
-     doi: 10.1145/2492517.2492542.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Interdonato, R., &amp; Tagarelli, A. (2015). Ranking Silent Nodes in Information Networks: a quantitative approach and applications. Physics Procedia, 62, 36-41.
-    <a href="https://doi.org/10.1016/j.phpro.2015.02.008">
-     doi: 10.1016/j.phpro.2015.02.008.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Silent node rank
+ </i>
+ (SNR), also known as LurkerRank (LR) [2], is a spectral centrality measure designed to identify nodes that play a passive role in information networks, which are the nodes that consume more information than they produce and often remain unnoticed [3]. Such silent nodes typically have low connectivity and are common in many systems, including leechers in P2P networks or lurkers in online social networks.
+ <br/>
+ While the in-degree/out-degree ratio provides a simple measure of silence, it ignores the influence of neighbors and often produces many nodes with identical scores. SNR improves upon this by incorporating neighbor behavior: a node is considered more silent if its in-neighbors are active and its out-neighbors are themselves silent. This network-aware approach yields a more accurate and diversified ranking of silent nodes.
+ <br/>
+ Formally, the SNR score \(r_i\) of node \(i\) in a weighted, directed network is given by
+ <br/>
+ \begin{equation*}
+ <br/>
+ \begin{split}
+ <br/>
+ r_i &amp;= α \Bigg(
+ <br/>
+ \frac{1}{d_i^{\mathrm{out}} + 1}
+ <br/>
+ \sum_{j \in \mathcal{N}^{\mathrm{in}}(i)} w_{ji} \frac{d_j^{\mathrm{out}} {+} 1}{d_j^{\mathrm{in}} {+} 1} r_j
+ <br/>
+ \Bigg)
+ <br/>
+ \Bigg(
+ <br/>
+ 1 {+} \frac{d_i^{\mathrm{in}} {+} 1}{\sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} (d_j^{\mathrm{in}} {+} 1)}
+ <br/>
+ \sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} w_{ij} \frac{d_j^{\mathrm{in}} {+} 1}{d_j^{\mathrm{out}} {+} 1} r_j
+ <br/>
+ \Bigg) \\
+ <br/>
+ &amp;\quad + \frac{1{-}α}{N},
+ <br/>
+ \end{split}
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(w_{ij}\) is the edge weight, \(α\) is the damping factor, \(\mathcal{N}^{\mathrm{in}}(i)\) and \(\mathcal{N}^{\mathrm{out}}(i)\) are the in- and out-neighbors of \(i\), and \(d_j^{\mathrm{in}}\) and \(d_j^{\mathrm{out}}\) are the in- and out-degrees of node \(j\). The first term downweights the influence of node \(i\)’s in-neighbors based on its out-degree, while the second term boosts the score according to how silent its out-neighbors are, adjusted by \(i\)’s in-degree.
+ <br/>
+ For undirected and unweighted networks, the SNR score simplifies to
+ <br/>
+ \begin{equation*}
+ <br/>
+ r_i = α \left( \frac{1}{d_i + 1} \sum_{j \in \mathcal{N}(i)} r_j \right)
+ <br/>
+ \left( 1 + \frac{d_i + 1}{d_i + \sum_{j \in \mathcal{N}(i)} d_j} \sum_{j \in \mathcal{N}(i)} r_j \right)
+ <br/>
+ + \frac{1-α}{N}.
+ <br/>
+ \end{equation*}
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Tagarelli, A., &amp; Interdonato, R. (2013). "Who's out there?" identifying and ranking lurkers in social networks. In Proceedings of the 2013 IEEE/ACM international conference on advances in social networks analysis and mining (pp. 215-222).
+  <a href="https://doi.org/10.1145/2492517.2492542">
+   doi: 10.1145/2492517.2492542.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Interdonato, R., &amp; Tagarelli, A. (2015). Ranking Silent Nodes in Information Networks: a quantitative approach and applications. Physics Procedia, 62, 36-41.
+  <a href="https://doi.org/10.1016/j.phpro.2015.02.008">
+   doi: 10.1016/j.phpro.2015.02.008.
+  </a>
+ </div>
+</div>

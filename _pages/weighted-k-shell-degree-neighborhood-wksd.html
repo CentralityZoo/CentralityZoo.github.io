@@ -4,102 +4,74 @@ permalink: /weighted-k-shell-degree-neighborhood-wksd/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Weighted
-   <i>
-    k
-   </i>
-   -shell degree neighborhood (Wksd)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Weighted
-   <i>
-    k
-   </i>
-   -shell degree neighborhood (Wksd)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Weighted
-    <i>
-     k
-    </i>
-    -shell degree neighborhood
-   </i>
-   -shell degree neighborhood!weighted (Wksd)} (Wksd) is a hybrid centrality measure that combines node degree and \(k\)-shell values [2, 3]. The motivation is to capture nodes that are central both in terms of local connectivity and their position in the network’s hierarchical core. The edge weight between nodes \(i\) and \(j\) is defined as
-   <br/>
-   \[
-   <br/>
-   w_{ij} = (α d_i + μ k_s(i)) (α d_j + μ k_s(j)),
-   <br/>
-   \]
-   <br/>
-   where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell value of node \(i\), and \(α\), \(μ\) are tunable parameters (typically \(α \in \{0.2, 0.4\}\) and \(μ = 0.9\)). The Wksd centrality of node \(i\) is given by
-   <br/>
-   \[
-   <br/>
-   c_{Wksd}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},
-   <br/>
-   \]
-   <br/>
-   where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\). Hence, Wksd reflects the cumulative weighted influence of its neighbors and emphasize nodes that combine high connectivity with strategic placement in the network core.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Namtirtha, A., Dutta, A., &amp; Dutta, B. (2018). Weighted kshell degree neighborhood method: An approach independent of completeness of global network structure for identifying the influential spreaders. In 2018 10th international conference on communication systems &amp; networks (COMSNETS) (pp. 81-88). IEEE.
-    <a href="https://doi.org/10.1109/COMSNETS.2018.8328183">
-     doi: 10.1109/COMSNETS.2018.8328183.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Namtirtha, A., Dutta, A., &amp; Dutta, B. (2020). Weighted kshell degree neighborhood: A new method for identifying the influential spreaders from a variety of complex network connectivity structures. Expert Systems with Applications, 139, 112859.
-    <a href="https://doi.org/10.1016/j.eswa.2019.112859">
-     doi: 10.1016/j.eswa.2019.112859.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Weighted
+  <i>
+   k
+  </i>
+  -shell degree neighborhood
+ </i>
+ -shell degree neighborhood!weighted (Wksd)} (Wksd) is a hybrid centrality measure that combines node degree and \(k\)-shell values [2, 3]. The motivation is to capture nodes that are central both in terms of local connectivity and their position in the network’s hierarchical core. The edge weight between nodes \(i\) and \(j\) is defined as
+ <br/>
+ \[
+ <br/>
+ w_{ij} = (α d_i + μ k_s(i)) (α d_j + μ k_s(j)),
+ <br/>
+ \]
+ <br/>
+ where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell value of node \(i\), and \(α\), \(μ\) are tunable parameters (typically \(α \in \{0.2, 0.4\}\) and \(μ = 0.9\)). The Wksd centrality of node \(i\) is given by
+ <br/>
+ \[
+ <br/>
+ c_{Wksd}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},
+ <br/>
+ \]
+ <br/>
+ where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\). Hence, Wksd reflects the cumulative weighted influence of its neighbors and emphasize nodes that combine high connectivity with strategic placement in the network core.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Namtirtha, A., Dutta, A., &amp; Dutta, B. (2018). Weighted kshell degree neighborhood method: An approach independent of completeness of global network structure for identifying the influential spreaders. In 2018 10th international conference on communication systems &amp; networks (COMSNETS) (pp. 81-88). IEEE.
+  <a href="https://doi.org/10.1109/COMSNETS.2018.8328183">
+   doi: 10.1109/COMSNETS.2018.8328183.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Namtirtha, A., Dutta, A., &amp; Dutta, B. (2020). Weighted kshell degree neighborhood: A new method for identifying the influential spreaders from a variety of complex network connectivity structures. Expert Systems with Applications, 139, 112859.
+  <a href="https://doi.org/10.1016/j.eswa.2019.112859">
+   doi: 10.1016/j.eswa.2019.112859.
+  </a>
+ </div>
+</div>

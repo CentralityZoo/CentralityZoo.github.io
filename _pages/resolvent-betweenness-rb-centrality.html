@@ -4,91 +4,71 @@ permalink: /resolvent-betweenness-rb-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Resolvent betweenness (RB) centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Resolvent betweenness (RB) centrality
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Resolvent betweenness (RB) centrality
-   </i>
-   , also known as \(f\)-betweenness, is a variant of betweenness centrality that quantifies the intermediate role of a node based on the matrix resolvent [2].
-   <br/>
-   Given the adjacency matrix \(A\), the matrix resolvent is defined as
-   <br/>
-   \[
-   <br/>
-   f(A) = \sum_{k=0}^{\infty}s^k A^k = (I - sA)^{-1},
-   <br/>
-   \]
-   <br/>
-   where \(s\) is a penalty factor satisfying \(s \in \left(0, \frac{1}{λ_{\max}}\right)\), with \(λ_{\max}\) being the largest eigenvalue of \(A\). The parameter \(s\) downweights longer walks, reflecting the intuition that short paths contribute more to communicability. Estrada and Higham [2] suggest that a reasonable choice is \(s = \frac{1}{N-1}\), based on comparison with the complete graph \(K_N\).
-   <br/>
-   The entry \(f(A)_{jl}\) measures the communicability between nodes \(j\) and \(l\). The resolvent betweenness of node \(i\), denoted \(c_{RB}(i)\), quantifies the overall relative change in communicability between all pairs of nodes when node \(i\) is removed, i.e.,
-   <br/>
-   \[
-   <br/>
-   c_{RB}(i) = \frac{1}{(N-1)(N-2)}
-   <br/>
-   \sum_{j \neq i} \sum_{\substack{l \neq i \\ l \neq j}}
-   <br/>
-   \frac{f(A)_{jl} - f(A - E(i))_{jl}}{f(A)_{jl}},
-   <br/>
-   \]
-   <br/>
-   where \(E(i)\) is the \(N \times N\) matrix with nonzero entries only in row and column \(i\), matching the positions of nonzero entries in \(A\). In other words, \(A - E(i)\) corresponds to the adjacency matrix obtained by removing all edges incident to node \(i\).
-   <br/>
-   Thus, resolvent betweenness (RB) centrality captures the importance of node \(i\) in maintaining communicability across the network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Estrada, E., &amp; Higham, D. J. (2010). Network properties revealed through matrix functions. SIAM review, 52(4), 696-714.
-    <a href="https://doi.org/10.1137/090761070">
-     doi: 10.1137/090761070.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Resolvent betweenness (RB) centrality
+ </i>
+ , also known as \(f\)-betweenness, is a variant of betweenness centrality that quantifies the intermediate role of a node based on the matrix resolvent [2].
+ <br/>
+ Given the adjacency matrix \(A\), the matrix resolvent is defined as
+ <br/>
+ \[
+ <br/>
+ f(A) = \sum_{k=0}^{\infty}s^k A^k = (I - sA)^{-1},
+ <br/>
+ \]
+ <br/>
+ where \(s\) is a penalty factor satisfying \(s \in \left(0, \frac{1}{λ_{\max}}\right)\), with \(λ_{\max}\) being the largest eigenvalue of \(A\). The parameter \(s\) downweights longer walks, reflecting the intuition that short paths contribute more to communicability. Estrada and Higham [2] suggest that a reasonable choice is \(s = \frac{1}{N-1}\), based on comparison with the complete graph \(K_N\).
+ <br/>
+ The entry \(f(A)_{jl}\) measures the communicability between nodes \(j\) and \(l\). The resolvent betweenness of node \(i\), denoted \(c_{RB}(i)\), quantifies the overall relative change in communicability between all pairs of nodes when node \(i\) is removed, i.e.,
+ <br/>
+ \[
+ <br/>
+ c_{RB}(i) = \frac{1}{(N-1)(N-2)}
+ <br/>
+ \sum_{j \neq i} \sum_{\substack{l \neq i \\ l \neq j}}
+ <br/>
+ \frac{f(A)_{jl} - f(A - E(i))_{jl}}{f(A)_{jl}},
+ <br/>
+ \]
+ <br/>
+ where \(E(i)\) is the \(N \times N\) matrix with nonzero entries only in row and column \(i\), matching the positions of nonzero entries in \(A\). In other words, \(A - E(i)\) corresponds to the adjacency matrix obtained by removing all edges incident to node \(i\).
+ <br/>
+ Thus, resolvent betweenness (RB) centrality captures the importance of node \(i\) in maintaining communicability across the network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Estrada, E., &amp; Higham, D. J. (2010). Network properties revealed through matrix functions. SIAM review, 52(4), 696-714.
+  <a href="https://doi.org/10.1137/090761070">
+   doi: 10.1137/090761070.
+  </a>
+ </div>
+</div>

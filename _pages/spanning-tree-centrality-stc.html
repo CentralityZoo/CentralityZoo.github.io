@@ -4,75 +4,55 @@ permalink: /spanning-tree-centrality-stc/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Spanning tree centrality (STC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Spanning tree centrality (STC)
-  </h2>
-  <p>
-   <br/>
-   <i>
-    Spanning tree centrality
-   </i>
-   (STC) is a centrality measure based on the enumeration of spanning trees in a graph [2]. In a spanning tree, a node \(i\) can play two roles: either as a leaf, whose removal does not disconnect the tree, or as a cut-vertex, whose removal disconnects the tree.
-   <br/>
-   The STC of node \(i\) is defined as
-   <br/>
-   \[
-   <br/>
-   c_{STC}(i) = t_G - d_i \, t_{G_i},
-   <br/>
-   \]
-   <br/>
-   where \(d_i\) is the degree of node \(i\), \(t_G\) is the total number of spanning trees in \(G\), and \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\). The term \(d_i \, t_{G_i}\) counts the number of spanning trees in which node \(i\) is a leaf. Therefore, \(c_{STC}(i)\) measures the number of spanning trees in which node \(i\) acts as a cut-vertex, capturing its importance in maintaining the connectivity of the network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Qi, X., Fuller, E., Luo, R., &amp; Zhang, C. Q. (2015). A novel centrality method for weighted networks based on the Kirchhoff polynomial. Pattern Recognition Letters, 58, 51-60.
-    <a href="https://doi.org/10.1016/j.patrec.2015.02.007">
-     doi: 10.1016/j.patrec.2015.02.007.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ <i>
+  Spanning tree centrality
+ </i>
+ (STC) is a centrality measure based on the enumeration of spanning trees in a graph [2]. In a spanning tree, a node \(i\) can play two roles: either as a leaf, whose removal does not disconnect the tree, or as a cut-vertex, whose removal disconnects the tree.
+ <br/>
+ The STC of node \(i\) is defined as
+ <br/>
+ \[
+ <br/>
+ c_{STC}(i) = t_G - d_i \, t_{G_i},
+ <br/>
+ \]
+ <br/>
+ where \(d_i\) is the degree of node \(i\), \(t_G\) is the total number of spanning trees in \(G\), and \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\). The term \(d_i \, t_{G_i}\) counts the number of spanning trees in which node \(i\) is a leaf. Therefore, \(c_{STC}(i)\) measures the number of spanning trees in which node \(i\) acts as a cut-vertex, capturing its importance in maintaining the connectivity of the network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Qi, X., Fuller, E., Luo, R., &amp; Zhang, C. Q. (2015). A novel centrality method for weighted networks based on the Kirchhoff polynomial. Pattern Recognition Letters, 58, 51-60.
+  <a href="https://doi.org/10.1016/j.patrec.2015.02.007">
+   doi: 10.1016/j.patrec.2015.02.007.
+  </a>
+ </div>
+</div>

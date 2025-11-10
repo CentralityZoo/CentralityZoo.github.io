@@ -4,74 +4,54 @@ permalink: /spreading-probability-sp-centrality/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Spreading probability (SP) centrality
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Spreading probability (SP) centrality
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    spreading probability
-   </i>
-   (SP) centrality is a hybrid measure that incorporates shortest distances, the number of shortest paths, and the transmission rate to quantify node influence [2]. The SP centrality of node \(i\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{SP}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}},
-   <br/>
-   \end{equation*}
-   <br/>
-   where \(\mathcal{N}^{(\leq l)}(i)\) is the set of nodes within \(l\) hops from node \(i\), \(σ_{ij}\) is the number of shortest paths between nodes \(i\) and \(j\), \(\langle d \rangle\) is the average degree of the network, and \(d_{ij}\) is the shortest distance from node \(i\) to node \(j\). Bao et al. [2] consider \(l=3\) and use \(\frac{1}{\langle d \rangle}\) to approximate the transmission rate \(β\). Hence, the term \(σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}}\) approximates the probability that node \(j\) is infected by node \(i\). SP centrality assigns higher values to nodes that can reach many others through multiple short paths, reflecting both local connectivity and spreading potential within the network.
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Bao, Z. K., Ma, C., Xiang, B. B., &amp; Zhang, H. F. (2017). Identification of influential nodes in complex networks: Method from spreading probability viewpoint. Physica A: Statistical Mechanics and its Applications, 468, 391-397.
-    <a href="https://doi.org/10.1016/j.physa.2016.10.086">
-     doi: 10.1016/j.physa.2016.10.086.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  spreading probability
+ </i>
+ (SP) centrality is a hybrid measure that incorporates shortest distances, the number of shortest paths, and the transmission rate to quantify node influence [2]. The SP centrality of node \(i\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{SP}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}},
+ <br/>
+ \end{equation*}
+ <br/>
+ where \(\mathcal{N}^{(\leq l)}(i)\) is the set of nodes within \(l\) hops from node \(i\), \(σ_{ij}\) is the number of shortest paths between nodes \(i\) and \(j\), \(\langle d \rangle\) is the average degree of the network, and \(d_{ij}\) is the shortest distance from node \(i\) to node \(j\). Bao et al. [2] consider \(l=3\) and use \(\frac{1}{\langle d \rangle}\) to approximate the transmission rate \(β\). Hence, the term \(σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}}\) approximates the probability that node \(j\) is infected by node \(i\). SP centrality assigns higher values to nodes that can reach many others through multiple short paths, reflecting both local connectivity and spreading potential within the network.
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Bao, Z. K., Ma, C., Xiang, B. B., &amp; Zhang, H. F. (2017). Identification of influential nodes in complex networks: Method from spreading probability viewpoint. Physica A: Statistical Mechanics and its Applications, 468, 391-397.
+  <a href="https://doi.org/10.1016/j.physa.2016.10.086">
+   doi: 10.1016/j.physa.2016.10.086.
+  </a>
+ </div>
+</div>

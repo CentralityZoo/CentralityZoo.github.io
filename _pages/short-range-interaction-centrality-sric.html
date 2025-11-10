@@ -4,132 +4,112 @@ permalink: /short-range-interaction-centrality-sric/
 search: true
 ---
 
-<html>
- <head>
-  <meta charset="utf-8"/>
-  <title>
-   Short-Range Interaction Centrality (SRIC)
-  </title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-  </script>
-  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <style>
-   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
     .references { margin-top: 1.2em; }
     .ref-item { margin-bottom: 0.5em; }
     .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
     ul { margin-left: 1.2em; }
-  </style>
- </head>
- <body>
-  <h2>
-   Short-Range Interaction Centrality (SRIC)
-  </h2>
-  <p>
-   <br/>
-   The
-   <i>
-    Short-Range Interaction Centrality (SRIC)
-   </i>
-   index, originally called the key-borrower index (KBI), is a power index based on the concept of individual and group influence of nodes in a network [2, 3, 4]. Each node \(i\) is assumed to have an individual threshold of influence \(q_i\), which represents the level at which this node becomes affected. This threshold can be specified externally based on domain knowledge or determined from the network structure, for instance, as a function of the degree of each node. A group of nodes \(\Omega(i) \subset \mathcal{N}\) is called
-   <i>
-    critical
-   </i>
-   for node \(i\) if their collective influence exceeds the threshold \(q_i\), i.e.,
-   <br/>
-   \begin{equation*}
-   <br/>
-   \sum_{k \in \Omega(i)} a_{ki} \geq q_i.
-   <br/>
-   \end{equation*}
-   <br/>
-   A node \(k\) is termed
-   <i>
-    pivotal
-   </i>
-   for the group \(\Omega(i)\) if its removal renders the group non-critical. The set of pivotal members of \(\Omega(i)\) is denoted by \(\Omega^{p}(i)\).
-   <br/>
-   The SRIC index considers only direct and indirect influence through one intermediate node, i.e., short-range influence. Formally, the initial adjacency matrix \(A\) is transformed into a matrix of direct influence \(P\), where \(D\) is the out-degree matrix. The indirect influence \(p_{ihj}\) of node \(i\) on node \(j\) via an intermediate node \(h\) is defined as
-   <br/>
-   \begin{equation*}
-   <br/>
-   p_{ihj} =
-   <br/>
-   \begin{cases}
-   <br/>
-   \frac{\min(a_{ih}, a_{hj})}{D_{kk}}, &amp; \text{if } a_{ih} &gt; 0, \ a_{hj} &gt; 0, \ i \neq j \neq h, \\
-   <br/>
-   0, &amp; \text{otherwise}.
-   <br/>
-   \end{cases}
-   <br/>
-   \end{equation*}
-   <br/>
-   The SRIC centrality of node \(i\) is defined as the average of the normalized short-range influence \(χ_i(j)\) of node \(i\) on all nodes \(j \in \mathcal{N}\). This is evaluated by considering all critical groups \(\Omega_k(j)\) in which node \(i\) is pivotal:
-   <br/>
-   \begin{equation*}
-   <br/>
-   c_{SRIC}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}}  \frac{χ_i(j)}{\sum_{h \in \mathcal{N}} χ_h(j)},
-   <br/>
-   \end{equation*}
-   <br/>
-   where
-   <br/>
-   \begin{equation*}
-   <br/>
-   χ_i(j) = \sum_{k: i \in \Omega^{p}_k(j)} \frac{p_{ij} + \sum_{h \in \Omega_k(j)} p_{ihj}}{|\Omega_k(j)|}.
-   <br/>
-   \end{equation*}
-   <br/>
-  </p>
-  <h3>
-   References
-  </h3>
-  <div class="references">
-   <div class="ref-item">
-    <span class="ref-num">
-     [1]
-    </span>
-    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
-    <a href="https://doi.org/10.48550/arXiv.2511.05122">
-     https://doi.org/10.48550/arXiv.2511.05122
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [2]
-    </span>
-    Aleskerov, F., Andrievskaya, I. and Permjakova, E. (2014), Key Borrowers Detected by the Intensities of Their Short-Range Interactions (2014). Higher School of Economics Research Paper No. WP BRP 33/FE/2014.
-    <a href="https://doi.org/10.2139/ssrn.2479272">
-     doi: 10.2139/ssrn.2479272.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [3]
-    </span>
-    Aleskerov, F. , Andrievskaya, I. , Nikitina A. and Shvydun, S. (2020). Key Borrowers Detected by the Intensities of Their Interactions. Handbook of Financial Econometrics, Mathematics, Statistics, and Machine Learning (In 4 Volumes), 355-389 World Scientific: Singapore Volume 1, Chapter 9.
-    <a href="https://doi.org/10.1142/9789811202391_0009">
-     doi: 10.1142/9789811202391\_0009.
-    </a>
-   </div>
-   <div class="ref-item">
-    <span class="ref-num">
-     [4]
-    </span>
-    Aleskerov, F., Shvydun, S. and Meshcheryakova, N. (2021). New centrality measures in networks: how to take into account the parameters of the nodes and group influence of nodes to nodes (1st ed.). Chapman and Hall/CRC.
-    <a href="https://doi.org/10.1201/9781003203421">
-     doi: 10.1201/9781003203421.
-    </a>
-   </div>
-  </div>
-  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
-  <p style="text-align: right; font-size: 0.9em; color: #555;">
-   Notice an issue on this page?
-   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
-    Report it here.
-   </a>
-  </p>
- </body>
-</html>
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  Short-Range Interaction Centrality (SRIC)
+ </i>
+ index, originally called the key-borrower index (KBI), is a power index based on the concept of individual and group influence of nodes in a network [2, 3, 4]. Each node \(i\) is assumed to have an individual threshold of influence \(q_i\), which represents the level at which this node becomes affected. This threshold can be specified externally based on domain knowledge or determined from the network structure, for instance, as a function of the degree of each node. A group of nodes \(\Omega(i) \subset \mathcal{N}\) is called
+ <i>
+  critical
+ </i>
+ for node \(i\) if their collective influence exceeds the threshold \(q_i\), i.e.,
+ <br/>
+ \begin{equation*}
+ <br/>
+ \sum_{k \in \Omega(i)} a_{ki} \geq q_i.
+ <br/>
+ \end{equation*}
+ <br/>
+ A node \(k\) is termed
+ <i>
+  pivotal
+ </i>
+ for the group \(\Omega(i)\) if its removal renders the group non-critical. The set of pivotal members of \(\Omega(i)\) is denoted by \(\Omega^{p}(i)\).
+ <br/>
+ The SRIC index considers only direct and indirect influence through one intermediate node, i.e., short-range influence. Formally, the initial adjacency matrix \(A\) is transformed into a matrix of direct influence \(P\), where \(D\) is the out-degree matrix. The indirect influence \(p_{ihj}\) of node \(i\) on node \(j\) via an intermediate node \(h\) is defined as
+ <br/>
+ \begin{equation*}
+ <br/>
+ p_{ihj} =
+ <br/>
+ \begin{cases}
+ <br/>
+ \frac{\min(a_{ih}, a_{hj})}{D_{kk}}, &amp; \text{if } a_{ih} &gt; 0, \ a_{hj} &gt; 0, \ i \neq j \neq h, \\
+ <br/>
+ 0, &amp; \text{otherwise}.
+ <br/>
+ \end{cases}
+ <br/>
+ \end{equation*}
+ <br/>
+ The SRIC centrality of node \(i\) is defined as the average of the normalized short-range influence \(χ_i(j)\) of node \(i\) on all nodes \(j \in \mathcal{N}\). This is evaluated by considering all critical groups \(\Omega_k(j)\) in which node \(i\) is pivotal:
+ <br/>
+ \begin{equation*}
+ <br/>
+ c_{SRIC}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}}  \frac{χ_i(j)}{\sum_{h \in \mathcal{N}} χ_h(j)},
+ <br/>
+ \end{equation*}
+ <br/>
+ where
+ <br/>
+ \begin{equation*}
+ <br/>
+ χ_i(j) = \sum_{k: i \in \Omega^{p}_k(j)} \frac{p_{ij} + \sum_{h \in \Omega_k(j)} p_{ihj}}{|\Omega_k(j)|}.
+ <br/>
+ \end{equation*}
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Aleskerov, F., Andrievskaya, I. and Permjakova, E. (2014), Key Borrowers Detected by the Intensities of Their Short-Range Interactions (2014). Higher School of Economics Research Paper No. WP BRP 33/FE/2014.
+  <a href="https://doi.org/10.2139/ssrn.2479272">
+   doi: 10.2139/ssrn.2479272.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Aleskerov, F. , Andrievskaya, I. , Nikitina A. and Shvydun, S. (2020). Key Borrowers Detected by the Intensities of Their Interactions. Handbook of Financial Econometrics, Mathematics, Statistics, and Machine Learning (In 4 Volumes), 355-389 World Scientific: Singapore Volume 1, Chapter 9.
+  <a href="https://doi.org/10.1142/9789811202391_0009">
+   doi: 10.1142/9789811202391\_0009.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Aleskerov, F., Shvydun, S. and Meshcheryakova, N. (2021). New centrality measures in networks: how to take into account the parameters of the nodes and group influence of nodes to nodes (1st ed.). Chapman and Hall/CRC.
+  <a href="https://doi.org/10.1201/9781003203421">
+   doi: 10.1201/9781003203421.
+  </a>
+ </div>
+</div>
