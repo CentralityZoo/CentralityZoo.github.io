@@ -1,6 +1,6 @@
 ---
-title: Random walk centrality (RWC)
-permalink: /random-walk-centrality-rwc/
+title: Shell clustering coefficient (SCC)
+permalink: /shell-clustering-coefficient-scc/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   Random walk centrality (RWC)
+   Shell clustering coefficient (SCC)
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,41 +24,43 @@ search: true
  </head>
  <body>
   <h2>
-   Random walk centrality (RWC)
+   Shell clustering coefficient (SCC)
   </h2>
   <p>
    <br/>
    The
    <i>
-    random walk centrality
+    shell clustering coefficient
    </i>
-   (RWC) measures how quickly a node can be reached by information diffusing randomly through a network, accounting for all paths rather than only shortest paths [2].
-   <br/>
-   Let \(A\) be the adjacency matrix of a network and \(D = \mathrm{diag}(d_1, \dots, d_N)\) the degree matrix. The transition probability matrix of a classical random walk is
-   <br/>
-   \[
-   <br/>
-   M = D^{-1} A,
-   <br/>
-   \]
-   <br/>
-   so that a walker at node \(i\) moves to a randomly chosen neighbor at each step.
-   <br/>
-   Let \(P_{ij}(t)\) denote the probability that a walker starting at \(i\) is at node \(j\) after \(t\) steps, and let \(P_i^\infty = d_i / \sum_j d_j\) be the stationary probability. The random-walk centrality of node \(i\) is defined as
-   <br/>
-   \[
-   <br/>
-   c_{\rm RWC}(i) = \frac{P_i^\infty}{\sum_{t=0}^{\infty} \bigl(P_{ii}(t) - P_i^\infty\bigr)} = \frac{P_i^\infty}{τ_i},
-   <br/>
-   \]
-   <br/>
-   where \(τ_i\) is the
+   (SCC) quantifies node influence by considering the hierarchical similarity between a node and its neighbors [2]. Zareie et al. introduce the
    <i>
-    characteristic relaxation time
+    shell vector
    </i>
-   of node \(i\), i.e., the expected time for a random walker starting at \(i\) to approach its stationary distribution.
+   of node \(i\) as
    <br/>
-   Nodes with larger RWC are, on average, reached more quickly by diffusive processes and thus serve as more effective recipients in network communication.
+   \[
+   <br/>
+   sv(i) = \left(|N_{ks}^{(1)}(i)|,...,|N_{ks}^{(f)}(i)|\right),
+   <br/>
+   \]
+   <br/>
+   where \(|N_{ks}^{(k)}(i)|\) is the number of neighbors of node \(i\) belonging to hierarchy \(k\) with respect to the \(k\)-shell centrality, and \(f\) is the maximum hierarchy in the network.
+   <br/>
+   The
+   <i>
+    shell clustering coefficient
+   </i>
+   \(SCC(i)\) of node \(i\) is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   SCC(i) = \sum_{j \in \mathcal{N}(i)} \left[ 2 - \mathrm{corr}[sv(i), sv(j)] + \left(\frac{2 d_j}{\max_l d_l} + 1 \right) \right],
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(\mathrm{corr}[sv(i), sv(j)]\) is the Pearson correlation between the shell vectors of nodes \(i\) and \(j\), and \(d_j\) is the degree of neighbor \(j\).
+   <br/>
+   Intuitively, a high correlation between node \(i\) and its neighbors, combined with neighbors of low degree, negatively affects the spreading ability of node \(i\).
    <br/>
   </p>
   <h3>
@@ -78,9 +80,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Noh, J. D., &amp; Rieger, H. (2004). Random walks on complex networks. Physical review letters, 92(11), 118701.
-    <a href="https://doi.org/10.1103/PhysRevLett.92.118701">
-     doi: 10.1103/PhysRevLett.92.118701.
+    Zareie, A., Sheikhahmadi, A., Jalili, M., &amp; Fasaei, M. S. K. (2020). Finding influential nodes in social networks based on neighborhood correlation coefficient. Knowledge-based systems, 194, 105580.
+    <a href="https://doi.org/10.1016/j.knosys.2020.105580">
+     doi: 10.1016/j.knosys.2020.105580.
     </a>
    </div>
   </div>

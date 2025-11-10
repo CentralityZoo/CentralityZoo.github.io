@@ -1,0 +1,108 @@
+---
+title: Rapid identifying method (RIM)
+permalink: /rapid-identifying-method-rim/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Rapid identifying method (RIM)
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Rapid identifying method (RIM)
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    Rapid identifying method
+   </i>
+   (RIM) is designed to efficiently identify a fraction of highly influential nodes based on node degree and network structure [2]. The core idea of RIM is to start from randomly selected seed nodes and iteratively move toward neighbors with higher degrees, under the assumption that high-degree nodes are more likely to play key roles in spreading dynamics. By exploring multiple such paths and selecting the most connected nodes discovered, RIM balances randomness with structural importance.
+   <br/>
+   The method proceeds as follows:
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     <i>
+      Seed Selection:
+     </i>
+     randomly select \(m\) seed nodes \(s_i\), where \(i = 1, 2, \dots, m\).
+    </li>
+    <br/>
+    <li>
+     <i>
+      Greedy Expansion:
+     </i>
+     for each seed node \(s_i\), iteratively select its highest-degree neighbor (excluding already selected nodes) for \(j\) steps:
+    \[
+        s_i^{m(1)},\, s_i^{m(2)},\, \dots,\, s_i^{m(j)}.
+    \]
+    If multiple neighbors share the same highest degree, one is chosen at random. This process generates a total of \(m \times j\) candidate nodes.
+    </li>
+    <br/>
+    <li>
+     <i>
+      Target Selection:
+     </i>
+     rank the \(m \times j\) candidate nodes by degree and select the top \(j\) nodes as the final target set \(T_j\).
+    </li>
+    <br/>
+    <li>
+     Repeat steps 1-3 for \(n\) independent iterations.
+    </li>
+    <br/>
+   </ol>
+   <br/>
+   The final RIM score of each node is determined by counting the number of times it appears in the top \(j\) sets across all \(n\) iterations, with nodes appearing more frequently considered more influential.
+   <br/>
+   Song et al. [2] consider the parameters \(m = 1\), \(n = 500\), and \(j \in \{5, 10\}\). The performance of RIM is typically evaluated using the susceptible-infected-recovered (SIR) model and compared against four classical centrality measures.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Song, B., Jiang, G. P., Song, Y. R., &amp; Xia, L. L. (2015). Rapid identifying high-influence nodes in complex networks. Chinese Physics B, 24(10), 100101.
+    <a href="https://doi.org/10.1088/1674-1056/24/10/100101">
+     doi: 10.1088/1674-1056/24/10/100101.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

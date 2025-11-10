@@ -1,7 +1,88 @@
 ---
-title: "PageRank"
+title: PageRank
 permalink: /pagerank/
 search: true
 ---
 
-<p>Page Coming Soon. We'll be updating this section shortly.</p>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   PageRank
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   PageRank
+  </h2>
+  <p>
+   <br/>
+   The
+   <i>
+    PageRank
+   </i>
+   algorithm evaluates the relative importance of nodes based on the concept of a random walk with restart [2, 3]. According to PageRank, the importance \(c_{PR}(i)\) of node \(i\) depends on the probability that it be visited by a random walker, that is,
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{PR}(i) = α \sum_{j=1}^{N} a_{ji} \frac{c_{PR}(j)}{\sum_{k=1}^{N} a_{jk}} + \frac{1 - α}{N},
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(a_{ji}\) denotes the element of the adjacency matrix \(A\) indicating a directed link from node \(j\) to node \(i\).
+   <br/>
+   The parameter \(α \in [0,1]\) is the damping factor representing the probability that the random walker follows an outgoing link from the current node rather than teleporting to a randomly chosen node. In practice, \(α\) is typically set to \(0.85\), balancing exploration through the network structure and random teleportation to ensure ergodicity and convergence of the ranking vector. When \(α = 1\), the walker never teleports, and the process reduces to a pure random walk on the network, with the PageRank vector given by the principal eigenvector of the column-normalized adjacency matrix \(P\), where \(P_{ij} = a_{ji} / \sum_{k=1}^{N} a_{jk}\). The PageRank score \(c_{PR}(i)\) of node \(i\) represents the stationary probability that a random walker occupies node \(i\) in the long-term limit.
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Newman, M. (2018). Networks. Oxford university press.
+    <a href="https://doi.org/10.1093/oso/9780198805090.001.0001">
+     doi: 10.1093/oso/9780198805090.001.0001.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Brin, S., &amp; Page, L. (1998). The anatomy of a large-scale hypertextual web search engine. Computer networks and ISDN systems, 30(1-7), 107-117.
+    <a href="https://doi.org/10.1016/S0169-7552(98)00110-X">
+     doi: 10.1016/S0169-7552(98)00110-X.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

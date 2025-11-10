@@ -1,0 +1,129 @@
+---
+title: Shapley value
+permalink: /shapley-value/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Shapley value
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Shapley value
+  </h2>
+  <p>
+   <br/>
+   A class of game-theoretic network centrality measures based on the
+   <i>
+    Shapley value
+   </i>
+   from the cooperative game theory is discussed in [2]. The Shapley value \(SV(i)\) of node \(i\) is defined as the average marginal contribution of \(i\) to all possible coalitions of nodes \(C \subseteq \mathcal{N} \setminus \{i\}\):
+   <br/>
+   \begin{equation*}
+   <br/>
+   SV(i) = \sum_{C \subseteq \mathcal{N} \setminus \{i\}} \frac{(|C|-1)!(|\mathcal{N}|-|C|)!}{|\mathcal{N}|!} \left[ v(C \cup \{ i \}) - v(C) \right],
+   <br/>
+   \end{equation*}
+   <br/>
+   where \(v\) is a
+   <i>
+    characteristic function
+   </i>
+   that assigns to every coalition \(C\) a real number representing the value or performance of the coalition [3].
+   <br/>
+   Michalak et al. [2] proposed efficient linear-time algorithms to compute Shapley value-based centralities for specific definitions of the characteristic function \(v\):
+   <br/>
+   <ol>
+    <br/>
+    <li>
+     <i>
+      Game 1:
+     </i>
+     \(v(C)\) is the number of nodes reachable from the coalition \(C\) in at most one hop. In that case, the Shapley value \(SV_1(i)\) of node \(i\) reduces to 
+    \begin{equation*} 
+        SV_1(i) = \frac{1}{1+d_i} + \sum_{j \in \mathcal{N}(i)} \frac{1}{1+d_j},
+    \end{equation*}
+    where \(d_i\) is the degree of node \(i\).
+    </li>
+    <br/>
+    <li>
+     <i>
+      Game 2:
+     </i>
+     \(v(C)\) is the number of nodes that are either in \(C\) or adjacent to at least \(k\) neighbors in \(C\).  In that case, the Shapley value \(SV_2(i)\) of node \(i\) reduces to 
+    \begin{equation*} 
+        SV_2(i) = \min \left(1, \frac{k}{1+d_i}\right) + \sum_{j \in \mathcal{N}(i)} \max \left(0, \frac{d_j - k + 1}{d_j(1+d_j)}\right).
+    \end{equation*}
+    For \(k = 1\), this game is equivalent to Game 1.
+    </li>
+    <br/>
+    <li>
+     <i>
+      Game 3:
+     </i>
+     \(v(C)\) is the number of nodes that are at most \(d_{\max}\) hops away from \(C\).  In that case, the Shapley value \(SV_3(i)\) of node \(i\) reduces to 
+    \begin{equation*} 
+        SV_3(i) = \frac{1}{1+|s_i(d_{\max})|} + \sum_{j \in s_i(d_{\max})} \frac{1}{1+|s_j(d_{\max})|},
+    \end{equation*}
+    where \(s_i(d_{\max})\) denotes the set of nodes within distance \(d_{\max}\) from node \(i\).
+    </li>
+    <br/>
+   </ol>
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Michalak, T. P., Aadithya, K. V., Szczepanski, P. L., Ravindran, B., &amp; Jennings, N. R. (2013). Efficient computation of the Shapley value for game-theoretic network centrality. Journal of Artificial Intelligence Research, 46, 607-650.
+    <a href="https://doi.org/10.5555/2512538.2512553">
+     doi: 10.5555/2512538.2512553.
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [3]
+    </span>
+    Shapley, L. S. (1953). A value for n-person games. In Kuhn, H., &amp; Tucker, A. (Eds.), In Contributions to the Theory of Games, volume II, pp. 307-317. Princeton University Press.
+    <a href="https://doi.org/10.1515/9781400881970-018">
+     doi: 10.1515/9781400881970-018.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>

@@ -1,6 +1,6 @@
 ---
-title: ProfitLeader
-permalink: /profitleader/
+title: Seeley’s index
+permalink: /seeley-s-index/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   ProfitLeader
+   Seeley’s index
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,24 +24,18 @@ search: true
  </head>
  <body>
   <h2>
-   ProfitLeader
+   Seeley’s index
   </h2>
   <p>
    <br/>
    <i>
-    ProfitLeader
+    Seeley’s index
    </i>
-   (PL) centrality evaluates node importance based on the capacity to provide resources to neighbors [2]. For each neighbor \(j \in \mathcal{N}(i)\), the available resource from \(i\) to \(j\) is denoted \(AR(i,j)\), and the sharing probability based on similarity is \(SP(i,j)\). The centrality of \(i\) is defined as
+   [2] is a counterpart to eigenvector centrality that modifies how a node distributes its influence. While eigenvector centrality assigns a node's importance recursively based on the sum of the centralities of its neighbors, effectively contributing fully to each neighbor, Seeley’s index assumes that a node divides its influence equally among its successors.
    <br/>
-   \[
+   Formally, each row of the adjacency matrix \(A\) is normalized by the node's out-degree, producing a row-stochastic matrix \(S = D^{-1} A\), where \(D\) is the diagonal matrix of out-degrees. The Seeley index is the principal eigenvector of \(S\), corresponding to the stationary distribution of the Markov chain defined by \(S\).
    <br/>
-   c_{PL}(i) = \sum_{j \in \mathcal{N}(i)} AR(i,j) \cdot SP(i,j)
-   <br/>
-   = \sum_{j \in \mathcal{N}(i)} \left( |\mathcal{N}(i)| {+} \sum_{k \in \mathcal{N}(i) \setminus \mathcal{N}(j)} |\mathcal{N}(k)| \right) \cdot \frac{|\mathcal{N}(i) {\cap} \mathcal{N}(j)|}{|\mathcal{N}(i) {\cup} \mathcal{N}(j)|},
-   <br/>
-   \]
-   <br/>
-   where \(\mathcal{N}(i)\) denotes the set of neighbors of \(i\). Nodes achieve high centrality scores if they provide substantial resources to many similar neighbors, reflecting both connectivity and neighborhood overlap.
+   If the graph is undirected, the stationary distribution of the Markov chain defined by \(S\) is proportional to node degrees. Therefore, Seeley’s index coincides with degree centrality in this case.
    <br/>
   </p>
   <h3>
@@ -61,9 +55,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Yu, Z., Shao, J., Yang, Q., &amp; Sun, Z. (2019). Profitleader: Identifying leaders in networks with profit capacity. World Wide Web, 22(2), 533-553.
-    <a href="https://doi.org/10.1007/s11280-018-0537-6">
-     doi: 10.1007/s11280-018-0537-6.
+    Seeley, J. R. (1949). The net of reciprocal influence; a problem in treating sociometric data. Canadian Journal of Psychology / Revue canadienne de psychologie, 3(4), 234-240.
+    <a href="https://doi.org/10.1037/h0084096">
+     doi: 10.1037/h0084096.
     </a>
    </div>
   </div>

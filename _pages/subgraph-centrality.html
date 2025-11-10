@@ -1,6 +1,6 @@
 ---
-title: ProfitLeader
-permalink: /profitleader/
+title: Subgraph centrality
+permalink: /subgraph-centrality/
 search: true
 ---
 
@@ -8,7 +8,7 @@ search: true
  <head>
   <meta charset="utf-8"/>
   <title>
-   ProfitLeader
+   Subgraph centrality
   </title>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
   </script>
@@ -24,24 +24,30 @@ search: true
  </head>
  <body>
   <h2>
-   ProfitLeader
+   Subgraph centrality
   </h2>
   <p>
    <br/>
    <i>
-    ProfitLeader
+    Subgraph centrality
    </i>
-   (PL) centrality evaluates node importance based on the capacity to provide resources to neighbors [2]. For each neighbor \(j \in \mathcal{N}(i)\), the available resource from \(i\) to \(j\) is denoted \(AR(i,j)\), and the sharing probability based on similarity is \(SP(i,j)\). The centrality of \(i\) is defined as
+   , also known as
+   <i>
+    communicability centrality
+   </i>
+   , quantifies the extent to which a node participates in all subgraphs of a network. It is computed based on the number of closed walks of different lengths, where a walk is considered
+   <i>
+    closed
+   </i>
+   if its starting and ending nodes coincide [2]. The centrality \(c_s(i)\) of node \(i\) is the sum of weighted closed walks of all lengths starting and ending at node \(i\)
    <br/>
-   \[
+   \begin{equation*}
    <br/>
-   c_{PL}(i) = \sum_{j \in \mathcal{N}(i)} AR(i,j) \cdot SP(i,j)
+   c_{s}(i) = \sum_{k=0}^{\infty}{\frac{(A^k)_{ii}}{k!}}=[e^A]_{ii}=\sum_{j=1}^{N}{\left( v_j(i) \right)^2e^{λ_j}},
    <br/>
-   = \sum_{j \in \mathcal{N}(i)} \left( |\mathcal{N}(i)| {+} \sum_{k \in \mathcal{N}(i) \setminus \mathcal{N}(j)} |\mathcal{N}(k)| \right) \cdot \frac{|\mathcal{N}(i) {\cap} \mathcal{N}(j)|}{|\mathcal{N}(i) {\cup} \mathcal{N}(j)|},
+   \end{equation*}
    <br/>
-   \]
-   <br/>
-   where \(\mathcal{N}(i)\) denotes the set of neighbors of \(i\). Nodes achieve high centrality scores if they provide substantial resources to many similar neighbors, reflecting both connectivity and neighborhood overlap.
+   where \(A\) denotes the adjacency matrix of the graph \(G\), \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) associated with the eigenvalue \(λ_j\) of \(A\).
    <br/>
   </p>
   <h3>
@@ -61,9 +67,9 @@ search: true
     <span class="ref-num">
      [2]
     </span>
-    Yu, Z., Shao, J., Yang, Q., &amp; Sun, Z. (2019). Profitleader: Identifying leaders in networks with profit capacity. World Wide Web, 22(2), 533-553.
-    <a href="https://doi.org/10.1007/s11280-018-0537-6">
-     doi: 10.1007/s11280-018-0537-6.
+    Estrada, E., &amp; Rodríguez-Velázquez, J. A. (2005). Subgraph centrality in complex networks. Physical Review E, 71(5).
+    <a href="https://doi.org/10.1103/PhysRevE.71.056103">
+     doi: 10.1103/PhysRevE.71.056103.
     </a>
    </div>
   </div>

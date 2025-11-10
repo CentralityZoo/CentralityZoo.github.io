@@ -1,0 +1,110 @@
+---
+title: Randomized shortest paths (RSP) net betweenness centrality
+permalink: /randomized-shortest-paths-rsp-net-betweenness-centrality/
+search: true
+---
+
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Randomized shortest paths (RSP) net betweenness centrality
+  </title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+  </script>
+  <script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+   body { font-family: Georgia, serif; margin: 36px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+  </style>
+ </head>
+ <body>
+  <h2>
+   Randomized shortest paths (RSP) net betweenness centrality
+  </h2>
+  <p>
+   <br/>
+   <i>
+    Randomized shortest paths (RSP) net betweenness centrality
+   </i>
+   is a variation of the simple RSP betweenness centrality specifically designed for directed networks [2]. Unlike standard RSP betweenness, which sums the total flow of random walkers along edges, the net variant considers the
+   <i>
+    net flow
+   </i>
+   , so that opposing flows along the same edge partially cancel each other. This can provide a more meaningful measure of node importance in directed networks where bidirectional flows exist.
+   <br/>
+   The RSP net betweenness of node \(i\), denoted \(c_{\mathrm{RSPnet}}(i)\), is defined as
+   <br/>
+   \begin{equation*}
+   <br/>
+   c_{\mathrm{RSPnet}}(i) = \sum_{s=1}^{N}\sum_{t=1}^{N} \sum_{(i,j) \in \mathcal{L}} \left| \bar{η}_{ij}(s,t) - \bar{η}_{ji}(s,t) \right|
+   <br/>
+   = \sum_{(i,j) \in \mathcal{L}} \bar{η}_{ij}^{\mathrm{net}},
+   <br/>
+   \end{equation*}
+   <br/>
+   where
+   <br/>
+   \[
+   <br/>
+   \bar{η}_{ij}^{\mathrm{net}} = e^T \big| N^{ij} - N^{ji} \big| e,
+   <br/>
+   \quad
+   <br/>
+   N^{ij} = w_{ij} \left( \frac{z_{si} z_{jt}}{z_{st}} - \frac{z_{ti} z_{jt}}{z_{tt}} \right),
+   <br/>
+   \]
+   <br/>
+   and \(z_{st}\) are the elements of the fundamental matrix
+   <br/>
+   \[
+   <br/>
+   Z = (I - W)^{-1} = \left( I - D^{-1}A \odot e^{-β C} \right)^{-1}.
+   <br/>
+   \]
+   <br/>
+   Here, \(A\) is the adjacency matrix, \(D\) is the diagonal matrix of row sums of \(A\), and \(C\) is the cost matrix, whose elements represent the traversal cost, or distance, between adjacent nodes.
+   <br/>
+   In the limit \(β \to 0\), the RSP net betweenness converges to the
+   <i>
+    current flow betweenness
+   </i>
+   centrality, highlighting the equivalence between random-walk and electrical-flow interpretations of betweenness in this regime [2].
+   <br/>
+  </p>
+  <h3>
+   References
+  </h3>
+  <div class="references">
+   <div class="ref-item">
+    <span class="ref-num">
+     [1]
+    </span>
+    Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+    <a href="https://doi.org/10.48550/arXiv.2511.05122">
+     https://doi.org/10.48550/arXiv.2511.05122
+    </a>
+   </div>
+   <div class="ref-item">
+    <span class="ref-num">
+     [2]
+    </span>
+    Kivimäki, I., Lebichot, B., Saramäki, J., &amp; Saerens, M. (2016). Two betweenness centrality measures based on randomized shortest paths. Scientific reports, 6(1), 19668.
+    <a href="https://doi.org/10.1038/srep19668">
+     doi: 10.1038/srep19668.
+    </a>
+   </div>
+  </div>
+  <hr style="margin-top: 2em; border: none; border-top: 1px solid #ddd;"/>
+  <p style="text-align: right; font-size: 0.9em; color: #555;">
+   Notice an issue on this page?
+   <a href="https://forms.gle/5v2gEZE6ibaQupBv6" style="color: #004499;" target="_blank">
+    Report it here.
+   </a>
+  </p>
+ </body>
+</html>
