@@ -1,0 +1,50 @@
+---
+title: Epidemic centrality
+permalink: /epidemic-centrality/
+search: true
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+</style>
+<p>
+ <i>
+  Epidemic centrality
+ </i>
+ quantifies the expected influence of a node in SIR (Susceptible–Infected–Recovered) processes by averaging the epidemic impact of an outbreak originating from that node over the full range of infection and recovery probabilities [2]. In the SIR model, each node can be in one of three states: susceptible (S), infected (I) or recovered (R). An infected node transmits the infection to each susceptible neighbor with probability \(β\) and recovers independently with probability \(μ\). The process continues until no infected nodes remain, producing a final outbreak size that depends on both the initially infected node and the epidemic parameters \((β, μ)\).  The epidemic centrality \(c_{EC}(i)\) of node \(i\) is defined as\begin{equation*}c_{EC}(i) = \int_0^1 \int_0^1 w(p, q) \, X_i(p,q) \, dp \, dq,\end{equation*}where \(X_i(p,q)\) is the expected fraction of nodes infected in an SIR process starting from node \(i\) with infection probability \(p = β\) and recovery probability \(q = μ\), while \(w(p,q)\) is a nonuniform weight function encoding the relative importance of different epidemic regimes \((p, q)\).  Šikić
+ <i>
+  et al.
+ </i>
+ [2] propose using a product of beta distributions for the weight:\begin{equation*}w(p,q) = f_{α,α}(p) \, f_{α,α}(q),\end{equation*}with\begin{equation*}f_{α,β}(x) = \frac{\Gamma(α + β)}{\Gamma(α) \Gamma(β)} x^{α-1} (1-x)^{β-1}, \quad 0 &lt; x &lt; 1,\end{equation*}where \(\Gamma(\cdot)\) is the gamma function. For \(α = β\), the distribution \(f_{α,α}(x)\) is symmetric around its mean \(x = 1/2\). As a special case, \(α = β = 1\) yields a uniform distribution over \([0,1]\).Epidemic centrality thus quantifies the average epidemic impact of node \(i\), under the assumption that the epidemic starts from \(i\), across all considered epidemic regimes. Nodes with higher epidemic centrality are expected to generate larger outbreaks on average, across the range of infection and recovery probabilities considered. The epidemic centrality captures not only central nodes but also structurally peripheral nodes that may nonetheless exert significant influence on epidemic dynamics.
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Šikić, M., Lančić, A., Antulov-Fantulin, N., &amp; Štefančić, H. (2013). Epidemic centrality—is there an underestimated epidemic impact of network peripheral nodes?. The European Physical Journal B, 86(10), 440.
+  <a href="https://doi.org/10.1140/epjb/e2013-31025-5">
+   doi: 10.1140/epjb/e2013-31025-5.
+  </a>
+ </div>
+</div>
