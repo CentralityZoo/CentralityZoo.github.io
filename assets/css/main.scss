@@ -68,11 +68,11 @@ body {
 }
 
 .page {
-  max-width: 1200px;      /* max width on large screens */
-  width: 90%;             /* proportional to screen width */
-  padding-left: 20px;     /* fixed padding, avoids cutoff */
-  padding-right: 20px;
-  margin-left: auto;
+  width: 80%;            /* smaller than before → more space on sides */
+  max-width: 1200px;     /* stops it from getting too wide */
+  padding-left: 40px;    /* larger side padding */
+  padding-right: 40px;
+  margin-left: auto;     /* keeps it centered */
   margin-right: auto;
-  box-sizing: border-box; /* include padding in width */
+  box-sizing: border-box;
 }
