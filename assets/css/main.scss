@@ -68,10 +68,11 @@ body {
 }
 
 .page {
-  width: 90vw;           /* 90% of the viewport width */
-  max-width: 95vw;       /* optional: prevent overflow on very large screens */
-  padding-left: 2.5vw;   /* proportional side padding */
-  padding-right: 2.5vw;
+  max-width: 1200px;      /* max width on large screens */
+  width: 90%;             /* proportional to screen width */
+  padding-left: 20px;     /* fixed padding, avoids cutoff */
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box; /* include padding in width */
 }
