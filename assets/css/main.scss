@@ -66,3 +66,12 @@ body {
   /*font-size: 0.85em;  Optional: slightly smaller text */
   /*text-align: center; Optional: keep it centered */
 }
+
+.page {
+  width: 90vw;           /* 90% of the viewport width */
+  max-width: 95vw;       /* optional: prevent overflow on very large screens */
+  padding-left: 2.5vw;   /* proportional side padding */
+  padding-right: 2.5vw;
+  margin-left: auto;
+  margin-right: auto;
+}
