@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   onion decomposition
@@ -38,7 +37,6 @@ search: true
   <li>
    Initialize the core index \(k = 1\) and the layer index \(\ell = 1\). Compute the degree \(d_i\) of each node \(i\) in the network \(G\).
   </li>
-  <br/>
   <li>
    Identify all nodes with degree \(d_i \le k\). Assign to each such node a
    <i>
@@ -50,21 +48,14 @@ search: true
    </i>
    \(\ell_i = \ell\), then remove them from the network and update the degrees of their neighbors.
   </li>
-  <br/>
   <li>
    Increment \(\ell\) by 1. Repeat step 2 until no nodes with degree \(d_i \le k\) remain in the network.
   </li>
-  <br/>
   <li>
    Update \(k\) to the minimal degree among the remaining nodes and repeat steps 2-3 until all nodes have been assigned both a core index \(c_i\) and a layer index \(\ell_i\).
   </li>
-  <br/>
  </ol>
- <br/>
- Each node \(i\) in the onion decomposition is characterized by the pair \((c_i, \ell_i)\), where \(c_i\) is the coreness and \(\ell_i\) the removal iteration within its core. The pair \((c_i, \ell_i)\) captures both the core hierarchy and intra-core connectivity, with higher values associated with nodes in denser regions of the network.
- <br/>
- The onion decomposition has been applied in a variety of contexts [3], including detecting atypical structures within \(k\)-cores of empirical networks [2], ranking nodes according to their structural position in the network [4, 5, 6], and designing heuristics for NP-hard optimization problems [7]. Other applications include using the OD to parameterize dynamical models of water distribution [8] and organizational networks [9], as well as for retrieving the underlying filamentary structure of the cosmic web [10].
- <br/>
+ Each node \(i\) in the onion decomposition is characterized by the pair \((c_i, \ell_i)\), where \(c_i\) is the coreness and \(\ell_i\) the removal iteration within its core. The pair \((c_i, \ell_i)\) captures both the core hierarchy and intra-core connectivity, with higher values associated with nodes in denser regions of the network.The onion decomposition has been applied in a variety of contexts [3], including detecting atypical structures within \(k\)-cores of empirical networks [2], ranking nodes according to their structural position in the network [4, 5, 6], and designing heuristics for NP-hard optimization problems [7]. Other applications include using the OD to parameterize dynamical models of water distribution [8] and organizational networks [9], as well as for retrieving the underlying filamentary structure of the cosmic web [10].
 </p>
 <h3>
  References
