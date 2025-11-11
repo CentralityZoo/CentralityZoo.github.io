@@ -1,0 +1,165 @@
+---
+title: Onion decomposition (OD)
+permalink: /onion-decomposition-od/
+search: true
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+</style>
+<p>
+ <br/>
+ The
+ <i>
+  onion decomposition
+ </i>
+ (OD) extends the
+ <i>
+  k
+ </i>
+ -core decomposition by assigning to each node not only a
+ <i>
+  core index
+ </i>
+ but also a
+ <i>
+  layer index
+ </i>
+ that records the iteration at which the node is removed during the peeling process [2]. The OD is obtained through the following steps:
+ <br/>
+ <ol>
+  <br/>
+  <li>
+   Initialize the core index \(k = 1\) and the layer index \(\ell = 1\). Compute the degree \(d_i\) of each node \(i\) in the network \(G\).
+  </li>
+  <br/>
+  <li>
+   Identify all nodes with degree \(d_i \le k\). Assign to each such node a
+   <i>
+    core index
+   </i>
+   \(c_i = k\) and a
+   <i>
+    layer index
+   </i>
+   \(\ell_i = \ell\), then remove them from the network and update the degrees of their neighbors.
+  </li>
+  <br/>
+  <li>
+   Increment \(\ell\) by 1. Repeat step 2 until no nodes with degree \(d_i \le k\) remain in the network.
+  </li>
+  <br/>
+  <li>
+   Update \(k\) to the minimal degree among the remaining nodes and repeat steps 2-3 until all nodes have been assigned both a core index \(c_i\) and a layer index \(\ell_i\).
+  </li>
+  <br/>
+ </ol>
+ <br/>
+ Each node \(i\) in the onion decomposition is characterized by the pair \((c_i, \ell_i)\), where \(c_i\) is the coreness and \(\ell_i\) the removal iteration within its core. The pair \((c_i, \ell_i)\) captures both the core hierarchy and intra-core connectivity, with higher values associated with nodes in denser regions of the network.
+ <br/>
+ The onion decomposition has been applied in a variety of contexts [3], including detecting atypical structures within \(k\)-cores of empirical networks [2], ranking nodes according to their structural position in the network [4, 5, 6], and designing heuristics for NP-hard optimization problems [7]. Other applications include using the OD to parameterize dynamical models of water distribution [8] and organizational networks [9], as well as for retrieving the underlying filamentary structure of the cosmic web [10].
+ <br/>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Hébert-Dufresne, L., Grochow, J. A., &amp; Allard, A. (2016). Multi-scale structure and topological anomaly detection via a new network statistic: The onion decomposition. Scientific reports, 6(1), 31708.
+  <a href="https://doi.org/10.1038/srep31708">
+   doi: 10.1038/srep31708.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Thibault, F., Hébert-Dufresne, L., &amp; Allard, A. (2024). On the uniform sampling of the configuration model with centrality constraints. arXiv preprint arXiv:2409.20493.
+  <a href="https://doi.org/10.48550/arXiv.2409.20493">
+   doi: 10.48550/arXiv.2409.20493.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [4]
+  </span>
+  Young, J. G., St-Onge, G., Laurence, E., Murphy, C., Hébert-Dufresne, L., &amp; Desrosiers, P. (2019). Phase transition in the recoverability of network history. Physical Review X, 9(4), 041056.
+  <a href="https://doi.org/10.1103/PhysRevX.9.041056">
+   doi: 10.1103/PhysRevX.9.041056.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [5]
+  </span>
+  Mimar, S., &amp; Ghoshal, G. (2022). A sampling-guided unsupervised learning method to capture percolation in complex networks. Scientific Reports, 12(1), 4147.
+  <a href="https://doi.org/10.1038/s41598-022-07921-x">
+   doi: 10.1038/s41598-022-07921-x.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [6]
+  </span>
+  Lu, Y., Huang, Y., Nie, J., Chen, Z., &amp; Xuan, Q. (2024). RK-CORE: An Established Methodology for Exploring the Hierarchical Structure within Datasets. In ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) (pp. 3150-3154). IEEE.
+  <a href="https://doi.org/10.1109/ICASSP48485.2024.10447791">
+   doi: 10.1109/ICASSP48485.2024.10447791.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [7]
+  </span>
+  García-Pérez, G., Allard, A., Serrano, M. Á., &amp; Boguñá, M. (2019). Mercator: uncovering faithful hyperbolic embeddings of complex networks. New Journal of Physics, 21(12), 123033.
+  <a href="https://doi.org/10.1088/1367-2630/ab57d2">
+   doi: 10.1088/1367-2630/ab57d2.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [8]
+  </span>
+  Zhou, X., Duenas‐Osorio, L., Doss‐Gollin, J., Liu, L., Stadler, L., &amp; Li, Q. (2023). Mesoscale modeling of distributed water systems enables policy search. Water Resources Research, 59(5), e2022WR033758.
+  <a href="https://doi.org/10.1029/2022WR033758">
+   doi: 10.1029/2022WR033758.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [9]
+  </span>
+  Hébert-Dufresne, L., St-Onge, G., Meluso, J., Bagrow, J., &amp; Allard, A. (2023). Hierarchical team structure and multidimensional localization (or siloing) on networks. Journal of Physics: Complexity, 4(3), 035002.
+  <a href="https://doi.org/10.1088/2632-072X/ace602">
+   doi: 10.1088/2632-072X/ace602.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [10]
+  </span>
+  Bonnaire, T., Aghanim, N., Decelle, A., &amp; Douspis, M. (2020). T-ReX: a graph-based filament detection method. Astronomy &amp; Astrophysics, 637, A18.
+  <a href="https://doi.org/10.1051/0004-6361/201936859">
+   doi: 10.1051/0004-6361/201936859.
+  </a>
+ </div>
+</div>
