@@ -17,8 +17,8 @@ logo: /assets/images/zoo4.png
 title: Zoo of Centralities
 email: s.shvydun@tudelft.nl
 description: A continually updated encyclopedia of centrality measures in complex networks
-twitter_username: username
-github_username: username
+url: "https://centralityzoo.github.io/"   
+baseurl: ""                       
 minimal_mistakes_skin: default
 css: ["custom"]
 search: true
