@@ -16,39 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   effective gravity model
  </i>
- (EGM) is a variant of the classical gravity model that incorporates precise radius and value information for each node [2]. The EGM score of node \(i\), denoted \(c_{\mathrm{EGM}}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{EGM}}(i) = \sum_{j:\, d_{ij} \le R_i} \frac{V_i V_j}{d_{ij}^2},
- <br/>
- \]
- <br/>
- where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(V_i\) is the entropy-based value information of node \(i\):
- <br/>
- \[
- <br/>
- V_i = \left(- \sum_{j \in L_i} \frac{d_j}{\sum_{u \in L_i} d_u} \log \frac{d_j}{\sum_{u \in L_i} d_u} \right) d_i,
- <br/>
- \]
- <br/>
- with \(d_i\) denoting the degree of node \(i\) and \(L_i = \mathcal{N}(i) \cup \{i\}\) representing its neighborhood including itself. Li and Xiao [2] assume that each node has a distinct influence radius \(R_i\), which depends on the relationship between the node and its farthest neighbor. Specifically, \(R_i\) is defined as
- <br/>
- \[
- <br/>
- R_i = \frac{\max_j d_{ij}}{1 + \sqrt{\frac{d_{\mathrm{max}}(i)}{d_i}}},
- <br/>
- \]
- <br/>
- where \(d_{\mathrm{max}}(i)\) is the average degree of nodes located at the maximum distance from node \(i\).
- <br/>
- The EGM index accounts for both the local connectivity (through \(V_i\)) and the effective spatial reach of each node (through \(R_i\)), providing a nuanced measure of node influence in the network.
- <br/>
+ (EGM) is a variant of the classical gravity model that incorporates precise radius and value information for each node [2]. The EGM score of node \(i\), denoted \(c_{\mathrm{EGM}}(i)\), is defined as\[c_{\mathrm{EGM}}(i) = \sum_{j:\, d_{ij} \le R_i} \frac{V_i V_j}{d_{ij}^2},\]where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(V_i\) is the entropy-based value information of node \(i\):\[V_i = \left(- \sum_{j \in L_i} \frac{d_j}{\sum_{u \in L_i} d_u} \log \frac{d_j}{\sum_{u \in L_i} d_u} \right) d_i,\]with \(d_i\) denoting the degree of node \(i\) and \(L_i = \mathcal{N}(i) \cup \{i\}\) representing its neighborhood including itself. Li and Xiao [2] assume that each node has a distinct influence radius \(R_i\), which depends on the relationship between the node and its farthest neighbor. Specifically, \(R_i\) is defined as\[R_i = \frac{\max_j d_{ij}}{1 + \sqrt{\frac{d_{\mathrm{max}}(i)}{d_i}}},\]where \(d_{\mathrm{max}}(i)\) is the average degree of nodes located at the maximum distance from node \(i\).The EGM index accounts for both the local connectivity (through \(V_i\)) and the effective spatial reach of each node (through \(R_i\)), providing a nuanced measure of node influence in the network.
 </p>
 <h3>
  References

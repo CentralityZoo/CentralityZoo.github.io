@@ -16,35 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   gateway coefficient
  </i>
- quantifies a node’s role in connecting different network modules by combining information about community structure and nodal centrality [2]. It extends the participation coefficient by introducing a weight that reflects the “importance” of the node’s intermodular connections.
- <br/>
- Assume that the network \(G\) has a community structure consisting of \(K\) communities \(C_1, \ldots, C_K\). The gateway coefficient of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{gateway}}(i) = 1 - \sum_{s=1}^{K}
- <br/>
- \left( \frac{d_{is}}{d_i} \right)^2
- <br/>
- \left( 1 - \overline{d}_{iS} \cdot  \overline{c}_{iS} \right)^2,
- <br/>
- \end{equation*}
- <br/>
- where \(d_{is}\) is the number of links from node \(i\) to nodes in community \(C_s\), and \(d_i\) is the total degree of node \(i\). The term \(\overline{d}_{iS} = \frac{d_{iS}}{\sum_{j \in C_s} d_{jS}}\) represents the fraction of all connections in community \(C_s\) that belong to node \(i\), and
- <br/>
- \[
- <br/>
- \overline{c}_{iS} = \frac{\sum_{j \in \mathcal{N}(i,s)} c(j)}{\max_s \sum_{j \in C_s} c(j)}
- <br/>
- \]
- <br/>
- accounts for the average centrality \(c(j)\) of the neighbors \(\mathcal{N}(i,s)\) of node \(i\) within community \(C_s\).  Ruiz Vargas and Wahl [2] define \(c(j)\) as either the degree or betweenness centrality of node \(j\), depending on the application.
- <br/>
+ quantifies a node’s role in connecting different network modules by combining information about community structure and nodal centrality [2]. It extends the participation coefficient by introducing a weight that reflects the “importance” of the node’s intermodular connections.  Assume that the network \(G\) has a community structure consisting of \(K\) communities \(C_1, \ldots, C_K\). The gateway coefficient of node \(i\) is defined as\begin{equation*}c_{\mathrm{gateway}}(i) = 1 - \sum_{s=1}^{K} \left( \frac{d_{is}}{d_i} \right)^2 \left( 1 - \overline{d}_{iS} \cdot  \overline{c}_{iS} \right)^2,\end{equation*}where \(d_{is}\) is the number of links from node \(i\) to nodes in community \(C_s\), and \(d_i\) is the total degree of node \(i\). The term \(\overline{d}_{iS} = \frac{d_{iS}}{\sum_{j \in C_s} d_{jS}}\) represents the fraction of all connections in community \(C_s\) that belong to node \(i\), and  \[\overline{c}_{iS} = \frac{\sum_{j \in \mathcal{N}(i,s)} c(j)}{\max_s \sum_{j \in C_s} c(j)}\]accounts for the average centrality \(c(j)\) of the neighbors \(\mathcal{N}(i,s)\) of node \(i\) within community \(C_s\).  Ruiz Vargas and Wahl [2] define \(c(j)\) as either the degree or betweenness centrality of node \(j\), depending on the application.\vfill
 </p>
 <h3>
  References

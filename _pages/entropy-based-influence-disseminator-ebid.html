@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
- Entropy-Based Influence Disseminator (EbID) quantifies node influence by combining an entropy-based node quality index with the community structure of its neighbors [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{EbID}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{1}{d_i (d_j - 1)} \log \frac{1}{d_i (d_j - 1)}
- <br/>
- + \sum_{j \in \mathcal{N}(i)} v(C_j),
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\). The first term captures the entropy of the probability distribution of reaching a node in two hops, and the second term, \(v(C_j)\), measures the relative edge density of the community to which node \(j\) belongs. Saxena et al. [2] employ the Louvain method to detect communities.
- <br/>
- Nodes with higher \(c_{\text{EbID}}(i)\) are those that not only provide efficient two-hop reachability but also are connected to well-connected communities, making them effective disseminators of influence in the network.
- <br/>
+ Entropy-Based Influence Disseminator (EbID) quantifies node influence by combining an entropy-based node quality index with the community structure of its neighbors [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{\text{EbID}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{1}{d_i (d_j - 1)} \log \frac{1}{d_i (d_j - 1)} + \sum_{j \in \mathcal{N}(i)} v(C_j),\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\). The first term captures the entropy of the probability distribution of reaching a node in two hops, and the second term, \(v(C_j)\), measures the relative edge density of the community to which node \(j\) belongs. Saxena
+ <i>
+  et al.
+ </i>
+ [2] employ the Louvain method to detect communities.  Nodes with higher \(c_{\text{EbID}}(i)\) are those that not only provide efficient two-hop reachability but also are connected to well-connected communities, making them effective disseminators of influence in the network.
 </p>
 <h3>
  References

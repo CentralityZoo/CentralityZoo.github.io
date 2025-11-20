@@ -16,31 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   \(ε\)-betweenness centrality
  </i>
- was introduced by Carpenter et al. [2] to make betweenness centrality more robust in the presence of uncertain or noisy network data. In many real-world networks, small changes in edge weights or connectivity can dramatically alter shortest paths. To address this, the authors define an \(ε\)-shortest path as a path \(P_{i\rightarrow j}\) from node \(i\) to node \(j\) whose length satisfies
- <br/>
- \[
- <br/>
- \text{length}(P_{i\rightarrow j}) \leq (1 + ε) \, d_{ij},
- <br/>
- \]
- <br/>
- where \(d_{ij}\) is the shortest-path distance between \(i\) and \(j\). Therefore, \(ε\)-betweenness considers all paths with lengths close to the shortest path, not only the exact shortest paths.
- <br/>
- The \(ε\)-betweenness centrality of node \(i\), denoted \(c_{e\text{-}betw}(i)\), is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{e\text{-}betw}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{σ_{jk}^{ε}(i)}{σ_{jk}^{ε}},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}^{ε}\) is the total number of \(ε\)-shortest paths between nodes \(j\) and \(k\), and \(σ_{jk}^{ε}(i)\) is the number of such paths that pass through node \(i\). This definition generalizes standard betweenness, reducing sensitivity to minor changes in the network structure.
- <br/>
+ was introduced by Carpenter
+ <i>
+  et al.
+ </i>
+ [2] to make betweenness centrality more robust in the presence of uncertain or noisy network data. In many real-world networks, small changes in edge weights or connectivity can dramatically alter shortest paths. To address this, the authors define an \(ε\)-shortest path as a path \(P_{i\rightarrow j}\) from node \(i\) to node \(j\) whose length satisfies\[\text{length}(P_{i\rightarrow j}) \leq (1 + ε) \, d_{ij},\]where \(d_{ij}\) is the shortest-path distance between \(i\) and \(j\). Therefore, \(ε\)-betweenness considers all paths with lengths close to the shortest path, not only the exact shortest paths.The \(ε\)-betweenness centrality of node \(i\), denoted \(c_{e\text{-}betw}(i)\), is then defined as\begin{equation*}c_{e\text{-}betw}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{σ_{jk}^{ε}(i)}{σ_{jk}^{ε}},\end{equation*}where \(σ_{jk}^{ε}\) is the total number of \(ε\)-shortest paths between nodes \(j\) and \(k\), and \(σ_{jk}^{ε}(i)\) is the number of such paths that pass through node \(i\). This definition generalizes standard betweenness, reducing sensitivity to minor changes in the network structure.
 </p>
 <h3>
  References

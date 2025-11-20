@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid centrality
  </i>
- (Y) was introduced to provide a more comprehensive assessment of node importance by combining several classical centrality measures, which tend to be positively correlated [2]. It aggregates the rankings of eccentricity, eigenvector, and closeness centralities in unweighted and weighted networks:
- <br/>
- \[
- <br/>
- Y = \frac{c_E^u + c_E^w + c_{EC}^u + c_{EC}^w + c_C^u + c_C^w - 6}{6(N-1)},
- <br/>
- \]
- <br/>
- where \(c_E\), \(c_{EC}\) and \(c_C\) denote the rankings of nodes by eccentricity, eigenvector and closeness centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  Nodes with low \(Y\) values are central, while high values correspond to peripheral nodes.
- <br/>
+ (Y) was introduced to provide a more comprehensive assessment of node importance by combining several classical centrality measures, which tend to be positively correlated [2]. It aggregates the rankings of eccentricity, eigenvector, and closeness centralities in unweighted and weighted networks:\[Y = \frac{c_E^u + c_E^w + c_{EC}^u + c_{EC}^w + c_C^u + c_C^w - 6}{6(N-1)},\]where \(c_E\), \(c_{EC}\) and \(c_C\) denote the rankings of nodes by eccentricity, eigenvector and closeness centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  Nodes with low \(Y\) values are central, while high values correspond to peripheral nodes.
 </p>
 <h3>
  References

@@ -16,41 +16,19 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   global and local information
  </i>
- (GLI) method is a hybrid centrality measure that combines global and local node information using degree and \(k\)-shell decomposition [2].
- <br/>
- First, the
+ (GLI) method is a hybrid centrality measure that combines global and local node information using degree and \(k\)-shell decomposition [2]. First, the
  <i>
   improved \(k\)-shell score
  </i>
- of node \(i\) is defined as
- <br/>
- \[
- <br/>
- Iks(i) = k_s(i) + nit(i),
- <br/>
- \]
- <br/>
- where \(k_s(i)\) is the standard \(k\)-shell index of node \(i\) and \(nit(i)\) denotes the iteration number at which node \(i\) is removed during the \(k\)-shell decomposition.
- <br/>
- The \textsc{GLI} centrality of node \(i\) is then given by
- <br/>
- \[
- <br/>
- c_{\textsc{GLI}}(i) = \exp \left( \frac{Iks(i) + d_i}{\sum_{j=1}^N (Iks(j) + d_j)} \right)
- <br/>
- \left( \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{Iks(j) + d_j}{d_{ij}} \right),
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within a truncated radius \(r\) from node \(i\).
- <br/>
- Yang et al. [2] set \(r = 3\) to reduce computational complexity. This measure integrates a node’s global hierarchical position (via improved \(k\)-shell) with the local connectivity of its neighborhood to better capture its influence in the network.
- <br/>
+ of node \(i\) is defined as\[Iks(i) = k_s(i) + nit(i),\]where \(k_s(i)\) is the standard \(k\)-shell index of node \(i\) and \(nit(i)\) denotes the iteration number at which node \(i\) is removed during the \(k\)-shell decomposition, corresponding to the layer of node \(i\) in the onion decomposition of the graph.The \textsc{GLI} centrality of node \(i\) is then given by\[c_{\textsc{GLI}}(i) = \exp \left( \frac{Iks(i) + d_i}{\sum_{j=1}^N (Iks(j) + d_j)} \right) \left( \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{Iks(j) + d_j}{d_{ij}} \right),\]where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within a truncated radius \(r\) from node \(i\).  Yang
+ <i>
+  et al.
+ </i>
+ [2] set \(r = 3\) to reduce computational complexity. This measure integrates a node’s global hierarchical position (via improved \(k\)-shell) with the local connectivity of its neighborhood to better capture its influence in the network.
 </p>
 <h3>
  References

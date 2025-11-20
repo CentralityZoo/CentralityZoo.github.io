@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   expected force
  </i>
- (ExF) is a semi-local, entropy-based measure that quantifies the spreading power of nodes in a network [2]. In a continuous-time epidemiological framework, a node's spreading potential can be estimated by summarizing the distribution of infected-susceptible edges after a small number of transmission events originating from that node in an otherwise fully susceptible network.
- <br/>
- Consider a network where a single node \(i\) is initially infected, and all other nodes are susceptible. Let \(1, \dots, J\) denote all possible clusters of infected nodes after \(x=2\) transmission events, assuming no recovery. Each cluster \(j\) represents either (i) node \(i\) plus two neighbors at distance one, or (ii) node \(i\) plus one neighbor at distance one and another at distance two. The expected force of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{ExF}}(i) = - \sum_{j=1}^J \frac{D_j}{\sum_{k=1}^J D_k} \log \frac{D_j}{\sum_{k=1}^J D_k},
- <br/>
- \end{equation*}
- <br/>
- where \(D_j\) is the degree of cluster \(j\), i.e., the total number of neighbors of nodes in the cluster.
- <br/>
+ (ExF) is a semi-local, entropy-based measure that quantifies the spreading power of nodes in a network [2]. In a continuous-time epidemiological framework, a node's spreading potential can be estimated by summarizing the distribution of infected-susceptible edges after a small number of transmission events originating from that node in an otherwise fully susceptible network.Consider a network where a single node \(i\) is initially infected, and all other nodes are susceptible. Let \(1, \dots, J\) denote all possible clusters of infected nodes after \(x=2\) transmission events, assuming no recovery. Each cluster \(j\) represents either (i) node \(i\) plus two neighbors at distance one, or (ii) node \(i\) plus one neighbor at distance one and another at distance two. The expected force of node \(i\) is defined as\begin{equation*}c_{\text{ExF}}(i) = - \sum_{j=1}^J \frac{D_j}{\sum_{k=1}^J D_k} \log \frac{D_j}{\sum_{k=1}^J D_k},\end{equation*}where \(D_j\) is the degree of cluster \(j\), i.e., the total number of neighbors of nodes in the cluster.
 </p>
 <h3>
  References

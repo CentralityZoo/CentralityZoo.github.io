@@ -16,32 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Extended local dimension (ELD)
  </i>
- was proposed by Pu et al. [2] as an extension of the
+ was proposed by Pu
+ <i>
+  et al.
+ </i>
+ [2] as an extension of the
  <i>
   local dimension
  </i>
- (LD) [3] to account for variations in topological distance across nodes in a network. While the original LD by Silva and Costa [3] measures the scaling of neighborhood volume \(B_i(r)\) at a fixed distance \(r\), the extended LD allows the distance parameter to vary for each node, capturing heterogeneity in local network structure.
- <br/>
- For a given node \(i\), let \(B_i(r)\) denote the number of nodes within a topological distance \(r\) from \(i\), and let \(n_i(r)\) denote the number of nodes exactly at distance \(r\). The extended local dimension \(D_i(r_i)\) is defined as
- <br/>
- \[
- <br/>
- D_i(r_i) \simeq r \frac{n_i(r_i)}{B_i(r_i)},
- <br/>
- \]
- <br/>
- where \(r_i\) denotes the maximum value of shortest distances
- <br/>
- between the central node \(i\) and all others. That means the
- <br/>
- maximum \(r\) is different between nodes.
- <br/>
- ELD is particularly useful in irregular or spatially embedded networks, as it reflects the effective dimensionality around each node and captures local deviations from uniform scaling.
- <br/>
+ (LD) [3] to account for variations in topological distance across nodes in a network. While the original LD by Silva and Costa [3] measures the scaling of neighborhood volume \(B_i(r)\) at a fixed distance \(r\), the extended LD allows the distance parameter to vary for each node, capturing heterogeneity in local network structure.  For a given node \(i\), let \(B_i(r)\) denote the number of nodes within a topological distance \(r\) from \(i\), and let \(n_i(r)\) denote the number of nodes exactly at distance \(r\). The extended local dimension \(D_i(r_i)\) is defined as\[D_i(r_i) \simeq r \frac{n_i(r_i)}{B_i(r_i)},\]where \(r_i\) denotes the maximum value of shortest distancesbetween the central node \(i\) and all others. That means themaximum \(r\) is different between nodes.ELD is particularly useful in irregular or spatially embedded networks, as it reflects the effective dimensionality around each node and captures local deviations from uniform scaling.
 </p>
 <h3>
  References

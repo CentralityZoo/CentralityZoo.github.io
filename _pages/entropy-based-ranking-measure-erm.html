@@ -16,61 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Entropy-Based Ranking Measure
  </i>
- (ERM) is a centrality metric that quantifies the influence of a node based on the degrees of its first- and second-order neighbors [2]. Let \(d_i^{(1)}\) denote the total degree of the neighbors of node \(i\), defined as
- <br/>
- \begin{equation*}
- <br/>
- d_i^{(1)} = \sum_{j \in \mathcal{N}(i)} d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(d_j\) is the degree of neighbor \(j\). Similarly, let \(d_i^{(2)}\) be the total degree of the neighbors of node \(i\)'s neighbors:
- <br/>
- \begin{equation*}
- <br/>
- d_i^{(2)} = \sum_{j \in \mathcal{N}(i)} d_j^{(1)}.
- <br/>
- \end{equation*}
- <br/>
- The ERM centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{ERM}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} EC(i),
- <br/>
- \end{equation*}
- <br/>
- where \(EC(i)\) represents
+ (ERM) is a centrality metric that quantifies the influence of a node based on the degrees of its first- and second-order neighbors [2]. Let \(d_i^{(1)}\) denote the total degree of the neighbors of node \(i\), defined as\begin{equation*}d_i^{(1)} = \sum_{j \in \mathcal{N}(i)} d_j,\end{equation*}where \(d_j\) is the degree of neighbor \(j\). Similarly, let \(d_i^{(2)}\) be the total degree of the neighbors of node \(i\)'s neighbors:\begin{equation*}d_i^{(2)} = \sum_{j \in \mathcal{N}(i)} d_j^{(1)}.\end{equation*}The ERM centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{ERM}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} EC(i),\end{equation*}where \(EC(i)\) represents
  <i>
   the entropy centrality
  </i>
- of node \(i\), given by
- <br/>
- \begin{equation*}
- <br/>
- EC(i) = E_1(i) + λ_i E_2(i)
- <br/>
- = -\sum_{j \in \mathcal{N}(i)} \frac{d_j}{d_i^{(1)}} \log{\frac{d_j}{d_i^{(1)}}}
- <br/>
- + λ_i \left(-\sum_{j \in \mathcal{N}(i)} \frac{d_j^{(1)}}{d_i^{(2)}} \log{\frac{d_j^{(1)}}{d_i^{(2)}}} \right).
- <br/>
- \end{equation*}
- <br/>
- Here, \(E_1(i)\) and \(E_2(i)\) denote the entropy of the degrees of the first- and second-order neighbors of node \(i\), respectively, and \(λ_i \in [0,1]\) is a tunable parameter that balances their contributions. Following [2], \(λ_i\) can be set as
- <br/>
- \begin{equation*}
- <br/>
- λ_i = \frac{d_i^{(2)}}{\max_k d_k^{(2)}},
- <br/>
- \end{equation*}
- <br/>
- so that nodes with larger second-order neighborhoods give proportionally more weight to \(E_2(i)\).
- <br/>
+ of node \(i\), given by\begin{equation*}EC(i) = E_1(i) + λ_i E_2(i) = -\sum_{j \in \mathcal{N}(i)} \frac{d_j}{d_i^{(1)}} \log{\frac{d_j}{d_i^{(1)}}} + λ_i \left(-\sum_{j \in \mathcal{N}(i)} \frac{d_j^{(1)}}{d_i^{(2)}} \log{\frac{d_j^{(1)}}{d_i^{(2)}}} \right).\end{equation*}Here, \(E_1(i)\) and \(E_2(i)\) denote the entropy of the degrees of the first- and second-order neighbors of node \(i\), respectively, and \(λ_i \in [0,1]\) is a tunable parameter that balances their contributions. Following [2], \(λ_i\) can be set as\begin{equation*}λ_i = \frac{d_i^{(2)}}{\max_k d_k^{(2)}},\end{equation*}so that nodes with larger second-order neighborhoods give proportionally more weight to \(E_2(i)\).
 </p>
 <h3>
  References

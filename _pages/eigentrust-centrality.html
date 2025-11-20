@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Eigentrust centrality
  </i>
- is designed to quantify trust in a network and to reduce the impact of malicious peers in a peer-to-peer (P2P) system [2]. The eigentrust values \(t\) of the nodes are defined as the limit
- <br/>
- \begin{equation*}
- <br/>
- t = \lim_{n \rightarrow \infty} \left(C^T \right)^n \cdot c,
- <br/>
- \end{equation*}
- <br/>
- where \(c_i = 1/N\) for all nodes, and the elements \(c_{ij}\) of the matrix \(C\) are the normalized trust values:
- <br/>
- \begin{equation*}
- <br/>
- c_{ij} = \frac{\max(s_{ij},0)}{\sum_{k=1}^{N} \max(s_{ik},0)}.
- <br/>
- \end{equation*}
- <br/>
- Here, \(s_{ij}\) is the local trust value, defined as the sum of ratings for transactions that peer \(i\) has received from peer \(j\).
- <br/>
- Eigentrust centrality corresponds to the left principal eigenvector of the matrix \(C\), which is equivalent to the stationary distribution of the Markov chain defined by \(C\). In particular, if the local trust values are derived from the adjacency matrix \(A\), then \(C\) can be expressed as the row-normalized matrix \(C = D^{-1} A\), where \(D\) is a diagonal \(N \times N\) matrix with the degree (number of neighbors) of each node on the diagonal. In this case, eigentrust centrality reduces to the left principal eigenvector of \(C\), equivalent to PageRank with a damping factor of 1.
- <br/>
+ is designed to quantify trust in a network and to reduce the impact of malicious peers in a peer-to-peer (P2P) system [2]. The eigentrust values \(t\) of the nodes are defined as the limit\begin{equation*} t = \lim_{n \rightarrow \infty} \left(C^T \right)^n \cdot c,\end{equation*}where \(c_i = 1/N\) for all nodes, and the elements \(c_{ij}\) of the matrix \(C\) are the normalized trust values:\begin{equation*} c_{ij} = \frac{\max(s_{ij},0)}{\sum_{k=1}^{N} \max(s_{ik},0)}.\end{equation*}Here, \(s_{ij}\) is the local trust value, defined as the sum of ratings for transactions that peer \(i\) has received from peer \(j\).  Eigentrust centrality corresponds to the left principal eigenvector of the matrix \(C\), which is equivalent to the stationary distribution of the Markov chain defined by \(C\). In particular, if the local trust values are derived from the adjacency matrix \(A\), then \(C\) can be expressed as the row-normalized matrix \(C = D^{-1} A\), where \(D\) is a diagonal \(N \times N\) matrix with the degree (number of neighbors) of each node on the diagonal. In this case, eigentrust centrality reduces to the left principal eigenvector of \(C\), equivalent to PageRank with a damping factor of 1.
 </p>
 <h3>
  References

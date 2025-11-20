@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Hyperlink-Induced Topic Search (HITS)
@@ -29,24 +28,7 @@ search: true
  <i>
   authority score
  </i>
- . A node \(i\) has a high hub score \(c_{\text{hub}}(i)\) if it links to nodes with high authority scores, i.e.,
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{hub}}(i) =  \sum_{j=1}^{N} a_{ij} \, c_{\text{authority}}(j),
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ij}\) denotes the adjacency matrix element from node \(i\) to node \(j\). Similarly, a node \(i\) has a high authority score \(c_{\text{authority}}(i)\) if it is pointed to by nodes with high hub scores:
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{authority}}(i) = \sum_{j=1}^{N} a_{ji} \, c_{\text{hub}}(j).
- <br/>
- \end{equation*}
- <br/>
- The iterative calculation of HITS can be formulated as an eigenvalue problem. Specifically, the hub and authority vectors correspond to the principal eigenvectors of \(AA^T\) and \(A^TA\), respectively, associated with the largest eigenvalue \(λ_{\max}\) of \(AA^T\) (or equivalently \(A^TA\)). In practice, HITS is designed for directed networks. For undirected networks, the hub and authority scores are identical and reduce to the standard eigenvector centrality.
- <br/>
+ . A node \(i\) has a high hub score \(c_{\text{hub}}(i)\) if it links to nodes with high authority scores, i.e.,\begin{equation*}c_{\text{hub}}(i) =  \sum_{j=1}^{N} a_{ij} \, c_{\text{authority}}(j),\end{equation*}where \(a_{ij}\) denotes the adjacency matrix element from node \(i\) to node \(j\). Similarly, a node \(i\) has a high authority score \(c_{\text{authority}}(i)\) if it is pointed to by nodes with high hub scores:\begin{equation*}c_{\text{authority}}(i) = \sum_{j=1}^{N} a_{ji} \, c_{\text{hub}}(j).\end{equation*}The iterative calculation of HITS can be formulated as an eigenvalue problem. Specifically, the hub and authority vectors correspond to the principal eigenvectors of \(AA^T\) and \(A^TA\), respectively, associated with the largest eigenvalue \(λ_{\max}\) of \(AA^T\) (or equivalently \(A^TA\)). In practice, HITS is designed for directed networks. For undirected networks, the hub and authority scores are identical and reduce to the standard eigenvector centrality.
 </p>
 <h3>
  References

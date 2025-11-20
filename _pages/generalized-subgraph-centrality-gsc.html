@@ -16,22 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   generalized subgraph centrality
  </i>
- (GSC), also referred to as \(t\)-subgraph centrality, extends the classical subgraph centrality by allowing a flexible weighting of closed walks based on their length, capturing both local and global aspects of a node's influence [2].
- <br/>
- The subgraph centrality of node \(i\), denoted \(c_s(i)\), is defined as
- <br/>
- \[
- <br/>
- c_s(i) = \sum_{k=0}^{\infty} \frac{(A^k)_{ii}}{k!} = [e^A]_{ii},
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix and \((A^k)_{ii}\) counts the number of closed walks of length \(k\) starting and ending at node \(i\).  In the generalized form, the factorial weighting is rescaled by a parameter \(t\), allowing the emphasis on short or long walks to be adjusted:
+ (GSC), also referred to as \(t\)-subgraph centrality, extends the classical subgraph centrality by allowing a flexible weighting of closed walks based on their length, capturing both local and global aspects of a node's influence [2].  The subgraph centrality of node \(i\), denoted \(c_s(i)\), is defined as\[c_s(i) = \sum_{k=0}^{\infty} \frac{(A^k)_{ii}}{k!} = [e^A]_{ii},\]where \(A\) is the adjacency matrix and \((A^k)_{ii}\) counts the number of closed walks of length \(k\) starting and ending at node \(i\).  In the generalized form, the factorial weighting is rescaled by a parameter \(t\), allowing the emphasis on short or long walks to be adjusted:
  <ul>
   <li>
    <i>
@@ -53,9 +42,7 @@ search: true
     \]
   </li>
  </ul>
- <br/>
  By varying \(t\), one can tune the centrality to emphasize either local structure (large positive \(t\)) or global network connectivity (negative \(t\)). The generalized subgraph centrality has been applied to protein-protein interaction (PPI) networks, with \(t = 7\) shown to outperform subgraph centrality and other measures in identifying essential proteins in the yeast network.
- <br/>
 </p>
 <h3>
  References

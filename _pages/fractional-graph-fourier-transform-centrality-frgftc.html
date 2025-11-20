@@ -16,42 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Fractional graph Fourier transform centrality
  </i>
- (FrGFTC) is an extension of the graph Fourier transform centrality (GFT-C) that incorporates fractional powers of the Laplacian eigenvectors to capture more nuanced structural variations in a network [2].
- <br/>
- Let \(U = [u_1, \dots, u_N]\) be the eigenvector matrix of the graph Laplacian \(L\). In FrGFTC, the fractional power \(U^α\) is used instead of \(U\), where \(α \in (0,1]\) is the fractional order controlling the influence of higher-frequency components in the network.
- <br/>
- For node \(i\), the FrGFTC centrality \(c_{\mathrm{FrGFTC}}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{FrGFTC}}(i) = \sum_{l=1}^N e^{k λ_l} \left| \sum_{j=1}^N f_i(j) \, (U^α)_{jl} \right|,
- <br/>
- \]
- <br/>
- where \(λ_l\) is the \(l\)-th eigenvalue of \(L\), \(k\) is a scaling parameter (e.g., \(k=0.1\)), and \(f_i(j)\) is the node importance signal defined by
- <br/>
- \[
- <br/>
- f_i(j) =
- <br/>
- \begin{cases}
- <br/>
- 1, &amp; i = j, \\
- <br/>
- \dfrac{1/d_{ij}}{\sum_{k \neq i} 1/d_{ik}}, &amp; i \neq j,
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- with \(d_{ij}\) denoting the shortest-path distance between nodes \(i\) and \(j\).
- <br/>
- Intuitively, FrGFTC generalizes GFT-C by allowing partial contributions from higher-frequency modes, which can better highlight nodes that are influential in both local and global network structures. Nodes with high FrGFTC values are those that strongly affect the propagation of signals across the network, capturing both immediate neighborhood and long-range connectivity patterns.
- <br/>
+ (FrGFTC) is an extension of the graph Fourier transform centrality (GFT-C) that incorporates fractional powers of the Laplacian eigenvectors to capture more nuanced structural variations in a network [2].  Let \(U = [u_1, \dots, u_N]\) be the eigenvector matrix of the graph Laplacian \(L\). In FrGFTC, the fractional power \(U^α\) is used instead of \(U\), where \(α \in (0,1]\) is the fractional order controlling the influence of higher-frequency components in the network.  For node \(i\), the FrGFTC centrality \(c_{\mathrm{FrGFTC}}(i)\) is defined as\[c_{\mathrm{FrGFTC}}(i) = \sum_{l=1}^N e^{k λ_l} \left| \sum_{j=1}^N f_i(j) \, (U^α)_{jl} \right|,\]where \(λ_l\) is the \(l\)-th eigenvalue of \(L\), \(k\) is a scaling parameter (e.g., \(k=0.1\)), and \(f_i(j)\) is the node importance signal defined by\[f_i(j) =\begin{cases}1, &amp; i = j, \\\dfrac{1/d_{ij}}{\sum_{k \neq i} 1/d_{ik}}, &amp; i \neq j,\end{cases}\]with \(d_{ij}\) denoting the shortest-path distance between nodes \(i\) and \(j\).  Intuitively, FrGFTC generalizes GFT-C by allowing partial contributions from higher-frequency modes, which can better highlight nodes that are influential in both local and global network structures. Nodes with high FrGFTC values are those that strongly affect the propagation of signals across the network, capturing both immediate neighborhood and long-range connectivity patterns.
 </p>
 <h3>
  References

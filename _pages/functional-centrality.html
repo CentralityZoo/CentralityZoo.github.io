@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Functional centrality
  </i>
- quantifies the importance of nodes according to their participation in closed walks of lengths up to \(k\), as proposed in [2]. The functional centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_f(i) = \sum_{l=0}^{k} a_l (A^l)_{ii}
- <br/>
- = \sum_{j=1}^{N} \left( v_j(i) \right)^2 \left( \sum_{l=0}^{k} a_l λ_j^l \right),
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix of the network, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\), and the coefficients \(a_l\) are defined as \(a_0 = 1\) and \(a_l = 1/l\) for any integer \(l&gt;0\).
- <br/>
- In functional centrality, the contribution of a node to walks of length \(l\) is weighted inversely by \(l\), so that shorter walks are given higher importance, while longer walks contribute progressively less. Functional centrality thus provides a way to quantify node importance with an emphasis on shorter, more localized interactions in the network.
- <br/>
+ quantifies the importance of nodes according to their participation in closed walks of lengths up to \(k\), as proposed in [2]. The functional centrality of node \(i\) is defined as\[c_f(i) = \sum_{l=0}^{k} a_l (A^l)_{ii} = \sum_{j=1}^{N} \left( v_j(i) \right)^2 \left( \sum_{l=0}^{k} a_l λ_j^l \right),\]where \(A\) is the adjacency matrix of the network, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\), and the coefficients \(a_l\) are defined as \(a_0 = 1\) and \(a_l = 1/l\) for any integer \(l&gt;0\).  In functional centrality, the contribution of a node to walks of length \(l\) is weighted inversely by \(l\), so that shorter walks are given higher importance, while longer walks contribute progressively less. Functional centrality thus provides a way to quantify node importance with an emphasis on shorter, more localized interactions in the network.
 </p>
 <h3>
  References

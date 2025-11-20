@@ -16,45 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   hybrid median centrality
  </i>
- (HMC) identifies influential nodes by aggregating rankings from multiple existing centrality measures [2]. Let there be \(m\) rankings of nodes based on \(m\) different centrality measures. For example, Fei et al. [2] consider \(m = 3\) measures: degree, closeness and betweenness centralities.
- <br/>
- The node rankings are organized in an \(N \times m\) multi-attribute decision-making matrix:
- <br/>
- \[
- <br/>
- R =
- <br/>
- \begin{bmatrix}
- <br/>
- r_{11} &amp; r_{12} &amp; r_{13}  \\
- <br/>
- r_{21} &amp; r_{22} &amp; r_{23}  \\
- <br/>
- \vdots &amp; \vdots &amp; \vdots  \\
- <br/>
- r_{N1} &amp; r_{N2} &amp; r_{N3}
- <br/>
- \end{bmatrix},
- <br/>
- \]
- <br/>
- where \(r_{ij}\) denotes the ranking of node \(i\) with respect to the \(j\)-th centrality measure.
- <br/>
- The hybrid median centrality \(c_{\mathrm{HMC}}(i)\) of node \(i\) is then defined as the median of its maximum and minimum rankings:
- <br/>
- \[
- <br/>
- c_{\mathrm{HMC}}(i) = \frac{\min_j r_{ij} + \max_j r_{ij}}{2}.
- <br/>
- \]
- <br/>
- The effectiveness of HMC is typically evaluated using the susceptible-infected (SI) propagation model on real-world networks, such as Email, US Air97, Karate Club, and Jazz Musicians.
- <br/>
+ (HMC) identifies influential nodes by aggregating rankings from multiple existing centrality measures [2]. Let there be \(m\) rankings of nodes based on \(m\) different centrality measures. For example, Fei
+ <i>
+  et al.
+ </i>
+ [2] consider \(m = 3\) measures: degree, closeness and betweenness centralities.  The node rankings are organized in an \(N \times m\) multi-attribute decision-making matrix:\[R = \begin{bmatrix} r_{11} &amp; r_{12} &amp; r_{13}  \\r_{21} &amp; r_{22} &amp; r_{23}  \\ \vdots &amp; \vdots &amp; \vdots  \\ r_{N1} &amp; r_{N2} &amp; r_{N3}  \end{bmatrix},\]where \(r_{ij}\) denotes the ranking of node \(i\) with respect to the \(j\)-th centrality measure.  The hybrid median centrality \(c_{\mathrm{HMC}}(i)\) of node \(i\) is then defined as the median of its maximum and minimum rankings:\[c_{\mathrm{HMC}}(i) = \frac{\min_j r_{ij} + \max_j r_{ij}}{2}.\]The effectiveness of HMC is typically evaluated using the susceptible-infected (SI) propagation model on real-world networks, such as Email, US Air97, Karate Club, and Jazz Musicians.
 </p>
 <h3>
  References

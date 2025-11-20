@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid centrality
  </i>
- (XmY) evaluates asymmetries in node influence by taking the difference between two hybrid indices, \(X\) and \(Y\) [2]:
- <br/>
- \[
- <br/>
- XmY = X - Y = \frac{c_D^u + c_D^w + c_{BC}^u + c_{BC}^w - 4}{4(N-1)} - \frac{c_E^u + c_E^w + c_{EC}^u + c_{EC}^w + c_C^u + c_C^w - 6}{6(N-1)}.
- <br/>
- \]
- <br/>
- where \(c_D\), \(c_{BC}\), \(c_E\), \(c_{EC}\), and \(c_C\) denote the rankings of nodes by degree, betweenness, eccentricity, eigenvector, and closeness centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  High \(XmY\) values indicate nodes with relatively few important connections, whereas low values correspond to nodes with many unimportant connections. This measure highlights nodes whose influence differs across the underlying centrality dimensions. XmY is introduced for the selection of central stocks in financial networks [2].
- <br/>
+ (XmY) evaluates asymmetries in node influence by taking the difference between two hybrid indices, \(X\) and \(Y\) [2]:\[XmY = X - Y = \frac{c_D^u + c_D^w + c_{BC}^u + c_{BC}^w - 4}{4(N-1)} - \frac{c_E^u + c_E^w + c_{EC}^u + c_{EC}^w + c_C^u + c_C^w - 6}{6(N-1)}.\]where \(c_D\), \(c_{BC}\), \(c_E\), \(c_{EC}\), and \(c_C\) denote the rankings of nodes by degree, betweenness, eccentricity, eigenvector, and closeness centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  High \(XmY\) values indicate nodes with relatively few important connections, whereas low values correspond to nodes with many unimportant connections. This measure highlights nodes whose influence differs across the underlying centrality dimensions. XmY is introduced for the selection of central stocks in financial networks [2].
 </p>
 <h3>
  References

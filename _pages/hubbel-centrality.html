@@ -16,48 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hubbell centrality
  </i>
- is a generalization of Leontief’s input-output model for economic systems [2]. The centrality \( c_{\text{Hubbell}}(i) \) of node \( i \) depends on its exogenous contribution \( e_i \) (self-contribution), the status of its neighbors, and the strength with which those neighbors influence node \(i\). It is formally defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{Hubbel}(i) = e_i + \sum_{j=1}^N{w_{ij} \cdot c_{Hubbel}(j)},
- <br/>
- \end{equation*}
- <br/>
- or, equivalently
- <br/>
- \begin{equation*}
- <br/>
- c_{Hubbel} = (I - W)^{-1} \cdot E,
- <br/>
- \end{equation*}
- <br/>
- where \(I\) is an \(N \times N\) identity matrix, \(E = (e_1, \ldots, e_N)^{T}\) is an \(N \times 1\) vector representing the exogenous contributions (or self-contributions) and \(W\) is an \(N \times N\) weight matrix capturing the influence among nodes. This formulation can be seen as a generalization of the Katz centrality when
- <br/>
- \[
- <br/>
- e_i = β, \quad \forall i = 1, \ldots, N,
- <br/>
- \quad \text{and} \quad
- <br/>
- W = α A,
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix of the network, \(α\) is an attenuation (scaling) factor and \( β \) is a constant exogenous input. However, unlike Katz centrality, Hubbell [2] does not assume that \(W = α A\). Instead, the rows of the weight matrix \(W\) are normalized so that the total influence on each node does not exceed one:
- <br/>
- \[
- <br/>
- \sum_{j=1}^{N} w_{ij} \leq 1, \quad \forall i \in \mathcal{N}.
- <br/>
- \]
- <br/>
- As an example, \(W\) can be constructed by normalizing each row through division by \(N-1\),  which ensures that the total influence each node receives from its neighbours is proportionally scaled across the network.
- <br/>
+ is a generalization of Leontief’s input-output model for economic systems [2]. The centrality \( c_{\text{Hubbell}}(i) \) of node \( i \) depends on its exogenous contribution \( e_i \) (self-contribution), the status of its neighbors, and the strength with which those neighbors influence node \(i\). It is formally defined as\begin{equation*}c_{Hubbel}(i) = e_i + \sum_{j=1}^N{w_{ij} \cdot c_{Hubbel}(j)},\end{equation*}or, equivalently\begin{equation*}c_{Hubbel} = (I - W)^{-1} \cdot E,\end{equation*}where \(I\) is an \(N \times N\) identity matrix, \(E = (e_1, \ldots, e_N)^{T}\) is an \(N \times 1\) vector representing the exogenous contributions (or self-contributions) and \(W\) is an \(N \times N\) weight matrix capturing the influence among nodes. This formulation can be seen as a generalization of the Katz centrality when\[e_i = β, \quad \forall i = 1, \ldots, N, \quad \text{and} \quad W = α A,\]where \(A\) is the adjacency matrix of the network, \(α\) is an attenuation (scaling) factor and \( β \) is a constant exogenous input. However, unlike Katz centrality, Hubbell [2] does not assume that \(W = α A\). Instead, the rows of the weight matrix \(W\) are normalized so that the total influence on each node does not exceed one:\[\sum_{j=1}^{N} w_{ij} \leq 1, \quad \forall i \in \mathcal{N}.\]As an example, \(W\) can be constructed by normalizing each row through division by \(N-1\),  which ensures that the total influence each node receives from its neighbours is proportionally scaled across the network.
 </p>
 <h3>
  References

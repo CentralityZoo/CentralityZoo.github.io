@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Even subgraph centrality
  </i>
@@ -24,18 +23,7 @@ search: true
  <i>
   even
  </i>
- length in a network [2]. Even-length walks include contributions from both cyclic and acyclic structures, reflecting back-and-forth movements that capture redundancy, potential signal propagation, and indirect interactions. The even subgraph centrality of node \(i\), denoted \(c_{even}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{even}(i) = \sum_{k=0}^{\infty} \frac{(A^{2k})_{ii}}{(2k)!}
- <br/>
- = \sum_{j=1}^{N} \left( v_j(i) \right)^2 \cosh(λ_j),
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix of the network, and \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\).
- <br/>
+ length in a network [2]. Even-length walks include contributions from both cyclic and acyclic structures, reflecting back-and-forth movements that capture redundancy, potential signal propagation, and indirect interactions. The even subgraph centrality of node \(i\), denoted \(c_{even}(i)\), is defined as\[c_{even}(i) = \sum_{k=0}^{\infty} \frac{(A^{2k})_{ii}}{(2k)!} = \sum_{j=1}^{N} \left( v_j(i) \right)^2 \cosh(λ_j),\]where \(A\) is the adjacency matrix of the network, and \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\).
 </p>
 <h3>
  References

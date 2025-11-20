@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Gil-Schmidt power centrality index
  </i>
- is a normalized variant of harmonic centrality [2], which quantifies the influence of a node in a network while explicitly accounting for the set of nodes it can reach. Let \( R(i,G) \) denote the set of nodes reachable from node \( i \) in the graph \( G \). The Gil-Schmidt power index \( c_{GS}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{GS}(i) = \frac{1}{|R(i,G)|} \sum_{j \in R(i,G)} \frac{1}{d_{ij}}
- <br/>
- = \frac{1}{|R(i,G)|} c_{harmonic}(i),
- <br/>
- \end{equation*}
- <br/>
- where \( d_{ij} \) is the length of the shortest path from \( i \) to \( j \). Intuitively, the index computes the average of the inverse shortest-path distances from node \( i \) to all nodes it can reach, so that nodes located closer to many others receive higher scores. The normalization by \( |R(i,G)| \) ensures that the measure is comparable across nodes with differing numbers of reachable nodes. In connected graphs, where every node can reach all others, the Gil-Schmidt power index coincides with the harmonic centrality.
- <br/>
+ is a normalized variant of harmonic centrality [2], which quantifies the influence of a node in a network while explicitly accounting for the set of nodes it can reach. Let \( R(i,G) \) denote the set of nodes reachable from node \( i \) in the graph \( G \). The Gil-Schmidt power index \( c_{GS}(i) \) of node \( i \) is defined as\begin{equation*}c_{GS}(i) = \frac{1}{|R(i,G)|} \sum_{j \in R(i,G)} \frac{1}{d_{ij}} = \frac{1}{|R(i,G)|} c_{harmonic}(i),\end{equation*}where \( d_{ij} \) is the length of the shortest path from \( i \) to \( j \). Intuitively, the index computes the average of the inverse shortest-path distances from node \( i \) to all nodes it can reach, so that nodes located closer to many others receive higher scores. The normalization by \( |R(i,G)| \) ensures that the measure is comparable across nodes with differing numbers of reachable nodes. In connected graphs, where every node can reach all others, the Gil-Schmidt power index coincides with the harmonic centrality.
 </p>
 <h3>
  References

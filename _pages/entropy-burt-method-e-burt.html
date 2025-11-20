@@ -16,39 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Entropy-Burt method
  </i>
- (E-Burt) is an entropy-based extension of Burt's constraint that accounts for both the weights of connections and the distribution of a node’s total connection strength across its edges [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{E-Burt}(i) = \sum_{j \in \mathcal{N}(i)} \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{ki} \right)^2,
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- p_{ij} = \frac{h_i}{\sum_{k \in \mathcal{N}(i)} h_k}.
- <br/>
- \end{equation*}
- <br/>
- The term \(h_i\) represents the effective connection strength of node \(i\) and is defined for weighted networks as
- <br/>
- \begin{equation*}
- <br/>
- h_i = \left(1 - \sum_{j \in \mathcal{N}(i)} \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}} \ln \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}} \right) \sum_{j \in \mathcal{N}(i)} w_{ij},
- <br/>
- \end{equation*}
- <br/>
- where \(w_{ij}\) is the edge weight. For unweighted networks, Hu and Mei [2] consider \(w_{ij} = d_i \cdot d_j\), with \(d_i\) denoting the degree of node \(i\).
- <br/>
- E-Burt centrality assigns higher values to nodes that are constrained yet connected to diverse neighbors, reflecting both uneven distribution of connection strengths and redundancy in the local neighborhood.
- <br/>
+ (E-Burt) is an entropy-based extension of Burt's constraint that accounts for both the weights of connections and the distribution of a node’s total connection strength across its edges [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{E-Burt}(i) = \sum_{j \in \mathcal{N}(i)} \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{ki} \right)^2,\end{equation*}where\begin{equation*}p_{ij} = \frac{h_i}{\sum_{k \in \mathcal{N}(i)} h_k}.\end{equation*}The term \(h_i\) represents the effective connection strength of node \(i\) and is defined for weighted networks as\begin{equation*}h_i = \left(1 - \sum_{j \in \mathcal{N}(i)} \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}} \ln \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}} \right) \sum_{j \in \mathcal{N}(i)} w_{ij},\end{equation*}where \(w_{ij}\) is the edge weight. For unweighted networks, Hu and Mei [2] consider \(w_{ij} = d_i \cdot d_j\), with \(d_i\) denoting the degree of node \(i\).E-Burt centrality assigns higher values to nodes that are constrained yet connected to diverse neighbors, reflecting both uneven distribution of connection strengths and redundancy in the local neighborhood.
 </p>
 <h3>
  References

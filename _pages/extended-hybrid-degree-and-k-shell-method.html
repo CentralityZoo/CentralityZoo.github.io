@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended hybrid degree and \(k\)-shell method
  </i>
- ranks nodes in complex networks by considering both the \(k\)-shell index and the degree of each node and its neighbors [2]. It extends the hybrid degree and \(k\)-shell centrality (\(c_{x\text{-}ks}\)) by defining the centrality of node \(i\) as the sum of the \(c_{x\text{-}ks}\) scores of its immediate neighbors:
- <br/>
- \[
- <br/>
- c_{\text{ex-ks}}(i) = \sum_{j \in \mathcal{N}(i)} c_{x\text{-}ks}(j)
- <br/>
- = \sum_{j \in \mathcal{N}(i)} \left( k_s(j) \sum_{k \in \mathcal{N}^{(\leq r)}(j)} \frac{d_k}{d_{jk}^2} \right),
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(\mathcal{N}^{(\leq r)}(j)\) is the set of nodes within distance \(r\) from node \(j\) (excluding \(j\) itself), \(k_s(j)\) and \(d_j\) are the \(k\)-shell index and degree of node \(j\), and \(d_{jk}\) is the shortest path distance between nodes \(j\) and \(k\).  Maji et al. [2] consider a three-hop neighborhood, i.e., \(r = 3\).
- <br/>
- The extended hybrid degree and \(k\)-shell method has been evaluated using the susceptible-infected-recovered (SIR) model and metrics such as spreadability, monotonicity, and Kendall’s tau, demonstrating superior performance compared to several existing centrality measures in identifying influential seed nodes on real networks.
- <br/>
+ ranks nodes in complex networks by considering both the \(k\)-shell index and the degree of each node and its neighbors [2]. It extends the hybrid degree and \(k\)-shell centrality (\(c_{x\text{-}ks}\)) by defining the centrality of node \(i\) as the sum of the \(c_{x\text{-}ks}\) scores of its immediate neighbors:\[c_{\text{ex-ks}}(i) = \sum_{j \in \mathcal{N}(i)} c_{x\text{-}ks}(j)= \sum_{j \in \mathcal{N}(i)} \left( k_s(j) \sum_{k \in \mathcal{N}^{(\leq r)}(j)} \frac{d_k}{d_{jk}^2} \right),\]where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(\mathcal{N}^{(\leq r)}(j)\) is the set of nodes within distance \(r\) from node \(j\) (excluding \(j\) itself), \(k_s(j)\) and \(d_j\) are the \(k\)-shell index and degree of node \(j\), and \(d_{jk}\) is the shortest path distance between nodes \(j\) and \(k\).  Maji
+ <i>
+  et al.
+ </i>
+ [2] consider a three-hop neighborhood, i.e., \(r = 3\).The extended hybrid degree and \(k\)-shell method has been evaluated using the susceptible-infected-recovered (SIR) model and metrics such as spreadability, monotonicity, and Kendall’s tau, demonstrating superior performance compared to several existing centrality measures in identifying influential seed nodes on real networks.
 </p>
 <h3>
  References

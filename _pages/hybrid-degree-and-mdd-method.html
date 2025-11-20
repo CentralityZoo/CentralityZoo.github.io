@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   hybrid degree and MDD method
  </i>
- is a variant of the local gravity model that ranks nodes in complex networks based on the degree and mixed degree decomposition (MDD) index of each node and its \(r\)-hop neighbors [2]. The centrality \(c_{x\text{-}MDD}(i)\) of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{x\text{-}MDD}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{MDD(i) d_j}{d_{ij}^2} = MDD(i) \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_j}{d_{ij}^2},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within distance \(r\) from node \(i\) (excluding node \(i\)), \(MDD(i)\) and \(d_i\) are the MDD index and degree of node \(i\), and \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\). Maji et al. [2] consider a three-hop neighborhood, i.e., \(r = 3\).
- <br/>
- The hybrid degree and MDD method was evaluated using the susceptible-infected-recovered (SIR) model and metrics including spreadability, monotonicity, and Kendall’s tau, and it outperformed seven existing centrality measures in identifying influential seed nodes on real networks.
- <br/>
+ is a variant of the local gravity model that ranks nodes in complex networks based on the degree and mixed degree decomposition (MDD) index of each node and its \(r\)-hop neighbors [2]. The centrality \(c_{x\text{-}MDD}(i)\) of node \(i\) is defined as\[c_{x\text{-}MDD}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{MDD(i) d_j}{d_{ij}^2} = MDD(i) \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_j}{d_{ij}^2},\]where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within distance \(r\) from node \(i\) (excluding node \(i\)), \(MDD(i)\) and \(d_i\) are the MDD index and degree of node \(i\), and \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\). Maji
+ <i>
+  et al.
+ </i>
+ [2] consider a three-hop neighborhood, i.e., \(r = 3\).The hybrid degree and MDD method was evaluated using the susceptible-infected-recovered (SIR) model and metrics including spreadability, monotonicity, and Kendall’s tau, and it outperformed seven existing centrality measures in identifying influential seed nodes on real networks.
 </p>
 <h3>
  References

@@ -16,17 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   generalized network dismantling
  </i>
- (GND) method is designed to identify a minimal-cost set of nodes whose removal fragments a network into small, disconnected components [2]. The key idea of GND is that the network is assumed to possess a community structure and is recursively split into two groups, with the most effective nodes for disconnecting these groups identified and removed at each step. The order in which nodes are removed can be interpreted as a form of node centrality, reflecting each node’s importance in maintaining network connectivity.
- <br/>
- The GND method proceeds iteratively on the largest connected component of the network as follows:
- <br/>
+ (GND) method is designed to identify a minimal-cost set of nodes whose removal fragments a network into small, disconnected components [2]. The key idea of GND is that the network is assumed to possess a community structure and is recursively split into two groups, with the most effective nodes for disconnecting these groups identified and removed at each step. The order in which nodes are removed can be interpreted as a form of node centrality, reflecting each node’s importance in maintaining network connectivity.  The GND method proceeds iteratively on the largest connected component of the network as follows:
  <ol>
-  <br/>
   <li>
    <i>
     Cost-weighted Laplacian construction:
@@ -40,36 +35,30 @@ search: true
   \]
   where \(B = AW + WA - A\) is the cost-weighted matrix, \(W = \mathrm{diag}(w_1, w_2, \dots, w_n)\) is a diagonal matrix of node removal costs \(w_i &gt; 0\) (if \(W = I\), then \(B = A\)), and \(D_B\) is the degree diagonal matrix of \(B\).
   </li>
-  <br/>
   <li>
    <i>
     Spectral bipartition:
    </i>
    compute the second smallest eigenvector \(\mathbf{v}^{(2)}\) of \(L_w\) and use the signs of its components to bipartition the network nodes into two subgraphs. Ren
    <i>
-    et al.
+    \textit{et al.
    </i>
-   [2] propose an approximation algorithm based on the power-iteration method.
+   } [2] propose an approximation algorithm based on the power-iteration method.
   </li>
-  <br/>
   <li>
    <i>
     Weighted vertex cover refinement:
    </i>
    identify edges crossing between the two subgraphs and apply a weighted vertex cover algorithm to determine the minimal-cost set of nodes whose removal covers all crossing edges, effectively disconnecting the subgraphs.
   </li>
-  <br/>
   <li>
    <i>
     Node removal and update:
    </i>
    remove the selected nodes from the network, recompute connected components, and repeat the process on the largest remaining connected component.
   </li>
-  <br/>
  </ol>
- <br/>
  The GND method has been applied to the network dismantling problem and tested on social, criminal, corruption and power infrastructure networks.
- <br/>
 </p>
 <h3>
  References

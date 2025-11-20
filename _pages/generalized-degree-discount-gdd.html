@@ -1,0 +1,72 @@
+---
+title: Generalized degree discount (GDD)
+permalink: /generalized-degree-discount-gdd/
+search: true
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+</style>
+<p>
+ The
+ <i>
+  Generalized Degree Discount (GDD)
+ </i>
+ is a degree‐discount heuristic for identifying a set of influential spreaders in a network [2]. It builds on the earlier DegreeDiscount method by introducing for each node a “status” (probability of not being influenced yet) and computing a
+ <i>
+  generalized discounted degree
+ </i>
+ that accounts not only for the number of non‐seed neighbours, but also for how covered those neighbours already are by selected seeds. In each step a node with the highest generalized discounted degree is selected as a spreader, and thereafter the effective degrees of its neighbors (and their neighbors) are updated to reflect the diminished marginal influence.  The algorithm proceeds iteratively as follows:
+ <ol>
+  <li>
+   Compute the degree \(d_i\) of each node \(i\), and initialize \(t_i = 0\) and \(dd_i = d_i\), where \(t_i\) is the number of selected neighbors of \(i\) and \(dd_i\) is the discounted degree.
+  </li>
+  <li>
+   <i>
+    Selection and update:
+   </i>
+   select the node \(i\) with the largest \(dd_i\) and add it to the seed set \(S\). Then, for each 1-hop and 2-hop neighbor \(j\) of node \(i\), update
+    \[
+    t_j \gets t_j + 1, \quad
+    dd_j = (d_j - 2 t_j - (d_j - t_j) t_j p) 
+           + \frac{t_j (t_j - 1) p}{2} 
+           - \sum_{k \in \mathcal{N}(j) \setminus S} t_k p,
+    \]
+    where \(p\) is the propagation probability (e.g., \(p=0.01\)). The value \(dd_j\) approximates the expected number of additional nodes influenced by selecting node \(j\), accounting for both 1-hop and 2-hop neighbor effects.
+  </li>
+  <li>
+   Repeat step 2 until \(k\) nodes are selected for the seed set.
+  </li>
+ </ol>
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Wang, X., Zhang, X., Zhao, C., &amp; Yi, D. (2016). Maximizing the spread of influence via generalized degree discount. PloS one, 11(10), e0164393.
+  <a href="https://doi.org/10.1371/journal.pone.0164393">
+   doi: 10.1371/journal.pone.0164393.
+  </a>
+ </div>
+</div>

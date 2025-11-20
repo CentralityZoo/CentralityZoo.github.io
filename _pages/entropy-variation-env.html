@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Entropy variation
  </i>
- (EnV) is a vitality-based centrality measure that quantifies the change in graph entropy caused by the removal of a node [2]. Let \(G_i\) denote the subgraph obtained by removing node \(i\) from \(G\). The entropy variation of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{EnV}}(i) = I(G) - I(G_i),
- <br/>
- \end{equation*}
- <br/>
- where \(I(G)\) is the entropy of the graph with respect to a chosen centrality measure \(f\):
- <br/>
- \begin{equation*}
- <br/>
- I(G) = - \sum_{i=1}^N \frac{f(i)}{\sum_{j=1}^N f(j)} \log \frac{f(i)}{\sum_{j=1}^N f(j)}.
- <br/>
- \end{equation*}
- <br/>
- Ai [2] considers four choices for \(f\): in-degree centrality, out-degree centrality, degree centrality, and betweenness centrality. A higher EnV indicates that the removal of the node causes a larger redistribution of centrality values, highlighting nodes that are critical for maintaining the overall structural balance and information flow in the network.
- <br/>
+ (EnV) is a vitality-based centrality measure that quantifies the change in graph entropy caused by the removal of a node [2]. Let \(G_i\) denote the subgraph obtained by removing node \(i\) from \(G\). The entropy variation of node \(i\) is defined as\begin{equation*}c_{\text{EnV}}(i) = I(G) - I(G_i),\end{equation*}where \(I(G)\) is the entropy of the graph with respect to a chosen centrality measure \(f\):\begin{equation*}I(G) = - \sum_{i=1}^N \frac{f(i)}{\sum_{j=1}^N f(j)} \log \frac{f(i)}{\sum_{j=1}^N f(j)}.\end{equation*}Ai [2] considers four choices for \(f\): in-degree centrality, out-degree centrality, degree centrality, and betweenness centrality. A higher EnV indicates that the removal of the node causes a larger redistribution of centrality values, highlighting nodes that are critical for maintaining the overall structural balance and information flow in the network.
 </p>
 <h3>
  References

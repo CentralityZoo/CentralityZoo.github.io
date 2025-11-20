@@ -16,30 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid centrality
  </i>
- (HC) is designed to identify core, intermediate, and peripheral nodes in a network [2]. This measure builds upon the hybrid centrality framework proposed by Pozzi et al. [3], combining multiple classical centrality rankings into a single index.
- <br/>
- The hybrid centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{HC}}(i) =
- <br/>
- \frac{
- <br/>
- c_{BC}^u(i) + c_{BC}^w(i) + c_C^u(i) + c_C^w(i) + c_D^u(i) + c_D^w(i) + c_{EC}^u(i) + c_{EC}^w(i) - 8
- <br/>
- }{8(N-1)},
- <br/>
- \end{equation*}
- <br/>
- where \(c_{BC}\), \(c_C\), \(c_D\), and \(c_{EC}\) denote the rankings of nodes by betweenness, closeness, degree, and eigenvector centralities in unweighted (\(u\)) and weighted (\(w\)) networks.
- <br/>
- High HC values indicate nodes that are central across multiple measures, while low values correspond to peripheral nodes in the network structure.
- <br/>
+ (HC) is designed to identify core, intermediate, and peripheral nodes in a network [2]. This measure builds upon the hybrid centrality framework proposed by Pozzi
+ <i>
+  et al.
+ </i>
+ [3], combining multiple classical centrality rankings into a single index.  The hybrid centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{HC}}(i) = \frac{c_{BC}^u(i) + c_{BC}^w(i) + c_C^u(i) + c_C^w(i) + c_D^u(i) + c_D^w(i) + c_{EC}^u(i) + c_{EC}^w(i) - 8}{8(N-1)},\end{equation*}where \(c_{BC}\), \(c_C\), \(c_D\), and \(c_{EC}\) denote the rankings of nodes by betweenness, closeness, degree, and eigenvector centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  High HC values indicate nodes that are central across multiple measures, while low values correspond to peripheral nodes in the network structure.
 </p>
 <h3>
  References

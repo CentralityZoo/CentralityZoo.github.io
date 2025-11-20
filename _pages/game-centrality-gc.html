@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Game centrality
  </i>
- (GC) is a game-theoretical measure that quantifies the ability of individual nodes to influence others to adopt their strategy [2]. Simko and Csermely consider the two-player canonical Prisoner's Dilemma game with strategies \(\{C,D\}\), where the payoff matrix is given by
- <br/>
- \[
- <br/>
- \begin{array}{c|c|c}
- <br/>
- &amp; \text{Cooperate (C)} &amp; \text{Defect (D)} \\ \hline
- <br/>
- \text{Cooperate (C)} &amp; (3, 3) &amp; (0, 6) \\ \hline
- <br/>
- \text{Defect (D)} &amp; (6, 0) &amp; (1, 1)
- <br/>
- \end{array}
- <br/>
- \]
- <br/>
- In the GC framework, all nodes initially cooperate except for node \(i\), which defects. In each round, nodes play the Prisoner's Dilemma with their neighbors in the underlying contact network and subsequently update their strategies according to the
+ (GC) is a game-theoretical measure that quantifies the ability of individual nodes to influence others to adopt their strategy [2]. Simko and Csermely consider the two-player canonical Prisoner's Dilemma game with strategies \(\{C,D\}\), where the payoff matrix is given by\[\begin{array}{c|c|c}&amp; \text{Cooperate (C)} &amp; \text{Defect (D)} \\ \hline\text{Cooperate (C)} &amp; (3, 3) &amp; (0, 6) \\ \hline\text{Defect (D)} &amp; (6, 0) &amp; (1, 1)\end{array}\]In the GC framework, all nodes initially cooperate except for node \(i\), which defects. In each round, nodes play the Prisoner's Dilemma with their neighbors in the underlying contact network and subsequently update their strategies according to the
  <i>
   best-takes-over
  </i>
- rule (also called the imitation of the best strategy): each node adopts the strategy of the neighbor (or itself) with the highest total payoff in the previous round, with updates occurring synchronously across the network.
- <br/>
- The game centrality of node \(i\), \(c_{\mathrm{GC}}(i)\), is defined as the proportion of defectors in the network, averaged over the last 50 simulation steps. Intuitively, GC measures the influence of node \(i\) in converting cooperating nodes to defectors.
- <br/>
+ rule (also called the imitation of the best strategy): each node adopts the strategy of the neighbor (or itself) with the highest total payoff in the previous round, with updates occurring synchronously across the network.The game centrality of node \(i\), \(c_{\mathrm{GC}}(i)\), is defined as the proportion of defectors in the network, averaged over the last 50 simulation steps. Intuitively, GC measures the influence of node \(i\) in converting cooperating nodes to defectors.
 </p>
 <h3>
  References

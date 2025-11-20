@@ -16,33 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Edge clustering coefficient centrality
  </i>
- (NC), also known as the sum of ECC (SoECC) [2], is used to identify essential proteins in networks based on the clustering of edges [3]. The NC centrality of a node \(i\), denoted \(c_{\mathrm{NC}}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{NC}}(i) = \sum_{j \in \mathcal{N}(i)} \mathrm{ECC}(i,j),
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(\mathrm{ECC}(i,j)\) is the edge clustering coefficient of edge \((i,j)\), given by
- <br/>
- \[
- <br/>
- \mathrm{ECC}(i,j) = \frac{z_{i,j}}{\min(d_i-1, d_j-1)}.
- <br/>
- \]
- <br/>
- Here, \(z_{i,j}\) denotes the number of triangles that include the edge \((i,j)\) and \(d_i\) is the degree of node \(i\). The denominator \(\min(d_i - 1, d_j - 1)\) represents the
+ (NC), also known as the sum of ECC (SoECC) [2], is used to identify essential proteins in networks based on the clustering of edges [3]. The NC centrality of a node \(i\), denoted \(c_{\mathrm{NC}}(i)\), is defined as\[c_{\mathrm{NC}}(i) = \sum_{j \in \mathcal{N}(i)} \mathrm{ECC}(i,j),\]where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(\mathrm{ECC}(i,j)\) is the edge clustering coefficient of edge \((i,j)\), given by\[\mathrm{ECC}(i,j) = \frac{z_{i,j}}{\min(d_i-1, d_j-1)}.\]Here, \(z_{i,j}\) denotes the number of triangles that include the edge \((i,j)\) and \(d_i\) is the degree of node \(i\). The denominator \(\min(d_i - 1, d_j - 1)\) represents the
  <i>
   maximum number of triangles
  </i>
- in which the edge \((i,j)\) can potentially participate.
- <br/>
- Thus, the NC centrality accounts for both the
+ in which the edge \((i,j)\) can potentially participate.Thus, the NC centrality accounts for both the
  <i>
   degree of the node
  </i>
@@ -51,7 +32,6 @@ search: true
   clustering coefficients
  </i>
  of its edges, capturing the node’s involvement in tightly connected regions of the network.
- <br/>
 </p>
 <h3>
  References

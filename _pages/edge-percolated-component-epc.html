@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Edge Percolated Component
  </i>
- (EPC) quantifies the robustness of a node’s connectivity under random edge failures [2]. Specifically, it estimates the fraction of nodes that remain connected to node \(i\) when each edge in the graph \(G\) is independently removed with probability \(p\).
- <br/>
- Let \(G^{(k)}\) denote the \(k\)-th realization of \(G\) after random edge removal. The EPC centrality of node \(i\) is then given by
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{EPC}}(i) = \frac{1}{N K} \sum_{k=1}^{K} \sum_{j=1}^{N} δ_{ij}^{(k)},
- <br/>
- \end{equation*}
- <br/>
- where \(N\) is the number of nodes, \(K\) is the total number of realizations and
- <br/>
- \[
- <br/>
- δ_{ij}^{(k)} =
- <br/>
- \begin{cases}
- <br/>
- 1, &amp; \text{if nodes \(i\) and \(j\) are connected in } G^{(k)},\\
- <br/>
- 0, &amp; \text{otherwise.}
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- Intuitively, a higher EPC centrality indicates that node \(i\) remains connected to a larger fraction of the network under random edge failures, reflecting its structural resilience.
- <br/>
+ (EPC) quantifies the robustness of a node’s connectivity under random edge failures [2]. Specifically, it estimates the fraction of nodes that remain connected to node \(i\) when each edge in the graph \(G\) is independently removed with probability \(p\).  Let \(G^{(k)}\) denote the \(k\)-th realization of \(G\) after random edge removal. The EPC centrality of node \(i\) is then given by\begin{equation*}c_{\mathrm{EPC}}(i) = \frac{1}{N K} \sum_{k=1}^{K} \sum_{j=1}^{N} δ_{ij}^{(k)},\end{equation*}where \(N\) is the number of nodes, \(K\) is the total number of realizations and\[δ_{ij}^{(k)} =\begin{cases}1, &amp; \text{if nodes \(i\) and \(j\) are connected in } G^{(k)},\\0, &amp; \text{otherwise.}\end{cases}\]Intuitively, a higher EPC centrality indicates that node \(i\) remains connected to a larger fraction of the network under random edge failures, reflecting its structural resilience.
 </p>
 <h3>
  References

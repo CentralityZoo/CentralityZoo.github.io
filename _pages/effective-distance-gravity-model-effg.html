@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   effective distance gravity model
@@ -25,30 +24,11 @@ search: true
  <i>
   effective distance
  </i>
- [2]. The effective distance \(D_{j|i}\) from node \(i\) to node \(j\), which are directly connected, was introduced by Brockmann and Helbing [3] and is defined as
- <br/>
- \begin{equation*}
- <br/>
- D_{j|i} = 1 - \log_2\!\left(\frac{a_{ij}}{d_i}\right),
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ij}\) is the element of the adjacency matrix representing the connection between nodes \(i\) and \(j\), and \(d_i\) denotes the degree of node \(i\).
- <br/>
- The effective distance is not necessarily symmetric, even in undirected networks, because nodes may have different degrees. The
+ [2]. The effective distance \(D_{j|i}\) from node \(i\) to node \(j\), which are directly connected, was introduced by Brockmann and Helbing [3] and is defined as\begin{equation*}D_{j|i} = 1 - \log_2\!\left(\frac{a_{ij}}{d_i}\right),\end{equation*}where \(a_{ij}\) is the element of the adjacency matrix representing the connection between nodes \(i\) and \(j\), and \(d_i\) denotes the degree of node \(i\). The effective distance is not necessarily symmetric, even in undirected networks, because nodes may have different degrees. The
  <i>
   effective shortest path distance
  </i>
- \(\tilde{d}_{ij}\) between nodes \(i\) and \(j\) is computed as the length of the shortest path in a weighted graph, where each direct link \((i,j)\) is assigned a weight equal to \(D_{j|i}\).
- <br/>
- The EffG centrality of node \(i\), denoted by \(c_{\text{EffG}}(i)\), is then given by
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{EffG}}(i) = \sum_{j \neq i} \frac{d_i\,d_j}{\tilde{d}_{ij}^2}.
- <br/>
- \end{equation*}
- <br/>
+ \(d̃_{ij}\) between nodes \(i\) and \(j\) is computed as the length of the shortest path in a weighted graph, where each direct link \((i,j)\) is assigned a weight equal to \(D_{j|i}\).The EffG centrality of node \(i\), denoted by \(c_{\text{EffG}}(i)\), is then given by\begin{equation*}c_{\text{EffG}}(i) = \sum_{j \neq i} \frac{d_i\,d_j}{d̃_{ij}^2}.\end{equation*}
 </p>
 <h3>
  References

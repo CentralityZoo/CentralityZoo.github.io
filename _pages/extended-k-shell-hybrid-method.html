@@ -16,37 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended \(k\)-shell hybrid method
  </i>
- (ESKH), proposed by Namtirtha et al. [2], is an extension of the \(k\)-shell hybrid method (ksh) in which the centrality of a node depends on the hybrid centralities of its neighbors. The centrality \( c_{\mathrm{ESKH}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{ESKH}}(i)
- <br/>
- = \sum_{j \in \mathcal{N}(i)} c_{\mathrm{ksh}}(j)
- <br/>
- = \sum_{j \in \mathcal{N}(i)} \sum_{t \in \mathcal{N}^{(\leq l)}(j)}
- <br/>
- \frac{\sqrt{k_s(j) + k_s(t)} + μ\,k_t}{d_{jt}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \),
- <br/>
- \( \mathcal{N}^{(\leq l)}(j) \) represents the set of nodes within the \( l \)-hop neighborhood of node \( j \),
- <br/>
- \( d_{jt} \) is the shortest path distance between nodes \( j \) and \( t \),
- <br/>
- \( k_s(j) \) and \( k_s(t) \) are the \(k\)-shell indices of nodes \( j \) and \( t \), respectively,
- <br/>
- \( k_t \) is the degree of node \( t \),
- <br/>
- and \( μ \in (0,1) \) is a tunable parameter that balances the relative influence of the two components.
- <br/>
+ (ESKH), proposed by Namtirtha
+ <i>
+  et al.
+ </i>
+ [2], is an extension of the \(k\)-shell hybrid method (ksh) in which the centrality of a node depends on the hybrid centralities of its neighbors. The centrality \( c_{\mathrm{ESKH}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\mathrm{ESKH}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\mathrm{ksh}}(j) = \sum_{j \in \mathcal{N}(i)} \sum_{t \in \mathcal{N}^{(\leq l)}(j)} \frac{\sqrt{k_s(j) + k_s(t)} + μ\,k_t}{d_{jt}^2},\end{equation*}where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \), \( \mathcal{N}^{(\leq l)}(j) \) represents the set of nodes within the \( l \)-hop neighborhood of node \( j \),\( d_{jt} \) is the shortest path distance between nodes \( j \) and \( t \),\( k_s(j) \) and \( k_s(t) \) are the \(k\)-shell indices of nodes \( j \) and \( t \), respectively,\( k_t \) is the degree of node \( t \), and \( μ \in (0,1) \) is a tunable parameter that balances the relative influence of the two components.
 </p>
 <h3>
  References

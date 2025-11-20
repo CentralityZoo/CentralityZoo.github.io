@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Eigenvector centrality
  </i>
- (also known as the principal eigenvector or left dominant eigenvector) was initially introduced by Landau [2] in the context of chess tournaments. The concept was later independently rediscovered by Wei [3] and subsequently popularized by Kendall [4] for sports ranking. Berge [5] extended the idea by proposing a general definition of eigenvector centrality for graphs based on social connections. Later, Bonacich [6] reintroduced and further popularized the measure, particularly in the context of link analysis.
- <br/>
- Eigenvector centrality generalizes degree centrality by accounting not only for the number of connections of a node, but also for the centrality of its neighbours [7, 8]. Formally, the importance \(c_{ev}(i)\) of a node \(i\) is proportional to the sum of the importances of its neighbours, which themselves depend on the importances of their neighbours, and so on, i.e.,
- <br/>
- \begin{equation*}
- <br/>
- c_{ev}(i) = \frac{1}{λ_{max}} \sum_{(i,j)\in \mathcal{L}}{c_{ev}(j)}=\frac{1}{λ_{max}} \sum_{j=1}^{N}{a_{ij} \cdot c_{ev}(j)}.
- <br/>
- \end{equation*}
- <br/>
- The calculation of eigenvector centrality can be formulated as an eigenvalue problem, where \(λ_{\text{max}}\) is the largest eigenvalue of the adjacency matrix \(A\), and \(c_{ev}\) is the corresponding eigenvector. Eigenvector centrality is typically applied to undirected networks; however, it can, in theory, also be computed for directed networks, although certain complications arise in the directed case [8].
- <br/>
+ (also known as the principal eigenvector or left dominant eigenvector) was initially introduced by Landau [2] in the context of chess tournaments. The concept was later independently rediscovered by Wei [3] and subsequently popularized by Kendall [4] for sports ranking. Berge [5] extended the idea by proposing a general definition of eigenvector centrality for graphs based on social connections. Later, Bonacich [6] reintroduced and further popularized the measure, particularly in the context of link analysis.Eigenvector centrality generalizes degree centrality by accounting not only for the number of connections of a node, but also for the centrality of its neighbours [7, 8]. Formally, the importance \(c_{ev}(i)\) of a node \(i\) is proportional to the sum of the importances of its neighbours, which themselves depend on the importances of their neighbours, and so on, i.e.,\begin{equation*}c_{ev}(i) = \frac{1}{λ_{max}} \sum_{(i,j)\in \mathcal{L}}{c_{ev}(j)}=\frac{1}{λ_{max}} \sum_{j=1}^{N}{a_{ij} \cdot c_{ev}(j)}.\end{equation*}The calculation of eigenvector centrality can be formulated as an eigenvalue problem, where \(λ_{\text{max}}\) is the largest eigenvalue of the adjacency matrix \(A\), and \(c_{ev}\) is the corresponding eigenvector. Eigenvector centrality is typically applied to undirected networks; however, it can, in theory, also be computed for directed networks, although certain complications arise in the directed case [8].
 </p>
 <h3>
  References

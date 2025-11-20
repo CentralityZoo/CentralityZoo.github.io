@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended neighborhood coreness
  </i>
  is an extension of the INK score (neighborhood coreness) proposed by Bae
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2]. The centrality of node \(i\), denoted by \(c_{nc+}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{nc+}(i) = \sum_{j \in \mathcal{N}(i)} c_{INK}(j) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} k_s(l),
- <br/>
- \end{equation*}
- <br/>
- where \(c_{INK}(i)\) is the INK score of node \(i\), \(k_s(l)\) is the \(k\)-core value of node \(l\), and \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
- <br/>
+ } [2]. The centrality of node \(i\), denoted by \(c_{nc+}(i)\), is defined as\begin{equation*}c_{nc+}(i) = \sum_{j \in \mathcal{N}(i)} c_{INK}(j) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} k_s(l),\end{equation*}where \(c_{INK}(i)\) is the INK score of node \(i\), \(k_s(l)\) is the \(k\)-core value of node \(l\), and \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
 </p>
 <h3>
  References

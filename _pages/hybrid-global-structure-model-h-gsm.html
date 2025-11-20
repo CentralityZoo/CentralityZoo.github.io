@@ -16,27 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   hybrid global structure model
  </i>
- (H-GSM) is an extension of the GSM model that combines the local information (\(iSI\)) and global influence (\(iGI\)) of nodes in a network [2]. The centrality \( c_{H-GSM}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{H-GSM}(i) = iSI(i) \cdot iGI(i)
- <br/>
- = e^{k_s(i) d_i / N} \cdot \sum_{j \neq i} \frac{e^{k_s(j) d_j / N}}{d_{ij}^{\lceil \log_2 \overline{iSI} \rceil}},
- <br/>
- \end{equation*}
- <br/>
- where \( k_s(i) \) and \( d_i \) are the \(k\)-shell index and degree of node \( i \), respectively,
- <br/>
- \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( \overline{iSI} \) is the average local information across all nodes, and \(\lceil x \rceil\) denotes the smallest integer greater than or equal to \(x\).
- <br/>
- H-GSM integrates both local connectivity and global network influence, providing a more comprehensive measure of node importance compared to purely local or global metrics.
- <br/>
+ (H-GSM) is an extension of the GSM model that combines the local information (\(iSI\)) and global influence (\(iGI\)) of nodes in a network [2]. The centrality \( c_{H-GSM}(i) \) of node \( i \) is defined as\begin{equation*}c_{H-GSM}(i) = iSI(i) \cdot iGI(i) = e^{k_s(i) d_i / N} \cdot \sum_{j \neq i} \frac{e^{k_s(j) d_j / N}}{d_{ij}^{\lceil \log_2 \overline{iSI} \rceil}},\end{equation*}where \( k_s(i) \) and \( d_i \) are the \(k\)-shell index and degree of node \( i \), respectively,  \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( \overline{iSI} \) is the average local information across all nodes, and \(\lceil x \rceil\) denotes the smallest integer greater than or equal to \(x\). H-GSM integrates both local connectivity and global network influence, providing a more comprehensive measure of node importance compared to purely local or global metrics.
 </p>
 <h3>
  References

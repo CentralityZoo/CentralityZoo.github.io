@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Extended
   <i>
@@ -24,24 +23,7 @@ search: true
   </i>
   -index centrality
  </i>
- (EHC) is a node centrality measure that ranks nodes based on the degrees of their neighbors [2]. For each node \(i\), a cumulative function \(CMC(i)\) is first computed as
- <br/>
- \[
- <br/>
- CMC(i) = \sum_{k=1}^{h} p^{\,1 + k \frac{p}{r}} \, s_k(i),
- <br/>
- \]
- <br/>
- where \(h = \max_j d_j\) is the maximum degree in the network, \(s_k(i)\) is the number of neighbors of node \(i\) with degree greater than or equal to \(k\), and \(p\) and \(r\) are tunable parameters. Experimentally, Zareie and Sheikhahmadi [2] suggest \(p = 0.8\) and \(r = 100\).
- <br/>
- The extended H-index centrality of node \(i\), denoted \(c_{EHC}(i)\), is then defined as the sum of the cumulative functions of its neighbors:
- <br/>
- \[
- <br/>
- c_{EHC}(i) = \sum_{j \in \mathcal{N}(i)} CMC(j).
- <br/>
- \]
- <br/>
+ (EHC) is a node centrality measure that ranks nodes based on the degrees of their neighbors [2]. For each node \(i\), a cumulative function \(CMC(i)\) is first computed as\[CMC(i) = \sum_{k=1}^{h} p^{\,1 + k \frac{p}{r}} \, s_k(i),\]where \(h = \max_j d_j\) is the maximum degree in the network, \(s_k(i)\) is the number of neighbors of node \(i\) with degree greater than or equal to \(k\), and \(p\) and \(r\) are tunable parameters. Experimentally, Zareie and Sheikhahmadi [2] suggest \(p = 0.8\) and \(r = 100\).The extended H-index centrality of node \(i\), denoted \(c_{EHC}(i)\), is then defined as the sum of the cumulative functions of its neighbors:\[c_{EHC}(i) = \sum_{j \in \mathcal{N}(i)} CMC(j).\]
 </p>
 <h3>
  References

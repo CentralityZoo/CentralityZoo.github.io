@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Exogenous centrality
  </i>
- quantifies the effect of a node on the centrality of other nodes in a graph [2]. Formally, the exogenous centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{E}(i) = \sum_{j \in \mathcal{N} \setminus \{i\}} \bigl( c(j,G) - c(j,G_i) \bigr),
- <br/>
- \end{equation*}
- <br/>
- where \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\), and \(c(j,G)\) is a standard centrality measure of node \(j\) (e.g., degree, closeness, or betweenness).
- <br/>
- Exogenous centrality quantifies the contribution of node \(i\) to the centrality of all other nodes in the network. In other words, it measures how the presence of \(i\) enhances the centrality of the rest of the graph. For example, if the underlying centrality \(c(i,G)\) is the degree \(d_i\), the exogenous centrality of \(i\) equals \(d_i\). Similarly, if \(c(i,G)\) is closeness centrality, the exogenous centrality of \(i\) reflects how the removal of \(i\) would increase the average shortest-path distances among the remaining nodes, thereby reducing their closeness.
- <br/>
+ quantifies the effect of a node on the centrality of other nodes in a graph [2]. Formally, the exogenous centrality of node \(i\) is defined as\begin{equation*}c_{E}(i) = \sum_{j \in \mathcal{N} \setminus \{i\}} \bigl( c(j,G) - c(j,G_i) \bigr),\end{equation*}where \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\), and \(c(j,G)\) is a standard centrality measure of node \(j\) (e.g., degree, closeness, or betweenness).  Exogenous centrality quantifies the contribution of node \(i\) to the centrality of all other nodes in the network. In other words, it measures how the presence of \(i\) enhances the centrality of the rest of the graph. For example, if the underlying centrality \(c(i,G)\) is the degree \(d_i\), the exogenous centrality of \(i\) equals \(d_i\). Similarly, if \(c(i,G)\) is closeness centrality, the exogenous centrality of \(i\) reflects how the removal of \(i\) would increase the average shortest-path distances among the remaining nodes, thereby reducing their closeness.
 </p>
 <h3>
  References

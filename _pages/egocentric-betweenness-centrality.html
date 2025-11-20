@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Egocentric betweenness centrality
  </i>
- measures the betweenness role of a node within its egocentric network [2]. The egocentric (or centered) network of node \(i\) is defined as the subgraph of \(G\) consisting of \(i\) and its 1-hop neighbors.  Formally, the egocentric betweenness centrality of node \(i\) is defined as the betweenness centrality of \(i\) within its egocentric network.
- <br/>
- For computational purposes, the egocentric betweenness of node \(i\) can be expressed directly using the adjacency matrix \(A\) of the full graph \(G\) [3, 4]:
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{ego}}(i) = \sum_{j \neq i} \sum_{k \neq i} \frac{1}{\left( A^2 \cdot (1-A) \right)_{jk}},
- <br/>
- \end{equation*}
- <br/>
- where \(\left( A^2 \cdot (1-A) \right)_{jk}\) counts the number of 2-step paths between neighbors \(j\) and \(k\) that pass through \(i\) but exclude direct connections between \(j\) and \(k\).
- <br/>
- The egocentric betweenness centrality captures how much node \(i\) mediates interactions among its neighbors, reflecting its local brokerage role.
- <br/>
+ measures the betweenness role of a node within its egocentric network [2]. The egocentric (or centered) network of node \(i\) is defined as the subgraph of \(G\) consisting of \(i\) and its 1-hop neighbors.  Formally, the egocentric betweenness centrality of node \(i\) is defined as the betweenness centrality of \(i\) within its egocentric network.For computational purposes, the egocentric betweenness of node \(i\) can be expressed directly using the adjacency matrix \(A\) of the full graph \(G\) [3, 4]:\begin{equation*}c_{\mathrm{ego}}(i) = \sum_{j \neq i} \sum_{k \neq i} \frac{1}{\left( A^2 \cdot (1-A) \right)_{jk}},\end{equation*}where \(\left( A^2 \cdot (1-A) \right)_{jk}\) counts the number of 2-step paths between neighbors \(j\) and \(k\) that pass through \(i\) but exclude direct connections between \(j\) and \(k\).  The egocentric betweenness centrality captures how much node \(i\) mediates interactions among its neighbors, reflecting its local brokerage role.
 </p>
 <h3>
  References

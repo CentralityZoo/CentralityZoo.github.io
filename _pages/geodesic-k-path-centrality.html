@@ -16,17 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   geodesic \(k\)-path centrality
  </i>
- measures the influence of a node by counting the number of shortest (geodesic) paths of length at most \(k\) that originate from it [2].
- <br/>
- Formally, for a node \(i\), it is defined as the total number of geodesic paths of length \(1 \le \ell \le k\) starting from \(i\).
- <br/>
- A notable special case occurs when \(k = 1\), in which case the geodesic \(k\)-path centrality reduces to the degree centrality. By counting shortest paths of length greater than one, this measure extends degree centrality to capture the ability to reach and potentially influence nodes that are not directly adjacent. Importantly, unlike \(m\)-reach centrality, which considers only the number of nodes reachable within \(m\) steps, the geodesic \(k\)-path centrality accounts for the number of shortest paths originating from a node.
- <br/>
+ measures the influence of a node by counting the number of shortest (geodesic) paths of length at most \(k\) that originate from it [2].  Formally, for a node \(i\), it is defined as the total number of geodesic paths of length \(1 \le \ell \le k\) starting from \(i\).A notable special case occurs when \(k = 1\), in which case the geodesic \(k\)-path centrality reduces to the degree centrality. By counting shortest paths of length greater than one, this measure extends degree centrality to capture the ability to reach and potentially influence nodes that are not directly adjacent. Importantly, unlike \(m\)-reach centrality, which considers only the number of nodes reachable within \(m\) steps, the geodesic \(k\)-path centrality accounts for the number of shortest paths originating from a node.
 </p>
 <h3>
  References

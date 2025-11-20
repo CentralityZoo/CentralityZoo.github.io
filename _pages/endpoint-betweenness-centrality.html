@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Endpoint betweenness
  </i>
- centrality (EPBC) is a variant of standard betweenness centrality that considers not only a node's role as an intermediary on shortest paths but also as a source or target [2]. This extension is particularly relevant in networks such as information exchange systems, where the origin or destination of information can be as influential as the nodes that relay it. It is formally defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{EPBC}}(i) = \sum_{j \neq k} \frac{σ_{jk}(i)}{σ_{jk}},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}\) denotes the total number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) counts the number of those paths that pass through node \(i\), including the cases where \(i\) acts as the source (\(j=i\)) or the target (\(k=i\)).
- <br/>
- In fully connected directed graphs (excluding trivial self-paths), including endpoints results in a uniform increase of \(2(n-1)\) in the centrality of each node relative to standard betweenness, leaving the relative rankings unchanged. However, in networks where some nodes cannot reach all others, this increase becomes non-uniform. In such cases, endpoint betweenness centrality provides a more accurate measure of node importance by capturing how frequently a node participates as a source or target in shortest-path connections.
- <br/>
+ centrality (EPBC) is a variant of standard betweenness centrality that considers not only a node's role as an intermediary on shortest paths but also as a source or target [2]. This extension is particularly relevant in networks such as information exchange systems, where the origin or destination of information can be as influential as the nodes that relay it. It is formally defined as\begin{equation*}c_{\mathrm{EPBC}}(i) = \sum_{j \neq k} \frac{σ_{jk}(i)}{σ_{jk}},\end{equation*}where \(σ_{jk}\) denotes the total number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) counts the number of those paths that pass through node \(i\), including the cases where \(i\) acts as the source (\(j=i\)) or the target (\(k=i\)).In fully connected directed graphs (excluding trivial self-paths), including endpoints results in a uniform increase of \(2(n-1)\) in the centrality of each node relative to standard betweenness, leaving the relative rankings unchanged. However, in networks where some nodes cannot reach all others, this increase becomes non-uniform. In such cases, endpoint betweenness centrality provides a more accurate measure of node importance by capturing how frequently a node participates as a source or target in shortest-path connections.
 </p>
 <h3>
  References

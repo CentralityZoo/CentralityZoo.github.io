@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended RMD-weighted degree
  </i>
- (EWD) centrality, originally called extended weighted degree, is an extension of the RMD-weighted degree (WD) centrality [2]. Motivated by the idea that incorporating neighbor information over a broader range can improve the accuracy of node influence ranking, the EWD centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{EWD}(i) = \sum_{j \in \mathcal{N}(i)} c_{RMD}(j)= \sum_{j \in \mathcal{N}(i)}\sum_{k \in \mathcal{N}(j)} \frac{Iter(k)}{MaxIter},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(Iter(j)\) is the iteration at which node \(j\) is removed during the RMD decomposition, and \(MaxIter\) is the total number of iterations. The RMD decomposition iteratively removes the node with the smallest degree, ranking nodes according to their structural importance in the network.
- <br/>
- Nodes with high EWD values are those whose neighbors are themselves influential according to the RMD-weighted degree. This means the node is not only locally well-connected but also strategically positioned near other structurally important nodes, enhancing its potential impact on the network.
- <br/>
+ (EWD) centrality, originally called extended weighted degree, is an extension of the RMD-weighted degree (WD) centrality [2]. Motivated by the idea that incorporating neighbor information over a broader range can improve the accuracy of node influence ranking, the EWD centrality of node \(i\) is defined as\[c_{EWD}(i) = \sum_{j \in \mathcal{N}(i)} c_{RMD}(j)= \sum_{j \in \mathcal{N}(i)}\sum_{k \in \mathcal{N}(j)} \frac{Iter(k)}{MaxIter},\]where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(Iter(j)\) is the iteration at which node \(j\) is removed during the RMD decomposition, and \(MaxIter\) is the total number of iterations. The RMD decomposition iteratively removes the node with the smallest degree, ranking nodes according to their structural importance in the network.Nodes with high EWD values are those whose neighbors are themselves influential according to the RMD-weighted degree. This means the node is not only locally well-connected but also strategically positioned near other structurally important nodes, enhancing its potential impact on the network.
 </p>
 <h3>
  References

@@ -16,42 +16,22 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid characteristic centrality
  </i>
- (HCC) is a hybrid measure that combines E-shell hierarchy decomposition and extended degree to evaluate node importance in a network [2].
- <br/>
- The
+ (HCC) is a hybrid measure that combines E-shell hierarchy decomposition and extended degree to evaluate node importance in a network [2].  The
  <i>
   extended degree
  </i>
- of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- d^{ex}(i) = δ d_i + (1-δ) \sum_{j \in \mathcal{N}(i)} d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\), \(\mathcal{N}(i)\) is the set of neighbors of \(i\) and \(δ \in [0,1]\) balances the contribution of \(i\)'s own degree and its neighbors' degrees. Liu et al. [2] set \(δ = 0.5\).
- <br/>
- The
+ of node \(i\) is defined as\begin{equation*}d^{ex}(i) = δ d_i + (1-δ) \sum_{j \in \mathcal{N}(i)} d_j,\end{equation*}where \(d_i\) is the degree of node \(i\), \(\mathcal{N}(i)\) is the set of neighbors of \(i\) and \(δ \in [0,1]\) balances the contribution of \(i\)'s own degree and its neighbors' degrees. Liu
+ <i>
+  et al.
+ </i>
+ [2] set \(δ = 0.5\).  The
  <i>
   E-shell hierarchy decomposition
  </i>
- is a variant of \(k\)-shell decomposition that uses \(d^{ex}(i)\) instead of the standard degree \(d_i\). The HCC of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{HCC}(i) = \frac{d^{ex}(i)}{\max_j d^{ex}(j)} + \frac{pos(i)}{\max_j pos(j)},
- <br/>
- \end{equation*}
- <br/>
- where \(pos(i)\) denotes the iteration at which node \(i\) is removed during the E-shell decomposition.
- <br/>
- Nodes with high HCC values are not only structurally central according to the E-shell hierarchy but also well-connected to influential neighbors, reflecting both local and global importance.
- <br/>
+ is a variant of \(k\)-shell decomposition that uses \(d^{ex}(i)\) instead of the standard degree \(d_i\). The HCC of node \(i\) is then defined as\begin{equation*}c_{HCC}(i) = \frac{d^{ex}(i)}{\max_j d^{ex}(j)} + \frac{pos(i)}{\max_j pos(j)},\end{equation*}where \(pos(i)\) denotes the iteration at which node \(i\) is removed during the E-shell decomposition.  Nodes with high HCC values are not only structurally central according to the E-shell hierarchy but also well-connected to influential neighbors, reflecting both local and global importance.
 </p>
 <h3>
  References

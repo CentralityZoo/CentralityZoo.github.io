@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended local bridging centrality
  </i>
- (ELBC), also known as the 2-hop local bridging centrality (LBC2) or Extended LBC, extends the localized bridging centrality by incorporating information from a broader, two-hop neighborhood around each node [2]. It is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{LBC2}}(i) = c_{\mathrm{ego2}}(i) \cdot β_c(i),
- <br/>
- \end{equation*}
- <br/>
- where \(c_{\mathrm{ego2}}(i)\) denotes the betweenness centrality of node \(i\) computed within its 2-hop egocentric network, and \(β_c(i)\) is the bridging coefficient of node \(i\).
- <br/>
- This extension captures not only the immediate (1-hop) brokerage of a node but also its mediating role across the next layer of neighbors, offering a more comprehensive view of local connectivity.
- <br/>
+ (ELBC), also known as the 2-hop local bridging centrality (LBC2) or Extended LBC, extends the localized bridging centrality by incorporating information from a broader, two-hop neighborhood around each node [2]. It is defined as\begin{equation*}c_{\mathrm{LBC2}}(i) = c_{\mathrm{ego2}}(i) \cdot β_c(i),\end{equation*}where \(c_{\mathrm{ego2}}(i)\) denotes the betweenness centrality of node \(i\) computed within its 2-hop egocentric network, and \(β_c(i)\) is the bridging coefficient of node \(i\).  This extension captures not only the immediate (1-hop) brokerage of a node but also its mediating role across the next layer of neighbors, offering a more comprehensive view of local connectivity.
 </p>
 <h3>
  References

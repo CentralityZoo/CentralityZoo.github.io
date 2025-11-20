@@ -16,38 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid degree centrality
  </i>
- (HDC) [2] quantifies a node's influence by combining contributions from both near-source and distal effects under varying spreading probabilities.
- <br/>
- The near-source influence of node \(i\) is represented by its degree, while the distal influence is captured by the
+ (HDC) [2] quantifies a node's influence by combining contributions from both near-source and distal effects under varying spreading probabilities. The near-source influence of node \(i\) is represented by its degree, while the distal influence is captured by the
  <i>
   modified local centrality
  </i>
- (MLC). Specifically, MLC adjusts the semi-local LocalRank centrality by subtracting the contribution of neighbors' direct connections:
- <br/>
- \begin{equation*}
- <br/>
- c_{MLC}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k) - 2 \sum_{j \in \mathcal{N}(i)} |\mathcal{N}(j)|,
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(n(k)=|\mathcal{N}^{(\leq 2)}(k)|\) denotes the number of nearest and next-nearest neighbors of node \(k\).
- <br/>
- The hybrid degree centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{HDC}(i) = (β - p) \, α \, |\mathcal{N}(i)| + p \, c_{MLC}(i),
- <br/>
- \end{equation*}
- <br/>
- where \(p\) is the spreading probability, and \(α\) and \(β\) are parameters controlling the relative contributions of near-source and distal influence.
- <br/>
- Ma and Ma [2] suggest \(α = 1000\), \(β \in [0.1, 0.2]\), and \(p &lt; 0.6\). When \(β = 0.2\) and \(p = 0.1\), the contributions from degree centrality (DC) and modified local centrality (MLC) in the hybrid centrality (HDC) are each approximately half of the total HDC value.
- <br/>
+ (MLC). Specifically, MLC adjusts the semi-local LocalRank centrality by subtracting the contribution of neighbors' direct connections:\begin{equation*}c_{MLC}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k) - 2 \sum_{j \in \mathcal{N}(i)} |\mathcal{N}(j)|,\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(n(k)=|\mathcal{N}^{(\leq 2)}(k)|\) denotes the number of nearest and next-nearest neighbors of node \(k\).The hybrid degree centrality of node \(i\) is defined as\begin{equation*}c_{HDC}(i) = (β - p) \, α \, |\mathcal{N}(i)| + p \, c_{MLC}(i),\end{equation*}where \(p\) is the spreading probability, and \(α\) and \(β\) are parameters controlling the relative contributions of near-source and distal influence. Ma and Ma [2] suggest \(α = 1000\), \(β \in [0.1, 0.2]\), and \(p &lt; 0.6\). When \(β = 0.2\) and \(p = 0.1\), the contributions from degree centrality (DC) and modified local centrality (MLC) in the hybrid centrality (HDC) are each approximately half of the total HDC value.
 </p>
 <h3>
  References

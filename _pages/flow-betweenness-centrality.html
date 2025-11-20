@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Flow betweenness
  </i>
- is a variant of betweenness centrality where shortest paths are substituted with edge-independent paths [2, 3], i.e.,
- <br/>
- \begin{equation*}
- <br/>
- c_{flow-betw}(i) = \sum_{j=1}^{N}{\sum_{k=1}^{N}{\frac{m_{jk}(i)}{m_{jk}}}},
- <br/>
- \end{equation*}
- <br/>
- where \(m_{jk}\) denotes the maximum flow from node \(j\) to node \(k\) and \(m_{jk}(i)\) denotes the maximum flow from node \(j\) to node \(k\) that passes through node \(i\). A node with high flow betweenness plays a critical role in the network, acting as a bridge or bottleneck that supports the transfer of resources between many other nodes. This measure captures the influence of nodes that may not lie on shortest paths but are nevertheless essential for maintaining network connectivity and facilitating flow.
- <br/>
+ is a variant of betweenness centrality where shortest paths are substituted with edge-independent paths [2, 3], i.e.,\begin{equation*}c_{flow-betw}(i) = \sum_{j=1}^{N}{\sum_{k=1}^{N}{\frac{m_{jk}(i)}{m_{jk}}}},\end{equation*}where \(m_{jk}\) denotes the maximum flow from node \(j\) to node \(k\) and \(m_{jk}(i)\) denotes the maximum flow from node \(j\) to node \(k\) that passes through node \(i\). A node with high flow betweenness plays a critical role in the network, acting as a bridge or bottleneck that supports the transfer of resources between many other nodes. This measure captures the influence of nodes that may not lie on shortest paths but are nevertheless essential for maintaining network connectivity and facilitating flow.
 </p>
 <h3>
  References

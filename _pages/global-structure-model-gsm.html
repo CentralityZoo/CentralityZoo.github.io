@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Global Structure Model
  </i>
- (GSM) centrality accounts for self-influence (SI) and global influence (GI) [2]. For node \(i\), the GSM score is defined as
- <br/>
- \[
- <br/>
- c_{GSM}(i) = SI(i) \cdot GI(i) = e^{k_s(i)/N} \cdot \sum_{j \neq i} \frac{k_s(j)}{d_{ij}},
- <br/>
- \]
- <br/>
- where \(k_s(i)\) is the \(k\)-shell value of \(i\), \(d_{ij}\) is the shortest-path distance between \(i\) and \(j\) and \(N\) is the total number of nodes in the network. The term \(SI(i)\) reflects intrinsic influence based on the core-periphery position, while \(GI(i)\) captures contributions from all other nodes weighted by distance.
- <br/>
+ (GSM) centrality accounts for self-influence (SI) and global influence (GI) [2]. For node \(i\), the GSM score is defined as\[c_{GSM}(i) = SI(i) \cdot GI(i) = e^{k_s(i)/N} \cdot \sum_{j \neq i} \frac{k_s(j)}{d_{ij}},\]where \(k_s(i)\) is the \(k\)-shell value of \(i\), \(d_{ij}\) is the shortest-path distance between \(i\) and \(j\) and \(N\) is the total number of nodes in the network. The term \(SI(i)\) reflects intrinsic influence based on the core-periphery position, while \(GI(i)\) captures contributions from all other nodes weighted by distance.
 </p>
 <h3>
  References

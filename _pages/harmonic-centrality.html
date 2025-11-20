@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Harmonic centrality
  </i>
- (also known as Latora closeness centrality [2], nodal efficiency [3], reciprocal closeness [4] or efficiency centrality [5]) was introduced in [6, 7] and discussed in [8]. It is an extension of closeness centrality, in which the centrality of node \(i\) is computed as the sum of the inverse distances to all other nodes, i.e.,
- <br/>
- \begin{equation*}
- <br/>
- c_{harmonic}(i) = \sum_{j \neq i}{\frac{1}{d_{ij}}}.
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). Intuitively, harmonic centrality quantifies a node’s closeness to all others by summing the reciprocals of shortest-path distances, remaining well-defined even in disconnected networks: if no path exists between a pair of nodes, the shortest-path distance is considered infinite, and consequently, their contribution to the sum is taken as zero.
- <br/>
+ (also known as Latora closeness centrality [2], nodal efficiency [3], reciprocal closeness [4] or efficiency centrality [5]) was introduced in [6, 7] and discussed in [8]. It is an extension of closeness centrality, in which the centrality of node \(i\) is computed as the sum of the inverse distances to all other nodes, i.e.,\begin{equation*}c_{harmonic}(i) = \sum_{j \neq i}{\frac{1}{d_{ij}}}.\end{equation*}where \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). Intuitively, harmonic centrality quantifies a node’s closeness to all others by summing the reciprocals of shortest-path distances, remaining well-defined even in disconnected networks: if no path exists between a pair of nodes, the shortest-path distance is considered infinite, and consequently, their contribution to the sum is taken as zero.
 </p>
 <h3>
  References

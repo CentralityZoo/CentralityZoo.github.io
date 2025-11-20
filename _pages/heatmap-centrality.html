@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Heatmap centrality
  </i>
- captures both local and global network information by comparing the farness of a node with the average farness of its neighbors [2].  The centrality of node \(i\), denoted \(c_{\text{heatmap}}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{heatmap}}(i) = \sum_{j=1}^{N} d_{ij} - \frac{\sum_{j=1}^{N} \left( a_{ij} \sum_{k=1}^{N} d_{jk} \right)}{\sum_{j=1}^{N} a_{ij}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), so that \(\sum_{j=1}^{N} d_{ij}\) represents the farness of node \(i\).
- <br/>
- Intuitively, this measure identifies “hot spot” nodes within their local neighborhoods: a node whose farness is smaller than the average farness of its neighbors is considered more influential in the network.
- <br/>
+ captures both local and global network information by comparing the farness of a node with the average farness of its neighbors [2].  The centrality of node \(i\), denoted \(c_{\text{heatmap}}(i)\), is defined as\begin{equation*}c_{\text{heatmap}}(i) = \sum_{j=1}^{N} d_{ij} - \frac{\sum_{j=1}^{N} \left( a_{ij} \sum_{k=1}^{N} d_{jk} \right)}{\sum_{j=1}^{N} a_{ij}},\end{equation*}where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), so that \(\sum_{j=1}^{N} d_{ij}\) represents the farness of node \(i\).  Intuitively, this measure identifies “hot spot” nodes within their local neighborhoods: a node whose farness is smaller than the average farness of its neighbors is considered more influential in the network.
 </p>
 <h3>
  References

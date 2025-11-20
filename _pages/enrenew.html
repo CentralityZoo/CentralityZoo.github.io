@@ -16,31 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   EnRenew
  </i>
- algorithm is a variant of the VoteRank algorithm that incorporates information entropy to evaluate node influence [2]. Initially, the seed set \(S\) is empty. Each node \(i\) votes for its neighbor \(j\) with a vote weight
- <br/>
- \begin{equation*}
- <br/>
- h_{ij} = -\frac{d_i}{\sum_{l \in \mathcal{N}(j)} d_l}
- <br/>
- \log \left(\frac{d_i}{\sum_{l \in \mathcal{N}(j)} d_l} \right),
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\) and \(\mathcal{N}(j)\) denotes the neighbors of node \(j\).
- <br/>
- The voting procedure iteratively executes the following steps:
- <br/>
+ algorithm is a variant of the VoteRank algorithm that incorporates information entropy to evaluate node influence [2]. Initially, the seed set \(S\) is empty. Each node \(i\) votes for its neighbor \(j\) with a vote weight\begin{equation*}h_{ij} = -\frac{d_i}{\sum_{l \in \mathcal{N}(j)} d_l} \log \left(\frac{d_i}{\sum_{l \in \mathcal{N}(j)} d_l} \right),\end{equation*}where \(d_i\) is the degree of node \(i\) and \(\mathcal{N}(j)\) denotes the neighbors of node \(j\).  The voting procedure iteratively executes the following steps:
  <ol>
-  <br/>
   <li>
    Each node \(i\) votes for its neighbors \(j\) using the weights \(h_{ij}\).
   </li>
-  <br/>
   <li>
    Select the node \(k \notin S\) with the highest total votes 
     \begin{equation*}
@@ -48,7 +32,6 @@ search: true
     \end{equation*}
     and add it to the seed set \(S\).
   </li>
-  <br/>
   <li>
    Update the voting weights \(h_{ij}\) for nodes within the \(l\)-hop neighborhood of node \(k\):
     \begin{equation*}
@@ -58,11 +41,13 @@ search: true
     \begin{equation*}
         E_{\langle d \rangle} = -\log \frac{1}{\langle d \rangle}
     \end{equation*}
-    represents the information entropy of a node in a \(\langle d \rangle\)-regular graph, with \(\langle d \rangle\) being the average degree of the network. Guo et al. [2] suggest \(l = 2\).
+    represents the information entropy of a node in a \(\langle d \rangle\)-regular graph, with \(\langle d \rangle\) being the average degree of the network. Guo
+   <i>
+    et al.
+   </i>
+   [2] suggest \(l = 2\).
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

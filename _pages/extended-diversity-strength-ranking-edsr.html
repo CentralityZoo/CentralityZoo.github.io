@@ -16,36 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Extended diversity-strength ranking
  </i>
- (EDSR) further extends the diversity-strength ranking (DSR) measure by incorporating the influence potential of nodes over a wider network range, as proposed by Zareie et al. [2]. The EDSR value of node \(i\) is given by
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{EDSR}}(i) =\sum_{j \in \mathcal{N}(i)}  c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)}
- <br/>
- \left[
- <br/>
- \sum_{k \in \mathcal{N}(j)}
- <br/>
- \left(
- <br/>
- \sum_{p \in \mathcal{N}(k)}
- <br/>
- \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}
- <br/>
- \log \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}
- <br/>
- \right)
- <br/>
- \right],
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(IKs(p)\) is the improved \(k\)-shell index of node \(p\) as defined by Liu et al. [3]. The innermost term represents the diversity-strength centrality of node \(k\), the middle summation yields the DSR of node \(j\), and the outermost summation aggregates these across the neighbors of node \(i\). EDSR thus captures multi-level influence by integrating local, second-order, and higher-order structural information. Nodes with high EDSR values lie within regions of strong and diverse influence, indicating their importance in diffusion and spreading processes across the network.
- <br/>
+ (EDSR) further extends the diversity-strength ranking (DSR) measure by incorporating the influence potential of nodes over a wider network range, as proposed by Zareie
+ <i>
+  et al.
+ </i>
+ [2]. The EDSR value of node \(i\) is given by\begin{equation*}c_{\text{EDSR}}(i) =\sum_{j \in \mathcal{N}(i)}  c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)} \left[\sum_{k \in \mathcal{N}(j)} \left(\sum_{p \in \mathcal{N}(k)} \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)} \log \frac{IKs(p)}{\sum_{q \in \mathcal{N}(k)} IKs(q)}\right)\right],\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(IKs(p)\) is the improved \(k\)-shell index of node \(p\) as defined by Liu
+ <i>
+  et al.
+ </i>
+ [3]. The innermost term represents the diversity-strength centrality of node \(k\), the middle summation yields the DSR of node \(j\), and the outermost summation aggregates these across the neighbors of node \(i\). EDSR thus captures multi-level influence by integrating local, second-order, and higher-order structural information. Nodes with high EDSR values lie within regions of strong and diverse influence, indicating their importance in diffusion and spreading processes across the network.
 </p>
 <h3>
  References

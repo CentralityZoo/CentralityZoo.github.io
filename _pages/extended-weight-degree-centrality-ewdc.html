@@ -16,31 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended weight degree centrality
  </i>
- (EWDC) is an extension of the weight degree centrality (WDC) [2], which incorporates the centrality of a node's neighbors to improve its discriminative power.
- <br/>
- The EWDC centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{EWdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} c_{Wdc}(j) - c_{Wdc}(i) \right) c_{Wdc}(i)^{|r|},
- <br/>
- \end{equation*}
- <br/>
- where \(c_{Wdc}(i)\) is the weight degree centrality of node \(i\), given by
- <br/>
- \begin{equation*}
- <br/>
- c_{Wdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} d_j - d_i \right) d_i^{α}.
- <br/>
- \end{equation*}
- <br/>
- Here, \(d_i\) is the degree of node \(i\), \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(α\) is a tunable parameter controlling the contribution of the node's own degree. Following Liu et al. [2], \(α\) can be set to \(|r|\), where \(r\) is the network's degree assortativity coefficient. This allows the centrality measure to adapt to assortative, disassortative, and neutral networks. EWDC further incorporates the WDC values of neighbors, enhancing its ability to distinguish influential nodes across different network structures.
- <br/>
+ (EWDC) is an extension of the weight degree centrality (WDC) [2], which incorporates the centrality of a node's neighbors to improve its discriminative power.The EWDC centrality of node \(i\) is defined as\begin{equation*}c_{EWdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} c_{Wdc}(j) - c_{Wdc}(i) \right) c_{Wdc}(i)^{|r|},\end{equation*}where \(c_{Wdc}(i)\) is the weight degree centrality of node \(i\), given by\begin{equation*}c_{Wdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} d_j - d_i \right) d_i^{α}.\end{equation*}Here, \(d_i\) is the degree of node \(i\), \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(α\) is a tunable parameter controlling the contribution of the node's own degree. Following Liu
+ <i>
+  et al.
+ </i>
+ [2], \(α\) can be set to \(|r|\), where \(r\) is the network's degree assortativity coefficient. This allows the centrality measure to adapt to assortative, disassortative, and neutral networks. EWDC further incorporates the WDC values of neighbors, enhancing its ability to distinguish influential nodes across different network structures.
 </p>
 <h3>
  References

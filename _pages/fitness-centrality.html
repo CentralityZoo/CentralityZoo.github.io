@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Fitness centrality
  </i>
- is a network measure designed to assess node vulnerability within complex networks [2]. It incorporates the concept of node fitness, capturing the criticality of nodes that sustain network functionality by supporting many nodes with low connectivity.
- <br/>
- Formally, the fitness centrality \(c_{\mathrm{fitness}}(i,t)\) of node \(i\) at time \(t\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{fitness}}(i,t) = δ + \sum_{j \in \mathcal{N}(i)} \frac{1}{c_{\mathrm{fitness}}(j,t-1)},
- <br/>
- \]
- <br/>
- or, equivalently, in a more compact matrix form:
- <br/>
- \[
- <br/>
- c_{\mathrm{fitness}}(t) = δ \mathbf{1} + A \left(c_{\mathrm{fitness}}(t-1)\right)^{-1},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(A\) is the adjacency matrix of the network, and \(δ &gt; 0\) is a small constant (typically \(δ = 0.01\)) to ensure convergence.
- <br/>
- The initial scores are set as \(c_{\mathrm{fitness}}(i,0) = 1\) for all nodes \(i\). This recursive definition reflects the intuition that a node’s fitness centrality is higher when it is connected to many nodes with low fitness centrality, thus identifying nodes that are crucial for maintaining network integrity. The fitness centrality of node \(i\) is taken as the steady-state value \(c_{\mathrm{fitness}}(i,t^\infty)\).
- <br/>
- Servedio et al. [2] demonstrate that fitness centrality effectively identifies these essential nodes across diverse network topologies, providing a robust tool for vulnerability assessment and targeted interventions in complex systems.
- <br/>
+ is a network measure designed to assess node vulnerability within complex networks [2]. It incorporates the concept of node fitness, capturing the criticality of nodes that sustain network functionality by supporting many nodes with low connectivity.  Formally, the fitness centrality \(c_{\mathrm{fitness}}(i,t)\) of node \(i\) at time \(t\) is defined as\[c_{\mathrm{fitness}}(i,t) = δ + \sum_{j \in \mathcal{N}(i)} \frac{1}{c_{\mathrm{fitness}}(j,t-1)},\]or, equivalently, in a more compact matrix form:\[c_{\mathrm{fitness}}(t) = δ \mathbf{1} + A \left(c_{\mathrm{fitness}}(t-1)\right)^{-1},\]where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(A\) is the adjacency matrix of the network, and \(δ &gt; 0\) is a small constant (typically \(δ = 0.01\)) to ensure convergence.  The initial scores are set as \(c_{\mathrm{fitness}}(i,0) = 1\) for all nodes \(i\). This recursive definition reflects the intuition that a node’s fitness centrality is higher when it is connected to many nodes with low fitness centrality, thus identifying nodes that are crucial for maintaining network integrity. The fitness centrality of node \(i\) is taken as the steady-state value \(c_{\mathrm{fitness}}(i,t^\infty)\).  Servedio
+ <i>
+  et al.
+ </i>
+ [2] demonstrate that fitness centrality effectively identifies these essential nodes across diverse network topologies, providing a robust tool for vulnerability assessment and targeted interventions in complex systems.
 </p>
 <h3>
  References

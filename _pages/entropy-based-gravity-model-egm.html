@@ -16,53 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   entropy-based gravity model
  </i>
- (EGM) is a variant of the local gravity model in which a node’s mass is determined by an entropy-based hybrid centrality measure [2]. Specifically, the mass \( m(i) \) of node \( i \) is defined as a weighted linear combination of \( m \) normalized centrality measures:
- <br/>
- \begin{equation*}
- <br/>
- m(i) = \sum_{j=1}^m w_j c_j(i),
- <br/>
- \end{equation*}
- <br/>
- where \( c_j(i) \) denotes the normalized value of the \( j\)-th centrality index, and \( w_j \) represents its corresponding weight. The weights \( w_j \) are determined using the entropy weight method, which quantifies the amount of information each centrality measure contributes. Specifically,
- <br/>
- \begin{equation*}
- <br/>
- w_j = \frac{1 - S_j}{m - \sum_{k=1}^m S_k},
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- S_j = -\frac{1}{\ln N} \sum_{i=1}^N
- <br/>
- \frac{c_j(i)}{\sum_{k=1}^N c_j(k)}
- <br/>
- \ln \left( \frac{c_j(i)}{\sum_{k=1}^N c_j(k)} \right),
- <br/>
- \end{equation*}
- <br/>
- and \( S_j \) represents the entropy value of the \( j\)-th centrality measure across all \( N \) nodes.
- <br/>
- Using the entropy-weighted mass, the EGM centrality of node \( i \) is given by
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{egm}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{m(i)\, m(j)}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), and \( \mathcal{N}^{(\leq l)}(i) \) denotes the set of nodes whose shortest-path distance from \(i\) is less than or equal to \(l\) (typically \( l = 2 \)).
- <br/>
- The performance of the entropy-based gravity model depends on the selection of centrality measures included in the hybrid formulation. Yan et al. [2] compared nine different combinations of centrality measures and demonstrated that the combination incorporating the h-index (Lobby index), closeness centrality, betweenness centrality and PageRank yields the best performance. The effectiveness of this approach was validated on six real-world networks through simulations of the Susceptible-Infected-Recovered (SIR) spreading process.
- <br/>
+ (EGM) is a variant of the local gravity model in which a node’s mass is determined by an entropy-based hybrid centrality measure [2]. Specifically, the mass \( m(i) \) of node \( i \) is defined as a weighted linear combination of \( m \) normalized centrality measures:\begin{equation*}m(i) = \sum_{j=1}^m w_j c_j(i),\end{equation*}where \( c_j(i) \) denotes the normalized value of the \( j\)-th centrality index, and \( w_j \) represents its corresponding weight. The weights \( w_j \) are determined using the entropy weight method, which quantifies the amount of information each centrality measure contributes. Specifically,\begin{equation*}w_j = \frac{1 - S_j}{m - \sum_{k=1}^m S_k},\end{equation*}where\begin{equation*}S_j = -\frac{1}{\ln N} \sum_{i=1}^N \frac{c_j(i)}{\sum_{k=1}^N c_j(k)} \ln \left( \frac{c_j(i)}{\sum_{k=1}^N c_j(k)} \right),\end{equation*}and \( S_j \) represents the entropy value of the \( j\)-th centrality measure across all \( N \) nodes.Using the entropy-weighted mass, the EGM centrality of node \( i \) is given by\begin{equation*}c_{\text{egm}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{m(i)\, m(j)}{d_{ij}^2},\end{equation*}where \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), and \( \mathcal{N}^{(\leq l)}(i) \) denotes the set of nodes whose shortest-path distance from \(i\) is less than or equal to \(l\) (typically \( l = 2 \)).The performance of the entropy-based gravity model depends on the selection of centrality measures included in the hybrid formulation. Yan
+ <i>
+  et al.
+ </i>
+ [2] compared nine different combinations of centrality measures and demonstrated that the combination incorporating the h-index (Lobby index), closeness centrality, betweenness centrality and PageRank yields the best performance. The effectiveness of this approach was validated on six real-world networks through simulations of the Susceptible-Infected-Recovered (SIR) spreading process.
 </p>
 <h3>
  References

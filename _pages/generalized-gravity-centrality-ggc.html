@@ -16,31 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Generalized gravity centrality
  </i>
- (GGC), also known as the clustering gravity model [2], is a variant of the gravity model that incorporates both degree and clustering coefficient to evaluate the “mass” or influence of a node [3]. The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{GGC}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{sp_i \, sp_j}{d_{ij}^2},
- <br/>
- \]
- <br/>
- where \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), and \(\mathcal{N}^{(\leq r)}\) denotes the set of nodes within radius \(r\) of node \(i\).
- <br/>
- The spreading ability of a node is given by
- <br/>
- \[
- <br/>
- sp_i = d_i \, e^{α c_i},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), and \(α\) is a tunable parameter controlling the influence of the clustering coefficient. Li et al. [3] suggest \(α = 2\) in their experiments.
- <br/>
+ (GGC), also known as the clustering gravity model [2], is a variant of the gravity model that incorporates both degree and clustering coefficient to evaluate the “mass” or influence of a node [3]. The centrality of node \(i\) is defined as\[c_{GGC}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{sp_i \, sp_j}{d_{ij}^2},\]where \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), and \(\mathcal{N}^{(\leq r)}\) denotes the set of nodes within radius \(r\) of node \(i\).  The spreading ability of a node is given by\[sp_i = d_i \, e^{α c_i},\]where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), and \(α\) is a tunable parameter controlling the influence of the clustering coefficient. Li
+ <i>
+  et al.
+ </i>
+ [3] suggest \(α = 2\) in their experiments.
 </p>
 <h3>
  References

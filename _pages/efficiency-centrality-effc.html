@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   efficiency centrality
  </i>
- (EffC), also known as information centrality, quantifies the contribution of each node to the overall efficiency of a network [2, 3]. The centrality of node \(i\) is defined as the relative decrease in network efficiency resulting from its removal:
- <br/>
- \[
- <br/>
- c_{EffC}(i) = \frac{E(G) - E(G_i)}{E(G)},
- <br/>
- \]
- <br/>
- where \(G_i\) is the subgraph obtained by removing node \(i\), and \(E(G)\) denotes the global efficiency of graph \(G\), calculated as
- <br/>
- \[
- <br/>
- E(G) = \frac{1}{N(N-1)} \sum_{i \neq j} \frac{1}{d_{ij}},
- <br/>
- \]
- <br/>
- with \(d_{ij}\) being the length of the shortest path between nodes \(i\) and \(j\). If no path exists between \(i\) and \(j\), it is assumed that \(d_{ij} = \infty\).
- <br/>
- Thus, the global efficiency \(E(G)\) can be interpreted as the sum of the harmonic centralities of all nodes in \(G\), linking efficiency centrality directly to the nodes’ ability to facilitate information flow across the network.
- <br/>
+ (EffC), also known as information centrality, quantifies the contribution of each node to the overall efficiency of a network [2, 3]. The centrality of node \(i\) is defined as the relative decrease in network efficiency resulting from its removal:\[c_{EffC}(i) = \frac{E(G) - E(G_i)}{E(G)},\]where \(G_i\) is the subgraph obtained by removing node \(i\), and \(E(G)\) denotes the global efficiency of graph \(G\), calculated as\[E(G) = \frac{1}{N(N-1)} \sum_{i \neq j} \frac{1}{d_{ij}},\]with \(d_{ij}\) being the length of the shortest path between nodes \(i\) and \(j\). If no path exists between \(i\) and \(j\), it is assumed that \(d_{ij} = \infty\).  Thus, the global efficiency \(E(G)\) can be interpreted as the sum of the harmonic centralities of all nodes in \(G\), linking efficiency centrality directly to the nodes’ ability to facilitate information flow across the network.
 </p>
 <h3>
  References

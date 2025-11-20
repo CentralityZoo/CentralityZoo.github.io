@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Electrical closeness
  </i>
- (EleClose) centrality is a variant of the classical closeness centrality that uses the effective resistance to measure the distance between pairs of nodes [2, 3]. The EleClose centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{EleClose}}(i) = \frac{1}{\sum_{j=1}^N \Omega_{ij}},
- <br/>
- \]
- <br/>
- where
- <br/>
- \[
- <br/>
- \Omega_{ij} = Q^{\dagger}_{ii} + Q^{\dagger}_{jj} - 2 Q^{\dagger}_{ij}
- <br/>
- \]
- <br/>
- denotes the effective resistance between nodes \(i\) and \(j\), and \(Q^{\dagger}\) is the Moore-Penrose pseudo-inverse of the Laplacian matrix of the graph \(G\). This measure accounts for all paths in the network weighted by their effective resistance, capturing both direct and indirect connections between nodes and providing a centrality value that reflects the node's influence on the overall network connectivity.
- <br/>
+ (EleClose) centrality is a variant of the classical closeness centrality that uses the effective resistance to measure the distance between pairs of nodes [2, 3]. The EleClose centrality of node \(i\) is defined as\[c_{\mathrm{EleClose}}(i) = \frac{1}{\sum_{j=1}^N \Omega_{ij}},\]where \[\Omega_{ij} = Q^{\dagger}_{ii} + Q^{\dagger}_{jj} - 2 Q^{\dagger}_{ij}\]denotes the effective resistance between nodes \(i\) and \(j\), and \(Q^{\dagger}\) is the Moore-Penrose pseudo-inverse of the Laplacian matrix of the graph \(G\). This measure accounts for all paths in the network weighted by their effective resistance, capturing both direct and indirect connections between nodes and providing a centrality value that reflects the node's influence on the overall network connectivity.
 </p>
 <h3>
  References

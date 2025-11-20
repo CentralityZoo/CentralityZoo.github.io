@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Extended Hybrid Characteristic Centrality
  </i>
- (EHCC) extends the hybrid characteristic centrality (HCC) by incorporating the contributions of a node's neighbors [2]. The EHCC of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{EHCC}(i) = c_{HCC}(i) + \sum_{j \in \mathcal{N}(i)} c_{HCC}(j),
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\) and \(c_{HCC}(i)\) is the HCC score of node \(i\), given by
- <br/>
- \begin{equation*}
- <br/>
- c_{HCC}(i) = \frac{d^{ex}(i)}{\max_j d^{ex}(j)} + \frac{pos(i)}{\max_j pos(j)},
- <br/>
- \end{equation*}
- <br/>
- with \(d^{ex}(i)\) representing the extended degree of node \(i\), and \(pos(i)\) denoting the iteration at which node \(i\) is removed during the E-shell decomposition.
- <br/>
- Nodes with high EHCC values are influential both due to their own structural position in the network and the importance of their immediate neighbors.
- <br/>
+ (EHCC) extends the hybrid characteristic centrality (HCC) by incorporating the contributions of a node's neighbors [2]. The EHCC of node \(i\) is defined as\begin{equation*}c_{EHCC}(i) = c_{HCC}(i) + \sum_{j \in \mathcal{N}(i)} c_{HCC}(j),\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\) and \(c_{HCC}(i)\) is the HCC score of node \(i\), given by\begin{equation*}c_{HCC}(i) = \frac{d^{ex}(i)}{\max_j d^{ex}(j)} + \frac{pos(i)}{\max_j pos(j)},\end{equation*}with \(d^{ex}(i)\) representing the extended degree of node \(i\), and \(pos(i)\) denoting the iteration at which node \(i\) is removed during the E-shell decomposition.    Nodes with high EHCC values are influential both due to their own structural position in the network and the importance of their immediate neighbors.
 </p>
 <h3>
  References

@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   gravity model
  </i>
- (originally proposed in [2] as the inverse-square law method), inspired by Newton’s law of gravitation, evaluates a node’s importance in spreading dynamics by incorporating both neighborhood and path information [3]. In this model, the degree of a node is regarded as its mass, while the shortest path length between two nodes represents their distance.
- <br/>
- The centrality \(c_{\text{GM}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{GM}}(i) = \sum_{j \neq i} \frac{d_i\,d_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) denotes the shortest path distance between nodes \(i\) and \(j\) and \(d_i\) represents the degree of \(i\).
- <br/>
- According to the gravity model, a node with a larger degree (reflecting stronger local connectivity) and shorter average distances to other nodes (indicating higher global accessibility) is considered more influential in the network.
- <br/>
+ (originally proposed in [2] as the inverse-square law method), inspired by Newton’s law of gravitation, evaluates a node’s importance in spreading dynamics by incorporating both neighborhood and path information [3]. In this model, the degree of a node is regarded as its mass, while the shortest path length between two nodes represents their distance. The centrality \(c_{\text{GM}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\text{GM}}(i) = \sum_{j \neq i} \frac{d_i\,d_j}{d_{ij}^2},\end{equation*}where \(d_{ij}\) denotes the shortest path distance between nodes \(i\) and \(j\) and \(d_i\) represents the degree of \(i\). According to the gravity model, a node with a larger degree (reflecting stronger local connectivity) and shorter average distances to other nodes (indicating higher global accessibility) is considered more influential in the network.
 </p>
 <h3>
  References

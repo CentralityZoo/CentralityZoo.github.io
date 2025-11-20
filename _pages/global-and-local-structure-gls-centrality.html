@@ -16,41 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   global and local structure (GLS) centrality
  </i>
- evaluates node importance by integrating both local and global network structures [2]. The global influence of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- f_g(i) = d_i \sum_{j \in \mathcal{N}(i)} α^{|\mathcal{N}(i) \cap \mathcal{N}(j)|},
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\), \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(α = 1.1\) is a constant.
- <br/>
- The local influence of node \(i\) accounts for the normalized degree of its neighbors and the inverse average degree of each neighbor's neighbors:
- <br/>
- \begin{equation*}
- <br/>
- f_l(i) = \sum_{j \in \mathcal{N}(i)} \frac{d_j}{N-1} \cdot \frac{d_j}{\sum_{l \in \mathcal{N}(j)} d_l}.
- <br/>
- \end{equation*}
- <br/>
- The GLS centrality of node \(i\) combines its global and local influence as
- <br/>
- \begin{equation*}
- <br/>
- c_{GLS}(i) = f_g(i) \cdot f_l(i)
- <br/>
- = \frac{d_i}{N-1} \sum_{j \in \mathcal{N}(i)} \frac{d_j^2 α^{|\mathcal{N}(i) \cap \mathcal{N}(j)|}}{\sum_{l \in \mathcal{N}(j)} d_l}.
- <br/>
- \end{equation*}
- <br/>
- Hence, the GLS centrality combines the weighted contributions of immediate neighbors, accounting for their degrees, with the overlap between the neighborhoods of connected nodes, thereby integrating local connectivity and semi-global structural information.
- <br/>
+ evaluates node importance by integrating both local and global network structures [2]. The global influence of node \(i\) is defined as\begin{equation*}f_g(i) = d_i \sum_{j \in \mathcal{N}(i)} α^{|\mathcal{N}(i) \cap \mathcal{N}(j)|},\end{equation*}where \(d_i\) is the degree of node \(i\), \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(α = 1.1\) is a constant.  The local influence of node \(i\) accounts for the normalized degree of its neighbors and the inverse average degree of each neighbor's neighbors:\begin{equation*}f_l(i) = \sum_{j \in \mathcal{N}(i)} \frac{d_j}{N-1} \cdot \frac{d_j}{\sum_{l \in \mathcal{N}(j)} d_l}.\end{equation*}The GLS centrality of node \(i\) combines its global and local influence as\begin{equation*}c_{GLS}(i) = f_g(i) \cdot f_l(i) = \frac{d_i}{N-1} \sum_{j \in \mathcal{N}(i)} \frac{d_j^2 α^{|\mathcal{N}(i) \cap \mathcal{N}(j)|}}{\sum_{l \in \mathcal{N}(j)} d_l}.\end{equation*}Hence, the GLS centrality combines the weighted contributions of immediate neighbors, accounting for their degrees, with the overlap between the neighborhoods of connected nodes, thereby integrating local connectivity and semi-global structural information.
 </p>
 <h3>
  References

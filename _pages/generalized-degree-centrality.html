@@ -16,33 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   generalized degree centrality
  </i>
- extends standard degree centrality by incorporating the influence of a node's neighbors [2]. Rather than counting only direct connections, it redistributes the total sum of degrees across the network, assigning greater importance to nodes connected to highly central neighbors. A positive parameter \(\varepsilon &gt; 0\) controls the strength of neighbor influence, interpolating between standard degree centrality (\(\varepsilon \to 0\)) and equal centrality for all nodes within a connected component (\(\varepsilon \to \infty\)).
- <br/>
- Formally, the generalized degree centrality vector \(\mathbf{x}(\varepsilon)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- (I + \varepsilon L) \, \mathbf{x}(\varepsilon) = d,
- <br/>
- \end{equation*}
- <br/>
- where \(I\) is the identity matrix, \(L\) is the graph Laplacian, and \(d\) is the vector of node degrees. For an individual node \(i\), the generalized degree centrality can also be expressed as
- <br/>
- \begin{equation*}
- <br/>
- d_i = x_i(\varepsilon) + \varepsilon \sum_{j \in \mathcal{N}(i)} a_{ij} \big(x_i(\varepsilon) - x_j(\varepsilon)\big),
- <br/>
- \end{equation*}
- <br/>
- illustrating that a node's centrality increases if it is connected to less central neighbors and decreases if it is connected to more central neighbors.
- <br/>
- Nodes with high generalized degree centrality are not only well-connected themselves but are also linked to other influential nodes, providing a more nuanced reflection of their global importance in the network. In practice, small values of \(\varepsilon\) are recommended to preserve the properties of standard degree centrality while enhancing differentiation among nodes.
- <br/>
+ extends standard degree centrality by incorporating the influence of a node's neighbors [2]. Rather than counting only direct connections, it redistributes the total sum of degrees across the network, assigning greater importance to nodes connected to highly central neighbors. A positive parameter \(\varepsilon &gt; 0\) controls the strength of neighbor influence, interpolating between standard degree centrality (\(\varepsilon \to 0\)) and equal centrality for all nodes within a connected component (\(\varepsilon \to \infty\)).  Formally, the generalized degree centrality vector \(\mathbf{x}(\varepsilon)\) is defined as\begin{equation*}(I + \varepsilon L) \, \mathbf{x}(\varepsilon) = d,\end{equation*}where \(I\) is the identity matrix, \(L\) is the graph Laplacian, and \(d\) is the vector of node degrees. For an individual node \(i\), the generalized degree centrality can also be expressed as\begin{equation*}d_i = x_i(\varepsilon) + \varepsilon \sum_{j \in \mathcal{N}(i)} a_{ij} \big(x_i(\varepsilon) - x_j(\varepsilon)\big),\end{equation*}illustrating that a node's centrality increases if it is connected to less central neighbors and decreases if it is connected to more central neighbors.  Nodes with high generalized degree centrality are not only well-connected themselves but are also linked to other influential nodes, providing a more nuanced reflection of their global importance in the network. In practice, small values of \(\varepsilon\) are recommended to preserve the properties of standard degree centrality while enhancing differentiation among nodes.
 </p>
 <h3>
  References

@@ -16,27 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   flow coefficient
  </i>
- is a measure of local centrality introduced by Honey et al. [2] to quantify the capacity of a node to mediate information flow among its immediate neighbors. For a node \(i\), the flow coefficient \(c_{\mathrm{fc}}(i)\) is defined as the fraction of all possible two-step paths between pairs of its neighbors that actually pass through node \(i\):
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{fc}}(i) =
- <br/>
- \frac{\sum_{j \neq k \in \mathcal{N}(i)} (A^2)_{jk}}
- <br/>
- {|\mathcal{N}(i)| \, (|\mathcal{N}(i)| - 1)},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\) and \(A\) is the adjacency matrix of the network. The term \((A^2)_{jk}\) counts the number of paths of length two between nodes \(j\) and \(k\).
- <br/>
- High values of \(c_{\mathrm{fc}}(i)\) indicate that node \(i\) plays an important role in facilitating information flow among its neighbors, whereas low values suggest that the node’s neighbors are more directly connected to one another.
- <br/>
+ is a measure of local centrality introduced by Honey
+ <i>
+  et al.
+ </i>
+ [2] to quantify the capacity of a node to mediate information flow among its immediate neighbors. For a node \(i\), the flow coefficient \(c_{\mathrm{fc}}(i)\) is defined as the fraction of all possible two-step paths between pairs of its neighbors that actually pass through node \(i\):\begin{equation*}c_{\mathrm{fc}}(i) = \frac{\sum_{j \neq k \in \mathcal{N}(i)} (A^2)_{jk}}{|\mathcal{N}(i)| \, (|\mathcal{N}(i)| - 1)},\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\) and \(A\) is the adjacency matrix of the network. The term \((A^2)_{jk}\) counts the number of paths of length two between nodes \(j\) and \(k\).  High values of \(c_{\mathrm{fc}}(i)\) indicate that node \(i\) plays an important role in facilitating information flow among its neighbors, whereas low values suggest that the node’s neighbors are more directly connected to one another.
 </p>
 <h3>
  References

@@ -16,39 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended cluster coefficient ranking measure
  </i>
- (ECRM) is an extension of the shell clustering coefficient (SCC), where the centrality of a node depends not only on its own SCC but also on the SCC values of its neighbors. Specifically, the ECRM score \(c_{ECRM}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{ECRM}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} SCC(l),
- <br/>
- \]
- <br/>
- where the shell clustering coefficient of node \(i\) is given by
- <br/>
- \[
- <br/>
- SCC(i) = \sum_{j \in \mathcal{N}(i)} \left[ 2 - \mathrm{corr}\bigl[ sv(i), sv(j) \bigr] + \left(\frac{2 d_j}{\max_l d_l} + 1 \right) \right].
- <br/>
- \]
- <br/>
- Here, \(d_j\) denotes the degree of node \(j\), and \(\mathrm{corr}[sv(i), sv(j)]\) is the Pearson correlation between the shell vectors of nodes \(i\) and \(j\):
- <br/>
- \[
- <br/>
- sv(i) = \bigl(|N_{ks}^{(1)}(i)|, \dots, |N_{ks}^{(f)}(i)| \bigr),
- <br/>
- \]
- <br/>
- where \(|N_{ks}^{(k)}(i)|\) represents the number of neighbors of node \(i\) belonging to the \(k\)-th hierarchy in the \(k\)-shell decomposition, and \(f\) is the maximum hierarchy level in the network.
- <br/>
- Nodes with high ECRM values are those that are connected to neighbors with diverse shell hierarchies and locally distinct structures, indicating that they occupy positions that bridge multiple structural layers and potentially influence the network across different \(k\)-shell levels.
- <br/>
+ (ECRM) is an extension of the shell clustering coefficient (SCC), where the centrality of a node depends not only on its own SCC but also on the SCC values of its neighbors. Specifically, the ECRM score \(c_{ECRM}(i)\) is defined as\[c_{ECRM}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} SCC(l),\]where the shell clustering coefficient of node \(i\) is given by\[SCC(i) = \sum_{j \in \mathcal{N}(i)} \left[ 2 - \mathrm{corr}\bigl[ sv(i), sv(j) \bigr] + \left(\frac{2 d_j}{\max_l d_l} + 1 \right) \right].\]Here, \(d_j\) denotes the degree of node \(j\), and \(\mathrm{corr}[sv(i), sv(j)]\) is the Pearson correlation between the shell vectors of nodes \(i\) and \(j\):\[sv(i) = \bigl(|N_{ks}^{(1)}(i)|, \dots, |N_{ks}^{(f)}(i)| \bigr),\]where \(|N_{ks}^{(k)}(i)|\) represents the number of neighbors of node \(i\) belonging to the \(k\)-th hierarchy in the \(k\)-shell decomposition, and \(f\) is the maximum hierarchy level in the network.  Nodes with high ECRM values are those that are connected to neighbors with diverse shell hierarchies and locally distinct structures, indicating that they occupy positions that bridge multiple structural layers and potentially influence the network across different \(k\)-shell levels.
 </p>
 <h3>
  References

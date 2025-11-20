@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hide information
  </i>
- measures how easily other nodes can reach a given node [2]. The hide information of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathcal{H}}(i) = \frac{1}{N} \sum_{j=1}^{N} S(j,i),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- S(j,i) = - \log_2 \sum_{\{p(j,i)\}} P[p(j,i)], \quad
- <br/>
- P[p(j,i)] = \frac{1}{k_j} \prod_{l \neq j \neq i \in p(j,i)} \frac{1}{k_l - 1}.
- <br/>
- \]
- <br/>
- Here, \(S(j,i)\) represents the amount of information required to locate node \(i\) starting from node \(j\), and \(P[p(j,i)]\) is the probability of following path \(p(j,i)\) when choosing neighbors uniformly at each step. A node with high hide information is easier to locate from other nodes. For example, in a star graph, the central hub has high hide information as it is easily reached from peripheral nodes [2].
- <br/>
+ measures how easily other nodes can reach a given node [2]. The hide information of node \(i\) is defined as\begin{equation*}c_{\mathcal{H}}(i) = \frac{1}{N} \sum_{j=1}^{N} S(j,i),\end{equation*}where\[S(j,i) = - \log_2 \sum_{\{p(j,i)\}} P[p(j,i)], \quad P[p(j,i)] = \frac{1}{k_j} \prod_{l \neq j \neq i \in p(j,i)} \frac{1}{k_l - 1}.\]Here, \(S(j,i)\) represents the amount of information required to locate node \(i\) starting from node \(j\), and \(P[p(j,i)]\) is the probability of following path \(p(j,i)\) when choosing neighbors uniformly at each step. A node with high hide information is easier to locate from other nodes. For example, in a star graph, the central hub has high hide information as it is easily reached from peripheral nodes [2].
 </p>
 <h3>
  References

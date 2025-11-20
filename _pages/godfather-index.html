@@ -16,41 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Godfather index
  </i>
- measures a node's brokerage and coordination capital by counting the number of pairs of a node’s neighbors who are not connected to each other [2]. The centrality of node \(i\), denoted \(c_{\mathrm{GF}}(i)\), can be expressed as
- <br/>
- \[
- <br/>
- c_{\mathrm{GF}}(i) = \sum_{k&gt;j} a_{ik} a_{ij} (1 - a_{kj}) = \sum_{k &gt; j \in \mathcal{N}(i)} (1 - a_{kj}),
- <br/>
- \]
- <br/>
- where \(a_{ij}\) is the adjacency matrix of the network and \(\mathcal{N}(i)\) is the set of neighbors of node \(i\).
- <br/>
- Jackson [2] shows that the Godfather Index is inversely related to the clustering coefficient \(c_{\mathrm{cl}}(i)\), weighted by the number of neighbor pairs:
- <br/>
- \[
- <br/>
- c_{\mathrm{GF}}(i) = (1 - c_{\mathrm{cl}}(i)) \frac{d_i (d_i - 1)}{2},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\).
- <br/>
- The Godfather Index is also related to the redundancy coefficient \(c_r(i)\) as
- <br/>
- \[
- <br/>
- c_{\mathrm{GF}}(i) = \frac{d_i (d_i - 1)}{2} - \frac{d_i}{2} c_r(i).
- <br/>
- \]
- <br/>
- This formulation highlights that nodes with many unconnected neighbor pairs (low redundancy) have higher Godfather centrality, reflecting their potential as brokers or coordinators in the network.
- <br/>
+ measures a node's brokerage and coordination capital by counting the number of pairs of a node’s neighbors who are not connected to each other [2]. The centrality of node \(i\), denoted \(c_{\mathrm{GF}}(i)\), can be expressed as\[c_{\mathrm{GF}}(i) = \sum_{k&gt;j} a_{ik} a_{ij} (1 - a_{kj}) = \sum_{k &gt; j \in \mathcal{N}(i)} (1 - a_{kj}),\]where \(a_{ij}\) is the adjacency matrix of the network and \(\mathcal{N}(i)\) is the set of neighbors of node \(i\). Jackson [2] shows that the Godfather Index is inversely related to the clustering coefficient \(c_{\mathrm{cl}}(i)\), weighted by the number of neighbor pairs:\[c_{\mathrm{GF}}(i) = (1 - c_{\mathrm{cl}}(i)) \frac{d_i (d_i - 1)}{2},\]where \(d_i\) is the degree of node \(i\).  The Godfather Index is also related to the redundancy coefficient \(c_r(i)\) as\[c_{\mathrm{GF}}(i) = \frac{d_i (d_i - 1)}{2} - \frac{d_i}{2} c_r(i).\]This formulation highlights that nodes with many unconnected neighbor pairs (low redundancy) have higher Godfather centrality, reflecting their potential as brokers or coordinators in the network.
 </p>
 <h3>
  References

@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid centrality
  </i>
- (XpY) combines two hybrid indices \(X\) and \(Y\) to capture node centrality across multiple classical measures, improving robustness relative to any single measure [2]:
- <br/>
- \[
- <br/>
- XpY = X + Y =  \frac{c_D^u + c_D^w + c_{BC}^u + c_{BC}^w - 4}{4(N-1)} + \frac{c_E^u + c_E^w + c_{EC}^u + c_{EC}^w + c_C^u + c_C^w - 6}{6(N-1)}.
- <br/>
- \]
- <br/>
- where \(c_D\), \(c_{BC}\), \(c_E\), \(c_{EC}\), and \(c_C\) denote the rankings of nodes by degree, betweenness, eccentricity, eigenvector, and closeness centralities in unweighted (\(u\)) and weighted (\(w\)) networks. Low values of \(XpY\) indicate central nodes, while high values correspond to peripheral nodes. XpY is introduced for the selection of central stocks in financial networks [2].
- <br/>
+ (XpY) combines two hybrid indices \(X\) and \(Y\) to capture node centrality across multiple classical measures, improving robustness relative to any single measure [2]:\[XpY = X + Y =  \frac{c_D^u + c_D^w + c_{BC}^u + c_{BC}^w - 4}{4(N-1)} + \frac{c_E^u + c_E^w + c_{EC}^u + c_{EC}^w + c_C^u + c_C^w - 6}{6(N-1)}.\]where \(c_D\), \(c_{BC}\), \(c_E\), \(c_{EC}\), and \(c_C\) denote the rankings of nodes by degree, betweenness, eccentricity, eigenvector, and closeness centralities in unweighted (\(u\)) and weighted (\(w\)) networks. Low values of \(XpY\) indicate central nodes, while high values correspond to peripheral nodes. XpY is introduced for the selection of central stocks in financial networks [2].
 </p>
 <h3>
  References

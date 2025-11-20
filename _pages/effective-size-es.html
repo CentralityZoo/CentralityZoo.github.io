@@ -16,41 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   effective size
  </i>
- (ES) of node \(i\)'s egocentric network was introduced by Burt [2] to quantify the number of nonredundant contacts in a node’s local network. The effective size \(c_{\mathrm{ES}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{ES}}(i) = \sum_{j \in \mathcal{N}(i)} \left( 1 - \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} \, m_{jk} \right),
- <br/>
- \end{equation*}
- <br/>
- where \(p_{ik}\) denotes the proportion of \(i\)’s time or energy invested in the relationship with node \(k\), computed as
- <br/>
- \[
- <br/>
- p_{ik} = \frac{a_{ik} + a_{ki}}{\sum_{q \in \mathcal{N}(i)} (a_{iq} + a_{qi})},
- <br/>
- \]
- <br/>
- and \(m_{jk}\) represents the marginal strength of contact \(j\)’s relation with contact \(k\), given by
- <br/>
- \begin{equation*}
- <br/>
- m_{jk} = \frac{a_{jk} + a_{kj}}{\max_{q} (a_{jq} + a_{qj})}.
- <br/>
- \end{equation*}
- <br/>
- According to Burt [2], the inner term \(\sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} m_{jk}\) quantifies the
+ (ES) of node \(i\)'s egocentric network was introduced by Burt [2] to quantify the number of nonredundant contacts in a node’s local network. The effective size \(c_{\mathrm{ES}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\mathrm{ES}}(i) = \sum_{j \in \mathcal{N}(i)} \left( 1 - \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} \, m_{jk} \right),\end{equation*}where \(p_{ik}\) denotes the proportion of \(i\)’s time or energy invested in the relationship with node \(k\), computed as\[p_{ik} = \frac{a_{ik} + a_{ki}}{\sum_{q \in \mathcal{N}(i)} (a_{iq} + a_{qi})},\]and \(m_{jk}\) represents the marginal strength of contact \(j\)’s relation with contact \(k\), given by\begin{equation*}m_{jk} = \frac{a_{jk} + a_{kj}}{\max_{q} (a_{jq} + a_{qj})}.\end{equation*}According to Burt [2], the inner term \(\sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} m_{jk}\) quantifies the
  <i>
   redundancy
  </i>
  of node \(j\), that is, the extent to which \(i\)’s connection to \(j\) is duplicated by other ties in \(i\)’s network. If node \(j\) is completely disconnected from all other neighbors of \(i\), this term equals zero, indicating that \(j\) provides a fully nonredundant contact.  Thus, the effective size \(c_{\mathrm{ES}}(i)\) measures the total number of nonredundant contacts of node \(i\).
- <br/>
 </p>
 <h3>
  References

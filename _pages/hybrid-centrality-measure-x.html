@@ -16,20 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hybrid centrality
  </i>
- (X) was proposed by Pozzi et al. [2] to improve the stability and robustness of node rankings by combining classical centrality measures, which are often positively correlated. Specifically, \(X\) aggregates the rankings of degree and betweenness centralities in both unweighted and weighted networks:
- <br/>
- \[
- <br/>
- X = \frac{c_D^u + c_D^w + c_{BC}^u + c_{BC}^w - 4}{4(N-1)},
- <br/>
- \]
- <br/>
- where \(c_D\) and \(c_{BC}\) denote the rankings of nodes by degree and betweenness centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  Nodes with low \(X\) values are highly central, whereas high values indicate peripheral nodes.
- <br/>
+ (X) was proposed by Pozzi
+ <i>
+  et al.
+ </i>
+ [2] to improve the stability and robustness of node rankings by combining classical centrality measures, which are often positively correlated. Specifically, \(X\) aggregates the rankings of degree and betweenness centralities in both unweighted and weighted networks:\[X = \frac{c_D^u + c_D^w + c_{BC}^u + c_{BC}^w - 4}{4(N-1)},\]where \(c_D\) and \(c_{BC}\) denote the rankings of nodes by degree and betweenness centralities in unweighted (\(u\)) and weighted (\(w\)) networks.  Nodes with low \(X\) values are highly central, whereas high values indicate peripheral nodes.
 </p>
 <h3>
  References

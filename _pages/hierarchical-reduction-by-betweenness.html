@@ -16,40 +16,29 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Hierarchical reduction by betweenness
  </i>
- is an iterative node-removal procedure that reveals the hierarchical organization of a network based on betweenness centrality [2]. The method is conceptually analogous to the \(k\)-core decomposition, but instead of using node degree as the removal criterion, it employs betweenness centrality.
- <br/>
- The algorithm proceeds as follows:
- <br/>
+ is an iterative node-removal procedure that reveals the hierarchical organization of a network based on betweenness centrality [2]. The method is conceptually analogous to the \(k\)-core decomposition, but instead of using node degree as the removal criterion, it employs betweenness centrality.The algorithm proceeds as follows:
  <ol>
-  <br/>
   <li>
    Compute the betweenness centrality for all nodes in the network.
   </li>
-  <br/>
   <li>
    Identify and remove the nodes with the minimum betweenness centrality value.
   </li>
-  <br/>
   <li>
    Recalculate betweenness centrality on the resulting (reduced) graph.
   </li>
-  <br/>
   <li>
    Repeat the removal and recalculation steps until all nodes have been eliminated.
   </li>
-  <br/>
  </ol>
- <br/>
  Each node is assigned a
  <i>
   hierarchical level
  </i>
  corresponding to the iteration (or reduction step) at which it is removed from the network. Nodes removed in the early stages occupy peripheral positions, whereas those that persist until later iterations represent structurally more central elements of the network hierarchy.
- <br/>
 </p>
 <h3>
  References

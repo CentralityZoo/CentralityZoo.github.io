@@ -16,29 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   global importance of nodes
  </i>
- (GIN) quantifies the influence of a node by combining its degree, representing its direct connectivity, with its potential impact on other nodes, weighted by their degrees and distances within the network [2]. The GIN centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{GIN}(i) =
- <br/>
- \begin{cases}
- <br/>
- e^{\frac{α d_i}{N}} \cdot \sum_{j \neq i} \frac{β d_j}{d_{ij}}, &amp; \text{if } d_i \neq 0, \\
- <br/>
- 0, &amp; \text{if } d_i = 0,
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(α\) and \(β\) are tunable parameters. Zhao et al. [2] set \(α = β = 1\) in their analysis. Hence, the GIN measure captures both the direct connectivity of a node, measured by its degree, and the potential influence on other nodes, weighted by their degrees and the shortest-path distances within the network.
- <br/>
+ (GIN) quantifies the influence of a node by combining its degree, representing its direct connectivity, with its potential impact on other nodes, weighted by their degrees and distances within the network [2]. The GIN centrality of node \(i\) is defined as\begin{equation*}c_{GIN}(i) = \begin{cases}e^{\frac{α d_i}{N}} \cdot \sum_{j \neq i} \frac{β d_j}{d_{ij}}, &amp; \text{if } d_i \neq 0, \\0, &amp; \text{if } d_i = 0,\end{cases}\end{equation*}where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(α\) and \(β\) are tunable parameters. Zhao
+ <i>
+  et al.
+ </i>
+ [2] set \(α = β = 1\) in their analysis. Hence, the GIN measure captures both the direct connectivity of a node, measured by its degree, and the potential influence on other nodes, weighted by their degrees and the shortest-path distances within the network.
 </p>
 <h3>
  References

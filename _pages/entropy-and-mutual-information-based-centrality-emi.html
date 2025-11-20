@@ -16,40 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Entropy and mutual information-based centrality
  </i>
- (EMI) quantifies the importance of a node by combining its structural entropy with the mutual information shared with its neighbors, which can highlight nodes that are overvalued in terms of connectivity [2]. For an unweighted, undirected network, the centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{EMI}}(i) = S(i) + MI(i),
- <br/>
- \end{equation*}
- <br/>
- where \(S(i)\) is the
+ (EMI) quantifies the importance of a node by combining its structural entropy with the mutual information shared with its neighbors, which can highlight nodes that are overvalued in terms of connectivity [2]. For an unweighted, undirected network, the centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{EMI}}(i) = S(i) + MI(i),\end{equation*}where \(S(i)\) is the
  <i>
   structural entropy
  </i>
- of node \(i\):
- <br/>
- \begin{equation*}
- <br/>
- S(i) = - \sum_{j \in \mathcal{N}(i)} \frac{d_j}{\sum_{l \in \mathcal{N}(i)} d_l}
- <br/>
- \log \frac{d_j}{\sum_{l \in \mathcal{N}(i)} d_l},
- <br/>
- \end{equation*}
- <br/>
- with \(d_j\) being the degree of neighbor \(j\). The term \(MI(i)\) captures the mutual information between node \(i\) and its neighbors:
- <br/>
- \begin{equation*}
- <br/>
- MI(i) =\sum_{j \in \mathcal{N}(i)} \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i)| |\mathcal{N}(j)|} \log \frac{|\mathcal{N}(i)|+|\mathcal{N}(j)|-|\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i)| |\mathcal{N}(j)|}
- <br/>
- \end{equation*}
- <br/>
+ of node \(i\):\begin{equation*}S(i) = - \sum_{j \in \mathcal{N}(i)} \frac{d_j}{\sum_{l \in \mathcal{N}(i)} d_l} \log \frac{d_j}{\sum_{l \in \mathcal{N}(i)} d_l},\end{equation*}with \(d_j\) being the degree of neighbor \(j\). The term \(MI(i)\) captures the mutual information between node \(i\) and its neighbors:\begin{equation*}MI(i) =\sum_{j \in \mathcal{N}(i)} \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i)| |\mathcal{N}(j)|} \log \frac{|\mathcal{N}(i)|+|\mathcal{N}(j)|-|\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i)| |\mathcal{N}(j)|}\end{equation*}
 </p>
 <h3>
  References

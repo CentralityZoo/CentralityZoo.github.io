@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   gravity centrality
@@ -25,18 +24,11 @@ search: true
  <i>
   gravity \(k\)-shell
  </i>
- metric) is inspired by Newton’s law of gravitation. In this measure, the \(k\)-shell value of a node is regarded as its mass, while the shortest path length between two nodes represents their distance [2].
- <br/>
- Let \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes within the \(l\)-hop neighborhood of node \(i\). The gravity centrality \(c_{\text{Gravity}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{Gravity}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{k_s(i)\,k_s(j)}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\) and \(k_s(i)\) denotes the \(k\)-shell value of node \(i\). To reduce computational complexity, Ma et al. [2] set \(l = 3\), meaning that only the nearest neighbors, next-nearest neighbors, and third-order neighbors of node \(i\) are considered.
- <br/>
+ metric) is inspired by Newton’s law of gravitation. In this measure, the \(k\)-shell value of a node is regarded as its mass, while the shortest path length between two nodes represents their distance [2]. Let \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes within the \(l\)-hop neighborhood of node \(i\). The gravity centrality \(c_{\text{Gravity}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\text{Gravity}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{k_s(i)\,k_s(j)}{d_{ij}^2},\end{equation*}where \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\) and \(k_s(i)\) denotes the \(k\)-shell value of node \(i\). To reduce computational complexity, Ma
+ <i>
+  et al.
+ </i>
+ [2] set \(l = 3\), meaning that only the nearest neighbors, next-nearest neighbors, and third-order neighbors of node \(i\) are considered.
 </p>
 <h3>
  References

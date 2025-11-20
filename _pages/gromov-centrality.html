@@ -16,42 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Gromov centrality
  </i>
- is a multi-scale measure of node centrality that quantifies the average triangle excess over all pairs of nodes in a given \(l\)-hop neighborhood [2]. Let \(\mathcal{N}^{(\leq l)}(i)\) denote
- <br/>
- The set of nodes within the \(l\)-hop neighborhood of node \(i\), and let \(d_{ij}\) represent the shortest-path distance between nodes \(i\) and \(j\). The Gromov centrality of node \(i\), denoted \(c_{\text{Gromov}}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{Gromov}}(i) = \frac{1}{|T(\mathcal{N}^{(\leq l)}(i))|} \sum_{(j,k) \in T(\mathcal{N}^{(\leq l)}(i))} \Delta_i(j,k),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- \Delta_i(j,k) = d_{jk} - d_{ij} - d_{ik} \le 0
- <br/>
- \]
- <br/>
- is the triangle inequality excess (equivalent to the Gromov product) between nodes \(j\) and \(k\) with respect to \(i\), and
- <br/>
- \[
- <br/>
- T(\mathcal{N}^{(\leq l)}(i)) = \{(j,k) \mid j,k \in \mathcal{N}^{(\leq l)}(i), \ j \neq k \}
- <br/>
- \]
- <br/>
- is the set of all unordered pairs of nodes in the \(l\)-neighborhood of \(i\).
- <br/>
- The triangle inequality excess \(\Delta_i(j,k)\) equals zero if and only if node \(i\) lies on a geodesic (shortest path) between nodes \(j\) and \(k\). Very negative values of \(\Delta_i(j,k)\) indicate that passing through node \(i\) induces a significant detour between \(j\) and \(k\).
- <br/>
- By definition, \(c_{\text{Gromov}}(i)\) is always non-positive. Gromov centrality thus characterizes the extent to which a node lies between other pairs of nodes in its \(l\)-neighborhood. When \(l = 1\), it reflects the proportion of triangles formed by a node's neighbors, and a locally central node exhibits a star-like structure. When \(l\) equals the diameter of the network, Gromov centrality becomes equivalent to closeness centrality.
- <br/>
+ is a multi-scale measure of node centrality that quantifies the average triangle excess over all pairs of nodes in a given \(l\)-hop neighborhood [2]. Let \(\mathcal{N}^{(\leq l)}(i)\) denote The set of nodes within the \(l\)-hop neighborhood of node \(i\), and let \(d_{ij}\) represent the shortest-path distance between nodes \(i\) and \(j\). The Gromov centrality of node \(i\), denoted \(c_{\text{Gromov}}(i)\), is defined as\begin{equation*}c_{\text{Gromov}}(i) = \frac{1}{|T(\mathcal{N}^{(\leq l)}(i))|} \sum_{(j,k) \in T(\mathcal{N}^{(\leq l)}(i))} \Delta_i(j,k),\end{equation*}where\[\Delta_i(j,k) = d_{jk} - d_{ij} - d_{ik} \le 0\]is the triangle inequality excess (equivalent to the Gromov product) between nodes \(j\) and \(k\) with respect to \(i\), and \[T(\mathcal{N}^{(\leq l)}(i)) = \{(j,k) \mid j,k \in \mathcal{N}^{(\leq l)}(i), \ j \neq k \}\]is the set of all unordered pairs of nodes in the \(l\)-neighborhood of \(i\).The triangle inequality excess \(\Delta_i(j,k)\) equals zero if and only if node \(i\) lies on a geodesic (shortest path) between nodes \(j\) and \(k\). Very negative values of \(\Delta_i(j,k)\) indicate that passing through node \(i\) induces a significant detour between \(j\) and \(k\).  By definition, \(c_{\text{Gromov}}(i)\) is always non-positive. Gromov centrality thus characterizes the extent to which a node lies between other pairs of nodes in its \(l\)-neighborhood. When \(l = 1\), it reflects the proportion of triangles formed by a node's neighbors, and a locally central node exhibits a star-like structure. When \(l\) equals the diameter of the network, Gromov centrality becomes equivalent to closeness centrality.
 </p>
 <h3>
  References

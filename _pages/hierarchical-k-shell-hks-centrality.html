@@ -16,37 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   hierarchical \(k\)-shell
  </i>
- (HKS) centrality is a hybrid extension of the \(k\)-shell centrality [2] that combines \(k\)-shell decomposition with node distances. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{HKS}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} s(l),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- s(l) = d_l (b_l + f_l).
- <br/>
- \end{equation*}
- <br/>
- Here, \(d_l\) is the degree of node \(l\), \(b_l\) is the iteration at which node \(l\) is removed during \(k\)-shell decomposition, and \(f_l\) captures the distance of node \(l\) to the nodes with the highest \(k\)-shell score. Specifically, let \(K\) denote the set of nodes with the highest \(k\)-shell index. Then
- <br/>
- \begin{equation*}
- <br/>
- f_l = \max_{u \in K} (b_u - d_{lu}),
- <br/>
- \end{equation*}
- <br/>
- where \(d_{lu}\) is the shortest path distance between nodes \(l\) and \(u\). This formulation integrates both local connectivity and hierarchical position to more accurately identify influential nodes.
- <br/>
+ (HKS) centrality is a hybrid extension of the \(k\)-shell centrality [2] that combines \(k\)-shell decomposition with node distances. The centrality of node \(i\) is defined as\begin{equation*}c_{HKS}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} s(l),\end{equation*}where \begin{equation*}s(l) = d_l (b_l + f_l).\end{equation*}Here, \(d_l\) is the degree of node \(l\), \(b_l\) is the iteration at which node \(l\) is removed during \(k\)-shell decomposition, and \(f_l\) captures the distance of node \(l\) to the nodes with the highest \(k\)-shell score. Specifically, let \(K\) denote the set of nodes with the highest \(k\)-shell index. Then\begin{equation*}f_l = \max_{u \in K} (b_u - d_{lu}),\end{equation*}where \(d_{lu}\) is the shortest path distance between nodes \(l\) and \(u\). This formulation integrates both local connectivity and hierarchical position to more accurately identify influential nodes.
 </p>
 <h3>
  References

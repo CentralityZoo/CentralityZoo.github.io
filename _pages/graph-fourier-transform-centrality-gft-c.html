@@ -16,44 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Graph Fourier Transform Centrality
  </i>
- (GFT-C) is a spectral measure that evaluates node importance based on the Laplacian eigendecomposition of a graph [2]. The eigenvalues of the Laplacian \(L\) capture the global variation of a graph signal across nodes: eigenvectors associated with large eigenvalues vary rapidly across adjacent nodes, whereas those corresponding to small eigenvalues vary slowly.
- <br/>
- For node \(i\), the GFT-C centrality \(c_{GFT-C}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{GFT-C}(i) = \sum_{l=1}^N e^{k λ_l} \left| \sum_{j=1}^N f_i(j) u_l(j) \right|,
- <br/>
- \]
- <br/>
- where \(λ_l\) and \(u_l\) are the \(l\)-th eigenvalue and eigenvector of \(L\), \(k\) is a parameter (Singh et al. suggest \(k=0.1\)), and \(f_i(j)\) quantifies the relative importance of node \(j\) with respect to node \(i\):
- <br/>
- \[
- <br/>
- f_i(j) =
- <br/>
- \begin{cases}
- <br/>
- 1, &amp; i = j, \\
- <br/>
- \dfrac{1/d_{ij}}{\sum_{k \neq i} 1/d_{ik}}, &amp; i \neq j,
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- with \(d_{ij}\) denoting the shortest-path distance between nodes \(i\) and \(j\).
- <br/>
- GFT-C of node \(i\) can be interpreted as the weighted sum of the graph Fourier transform coefficients of the importance signal \(f_i\). GFT-C is extended to the
+ (GFT-C) is a spectral measure that evaluates node importance based on the Laplacian eigendecomposition of a graph [2]. The eigenvalues of the Laplacian \(L\) capture the global variation of a graph signal across nodes: eigenvectors associated with large eigenvalues vary rapidly across adjacent nodes, whereas those corresponding to small eigenvalues vary slowly.  For node \(i\), the GFT-C centrality \(c_{GFT-C}(i)\) is defined as\[c_{GFT-C}(i) = \sum_{l=1}^N e^{k λ_l} \left| \sum_{j=1}^N f_i(j) u_l(j) \right|,\]where \(λ_l\) and \(u_l\) are the \(l\)-th eigenvalue and eigenvector of \(L\), \(k\) is a parameter (Singh
+ <i>
+  et al.
+ </i>
+ suggest \(k=0.1\)), and \(f_i(j)\) quantifies the relative importance of node \(j\) with respect to node \(i\):\[f_i(j) =\begin{cases}1, &amp; i = j, \\\dfrac{1/d_{ij}}{\sum_{k \neq i} 1/d_{ik}}, &amp; i \neq j,\end{cases}\]with \(d_{ij}\) denoting the shortest-path distance between nodes \(i\) and \(j\).  GFT-C of node \(i\) can be interpreted as the weighted sum of the graph Fourier transform coefficients of the importance signal \(f_i\). GFT-C is extended to the
  <i>
   fractional graph Fourier transform centrality
  </i>
  (FrGFTC) in [3], where the eigenvector matrix \(U = [u_1, \dots, u_N]\) is replaced by \(U^α\), with \(α\) denoting the fractional order.
- <br/>
 </p>
 <h3>
  References

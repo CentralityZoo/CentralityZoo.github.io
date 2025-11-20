@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   HybridRank
  </i>
- is a hybrid centrality measure designed to identify a set of influential spreaders in a network by combining topological properties of nodes [2]. The method operates in two main steps: computing a hybrid centrality score for each node and selecting a subset of influential spreaders.
- <br/>
- The hybrid centrality \( c_{HC}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{HC}(i) = c_{EV}(i) \sum_{j \in \mathcal{N}(i)} k_s(j),
- <br/>
- \end{equation*}
- <br/>
- where \( c_{EV}(i) \) denotes the eigenvector centrality of node \( i \), \( k_s(j) \) is the \(k\)-shell index of neighbor \( j \), and \( \mathcal{N}(i) \) represents the set of neighbors of \( i \).
- <br/>
- In the second step, nodes are ranked according to their hybrid centrality scores. The algorithm then iteratively selects the node with the highest \( c_{HC} \) value as a seed and removes it along with its immediate neighbors from consideration. This process continues until the desired number of non-adjacent influential spreaders is obtained.
- <br/>
+ is a hybrid centrality measure designed to identify a set of influential spreaders in a network by combining topological properties of nodes [2]. The method operates in two main steps: computing a hybrid centrality score for each node and selecting a subset of influential spreaders.The hybrid centrality \( c_{HC}(i) \) of node \( i \) is defined as\begin{equation*}c_{HC}(i) = c_{EV}(i) \sum_{j \in \mathcal{N}(i)} k_s(j),\end{equation*}where \( c_{EV}(i) \) denotes the eigenvector centrality of node \( i \), \( k_s(j) \) is the \(k\)-shell index of neighbor \( j \), and \( \mathcal{N}(i) \) represents the set of neighbors of \( i \).In the second step, nodes are ranked according to their hybrid centrality scores. The algorithm then iteratively selects the node with the highest \( c_{HC} \) value as a seed and removes it along with its immediate neighbors from consideration. This process continues until the desired number of non-adjacent influential spreaders is obtained.
 </p>
 <h3>
  References

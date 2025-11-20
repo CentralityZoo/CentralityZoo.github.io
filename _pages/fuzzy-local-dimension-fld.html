@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Fuzzy local dimension
  </i>
- (FLD) is a measure designed to identify influential nodes by combining fuzzy set theory with local dimension concepts [2]. In the original local dimension (LD) measure [3], all nodes within a given radius (or box-size) contribute equally to the central node. FLD extends this approach by assigning different contributions to nodes based on their distance from the center node \(i\): the closer a node \(j\) is to \(i\), the greater its contribution.
- <br/>
- Specifically, Wen and Jiang [2] use a fuzzy membership function to weight each node within the radius. The weighted number of nodes within radius \(r\) of node \(i\) is given by
- <br/>
- \[
- <br/>
- B_i(r) = \frac{\sum_{j \in N^{(\leq r)}(i)} e^{-d_{ij}^2 / r^2}}{|N^{(\leq r)}(i)|},
- <br/>
- \]
- <br/>
- where \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), and \(N^{(\leq r)}(i)\) denotes the set of nodes satisfying \(d_{ij} \le r\).
- <br/>
- The fuzzy local dimension \(c_{FLD}(i)\) of node \(i\) is then obtained as the slope of the line fitting \(\log_2(B_i(r))\) versus \(\log_2(r)\) on a double logarithmic scale using linear regression. Nodes with higher fuzzy local dimension values are those whose neighborhoods are both dense and close to the node, indicating strong local influence and a greater potential to affect the surrounding network.
- <br/>
+ (FLD) is a measure designed to identify influential nodes by combining fuzzy set theory with local dimension concepts [2]. In the original local dimension (LD) measure [3], all nodes within a given radius (or box-size) contribute equally to the central node. FLD extends this approach by assigning different contributions to nodes based on their distance from the center node \(i\): the closer a node \(j\) is to \(i\), the greater its contribution.Specifically, Wen and Jiang [2] use a fuzzy membership function to weight each node within the radius. The weighted number of nodes within radius \(r\) of node \(i\) is given by\[B_i(r) = \frac{\sum_{j \in N^{(\leq r)}(i)} e^{-d_{ij}^2 / r^2}}{|N^{(\leq r)}(i)|},\]where \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), and \(N^{(\leq r)}(i)\) denotes the set of nodes satisfying \(d_{ij} \le r\). The fuzzy local dimension \(c_{FLD}(i)\) of node \(i\) is then obtained as the slope of the line fitting \(\log_2(B_i(r))\) versus \(\log_2(r)\) on a double logarithmic scale using linear regression. Nodes with higher fuzzy local dimension values are those whose neighborhoods are both dense and close to the node, indicating strong local influence and a greater potential to affect the surrounding network.
 </p>
 <h3>
  References

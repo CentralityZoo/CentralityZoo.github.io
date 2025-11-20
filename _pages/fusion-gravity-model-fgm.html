@@ -16,41 +16,19 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   fusion gravity model
  </i>
- (FGM) is a variant of the traditional gravity model that integrates multiple node attributes to evaluate the influence of nodes in complex networks [2]. Specifically, the FGM score \(c_{FGM}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{FGM}(i) = e_i \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{v_i v_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes whose shortest path distance from node \(i\) is less than or equal to \(r\), \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\), \(e_i\) represents the eigenvector centrality of node \(i\), and \(r\) is the radius of influence. Guo
+ (FGM) is a variant of the traditional gravity model that integrates multiple node attributes to evaluate the influence of nodes in complex networks [2]. Specifically, the FGM score \(c_{FGM}(i)\) of node \(i\) is defined as\begin{equation*}c_{FGM}(i) = e_i \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{v_i v_j}{d_{ij}^2},\end{equation*}where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes whose shortest path distance from node \(i\) is less than or equal to \(r\), \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\), \(e_i\) represents the eigenvector centrality of node \(i\), and \(r\) is the radius of influence. Guo
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] suggest setting \(r = 0.5 \langle d \rangle\), where \(\langle d \rangle\) is the average shortest path length in the network \(G\).
- <br/>
- The
+ } [2] suggest setting \(r = 0.5 \langle d \rangle\), where \(\langle d \rangle\) is the average shortest path length in the network \(G\).  The
  <i>
   mass
  </i>
- \(v_i\) of node \(i\) is given by
- <br/>
- \[
- <br/>
- v_i = \frac{d_i}{\max_j d_j} + \frac{k_s(i)}{\max_j k_s(j)},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(k_s(i)\) denote the degree and the \(k\)-shell index of node \(i\), respectively.
- <br/>
- The FGM index is designed to identify influential nodes in a network by combining structural and positional attributes. Its effectiveness is typically evaluated using the Susceptible-Infected (SI) propagation model.
- <br/>
+ \(v_i\) of node \(i\) is given by\[v_i = \frac{d_i}{\max_j d_j} + \frac{k_s(i)}{\max_j k_s(j)},\]where \(d_i\) and \(k_s(i)\) denote the degree and the \(k\)-shell index of node \(i\), respectively.  The FGM index is designed to identify influential nodes in a network by combining structural and positional attributes. Its effectiveness is typically evaluated using the Susceptible-Infected (SI) propagation model.
 </p>
 <h3>
  References

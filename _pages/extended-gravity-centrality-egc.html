@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
- Inspired by the LocalRank centrality [2] and the extended neighborhood coreness [3], Ma et al. [4] proposed the
+ Inspired by the LocalRank centrality [2] and the extended neighborhood coreness [3], Ma
+ <i>
+  et al.
+ </i>
+ [4] proposed the
  <i>
   extended gravity centrality
  </i>
- (EGC) of node \(i\), denoted by \(c_{\text{EGC}}(i)\), as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{EGC}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\text{Gravity}}(j)
- <br/>
- = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}^{(\leq l)}(j)} \frac{k_s(j)\,k_s(l)}{d_{jl}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_{jl}\) is the shortest path distance between nodes \(j\) and \(l\), \(k_s(j)\) represents the \(k\)-shell value of node \(j\) and \(\mathcal{N}^{(\leq l)}(j)\) denotes the set of nodes within the \(l\)-hop neighborhood of node \(j\).
- <br/>
- The EGC thus integrates the gravity centralities of a node’s immediate neighbors, capturing both local and higher-order topological influences in the network.
- <br/>
+ (EGC) of node \(i\), denoted by \(c_{\text{EGC}}(i)\), as\begin{equation*}c_{\text{EGC}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\text{Gravity}}(j)= \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}^{(\leq l)}(j)} \frac{k_s(j)\,k_s(l)}{d_{jl}^2},\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_{jl}\) is the shortest path distance between nodes \(j\) and \(l\), \(k_s(j)\) represents the \(k\)-shell value of node \(j\) and \(\mathcal{N}^{(\leq l)}(j)\) denotes the set of nodes within the \(l\)-hop neighborhood of node \(j\).The EGC thus integrates the gravity centralities of a node’s immediate neighbors, capturing both local and higher-order topological influences in the network.
 </p>
 <h3>
  References

@@ -16,32 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Graphlet degree centrality
  </i>
- (GDC) was introduced in [2] for biological networks to quantify the density and complexity of a node's extended neighborhood by counting the number of different graphlets that the node participates in. GDC is based on 2- to 5-node graphlets, which are small, connected, induced, non-isomorphic graphs where nodes correspond to particular symmetry groups (automorphism orbits). There are a total of 73 orbits across all 2-5-node graphlets.
- <br/>
- The graphlet degree centrality \(c_{GDC}(i)\) of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{GDC}(i) = \sum_{j=0}^{72} w_j \cdot \log(v_j(i) + 1),
- <br/>
- \end{equation*}
- <br/>
- where \(v_j(i)\) denotes the number of times node \(i\) touches orbit \(j\), and \(w_j \in [0,1]\) is the weight of orbit \(j\), accounting for dependencies between orbits [3]:
- <br/>
- \begin{equation*}
- <br/>
- w_j = 1 - \frac{\log(o_j)}{\log(73)},
- <br/>
- \end{equation*}
- <br/>
- where \(o_j\) is the number of orbits that influence orbit \(j\). The weighting scheme assigns higher weights to “important” orbits that are minimally affected by other orbits and lower weights to “less important” orbits that are highly dependent on others.
- <br/>
- Nodes located in dense extended network neighborhoods will have higher GDC values than nodes in sparser neighborhoods.
- <br/>
+ (GDC) was introduced in [2] for biological networks to quantify the density and complexity of a node's extended neighborhood by counting the number of different graphlets that the node participates in. GDC is based on 2- to 5-node graphlets, which are small, connected, induced, non-isomorphic graphs where nodes correspond to particular symmetry groups (automorphism orbits). There are a total of 73 orbits across all 2-5-node graphlets. The graphlet degree centrality \(c_{GDC}(i)\) of a node \(i\) is defined as\begin{equation*}c_{GDC}(i) = \sum_{j=0}^{72} w_j \cdot \log(v_j(i) + 1),\end{equation*}where \(v_j(i)\) denotes the number of times node \(i\) touches orbit \(j\), and \(w_j \in [0,1]\) is the weight of orbit \(j\), accounting for dependencies between orbits [3]:\begin{equation*}w_j = 1 - \frac{\log(o_j)}{\log(73)},\end{equation*}where \(o_j\) is the number of orbits that influence orbit \(j\). The weighting scheme assigns higher weights to “important” orbits that are minimally affected by other orbits and lower weights to “less important” orbits that are highly dependent on others. Nodes located in dense extended network neighborhoods will have higher GDC values than nodes in sparser neighborhoods.
 </p>
 <h3>
  References

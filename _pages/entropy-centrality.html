@@ -16,42 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Entropy centrality
  </i>
- measures the structural importance of a node based on the concept of information entropy in a network [2]. It quantifies how much the overall uncertainty or information diversity of the network decreases when node \( i \) is removed. Formally,
- <br/>
- \[
- <br/>
- c_{\mathrm{Entropy}}(i) = H_{ce}(G) - H_{ce}(G_i),
- <br/>
- \]
- <br/>
- where \( G_i \) is the graph obtained by deleting node \( i \) (and its associated edges) from \( G \). The term \( H_{ce}(G) \) denotes the
+ measures the structural importance of a node based on the concept of information entropy in a network [2]. It quantifies how much the overall uncertainty or information diversity of the network decreases when node \( i \) is removed. Formally,\[c_{\mathrm{Entropy}}(i) = H_{ce}(G) - H_{ce}(G_i),\]where \( G_i \) is the graph obtained by deleting node \( i \) (and its associated edges) from \( G \). The term \( H_{ce}(G) \) denotes the
  <i>
   centrality entropy
  </i>
- of the graph, defined as
- <br/>
- \[
- <br/>
- H_{ce}(G) = -\sum_{i=1}^{N} γ(i) \log_2 γ(i),
- <br/>
- \]
- <br/>
- with
- <br/>
- \[
- <br/>
- γ(i) = \frac{\sum_{j=1}^Nσ_{ij}}{\sum_{k=1}^{N}\sum_{j=1}^{N}σ_{kj}}.
- <br/>
- \]
- <br/>
- where \(σ_{ij}\) denotes the number of shortest paths from node \(j\) to node \(k\). Thus, \( γ(i) \) denotes the normalized contribution of node \( i \) to the network’s connectivity structure, computed as the fraction of all geodesic paths that originate from it.
- <br/>
- The underlying intuition of entropy centrality is that the structural configuration of a network can be regarded as an information system, where entropy quantifies the heterogeneity of connections among nodes. The removal of a structurally important node reduces this heterogeneity and, consequently, the network’s overall entropy. Therefore, nodes whose removal results in a larger decrease in entropy are considered more central or influential.
- <br/>
+ of the graph, defined as\[H_{ce}(G) = -\sum_{i=1}^{N} γ(i) \log_2 γ(i),\]with\[γ(i) = \frac{\sum_{j=1}^Nσ_{ij}}{\sum_{k=1}^{N}\sum_{j=1}^{N}σ_{kj}}.\]where \(σ_{ij}\) denotes the number of shortest paths from node \(j\) to node \(k\). Thus, \( γ(i) \) denotes the normalized contribution of node \( i \) to the network’s connectivity structure, computed as the fraction of all geodesic paths that originate from it.The underlying intuition of entropy centrality is that the structural configuration of a network can be regarded as an information system, where entropy quantifies the heterogeneity of connections among nodes. The removal of a structurally important node reduces this heterogeneity and, consequently, the network’s overall entropy. Therefore, nodes whose removal results in a larger decrease in entropy are considered more central or influential.
 </p>
 <h3>
  References

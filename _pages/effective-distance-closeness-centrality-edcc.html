@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Effective distance closeness centrality
  </i>
@@ -24,26 +23,7 @@ search: true
  <i>
   effective distance
  </i>
- [2]. The effective distance \(D_{j|i}\) from node \(i\) to a directly connected node \(j\) is defined as [3]:
- <br/>
- \[
- <br/>
- D_{j|i} = 1 - \log_2 \left( \frac{a_{ij}}{di} \right),
- <br/>
- \]
- <br/>
- where \(a_{ij}\) is the adjacency matrix entry for the edge \((i,j)\) and \(d_i\) is the degree of node \(i\).
- <br/>
- The effective shortest-path distance \(\tilde{d}_{ij}\) between nodes \(i\) and \(j\) is then computed as the shortest path in a weighted graph where the weight of each edge \((i,j)\) is given by \(D_{j|i}\). Finally, the EDCC of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{EDCC}(i) = \left( \sum_{j=1}^{N} \tilde{d}_{ij} \right)^{-1}.
- <br/>
- \]
- <br/>
- Hence, effective distance closeness centrality generalizes closeness centrality by incorporating edge weights that account for heterogeneous connectivity patterns, rather than treating all direct links as equivalent.
- <br/>
+ [2]. The effective distance \(D_{j|i}\) from node \(i\) to a directly connected node \(j\) is defined as [3]:\[D_{j|i} = 1 - \log_2 \left( \frac{a_{ij}}{di} \right),\]where \(a_{ij}\) is the adjacency matrix entry for the edge \((i,j)\) and \(d_i\) is the degree of node \(i\).  The effective shortest-path distance \(d̃_{ij}\) between nodes \(i\) and \(j\) is then computed as the shortest path in a weighted graph where the weight of each edge \((i,j)\) is given by \(D_{j|i}\). Finally, the EDCC of node \(i\) is defined as\[c_{EDCC}(i) = \left( \sum_{j=1}^{N} d̃_{ij} \right)^{-1}.\]Hence, effective distance closeness centrality generalizes closeness centrality by incorporating edge weights that account for heterogeneous connectivity patterns, rather than treating all direct links as equivalent.
 </p>
 <h3>
  References

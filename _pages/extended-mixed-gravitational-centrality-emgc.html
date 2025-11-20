@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   extended mixed gravitational centrality
  </i>
- (EMGC), proposed by Wang et al. [2], is an extension of the mixed gravitational centrality (MGC) measure. In this formulation, the centrality \( c_{\mathrm{EMGC}}(i) \) of node \( i \) is determined not only by its immediate structural characteristics but also by the mixed gravitational centralities of its neighboring nodes. The EMGC is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{EMGC}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\mathrm{MGC}}(j)
- <br/>
- = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} \frac{k_s(j)\,d_l}{d_{jl}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \), \( d_{jl} \) is the shortest path distance between nodes \( j \) and \( l \), \( k_s(j) \) represents the \(k\)-shell index of node \( j \), and \( d_l \) is the degree of node \( l \).
- <br/>
- The extended mixed gravitational centrality incorporates higher-order neighborhood effects by aggregating the influence of neighboring nodes’ MGC values, thereby providing a more comprehensive assessment of node importance within the network’s multi-level structure.
- <br/>
+ (EMGC), proposed by Wang
+ <i>
+  et al.
+ </i>
+ [2], is an extension of the mixed gravitational centrality (MGC) measure. In this formulation, the centrality \( c_{\mathrm{EMGC}}(i) \) of node \( i \) is determined not only by its immediate structural characteristics but also by the mixed gravitational centralities of its neighboring nodes. The EMGC is defined as\begin{equation*}c_{\mathrm{EMGC}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\mathrm{MGC}}(j)= \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} \frac{k_s(j)\,d_l}{d_{jl}^2},\end{equation*}where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \), \( d_{jl} \) is the shortest path distance between nodes \( j \) and \( l \), \( k_s(j) \) represents the \(k\)-shell index of node \( j \), and \( d_l \) is the degree of node \( l \).The extended mixed gravitational centrality incorporates higher-order neighborhood effects by aggregating the influence of neighboring nodes’ MGC values, thereby providing a more comprehensive assessment of node importance within the network’s multi-level structure.
 </p>
 <h3>
  References
