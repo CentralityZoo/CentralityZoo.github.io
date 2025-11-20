@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Adaptive LeaderRank
  </i>
- (ALR) is an extension of the original LeaderRank algorithm in which transition probabilities are weighted according to each node’s H-index (also known as the lobby index) [2]. Similar to LeaderRank, ALR is based on a biased random-walk process, where nodes with higher H-index are more likely to receive and transmit resources.
- <br/>
- Specifically, the ALR model first computes the H-index \(h_i\) of each node \(i\) and then introduces a ground node \(N+1\) with \(h_{N+1} = 1\), which connects bidirectionally to all nodes in the network \(G\). This construction is equivalent to a random walk on an augmented network where the resource amount \(s_i[t]\) at node \(i\) evolves according to
- <br/>
- \begin{equation*}
- <br/>
- s_i[t+1] = \sum_{j=1}^{N+1}
- <br/>
- \frac{a_{ji} h_i}{\sum_{k=1}^{N+1} a_{jk} h_k} \, s_j[t],
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ji}\) denotes the element of the adjacency matrix \(A\) representing the directed edge from node \(j\) to node \(i\).  The steady-state vector \(\tilde{s} = \lim_{t \to \infty} s[t]\) quantifies the relative influence (or importance) of nodes within the network. Xu and Wang [2] demonstrated that ALR exhibits improved adaptability to structural changes or local perturbations in the network topology compared with the standard LeaderRank algorithm.
- <br/>
+ (ALR) is an extension of the original LeaderRank algorithm in which transition probabilities are weighted according to each node’s H-index (also known as the lobby index) [2]. Similar to LeaderRank, ALR is based on a biased random-walk process, where nodes with higher H-index are more likely to receive and transmit resources.Specifically, the ALR model first computes the H-index \(h_i\) of each node \(i\) and then introduces a ground node \(N+1\) with \(h_{N+1} = 1\), which connects bidirectionally to all nodes in the network \(G\). This construction is equivalent to a random walk on an augmented network where the resource amount \(s_i[t]\) at node \(i\) evolves according to\begin{equation*}s_i[t+1] = \sum_{j=1}^{N+1} \frac{a_{ji} h_i}{\sum_{k=1}^{N+1} a_{jk} h_k} \, s_j[t],\end{equation*}where \(a_{ji}\) denotes the element of the adjacency matrix \(A\) representing the directed edge from node \(j\) to node \(i\).  The steady-state vector \(s̃ = \lim_{t \to \infty} s[t]\) quantifies the relative influence (or importance) of nodes within the network. Xu and Wang [2] demonstrated that ALR exhibits improved adaptability to structural changes or local perturbations in the network topology compared with the standard LeaderRank algorithm.
 </p>
 <h3>
  References

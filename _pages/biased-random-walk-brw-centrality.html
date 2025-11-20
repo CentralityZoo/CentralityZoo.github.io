@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   biased random walk centrality
  </i>
- is a variation of the PageRank algorithm that incorporates both degree centrality and neighborhood density into the transition probabilities [2]. Starting from a node \(i\), the walker either jumps to a random node with probability \(p\), or moves to a neighbor \(j \in \mathcal{N}(i)\) with probability
- <br/>
- \begin{equation*}
- <br/>
- p_{ij} = \frac{α \left(1 - 1/|\mathcal{N}(j)|\right) + (1-α) c_{ND}(j)}
- <br/>
- {\sum_{k \in \mathcal{N}(i)} α \left(1 - 1/|\mathcal{N}(k)|\right) + (1-α) c_{ND}(k)},
- <br/>
- \end{equation*}
- <br/>
- where \(c_{ND}(j)=1 - \sum_{k \in \mathcal{N}(j)} \frac{|\mathcal{N}(j) \cap \mathcal{N}(k)|}{(|\mathcal{N}(k)| - 1) |\mathcal{N}(j)|}\) is the neighborhood density of node \(j\), and \(α \in [0,1]\) balances the contributions of degree and neighborhood density. Takes and Kosters suggest \(α = 0.5\) and \(p = 0.15\). This centrality measures the likelihood that a random walk biased by local connectivity features visits a node, identifying nodes that are both highly connected and embedded in dense neighborhoods.
- <br/>
+ is a variation of the PageRank algorithm that incorporates both degree centrality and neighborhood density into the transition probabilities [2]. Starting from a node \(i\), the walker either jumps to a random node with probability \(p\), or moves to a neighbor \(j \in \mathcal{N}(i)\) with probability\begin{equation*}p_{ij} = \frac{α \left(1 - 1/|\mathcal{N}(j)|\right) + (1-α) c_{ND}(j)}{\sum_{k \in \mathcal{N}(i)} α \left(1 - 1/|\mathcal{N}(k)|\right) + (1-α) c_{ND}(k)},\end{equation*}where \(c_{ND}(j)=1 - \sum_{k \in \mathcal{N}(j)} \frac{|\mathcal{N}(j) \cap \mathcal{N}(k)|}{(|\mathcal{N}(k)| - 1) |\mathcal{N}(j)|}\) is the neighborhood density of node \(j\), and \(α \in [0,1]\) balances the contributions of degree and neighborhood density. Takes and Kosters suggest \(α = 0.5\) and \(p = 0.15\). This centrality measures the likelihood that a random walk biased by local connectivity features visits a node, identifying nodes that are both highly connected and embedded in dense neighborhoods.
 </p>
 <h3>
  References

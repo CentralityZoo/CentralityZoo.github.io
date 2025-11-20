@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   dynamical influence
  </i>
- (DI) quantifies how strongly a node's dynamical state can affect the collective behavior of a networked system, explicitly accounting for the interplay between structure and dynamics [2]. Conceptually, it estimates the potential impact of a node on a spreading process before the contagion begins, given the system dynamics.
- <br/>
- Klemm et al. [2] consider the SIR model, where each node can be susceptible, infected, or recovered. Linearizing the dynamics around the stationary state in which all nodes are susceptible, small perturbations obey
- <br/>
- \begin{equation*}
- <br/>
- \dot{x} = -x[t] + β A^T x[t],
- <br/>
- \end{equation*}
- <br/>
- where \(x_j[t]\) is the probability that node \(j\) is infected at time \(t\), \(β\) is the infection probability and \(A\) is the adjacency matrix. This equation can be rewritten as \(\dot{x} = M x\) with \(M = β A^T - I\). At the epidemic threshold, \(β = 1/λ_{\max}(A)\), the largest eigenvalue of \(M\) is zero, i.e., \(\dot{x} = 0\).
- <br/>
- The dynamical influence of nodes, \(c_{DI}\), is given by the leading left eigenvector of \(M\). Equivalently, under the linearization and threshold assumption, \(c_{DI}\) corresponds to the right eigenvector of \(A\) associated with its largest eigenvalue, meaning that, in this case, dynamical influence reduces to eigenvector centrality.
- <br/>
+ (DI) quantifies how strongly a node's dynamical state can affect the collective behavior of a networked system, explicitly accounting for the interplay between structure and dynamics [2]. Conceptually, it estimates the potential impact of a node on a spreading process before the contagion begins, given the system dynamics.Klemm
+ <i>
+  et al.
+ </i>
+ [2] consider the SIR model, where each node can be susceptible, infected, or recovered. Linearizing the dynamics around the stationary state in which all nodes are susceptible, small perturbations obey\begin{equation*}\dot{x} = -x[t] + β A^T x[t],\end{equation*}where \(x_j[t]\) is the probability that node \(j\) is infected at time \(t\), \(β\) is the infection probability and \(A\) is the adjacency matrix. This equation can be rewritten as \(\dot{x} = M x\) with \(M = β A^T - I\). At the epidemic threshold, \(β = 1/λ_{\max}(A)\), the largest eigenvalue of \(M\) is zero, i.e., \(\dot{x} = 0\).The dynamical influence of nodes, \(c_{DI}\), is given by the leading left eigenvector of \(M\). Equivalently, under the linearization and threshold assumption, \(c_{DI}\) corresponds to the right eigenvector of \(A\) associated with its largest eigenvalue, meaning that, in this case, dynamical influence reduces to eigenvector centrality.
 </p>
 <h3>
  References

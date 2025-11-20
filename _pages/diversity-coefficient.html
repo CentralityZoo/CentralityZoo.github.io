@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Diversity coefficient
  </i>
- is a variation of the participation coefficient based on Shannon entropy [2]. It quantifies the distribution of a node's connections across different communities in a network with a community structure. Let the graph \(G\) consist of \(K\) communities \(C_1, \ldots, C_K\). The diversity coefficient of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{diversity}}(i) = - \sum_{s=1}^{K} p_s(i) \log p_s(i),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- p_s(i) = \frac{d_{is}}{d_i}
- <br/>
- \]
- <br/>
- denotes the fraction of links of node \(i\) connecting to community \(C_s\), with \(d_i\) representing the total degree of node \(i\).
- <br/>
- Nodes with high diversity coefficients have connections spread across many communities, indicating they serve as bridges between modules, whereas nodes with low diversity coefficients have connections concentrated within a single community.
- <br/>
+ is a variation of the participation coefficient based on Shannon entropy [2]. It quantifies the distribution of a node's connections across different communities in a network with a community structure. Let the graph \(G\) consist of \(K\) communities \(C_1, \ldots, C_K\). The diversity coefficient of node \(i\) is defined as\begin{equation*}c_{\mathrm{diversity}}(i) = - \sum_{s=1}^{K} p_s(i) \log p_s(i),\end{equation*}where \[p_s(i) = \frac{d_{is}}{d_i}\] denotes the fraction of links of node \(i\) connecting to community \(C_s\), with \(d_i\) representing the total degree of node \(i\).  Nodes with high diversity coefficients have connections spread across many communities, indicating they serve as bridges between modules, whereas nodes with low diversity coefficients have connections concentrated within a single community.
 </p>
 <h3>
  References

@@ -16,20 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  Shaw (1954) was among the first to propose using the number of direct links of a node as an indicator of its importance in a network [2]. This concept, now formalized as
  <i>
   degree centrality
  </i>
- , measures the size of the one-hop neighborhood of a node [3, 4]. For an undirected graph, the degree centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{degree}(i) = \sum_{j=1}^{N}{a_{ij}} = \sum_{j=1}^{N}{a_{ji}}=d_i.
- <br/>
- \end{equation*}
- <br/>
- For directed graphs, four variants of degree-based centrality can be considered:
+ , measures the size of the one-hop neighborhood of a node [3, 4]. For an undirected graph, the degree centrality of node \(i\) is defined as\begin{equation*}c_{degree}(i) = \sum_{j=1}^{N}{a_{ij}} = \sum_{j=1}^{N}{a_{ji}}=d_i.\end{equation*}For directed graphs, four variants of degree-based centrality can be considered:
  <i>
   in-degree
  </i>
@@ -46,7 +37,6 @@ search: true
   degree difference
  </i>
  . The total degree centrality reflects the overall activity of a node in the network, capturing both its incoming and outgoing connections.  The degree difference indicates whether a node tends to be more of a receiver or a sender of connections: positive values correspond to nodes with more incoming than outgoing links, while negative values correspond to nodes with more outgoing than incoming links. Degree centrality can also be extended to weighted networks, where the adjacency matrix entry \(a_{ij}\) is replaced by the link weight \(w_{ij}\), reflecting the intensity of the connection [5].
- <br/>
 </p>
 <h3>
  References

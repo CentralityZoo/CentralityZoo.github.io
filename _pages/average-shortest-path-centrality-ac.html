@@ -16,33 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   average shortest path centrality
  </i>
- (AC), also known as the relative change in average shortest path (RASP), quantifies node influence by measuring the relative change in the network's average shortest path (ASP) after removing a node [2].
- <br/>
- The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{AC}(i) = \frac{ASP(G_i) - ASP(G)}{ASP(G)},
- <br/>
- \end{equation*}
- <br/>
- where \(G\) is the original network, and \(G_i\) is the subgraph obtained by removing node \(i\) and all its adjacent links. The average shortest path of a graph \(G\) is
- <br/>
- \begin{equation*}
- <br/>
- ASP(G) = \frac{\sum_{i \neq j} d_{ij}}{N(N-1)},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest path length between nodes \(i\) and \(j\) if they are connected; otherwise, \(d_{ij}\) is set equal to the diameter of \(G\).
- <br/>
- Hence, AC centrality quantifies the importance of a node in preserving efficient communication paths within the network.
- <br/>
+ (AC), also known as the relative change in average shortest path (RASP), quantifies node influence by measuring the relative change in the network's average shortest path (ASP) after removing a node [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{AC}(i) = \frac{ASP(G_i) - ASP(G)}{ASP(G)},\end{equation*}where \(G\) is the original network, and \(G_i\) is the subgraph obtained by removing node \(i\) and all its adjacent links. The average shortest path of a graph \(G\) is\begin{equation*}ASP(G) = \frac{\sum_{i \neq j} d_{ij}}{N(N-1)},\end{equation*}where \(d_{ij}\) is the shortest path length between nodes \(i\) and \(j\) if they are connected; otherwise, \(d_{ij}\) is set equal to the diameter of \(G\).  Hence, AC centrality quantifies the importance of a node in preserving efficient communication paths within the network.
 </p>
 <h3>
  References

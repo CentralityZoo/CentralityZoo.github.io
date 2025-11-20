@@ -16,22 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   All cycle betweenness
  </i>
- (ACC) centrality is a variation of betweenness centrality that accounts for all simple cycles passing through a node, rather than only shortest paths [2]. For node \(i\), the ACC centrality \(c_{ACC}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{ACC}(i) = \sum_{k=3}^{N} α^{\,k-2} \, s_k(i),
- <br/>
- \]
- <br/>
- where \(s_k(i)\) denotes the total number of simple cycles of length \(k\) that include node \(i\), and \(α \in (0,1)\) is an attenuation factor that downweights longer cycles.
- <br/>
- To efficiently estimate \(s_k(i)\), Zhou et al. employ a belief propagation algorithm. In their experiments, they consider \(α = 0.1\) and \(α = 0.5\) to evaluate the influence of the attenuation factor on centrality values.
- <br/>
+ (ACC) centrality is a variation of betweenness centrality that accounts for all simple cycles passing through a node, rather than only shortest paths [2]. For node \(i\), the ACC centrality \(c_{ACC}(i)\) is defined as\[c_{ACC}(i) = \sum_{k=3}^{N} α^{\,k-2} \, s_k(i),\]where \(s_k(i)\) denotes the total number of simple cycles of length \(k\) that include node \(i\), and \(α \in (0,1)\) is an attenuation factor that downweights longer cycles.  To efficiently estimate \(s_k(i)\), Zhou
+ <i>
+  et al.
+ </i>
+ employ a belief propagation algorithm. In their experiments, they consider \(α = 0.1\) and \(α = 0.5\) to evaluate the influence of the attenuation factor on centrality values.
 </p>
 <h3>
  References

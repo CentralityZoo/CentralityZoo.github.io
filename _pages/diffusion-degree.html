@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   diffusion degree
  </i>
- quantifies the potential influence of a node in a network diffusion process by considering both its own propagation capability and that of its neighbors [2]. The model assumes that each node \(i\) is associated with a propagation probability \(x_i\), where \(0 \leq x_i \leq 1\), representing its ability to transmit information or influence to adjacent nodes. The diffusion degree of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{diffusion}}(i) = x_i d_i + \sum_{j=1}^{N} a_{ij} x_j d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) denotes the degree of node \(i\), and \(a_{ij}\) is the \((i,j)\)-th element of the adjacency matrix \(A\).
- <br/>
- The first term, \(x_i d_i\), captures the intrinsic contribution of node \(i\), reflecting its degree and individual propagation probability, while the second term accounts for the influence of its neighbors, weighted by their respective propagation probabilities and degrees. Nodes with higher diffusion degree values are expected to play a more prominent role in spreading processes, such as information diffusion or epidemic propagation. When all nodes have the same propagation probability, i.e. \(x_i = 1\) for all \(i\), the diffusion degree reduces to a measure of combined connectivity within a node's immediate neighborhood, highlighting nodes that are both well-connected themselves and connected to other highly connected nodes.
- <br/>
+ quantifies the potential influence of a node in a network diffusion process by considering both its own propagation capability and that of its neighbors [2]. The model assumes that each node \(i\) is associated with a propagation probability \(x_i\), where \(0 \leq x_i \leq 1\), representing its ability to transmit information or influence to adjacent nodes. The diffusion degree of node \(i\) is then defined as\begin{equation*}c_{\text{diffusion}}(i) = x_i d_i + \sum_{j=1}^{N} a_{ij} x_j d_j,\end{equation*}where \(d_i\) denotes the degree of node \(i\), and \(a_{ij}\) is the \((i,j)\)-th element of the adjacency matrix \(A\). The first term, \(x_i d_i\), captures the intrinsic contribution of node \(i\), reflecting its degree and individual propagation probability, while the second term accounts for the influence of its neighbors, weighted by their respective propagation probabilities and degrees. Nodes with higher diffusion degree values are expected to play a more prominent role in spreading processes, such as information diffusion or epidemic propagation. When all nodes have the same propagation probability, i.e. \(x_i = 1\) for all \(i\), the diffusion degree reduces to a measure of combined connectivity within a node's immediate neighborhood, highlighting nodes that are both well-connected themselves and connected to other highly connected nodes.
 </p>
 <h3>
  References

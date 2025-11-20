@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   collective influence
  </i>
- (CI) quantifies the centrality of a node by considering not only its degree but also the degrees of nodes in its surrounding neighbourhood at a given distance \(l\) [2]. Formally, the CI of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{CI}(i) = (d_i - 1) \sum_{j \in \mathcal{N}^{(l)}(i) } (d_j - 1),
- <br/>
- \end{equation*}
- <br/>
- where \(k_i\) is the degree of node \(i\), and \(\mathcal{N}^{(l)}(i) \) denotes the frontier of the ball of radius \(l\) centered at \(i\), i.e., the set of nodes at distance exactly \(l\) from \(i\). The parameter \(l\) is typically chosen such that it does not exceed the diameter of the network.
- <br/>
- Morone and Makse [2] also proposed an iterative version of the CI algorithm, which allows the identification of an optimal set of influential nodes in the network.
- <br/>
+ (CI) quantifies the centrality of a node by considering not only its degree but also the degrees of nodes in its surrounding neighbourhood at a given distance \(l\) [2]. Formally, the CI of node \(i\) is defined as\begin{equation*}c_{CI}(i) = (d_i - 1) \sum_{j \in \mathcal{N}^{(l)}(i) } (d_j - 1),\end{equation*}where \(k_i\) is the degree of node \(i\), and \(\mathcal{N}^{(l)}(i) \) denotes the frontier of the ball of radius \(l\) centered at \(i\), i.e., the set of nodes at distance exactly \(l\) from \(i\). The parameter \(l\) is typically chosen such that it does not exceed the diameter of the network. Morone and Makse [2] also proposed an iterative version of the CI algorithm, which allows the identification of an optimal set of influential nodes in the network.\vfill
 </p>
 <h3>
  References

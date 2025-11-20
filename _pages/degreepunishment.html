@@ -16,18 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   DegreePunishment
  </i>
  is a degree-based heuristic for identifying influential nodes in a network [2]. The central idea is that once a node \(i\) is selected as a seed, it should “punish” or restrict the selection of its neighbors in the subsequent steps. DegreePunishment iteratively performs the following steps:
- <br/>
  <ol>
-  <br/>
   <li>
    Compute the degree \(d_i\) of each node \(i\) and initialize \(dp_i = d_i\).
   </li>
-  <br/>
   <li>
    Select the node \(i\) with the largest \(dp_i\) and add it to the seed set. The punishment that node \(i\) imposes on node \(j\) is calculated as
     \[
@@ -39,15 +35,15 @@ search: true
     \]
     where \(σ_i\) is an indicator function such that \(σ_i = 1\) if node \(i\) has already been selected as a seed, and \(σ_i = 0\) otherwise.
   </li>
-  <br/>
   <li>
    Repeat step 2 until \(k\) nodes have been selected for the seed set.
   </li>
-  <br/>
  </ol>
- <br/>
- Due to computational complexity, Wang et al. [2] restrict the punishment to paths of length \(r \le 2\) and suggest using \(ω = β_c\), where \(β_c\) is the spreading threshold of the graph \(G\).
- <br/>
+ Due to computational complexity, Wang
+ <i>
+  et al.
+ </i>
+ [2] restrict the punishment to paths of length \(r \le 2\) and suggest using \(ω = β_c\), where \(β_c\) is the spreading threshold of the graph \(G\).
 </p>
 <h3>
  References

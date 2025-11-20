@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Distance entropy
  </i>
- (DE) quantifies node centrality based on the distribution of shortest-path lengths from a node to all other nodes in the network [2]. The distance entropy of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{DE}}(i) = -\frac{1}{\log (M_i - m_i)} \sum_{k=1}^{M_i - m_i} p_k^{(i)} \log p_k^{(i)},
- <br/>
- \end{equation*}
- <br/>
- where \(M_i = \max_j d_{ij}\) and \(m_i = \min_j d_{ij}\) are the maximum and minimum distances from node \(i\), and \(p_k^{(i)}\) is the probability that the distance from \(i\) to a node equals \(k\). Specifically, in a connected graph \(G\), if node \(i\) is at distance \(k\) from \(n_k\) other nodes, then
- <br/>
- \[
- <br/>
- p_k^{(i)} = \frac{n_k}{N-1},
- <br/>
- \]
- <br/>
- where \(N\) is the total number of nodes in the network.
- <br/>
- Distance entropy captures how evenly distributed the distances from a node are: higher values indicate a more uniform distribution of distances, reflecting nodes that are well-positioned across multiple network layers.
- <br/>
+ (DE) quantifies node centrality based on the distribution of shortest-path lengths from a node to all other nodes in the network [2]. The distance entropy of node \(i\) is defined as\begin{equation*}c_{\text{DE}}(i) = -\frac{1}{\log (M_i - m_i)} \sum_{k=1}^{M_i - m_i} p_k^{(i)} \log p_k^{(i)},\end{equation*}where \(M_i = \max_j d_{ij}\) and \(m_i = \min_j d_{ij}\) are the maximum and minimum distances from node \(i\), and \(p_k^{(i)}\) is the probability that the distance from \(i\) to a node equals \(k\). Specifically, in a connected graph \(G\), if node \(i\) is at distance \(k\) from \(n_k\) other nodes, then\[p_k^{(i)} = \frac{n_k}{N-1},\]where \(N\) is the total number of nodes in the network.Distance entropy captures how evenly distributed the distances from a node are: higher values indicate a more uniform distribution of distances, reflecting nodes that are well-positioned across multiple network layers.
 </p>
 <h3>
  References

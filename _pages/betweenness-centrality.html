@@ -16,26 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Betweenness centrality
  </i>
- , also known as Freeman's betweenness or sociometric betweenness, quantifies the extent to which a node lies on the communication paths connecting pairs of other nodes within a network, reflecting its potential to mediate or control the flow of information [2, 3]. It is formally defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{betw}(i) = \sum_{j\neq k \neq i}{\frac{σ_{jk}(i)}{σ_{jk}}},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}\) denotes the number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) represents the number of paths that pass through node \(i\). A high value of betweenness centrality indicates nodes that serve as crucial hubs or bridges connecting otherwise disparate clusters within the network. Nodes with high betweenness centrality occupy strategic positions that influence the structure and dynamics of a network by shaping how information or resources flow between its parts. In weighted networks, the interpretation of the shortest paths requires careful consideration: when edge weights represent the strength of the tie rather than the cost, these values should be inverted before applying algorithms such as Dijkstra’s, thus ensuring that stronger connections correspond to shorter effective paths [4].
- <br/>
- Some centrality measures are equivalent to the betwenness centrality because they provide the same ranking of nodes. For instance, Caporossi et al. [5] propose the
+ , also known as Freeman's betweenness or sociometric betweenness, quantifies the extent to which a node lies on the communication paths connecting pairs of other nodes within a network, reflecting its potential to mediate or control the flow of information [2, 3]. It is formally defined as\begin{equation*}c_{betw}(i) = \sum_{j\neq k \neq i}{\frac{σ_{jk}(i)}{σ_{jk}}},\end{equation*}where \(σ_{jk}\) denotes the number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) represents the number of shortest paths that pass through node \(i\). A high value of betweenness centrality indicates nodes that serve as crucial hubs or bridges connecting otherwise disparate clusters within the network. Nodes with high betweenness centrality occupy strategic positions that influence the structure and dynamics of a network by shaping how information or resources flow between its parts. In weighted networks, the interpretation of the shortest paths requires careful consideration: when edge weights represent the strength of the tie rather than the cost, these values should be inverted before applying algorithms such as Dijkstra’s, thus ensuring that stronger connections correspond to shorter effective paths [4].Some centrality measures are equivalent to the betwenness centrality because they provide the same ranking of nodes. For instance, Caporossi
+ <i>
+  et al.
+ </i>
+ [5] propose the
  <i>
   adjusted betweenness centrality
  </i>
- \(c_{ABC}\) where \(c_{ABC}(i)=2c_{betw}(i) + N - 1\).
- <br/>
+ \(c_{ABC}\) where \(c_{ABC}(i)=2c_{betw}(i) + N - 1\).\vfill
 </p>
 <h3>
  References

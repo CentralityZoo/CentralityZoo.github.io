@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   correlation centrality
  </i>
- (CoC) quantifies the influence of a node based on its correlation with all other nodes in the network [2]. Specifically, the influence of node \(i\) depends on the harmonic centrality of other nodes and the distances from node \(i\) to these nodes. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{CoC}(i) = \frac{1}{N^2} \sum_{j=1}^N \left( \frac{σ_{ij}}{d_{ij}^α} \sum_{k=1}^N \frac{1}{d_{jk}} \right),
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{ij}\) is the number of shortest paths from node \(i\) to node \(j\), \(d_{ij}\) is the shortest distance from node \(i\) to node \(j\), and \(α\) is an impact factor. Wenli et al. [2] use \(α = 3\).
- <br/>
- Correlation centrality assigns higher values to nodes that are close to highly central nodes, reflecting both the number of paths a node participates in and the overall accessibility of the network. We remark that the term “correlation” emphasizes that a node’s centrality depends on its relationship with other nodes’ centrality, rather than on a statistical correlation coefficient.
- <br/>
+ (CoC) quantifies the influence of a node based on its correlation with all other nodes in the network [2]. Specifically, the influence of node \(i\) depends on the harmonic centrality of other nodes and the distances from node \(i\) to these nodes. The centrality of node \(i\) is defined as\begin{equation*}c_{CoC}(i) = \frac{1}{N^2} \sum_{j=1}^N \left( \frac{σ_{ij}}{d_{ij}^α} \sum_{k=1}^N \frac{1}{d_{jk}} \right),\end{equation*}where \(σ_{ij}\) is the number of shortest paths from node \(i\) to node \(j\), \(d_{ij}\) is the shortest distance from node \(i\) to node \(j\), and \(α\) is an impact factor. Wenli
+ <i>
+  et al.
+ </i>
+ [2] use \(α = 3\). Correlation centrality assigns higher values to nodes that are close to highly central nodes, reflecting both the number of paths a node participates in and the overall accessibility of the network. We remark that the term “correlation” emphasizes that a node’s centrality depends on its relationship with other nodes’ centrality, rather than on a statistical correlation coefficient.
 </p>
 <h3>
  References

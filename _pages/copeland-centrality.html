@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Copeland centrality
  </i>
@@ -24,58 +23,15 @@ search: true
  <i>
   distance-based preference
  </i>
- relation is defined as
- <br/>
- \[
- <br/>
- j \succ_i k \quad \text{if and only if} \quad d_{ij} &lt; d_{ik},
- <br/>
- \]
- <br/>
- that is, node \(j\) is preferred to node \(k\) by node \(i\) if \(j\) is strictly closer to \(i\) than \(k\) is.
- <br/>
- The
+ relation is defined as\[j \succ_i k \quad \text{if and only if} \quad d_{ij} &lt; d_{ik},\]that is, node \(j\) is preferred to node \(k\) by node \(i\) if \(j\) is strictly closer to \(i\) than \(k\) is. Thus, the distance-based preference relation of node \(i\) constitutes a weak order (irreflexive, transitive and negatively transitive binary relation) over the set \(\mathcal{N} \setminus \{i\}\), where each layer \(k\) corresponds to the indifference class of nodes located at distance \(k \in \{1, \ldots, \max_j d_{ij}\}\) from node \(i\).The
  <i>
   majority relation
  </i>
- \(μ\) between two nodes \(j\) and \(k\) is then defined as
- <br/>
- \[
- <br/>
- j μ k \quad \text{if and only if} \quad
- <br/>
- \big|\{ i \in \mathcal{N} \setminus \{j,k\} : j \succ_i k \}\big|
- <br/>
- &gt;
- <br/>
- \big|\{ i \in \mathcal{N} \setminus \{j,k\} : k \succ_i j \}\big|.
- <br/>
- \]
- <br/>
- In other words, node \(j\) is said to dominate node \(k\) if a strict majority of nodes in the network prefer \(j\) to \(k\), that is, if \(j\) is closer than \(k\) to more nodes.
- <br/>
- The
+ \(μ\) between two nodes \(j\) and \(k\) is then defined as\[j μ k \quad \text{if and only if} \quad \big|\{ i \in \mathcal{N} \setminus \{j,k\} : j \succ_i k \}\big| &gt; \big|\{ i \in \mathcal{N} \setminus \{j,k\} : k \succ_i j \}\big|.\]In other words, node \(j\) is said to dominate node \(k\) if a strict majority of nodes in the network prefer \(j\) to \(k\), that is, if \(j\) is closer than \(k\) to more nodes.The
  <i>
   Copeland score
  </i>
- of a node \(i\) is then defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{Copeland}}(i)
- <br/>
- =
- <br/>
- \big|\{ k \in \mathcal{N} \setminus \{i\} : i μ k \}\big|
- <br/>
- -
- <br/>
- \big|\{ k \in \mathcal{N} \setminus \{i\} : k μ i \}\big|.
- <br/>
- \]
- <br/>
- Hence, the Copeland score of node \(i\) is computed as the difference between the number of nodes it dominates and the number of nodes that dominate it. A node receives a higher Copeland score if it is preferred by more nodes, which corresponds to being relatively close to many nodes in the network.
- <br/>
+ of a node \(i\) is then defined as\[c_{\mathrm{Copeland}}(i) = \big|\{ k \in \mathcal{N} \setminus \{i\} : i μ k \}\big|- \big|\{ k \in \mathcal{N} \setminus \{i\} : k μ i \}\big|.\]The Copeland score of node \(i\) is computed as the difference between the number of nodes it dominates and the number of nodes that dominate it. A node receives a higher Copeland score if it is preferred by more nodes, which corresponds to being relatively close to many nodes in the network.\vfill
 </p>
 <h3>
  References

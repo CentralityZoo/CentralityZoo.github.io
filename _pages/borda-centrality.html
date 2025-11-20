@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Borda centrality
  </i>
@@ -24,40 +23,11 @@ search: true
  <i>
   distance-based preference
  </i>
- relation is defined as
- <br/>
- \[
- <br/>
- j \succ_i k \quad \text{if and only if} \quad d_{ij} &lt; d_{ik},
- <br/>
- \]
- <br/>
- that is, node \(j\) is preferred to node \(k\) by node \(i\) if \(j\) is strictly closer to \(i\) than \(k\) is.
- <br/>
- The
+ relation is defined as\[j \succ_i k \quad \text{if and only if} \quad d_{ij} &lt; d_{ik},\]that is, node \(j\) is preferred to node \(k\) by node \(i\) if \(j\) is strictly closer to \(i\) than \(k\) is. Thus, the distance-based preference relation of node \(i\) constitutes a weak order (irreflexive, transitive and negatively transitive binary relation) over the set \(\mathcal{N} \setminus \{i\}\), where each layer \(k\) corresponds to the indifference class of nodes located at distance \(k \in \{1, \ldots, \max_j d_{ij}\}\) from node \(i\).The
  <i>
   Borda score
  </i>
- of a node \(i\) is then given by
- <br/>
- \[
- <br/>
- c_{\mathrm{Borda}}(i) = \sum_{j \in \mathcal{N} \setminus \{i\}}
- <br/>
- \left(
- <br/>
- \big|\{ k \in \mathcal{N} \setminus \{i\} : i \succ_j k \}\big|
- <br/>
- -
- <br/>
- \big|\{ k \in \mathcal{N} \setminus \{i\} : k \succ_j i \}\big|
- <br/>
- \right).
- <br/>
- \]
- <br/>
- In words, the Borda score of node \(i\) is obtained by summing, over all other nodes \(j\), the difference between (i) the number of nodes that are farther from \(j\) than \(i\) is, and (ii) the number of nodes that are closer to \(j\) than \(i\) is. Hence, a node receives a higher Borda score if it is, on average, relatively close to many other nodes in the network.
- <br/>
+ of a node \(i\) is then given by\[c_{\mathrm{Borda}}(i) = \sum_{j \in \mathcal{N} \setminus \{i\}} \left(\big|\{ k \in \mathcal{N} \setminus \{i\} : i \succ_j k \}\big|- \big|\{ k \in \mathcal{N} \setminus \{i\} : k \succ_j i \}\big|\right).\]Hence, the Borda score of node \(i\) is obtained by summing, over all other nodes \(j\), the difference between (i) the number of nodes that are farther from \(j\) than \(i\) is, and (ii) the number of nodes that are closer to \(j\) than \(i\) is. A node receives a higher Borda score if it is, on average, relatively close to many other nodes in the network.
 </p>
 <h3>
  References

@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Adjusted Index of Centrality
  </i>
- (AIC) is a closeness-based centrality measure introduced by Moxley [2]. For a node \(i\), its AIC centrality, denoted \(c_{AIC}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{AIC}(i) = \frac{\sum_{j=1}^N \sum_{k=1}^N (d_{jk} + p \cdot n_j)}{\sum_{j=1}^N (d_{ij} + p \cdot n_i)},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{jk}\) is the shortest-path distance from node \(j\) to node \(k\), \(n_i\) is the number of nodes unreachable from \(i\), and \(p\) is a penalty parameter chosen such that \(p &gt; \max_{i,j} d_{ij}\). The penalty ensures that nodes with unreachable nodes receive appropriately lower centrality scores.
- <br/>
+ (AIC) is a closeness-based centrality measure introduced by Moxley [2]. For a node \(i\), its AIC centrality, denoted \(c_{AIC}(i)\), is defined as\begin{equation*} c_{AIC}(i) = \frac{\sum_{j=1}^N \sum_{k=1}^N (d_{jk} + p \cdot n_j)}{\sum_{j=1}^N (d_{ij} + p \cdot n_i)},\end{equation*}where \(d_{jk}\) is the shortest-path distance from node \(j\) to node \(k\), \(n_i\) is the number of nodes unreachable from \(i\), and \(p\) is a penalty parameter chosen such that \(p &gt; \max_{i,j} d_{ij}\). The penalty ensures that nodes with unreachable nodes receive appropriately lower centrality scores.
 </p>
 <h3>
  References

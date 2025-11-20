@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Clique level
  </i>
- is a centrality measure designed to identify essential nodes in protein-protein interaction networks (PINs) by quantifying how strongly a node is embedded in tightly connected subgraphs, which often indicates functional importance [2]. The clique level \(c_{\mathrm{CL}}(i)\) of node \(i\) is defined as the size of the largest clique containing \(i\):
- <br/>
- \[
- <br/>
- c_{\mathrm{CL}}(i) =
- <br/>
- \begin{cases}
- <br/>
- 0, &amp; \text{if node } i \text{ does not belong to any clique},\\
- <br/>
- k(i), &amp; \text{otherwise,}
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- where \(k(i)\) denotes the size of the largest clique that includes node \(i\). Hence, clique level highlights nodes that are part of highly interconnected groups, which are often critical for network stability and biological function.
- <br/>
+ is a centrality measure designed to identify essential nodes in protein-protein interaction networks (PINs) by quantifying how strongly a node is embedded in tightly connected subgraphs, which often indicates functional importance [2]. The clique level \(c_{\mathrm{CL}}(i)\) of node \(i\) is defined as the size of the largest clique containing \(i\):\[c_{\mathrm{CL}}(i) =\begin{cases}0, &amp; \text{if node } i \text{ does not belong to any clique},\\k(i), &amp; \text{otherwise,}\end{cases}\]where \(k(i)\) denotes the size of the largest clique that includes node \(i\). Hence, clique level highlights nodes that are part of highly interconnected groups, which are often critical for network stability and biological function.
 </p>
 <h3>
  References

@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   bridging coefficient
  </i>
- \(β_c(i)\) of a node determines the extent how well the node is located between high degree nodes [2]. Intuitively, there should be more congestion on the smaller degree nodes if an unit electrical current arrives on a node since the smaller degree nodes have lesser number of outlets than the bigger degree nodes have. So, if we consider the reciprocal of the degree of a node as the “resistance” of the node, the bridging coefficient \(β_c(i)\) of node \(i\) can be viewed as the ratio of the resistance of a node \(i\) to the sum of the resistance of the neighbors.
- <br/>
- \begin{equation*}
- <br/>
- β_c(i) = \frac{d_i^{-1}}{\sum_{j \in \mathcal{N}(i)}{\frac{1}{d_j}}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_i=\sum_{j=1}^{N}{a_{ij}}\) is the degree of node \(i\) and \(\mathcal{N}(i)\) is the set of \(i\)'s neighbors. Critical bridging nodes, typically representing rate limiting points in the network and because they connect its densely connected regions, have high “resistance.”
- <br/>
+ \(β_c(i)\) of a node determines the extent how well the node is located between high degree nodes [2]. Intuitively, there should be more congestion on the smaller degree nodes if an unit electrical current arrives on a node since the smaller degree nodes have lesser number of outlets than the bigger degree nodes have. So, if we consider the reciprocal of the degree of a node as the “resistance” of the node, the bridging coefficient \(β_c(i)\) of node \(i\) can be viewed as the ratio of the resistance of a node \(i\) to the sum of the resistance of the neighbors. \begin{equation*}β_c(i) = \frac{d_i^{-1}}{\sum_{j \in \mathcal{N}(i)}{\frac{1}{d_j}}},\end{equation*}where \(d_i=\sum_{j=1}^{N}{a_{ij}}\) is the degree of node \(i\) and \(\mathcal{N}(i)\) is the set of \(i\)'s neighbors. Critical bridging nodes, typically representing rate limiting points in the network and because they connect its densely connected regions, have high “resistance.”
 </p>
 <h3>
  References

@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   ClusterRank centrality
  </i>
- integrates both the degree information of a node and its neighbours, as well as the local clustering structure of the network [2]. The ClusterRank score of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{ClusterRank}}(i) = f(c_i) \sum_{j \in \mathcal{N}(i)} \left( d_j^{out} + 1 \right),
- <br/>
- \end{equation*}
- <br/>
- where \(c_i\) denotes the clustering coefficient of node \(i\), \(\mathcal{N}(i)\) is the set of its neighbours (or followers), and \(d_j^{out}\) is the out-degree of node \(j\). The function \(f(c_i)\) accounts for the influence of \(i\)’s local clustering on its centrality and is commonly defined as \(f(c_i) = 10^{-c_i}\), which downweights nodes embedded in highly clustered regions. In this way, ClusterRank emphasizes nodes that connect different local clusters while still considering the importance of their neighbors.
- <br/>
+ integrates both the degree information of a node and its neighbours, as well as the local clustering structure of the network [2]. The ClusterRank score of a node \(i\) is defined as\begin{equation*}c_{\text{ClusterRank}}(i) = f(c_i) \sum_{j \in \mathcal{N}(i)} \left( d_j^{out} + 1 \right),\end{equation*}where \(c_i\) denotes the clustering coefficient of node \(i\), \(\mathcal{N}(i)\) is the set of its neighbours (or followers), and \(d_j^{out}\) is the out-degree of node \(j\). The function \(f(c_i)\) accounts for the influence of \(i\)’s local clustering on its centrality and is commonly defined as \(f(c_i) = 10^{-c_i}\), which downweights nodes embedded in highly clustered regions. In this way, ClusterRank emphasizes nodes that connect different local clusters while still considering the importance of their neighbors.\vfill
 </p>
 <h3>
  References

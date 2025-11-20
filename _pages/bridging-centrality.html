@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Bridging centrality
  </i>
- is a betweenness-based measure proposed in [2] to identify bridging nodes, which are the nodes that connect densely connected components in a network. The bridging centrality of node \(i\), denoted \(c_{\mathrm{bridging}}(i)\), is defined as the product of its betweenness centrality \(c_{\mathrm{betw}}(i)\) and its bridging coefficient \(β_c(i)\), capturing both global and local features of the node:
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{bridging}}(i) = c_{\mathrm{betw}}(i) \cdot β_c(i)
- <br/>
- = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{σ_{jk}(i)}{σ_{jk}} \cdot \frac{d_i^{-1}}{\sum_{j \in \mathcal{N}(i)} d_j^{-1}},
- <br/>
- \end{equation*}
- <br/>
- where  \(d_i\) is the degree of node \(i\), \(σ_{jk}\) is the number of shortest paths between nodes \(j\) and \(k\), and \(σ_{jk}(i)\) is the number of those paths that pass through node \(i\).
- <br/>
- A higher \(c_{\mathrm{bridging}}(i)\) indicates that more information flows through node \(i\) (high betweenness) and that the node serves as a critical connector between densely connected regions (high bridging coefficient).
- <br/>
+ is a betweenness-based measure proposed in [2] to identify bridging nodes, which are the nodes that connect densely connected components in a network. The bridging centrality of node \(i\), denoted \(c_{\mathrm{bridging}}(i)\), is defined as the product of its betweenness centrality \(c_{\mathrm{betw}}(i)\) and its bridging coefficient \(β_c(i)\), capturing both global and local features of the node:\begin{equation*}c_{\mathrm{bridging}}(i) = c_{\mathrm{betw}}(i) \cdot β_c(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{σ_{jk}(i)}{σ_{jk}} \cdot \frac{d_i^{-1}}{\sum_{j \in \mathcal{N}(i)} d_j^{-1}},\end{equation*}where  \(d_i\) is the degree of node \(i\), \(σ_{jk}\) is the number of shortest paths between nodes \(j\) and \(k\), and \(σ_{jk}(i)\) is the number of those paths that pass through node \(i\).  A higher \(c_{\mathrm{bridging}}(i)\) indicates that more information flows through node \(i\) (high betweenness) and that the node serves as a critical connector between densely connected regions (high bridging coefficient).
 </p>
 <h3>
  References

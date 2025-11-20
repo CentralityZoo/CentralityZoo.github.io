@@ -16,20 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   DegreeDiscountIC
  </i>
- is a degree-discount heuristic for identifying influential nodes in a network [2]. The main idea is that if a node \(i\) is selected as a seed, the edges connecting \(i\) to its neighbors should not be fully counted when evaluating the degrees of those neighbors for further seed selection. In other words, the degree of each neighbor of a selected seed is discounted to account for the presence of the seed node.
- <br/>
- The algorithm proceeds iteratively as follows:
- <br/>
+ is a degree-discount heuristic for identifying influential nodes in a network [2]. The main idea is that if a node \(i\) is selected as a seed, the edges connecting \(i\) to its neighbors should not be fully counted when evaluating the degrees of those neighbors for further seed selection. In other words, the degree of each neighbor of a selected seed is discounted to account for the presence of the seed node.  The algorithm proceeds iteratively as follows:
  <ol>
-  <br/>
   <li>
    Compute the degree \(d_i\) of each node \(i\), and initialize \(t_i = 0\) and \(dd_i = d_i\), where \(t_i\) is the number of selected neighbors of \(i\) and \(dd_i\) is the discounted degree.
   </li>
-  <br/>
   <li>
    Select the node \(i\) with the largest \(dd_i\) and add it to the seed set. Then, for each neighbor \(j\) of node \(i\), update
     \[
@@ -38,13 +32,10 @@ search: true
     \]
     where \(p\) is the propagation probability (e.g., \(p=0.01\)). The value \(dd_j\) approximates the expected number of additional nodes influenced by selecting node \(j\), considering the presence of already selected neighbors.
   </li>
-  <br/>
   <li>
    Repeat step 2 until \(k\) nodes are selected for the seed set.
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

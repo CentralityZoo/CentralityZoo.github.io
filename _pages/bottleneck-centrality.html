@@ -16,37 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   BottleNeck
  </i>
- centrality identifies nodes that act as bottlenecks in a network by inspecting shortest-path trees [2]. For each source node \(s\) let \(T_s\) denote a shortest-path tree rooted at \(s\) and let \(V(T_s)\) denote the set of nodes in \(T_s\) reachable from \(s\), excluding the root \(s\). The BottleNeck centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{BottleNeck}}(i) = \sum_{s=1}^{N} P_s(i),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- P_s(i) =
- <br/>
- \begin{cases}
- <br/>
- 1, &amp; \text{if more than } |V(T_s)|/4 \text{ shortest paths from } s \text{ to other nodes in } T_s \text{ pass through } i, \\
- <br/>
- 0, &amp; \text{otherwise}.
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- The total score \(c_{\text{BottleNeck}}(i)\) thus counts how often node \(i\) serves as a major intermediary across all sources. Intuitively, nodes with high BottleNeck centrality are critical intermediaries through which a significant fraction of shortest paths pass, making them important for the connectivity and flow within the network.
- <br/>
+ centrality identifies nodes that act as bottlenecks in a network by inspecting shortest-path trees [2]. For each source node \(s\) let \(T_s\) denote a shortest-path tree rooted at \(s\) and let \(V(T_s)\) denote the set of nodes in \(T_s\) reachable from \(s\), excluding the root \(s\). The BottleNeck centrality of node \(i\) is defined as\begin{equation*}c_{\text{BottleNeck}}(i) = \sum_{s=1}^{N} P_s(i),\end{equation*}where\begin{equation*}P_s(i) =\begin{cases}1, &amp; \text{if more than } |V(T_s)|/4 \text{ shortest paths from } s \text{ to other nodes in } T_s \text{ pass through } i, \\0, &amp; \text{otherwise}.\end{cases}\end{equation*}The total score \(c_{\text{BottleNeck}}(i)\) thus counts how often node \(i\) serves as a major intermediary across all sources. Intuitively, nodes with high BottleNeck centrality are critical intermediaries through which a significant fraction of shortest paths pass, making them important for the connectivity and flow within the network.
 </p>
 <h3>
  References

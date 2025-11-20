@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Cc-Burt
  </i>
@@ -24,20 +23,7 @@ search: true
  <i>
   structural holes
  </i>
- with closeness centrality to identify key nodes in a network [2]. The structural hole theory accounts for both a node's degree and the topological relationships among its neighbors, while closeness centrality reflects the node's global position in the network.
- <br/>
- For a node \(i\), the \textsc{Cc-Burt} centrality \(c_{\textsc{Cc-Burt}}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{\textsc{Cc-Burt}}(i) = \frac{1}{N} \left( \frac{1}{c_{cl}(i)} + \sum_{j \in \mathcal{N}(i)} \frac{c_{\mathrm{Burt}}(j)}{c_{cl}(j)} \right),
- <br/>
- \]
- <br/>
- where \(c_{cl}(i)\) is the closeness centrality of node \(i\) and \(c_{\mathrm{Burt}}(i)\) is the Burt's constraint of node \(i\).
- <br/>
- The Cc-Burt centrality integrates local structural constraints and global network position to provide a more comprehensive evaluation of node influence.
- <br/>
+ with closeness centrality to identify key nodes in a network [2]. The structural hole theory accounts for both a node's degree and the topological relationships among its neighbors, while closeness centrality reflects the node's global position in the network.For a node \(i\), the \textsc{Cc-Burt} centrality \(c_{\textsc{Cc-Burt}}(i)\) is defined as\[c_{\textsc{Cc-Burt}}(i) = \frac{1}{N} \left( \frac{1}{c_{cl}(i)} + \sum_{j \in \mathcal{N}(i)} \frac{c_{\mathrm{Burt}}(j)}{c_{cl}(j)} \right),\]where \(c_{cl}(i)\) is the closeness centrality of node \(i\) and \(c_{\mathrm{Burt}}(i)\) is the Burt's constraint of node \(i\).The Cc-Burt centrality integrates local structural constraints and global network position to provide a more comprehensive evaluation of node influence.
 </p>
 <h3>
  References

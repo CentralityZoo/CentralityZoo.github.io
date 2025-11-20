@@ -16,26 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   ArticleRank
  </i>
- is a variation of the PageRank algorithm designed to measure the influence of journal articles [2]. It follows the general PageRank methodology but modifies the normalization term in the transition probability to prevent nodes with very few outgoing links from exerting disproportionately high influence on their neighbors.
- <br/>
- Formally, the ArticleRank \(c_{\text{AR}}(i)\) of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{AR}}(i) = (1 - p)
- <br/>
- + p \sum_{j : a_{ij} = 1}
- <br/>
- \frac{c_{\text{AR}}(j)}{\sum_{k = 1}^{N} a_{jk} + \overline{a}_{\text{out}}},
- <br/>
- \end{equation*}
- <br/>
- where \(p \in [0, 1]\) is a damping factor, \(a_{ij}\) is the adjacency matrix element indicating the presence of a link from node \(j\) to node \(i\), and \(\overline{a}_{\text{out}}\) denotes the average out-degree of the network \(G\). The ArticleRank values represent the relative influence or importance of articles within the citation network, where higher scores indicate articles that are cited by other influential papers.
- <br/>
+ is a variation of the PageRank algorithm designed to measure the influence of journal articles [2]. It follows the general PageRank methodology but modifies the normalization term in the transition probability to prevent nodes with very few outgoing links from exerting disproportionately high influence on their neighbors. Formally, the ArticleRank \(c_{\text{AR}}(i)\) of a node \(i\) is defined as\begin{equation*}c_{\text{AR}}(i) = (1 - p) + p \sum_{j : a_{ij} = 1} \frac{c_{\text{AR}}(j)}{\sum_{k = 1}^{N} a_{jk} + \overline{a}_{\text{out}}},\end{equation*}where \(p \in [0, 1]\) is a damping factor, \(a_{ij}\) is the adjacency matrix element indicating the presence of a link from node \(j\) to node \(i\), and \(\overline{a}_{\text{out}}\) denotes the average out-degree of the network \(G\). The ArticleRank values represent the relative influence or importance of articles within the citation network, where higher scores indicate articles that are cited by other influential papers.\vfill
 </p>
 <h3>
  References

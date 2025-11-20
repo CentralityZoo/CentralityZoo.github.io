@@ -16,32 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Dynamical Spanning Tree
  </i>
- (DST) centrality is a node importance measure that identifies the most critical nodes in a network based on their impact on the network's structural reliability [2, 3]. Specifically, the node whose removal results in the largest reduction in the number of spanning trees is considered the most vital. The relative importance of nodes can thus be quantified according to the decrease in the total number of spanning trees after their removal.
- <br/>
- The DST centrality of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{DST}}(i) = 1 - \frac{t_{G_i}}{t_G},
- <br/>
- \end{equation*}
- <br/>
- where \(t_G\) is the total number of spanning trees in the original graph \(G\), and \(t_{G_i}\) is the number of spanning trees in the subgraph \(G_i\) obtained by removing node \(i\) from \(G\). The total number of spanning trees can be computed using Kirchhoff’s Matrix-Tree Theorem:
- <br/>
- \begin{equation*}
- <br/>
- t_G = \frac{1}{N} \prod_{k=2}^{N} λ_k,
- <br/>
- \end{equation*}
- <br/>
- where \(0 = λ_1 &lt; λ_2 \leq \dots \leq λ_N\) are the eigenvalues of the Laplacian matrix \(L\) of the graph \(G\), and \(N\) is the number of nodes. For undirected networks, the Laplacian matrix is symmetric, and all eigenvalues are real and non-negative.
- <br/>
- A higher value of \(c_{\mathrm{DST}}(i)\) indicates that node \(i\) plays a more significant role in maintaining the network’s structural connectivity.
- <br/>
+ (DST) centrality is a node importance measure that identifies the most critical nodes in a network based on their impact on the network's structural reliability [2, 3]. Specifically, the node whose removal results in the largest reduction in the number of spanning trees is considered the most vital. The relative importance of nodes can thus be quantified according to the decrease in the total number of spanning trees after their removal.The DST centrality of a node \(i\) is defined as\begin{equation*}c_{\mathrm{DST}}(i) = 1 - \frac{t_{G_i}}{t_G},\end{equation*}where \(t_G\) is the total number of spanning trees in the original graph \(G\), and \(t_{G_i}\) is the number of spanning trees in the subgraph \(G_i\) obtained by removing node \(i\) from \(G\). The total number of spanning trees can be computed using Kirchhoff’s Matrix-Tree Theorem:\begin{equation*}t_G = \frac{1}{N} \prod_{k=2}^{N} λ_k,\end{equation*}where \(0 = λ_1 &lt; λ_2 \leq \dots \leq λ_N\) are the eigenvalues of the Laplacian matrix \(L\) of the graph \(G\), and \(N\) is the number of nodes. For undirected networks, the Laplacian matrix is symmetric, and all eigenvalues are real and non-negative.A higher value of \(c_{\mathrm{DST}}(i)\) indicates that node \(i\) plays a more significant role in maintaining the network’s structural connectivity.
 </p>
 <h3>
  References

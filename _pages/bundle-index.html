@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   bundle index
@@ -25,38 +24,7 @@ search: true
  <i>
   critical
  </i>
- for node \(i\) if their combined influence exceeds the threshold:
- <br/>
- \[
- <br/>
- \sum_{k \in \Omega(i)} w_{ki} \geq q_i,
- <br/>
- \]
- <br/>
- where \(w_{ki}\) denotes the weight of the link from node \(k\) to node \(i\).
- <br/>
- The bundle influence index of node \(i\), denoted \(c_{BI}(i)\), is defined as the number of critical groups for that node:
- <br/>
- \[
- <br/>
- c_{BI}(i) = \left| \left\{ \Omega(i) \subseteq \mathcal{N}(i) \;|\; \sum_{k \in \Omega(i)} w_{ki} \geq q_i \right\} \right|.
- <br/>
- \]
- <br/>
- Since the number of potential critical groups can grow exponentially, a variant of the bundle index considers only subsets of size up to \(k\). Aleskerov and Yakuba [2] also propose an extension that accounts for indirect influence: in the order-\(k\) version, influence is assessed over \((k+1)\)-hop neighborhoods, with link strength defined as the maximum bottleneck capacity among all paths of length \((k+1)\).
- <br/>
- For unweighted networks, the bundle influence index reduces to
- <br/>
- \[
- <br/>
- c_{BI}(i) = \sum_{l=\lceil q_i \rceil}^{d_i} \binom{d_i}{l},
- <br/>
- \]
- <br/>
- where \(d_i\) denotes the degree of node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.
- <br/>
- The bundle index has been applied in diverse contexts, including the analysis of influential countries in food trade networks [3] and oil trade networks [4], trade between economic sectors of different countries [5] and bibliometric analysis of publications on Parkinson’s disease [6].
- <br/>
+ for node \(i\) if their combined influence exceeds the threshold:\[\sum_{k \in \Omega(i)} w_{ki} \geq q_i,\]where \(w_{ki}\) denotes the weight of the link from node \(k\) to node \(i\).  The bundle influence index of node \(i\), denoted \(c_{BI}(i)\), is defined as the number of critical groups for that node:\[c_{BI}(i) = \left| \left\{ \Omega(i) \subseteq \mathcal{N}(i) \;|\; \sum_{k \in \Omega(i)} w_{ki} \geq q_i \right\} \right|.\]Since the number of potential critical groups can grow exponentially, a variant of the bundle index considers only subsets of size up to \(k\). Aleskerov and Yakuba [2] also propose an extension that accounts for indirect influence: in the order-\(k\) version, influence is assessed over \((k+1)\)-hop neighborhoods, with link strength defined as the maximum bottleneck capacity among all paths of length \((k+1)\).  For unweighted networks, the bundle influence index reduces to\[c_{BI}(i) = \sum_{l=\lceil q_i \rceil}^{d_i} \binom{d_i}{l},\]where \(d_i\) denotes the degree of node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function. The bundle index has been applied in diverse contexts, including the analysis of influential countries in food trade networks [3] and oil trade networks [4], trade between economic sectors of different countries [5] and bibliometric analysis of publications on Parkinson’s disease [6].
 </p>
 <h3>
  References

@@ -16,40 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   DirichletRank
  </i>
- is a variant of PageRank designed to address the “zero-one gap” problem inherent in the classical PageRank algorithm [2]. In PageRank, a random surfer moves to one of a node’s outgoing links with probability \(α\), or jumps to a random node with probability \(1-α\). For nodes with no outgoing links (sink nodes), the surfer cannot follow a link, so they must jump to a random node with probability 1. This creates a large difference in transition behavior between a sink node and a node with even a single outgoing link, leading to the so-called “zero-one gap” in PageRank probabilities. DirichletRank overcomes this issue by using a Bayesian estimation with a Dirichlet prior to compute smoother and more realistic transition probabilities. The DirichletRank score of the nodes, denoted \(c_{DR}\), is obtained by solving the eigenvector equation
- <br/>
- \[
- <br/>
- c_{DR} = \tilde{M} \, c_{DR},
- <br/>
- \]
- <br/>
- where
- <br/>
- \[
- <br/>
- \tilde{M} = \operatorname{diag}(1-ω_1, \dots, 1-ω_N) \, D^{-1}A + \frac{\operatorname{diag}(ω_1, \dots, ω_N)}{N} \, u u^T,
- <br/>
- \]
- <br/>
- with
- <br/>
- \[
- <br/>
- ω_i = \frac{μ}{μ + \sum_{j=1}^{N} a_{ij}},
- <br/>
- \quad μ = 20,
- <br/>
- \quad u \text{ is an \(N \times 1\) all-one vector}.
- <br/>
- \]
- <br/>
- Here, \(ω_i\) represents the random jumping probability for node \(i\). As defined, the more outgoing links a node has, the less likely a surfer is to jump randomly, and the more likely they are to follow one of its outgoing links.
- <br/>
+ is a variant of PageRank designed to address the “zero-one gap” problem inherent in the classical PageRank algorithm [2]. In PageRank, a random surfer moves to one of a node’s outgoing links with probability \(α\), or jumps to a random node with probability \(1-α\). For nodes with no outgoing links (sink nodes), the surfer cannot follow a link, so they must jump to a random node with probability 1. This creates a large difference in transition behavior between a sink node and a node with even a single outgoing link, leading to the so-called “zero-one gap” in PageRank probabilities. DirichletRank overcomes this issue by using a Bayesian estimation with a Dirichlet prior to compute smoother and more realistic transition probabilities. The DirichletRank score of the nodes, denoted \(c_{DR}\), is obtained by solving the eigenvector equation\[c_{DR} = M̃ \, c_{DR},\]where\[M̃ = \operatorname{diag}(1-ω_1, \dots, 1-ω_N) \, D^{-1}A + \frac{\operatorname{diag}(ω_1, \dots, ω_N)}{N} \, u u^T,\]with\[ω_i = \frac{μ}{μ + \sum_{j=1}^{N} a_{ij}},\quad μ = 20,\quad u \text{ is an \(N \times 1\) all-one vector}.\]Here, \(ω_i\) represents the random jumping probability for node \(i\). As defined, the more outgoing links a node has, the less likely a surfer is to jump randomly, and the more likely they are to follow one of its outgoing links.
 </p>
 <h3>
  References

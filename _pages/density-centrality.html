@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Density centrality
  </i>
- is a semi-local measure inspired by Newton’s gravity formula [2]. The method draws an analogy to area density in physics, measuring how much “mass” (node degree) is distributed within a fixed spatial region.
- <br/>
- The centrality \(c_{\textsc{Density}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{Density}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{d_i}{π\, d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(d_i\) is the degree of node \(i\). Ibnoulouafi and El Haziti [2] set \(l = 3\) as the truncated radius.
- <br/>
+ is a semi-local measure inspired by Newton’s gravity formula [2]. The method draws an analogy to area density in physics, measuring how much “mass” (node degree) is distributed within a fixed spatial region. The centrality \(c_{\textsc{Density}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\textsc{Density}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{d_i}{π\, d_{ij}^2},\end{equation*}where \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(d_i\) is the degree of node \(i\). Ibnoulouafi and El Haziti [2] set \(l = 3\) as the truncated radius.
 </p>
 <h3>
  References

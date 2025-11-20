@@ -16,20 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Dynamics-sensitive (DS) centrality
  </i>
- quantifies the influence of a node by considering the weighted sum of walks originating from that node, where both the spreading rate \(β\) and the spreading time \(T\) are incorporated into the weighting scheme [2]. Formally, the DS centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{DS}}(i) = \left( \sum_{t=1}^{T} β^t A^t \right) u,
- <br/>
- \end{equation*}
- <br/>
- where \(A\) is the adjacency matrix of the network, \(u\) is an \(N \times 1\) vector of ones, and \(β\) represents the spreading rate. In their study, Liu et al. [2] set the time horizon to \(T=5\) and consider a spreading rate \(β \leq 0.1\). This definition of DS centrality effectively captures the dynamics of spreading processes on networks, as it assigns higher centrality to nodes that are reachable through multiple weighted paths within the given time frame.
- <br/>
+ quantifies the influence of a node by considering the weighted sum of walks originating from that node, where both the spreading rate \(β\) and the spreading time \(T\) are incorporated into the weighting scheme [2]. Formally, the DS centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{DS}}(i) = \left( \sum_{t=1}^{T} β^t A^t \right) u,\end{equation*}where \(A\) is the adjacency matrix of the network, \(u\) is an \(N \times 1\) vector of ones, and \(β\) represents the spreading rate. In their study, Liu
+ <i>
+  et al.
+ </i>
+ [2] set the time horizon to \(T=5\) and consider a spreading rate \(β \leq 0.1\). This definition of DS centrality effectively captures the dynamics of spreading processes on networks, as it assigns higher centrality to nodes that are reachable through multiple weighted paths within the given time frame.
 </p>
 <h3>
  References

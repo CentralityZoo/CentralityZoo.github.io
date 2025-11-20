@@ -16,49 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   degree and clustering coefficient
  </i>
- (DCC) centrality quantifies node importance by combining information about a node’s degree and clustering coefficient with those of its neighbors [2]. The DCC centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{DCC}(i) = α I_d(i) + (1-α) I_c(i),
- <br/>
- \end{equation*}
- <br/>
- where the degree-based term
- <br/>
- \begin{equation*}
- <br/>
- I_d(i) = d_i + \sum_{j \in \mathcal{N}(i)} d_j
- <br/>
- \end{equation*}
- <br/>
- captures the contribution of node \(i\) and its immediate neighbors, and the clustering-based term
- <br/>
- \begin{equation*}
- <br/>
- I_c(i) = e^{-c_i} \sum_{j \in \mathcal{N}^{(2)}(i)} c_j
- <br/>
- \end{equation*}
- <br/>
- accounts for the clustering coefficient of node \(i\) and its second-hop neighbors. Here, \(d_i\) is the degree of node \(i\), \(c_i\) is its clustering coefficient, \(\mathcal{N}(i)\) is the set of immediate neighbors, and \(\mathcal{N}^{(2)}(i)\) denotes the set of neighbors exactly two hops away.
- <br/>
- The parameter \(α \in [0,1]\) balances the relative importance of degree and clustering effects. Yang et al. [2] suggest determining \(α\) using an entropy-based approach:
- <br/>
- \begin{equation*}
- <br/>
- α = \frac{1 - E_1}{2 - E_1 - E_2},
- <br/>
- \end{equation*}
- <br/>
- where \(E_1\) and \(E_2\) are the entropies of the distributions of \(I_d(i)\) and \(I_c(i)\), respectively.
- <br/>
- Nodes with high DCC centrality thus have a combination of high connectivity and tightly clustered neighborhoods, reflecting both local and semi-local structural influence.
- <br/>
+ (DCC) centrality quantifies node importance by combining information about a node’s degree and clustering coefficient with those of its neighbors [2]. The DCC centrality of node \(i\) is defined as\begin{equation*}c_{DCC}(i) = α I_d(i) + (1-α) I_c(i),\end{equation*}where the degree-based term\begin{equation*}I_d(i) = d_i + \sum_{j \in \mathcal{N}(i)} d_j\end{equation*}captures the contribution of node \(i\) and its immediate neighbors, and the clustering-based term\begin{equation*}I_c(i) = e^{-c_i} \sum_{j \in \mathcal{N}^{(2)}(i)} c_j\end{equation*}accounts for the clustering coefficient of node \(i\) and its second-hop neighbors. Here, \(d_i\) is the degree of node \(i\), \(c_i\) is its clustering coefficient, \(\mathcal{N}(i)\) is the set of immediate neighbors, and \(\mathcal{N}^{(2)}(i)\) denotes the set of neighbors exactly two hops away.The parameter \(α \in [0,1]\) balances the relative importance of degree and clustering effects. Yang
+ <i>
+  et al.
+ </i>
+ [2] suggest determining \(α\) using an entropy-based approach:\begin{equation*}α = \frac{1 - E_1}{2 - E_1 - E_2},\end{equation*}where \(E_1\) and \(E_2\) are the entropies of the distributions of \(I_d(i)\) and \(I_c(i)\), respectively. Nodes with high DCC centrality thus have a combination of high connectivity and tightly clustered neighborhoods, reflecting both local and semi-local structural influence.
 </p>
 <h3>
  References

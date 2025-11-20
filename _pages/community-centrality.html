@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Community centrality
  </i>
- is a community-based measure of node centrality, proposed in [2]. It assumes that the graph \(G\) has a community structure and that nodes may belong to multiple communities.
- <br/>
- The community centrality of node \(i\) quantifies the number of communities it belongs to while taking into account the similarity between these communities:
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{community}}(i) = \sum_{j \in C_i} \left( 1 - \frac{1}{|C_i|} \sum_{k \in C_i} S(j,k) \right),
- <br/>
- \end{equation*}
- <br/>
- where \(C_i\) is the set of communities containing node \(i\), and \(S(j,k)\) is the similarity between communities \(j\) and \(k\), computed using the Jaccard coefficient based on the number of shared nodes.
- <br/>
- A node achieves the highest community centrality if it belongs to many communities that are largely distinct from one another. In [2], community membership is determined using the link community detection algorithm proposed in [3].
- <br/>
+ is a community-based measure of node centrality, proposed in [2]. It assumes that the graph \(G\) has a community structure and that nodes may belong to multiple communities.  The community centrality of node \(i\) quantifies the number of communities it belongs to while taking into account the similarity between these communities:\begin{equation*}c_{\mathrm{community}}(i) = \sum_{j \in C_i} \left( 1 - \frac{1}{|C_i|} \sum_{k \in C_i} S(j,k) \right),\end{equation*}where \(C_i\) is the set of communities containing node \(i\), and \(S(j,k)\) is the similarity between communities \(j\) and \(k\), computed using the Jaccard coefficient based on the number of shared nodes.  A node achieves the highest community centrality if it belongs to many communities that are largely distinct from one another. In [2], community membership is determined using the link community detection algorithm proposed in [3].
 </p>
 <h3>
  References

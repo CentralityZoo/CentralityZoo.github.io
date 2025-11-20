@@ -16,37 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   bipartivity index
  </i>
- quantifies the extent to which individual nodes contribute to the global bipartivity of a network [2]. Intuitively, in a perfectly bipartite network, there are no closed walks of odd length.
- <br/>
- Mathematically, the network bipartivity \(β(G)\) is defined as the proportion of even-length closed walks to the total number of closed walks:
- <br/>
- \[
- <br/>
- β(G) = \frac{\langle SC \rangle_{\mathrm{even}}}{\langle SC \rangle}
- <br/>
- = \frac{\langle SC \rangle_{\mathrm{even}}}{\langle SC \rangle_{\mathrm{even}} + \langle SC \rangle_{\mathrm{odd}}}
- <br/>
- = \frac{\sum_{k=1}^N \cosh(λ_k)}{\sum_{k=1}^N e^{λ_k}} \in \left( \frac{1}{2}, 1 \right],
- <br/>
- \]
- <br/>
- where \(\langle SC \rangle\) denotes the subgraph centralization, which can be decomposed into contributions from even- and odd-length closed walks, and \(λ_k\) is the \(k\)-th eigenvalue of the adjacency matrix \(A\). Note that \(β(G) = 1\) if and only if the network \(G\) is bipartite.
- <br/>
- The contribution of an individual node \(i\) to the network bipartivity, denoted \(c_β(i)\), can be computed using the node-level subgraph centrality:
- <br/>
- \[
- <br/>
- c_β(i) = \frac{\sum_{k=1}^N v_k(i)^2 \cosh(λ_k)}{\sum_{k=1}^N v_k(i)^2 e^{λ_k}},
- <br/>
- \]
- <br/>
- where \(v_k(i)\) is the \(i\)-th component of the eigenvector \(v_k\) corresponding to eigenvalue \(λ_k\) of \(A\). Thus, bipartivity index captures the extent to which node \(i\) participates in even-length closed walks relative to all closed walks passing through it.
- <br/>
+ quantifies the extent to which individual nodes contribute to the global bipartivity of a network [2]. Intuitively, in a perfectly bipartite network, there are no closed walks of odd length.  Mathematically, the network bipartivity \(β(G)\) is defined as the proportion of even-length closed walks to the total number of closed walks:\[β(G) = \frac{\langle SC \rangle_{\mathrm{even}}}{\langle SC \rangle} = \frac{\langle SC \rangle_{\mathrm{even}}}{\langle SC \rangle_{\mathrm{even}} + \langle SC \rangle_{\mathrm{odd}}} = \frac{\sum_{k=1}^N \cosh(λ_k)}{\sum_{k=1}^N e^{λ_k}} \in \left( \frac{1}{2}, 1 \right],\]where \(\langle SC \rangle\) denotes the subgraph centralization, which can be decomposed into contributions from even- and odd-length closed walks, and \(λ_k\) is the \(k\)-th eigenvalue of the adjacency matrix \(A\). Note that \(β(G) = 1\) if and only if the network \(G\) is bipartite.  The contribution of an individual node \(i\) to the network bipartivity, denoted \(c_β(i)\), can be computed using the node-level subgraph centrality:\[c_β(i) = \frac{\sum_{k=1}^N v_k(i)^2 \cosh(λ_k)}{\sum_{k=1}^N v_k(i)^2 e^{λ_k}},\]where \(v_k(i)\) is the \(i\)-th component of the eigenvector \(v_k\) corresponding to eigenvalue \(λ_k\) of \(A\). Thus, bipartivity index captures the extent to which node \(i\) participates in even-length closed walks relative to all closed walks passing through it.
 </p>
 <h3>
  References

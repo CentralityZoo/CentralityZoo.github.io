@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   DK-based gravity model
@@ -25,28 +24,7 @@ search: true
  <i>
   mass
  </i>
- is represented by its DK value, a metric that combines the node's degree and the results from \(k\)-core decomposition [2]. Let \(\mathcal{N}^{(\leq l)}(i)\) denote the set of neighbors of node \(i\) within \(l\) hops. Then the DKGM centrality of node \(i\) can be written as
- <br/>
- \begin{equation*}
- <br/>
- c_{DKGM}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{DK(i) \, DK(j)}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\). Following [2], the truncated radius is typically set to \(l=2\).
- <br/>
- The DK index of node \(i\), denoted \(DK(i)\), is given by
- <br/>
- \begin{equation*}
- <br/>
- DK(i) = d_i + k_s(i) + \frac{p(i)}{\max_k q(k) + 1},
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\), \(k_s(i)\) is the \(k\)-shell value of node \(i\), \(p(i)\) represents the iteration at which node \(i\) is removed during the \(k\)-core decomposition and \(q(k)\) denotes the total number of removal steps performed in that iteration. The DK index captures both local information (degree and \(k\)-shell) and global structural information (position within the \(k\)-core hierarchy) of nodes.
- <br/>
- DKGM evaluates a node’s influence by considering both its own importance and the contributions of nearby nodes, giving less weight to nodes that are farther away.
- <br/>
+ is represented by its DK value, a metric that combines the node's degree and the results from \(k\)-core decomposition [2]. Let \(\mathcal{N}^{(\leq l)}(i)\) denote the set of neighbors of node \(i\) within \(l\) hops. Then the DKGM centrality of node \(i\) can be written as\begin{equation*}c_{DKGM}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{DK(i) \, DK(j)}{d_{ij}^2},\end{equation*}where \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\). Following [2], the truncated radius is typically set to \(l=2\).  The DK index of node \(i\), denoted \(DK(i)\), is given by\begin{equation*}DK(i) = d_i + k_s(i) + \frac{p(i)}{\max_k q(k) + 1},\end{equation*}where \(d_i\) is the degree of node \(i\), \(k_s(i)\) is the \(k\)-shell value of node \(i\), \(p(i)\) represents the iteration at which node \(i\) is removed during the \(k\)-core decomposition and \(q(k)\) denotes the total number of removal steps performed in that iteration. The DK index captures both local information (degree and \(k\)-shell) and global structural information (position within the \(k\)-core hierarchy) of nodes.  DKGM evaluates a node’s influence by considering both its own importance and the contributions of nearby nodes, giving less weight to nodes that are farther away.
 </p>
 <h3>
  References

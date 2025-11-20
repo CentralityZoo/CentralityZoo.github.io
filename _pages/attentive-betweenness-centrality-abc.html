@@ -16,34 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Attentive betweenness centrality
  </i>
- (ABC) quantifies the importance of a node based on the amount of attention it allocates to the flow of information between other nodes [2]. The method models information propagation through the network starting from a source node, with an initial flow value of 1, structured according to BFS levels. At each level, a node receives flow from neighbors in higher or the same BFS levels, attenuated by a factor \(α\) to model decay. The node then accumulates this flow and redistributes a portion to neighbors in the same or next BFS level, again applying the attenuation factor.
- <br/>
- Formally, let \(L_s(i,k) = \{ j \in \mathcal{N}(i) \mid d_{sj} = k \}\) denote the neighbors of node \(i\) at distance \(k\) from source \(s\). The total flow \(f(i)\) received by node \(i\), located at distance \(d_{si}\) from the source, is
- <br/>
- \begin{align*}
- <br/>
- f(i) &amp;= α \sum_{j \in L_s(i,d_{si}-1)}
- <br/>
- \frac{w_{ji}}{\sum_{k \notin L_s(j,d_{sj}-1)} w_{jk}} f(j) \\
- <br/>
- &amp;\quad + α^2 \sum_{l \in L_s(i,d_{si})}
- <br/>
- \frac{w_{li}}{\sum_{k \notin L_s(l,d_{sl}-1)} w_{lk}}
- <br/>
- \sum_{j \in L_s(l,d_{sj}-1)}
- <br/>
- \frac{w_{jl}}{\sum_{k \notin L_s(j,d_{sj}-1)} w_{jk}} f(j),
- <br/>
- \end{align*}
- <br/>
- where the first term accounts for flow received directly from higher-level neighbors, and the second term accounts for flow received indirectly via same-level neighbors, weighted by the attention factor \(α\) and edge strengths \(w_{ij}\).
- <br/>
- Attentive betweenness centrality assumes that information only propagates laterally or forward in BFS levels, never backward. After forward propagation, a backward credit assignment step distributes accumulated flow from downstream neighbors and same-level siblings proportionally to their contributions. This process continues upward, and when the source node is reached, the total credit accumulated across all nodes defines their centrality for that BFS traversal. Repeating the procedure with every node as the source and averaging the results yields the final ABC-centrality score for each node.
- <br/>
+ (ABC) quantifies the importance of a node based on the amount of attention it allocates to the flow of information between other nodes [2]. The method models information propagation through the network starting from a source node, with an initial flow value of 1, structured according to BFS levels. At each level, a node receives flow from neighbors in higher or the same BFS levels, attenuated by a factor \(α\) to model decay. The node then accumulates this flow and redistributes a portion to neighbors in the same or next BFS level, again applying the attenuation factor.Formally, let \(L_s(i,k) = \{ j \in \mathcal{N}(i) \mid d_{sj} = k \}\) denote the neighbors of node \(i\) at distance \(k\) from source \(s\). The total flow \(f(i)\) received by node \(i\), located at distance \(d_{si}\) from the source, is\begin{align*}f(i) &amp;= α \sum_{j \in L_s(i,d_{si}-1)} \frac{w_{ji}}{\sum_{k \notin L_s(j,d_{sj}-1)} w_{jk}} f(j) \\&amp;\quad + α^2 \sum_{l \in L_s(i,d_{si})} \frac{w_{li}}{\sum_{k \notin L_s(l,d_{sl}-1)} w_{lk}} \sum_{j \in L_s(l,d_{sj}-1)} \frac{w_{jl}}{\sum_{k \notin L_s(j,d_{sj}-1)} w_{jk}} f(j),\end{align*}where the first term accounts for flow received directly from higher-level neighbors, and the second term accounts for flow received indirectly via same-level neighbors, weighted by the attention factor \(α\) and edge strengths \(w_{ij}\).Attentive betweenness centrality assumes that information only propagates laterally or forward in BFS levels, never backward. After forward propagation, a backward credit assignment step distributes accumulated flow from downstream neighbors and same-level siblings proportionally to their contributions. This process continues upward, and when the source node is reached, the total credit accumulated across all nodes defines their centrality for that BFS traversal. Repeating the procedure with every node as the source and averaging the results yields the final ABC-centrality score for each node.
 </p>
 <h3>
  References

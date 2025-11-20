@@ -16,41 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   centroid centrality
  </i>
- evaluates how close a node is to all other nodes in a network from a game-theoretical perspective [2, 3]. It considers pairwise comparisons between nodes to identify those that are, on average, more centrally located.
- <br/>
- For a pair of nodes \(i\) and \(j\), let \(γ_i(j)\) denote the number of nodes that are closer (in terms of shortest-path distance) to \(i\) than to \(j\):
- <br/>
- \[
- <br/>
- γ_i(j) = \left| \left\{ v \in \mathcal{N} : d_{iv} &lt; d_{jv} \right\} \right|,
- <br/>
- \]
- <br/>
- where \(d_{iv}\) is the shortest-path distance between nodes \(i\) and \(v\).
- <br/>
- The centroid centrality of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{centroid}}(i) = \min_{j \in \mathcal{N} \setminus \{i\}} f(i,j),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- f(i,j) = γ_i(j) - γ_j(i).
- <br/>
- \end{equation*}
- <br/>
- Intuitively, centroid centrality quantifies the positional advantage of node \(i\) within the network. Nodes with high centroid values are closer, on average, to a larger portion of the network than competing nodes, making them strategically well-positioned or ``centrally dominant'' within the network structure.
- <br/>
+ evaluates how close a node is to all other nodes in a network from a game-theoretical perspective [2, 3]. It considers pairwise comparisons between nodes to identify those that are, on average, more centrally located. For a pair of nodes \(i\) and \(j\), let \(γ_i(j)\) denote the number of nodes that are closer (in terms of shortest-path distance) to \(i\) than to \(j\):\[γ_i(j) = \left| \left\{ v \in \mathcal{N} : d_{iv} &lt; d_{jv} \right\} \right|,\]where \(d_{iv}\) is the shortest-path distance between nodes \(i\) and \(v\).The centroid centrality of node \(i\) is then defined as\begin{equation*}c_{\text{centroid}}(i) = \min_{j \in \mathcal{N} \setminus \{i\}} f(i,j),\end{equation*}where\begin{equation*}f(i,j) = γ_i(j) - γ_j(i).\end{equation*}Intuitively, centroid centrality quantifies the positional advantage of node \(i\) within the network. Nodes with high centroid values are closer, on average, to a larger portion of the network than competing nodes, making them strategically well-positioned or ``centrally dominant'' within the network structure.
 </p>
 <h3>
  References

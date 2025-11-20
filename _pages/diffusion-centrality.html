@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Diffusion centrality
  </i>
- quantifies the influence of a node in a dynamic diffusion process that starts from node \(i\) [2]. Initially, node \(i\) passes a piece of information to each of its neighbors with probability \(δ\). At each subsequent time step \(t &gt; 1\), nodes that received information at time \(t-1\) pass each piece of information to their neighbors with the same probability \(δ\).
- <br/>
- The diffusion centrality of node \(i\), denoted \(c_{\mathrm{dif}}(i)\), is defined as the expected number of times nodes in the network have been contacted over \(T\) periods:
- <br/>
- \[
- <br/>
- c_{\mathrm{dif}}(i) = \sum_{t=1}^T \sum_{j=1}^N δ^t (A^t)_{ij},
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix of the network. For \(T = 1\), diffusion centrality is proportional to the degree centrality of node \(i\). As \(T \rightarrow \infty\), it converges to either Katz centrality or eigenvector centrality, depending on whether \(δ\) is smaller than or greater than \(1/λ_{\max}\), where \(λ_{\max}\) is the largest eigenvalue of \(A\). In [2], the authors set \(δ = 1/λ_{\max}\).
- <br/>
+ quantifies the influence of a node in a dynamic diffusion process that starts from node \(i\) [2]. Initially, node \(i\) passes a piece of information to each of its neighbors with probability \(δ\). At each subsequent time step \(t &gt; 1\), nodes that received information at time \(t-1\) pass each piece of information to their neighbors with the same probability \(δ\).The diffusion centrality of node \(i\), denoted \(c_{\mathrm{dif}}(i)\), is defined as the expected number of times nodes in the network have been contacted over \(T\) periods:\[c_{\mathrm{dif}}(i) = \sum_{t=1}^T \sum_{j=1}^N δ^t (A^t)_{ij},\]where \(A\) is the adjacency matrix of the network. For \(T = 1\), diffusion centrality is proportional to the degree centrality of node \(i\). As \(T \rightarrow \infty\), it converges to either Katz centrality or eigenvector centrality, depending on whether \(δ\) is smaller than or greater than \(1/λ_{\max}\), where \(λ_{\max}\) is the largest eigenvalue of \(A\). In [2], the authors set \(δ = 1/λ_{\max}\).
 </p>
 <h3>
  References

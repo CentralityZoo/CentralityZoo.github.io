@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Degree mass
  </i>
- is a family of centrality measures that generalize degree centrality [2]. The \(m\)-th order degree mass of a node \(i\) is defined as the sum of the weighted degrees of nodes within its \(m\)-hop neighborhood:
- <br/>
- \begin{equation*}
- <br/>
- c_{dm}(i) = \sum_{k=1}^{m+1} \left( A^k u \right)_i
- <br/>
- = \sum_{j=1}^{N} \sum_{k=1}^{m+1} \left( A^k \right)_{ij} d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(A\) is the adjacency matrix of the graph, \(u\) is the all-ones vector and \(d_j\) is the degree of node \(j\). Here, \(m \ge 0\) specifies the order of the neighborhood considered. When \(m = 0\), the degree mass reduces to the standard degree centrality. For \(m = 1\), the degree mass of node \(i\) equals the sum of its own degree and the degrees of its immediate neighbors. As \(m\) increases, the measure incorporates the influence of nodes farther away, and for sufficiently large \(m\), it becomes proportional to the eigenvector centrality [2].
- <br/>
+ is a family of centrality measures that generalize degree centrality [2]. The \(m\)-th order degree mass of a node \(i\) is defined as the sum of the weighted degrees of nodes within its \(m\)-hop neighborhood:\begin{equation*}c_{dm}(i) = \sum_{k=1}^{m+1} \left( A^k u \right)_i= \sum_{j=1}^{N} \sum_{k=1}^{m+1} \left( A^k \right)_{ij} d_j,\end{equation*}where \(A\) is the adjacency matrix of the graph, \(u\) is the all-ones vector and \(d_j\) is the degree of node \(j\). Here, \(m \ge 0\) specifies the order of the neighborhood considered. When \(m = 0\), the degree mass reduces to the standard degree centrality. For \(m = 1\), the degree mass of node \(i\) equals the sum of its own degree and the degrees of its immediate neighbors. As \(m\) increases, the measure incorporates the influence of nodes farther away, and for sufficiently large \(m\), it becomes proportional to the eigenvector centrality [2].
 </p>
 <h3>
  References

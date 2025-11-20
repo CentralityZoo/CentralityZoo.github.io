@@ -16,30 +16,26 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   DegreeDistance
  </i>
  is a degree-based centrality measure designed to identify \(k\) influential nodes in a network [2]. The method proceeds iteratively as follows:
- <br/>
  <ol>
-  <br/>
   <li>
    Initialize the seed set \(S\) as empty. Select the node with the highest degree and add it to \(S\).
   </li>
-  <br/>
   <li>
    Consider the next highest-degree node \(j\). If the distance \(d_{ij}\) between \(j\) and any node \(i \in S\) is less than a threshold \(d\), do not add \(j\) to the seed set. Otherwise, include \(j\) in \(S\).
   </li>
-  <br/>
   <li>
    Repeat step 2 until \(|S| = k\).
   </li>
-  <br/>
  </ol>
- <br/>
- Sheikhahmadi et al. [2] also proposed extensions to the DegreeDistance measure. Note that in networks with small diameter, the resulting seed set \(S\) may be significantly smaller than \(k\) due to the distance constraint.
- <br/>
+ Sheikhahmadi
+ <i>
+  et al.
+ </i>
+ [2] also proposed extensions to the DegreeDistance measure. Note that in networks with small diameter, the resulting seed set \(S\) may be significantly smaller than \(k\) due to the distance constraint.
 </p>
 <h3>
  References

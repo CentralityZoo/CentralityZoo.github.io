@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   dynamical importance
  </i>
- quantifies the influence of individual nodes on dynamical processes occurring on networks [2]. It measures how the removal of a node affects the largest eigenvalue of the network's adjacency matrix, which determines critical thresholds and stability conditions in dynamical processes such as synchronization, epidemic spreading and percolation. The centrality of node \( i \) is defined as the relative change in the largest eigenvalue upon the removal of node \( i \)
- <br/>
- \begin{equation*}
- <br/>
- c_{dynImp}(i) = -\,\frac{λ(G_i) - λ(G)}{λ(G)},
- <br/>
- \end{equation*}
- <br/>
- where \( λ(G) \) is the largest eigenvalue of the adjacency matrix of graph \( G \), and \( G_i \) denotes the subgraph obtained by removing node \( i \) from \( G \).
- <br/>
- A higher value of \( c_{dynImp}(i) \) indicates that removing node \( i \) leads to a greater reduction in the network’s largest eigenvalue, implying that the node plays a more critical role in sustaining the network’s dynamical properties. For undirected networks, the adjacency matrix is symmetric, and the largest eigenvalue corresponds to the spectral radius of the graph.
- <br/>
+ quantifies the influence of individual nodes on dynamical processes occurring on networks [2]. It measures how the removal of a node affects the largest eigenvalue of the network's adjacency matrix, which determines critical thresholds and stability conditions in dynamical processes such as synchronization, epidemic spreading and percolation. The centrality of node \( i \) is defined as the relative change in the largest eigenvalue upon the removal of node \( i \)\begin{equation*}c_{dynImp}(i) = -\,\frac{λ(G_i) - λ(G)}{λ(G)},\end{equation*}where \( λ(G) \) is the largest eigenvalue of the adjacency matrix of graph \( G \), and \( G_i \) denotes the subgraph obtained by removing node \( i \) from \( G \).A higher value of \( c_{dynImp}(i) \) indicates that removing node \( i \) leads to a greater reduction in the network’s largest eigenvalue, implying that the node plays a more critical role in sustaining the network’s dynamical properties. For undirected networks, the adjacency matrix is symmetric, and the largest eigenvalue corresponds to the spectral radius of the graph.
 </p>
 <h3>
  References

@@ -16,30 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Diversity-strength ranking
  </i>
- (DSR) is an extension of the diversity-strength centrality (DSC), proposed by Zareie et al. [2], designed to capture influence that extends beyond a node’s immediate neighborhood. The DSR value of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\text{DSC}}(j)=  \sum_{j \in \mathcal{N}(i)}
- <br/>
- \left(
- <br/>
- \sum_{k \in \mathcal{N}(j)}
- <br/>
- \frac{IKs(k)}{\sum_{m \in \mathcal{N}(j)} IKs(m)}
- <br/>
- \log \frac{IKs(k)}{\sum_{m \in \mathcal{N}(j)} IKs(m)}
- <br/>
- \right),
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\) and \(IKs(k)\) is the improved \(k\)-shell index of node \(k\) as defined by Liu et al. [3]. The inner summation represents the diversity-strength centrality of neighbor \(j\), while the outer summation aggregates these values for all neighbors of node \(i\). Thus, DSR extends DSC by capturing second-order effects through the influence of neighboring nodes. High DSR values indicate connections to neighbors that are both diverse and influential, reflecting enhanced potential for influence propagation.
- <br/>
+ (DSR) is an extension of the diversity-strength centrality (DSC), proposed by Zareie
+ <i>
+  et al.
+ </i>
+ [2], designed to capture influence that extends beyond a node’s immediate neighborhood. The DSR value of node \(i\) is defined as\begin{equation*}c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\text{DSC}}(j)=  \sum_{j \in \mathcal{N}(i)} \left(\sum_{k \in \mathcal{N}(j)} \frac{IKs(k)}{\sum_{m \in \mathcal{N}(j)} IKs(m)} \log \frac{IKs(k)}{\sum_{m \in \mathcal{N}(j)} IKs(m)}\right),\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\) and \(IKs(k)\) is the improved \(k\)-shell index of node \(k\) as defined by Liu
+ <i>
+  et al.
+ </i>
+ [3]. The inner summation represents the diversity-strength centrality of neighbor \(j\), while the outer summation aggregates these values for all neighbors of node \(i\). Thus, DSR extends DSC by capturing second-order effects through the influence of neighboring nodes. High DSR values indicate connections to neighbors that are both diverse and influential, reflecting enhanced potential for influence propagation.
 </p>
 <h3>
  References

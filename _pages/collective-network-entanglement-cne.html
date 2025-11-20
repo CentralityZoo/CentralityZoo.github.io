@@ -16,32 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Collective network entanglement
  </i>
- (CNE) is an induced, entropy-based centrality measure that quantifies the role of individual nodes in preserving the functional diversity of a network [2]. The CNE score \(c_{CNE}(i)\) of node \(i \in \mathcal{N}\) is defined as the change in von Neumann entropy caused by the detachment of the node and its incident edges:
- <br/>
- \[
- <br/>
- c_{CNE}(i) = \left( S_β(G^*_i) + S_β(G_i)\right) - S_β(G),
- <br/>
- \]
- <br/>
- where \(G_i\) denotes the subgraph obtained by removing node \(i\), \(G^*_i\) is the star graph of node \(i\), and \(S_β(G)\) is the von Neumann entropy of \(G\). The entropy is computed from a density matrix \(ρ\) derived from the network Laplacian \(L(G)\):
- <br/>
- \[
- <br/>
- ρ = \frac{e^{-β L(G)}}{\mathrm{tr}(e^{-β L(G)})}, \qquad
- <br/>
- S_β(G) = -\mathrm{tr}(ρ \log ρ),
- <br/>
- \]
- <br/>
- with \(β &gt; 0\) as a diffusion time parameter controlling the scale of information propagation.
- <br/>
- At very short diffusion times (\(β \to 0\)), CNE reduces to degree centrality, reflecting a node's immediate neighborhood. At very long times (\(β \to \infty\)), it captures a node's contribution to the overall network connectivity. Ghavasieh et al. [2] demonstrate that \(β = β_c\) provides an appropriate timescale for network disintegration, as confirmed in experiments on social, biological, and transportation networks.
- <br/>
+ (CNE) is an induced, entropy-based centrality measure that quantifies the role of individual nodes in preserving the functional diversity of a network [2]. The CNE score \(c_{CNE}(i)\) of node \(i \in \mathcal{N}\) is defined as the change in von Neumann entropy caused by the detachment of the node and its incident edges:\[c_{CNE}(i) = \left( S_β(G^*_i) + S_β(G_i)\right) - S_β(G),\]where \(G_i\) denotes the subgraph obtained by removing node \(i\), \(G^*_i\) is the star graph of node \(i\), and \(S_β(G)\) is the von Neumann entropy of \(G\). The entropy is computed from a density matrix \(ρ\) derived from the network Laplacian \(L(G)\):\[ρ = \frac{e^{-β L(G)}}{\mathrm{tr}(e^{-β L(G)})}, \qquadS_β(G) = -\mathrm{tr}(ρ \log ρ),\]with \(β &gt; 0\) as a diffusion time parameter controlling the scale of information propagation.  At very short diffusion times (\(β \to 0\)), CNE reduces to degree centrality, reflecting a node's immediate neighborhood. At very long times (\(β \to \infty\)), it captures a node's contribution to the overall network connectivity. Ghavasieh
+ <i>
+  et al.
+ </i>
+ [2] demonstrate that \(β = β_c\) provides an appropriate timescale for network disintegration, as confirmed in experiments on social, biological, and transportation networks.
 </p>
 <h3>
  References

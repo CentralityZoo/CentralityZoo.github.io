@@ -16,40 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Comm centrality
  </i>
- is a community-based centrality measure that quantifies a node’s importance by combining its intra- and inter-community connectivity through a weighted formulation [2].
- <br/>
- Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities.
- <br/>
- For a node \(i\) belonging to community \(C\), the Comm centrality \(c_{comm}(i)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{comm}(i) = (1+μ_C) \left( \frac{d_i^{in}}{\max_{j \in C} d_j^{in}} \cdot R \right)
- <br/>
- + (1-μ_C) \left( \frac{d_i^{out}}{\max_{j \in C} d_j^{out}} \cdot R \right)^2,
- <br/>
- \end{equation*}
- <br/>
- where \(d_i^{in}\) is the number of links connecting node \(i\) to other nodes within the same community, \(d_i^{out}\) is the number of links from node \(i\) to nodes in other communities, and \(R\) is a scaling parameter.
- <br/>
- The community mixing parameter \(μ_C\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- μ_C = \frac{1}{|C|} \sum_{j \in C} \frac{d_j^{out}}{d_j},
- <br/>
- \end{equation*}
- <br/>
- representing the average proportion of inter-community links within community \(C\).
- <br/>
- Gupta et al. [2] suggest setting \(R = \max_{j \in C} d_j^{in}\).
- <br/>
- Nodes with high Comm centrality values either have strong intra-community connectivity or act as key bridges between communities, depending on the structural mixing parameter \(μ_C\).
- <br/>
+ is a community-based centrality measure that quantifies a node’s importance by combining its intra- and inter-community connectivity through a weighted formulation [2].  Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities.  For a node \(i\) belonging to community \(C\), the Comm centrality \(c_{comm}(i)\) is defined as\begin{equation*}c_{comm}(i) = (1+μ_C) \left( \frac{d_i^{in}}{\max_{j \in C} d_j^{in}} \cdot R \right)+ (1-μ_C) \left( \frac{d_i^{out}}{\max_{j \in C} d_j^{out}} \cdot R \right)^2,\end{equation*}where \(d_i^{in}\) is the number of links connecting node \(i\) to other nodes within the same community, \(d_i^{out}\) is the number of links from node \(i\) to nodes in other communities, and \(R\) is a scaling parameter.  The community mixing parameter \(μ_C\) is defined as\begin{equation*}μ_C = \frac{1}{|C|} \sum_{j \in C} \frac{d_j^{out}}{d_j},\end{equation*}representing the average proportion of inter-community links within community \(C\).  Gupta
+ <i>
+  et al.
+ </i>
+ [2] suggest setting \(R = \max_{j \in C} d_j^{in}\).Nodes with high Comm centrality values either have strong intra-community connectivity or act as key bridges between communities, depending on the structural mixing parameter \(μ_C\).
 </p>
 <h3>
  References

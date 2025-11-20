@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Bridging capital
  </i>
- identifies nodes that act as unique or vital connectors between otherwise disparate groups, with the ability to acquire and control the flow of valuable knowledge [2]. The bridging capital of node \(i\), denoted \(c_{\mathrm{brid}}(i)\), measures the total decrease in information flow over \(T\) periods after an incident edge from node \(i\) is removed from the network \(G\):
- <br/>
- \[
- <br/>
- c_{\mathrm{brid}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{t=1}^{T} \sum_{k_1, k_2} v_{k_1 k_2} \left( (A^t)_{k_1 k_2} - (A_{(i,j)}^t)_{k_1 k_2} \right),
- <br/>
- \]
- <br/>
- where \(v_{k_1 k_2}\) represents the value of information flowing from node \(k_1\) to node \(k_2\) that is potentially affected by the removal of edge \((i,j)\), and \(A_{(i,j)}\) is the adjacency matrix of the graph \(G\) with edge \((i,j)\) removed.  Thus, \(c_{\mathrm{brid}}(i)\) captures the total contribution of node \(i\) to bridging information across the network, reflecting its role in connecting otherwise disconnected or weakly connected regions.
- <br/>
+ identifies nodes that act as unique or vital connectors between otherwise disparate groups, with the ability to acquire and control the flow of valuable knowledge [2]. The bridging capital of node \(i\), denoted \(c_{\mathrm{brid}}(i)\), measures the total decrease in information flow over \(T\) periods after an incident edge from node \(i\) is removed from the network \(G\):\[c_{\mathrm{brid}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{t=1}^{T} \sum_{k_1, k_2} v_{k_1 k_2} \left( (A^t)_{k_1 k_2} - (A_{(i,j)}^t)_{k_1 k_2} \right),\]where \(v_{k_1 k_2}\) represents the value of information flowing from node \(k_1\) to node \(k_2\) that is potentially affected by the removal of edge \((i,j)\), and \(A_{(i,j)}\) is the adjacency matrix of the graph \(G\) with edge \((i,j)\) removed.  Thus, \(c_{\mathrm{brid}}(i)\) captures the total contribution of node \(i\) to bridging information across the network, reflecting its role in connecting otherwise disconnected or weakly connected regions.
 </p>
 <h3>
  References

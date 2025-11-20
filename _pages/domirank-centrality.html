@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   DomiRank centrality
  </i>
@@ -28,34 +27,11 @@ search: true
  <i>
   competition
  </i>
- , where nodes compete with neighbors for limited resources. A node's fitness increases when it is surrounded by neighbors whose fitness is below a domination threshold \(θ\), and decreases otherwise.
- <br/>
- Formally, let \(\Gamma(t) \in \mathbb{R}^{N}\) denote the vector of evolving dominance scores. The dynamics follow:
- <br/>
- \[
- <br/>
- \frac{d\Gamma(t)}{dt} = α \, A \bigl(θ \mathbf{1} - \Gamma(t)\bigr) - β \, \Gamma(t),
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix of the network \(G\), \(α, β, θ\) are parameters controlling competition and relaxation dynamics, and \(\mathbf{1}\) is the all-ones vector. The domination threshold \(θ\) acts as a rescaling factor and is set to \(θ = 1\) without loss of generality. The parameter ratio \(σ = α / β\) determines the balance between local (nodal) and mesoscale (structural) information.
- <br/>
- At steady state (\(\lim_{t \to \infty}\)), the dominance vector \(\Gamma\) satisfies
- <br/>
- \[
- <br/>
- \Gamma = θ \, σ \, (σ A + I)^{-1} A \, \mathbf{1},
- <br/>
- \]
- <br/>
- where \(I\) is the identity matrix. The convergence interval for \(σ\) is bounded as \(σ \in \left(0, -\frac{1}{λ_N}\right)\), where \(λ_N\) is the smallest (dominant negative) eigenvalue of \(A\).
- <br/>
- Nodes with high DomiRank scores dominate many neighbors that themselves have low influence, thereby identifying fragile neighborhoods highly dependent on these nodes. Engsig
+ , where nodes compete with neighbors for limited resources. A node's fitness increases when it is surrounded by neighbors whose fitness is below a domination threshold \(θ\), and decreases otherwise.  Formally, let \(\Gamma(t) \in \mathbb{R}^{N}\) denote the vector of evolving dominance scores. The dynamics follow:\[\frac{d\Gamma(t)}{dt} = α \, A \bigl(θ \mathbf{1} - \Gamma(t)\bigr) - β \, \Gamma(t),\]where \(A\) is the adjacency matrix of the network \(G\), \(α, β, θ\) are parameters controlling competition and relaxation dynamics, and \(\mathbf{1}\) is the all-ones vector. The domination threshold \(θ\) acts as a rescaling factor and is set to \(θ = 1\) without loss of generality. The parameter ratio \(σ = α / β\) determines the balance between local (nodal) and mesoscale (structural) information.  At steady state (\(\lim_{t \to \infty}\)), the dominance vector \(\Gamma\) satisfies\[\Gamma = θ \, σ \, (σ A + I)^{-1} A \, \mathbf{1},\]where \(I\) is the identity matrix. The convergence interval for \(σ\) is bounded as \(σ \in \left(0, -\frac{1}{λ_N}\right)\), where \(λ_N\) is the smallest (dominant negative) eigenvalue of \(A\).  Nodes with high DomiRank scores dominate many neighbors that themselves have low influence, thereby identifying fragile neighborhoods highly dependent on these nodes. Engsig
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] demonstrate that DomiRank-based interventions can inflict more enduring network damage, impeding recovery and reducing overall system resilience.
- <br/>
+ } [2] demonstrate that DomiRank-based interventions can inflict more enduring network damage, impeding recovery and reducing overall system resilience.
 </p>
 <h3>
  References

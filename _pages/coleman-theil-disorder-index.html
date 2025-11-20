@@ -16,41 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Coleman-Theil disorder index
  </i>
- , also known as the hierarchy index, quantifies the extent to which a node's aggregate Burt's constraint is concentrated on a single contact [2]. High values indicate that most of the constraint arises from a single relationship, whereas low values reflect a more even distribution of constraint across multiple contacts.
- <br/>
- For node \(i\), the Coleman-Theil disorder index \(c_{\mathrm{CTDI}}(i)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{CTDI}}(i) = \frac{\sum_{j \in \mathcal{N}(i)} \tilde{c}_{ij} \ln(\tilde{c}_{ij})}{N_i \ln(N_i)},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(N_i = |\mathcal{N}(i)|\) is the number of neighbors and \(\tilde{c}_{ij}\) represents the relative contribution of contact \(j\) to the total constraint of node \(i\), defined as
- <br/>
- \[
- <br/>
- \tilde{c}_{ij} = \frac{c_{ij}}{\frac{1}{N_i} \sum_{k \in \mathcal{N}(i)} c_{ik}}.
- <br/>
- \]
- <br/>
- The term \(c_{ij}\) denotes the Burt's constraint imposed by contact \(j\) and is given by
- <br/>
- \[
- <br/>
- c_{ij} = \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{kj} \right)^2,
- <br/>
- \]
- <br/>
- where \(p_{ij} = \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}}\) is the proportion of node \(i\)'s connections invested in contact \(j\), and \(w_{ij}\) represents the weight of the edge between nodes \(i\) and \(j\) (equal to 1 for unweighted networks).
- <br/>
- The Coleman-Theil disorder index attains its minimum value of 0 when constraint is equally distributed among all neighbors, and reaches its maximum of 1 when all constraint is concentrated on a single neighbor.
- <br/>
+ , also known as the hierarchy index, quantifies the extent to which a node's aggregate Burt's constraint is concentrated on a single contact [2]. High values indicate that most of the constraint arises from a single relationship, whereas low values reflect a more even distribution of constraint across multiple contacts.  For node \(i\), the Coleman-Theil disorder index \(c_{\mathrm{CTDI}}(i)\) is defined as\begin{equation*}c_{\mathrm{CTDI}}(i) = \frac{\sum_{j \in \mathcal{N}(i)} c̃_{ij} \ln(c̃_{ij})}{N_i \ln(N_i)},\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(N_i = |\mathcal{N}(i)|\) is the number of neighbors and \(c̃_{ij}\) represents the relative contribution of contact \(j\) to the total constraint of node \(i\), defined as\[c̃_{ij} = \frac{c_{ij}}{\frac{1}{N_i} \sum_{k \in \mathcal{N}(i)} c_{ik}}.\]The term \(c_{ij}\) denotes the Burt's constraint imposed by contact \(j\) and is given by\[c_{ij} = \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{kj} \right)^2,\]where \(p_{ij} = \frac{w_{ij}}{\sum_{k \in \mathcal{N}(i)} w_{ik}}\) is the proportion of node \(i\)'s connections invested in contact \(j\), and \(w_{ij}\) represents the weight of the edge between nodes \(i\) and \(j\) (equal to 1 for unweighted networks).The Coleman-Theil disorder index attains its minimum value of 0 when constraint is equally distributed among all neighbors, and reaches its maximum of 1 when all constraint is concentrated on a single neighbor.
 </p>
 <h3>
  References

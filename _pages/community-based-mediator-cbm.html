@@ -16,35 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   community-based mediator
  </i>
- (CbM) is a community-aware centrality measure that evaluates a node’s influence based on the entropy of its connections across different communities [2].
- <br/>
- Let the network \(G\) consist of \(K\) communities \(C_1, C_2, \dots, C_K\).
- <br/>
- The CbM centrality \(c_{CbM}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{CbM}(i) = H_i \frac{d_i}{2L},
- <br/>
- \end{equation*}
- <br/>
- where \(L\) is the total number of edges in \(G\), \(d_i\) is the degree of node \(i\), and \(H_i\) is the entropy associated with the distribution of its connections among the communities:
- <br/>
- \begin{equation*}
- <br/>
- H_i = -\sum_{k=1}^{K} \frac{d_i(C_k)}{d_i} \log \frac{d_i(C_k)}{d_i}.
- <br/>
- \end{equation*}
- <br/>
- Here, \(d_i(C_k) = \sum_{j \in C_k} a_{ij}\) denotes the number of links from node \(i\) to nodes in community \(C_k\).
- <br/>
- Nodes that distribute their links more evenly across different communities have higher entropy \(H_i\) and thus higher \(c_{CbM}(i)\), reflecting their stronger mediating role in inter-community connectivity.
- <br/>
+ (CbM) is a community-aware centrality measure that evaluates a node’s influence based on the entropy of its connections across different communities [2].  Let the network \(G\) consist of \(K\) communities \(C_1, C_2, \dots, C_K\).  The CbM centrality \(c_{CbM}(i)\) of node \(i\) is defined as\begin{equation*}c_{CbM}(i) = H_i \frac{d_i}{2L},\end{equation*}where \(L\) is the total number of edges in \(G\), \(d_i\) is the degree of node \(i\), and \(H_i\) is the entropy associated with the distribution of its connections among the communities:\begin{equation*}H_i = -\sum_{k=1}^{K} \frac{d_i(C_k)}{d_i} \log \frac{d_i(C_k)}{d_i}.\end{equation*}Here, \(d_i(C_k) = \sum_{j \in C_k} a_{ij}\) denotes the number of links from node \(i\) to nodes in community \(C_k\).  Nodes that distribute their links more evenly across different communities have higher entropy \(H_i\) and thus higher \(c_{CbM}(i)\), reflecting their stronger mediating role in inter-community connectivity.
 </p>
 <h3>
  References

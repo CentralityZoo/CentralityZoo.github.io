@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   ControlRank
  </i>
- index is a spectral measure designed to quantify node importance in both static and dynamic networks under control settings [2]. ControlRank is based on linear control theory and evaluates the influence of a node by analyzing the minimum eigenvalues of matrices derived from the network's Laplacian. A larger minimum eigenvalue indicates that the node contributes more to the network’s overall stability and accelerates convergence dynamics.
- <br/>
- The ControlRank index of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{ControlRank}(i) = λ_i(L^s),
- <br/>
- \]
- <br/>
- where \(λ_i(L^s)\) is the minimum eigenvalue of the principal minor of \((L + L^T)/2\) obtained by removing the \(i\)-th row and column from the Laplacian matrix \(L\).
- <br/>
+ index is a spectral measure designed to quantify node importance in both static and dynamic networks under control settings [2]. ControlRank is based on linear control theory and evaluates the influence of a node by analyzing the minimum eigenvalues of matrices derived from the network's Laplacian. A larger minimum eigenvalue indicates that the node contributes more to the network’s overall stability and accelerates convergence dynamics.The ControlRank index of node \(i\) is defined as\[c_{ControlRank}(i) = λ_i(L^s),\]where \(λ_i(L^s)\) is the minimum eigenvalue of the principal minor of \((L + L^T)/2\) obtained by removing the \(i\)-th row and column from the Laplacian matrix \(L\).
 </p>
 <h3>
  References

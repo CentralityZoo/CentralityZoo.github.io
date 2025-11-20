@@ -16,31 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Analytic Hierarchy Process (AHP) centrality
  </i>
- is a hybrid measure for identifying influential nodes by integrating multiple centrality metrics through the AHP framework [2]. Let \(R\) be the normalized \(N \times m\) decision matrix, where each entry \(r_{ij}\) represents the normalized influence of node \(i\) with respect to centrality metric \(j\). Bian et al. [2] consider \(m=3\) metrics: degree, betweenness and closeness centralities. The relative importance \(w_j\) of each metric is determined using a weighted TOPSIS approach (w-TOPSIS) [3].
- <br/>
- For each centrality criterion \(j\), an \(N \times N\) pairwise comparison matrix \(B^{(j)}\) is constructed, where each entry \(b^{(j)}_{ik}\) quantifies the relative importance of node \(i\) compared to node \(k\) with respect to criterion \(j\) (e.g. \(b^{(j)}_{ik} = r_{ij} / r_{kj}\)). The AHP score of node \(i\) for criterion \(j\) is then computed as
- <br/>
- \[
- <br/>
- s_j(i) = \frac{1}{N} \sum_{k=1}^N \frac{b^{(j)}_{ik}}{\sum_{l=1}^N b^{(j)}_{lk}}.
- <br/>
- \]
- <br/>
- The AHP centrality of node \(i\) is obtained by aggregating the weighted scores across all criteria:
- <br/>
- \[
- <br/>
- c_{\mathrm{AHP}}(i) = \sum_{j=1}^m w_j s_j(i).
- <br/>
- \]
- <br/>
- Hence,  AHP combines both the relative importance of each centrality metric and the comparative evaluation of nodes, providing a comprehensive assessment of node influence.
- <br/>
+ is a hybrid measure for identifying influential nodes by integrating multiple centrality metrics through the AHP framework [2]. Let \(R\) be the normalized \(N \times m\) decision matrix, where each entry \(r_{ij}\) represents the normalized influence of node \(i\) with respect to centrality metric \(j\). Bian
+ <i>
+  et al.
+ </i>
+ [2] consider \(m=3\) metrics: degree, betweenness and closeness centralities. The relative importance \(w_j\) of each metric is determined using a weighted TOPSIS approach (w-TOPSIS) [3].For each centrality criterion \(j\), an \(N \times N\) pairwise comparison matrix \(B^{(j)}\) is constructed, where each entry \(b^{(j)}_{ik}\) quantifies the relative importance of node \(i\) compared to node \(k\) with respect to criterion \(j\) (e.g. \(b^{(j)}_{ik} = r_{ij} / r_{kj}\)). The AHP score of node \(i\) for criterion \(j\) is then computed as\[s_j(i) = \frac{1}{N} \sum_{k=1}^N \frac{b^{(j)}_{ik}}{\sum_{l=1}^N b^{(j)}_{lk}}.\]The AHP centrality of node \(i\) is obtained by aggregating the weighted scores across all criteria:\[c_{\mathrm{AHP}}(i) = \sum_{j=1}^m w_j s_j(i).\]Hence,  AHP combines both the relative importance of each centrality metric and the comparative evaluation of nodes, providing a comprehensive assessment of node influence.
 </p>
 <h3>
  References

@@ -16,27 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   clustered local-degree (CLD) centrality
  </i>
- integrates both the degree of neighboring nodes and the local topological structure surrounding each node. In this measure, the local clustering coefficient of a node quantifies the connectivity among its neighbors [2].
- <br/>
- The centrality value \( c_{\mathrm{CLD}}(i) \) for node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{CLD}}(i) = (1 + c_i) \sum_{j \in \mathcal{N}(i)} d_j,
- <br/>
- \end{equation*}
- <br/>
- where \( c_i \) denotes the clustering coefficient of node \( i \),
- <br/>
- \( \mathcal{N}(i) \) is the set of neighbors of node \( i \),
- <br/>
- and \( d_j \) represents the degree of neighbor \( j \). Hence, the CLD centrality accounts for both the number of neighbors and the connectivity among them.
- <br/>
+ integrates both the degree of neighboring nodes and the local topological structure surrounding each node. In this measure, the local clustering coefficient of a node quantifies the connectivity among its neighbors [2]. The centrality value \( c_{\mathrm{CLD}}(i) \) for node \( i \) is defined as\begin{equation*}c_{\mathrm{CLD}}(i) = (1 + c_i) \sum_{j \in \mathcal{N}(i)} d_j,\end{equation*}where \( c_i \) denotes the clustering coefficient of node \( i \), \( \mathcal{N}(i) \) is the set of neighbors of node \( i \), and \( d_j \) represents the degree of neighbor \( j \). Hence, the CLD centrality accounts for both the number of neighbors and the connectivity among them.
 </p>
 <h3>
  References

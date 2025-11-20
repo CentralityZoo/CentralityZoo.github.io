@@ -16,24 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Diversity-strength centrality
  </i>
- (DSC) is an entropy-based measure that quantifies node importance based on neighbor diversity, influence spread, and intensity [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{DSC}}(i) = - \sum_{j \in \mathcal{N}(i)} \frac{IKs(j)}{\sum_{l \in \mathcal{N}(i)} IKs(l)} \log \frac{IKs(j)}{\sum_{l \in \mathcal{N}(i)} IKs(l)},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\) and \(IKs(j)\) is the improved \(k\)-shell index of node \(j\) as defined in [3]. This term captures the relative influence of neighbors, and the entropy reflects the diversity of their influence.
- <br/>
- Zareie et al. [2] propose two extensions of DSC:
- <br/>
+ (DSC) is an entropy-based measure that quantifies node importance based on neighbor diversity, influence spread, and intensity [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{\text{DSC}}(i) = - \sum_{j \in \mathcal{N}(i)} \frac{IKs(j)}{\sum_{l \in \mathcal{N}(i)} IKs(l)} \log \frac{IKs(j)}{\sum_{l \in \mathcal{N}(i)} IKs(l)},\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\) and \(IKs(j)\) is the improved \(k\)-shell index of node \(j\) as defined in [3]. This term captures the relative influence of neighbors, and the entropy reflects the diversity of their influence.Zareie
+ <i>
+  et al.
+ </i>
+ [2] propose two extensions of DSC:
  <ol>
-  <br/>
   <li>
    <i>
     Diversity-strength ranking (DSR)
@@ -43,7 +34,6 @@ search: true
         c_{\text{DSR}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\text{DSC}}(j),
     \end{equation*}
   </li>
-  <br/>
   <li>
    <i>
     Extended diversity-strength ranking (EDSR)
@@ -53,11 +43,8 @@ search: true
         c_{\text{EDSR}}(i) = \sum_{j \in \mathcal{N}(i)} c_{\text{DSR}}(j).
     \end{equation*}
   </li>
-  <br/>
  </ol>
- <br/>
  Nodes with high DSC values are influential not only individually but also through the diversity and strength of their neighbors, reflecting both local and extended network influence.
- <br/>
 </p>
 <h3>
  References

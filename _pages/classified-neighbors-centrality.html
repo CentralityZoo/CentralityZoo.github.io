@@ -16,54 +16,41 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Classified neighbors centrality
  </i>
  is an algorithm for identifying influential spreaders that classifies the neighbors of a node according to their relative order of removal during the \(k\)-shell decomposition [2]. Each neighbor \(j\) of node \(i\) is assigned to one of four groups based on the \(k\)-shell decomposition:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Upper neighbors (\(U_i\))
    </i>
    : \(k\)-shell value of node \(j\) is greater than that of node \(i\).
   </li>
-  <br/>
   <li>
    <i>
     Equal-upper neighbors (\(EU_i\))
    </i>
    : nodes \(j\) and \(i\) have the same \(k\)-shell value, but node \(j\) is removed later than node \(i\).
   </li>
-  <br/>
   <li>
    <i>
     Equal-lower neighbors (\(EL_i\))
    </i>
    : nodes \(j\) and \(i\) have the same \(k\)-shell value, but node \(j\) is removed earlier than node \(i\).
   </li>
-  <br/>
   <li>
    <i>
     Lower neighbors (\(L_i\))
    </i>
    : \(k\)-shell value of node \(j\) is less than that of node \(i\).
   </li>
-  <br/>
  </ol>
- <br/>
- The centrality of node \(i\), denoted \(c_{CN}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{CN}(i) = α |U_i| + β |EU_i| + γ |EL_i| + μ |L_i|,
- <br/>
- \]
- <br/>
- where \(α, β, γ, μ \in [0,1]\) are tunable parameters. Li et al. [2] suggest \(α = 0.4\), \(β = 0.35\), \(γ = 0.25\), and \(μ = 0.1\), which correspond to the normalized values \(α = 0.364\), \(β = 0.318\), \(γ = 0.227\), and \(μ = 0.091\).
- <br/>
+ The centrality of node \(i\), denoted \(c_{CN}(i)\), is defined as\[c_{CN}(i) = α |U_i| + β |EU_i| + γ |EL_i| + μ |L_i|,\]where \(α, β, γ, μ \in [0,1]\) are tunable parameters. Li
+ <i>
+  et al.
+ </i>
+ [2] suggest \(α = 0.4\), \(β = 0.35\), \(γ = 0.25\), and \(μ = 0.1\), which correspond to the normalized values \(α = 0.364\), \(β = 0.318\), \(γ = 0.227\), and \(μ = 0.091\).
 </p>
 <h3>
  References

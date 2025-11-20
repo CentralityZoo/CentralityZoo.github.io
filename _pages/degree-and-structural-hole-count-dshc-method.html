@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   degree and structural hole count
  </i>
- (DSHC) method is a local centrality measure that combines information about a node's degree with the structural holes in its neighborhood [2]. The DSHC of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{DSHC}}(i) = \sum_{j \in \mathcal{N}(i)} \left( \left( \frac{1}{d_i} + \frac{1}{d_j} \right) \frac{1}{1 + \Delta_{ij}} \right)^2,
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_i\) and \(d_j\) denote the degrees of nodes \(i\) and \(j\), respectively, and
- <br/>
- \[
- <br/>
- \Delta_{ij} = |\mathcal{N}(j) \setminus \mathcal{N}(i)|
- <br/>
- \]
- <br/>
- represents the number of structural holes between nodes \(i\) and \(j\), with node \(i\) acting as the intermediary. This measure captures both the local connectivity and the bridging role of a node within its neighborhood.
- <br/>
+ (DSHC) method is a local centrality measure that combines information about a node's degree with the structural holes in its neighborhood [2]. The DSHC of node \(i\) is defined as\[c_{\mathrm{DSHC}}(i) = \sum_{j \in \mathcal{N}(i)} \left( \left( \frac{1}{d_i} + \frac{1}{d_j} \right) \frac{1}{1 + \Delta_{ij}} \right)^2,\]where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_i\) and \(d_j\) denote the degrees of nodes \(i\) and \(j\), respectively, and \[\Delta_{ij} = |\mathcal{N}(j) \setminus \mathcal{N}(i)|\]represents the number of structural holes between nodes \(i\) and \(j\), with node \(i\) acting as the intermediary. This measure captures both the local connectivity and the bridging role of a node within its neighborhood.
 </p>
 <h3>
  References

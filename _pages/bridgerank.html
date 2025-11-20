@@ -16,22 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   BridgeRank
  </i>
- is a community-aware centrality measure proposed by Salavati et al. [2], aimed at identifying nodes that play a critical role in maintaining connectivity between communities. The method assumes that the graph \(G\) exhibits a community structure. BridgeRank begins by partitioning the network into communities using a community detection algorithm, specifically the Louvain algorithm. Within each community, nodes are subsequently ranked based on their betweenness centrality, computed using shortest paths restricted to members of that community. From each community, the most influential node is selected to form the set of critical nodes, denoted \(S\).
- <br/>
- The BridgeRank score of node \(i\), denoted \(c_{\mathrm{BridgeRank}}(i)\), is then defined as the inverse of the sum of its shortest-path distances to the critical nodes:
- <br/>
- \[
- <br/>
- c_{\mathrm{BridgeRank}}(i) = \frac{1}{\sum_{j \in S} d_{ij}}.
- <br/>
- \]
- <br/>
- Salavati et al. [2] also proposed a modified version of BridgeRank that weights the original score and selects multiple nodes from each community based on the community’s density.
- <br/>
+ is a community-aware centrality measure proposed by Salavati
+ <i>
+  et al.
+ </i>
+ [2], aimed at identifying nodes that play a critical role in maintaining connectivity between communities. The method assumes that the graph \(G\) exhibits a community structure. BridgeRank begins by partitioning the network into communities using a community detection algorithm, specifically the Louvain algorithm. Within each community, nodes are subsequently ranked based on their betweenness centrality, computed using shortest paths restricted to members of that community. From each community, the most influential node is selected to form the set of critical nodes, denoted \(S\). The BridgeRank score of node \(i\), denoted \(c_{\mathrm{BridgeRank}}(i)\), is then defined as the inverse of the sum of its shortest-path distances to the critical nodes:\[c_{\mathrm{BridgeRank}}(i) = \frac{1}{\sum_{j \in S} d_{ij}}.\]Salavati
+ <i>
+  et al.
+ </i>
+ [2] also proposed a modified version of BridgeRank that weights the original score and selects multiple nodes from each community based on the community’s density.
 </p>
 <h3>
  References

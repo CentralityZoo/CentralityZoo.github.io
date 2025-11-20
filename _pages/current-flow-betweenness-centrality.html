@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   current-flow betweenness centrality
  </i>
- , also known as random-walk betweenness centrality, is discussed in [2, 3]. In contrast to traditional betweenness centrality, which assumes that information spreads only along shortest paths, this measure relaxes that assumption by including contributions from essentially all paths between nodes. More precisely, information originating from a source node \(s\) can pass through randomly selected intermediate nodes before reaching a target node \(t\). Current-flow betweenness centrality captures this process by modeling the spread of information as if it moves through the network like an electrical current. The centrality of node \(i\), denoted \(c_{cfb}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{cfb}(i) = \frac{\sum_{s,t\in \mathcal{N}} I_i^{st}}{N_B},
- <br/>
- \end{equation*}
- <br/>
- where \(I_i^{st}\) represents the current flowing through node \(i\) between a source node \(s\) and a target node \(t\) and \(N_B = N(N-1)\) is a normalizing constant. The resized approximation of current-flow betweenness (RCFB), a computationally efficient approximation of current-flow betweenness centrality, was proposed in [4].
- <br/>
+ , also known as random-walk betweenness centrality, is discussed in [2, 3]. In contrast to traditional betweenness centrality, which assumes that information spreads only along shortest paths, this measure relaxes that assumption by including contributions from essentially all paths between nodes. More precisely, information originating from a source node \(s\) can pass through randomly selected intermediate nodes before reaching a target node \(t\). Current-flow betweenness centrality captures this process by modeling the spread of information as if it moves through the network like an electrical current. The centrality of node \(i\), denoted \(c_{cfb}(i)\), is defined as\begin{equation*}c_{cfb}(i) = \frac{\sum_{s,t\in \mathcal{N}} I_i^{st}}{N_B},\end{equation*}where \(I_i^{st}\) represents the current flowing through node \(i\) between a source node \(s\) and a target node \(t\) and \(N_B = N(N-1)\) is a normalizing constant. The resized approximation of current-flow betweenness (RCFB), a computationally efficient approximation of current-flow betweenness centrality, was proposed in [4].
 </p>
 <h3>
  References

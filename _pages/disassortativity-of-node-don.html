@@ -16,37 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   disassortativity of a node
  </i>
- (DoN) quantifies a node’s tendency to connect to neighbors with lower degrees, capturing its local dominance and potential influence within the network [2]. For a node \(i\) with degree \(d_i\) and neighbors \(\mathcal{N}(i)\), the DoN score is defined as
- <br/>
- \[
- <br/>
- c_{DoN}(i) = \sum_{j \in \mathcal{N}(i)} f(d_i, d_j),
- <br/>
- \]
- <br/>
- where
- <br/>
- \[
- <br/>
- f(d_i, d_j) =
- <br/>
- \begin{cases}
- <br/>
- 1, &amp; d_i \ge d_j, \\
- <br/>
- 0, &amp; d_i &lt; d_j.
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- The DoN score of node \(i\) ranges from \(0\) to \(d_i\), where \(0\) indicates that all neighbors have higher degrees and \(d_i\) indicates that all neighbors have lower degrees. Nodes with high DoN dominate their local neighborhoods, bridging lower-degree nodes and exerting greater influence over the network’s structure and functionality. In contrast, nodes with low DoN are surrounded by more influential neighbors, limiting their impact. This aligns with the observation that in disassortative networks, high-degree nodes connected to low-degree nodes often serve as key drivers of information flow or control within the system. The effectiveness of DoN has been validated through extensive experiments on both synthetic and real-world networks, including analyses of network robustness and simulations of spreading dynamics.
- <br/>
+ (DoN) quantifies a node’s tendency to connect to neighbors with lower degrees, capturing its local dominance and potential influence within the network [2]. For a node \(i\) with degree \(d_i\) and neighbors \(\mathcal{N}(i)\), the DoN score is defined as\[c_{DoN}(i) = \sum_{j \in \mathcal{N}(i)} f(d_i, d_j),\]where\[f(d_i, d_j) =\begin{cases} 1, &amp; d_i \ge d_j, \\ 0, &amp; d_i &lt; d_j.\end{cases}\]The DoN score of node \(i\) ranges from \(0\) to \(d_i\), where \(0\) indicates that all neighbors have higher degrees and \(d_i\) indicates that all neighbors have lower degrees. Nodes with high DoN dominate their local neighborhoods, bridging lower-degree nodes and exerting greater influence over the network’s structure and functionality. In contrast, nodes with low DoN are surrounded by more influential neighbors, limiting their impact. This aligns with the observation that in disassortative networks, high-degree nodes connected to low-degree nodes often serve as key drivers of information flow or control within the system. The effectiveness of DoN has been validated through extensive experiments on both synthetic and real-world networks, including analyses of network robustness and simulations of spreading dynamics.
 </p>
 <h3>
  References

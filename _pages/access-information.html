@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Access information
  </i>
- (also known as search information) quantifies how easily a node can reach other nodes in the network [2]. Let \(\{p(i,j)\}\) denote the set of shortest paths from node \(i\) to node \(j\), and let \(d_i\) be the degree of node \(i\). The access information of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathcal{A}}(i) = \frac{1}{N} \sum_{j=1}^{N} S(i,j),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- S(i,j) = - \log_2 \sum_{\{p(i,j)\}} P[p(i,j)], \quad
- <br/>
- P[p(i,j)] = \frac{1}{d_i} \prod_{l \neq i \neq j \in p(i,j)} \frac{1}{d_l - 1}.
- <br/>
- \]
- <br/>
- Here, \(S(i,j)\) represents the amount of information needed to locate node \(j\) starting from \(i\) along the shortest paths, and \(P[p(i,j)]\) is the probability of following path \(p(i,j)\) when choosing uniformly at each step. Intuitively, \(c_{\mathcal{A}}(i)\) gives the average number of “questions” required to reach any node from \(i\). For example, in a star graph, the central hub has low access information: starting at the hub it is harder to reach a specific neighbor [2].
- <br/>
+ (also known as search information) quantifies how easily a node can reach other nodes in the network [2]. Let \(\{p(i,j)\}\) denote the set of shortest paths from node \(i\) to node \(j\), and let \(d_i\) be the degree of node \(i\). The access information of node \(i\) is defined as\begin{equation*}c_{\mathcal{A}}(i) = \frac{1}{N} \sum_{j=1}^{N} S(i,j),\end{equation*}where \[S(i,j) = - \log_2 \sum_{\{p(i,j)\}} P[p(i,j)], \quad P[p(i,j)] = \frac{1}{d_i} \prod_{l \neq i \neq j \in p(i,j)} \frac{1}{d_l - 1}.\]Here, \(S(i,j)\) represents the amount of information needed to locate node \(j\) starting from \(i\) along the shortest paths, and \(P[p(i,j)]\) is the probability of following path \(p(i,j)\) when choosing uniformly at each step. Intuitively, \(c_{\mathcal{A}}(i)\) gives the average number of “questions” required to reach any node from \(i\). For example, in a star graph, the central hub has low access information: starting at the hub it is harder to reach a specific neighbor [2].
 </p>
 <h3>
  References

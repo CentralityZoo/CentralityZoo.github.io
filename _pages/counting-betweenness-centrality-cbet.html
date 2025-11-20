@@ -16,46 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Counting betweenness centrality
  </i>
- (CBET) extends the concept of current-flow betweenness (or Newman’s random-walk betweenness) [2, 3] to directed networks with self-loops [4]. The counting betweenness \( c_{\text{CBET}}(i) \) of a node \( i \) quantifies how frequently the node is visited during first-passage random walks, averaged over all source-target pairs.
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{CBET}}(i) = \frac{\sum_{s \in \mathcal{N}} \sum_{t \in \mathcal{N} \setminus \{s\}} N^{st}(i)}{N (N - 1)},
- <br/>
- \end{equation*}
- <br/>
- where \( N^{st}(i) \) denotes the expected number of times a random walker visits node \( i \) when traveling from source \( s \) to target \( t \), including visits due to self-loops.  If \( i \notin \{s, t\} \), then
- <br/>
- \begin{equation*}
- <br/>
- N^{st}(i) = \sum_{j \neq t} \frac{N^{st}_{ij} + N^{st}_{ji}}{2},
- <br/>
- \end{equation*}
- <br/>
- where \( N^{st}_{ij} \) represents the expected number of times the walker uses the link \( (i, j) \).
- <br/>
- If \( i = s \), the walker visits the source node once more at the start of the walk, and thus
- <br/>
- \begin{equation*}
- <br/>
- N^{st}(s) = \sum_{j \neq t} \frac{N^{st}_{sj} + N^{st}_{js}}{2} + 1.
- <br/>
- \end{equation*}
- <br/>
- If \( i = t \), the target node is visited exactly once:
- <br/>
- \begin{equation*}
- <br/>
- N^{st}[t] = 1.
- <br/>
- \end{equation*}
- <br/>
- Blöchl et al. [4] emphasize that counting betweenness emphasizes self-loops more strongly than random-walk centrality. An implementation of CBET in \texttt{R} is available in [5].
- <br/>
+ (CBET) extends the concept of current-flow betweenness (or Newman’s random-walk betweenness) [2, 3] to directed networks with self-loops [4]. The counting betweenness \( c_{\text{CBET}}(i) \) of a node \( i \) quantifies how frequently the node is visited during first-passage random walks, averaged over all source-target pairs.\begin{equation*}c_{\text{CBET}}(i) = \frac{\sum_{s \in \mathcal{N}} \sum_{t \in \mathcal{N} \setminus \{s\}} N^{st}(i)}{N (N - 1)},\end{equation*}where \( N^{st}(i) \) denotes the expected number of times a random walker visits node \( i \) when traveling from source \( s \) to target \( t \), including visits due to self-loops.  If \( i \notin \{s, t\} \), then\begin{equation*}N^{st}(i) = \sum_{j \neq t} \frac{N^{st}_{ij} + N^{st}_{ji}}{2},\end{equation*}where \( N^{st}_{ij} \) represents the expected number of times the walker uses the link \( (i, j) \).  If \( i = s \), the walker visits the source node once more at the start of the walk, and thus\begin{equation*}N^{st}(s) = \sum_{j \neq t} \frac{N^{st}_{sj} + N^{st}_{js}}{2} + 1.\end{equation*}If \( i = t \), the target node is visited exactly once:\begin{equation*}N^{st}[t] = 1.\end{equation*}Blöchl
+ <i>
+  et al.
+ </i>
+ [4] emphasize that counting betweenness emphasizes self-loops more strongly than random-walk centrality. An implementation of CBET in \texttt{R} is available in [5].
 </p>
 <h3>
  References

@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Density of the Maximum Neighborhood Component
  </i>
- (DMNC) centrality extends the maximum neighborhood component (MNC) measure by incorporating the internal link density of the largest connected component within a node’s neighborhood [2].
- <br/>
- While MNC centrality considers only the size of the largest connected subgraph among the neighbors of a node, DMNC additionally evaluates how densely those neighbors are connected to each other.
- <br/>
- Formally, for a given node \( i \), let \( C_{\max}(G_{\mathcal{N}(i)}) \) denote the largest connected component of the induced subgraph \( G_{\mathcal{N}(i)} \).
- <br/>
- Then the DMNC centrality \( c_{\mathrm{dmnc}}(i) \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{dmnc}(i) = \frac{|E(MNC(G_{\mathcal{N}(i)}))|}{|V(MNC(G_{\mathcal{N}(i)}))|^ε},
- <br/>
- \end{equation*}
- <br/>
- where \(|E(MNC(G_{\mathcal{N}(i)}))|\) and \(|V(MNC(G_{\mathcal{N}(i)}))|\) denote the number of edges and vertices, respectively, within the largest connected component, and
- <br/>
- \( ε \) is a tunable scaling parameter such that \( 1 \leq ε \leq 2 \) (typically \( ε = 1.67 \)). Thus, the DMNC centrality measures how large and how tightly connected a node’s neighbourhood is, giving higher scores to nodes whose neighbours form large, well-connected groups.
- <br/>
+ (DMNC) centrality extends the maximum neighborhood component (MNC) measure by incorporating the internal link density of the largest connected component within a node’s neighborhood [2]. While MNC centrality considers only the size of the largest connected subgraph among the neighbors of a node, DMNC additionally evaluates how densely those neighbors are connected to each other. Formally, for a given node \( i \), let \( C_{\max}(G_{\mathcal{N}(i)}) \) denote the largest connected component of the induced subgraph \( G_{\mathcal{N}(i)} \). Then the DMNC centrality \( c_{\mathrm{dmnc}}(i) \) is defined as\begin{equation*}c_{dmnc}(i) = \frac{|E(MNC(G_{\mathcal{N}(i)}))|}{|V(MNC(G_{\mathcal{N}(i)}))|^ε},\end{equation*}where \(|E(MNC(G_{\mathcal{N}(i)}))|\) and \(|V(MNC(G_{\mathcal{N}(i)}))|\) denote the number of edges and vertices, respectively, within the largest connected component, and \( ε \) is a tunable scaling parameter such that \( 1 \leq ε \leq 2 \) (typically \( ε = 1.67 \)). Thus, the DMNC centrality measures how large and how tightly connected a node’s neighbourhood is, giving higher scores to nodes whose neighbours form large, well-connected groups.
 </p>
 <h3>
  References

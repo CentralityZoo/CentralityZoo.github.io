@@ -16,51 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   disassortativity and community structure
  </i>
- (mDC) centrality is a community-based hybrid measure that combines a node’s disassortativity (DoN) with its influence at the community boundary [2]. It assumes that the network \(G\) has an identifiable community structure (e.g., Wang et al. [2] apply the Louvain algorithm for community detection).
- <br/>
- For a node \(i \in C\), the mDC score \(c_{mDC}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{mDC}(i) = (1 - α_i) \, c_{DoN}(i) + α_i \, f_c(i),
- <br/>
- \]
- <br/>
- where \(c_{DoN}(i)\) is the node’s disassortativity score [2], and \(α_i\) quantifies how isolated the community \(C\) containing node \(i\) is from the rest of the network:
- <br/>
- \[
- <br/>
- α_i = \frac{|E^{\text{in}}_C|}{|E^{\text{in}}_C| + |E^{\text{out}}_C|}.
- <br/>
- \]
- <br/>
- Here, \(E^{\text{in}}_C\) and \(E^{\text{out}}_C\) denote the sets of edges within community \(C\) and connecting \(C\) to other communities, respectively. A larger \(α_i\) corresponds to a more isolated community, increasing the relative weight of boundary nodes in the mDC score.
- <br/>
- The community boundary popularity \(f_c(i)\) captures the influence of node \(i\) at the interface between communities:
- <br/>
- \[
- <br/>
- f_c(i) =
- <br/>
- \begin{cases}
- <br/>
- \displaystyle α_i \sum_{C' \in \mathcal{C}_i} \left( 1 + \frac{|C| + |C'|}{2 |C_{\max}|} \right), &amp; d_i \neq d_i^{\text{in}}, \\[1em]
- <br/>
- 0, &amp; d_i = d_i^{\text{in}},
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\), \(d_i^{\text{in}}\) is the number of neighbors within the same community \(C\), \(\mathcal{C}_i\) is the set of other communities connected to \(i\), \(|C|\) and \(|C'|\) are the sizes of communities \(C\) and \(C'\), and \(|C_{\max}|\) is the size of the largest community in the network.
- <br/>
- Nodes with high mDC scores are influential both locally (high DoN) and at the boundaries between communities, bridging communities and enhancing connectivity. The effectiveness of mDC has been validated on synthetic and real-world networks through analyses of network robustness and disease spreading simulations.
- <br/>
+ (mDC) centrality is a community-based hybrid measure that combines a node’s disassortativity (DoN) with its influence at the community boundary [2]. It assumes that the network \(G\) has an identifiable community structure (e.g., Wang
+ <i>
+  et al.
+ </i>
+ [2] apply the Louvain algorithm for community detection).  For a node \(i \in C\), the mDC score \(c_{mDC}(i)\) is defined as\[c_{mDC}(i) = (1 - α_i) \, c_{DoN}(i) + α_i \, f_c(i),\]where \(c_{DoN}(i)\) is the node’s disassortativity score [2], and \(α_i\) quantifies how isolated the community \(C\) containing node \(i\) is from the rest of the network:\[α_i = \frac{|E^{\text{in}}_C|}{|E^{\text{in}}_C| + |E^{\text{out}}_C|}.\]Here, \(E^{\text{in}}_C\) and \(E^{\text{out}}_C\) denote the sets of edges within community \(C\) and connecting \(C\) to other communities, respectively. A larger \(α_i\) corresponds to a more isolated community, increasing the relative weight of boundary nodes in the mDC score.  The community boundary popularity \(f_c(i)\) captures the influence of node \(i\) at the interface between communities:\[f_c(i) =\begin{cases}\displaystyle α_i \sum_{C' \in \mathcal{C}_i} \left( 1 + \frac{|C| + |C'|}{2 |C_{\max}|} \right), &amp; d_i \neq d_i^{\text{in}}, \\[1em]0, &amp; d_i = d_i^{\text{in}},\end{cases}\]where \(d_i\) is the degree of node \(i\), \(d_i^{\text{in}}\) is the number of neighbors within the same community \(C\), \(\mathcal{C}_i\) is the set of other communities connected to \(i\), \(|C|\) and \(|C'|\) are the sizes of communities \(C\) and \(C'\), and \(|C_{\max}|\) is the size of the largest community in the network.  Nodes with high mDC scores are influential both locally (high DoN) and at the boundaries between communities, bridging communities and enhancing connectivity. The effectiveness of mDC has been validated on synthetic and real-world networks through analyses of network robustness and disease spreading simulations.
 </p>
 <h3>
  References

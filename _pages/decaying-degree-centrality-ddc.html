@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   decaying degree centrality
  </i>
- (DDC) is a generalization of the classical degree centrality that accounts for the influence of all nodes in a network, with contributions decaying exponentially with distance [2]. For a node \(i \in \mathcal{N}\), the DDC score is defined as
- <br/>
- \[
- <br/>
- c_{DDC}(i) = \sum_{j=1}^N \frac{d_j}{N^{2 d_{ij}}},
- <br/>
- \]
- <br/>
- where \(d_j\) is the degree of node \(j\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\).
- <br/>
- Nodes with high DDC values are not only well-connected themselves but are also close to other highly connected nodes, reflecting both local and quasi-global influence in the network. The axiomatic properties of DDC are analyzed in [2].
- <br/>
+ (DDC) is a generalization of the classical degree centrality that accounts for the influence of all nodes in a network, with contributions decaying exponentially with distance [2]. For a node \(i \in \mathcal{N}\), the DDC score is defined as\[c_{DDC}(i) = \sum_{j=1}^N \frac{d_j}{N^{2 d_{ij}}},\]where \(d_j\) is the degree of node \(j\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\).  Nodes with high DDC values are not only well-connected themselves but are also close to other highly connected nodes, reflecting both local and quasi-global influence in the network. The axiomatic properties of DDC are analyzed in [2].
 </p>
 <h3>
  References

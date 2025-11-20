@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Degree and Importance of Lines (DIL) centrality
  </i>
- evaluates the importance of a node based on its degree and the significance of its adjacent links [2]. The DIL measure reflects that the influence of a node depends on both its degree and the structural roles of its adjacent links. The centrality \( c_{\mathrm{DIL}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{DIL}}(i) = d_i + \sum_{j \in \mathcal{N}(i)}
- <br/>
- \left( \frac{(d_i - \Delta_{ij} - 1)(d_j - \Delta_{ij} - 1)}{\Delta_{ij}/2 + 1} \right)
- <br/>
- \left( \frac{d_i - 1}{d_i + d_j - 2} \right),
- <br/>
- \end{equation*}
- <br/>
- where \( d_i \) is the degree of node \( i \),
- <br/>
- \( \mathcal{N}(i) \) is the set of neighbors of \( i \), and
- <br/>
- \( \Delta_{ij} \) is the number of triangles that include the link \((i,j)\).
- <br/>
+ evaluates the importance of a node based on its degree and the significance of its adjacent links [2]. The DIL measure reflects that the influence of a node depends on both its degree and the structural roles of its adjacent links. The centrality \( c_{\mathrm{DIL}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\mathrm{DIL}}(i) = d_i + \sum_{j \in \mathcal{N}(i)} \left( \frac{(d_i - \Delta_{ij} - 1)(d_j - \Delta_{ij} - 1)}{\Delta_{ij}/2 + 1} \right)\left( \frac{d_i - 1}{d_i + d_j - 2} \right),\end{equation*}where \( d_i \) is the degree of node \( i \), \( \mathcal{N}(i) \) is the set of neighbors of \( i \), and \( \Delta_{ij} \) is the number of triangles that include the link \((i,j)\).
 </p>
 <h3>
  References

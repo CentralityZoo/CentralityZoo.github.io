@@ -16,21 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Closeness centrality
  </i>
- is a measure of how central a node is within a network, based on its shortest-path distances to all other nodes [2, 3, 4].  Intuitively, a node is central in terms of closeness if it can efficiently reach all other nodes in the network, reflecting its potential to access and disseminate information, as well as to exert influence across the network. The closeness centrality \(c_{cl}(i)\) of a node \(i\) is defined as the inverse of the average shortest-path distance from \(i\) to all other nodes in the network:
- <br/>
- \begin{equation*} \label{eq_closeness}
- <br/>
- c_{cl}(i) = \frac{N-1}{\sum_{j \neq i} d_{ij}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). Closeness centrality is typically interpreted as an indicator of either access efficiency or independence from intermediaries [5]. Nodes with shorter average distances to others can exchange information with fewer transmissions, in less time, and at lower cost [4].
- <br/>
- Closeness centrality is defined only for connected graphs, since shortest-path distances between nodes in different components are undefined. Extensions of closeness centrality to graphs with multiple connected components are discussed in [6]. The closeness centrality without \(N-1\) in the numerator is also known as the
+ is a measure of how central a node is within a network, based on its shortest-path distances to all other nodes [2, 3, 4].  Intuitively, a node is central in terms of closeness if it can efficiently reach all other nodes in the network, reflecting its potential to access and disseminate information, as well as to exert influence across the network. The closeness centrality \(c_{cl}(i)\) of a node \(i\) is defined as the inverse of the average shortest-path distance from \(i\) to all other nodes in the network:\begin{equation*} \label{eq_closeness}c_{cl}(i) = \frac{N-1}{\sum_{j \neq i} d_{ij}},\end{equation*}where \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). Closeness centrality is typically interpreted as an indicator of either access efficiency or independence from intermediaries [5]. Nodes with shorter average distances to others can exchange information with fewer transmissions, in less time, and at lower cost [4].Closeness centrality is defined only for connected graphs, since shortest-path distances between nodes in different components are undefined. Extensions of closeness centrality to graphs with multiple connected components are discussed in [6]. The closeness centrality without \(N-1\) in the numerator is also known as the
  <i>
   barycenter
  </i>
@@ -39,7 +28,6 @@ search: true
   Wiener index
  </i>
  centrality [8].
- <br/>
 </p>
 <h3>
  References

@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Decay centrality
  </i>
- is a centrality measure that accounts for path lengths by assigning a weight to each path that decreases exponentially with its length [2]. Specifically, the contribution of a path is given by a decay parameter \(δ \in (0,1)\) raised to the power of the path length, summarizing the diminishing influence of distant nodes, i.e.,
- <br/>
- \begin{equation*}
- <br/>
- c_{decay}(i) = \sum_{j \neq i}{δ^{d_{ij}}}.
- <br/>
- \end{equation*}
- <br/>
- The decay centrality can be interpreted as the expected number of nodes that can reach \(i\) via shortest paths, where the probability of a successful move is defined by \(δ\). The value of \(δ\) depends on the network, but it is commonly assumed to be \(δ = 0.5\).
- <br/>
+ is a centrality measure that accounts for path lengths by assigning a weight to each path that decreases exponentially with its length [2]. Specifically, the contribution of a path is given by a decay parameter \(δ \in (0,1)\) raised to the power of the path length, summarizing the diminishing influence of distant nodes, i.e.,\begin{equation*}c_{decay}(i) = \sum_{j \neq i}{δ^{d_{ij}}}.\end{equation*}The decay centrality can be interpreted as the expected number of nodes that can reach \(i\) via shortest paths, where the probability of a successful move is defined by \(δ\). The value of \(δ\) depends on the network, but it is commonly assumed to be \(δ = 0.5\).
 </p>
 <h3>
  References

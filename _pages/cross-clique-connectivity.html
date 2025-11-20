@@ -16,27 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   cross-clique connectivity
  </i>
- (CCC) quantifies how extensively a node participates in multiple cohesive groups within a network [2]. It is based on the idea that nodes belonging to several cliques (fully connected subgraphs) play a crucial role in linking otherwise separate dense regions of the network. Formally, the cross-clique connectivity of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{ccc}}(i) =
- <br/>
- \left| \left\{ C \subseteq \mathcal{N}: i \in C,\, C \text{ is a clique and } |C| \ge 3 \right\} \right|,
- <br/>
- \end{equation*}
- <br/>
- that is, the number of cliques of size at least three that include node \(i\). Nodes with high \(c_{\text{ccc}}(i)\) values are referred to as
+ (CCC) quantifies how extensively a node participates in multiple cohesive groups within a network [2]. It is based on the idea that nodes belonging to several cliques (fully connected subgraphs) play a crucial role in linking otherwise separate dense regions of the network. Formally, the cross-clique connectivity of a node \(i\) is defined as\begin{equation*}c_{\text{ccc}}(i) = \left| \left\{ C \subseteq \mathcal{N}: i \in C,\, C \text{ is a clique and } |C| \ge 3 \right\} \right|,\end{equation*}that is, the number of cliques of size at least three that include node \(i\). Nodes with high \(c_{\text{ccc}}(i)\) values are referred to as
  <i>
   highly cross-connected
  </i>
  nodes. Such nodes serve as structural bridges between tightly connected groups, facilitating interactions and information flow across different cohesive communities within the network.
- <br/>
 </p>
 <h3>
  References

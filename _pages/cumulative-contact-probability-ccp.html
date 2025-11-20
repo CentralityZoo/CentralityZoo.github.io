@@ -16,20 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Cumulative Contact Probability
  </i>
- (CCP) was introduced by Gao et al. [2] as a centrality-based heuristic for the Single-Data Multicast (SDM) problem, which seeks to determine how to select the minimum number of relays required to achieve a target delivery ratio \(p\) within a time constraint \(T\) when delivering a data item to a set \(D\) of destinations. The CCP measure is derived from a Poisson model of contact processes in social networks. The centrality of node \(i\), denoted by \(c_{\text{CCP}}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{CCP}}(i) = 1 - \frac{1}{N-1} \sum_{j=1}^{N} e^{-λ_{ij} T},
- <br/>
- \end{equation*}
- <br/>
- where \(λ_{ij}\) represents the contact rate between nodes \(i\) and \(j\). In unweighted networks, the contact rate \(λ_{ij}\) reduces to a binary indicator of link existence, that is, \(λ_{ij} = a_{ij}\), where \(A = [a_{ij}]\) denotes the adjacency matrix of the network. Hence, the CCP index quantifies the average probability that a randomly chosen node in the network is contacted by node \(i\) within the time interval \(T\).
- <br/>
+ (CCP) was introduced by Gao
+ <i>
+  et al.
+ </i>
+ [2] as a centrality-based heuristic for the Single-Data Multicast (SDM) problem, which seeks to determine how to select the minimum number of relays required to achieve a target delivery ratio \(p\) within a time constraint \(T\) when delivering a data item to a set \(D\) of destinations. The CCP measure is derived from a Poisson model of contact processes in social networks. The centrality of node \(i\), denoted by \(c_{\text{CCP}}(i)\), is defined as\begin{equation*}c_{\text{CCP}}(i) = 1 - \frac{1}{N-1} \sum_{j=1}^{N} e^{-λ_{ij} T},\end{equation*}where \(λ_{ij}\) represents the contact rate between nodes \(i\) and \(j\). In unweighted networks, the contact rate \(λ_{ij}\) reduces to a binary indicator of link existence, that is, \(λ_{ij} = a_{ij}\), where \(A = [a_{ij}]\) denotes the adjacency matrix of the network. Hence, the CCP index quantifies the average probability that a randomly chosen node in the network is contacted by node \(i\) within the time interval \(T\).\vfill
 </p>
 <h3>
  References

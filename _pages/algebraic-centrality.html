@@ -16,34 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Algebraic centrality
  </i>
- quantifies the importance of a node based on the algebraic connectivity of a graph [2].
- <br/>
- The algebraic connectivity \(α(G)\), also known as the Fiedler value [3], is defined as the second smallest eigenvalue of the Laplacian matrix \(L(G)\).
- <br/>
- Kirkland [2] defines the algebraic centrality of node \(i\), denoted \(c_{\text{alg}}(i)\), in two alternative ways:
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{alg}}(i) = α(G) - α(G_i),
- <br/>
- \end{equation*}
- <br/>
- or
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{alg}}(i) = \frac{α(G_i)}{α(G)},
- <br/>
- \end{equation*}
- <br/>
- where \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\).
- <br/>
- Thus, algebraic centrality measures either the absolute or relative change in the algebraic connectivity due to the removal of node \(i\), providing insight into the node's structural importance in the network.
- <br/>
+ quantifies the importance of a node based on the algebraic connectivity of a graph [2]. The algebraic connectivity \(α(G)\), also known as the Fiedler value [3], is defined as the second smallest eigenvalue of the Laplacian matrix \(L(G)\).Kirkland [2] defines the algebraic centrality of node \(i\), denoted \(c_{\text{alg}}(i)\), in two alternative ways:\begin{equation*}c_{\text{alg}}(i) = α(G) - α(G_i),\end{equation*}or\begin{equation*}c_{\text{alg}}(i) = \frac{α(G_i)}{α(G)},\end{equation*}where \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\).  Thus, algebraic centrality measures either the absolute or relative change in the algebraic connectivity due to the removal of node \(i\), providing insight into the node's structural importance in the network.
 </p>
 <h3>
  References

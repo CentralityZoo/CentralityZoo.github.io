@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Communicability betweenness centrality
  </i>
- extends traditional betweenness centrality by considering information flow along all possible walks in the network, with longer walks weighted less heavily [2]. The communicability betweenness centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{comm-betw}}(i) = \frac{1}{(N-1)(N-2)} \sum_{j \neq i} \sum_{k \neq i} \frac{G_{jik}}{G_{jk}},
- <br/>
- \end{equation*}
- <br/>
- where \(G_{jk} = (e^{A})_{jk}\) is the
+ extends traditional betweenness centrality by considering information flow along all possible walks in the network, with longer walks weighted less heavily [2]. The communicability betweenness centrality of node \(i\) is defined as\begin{equation*}c_{\text{comm-betw}}(i) = \frac{1}{(N-1)(N-2)} \sum_{j \neq i} \sum_{k \neq i} \frac{G_{jik}}{G_{jk}},\end{equation*}where \(G_{jk} = (e^{A})_{jk}\) is the
  <i>
   communicability
  </i>
- between nodes \(j\) and \(k\), obtained from the matrix exponential of the adjacency matrix \(A\). It represents the total contribution of all possible walks between \(j\) and \(k\), with longer walks weighted less due to the factorial scaling in the series expansion of \(e^{A}\). The term
- <br/>
- \[
- <br/>
- G_{jik} = (e^{A})_{jk} - (e^{A + E(i)})_{jk}
- <br/>
- \]
- <br/>
- quantifies the reduction in communicability between \(j\) and \(k\) when node \(i\) is removed from the network. Here, \(E(i)\) is an \(N \times N\) matrix whose nonzero entries appear only in row and column \(i\), taking the value \(-1\) wherever the corresponding element of \(A\) equals \(+1\). Consequently, the matrix \(A + E(i)\) corresponds to the adjacency matrix of the graph in which all edges incident to node \(i\) have been deleted. Thus, \(G_{jik}\) captures the portion of walks between \(j\) and \(k\) that rely on node \(i\). A node with a high communicability betweenness plays a crucial intermediary role in facilitating indirect information flow across the network.
- <br/>
- Intuitively, communicability betweenness quantifies how much a node contributes to the overall flow of information across the network, accounting for both direct and indirect paths while penalizing longer walks.
- <br/>
+ between nodes \(j\) and \(k\), obtained from the matrix exponential of the adjacency matrix \(A\). It represents the total contribution of all possible walks between \(j\) and \(k\), with longer walks weighted less due to the factorial scaling in the series expansion of \(e^{A}\). The term\[G_{jik} = (e^{A})_{jk} - (e^{A + E(i)})_{jk}\]quantifies the reduction in communicability between \(j\) and \(k\) when node \(i\) is removed from the network. Here, \(E(i)\) is an \(N \times N\) matrix whose nonzero entries appear only in row and column \(i\), taking the value \(-1\) wherever the corresponding element of \(A\) equals \(+1\). Consequently, the matrix \(A + E(i)\) corresponds to the adjacency matrix of the graph in which all edges incident to node \(i\) have been deleted. Thus, \(G_{jik}\) captures the portion of walks between \(j\) and \(k\) that rely on node \(i\). A node with a high communicability betweenness plays a crucial intermediary role in facilitating indirect information flow across the network.Intuitively, communicability betweenness quantifies how much a node contributes to the overall flow of information across the network, accounting for both direct and indirect paths while penalizing longer walks.\vfill
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   all-around score
@@ -25,22 +24,11 @@ search: true
  <i>
   degree-betweenness-\(k\)-shell
  </i>
- (DBK) index, aims to identify nodes that perform well across multiple centrality dimensions simultaneously [2]. The all-around centrality of a node \(i\) is defined as the Euclidean distance in the normalized centrality space spanned by degree, betweenness, and \(k\)-shell measures:
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{AA}}(i) = \sqrt{\overline{c}_d^2(i) + \overline{c}_b^2(i) + \overline{c}_k^2(i)},
- <br/>
- \end{equation*}
- <br/>
- where \(\overline{c}_d(i)\), \(\overline{c}_b(i)\), and \(\overline{c}_k(i)\) denote the normalized degree, betweenness, and \(k\)-shell centrality scores of node \(i\), respectively.
- <br/>
- Nodes with high all-around scores achieve strong performance across all three dimensions and are thus referred to as
+ (DBK) index, aims to identify nodes that perform well across multiple centrality dimensions simultaneously [2]. The all-around centrality of a node \(i\) is defined as the Euclidean distance in the normalized centrality space spanned by degree, betweenness, and \(k\)-shell measures:\begin{equation*}c_{\mathrm{AA}}(i) = \sqrt{\overline{c}_d^2(i) + \overline{c}_b^2(i) + \overline{c}_k^2(i)},\end{equation*}where \(\overline{c}_d(i)\), \(\overline{c}_b(i)\), and \(\overline{c}_k(i)\) denote the normalized degree, betweenness, and \(k\)-shell centrality scores of node \(i\), respectively.  Nodes with high all-around scores achieve strong performance across all three dimensions and are thus referred to as
  <i>
   all-around nodes
  </i>
  .
- <br/>
 </p>
 <h3>
  References

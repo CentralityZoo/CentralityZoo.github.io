@@ -16,41 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   clustering degree algorithm
  </i>
- (CDA) is designed to identify influential spreaders in weighted networks [2]. CDA combines the degree and strength of a node with the network topology and the differentiated contribution of its neighbors.
- <br/>
- The CDA score of node \(i\), denoted \(c_{CDA}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{CDA}(i) = CD(i) + \sum_{j \in \mathcal{N}(i)} \frac{w_{ij}}{\max_{ij} w_{ij}} \, CD(j),
- <br/>
- \]
- <br/>
- where \(CD(i)\) is the clustering degree of node \(i\), given by
- <br/>
- \[
- <br/>
- CD(i) = \frac{α \sum_{j=1}^N a_{ij} + (1-α) \sum_{j=1}^N w_{ij}}{1 + \exp\Bigg[-\frac{\sum_{j,k} (w_{ij} + w_{ik}) a_{ij} a_{jk} a_{ki}}{2 (\sum_{j=1}^N w_{ij}) (\sum_{j=1}^N a_{ij} - 1)}\Bigg]},
- <br/>
- \]
- <br/>
- with \(α\) as a tunable parameter (set to 0.5).
- <br/>
- For unweighted networks, \(CD\) is independent of \(α\), and the CDA score simplifies to
- <br/>
- \[
- <br/>
- c_{CDA}(i) = \frac{d_i}{1 + e^{-cl(i)}} + \sum_{j \in \mathcal{N}(i)} \frac{d_j}{1 + e^{-cl(j)}},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(cl(i)\) denote the degree and clustering coefficient of node \(i\), respectively.
- <br/>
+ (CDA) is designed to identify influential spreaders in weighted networks [2]. CDA combines the degree and strength of a node with the network topology and the differentiated contribution of its neighbors.The CDA score of node \(i\), denoted \(c_{CDA}(i)\), is defined as\[c_{CDA}(i) = CD(i) + \sum_{j \in \mathcal{N}(i)} \frac{w_{ij}}{\max_{ij} w_{ij}} \, CD(j),\]where \(CD(i)\) is the clustering degree of node \(i\), given by\[CD(i) = \frac{α \sum_{j=1}^N a_{ij} + (1-α) \sum_{j=1}^N w_{ij}}{1 + \exp\Bigg[-\frac{\sum_{j,k} (w_{ij} + w_{ik}) a_{ij} a_{jk} a_{ki}}{2 (\sum_{j=1}^N w_{ij}) (\sum_{j=1}^N a_{ij} - 1)}\Bigg]},\]with \(α\) as a tunable parameter (set to 0.5). For unweighted networks, \(CD\) is independent of \(α\), and the CDA score simplifies to\[c_{CDA}(i) = \frac{d_i}{1 + e^{-cl(i)}} + \sum_{j \in \mathcal{N}(i)} \frac{d_j}{1 + e^{-cl(j)}},\]where \(d_i\) and \(cl(i)\) denote the degree and clustering coefficient of node \(i\), respectively.
 </p>
 <h3>
  References

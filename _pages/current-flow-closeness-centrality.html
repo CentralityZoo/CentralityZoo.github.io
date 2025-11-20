@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   current-flow closeness centrality
  </i>
- , also known as information centrality, is a variant of closeness centrality that utilizes the concept of electrical current in a network [2, 3]. It measures the importance of a node by considering not only the shortest paths but all possible paths through which information can flow. The centrality \(c_{cc}(i)\) of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{cc}(i) = \frac{N-1}{\sum_{j \neq i} \bigl( p_{ij}(i) - p_{ij}(j) \bigr)},
- <br/>
- \end{equation*}
- <br/>
- where \(p_{ij}(i)\) is the absolute electrical potential of node \(i\) when a unit current is injected at node \(i\) and extracted at node \(j\). The difference \(p_{ij}(i) - p_{ij}(j)\)  represents the effective resistance between nodes \(i\) and \(j\), which captures how “difficult” it is for current to flow between nodes \(i\) and \(j\). This definition generalizes the concept of closeness centrality by taking into account contributions from all paths, rather than only the shortest ones. A more detailed description of the electrical potential \(p_{ij}(i)\) and its computation can be found in [2].
- <br/>
+ , also known as information centrality, is a variant of closeness centrality that utilizes the concept of electrical current in a network [2, 3]. It measures the importance of a node by considering not only the shortest paths but all possible paths through which information can flow. The centrality \(c_{cc}(i)\) of a node \(i\) is defined as\begin{equation*}c_{cc}(i) = \frac{N-1}{\sum_{j \neq i} \bigl( p_{ij}(i) - p_{ij}(j) \bigr)},\end{equation*}where \(p_{ij}(i)\) is the absolute electrical potential of node \(i\) when a unit current is injected at node \(i\) and extracted at node \(j\). The difference \(p_{ij}(i) - p_{ij}(j)\)  represents the effective resistance between nodes \(i\) and \(j\), which captures how “difficult” it is for current to flow between nodes \(i\) and \(j\). This definition generalizes the concept of closeness centrality by taking into account contributions from all paths, rather than only the shortest ones. A more detailed description of the electrical potential \(p_{ij}(i)\) and its computation can be found in [2].
 </p>
 <h3>
  References

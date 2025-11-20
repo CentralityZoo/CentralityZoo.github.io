@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   BG-index
  </i>
- , also known as the \(β\)-measure [2, 3], is a social power index that quantifies a node's centrality based on its position within a network  [4, 2]. Van den Brink and Gilles assume that the network represents a social structure, in which each node may dominate some nodes while being dominated by others.
- <br/>
- The BG-index of node \(i\) measures the expected number of times it will be selected as a predecessor by its neighbors, assuming that each neighbor chooses one of its predecessors uniformly at random. Formally,
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{BG{-}index}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{1}{|\{k : j \in \mathcal{N}(k)\}|} = \sum_{j \in \mathcal{N}(i)} \frac{1}{|\mathcal{N}(i)|} = \sum_{j \in \mathcal{N}(i)} \frac{1}{d_j} = \sum_{j=1}^{N} \frac{a_{ij}}{\sum_{k=1}^{N} a_{kj}},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_j\) is the degree of node \(j\) and \(a_{ij}\) are entries of the adjacency matrix \(A\).
- <br/>
- For directed graphs, the BG-index has two versions: the positive \(β\)-measure (computed on the original graph \(G\)) and the negative \(β\)-measure (computed on the reverse graph of \(G\)) [3].
- <br/>
+ , also known as the \(β\)-measure [2, 3], is a social power index that quantifies a node's centrality based on its position within a network  [4, 2]. Van den Brink and Gilles assume that the network represents a social structure, in which each node may dominate some nodes while being dominated by others.The BG-index of node \(i\) measures the expected number of times it will be selected as a predecessor by its neighbors, assuming that each neighbor chooses one of its predecessors uniformly at random. Formally,  \begin{equation*}c_{\mathrm{BG{-}index}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{1}{|\{k : j \in \mathcal{N}(k)\}|} = \sum_{j \in \mathcal{N}(i)} \frac{1}{|\mathcal{N}(i)|} = \sum_{j \in \mathcal{N}(i)} \frac{1}{d_j} = \sum_{j=1}^{N} \frac{a_{ij}}{\sum_{k=1}^{N} a_{kj}},\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_j\) is the degree of node \(j\) and \(a_{ij}\) are entries of the adjacency matrix \(A\).  For directed graphs, the BG-index has two versions: the positive \(β\)-measure (computed on the original graph \(G\)) and the negative \(β\)-measure (computed on the reverse graph of \(G\)) [3].
 </p>
 <h3>
  References

@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Burt's constraint
  </i>
- , also called network constraint, was proposed in [2, 3] to quantify the extent to which a node's connections constrain its brokerage opportunities in a network. The constraint of a node \(i\) is high if its neighbors \(\mathcal{N}(i)\) communicate heavily with one another (dense network) or if they share information indirectly through a central contact (hierarchical network).
- <br/>
- Mathematically, the strength \(p_{ij}\) of a link \((i,j)\) is defined as the proportion of \(i\)'s time or energy invested in contact \(j\):
- <br/>
- \begin{equation*} \label{eq_burt_energy}
- <br/>
- p_{ij} = \frac{a_{ij}+a_{ji}}{\sum_{k \in \mathcal{N}(i)} (a_{ik}+a_{ki})}.
- <br/>
- \end{equation*}
- <br/>
- Burt's constraint of node \(i\) is then
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Burt}}(i) = \sum_{j \in \mathcal{N}(i)} \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{kj} \right)^2.
- <br/>
- \end{equation*}
- <br/>
- For unweighted undirected networks, this simplifies to
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Burt}}(i) = \sum_{j \in \mathcal{N}(i)} \left( \frac{1}{|\mathcal{N}(i)|} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} \frac{1}{|\mathcal{N}(i)||\mathcal{N}(k)|} \right)^2,
- <br/>
- \end{equation*}
- <br/>
- where \(|\mathcal{N}(i)|\) denotes the degree of node \(i\).
- <br/>
+ , also called network constraint, was proposed in [2, 3] to quantify the extent to which a node's connections constrain its brokerage opportunities in a network. The constraint of a node \(i\) is high if its neighbors \(\mathcal{N}(i)\) communicate heavily with one another (dense network) or if they share information indirectly through a central contact (hierarchical network).  Mathematically, the strength \(p_{ij}\) of a link \((i,j)\) is defined as the proportion of \(i\)'s time or energy invested in contact \(j\):\begin{equation*} \label{eq_burt_energy}p_{ij} = \frac{a_{ij}+a_{ji}}{\sum_{k \in \mathcal{N}(i)} (a_{ik}+a_{ki})}.\end{equation*}Burt's constraint of node \(i\) is then\begin{equation*}c_{\mathrm{Burt}}(i) = \sum_{j \in \mathcal{N}(i)} \left( p_{ij} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} p_{ik} p_{kj} \right)^2.\end{equation*}For unweighted undirected networks, this simplifies to\begin{equation*}c_{\mathrm{Burt}}(i) = \sum_{j \in \mathcal{N}(i)} \left( \frac{1}{|\mathcal{N}(i)|} + \sum_{k \in \mathcal{N}(i) \setminus \{j\}} \frac{1}{|\mathcal{N}(i)||\mathcal{N}(k)|} \right)^2,\end{equation*}where \(|\mathcal{N}(i)|\) denotes the degree of node \(i\).
 </p>
 <h3>
  References

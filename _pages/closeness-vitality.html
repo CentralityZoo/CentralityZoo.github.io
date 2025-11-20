@@ -16,24 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   closeness vitality
  </i>
- measures how the overall efficiency of a network changes when a given node is removed [2]. Specifically, it quantifies the variation in the total sum of shortest-path distances between all pairs of nodes after excluding node \(i\) from the graph \(G\). Let \(G_i\) denote the subgraph obtained by removing node \(i\) and its incident edges. The closeness vitality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{vitality}}(i) = W(G) - W(G_i)
- <br/>
- = \sum_{j=1}^{N} d_G(i,j)
- <br/>
- + \sum_{j \neq i} \sum_{k \neq i} \big( d_G(j,k) - d_{G_i}(j,k) \big),
- <br/>
- \end{equation*}
- <br/>
- where \(W(G)\) is the
+ measures how the overall efficiency of a network changes when a given node is removed [2]. Specifically, it quantifies the variation in the total sum of shortest-path distances between all pairs of nodes after excluding node \(i\) from the graph \(G\). Let \(G_i\) denote the subgraph obtained by removing node \(i\) and its incident edges. The closeness vitality of node \(i\) is defined as\begin{equation*}c_{\text{vitality}}(i) = W(G) - W(G_i)= \sum_{j=1}^{N} d_G(i,j)+ \sum_{j \neq i} \sum_{k \neq i} \big( d_G(j,k) - d_{G_i}(j,k) \big),\end{equation*}where \(W(G)\) is the
  <i>
   Wiener index
  </i>
@@ -42,7 +29,6 @@ search: true
   cut-vertex
  </i>
  (or bridge endpoint), its removal disconnects the network, resulting in \(c_{\text{vitality}}(i) = -\infty\).
- <br/>
 </p>
 <h3>
  References

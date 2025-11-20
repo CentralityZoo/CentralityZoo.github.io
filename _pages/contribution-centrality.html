@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Contribution centrality
  </i>
- is a spectral centrality measure based on structural dissimilarity [2]. The contribution centrality of node \(i\), denoted as \(c_{\mathrm{Contr}}(i)\), is proportional to the sum of the centralities of its neighboring nodes, weighted by their topological contributions. Formally,
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Contr}}(i) = \frac{1}{λ} \sum_{j=1}^{N} a_{ij} D_{ij} c_{\mathrm{Contr}}(j),
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ij}\) is the adjacency matrix element and \(D_{ij}\) is a structural dissimilarity measure defined as
- <br/>
- \begin{equation*}
- <br/>
- D_{ij} = 1 - \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i) \cup \mathcal{N}(j)|},
- <br/>
- \end{equation*}
- <br/>
- with \(\mathcal{N}(i)\) denoting the set of neighbors of node \(i\).
- <br/>
- The centrality equation can be expressed as an eigenvalue problem. Defining \(A_D = A \circ D\), where \(\circ\) denotes the Hadamard (element-wise) product, the contribution centrality vector \(c_{\mathrm{Contr}}\) satisfies
- <br/>
- \begin{equation*}
- <br/>
- A_D \, c_{\mathrm{Contr}} = λ \, c_{\mathrm{Contr}},
- <br/>
- \end{equation*}
- <br/>
- with \(λ = λ_{\max}\) being the dominant eigenvalue of \(A_D\). The corresponding principal eigenvector \(c_{\mathrm{Contr}}\) gives the contribution centralities of the nodes, where larger values indicate a greater structural influence within the network.
- <br/>
+ is a spectral centrality measure based on structural dissimilarity [2]. The contribution centrality of node \(i\), denoted as \(c_{\mathrm{Contr}}(i)\), is proportional to the sum of the centralities of its neighboring nodes, weighted by their topological contributions. Formally,\begin{equation*}c_{\mathrm{Contr}}(i) = \frac{1}{λ} \sum_{j=1}^{N} a_{ij} D_{ij} c_{\mathrm{Contr}}(j),\end{equation*}where \(a_{ij}\) is the adjacency matrix element and \(D_{ij}\) is a structural dissimilarity measure defined as\begin{equation*}D_{ij} = 1 - \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i) \cup \mathcal{N}(j)|},\end{equation*}with \(\mathcal{N}(i)\) denoting the set of neighbors of node \(i\).  The centrality equation can be expressed as an eigenvalue problem. Defining \(A_D = A \circ D\), where \(\circ\) denotes the Hadamard (element-wise) product, the contribution centrality vector \(c_{\mathrm{Contr}}\) satisfies\begin{equation*}A_D \, c_{\mathrm{Contr}} = λ \, c_{\mathrm{Contr}},\end{equation*}with \(λ = λ_{\max}\) being the dominant eigenvalue of \(A_D\). The corresponding principal eigenvector \(c_{\mathrm{Contr}}\) gives the contribution centralities of the nodes, where larger values indicate a greater structural influence within the network.
 </p>
 <h3>
  References

@@ -16,27 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Community hub-bridge (CHB) measure
  </i>
- is a community-based centrality metric that evaluates the importance of a node by considering both its intra- and inter-community connections [2].
- <br/>
- Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities.
- <br/>
- For a node \(i\) belonging to community \(C_k\), the CHB centrality \(c_{CHB}(i)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{CHB}(i) = |C_k|\, d_i^{in} + d_i^{out} \sum_{l \neq k} \left( \lor_{j \in C_l} a_{ij} \right),
- <br/>
- \end{equation*}
- <br/>
- where \(d_i^{in}\) is the number of intra-community links of node \(i\) (connections within \(C_k\)), \(d_i^{out}\) is the number of inter-community links (connections to nodes in other communities), and \(\lor\) denotes the logical OR operator.
- <br/>
- The expression \(\left( \lor_{j \in C_l} a_{ij} \right) = 1\) if and only if node \(i\) is connected to at least one node \(j\) in community \(C_l\); otherwise, it equals zero.
- <br/>
- Nodes with high CHB values act as both
+ is a community-based centrality metric that evaluates the importance of a node by considering both its intra- and inter-community connections [2].  Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities.  For a node \(i\) belonging to community \(C_k\), the CHB centrality \(c_{CHB}(i)\) is defined as\begin{equation*}c_{CHB}(i) = |C_k|\, d_i^{in} + d_i^{out} \sum_{l \neq k} \left( \lor_{j \in C_l} a_{ij} \right),\end{equation*}where \(d_i^{in}\) is the number of intra-community links of node \(i\) (connections within \(C_k\)), \(d_i^{out}\) is the number of inter-community links (connections to nodes in other communities), and \(\lor\) denotes the logical OR operator.  The expression \(\left( \lor_{j \in C_l} a_{ij} \right) = 1\) if and only if node \(i\) is connected to at least one node \(j\) in community \(C_l\); otherwise, it equals zero.  Nodes with high CHB values act as both
  <i>
   hubs
  </i>
@@ -45,7 +28,6 @@ search: true
   bridges
  </i>
  (linking multiple communities), making them crucial for information flow and inter-community connectivity.
- <br/>
 </p>
 <h3>
  References

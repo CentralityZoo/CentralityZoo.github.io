@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   degree and clustering coefficient and location
  </i>
- (DCL) measure is a local centrality metric that combines a node's degree, inverse clustering coefficient, and the connectivity among its neighbors to quantify its influence in the network [2]. The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{DCL}(i) = \frac{d_i}{c_i + (1/d_i)} + \frac{\sum_{j \in \mathcal{N}(i)} d_j}{|E(\mathcal{N}(i)| + 1},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), \(\mathcal{N}(i)\) is the set of neighbors of \(i\) and \(|E(\mathcal{N}(i))|\) denotes the number of links among the neighbors of node \(i\).
- <br/>
- The DCL centrality captures three aspects: the node’s individual connectivity (degree), its local sparsity (inverse clustering coefficient), and the density of connections among its neighbors, which reflects its position within the local network structure. Nodes with high DCL values are those that have high degree, relatively low clustering coefficient and well-connected neighbors, indicating that they occupy structurally important positions with strong local influence and access to densely connected parts of the network.
- <br/>
+ (DCL) measure is a local centrality metric that combines a node's degree, inverse clustering coefficient, and the connectivity among its neighbors to quantify its influence in the network [2]. The centrality of node \(i\) is defined as\[c_{DCL}(i) = \frac{d_i}{c_i + (1/d_i)} + \frac{\sum_{j \in \mathcal{N}(i)} d_j}{|E(\mathcal{N}(i)| + 1},\]where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), \(\mathcal{N}(i)\) is the set of neighbors of \(i\) and \(|E(\mathcal{N}(i))|\) denotes the number of links among the neighbors of node \(i\).The DCL centrality captures three aspects: the node’s individual connectivity (degree), its local sparsity (inverse clustering coefficient), and the density of connections among its neighbors, which reflects its position within the local network structure. Nodes with high DCL values are those that have high degree, relatively low clustering coefficient and well-connected neighbors, indicating that they occupy structurally important positions with strong local influence and access to densely connected parts of the network.
 </p>
 <h3>
  References

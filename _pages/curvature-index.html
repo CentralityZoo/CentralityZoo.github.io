@@ -16,39 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   curvature index
  </i>
- quantifies the local curvature properties of nodes in a network [2]. It is defined based on the Euler characteristic \(χ(G)\) of a graph \(G\), given by
- <br/>
- \[
- <br/>
- χ(G) = \sum_{k=0}^{N-1} (-1)^k v_k,
- <br/>
- \]
- <br/>
- where \(v_k\) denotes the number of \((k{+}1)\)-cliques in \(G\). The curvature \(K(i)\) at node \(i\) is then defined as
- <br/>
- \[
- <br/>
- K(i) = \sum_{k=0}^{N-1} (-1)^k \frac{V_{k-1}(i)}{k+1},
- <br/>
- \]
- <br/>
- where \(V_k(i)\) represents the number of \((k{+}1)\)-cliques incident to node \(i\).
- <br/>
- According to the discrete Gauss-Bonnet theorem [3], the Euler characteristic of a graph equals the sum of the curvatures of all its nodes, i.e.,
- <br/>
- \[
- <br/>
- χ(G) = \sum_{i=1}^{N} K(i).
- <br/>
- \]
- <br/>
- A truncated version of the curvature index, where the summation is limited to simplices of dimension \(d \leq 2\) (i.e., cliques of size up to three), was proposed by Wu et al. [4] to reduce computational complexity while retaining essential geometric information.
- <br/>
+ quantifies the local curvature properties of nodes in a network [2]. It is defined based on the Euler characteristic \(χ(G)\) of a graph \(G\), given by\[χ(G) = \sum_{k=0}^{N-1} (-1)^k v_k,\]where \(v_k\) denotes the number of \((k{+}1)\)-cliques in \(G\). The curvature \(K(i)\) at node \(i\) is then defined as\[K(i) = \sum_{k=0}^{N-1} (-1)^k \frac{V_{k-1}(i)}{k+1},\]where \(V_k(i)\) represents the number of \((k{+}1)\)-cliques incident to node \(i\).According to the discrete Gauss-Bonnet theorem [3], the Euler characteristic of a graph equals the sum of the curvatures of all its nodes, i.e.,\[χ(G) = \sum_{i=1}^{N} K(i).\]A truncated version of the curvature index, where the summation is limited to simplices of dimension \(d \leq 2\) (i.e., cliques of size up to three), was proposed by Wu
+ <i>
+  et al.
+ </i>
+ [4] to reduce computational complexity while retaining essential geometric information.
 </p>
 <h3>
  References

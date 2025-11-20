@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   distance-weighted fragmentation
  </i>
- (DF) centrality quantifies the effect of a node on the overall connectivity of a network by considering the average reciprocal distance among nodes after its removal [2, 3]. For a node \(i\), the DF centrality, denoted \(c_{DF}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{DF}(i) = 1 - \frac{\sum_{j \neq i} \sum_{k \neq i} d_{jk}^{-1}(G_i)}{(N-1)(N-2)},
- <br/>
- \end{equation*}
- <br/>
- where \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\), and \(d_{jk}(G_i)\) is the shortest-path distance between nodes \(j\) and \(k\) in \(G_i\).
- <br/>
- The DF centrality ranges from 0, when the network remains fully connected (as in a complete graph), to 1, when all nodes are isolated. Intermediate values indicate the extent to which the removal of a node increases distances in the network, thus reflecting its importance in maintaining overall network connectivity.
- <br/>
+ (DF) centrality quantifies the effect of a node on the overall connectivity of a network by considering the average reciprocal distance among nodes after its removal [2, 3]. For a node \(i\), the DF centrality, denoted \(c_{DF}(i)\), is defined as\begin{equation*} c_{DF}(i) = 1 - \frac{\sum_{j \neq i} \sum_{k \neq i} d_{jk}^{-1}(G_i)}{(N-1)(N-2)},\end{equation*}where \(G_i\) is the subgraph obtained by removing node \(i\) from \(G\), and \(d_{jk}(G_i)\) is the shortest-path distance between nodes \(j\) and \(k\) in \(G_i\).  The DF centrality ranges from 0, when the network remains fully connected (as in a complete graph), to 1, when all nodes are isolated. Intermediate values indicate the extent to which the removal of a node increases distances in the network, thus reflecting its importance in maintaining overall network connectivity.
 </p>
 <h3>
  References

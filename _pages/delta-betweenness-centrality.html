@@ -16,21 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
- Agneessens et al. [2] propose a generalized version of betweenness centrality referred to as
+ Agneessens
+ <i>
+  et al.
+ </i>
+ [2] propose a generalized version of betweenness centrality referred to as
  <i>
   \(δ\)-betweenness
  </i>
- , which incorporates a tuning parameter \(δ \in \mathbb{R}\), reflecting the relative importance of geodesic distances in the network. The \(δ\)-betweenness of a node \(i\) can be expressed as
- <br/>
- \begin{equation*}
- <br/>
- c_{δ-betw}(i) = \sum_{j=1}^{N}{\sum_{k=1}^{N}{\frac{σ_{jk}(i)}{σ_{jk}}(d_{jk}-1)^{-δ}}},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}\) is the number of shortest paths between nodes \(j\) and \(k\), \(σ_{jk}(i)\) is the number of paths that pass through node \(i\), and \(d_{jk}\) is the length of the shortest path from \(j\) to \(k\). Note that for \(δ = 0\), the \(δ\)-betweenness centrality reduces to the standard betweenness centrality.
- <br/>
+ , which incorporates a tuning parameter \(δ \in \mathbb{R}\), reflecting the relative importance of geodesic distances in the network. The \(δ\)-betweenness of a node \(i\) can be expressed as\begin{equation*}c_{δ-betw}(i) = \sum_{j=1}^{N}{\sum_{k=1}^{N}{\frac{σ_{jk}(i)}{σ_{jk}}(d_{jk}-1)^{-δ}}},\end{equation*}where \(σ_{jk}\) is the number of shortest paths between nodes \(j\) and \(k\), \(σ_{jk}(i)\) is the number of paths that pass through node \(i\), and \(d_{jk}\) is the length of the shortest path from \(j\) to \(k\). Note that for \(δ = 0\), the \(δ\)-betweenness centrality reduces to the standard betweenness centrality.
 </p>
 <h3>
  References

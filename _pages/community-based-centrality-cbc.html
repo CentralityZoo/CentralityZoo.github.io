@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Community-based centrality
  </i>
@@ -28,18 +27,7 @@ search: true
  <i>
   weak links
  </i>
- , which connect nodes across different communities. The importance of a node is determined by both its link characteristics and the sizes of the communities to which it is connected. Mathematically, the CbC of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{CbC}}(i) = \sum_{s=1}^{K} k_{is} \frac{|C_s|}{N} = \sum_{s=1}^{K} \sum_{j \in C_s \setminus \{i\}} a_{ij} \frac{|C_s|}{N},
- <br/>
- \end{equation*}
- <br/>
- where \(k_{is}\) is the number of links from node \(i\) to nodes in community \(C_s\), \(K\) is the total number of communities \(C_1, \dots, C_K\), \(|C_s|\) denotes the size of community \(C_s\), and \(a_{ij}\) are elements of the adjacency matrix. In [2], communities are identified using the CNM algorithm, which employs the Clauset-Newman-Moore greedy modularity maximization method.
- <br/>
- CbC generalizes classical degree centrality by incorporating community structure. In the limiting case where the entire network forms a single community, CbC reduces to the standard degree centrality. Conversely, when each node constitutes its own community, CbC corresponds to the degree of the node normalized by the total number of nodes in the network.
- <br/>
+ , which connect nodes across different communities. The importance of a node is determined by both its link characteristics and the sizes of the communities to which it is connected. Mathematically, the CbC of node \(i\) is defined as\begin{equation*}c_{\mathrm{CbC}}(i) = \sum_{s=1}^{K} k_{is} \frac{|C_s|}{N} = \sum_{s=1}^{K} \sum_{j \in C_s \setminus \{i\}} a_{ij} \frac{|C_s|}{N},\end{equation*}where \(k_{is}\) is the number of links from node \(i\) to nodes in community \(C_s\), \(K\) is the total number of communities \(C_1, \dots, C_K\), \(|C_s|\) denotes the size of community \(C_s\), and \(a_{ij}\) are elements of the adjacency matrix. In [2], communities are identified using the CNM algorithm, which employs the Clauset-Newman-Moore greedy modularity maximization method.CbC generalizes classical degree centrality by incorporating community structure. In the limiting case where the entire network forms a single community, CbC reduces to the standard degree centrality. Conversely, when each node constitutes its own community, CbC corresponds to the degree of the node normalized by the total number of nodes in the network.
 </p>
 <h3>
  References

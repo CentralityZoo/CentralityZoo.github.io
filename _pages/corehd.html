@@ -16,34 +16,25 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   CoreHD
  </i>
  is a heuristic algorithm for network decycling and dismantling, designed to identify a minimal set of nodes whose removal either eliminates all cycles or breaks the network into small disconnected components [2]. The algorithm generates a sequence of node removals that reflects the importance of each node in sustaining network connectivity. CoreHD operates as follows:
- <br/>
  <ol>
-  <br/>
   <li>
    Extract the 2-core of the network, consisting of nodes with degree at least 2.
   </li>
-  <br/>
   <li>
    Remove the highest-degree node within the 2-core.
   </li>
-  <br/>
   <li>
    Recompute the 2-core after removal. If the 2-core becomes empty, perform tree-breaking by removing the node whose removal causes the largest decrease in the size of the largest connected component.
   </li>
-  <br/>
   <li>
    Repeat the above steps until the network is either acyclic or sufficiently fragmented.
   </li>
-  <br/>
  </ol>
- <br/>
  By focusing on the 2-core, CoreHD avoids removing peripheral nodes that do not contribute to cycles, thereby achieving near-optimal decycling and dismantling performance. The CoreHD approach has been shown to be effective for enhancing network robustness against failures and attacks.
- <br/>
 </p>
 <h3>
  References

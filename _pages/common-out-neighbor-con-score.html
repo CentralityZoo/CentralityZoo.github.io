@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   common out-neighbor (CON)
  </i>
- score quantifies node similarity by counting multiplicities based on the minimum number of interactions [2]. Let \(CON(i,j)\) denote the number of common out-neighbors shared by nodes \(i\) and \(j\), defined as
- <br/>
- \begin{equation*}
- <br/>
- CON(i,j) = \sum_{k=1}^{N} \min(a_{ik}, a_{jk})=\sum_{k=1}^{N} a_{ik}a_{jk} = |\mathcal{N}^{out}(i) \cap \mathcal{N}^{out}(j) |.
- <br/>
- \end{equation*}
- <br/>
- Then, the CON score of node \(i\), denoted by \(c_{CON}(i)\), is given by
- <br/>
- \begin{equation*}
- <br/>
- c_{CON}(i) = \sum_{j=1}^{N} CON(i,j) = \sum_{j=1}^{N} \sum_{k=1}^{N} a_{ik}a_{jk} = \sum_{k=1}^{N}a_{ik} \sum_{j=1}^{N} a_{jk} = \sum_{k \in \mathcal{N}^{out}(i)} d_k^{in}.
- <br/>
- \end{equation*}
- <br/>
- For undirected networks, the common out-neighbor (CON) score of node \(i\) reduces to the sum of the degrees of its neighbors.
- <br/>
+ score quantifies node similarity by counting multiplicities based on the minimum number of interactions [2]. Let \(CON(i,j)\) denote the number of common out-neighbors shared by nodes \(i\) and \(j\), defined as\begin{equation*}CON(i,j) = \sum_{k=1}^{N} \min(a_{ik}, a_{jk})=\sum_{k=1}^{N} a_{ik}a_{jk} = |\mathcal{N}^{out}(i) \cap \mathcal{N}^{out}(j) |.\end{equation*}Then, the CON score of node \(i\), denoted by \(c_{CON}(i)\), is given by\begin{equation*}c_{CON}(i) = \sum_{j=1}^{N} CON(i,j) = \sum_{j=1}^{N} \sum_{k=1}^{N} a_{ik}a_{jk} = \sum_{k=1}^{N}a_{ik} \sum_{j=1}^{N} a_{jk} = \sum_{k \in \mathcal{N}^{out}(i)} d_k^{in}.\end{equation*}For undirected networks, the common out-neighbor (CON) score of node \(i\) reduces to the sum of the degrees of its neighbors.
 </p>
 <h3>
  References
