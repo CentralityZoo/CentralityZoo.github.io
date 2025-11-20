@@ -16,16 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Seeley’s index
  </i>
- [2] is a counterpart to eigenvector centrality that modifies how a node distributes its influence. While eigenvector centrality assigns a node's importance recursively based on the sum of the centralities of its neighbors, effectively contributing fully to each neighbor, Seeley’s index assumes that a node divides its influence equally among its successors.
- <br/>
- Formally, each row of the adjacency matrix \(A\) is normalized by the node's out-degree, producing a row-stochastic matrix \(S = D^{-1} A\), where \(D\) is the diagonal matrix of out-degrees. The Seeley index is the principal eigenvector of \(S\), corresponding to the stationary distribution of the Markov chain defined by \(S\).
- <br/>
- If the graph is undirected, the stationary distribution of the Markov chain defined by \(S\) is proportional to node degrees. Therefore, Seeley’s index coincides with degree centrality in this case.
- <br/>
+ [2] is a counterpart to eigenvector centrality that modifies how a node distributes its influence. While eigenvector centrality assigns a node's importance recursively based on the sum of the centralities of its neighbors, effectively contributing fully to each neighbor, Seeley’s index assumes that a node divides its influence equally among its successors.  Formally, each row of the adjacency matrix \(A\) is normalized by the node's out-degree, producing a row-stochastic matrix \(S = D^{-1} A\), where \(D\) is the diagonal matrix of out-degrees. The Seeley index is the principal eigenvector of \(S\), corresponding to the stationary distribution of the Markov chain defined by \(S\).  If the graph is undirected, the stationary distribution of the Markov chain defined by \(S\) is proportional to node degrees. Therefore, Seeley’s index coincides with degree centrality in this case.
 </p>
 <h3>
  References

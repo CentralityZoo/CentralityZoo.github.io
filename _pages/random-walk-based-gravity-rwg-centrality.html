@@ -16,22 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Random walk-based gravity
  </i>
- (RWG), also referred to as DFS-Gravity, is a variant of the gravity model that incorporates random walks instead of shortest-path distances [2]. In this approach, the “distance” between nodes is measured by the number of steps it takes to reach a node along the random walk starting from the source node, rather than by the shortest-path distance. The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{RWG}(i) = \frac{1}{γ (l-1)} \sum_{m=1}^{γ} \sum_{k=2}^{l+1} \frac{d_i d_{j_{m(k)}}}{(k-1)^2},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\), \(j_{m(k)}\) is the node at position \(k\) in the \(m\)-th random walk starting from \(i\), \(γ\) is the number of random walks per node, and \(l\) is the length of each random walk.
- <br/>
- Zhao et al. [2] consider \(l \in [5,20]\) and set \(γ\) to ensure convergence of the centrality values. They compare different random walk strategies, with a particular focus on depth-first search (DFS) random walks, in which the transition probabilities depend on edge weights: \(w = 1/p\) to return to the previous node \(j_{m(k-1)}\) with \(p=10\), \(w = 1\) to move to a neighbor of \(j_{m(k-1)}\), and \(w = 1/q\) to move to other neighbors of \(j_{m(k)}\) with \(q=0.01\). Their experiments show that the choice of random walk strategy does not significantly affect the performance of the centrality measure.
- <br/>
+ (RWG), also referred to as DFS-Gravity, is a variant of the gravity model that incorporates random walks instead of shortest-path distances [2]. In this approach, the “distance” between nodes is measured by the number of steps it takes to reach a node along the random walk starting from the source node, rather than by the shortest-path distance. The centrality of node \(i\) is defined as\[c_{RWG}(i) = \frac{1}{γ (l-1)} \sum_{m=1}^{γ} \sum_{k=2}^{l+1} \frac{d_i d_{j_{m(k)}}}{(k-1)^2},\]where \(d_i\) is the degree of node \(i\), \(j_{m(k)}\) is the node at position \(k\) in the \(m\)-th random walk starting from \(i\), \(γ\) is the number of random walks per node, and \(l\) is the length of each random walk.  Zhao
+ <i>
+  et al.
+ </i>
+ [2] consider \(l \in [5,20]\) and set \(γ\) to ensure convergence of the centrality values. They compare different random walk strategies, with a particular focus on depth-first search (DFS) random walks, in which the transition probabilities depend on edge weights: \(w = 1/p\) to return to the previous node \(j_{m(k-1)}\) with \(p=10\), \(w = 1\) to move to a neighbor of \(j_{m(k-1)}\), and \(w = 1/q\) to move to other neighbors of \(j_{m(k)}\) with \(q=0.01\). Their experiments show that the choice of random walk strategy does not significantly affect the performance of the centrality measure.
 </p>
 <h3>
  References

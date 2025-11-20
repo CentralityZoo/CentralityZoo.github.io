@@ -16,56 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   SpectralRank
  </i>
- (SR) is a parameter-free extension of LeaderRank designed to evaluate node propagation capability in networks [2]. Similar to LeaderRank, SR introduces a ground node \(N+1\) that connects bidirectionally to all nodes in the network \(G\). Each node \(i\) is assigned a score \(s_i[t]\) at discrete time \(t\), representing its propagation potential.
- <br/>
- The initial scores are
- <br/>
- \[
- <br/>
- s_{N+1}[0] = 0 \quad \text{for the ground node,} \qquad s_i[0] = 1 \quad \text{for all other nodes } i \in \mathcal{N}.
- <br/>
- \]
- <br/>
- At each time step, the score of node \(i\) is updated based on the scores of its neighbors:
- <br/>
- \begin{align*}
- <br/>
- \tilde{s}_i[t+1] &amp;= c \sum_{j=1}^{N+1} a_{ij} \, s_j[t], \\
- <br/>
- s_i[t+1] &amp;= \frac{\tilde{s}_i[t+1]}{\max_j \tilde{s}_j[t+1]},
- <br/>
- \end{align*}
- <br/>
- where \(c = 1 / λ_{\max}\), and \(λ_{\max}\) is the leading eigenvalue of the augmented adjacency matrix
- <br/>
- \[
- <br/>
- \tilde{A} =
- <br/>
- \begin{bmatrix}
- <br/>
- A &amp; \mathbf{1} \\
- <br/>
- \mathbf{1}^T &amp; 0
- <br/>
- \end{bmatrix},
- <br/>
- \]
- <br/>
- which includes the ground node. Here, \(A\) is the original \(N \times N\) adjacency matrix, and \(\mathbf{1}\) is a column vector of ones. The SpectralRank of node \(i\) is defined as the steady-state score
- <br/>
- \[
- <br/>
- \Tilde{s}_i = \lim_{t \to \infty} s_i[t],
- <br/>
- \]
- <br/>
- which quantifies the node’s long-term propagation influence in the network.
- <br/>
+ (SR) is a parameter-free extension of LeaderRank designed to evaluate node propagation capability in networks [2]. Similar to LeaderRank, SR introduces a ground node \(N+1\) that connects bidirectionally to all nodes in the network \(G\). Each node \(i\) is assigned a score \(s_i[t]\) at discrete time \(t\), representing its propagation potential.  The initial scores are\[s_{N+1}[0] = 0 \quad \text{for the ground node,} \qquad s_i[0] = 1 \quad \text{for all other nodes } i \in \mathcal{N}.\]At each time step, the score of node \(i\) is updated based on the scores of its neighbors:\begin{align*}s̃_i[t+1] &amp;= c \sum_{j=1}^{N+1} a_{ij} \, s_j[t], \\s_i[t+1] &amp;= \frac{s̃_i[t+1]}{\max_j s̃_j[t+1]},\end{align*}where \(c = 1 / λ_{\max}\), and \(λ_{\max}\) is the leading eigenvalue of the augmented adjacency matrix\[Ã =\begin{bmatrix}A &amp; \mathbf{1} \\\mathbf{1}^T &amp; 0\end{bmatrix},\]which includes the ground node. Here, \(A\) is the original \(N \times N\) adjacency matrix, and \(\mathbf{1}\) is a column vector of ones. The SpectralRank of node \(i\) is defined as the steady-state score\[s̃_i = \lim_{t \to \infty} s_i[t],\]which quantifies the node’s long-term propagation influence in the network.
 </p>
 <h3>
  References

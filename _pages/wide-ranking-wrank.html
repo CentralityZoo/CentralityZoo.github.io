@@ -16,27 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Wide Ranking
  </i>
- (WRank) algorithm simultaneously ranks the nodes and links of a network [2]. The method is based on the principle that an important node is incident to many critical links, and a critical link connects important nodes. Let \(x\) be an \(N \times 1\) vector of node centralities and \(y\) an \(L \times 1\) vector of link centralities. The relationship between nodes and links is expressed as
- <br/>
- \begin{equation*}
- <br/>
- \begin{cases}
- <br/>
- x = Wy, \\
- <br/>
- y = Zx,
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(W\) is an \(N \times L\) incidence matrix with entries \(w_{il} = 1\) if node \(i\) is an endpoint of link \(l\) and 0 otherwise, and \(Z = W^T\). Substituting, we obtain \(x = WZ x\), so the principal eigenvector of \(WZ\) defines the centralities of the nodes, while the centralities of links follow from \(y = Zx\).
- <br/>
+ (WRank) algorithm simultaneously ranks the nodes and links of a network [2]. The method is based on the principle that an important node is incident to many critical links, and a critical link connects important nodes. Let \(x\) be an \(N \times 1\) vector of node centralities and \(y\) an \(L \times 1\) vector of link centralities. The relationship between nodes and links is expressed as\begin{equation*}\begin{cases}x = Wy, \\y = Zx,\end{cases}\end{equation*}where \(W\) is an \(N \times L\) incidence matrix with entries \(w_{il} = 1\) if node \(i\) is an endpoint of link \(l\) and 0 otherwise, and \(Z = W^T\). Substituting, we obtain \(x = WZ x\), so the principal eigenvector of \(WZ\) defines the centralities of the nodes, while the centralities of links follow from \(y = Zx\).\vfill
 </p>
 <h3>
  References

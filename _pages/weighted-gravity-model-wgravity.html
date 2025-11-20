@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   weighted gravity model
  </i>
- (WGravity) is a variant of the traditional gravity model that incorporates a truncation radius and the eigenvector centrality of nodes [2]. The WGravity centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{WGravity}(i) = e_i \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_i d_j}{d_{ij}^2},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), \(e_i\) is the eigenvector centrality of node \(i\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within \(r\) hops of \(i\). The parameter \(r\) defines the radius of influence for each node.
- <br/>
- Liu et al. [2] suggest setting \(r = 0.5 \langle d \rangle\), where \(\langle d \rangle\) is the average shortest path length of the network \(G\). This truncation balances local and semi-local information while incorporating the global influence captured by eigenvector centrality.
- <br/>
+ (WGravity) is a variant of the traditional gravity model that incorporates a truncation radius and the eigenvector centrality of nodes [2]. The WGravity centrality of node \(i\) is defined as\[c_{WGravity}(i) = e_i \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_i d_j}{d_{ij}^2},\]where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), \(d_{ij}\) is the shortest distance between nodes \(i\) and \(j\), \(e_i\) is the eigenvector centrality of node \(i\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within \(r\) hops of \(i\). The parameter \(r\) defines the radius of influence for each node. Liu
+ <i>
+  et al.
+ </i>
+ [2] suggest setting \(r = 0.5 \langle d \rangle\), where \(\langle d \rangle\) is the average shortest path length of the network \(G\). This truncation balances local and semi-local information while incorporating the global influence captured by eigenvector centrality.
 </p>
 <h3>
  References

@@ -16,45 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   relative local-global importance
  </i>
- (RLGI) measure is a hybrid method for identifying the top-\(k\) influential nodes in complex networks, combining node degree and \(k\)-core decomposition [2].
- <br/>
- First, the
+ (RLGI) measure is a hybrid method for identifying the top-\(k\) influential nodes in complex networks, combining node degree and \(k\)-core decomposition [2]. First, the
  <i>
   normalized global importance
  </i>
- (\textsc{NGI}) of node \(i\) is defined as
- <br/>
- \[
- <br/>
- \textsc{NGI}(i) = \frac{d_i \, k_s(i) \, δ(i)}{N},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree, \(k_s(i)\) is the \(k\)-shell score of node \(i\) and \(δ(i)\) is the normalized iteration number (\textsc{NIM}) given by
- <br/>
- \[
- <br/>
- δ(i) = 1 + \frac{n(i)}{m(i)},
- <br/>
- \]
- <br/>
- with \(n(i)\) being the iteration at which node \(i\) is removed and \(m(i)\) the total number of iterations in that step.
- <br/>
- The \textsc{RLGI} score of node \(i\) is then computed as
- <br/>
- \[
- <br/>
- c_{\textsc{RLGI}}(i) = \frac{\textsc{NGI}(i)\, d_i}{\sum_{j \in \mathcal{N}(i)} \textsc{NGI}(j)}.
- <br/>
- \]
- <br/>
- Finally, \textsc{RLGI} scores are normalized by dividing each score by the maximal RLGI value in the network. The RLGI measure integrates both local connectivity and the global hierarchical position of nodes to identify influential spreaders.
- <br/>
+ (\textsc{NGI}) of node \(i\) is defined as\[\textsc{NGI}(i) = \frac{d_i \, k_s(i) \, δ(i)}{N},\]where \(d_i\) is the degree, \(k_s(i)\) is the \(k\)-shell score of node \(i\) and \(δ(i)\) is the normalized iteration number (\textsc{NIM}) given by\[δ(i) = 1 + \frac{n(i)}{m(i)},\]with \(n(i)\) being the iteration at which node \(i\) is removed, corresponding to the layer of node \(i\) in the onion decomposition, and \(m(i)\) the total number of iterations in that step. The \textsc{RLGI} score of node \(i\) is then computed as\[c_{\textsc{RLGI}}(i) = \frac{\textsc{NGI}(i)\, d_i}{\sum_{j \in \mathcal{N}(i)} \textsc{NGI}(j)}.\]Finally, \textsc{RLGI} scores are normalized by dividing each score by the maximal RLGI value in the network. The RLGI measure integrates both local connectivity and the global hierarchical position of nodes to identify influential spreaders.
 </p>
 <h3>
  References

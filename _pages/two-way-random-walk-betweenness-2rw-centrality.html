@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Two-way random walk betweenness
  </i>
- (2RW) centrality is a variant of betweenness centrality based on two-way random walks [2]. For a pair of nodes \(i\) and \(j\), the probability of reaching \(j\) from \(i\) through a transition node \(t\) is defined as
- <br/>
- \[
- <br/>
- p_{itj} = \frac{a_{it} a_{tj}}{d_i d_t},
- <br/>
- \]
- <br/>
- where \(a_{ij}\) is the adjacency matrix entry and \(d_i\) is the degree of node \(i\).
- <br/>
- The most likely two-way random walk between nodes \(i\) and \(j\) passes through a pair of transition nodes \((t^*, k^*)\) that maximizes the probability
- <br/>
- \[
- <br/>
- (t^*, k^*) = \arg\max_{t,k} \, p_{itj} \, p_{jki}.
- <br/>
- \]
- <br/>
- The 2RW betweenness centrality of a node counts how often it appears as one of these optimal transition nodes \((t^*\) or \(k^*)\) for all pairs of nodes \((i,j)\) in the network. Nodes that frequently serve as high-probability intermediate steps are considered more central.
- <br/>
+ (2RW) centrality is a variant of betweenness centrality based on two-way random walks [2]. For a pair of nodes \(i\) and \(j\), the probability of reaching \(j\) from \(i\) through a transition node \(t\) is defined as\[p_{itj} = \frac{a_{it} a_{tj}}{d_i d_t},\]where \(a_{ij}\) is the adjacency matrix entry and \(d_i\) is the degree of node \(i\).The most likely two-way random walk between nodes \(i\) and \(j\) passes through a pair of transition nodes \((t^*, k^*)\) that maximizes the probability\[(t^*, k^*) = \arg\max_{t,k} \, p_{itj} \, p_{jki}.\]The 2RW betweenness centrality of a node counts how often it appears as one of these optimal transition nodes \((t^*\) or \(k^*)\) for all pairs of nodes \((i,j)\) in the network. Nodes that frequently serve as high-probability intermediate steps are considered more central.
 </p>
 <h3>
  References

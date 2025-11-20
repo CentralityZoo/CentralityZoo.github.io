@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Volume centrality
  </i>
@@ -24,22 +23,19 @@ search: true
  <i>
   Distributed Assessment of the Closeness Centrality Ranking
  </i>
- (DACCER), is a semi-local centrality measure based on the degrees of nodes within an \(r\)-hop neighborhood [2]. The centrality score \(c_{V}(i)\) of a node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{V}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} d_j,
- <br/>
- \]
- <br/>
- where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes located within a topological distance \(r\) from node \(i\) (including \(i\) itself).
- <br/>
- Wehmuth and Ziviani [2] empirically demonstrated that volume centrality achieves good performance for \(r = 2\). This measure generalizes the
+ (DACCER), is a semi-local centrality measure based on the degrees of nodes within an \(r\)-hop neighborhood [2]. The centrality score \(c_{V}(i)\) of a node \(i\) is defined as\[c_{V}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} d_j,\]where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes located within a topological distance \(r\) from node \(i\) (including \(i\) itself). Wehmuth and Ziviani [2] empirically demonstrated that volume centrality achieves good performance for \(r = 2\). This measure generalizes the
  <i>
   sphere degree
  </i>
- introduced by da F. Costa et al. [3], which corresponds to the special case of volume centrality with \(r = 2\). For \(r = 1\), Pei et al. [4] showed that volume centrality can outperform in-degree and PageRank centralities in certain empirical networks.
- <br/>
+ introduced by da F. Costa
+ <i>
+  et al.
+ </i>
+ [3], which corresponds to the special case of volume centrality with \(r = 2\). For \(r = 1\), Pei
+ <i>
+  et al.
+ </i>
+ [4] showed that volume centrality can outperform in-degree and PageRank centralities in certain empirical networks.
 </p>
 <h3>
  References

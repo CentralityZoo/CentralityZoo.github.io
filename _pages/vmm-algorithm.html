@@ -16,27 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   VMM algorithm
  </i>
- is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as
- <br/>
- \[
- <br/>
- v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},
- <br/>
- \quad
- <br/>
- s_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.
- <br/>
- At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
- <br/>
+ is a multi-attribute voting method for identifying key nodes in a network [2]. It is a variant of VoteRank, in which the voting ability \(v_i\) and voting score \(s_i\) of node \(i\) are defined as\[v_i = \frac{d_i}{(1+c_i) \, \max_j d_j},\quads_i = d_i + \sqrt{d_i \sum_{j \in \mathcal{N}(i)} v_j},\]where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), respectively, and \(\mathcal{N}(i)\) denotes its set of neighbors.At each iteration, the node \(k\) with the highest voting score \(s_k\) is selected as a key node. Once selected, the voting ability and voting score of node \(k\) are set to zero, and it no longer participates in subsequent voting rounds. The process repeats until the desired number of key nodes is identified.
 </p>
 <h3>
  References

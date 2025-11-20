@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   weight neighborhood centrality
  </i>
- quantifies the influence of a node by combining its own centrality with the weighted centralities of its neighbors [2]. Let \( f \) denote a benchmark centrality measure. Then, the weight neighborhood centrality \( c_{wnc}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{wnc}(i) = f(i) + \sum_{j \in \mathcal{N}(i)} \frac{w_{ij}}{\overline{w}} f(j),
- <br/>
- \end{equation*}
- <br/>
- where \( w_{ij} = (d_i d_j)^{α} \), \( d_i \) and \( d_j \) are the degrees of nodes \( i \) and \( j \),
- <br/>
- \( α \) is a tunable parameter, and \( \overline{w} \) is the average importance of all links in the network. Wang et al. [2] used \( α = 1 \) and considered degree or \(k\)-shell centrality as the benchmark \( f \).
- <br/>
+ quantifies the influence of a node by combining its own centrality with the weighted centralities of its neighbors [2]. Let \( f \) denote a benchmark centrality measure. Then, the weight neighborhood centrality \( c_{wnc}(i) \) of node \( i \) is defined as\begin{equation*}c_{wnc}(i) = f(i) + \sum_{j \in \mathcal{N}(i)} \frac{w_{ij}}{\overline{w}} f(j),\end{equation*}where \( w_{ij} = (d_i d_j)^{α} \), \( d_i \) and \( d_j \) are the degrees of nodes \( i \) and \( j \), \( α \) is a tunable parameter, and \( \overline{w} \) is the average importance of all links in the network. Wang
+ <i>
+  et al.
+ </i>
+ [2] used \( α = 1 \) and considered degree or \(k\)-shell centrality as the benchmark \( f \).
 </p>
 <h3>
  References

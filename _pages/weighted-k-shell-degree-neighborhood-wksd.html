@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted
   <i>
@@ -24,24 +23,7 @@ search: true
   </i>
   -shell degree neighborhood
  </i>
- (Wksd) is a hybrid centrality measure that combines node degree and \(k\)-shell values [2, 3]. The motivation is to capture nodes that are central both in terms of local connectivity and their position in the network’s hierarchical core. The edge weight between nodes \(i\) and \(j\) is defined as
- <br/>
- \[
- <br/>
- w_{ij} = (α d_i + μ k_s(i)) (α d_j + μ k_s(j)),
- <br/>
- \]
- <br/>
- where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell value of node \(i\), and \(α\), \(μ\) are tunable parameters (typically \(α \in \{0.2, 0.4\}\) and \(μ = 0.9\)). The Wksd centrality of node \(i\) is given by
- <br/>
- \[
- <br/>
- c_{Wksd}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\). Hence, Wksd reflects the cumulative weighted influence of its neighbors and emphasize nodes that combine high connectivity with strategic placement in the network core.
- <br/>
+ (Wksd) is a hybrid centrality measure that combines node degree and \(k\)-shell values [2, 3]. The motivation is to capture nodes that are central both in terms of local connectivity and their position in the network’s hierarchical core. The edge weight between nodes \(i\) and \(j\) is defined as\[w_{ij} = (α d_i + μ k_s(i)) (α d_j + μ k_s(j)),\]where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell value of node \(i\), and \(α\), \(μ\) are tunable parameters (typically \(α \in \{0.2, 0.4\}\) and \(μ = 0.9\)). The Wksd centrality of node \(i\) is given by\[c_{Wksd}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},\]where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\). Hence, Wksd reflects the cumulative weighted influence of its neighbors and emphasize nodes that combine high connectivity with strategic placement in the network core.
 </p>
 <h3>
  References

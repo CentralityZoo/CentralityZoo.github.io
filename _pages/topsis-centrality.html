@@ -16,44 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   TOPSIS centrality
  </i>
- is a hybrid centrality measure that ranks nodes based on their similarity to an ideal solution using the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) approach [2]. Let \(R\) denote the normalized \(N \times m\) decision matrix, where each entry characterizes the normalized influence of a node with respect to \(m\) centrality metrics. Du et al. [2] consider \(m=3\) (degree, closeness and betweenness/eigenvector centralities).
- <br/>
- The positive ideal solution \(A^{+}\) and negative ideal solution \(A^{-}\) are defined as
- <br/>
- \[
- <br/>
- A^{+} = [\max_{i} w_1 r_{i1}, \dots, \max_{i} w_m r_{im}], \quad
- <br/>
- A^{-} = [\min_{i} w_1 r_{i1}, \dots, \min_{i} w_m r_{im}],
- <br/>
- \]
- <br/>
- where \(w_j\) is the weight of the \(j\)-th centrality metric (e.g., \(w_j = 1/m\) for equal weighting).
- <br/>
- The TOPSIS centrality of node \(i\) is then given by its relative closeness to the ideal solution:
- <br/>
- \[
- <br/>
- c_{\mathrm{TOPSIS}}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},
- <br/>
- \]
- <br/>
- where \(S_i^{+}\) and \(S_i^{-}\) are the Euclidean distances from node \(i\) to the positive and negative ideal solutions, respectively:
- <br/>
- \[
- <br/>
- S_i^{+} = \sqrt{\sum_{j=1}^m (A_j^{+} - w_j r_{ij})^2}, \quad
- <br/>
- S_i^{-} = \sqrt{\sum_{j=1}^m (A_j^{-} - w_j r_{ij})^2}.
- <br/>
- \]
- <br/>
- Nodes with higher TOPSIS centrality scores are simultaneously closer to the positive ideal solution and farther from the negative ideal solution, reflecting high overall importance across the selected centrality metrics.
- <br/>
+ is a hybrid centrality measure that ranks nodes based on their similarity to an ideal solution using the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) approach [2]. Let \(R\) denote the normalized \(N \times m\) decision matrix, where each entry characterizes the normalized influence of a node with respect to \(m\) centrality metrics. Du
+ <i>
+  et al.
+ </i>
+ [2] consider \(m=3\) (degree, closeness and betweenness/eigenvector centralities). The positive ideal solution \(A^{+}\) and negative ideal solution \(A^{-}\) are defined as\[A^{+} = [\max_{i} w_1 r_{i1}, \dots, \max_{i} w_m r_{im}], \quadA^{-} = [\min_{i} w_1 r_{i1}, \dots, \min_{i} w_m r_{im}],\]where \(w_j\) is the weight of the \(j\)-th centrality metric (e.g., \(w_j = 1/m\) for equal weighting). The TOPSIS centrality of node \(i\) is then given by its relative closeness to the ideal solution:\[c_{\mathrm{TOPSIS}}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},\]where \(S_i^{+}\) and \(S_i^{-}\) are the Euclidean distances from node \(i\) to the positive and negative ideal solutions, respectively:\[S_i^{+} = \sqrt{\sum_{j=1}^m (A_j^{+} - w_j r_{ij})^2}, \quadS_i^{-} = \sqrt{\sum_{j=1}^m (A_j^{-} - w_j r_{ij})^2}.\]Nodes with higher TOPSIS centrality scores are simultaneously closer to the positive ideal solution and farther from the negative ideal solution, reflecting high overall importance across the selected centrality metrics.
 </p>
 <h3>
  References

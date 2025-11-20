@@ -16,32 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Renewed coreness
  </i>
- centrality is a variant of the \(k\)-shell centrality that accounts for redundant links in a network [2]. Based on the analysis of core-like structures in real-world networks, Liu et al. [2] argue that core nodes should not only connect to other core nodes but also maintain links to nodes outside the core.
- <br/>
- In this approach, weights \(w_{ij}\) are assigned to each link \((i,j)\) in the graph \(G\) based on the connection patterns of its endpoints:
- <br/>
- \[
- <br/>
- w_{ij} = \frac{n_{i \rightarrow j} + n_{j \rightarrow i}}{2},
- <br/>
- \]
- <br/>
- where \(n_{i \rightarrow j}\) is the number of links of node \(i\) connecting outside the immediate neighborhood of node \(j\). In other words, \(n_{i \rightarrow j}\) counts the number of \(i\)'s neighbors that are not neighbors of \(j\), indicating how much \(i\) extends beyond \(j\)'s local network:
- <br/>
- \[
- <br/>
- n_{i \rightarrow j} = |\mathcal{N}(i) \setminus \mathcal{N}(j)|.
- <br/>
- \]
- <br/>
- Links with low diffusion importance (\(w_{ij} &lt; 2\)) are considered redundant and removed, producing a residual network \(G'\). The \(k\)-shell decomposition is then applied to \(G'\) to obtain the renewed coreness for each node.
- <br/>
- Nodes with high renewed coreness are those that maintain strategic connections both within the core and to peripheral nodes, reflecting their importance in facilitating diffusion and maintaining network cohesion.
- <br/>
+ centrality is a variant of the \(k\)-shell centrality that accounts for redundant links in a network [2]. Based on the analysis of core-like structures in real-world networks, Liu
+ <i>
+  et al.
+ </i>
+ [2] argue that core nodes should not only connect to other core nodes but also maintain links to nodes outside the core. In this approach, weights \(w_{ij}\) are assigned to each link \((i,j)\) in the graph \(G\) based on the connection patterns of its endpoints:\[w_{ij} = \frac{n_{i \rightarrow j} + n_{j \rightarrow i}}{2},\]where \(n_{i \rightarrow j}\) is the number of links of node \(i\) connecting outside the immediate neighborhood of node \(j\). In other words, \(n_{i \rightarrow j}\) counts the number of \(i\)'s neighbors that are not neighbors of \(j\), indicating how much \(i\) extends beyond \(j\)'s local network:\[n_{i \rightarrow j} = |\mathcal{N}(i) \setminus \mathcal{N}(j)|.\]Links with low diffusion importance (\(w_{ij} &lt; 2\)) are considered redundant and removed, producing a residual network \(G'\). The \(k\)-shell decomposition is then applied to \(G'\) to obtain the renewed coreness for each node.Nodes with high renewed coreness are those that maintain strategic connections both within the core and to peripheral nodes, reflecting their importance in facilitating diffusion and maintaining network cohesion.
 </p>
 <h3>
  References

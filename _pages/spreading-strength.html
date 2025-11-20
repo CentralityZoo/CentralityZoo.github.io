@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Spreading strength
  </i>
- is a topological measure that quantifies a node's influence in spreading processes, taking into account its indirect propagation through the neighborhood [2]. The spreading strength \(c_{ss}(i)\) of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{ss}(i) = \sum_{j \in \mathcal{N}(i)} \left( 1 + d_j^{out} \left( 1 + \frac{|D_{ij,2}|}{4} \right)^{α} \right),
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_j^{out} = |\{ l \in \mathcal{N}(j) : l \notin \mathcal{N}(i) \cup \{i\} \}|\) is the number of neighbors of \(j\) outside \(i\)'s neighborhood, \(|D_{ij,2}|\) is the number of paths of length 2 connecting \(i\) and \(j\), and \(α\) is a tunable parameter (e.g., \(α = 0.5\)). This formulation captures both the local connectivity of neighbors and the potential for spreading beyond the immediate neighborhood.
- <br/>
+ is a topological measure that quantifies a node's influence in spreading processes, taking into account its indirect propagation through the neighborhood [2]. The spreading strength \(c_{ss}(i)\) of node \(i\) is defined as\[c_{ss}(i) = \sum_{j \in \mathcal{N}(i)} \left( 1 + d_j^{out} \left( 1 + \frac{|D_{ij,2}|}{4} \right)^{α} \right),\]where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_j^{out} = |\{ l \in \mathcal{N}(j) : l \notin \mathcal{N}(i) \cup \{i\} \}|\) is the number of neighbors of \(j\) outside \(i\)'s neighborhood, \(|D_{ij,2}|\) is the number of paths of length 2 connecting \(i\) and \(j\), and \(α\) is a tunable parameter (e.g., \(α = 0.5\)). This formulation captures both the local connectivity of neighbors and the potential for spreading beyond the immediate neighborhood.\vfill
 </p>
 <h3>
  References

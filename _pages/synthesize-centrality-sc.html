@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Synthesize centrality
  </i>
- (SC) is a composite measure proposed to identify opinion leaders in social networks [2]. It combines multiple aspects of centrality, including local connectivity, intermediary influence, and global reach, into a single index. The synthesized centrality of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{SC}}(i) = \frac{\overline{c}_d(i) + \overline{c}_b^2(i)}{\overline{c}_c^2(i)},
- <br/>
- \end{equation*}
- <br/>
- where \(\overline{c}_d(i)\), \(\overline{c}_b(i)\), and \(\overline{c}_c(i)\) denote the normalized degree, betweenness, and closeness centrality scores of node \(i\), respectively.
- <br/>
- Nodes with high SC values tend to have both strong local and intermediary influence (via degree and betweenness) while maintaining relatively short average distances to other nodes (low closeness denominator), making them effective opinion leaders within the network.
- <br/>
+ (SC) is a composite measure proposed to identify opinion leaders in social networks [2]. It combines multiple aspects of centrality, including local connectivity, intermediary influence, and global reach, into a single index. The synthesized centrality of a node \(i\) is defined as\begin{equation*}c_{\mathrm{SC}}(i) = \frac{\overline{c}_d(i) + \overline{c}_b^2(i)}{\overline{c}_c^2(i)},\end{equation*}where \(\overline{c}_d(i)\), \(\overline{c}_b(i)\), and \(\overline{c}_c(i)\) denote the normalized degree, betweenness, and closeness centrality scores of node \(i\), respectively.Nodes with high SC values tend to have both strong local and intermediary influence (via degree and betweenness) while maintaining relatively short average distances to other nodes (low closeness denominator), making them effective opinion leaders within the network.
 </p>
 <h3>
  References

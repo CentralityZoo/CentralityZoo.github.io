@@ -16,43 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   two-step framework (IF) centrality
  </i>
- , also known as the global diversity and local feature (GDLF) method, quantifies node influence using both global and local network information [2, 3].
- <br/>
- Global information is derived from the \(k\)-shell decomposition, with entropy used to assess the distribution of a node’s neighbors across shells.
- <br/>
- Local information is captured by the degree of neighboring nodes.
- <br/>
- The centrality \( c_{\mathrm{IF}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{IF}}(i) = \left(- \sum_{k=1}^{ks_{\max}} p_i(k) \log_2 p_i(k) \right)
- <br/>
- \left( \log_2 \sum_{j \in \mathcal{N}(i)} d_j \right),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- p_i(k) = \frac{x_k(i)}{\sum_{l=1}^{ks_{\max}} x_l(i)}
- <br/>
- \end{equation*}
- <br/>
- is the fraction of node \(i\)'s neighbors in the \(k\)-core layer,
- <br/>
- \( x_k(i) \) is the number of neighbors in the \(k\)-core layer \(k\),
- <br/>
- \( d_j \) is the degree of neighbor \( j \), and
- <br/>
- \( \mathcal{N}(i) \) is the set of neighbors of node \( i \).
- <br/>
+ , also known as the global diversity and local feature (GDLF) method, quantifies node influence using both global and local network information [2, 3]. Global information is derived from the \(k\)-shell decomposition, with entropy used to assess the distribution of a node’s neighbors across shells. Local information is captured by the degree of neighboring nodes. The centrality \( c_{\mathrm{IF}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\mathrm{IF}}(i) = \left(- \sum_{k=1}^{ks_{\max}} p_i(k) \log_2 p_i(k) \right) \left( \log_2 \sum_{j \in \mathcal{N}(i)} d_j \right),\end{equation*}where \begin{equation*}p_i(k) = \frac{x_k(i)}{\sum_{l=1}^{ks_{\max}} x_l(i)}\end{equation*}is the fraction of node \(i\)'s neighbors in the \(k\)-core layer, \( x_k(i) \) is the number of neighbors in the \(k\)-core layer \(k\), \( d_j \) is the degree of neighbor \( j \), and \( \mathcal{N}(i) \) is the set of neighbors of node \( i \).
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   <i>
@@ -24,32 +23,11 @@ search: true
   </i>
   -shell index
  </i>
- is an extension of the traditional \(k\)-shell decomposition, designed to identify influential spreaders in weighted networks [2]. Unlike the \(k\)-shell method, which removes nodes based on degree, the \(s\)-shell decomposition relies on node strength, incorporating asymmetric edge weights that reflect the potential of each link to facilitate spreading.
- <br/>
- The strength \( s_i \) of node \( i \) is defined as the sum of the asymmetric weights of its outgoing links:
- <br/>
- \[
- <br/>
- s_i = \sum_{j \in \mathcal{N}(i)} w_{ij} = \sum_{j \in \mathcal{N}(i)} \left[ 1 + (d_i d_j^{out})^{a} \right],
- <br/>
- \]
- <br/>
- where \( w_{ij} \) quantifies the influence of edge \( (i,j) \) in the spreading process, \( d_i \) is the degree of node \( i \), \( d_j^{out}\) denotes the number of neighbors of node \( j \) not shared with \( i \), i.e.,
- <br/>
- \[
- <br/>
- d_j^{out} = \left| \{\, l \in \mathcal{N}(j) : l \notin \mathcal{N}(i) \cup \{i\} \,\} \right|,
- <br/>
- \]
- <br/>
- and \( a \) is a tunable parameter controlling the weight contribution (\( a = 0.5 \) in [2]).
- <br/>
- The formulation of
+ is an extension of the traditional \(k\)-shell decomposition, designed to identify influential spreaders in weighted networks [2]. Unlike the \(k\)-shell method, which removes nodes based on degree, the \(s\)-shell decomposition relies on node strength, incorporating asymmetric edge weights that reflect the potential of each link to facilitate spreading.The strength \( s_i \) of node \( i \) is defined as the sum of the asymmetric weights of its outgoing links:\[s_i = \sum_{j \in \mathcal{N}(i)} w_{ij} = \sum_{j \in \mathcal{N}(i)} \left[ 1 + (d_i d_j^{out})^{a} \right],\]where \( w_{ij} \) quantifies the influence of edge \( (i,j) \) in the spreading process, \( d_i \) is the degree of node \( i \), \( d_j^{out}\) denotes the number of neighbors of node \( j \) not shared with \( i \), i.e.,\[d_j^{out} = \left| \{\, l \in \mathcal{N}(j) : l \notin \mathcal{N}(i) \cup \{i\} \,\} \right|,\]and \( a \) is a tunable parameter controlling the weight contribution (\( a = 0.5 \) in [2]).The formulation of
  <i>
   s
  </i>
  -shell index reflects the idea that edges leading to new regions of the network contribute more to spreading than those confined within a node's local neighborhood. The resulting edge weights are asymmetric (\(w_{ij} \neq w_{ji}\)), capturing directional spreading potential. When \(a = 0\), the \(s\)-shell index reduces to the standard \(k\)-shell index.
- <br/>
 </p>
 <h3>
  References

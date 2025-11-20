@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   ViralRank
  </i>
- ranks nodes based on the random-walk effective distance, which closely approximates the hitting time of a reaction-diffusion process on the network [2]. The ViralRank score of node \(i\) is the average effective distance from all sources to all targets:
- <br/>
- \begin{equation*}
- <br/>
- c_{VR}(i) = \frac{1}{N} \sum_{j} \left[ D_{ij}^{RW}(λ) + D_{ji}^{RW}(λ) \right],
- <br/>
- \end{equation*}
- <br/>
- where \(λ\) is a parameter and \(D_{ji}^{RW}(λ)\) is the effective distance [3]:
- <br/>
- \[
- <br/>
- D_{ji}^{RW}(λ) = -\ln \left[ \sum_{k \neq j} \left( I^{(j)} - e^{-λ} P^{(j)} \right)^{-1}_{ik} e^{-λ} p_k^{(j)} \right], \quad i \neq j,
- <br/>
- \]
- <br/>
- with \(D_{ii}^{RW}(λ) = 0\). Here, \(P^{(j)}\) and \(I^{(j)}\) are the \((N-1) \times (N-1)\) matrices obtained by removing the \(j\)th row and column from the Markov matrix \(P\), which is the row-normalized adjacency matrix \((P_{ij} = a_{ij} / \sum_k a_{ik})\), and from the identity matrix \(I\), respectively. The vector \(p^{(j)}\) is the \(j\)th column of \(P\) with the \(j\)th entry removed.
- <br/>
- The logarithm term counts all random walks starting at \(i\) and terminating at \(j\). In the limit \(λ \to 0\), the ViralRank score reduces to the sum of mean first-passage times (MFPT): the average time for a random walk starting at \(i\) to reach other nodes, plus the average time for a walk starting at other nodes to reach \(i\) [2].
- <br/>
+ ranks nodes based on the random-walk effective distance, which closely approximates the hitting time of a reaction-diffusion process on the network [2]. The ViralRank score of node \(i\) is the average effective distance from all sources to all targets:\begin{equation*}c_{VR}(i) = \frac{1}{N} \sum_{j} \left[ D_{ij}^{RW}(λ) + D_{ji}^{RW}(λ) \right],\end{equation*}where \(λ\) is a parameter and \(D_{ji}^{RW}(λ)\) is the effective distance [3]:\[D_{ji}^{RW}(λ) = -\ln \left[ \sum_{k \neq j} \left( I^{(j)} - e^{-λ} P^{(j)} \right)^{-1}_{ik} e^{-λ} p_k^{(j)} \right], \quad i \neq j,\]with \(D_{ii}^{RW}(λ) = 0\). Here, \(P^{(j)}\) and \(I^{(j)}\) are the \((N-1) \times (N-1)\) matrices obtained by removing the \(j\)th row and column from the Markov matrix \(P\), which is the row-normalized adjacency matrix \((P_{ij} = a_{ij} / \sum_k a_{ik})\), and from the identity matrix \(I\), respectively. The vector \(p^{(j)}\) is the \(j\)th column of \(P\) with the \(j\)th entry removed.The logarithm term counts all random walks starting at \(i\) and terminating at \(j\). In the limit \(λ \to 0\), the ViralRank score reduces to the sum of mean first-passage times (MFPT): the average time for a random walk starting at \(i\) to reach other nodes, plus the average time for a walk starting at other nodes to reach \(i\) [2].
 </p>
 <h3>
  References

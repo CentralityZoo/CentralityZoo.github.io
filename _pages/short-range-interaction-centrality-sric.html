@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Short-Range Interaction Centrality (SRIC)
@@ -25,52 +24,11 @@ search: true
  <i>
   critical
  </i>
- for node \(i\) if their collective influence exceeds the threshold \(q_i\), i.e.,
- <br/>
- \begin{equation*}
- <br/>
- \sum_{k \in \Omega(i)} a_{ki} \geq q_i.
- <br/>
- \end{equation*}
- <br/>
- A node \(k\) is termed
+ for node \(i\) if their collective influence exceeds the threshold \(q_i\), i.e.,\begin{equation*}\sum_{k \in \Omega(i)} a_{ki} \geq q_i.\end{equation*}A node \(k\) is termed
  <i>
   pivotal
  </i>
- for the group \(\Omega(i)\) if its removal renders the group non-critical. The set of pivotal members of \(\Omega(i)\) is denoted by \(\Omega^{p}(i)\).
- <br/>
- The SRIC index considers only direct and indirect influence through one intermediate node, i.e., short-range influence. Formally, the initial adjacency matrix \(A\) is transformed into a matrix of direct influence \(P\), where \(D\) is the out-degree matrix. The indirect influence \(p_{ihj}\) of node \(i\) on node \(j\) via an intermediate node \(h\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- p_{ihj} =
- <br/>
- \begin{cases}
- <br/>
- \frac{\min(a_{ih}, a_{hj})}{D_{kk}}, &amp; \text{if } a_{ih} &gt; 0, \ a_{hj} &gt; 0, \ i \neq j \neq h, \\
- <br/>
- 0, &amp; \text{otherwise}.
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- The SRIC centrality of node \(i\) is defined as the average of the normalized short-range influence \(χ_i(j)\) of node \(i\) on all nodes \(j \in \mathcal{N}\). This is evaluated by considering all critical groups \(\Omega_k(j)\) in which node \(i\) is pivotal:
- <br/>
- \begin{equation*}
- <br/>
- c_{SRIC}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}}  \frac{χ_i(j)}{\sum_{h \in \mathcal{N}} χ_h(j)},
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- χ_i(j) = \sum_{k: i \in \Omega^{p}_k(j)} \frac{p_{ij} + \sum_{h \in \Omega_k(j)} p_{ihj}}{|\Omega_k(j)|}.
- <br/>
- \end{equation*}
- <br/>
+ for the group \(\Omega(i)\) if its removal renders the group non-critical. The set of pivotal members of \(\Omega(i)\) is denoted by \(\Omega^{p}(i)\).The SRIC index considers only direct and indirect influence through one intermediate node, i.e., short-range influence. Formally, the initial adjacency matrix \(A\) is transformed into a matrix of direct influence \(P\), where \(D\) is the out-degree matrix. The indirect influence \(p_{ihj}\) of node \(i\) on node \(j\) via an intermediate node \(h\) is defined as\begin{equation*}p_{ihj} = \begin{cases}\frac{\min(a_{ih}, a_{hj})}{D_{kk}}, &amp; \text{if } a_{ih} &gt; 0, \ a_{hj} &gt; 0, \ i \neq j \neq h, \\0, &amp; \text{otherwise}.\end{cases}\end{equation*}The SRIC centrality of node \(i\) is defined as the average of the normalized short-range influence \(χ_i(j)\) of node \(i\) on all nodes \(j \in \mathcal{N}\). This is evaluated by considering all critical groups \(\Omega_k(j)\) in which node \(i\) is pivotal:\begin{equation*}c_{SRIC}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}}  \frac{χ_i(j)}{\sum_{h \in \mathcal{N}} χ_h(j)},\end{equation*}where \begin{equation*}χ_i(j) = \sum_{k: i \in \Omega^{p}_k(j)} \frac{p_{ij} + \sum_{h \in \Omega_k(j)} p_{ihj}}{|\Omega_k(j)|}.\end{equation*}The SRIC index has been applied in diverse domains, including the identification of influential countries in global food trade networks [5], analysis of financial [3], global arms transfer [6], international conflict [7], and international migration networks [8], as well as the detection of key actors in terrorist networks [6] and citation networks of economic journals [9].
 </p>
 <h3>
  References
@@ -110,6 +68,45 @@ search: true
   Aleskerov, F., Shvydun, S. and Meshcheryakova, N. (2021). New centrality measures in networks: how to take into account the parameters of the nodes and group influence of nodes to nodes (1st ed.). Chapman and Hall/CRC.
   <a href="https://doi.org/10.1201/9781003203421">
    doi: 10.1201/9781003203421.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [5]
+  </span>
+  Aleskerov, F., Sergeeva, Z., &amp; Shvydun, S. (2017). Assessment of exporting economies influence on the global food network. In Optimization Methods and Applications: In Honor of Ivan V. Sergienko's 80th Birthday (pp. 1-10). Cham: Springer International Publishing.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [6]
+  </span>
+  Shvydun, S. (2019). Influence of Countries in the Global Arms Transfers Network: 1950–2018. In International Conference on Complex Networks and Their Applications (pp. 736-748). Cham: Springer International Publishing.
+  <a href="https://doi.org/10.1007/978-3-030-36683-4_59">
+   doi: 10.1007/978-3-030-36683-4\_59.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [7]
+  </span>
+  Aleskerov, F. T., Kurapova, M., Meshcheryakova, N., Mironyuk, M., &amp; Shvydun, S. (2016). A network approach to analysis of international conflicts. Political science (RU), (4), 111-137.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [8]
+  </span>
+  Aleskerov, F., Meshcheryakova, N., Rezyapova, A., &amp; Shvydun, S. (2016, May). Network analysis of international migration. In International Conference on Network Analysis (pp. 177-185). Cham: Springer International Publishing.
+  <a href="https://doi.org/10.1007/978-3-319-56829-4_13">
+   doi: 10.1007/978-3-319-56829-4\_13.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [9]
+  </span>
+  Aleskerov, F., Badgaeva, D., Pislyakov, V., Sterligov, I., &amp; Shvydun, S. (2016). An importance of Russian and international economic journals: A network approach. Journal of the New Economic Association, 30(2), 193-205.
+  <a href="https://doi.org/10.31737/2221-2264-2016-30-2-10">
+   doi: 10.31737/2221-2264-2016-30-2-10.
   </a>
  </div>
 </div>

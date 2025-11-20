@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Trophic level centrality
  </i>
- , also known as the flow-based trophic level, measures the average trophic function of a node, that is, the expected length of the path over which the node obtains energy from the source [2, 3]. For a node \(i\), the trophic level centrality \(c_{\mathrm{trophic}}(i)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{trophic}}(i) =
- <br/>
- \begin{cases}
- <br/>
- 1 + \frac{1}{d_i^{\mathrm{in}}} \sum_{j=1}^{N} a_{ij} \, c_{\mathrm{trophic}}(j), &amp; \text{if } d_i^{\mathrm{in}} \neq 0, \\
- <br/>
- 0, &amp; \text{if } d_i^{\mathrm{in}} = 0,
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(d_i^{\mathrm{in}}\) is the in-degree of node \(i\) and \(a_{ij}\) are the adjacency matrix elements.
- <br/>
- This measure requires the network to include at least one basal node, a node with no incoming edges that serves as the primary source of energy. The trophic level of each node represents the average number of steps separating it from the basal nodes and reflects its position within the network’s energy flow. Trophic level centrality is therefore useful in ecological studies for identifying key species and evaluating the efficiency and stability of food webs.
- <br/>
+ , also known as the flow-based trophic level, measures the average trophic function of a node, that is, the expected length of the path over which the node obtains energy from the source [2, 3]. For a node \(i\), the trophic level centrality \(c_{\mathrm{trophic}}(i)\) is defined as\begin{equation*}c_{\mathrm{trophic}}(i) =\begin{cases}1 + \frac{1}{d_i^{\mathrm{in}}} \sum_{j=1}^{N} a_{ij} \, c_{\mathrm{trophic}}(j), &amp; \text{if } d_i^{\mathrm{in}} \neq 0, \\0, &amp; \text{if } d_i^{\mathrm{in}} = 0,\end{cases}\end{equation*}where \(d_i^{\mathrm{in}}\) is the in-degree of node \(i\) and \(a_{ij}\) are the adjacency matrix elements.  This measure requires the network to include at least one basal node, a node with no incoming edges that serves as the primary source of energy. The trophic level of each node represents the average number of steps separating it from the basal nodes and reflects its position within the network’s energy flow. Trophic level centrality is therefore useful in ecological studies for identifying key species and evaluating the efficiency and stability of food webs.
 </p>
 <h3>
  References

@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Return Random Walk Gravity
  </i>
- (RRWG) centrality combines the concepts of return random walks, effective distance, and the gravity model to assess node importance in networks [2]. For node \(i\), it is defined as
- <br/>
- \[
- <br/>
- c_{RRWG}(i) = \sum_{j \neq i} \frac{d_i d_j}{\left(D_{j|i}\right)^2},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), respectively, and \(D_{j|i}\) is the effective distance from node \(j\) to node \(i\), given by
- <br/>
- \[
- <br/>
- D_{j|i} = 1 - \log_2 \left( \max_{t \neq k} \left( p_{itj} \, p_{jki} \right) \right),
- <br/>
- \]
- <br/>
- with \(p_{itj}\) representing the probability of reaching node \(j\) from node \(i\) via a transition node \(t\), and \(p_{jki}\) representing the probability of returning from node \(j\) to node \(i\) via another transition node \(k\).
- <br/>
- The RRWG centrality integrates three aspects: the gravity model captures the attractive power of a node based on its connectivity, the effective distance encodes both static and dynamic structural information of the network, and return random walks quantify a node's importance by accounting for the strength of indirect interactions with other nodes.
- <br/>
+ (RRWG) centrality combines the concepts of return random walks, effective distance, and the gravity model to assess node importance in networks [2]. For node \(i\), it is defined as\[c_{RRWG}(i) = \sum_{j \neq i} \frac{d_i d_j}{\left(D_{j|i}\right)^2},\]where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), respectively, and \(D_{j|i}\) is the effective distance from node \(j\) to node \(i\), given by\[D_{j|i} = 1 - \log_2 \left( \max_{t \neq k} \left( p_{itj} \, p_{jki} \right) \right),\]with \(p_{itj}\) representing the probability of reaching node \(j\) from node \(i\) via a transition node \(t\), and \(p_{jki}\) representing the probability of returning from node \(j\) to node \(i\) via another transition node \(k\).The RRWG centrality integrates three aspects: the gravity model captures the attractive power of a node based on its connectivity, the effective distance encodes both static and dynamic structural information of the network, and return random walks quantify a node's importance by accounting for the strength of indirect interactions with other nodes.
 </p>
 <h3>
  References

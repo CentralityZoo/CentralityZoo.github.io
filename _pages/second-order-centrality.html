@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   second-order centrality
  </i>
- measures a node's importance as the standard deviation of return times of an unbiased random walk that starts and returns to the node [2]. For a node \(i\), the centrality \(c_{\mathrm{second}}(i)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{second}}(i) = \sqrt{\frac{1}{K-1} \sum_{k=1}^{K} \Xi_i(k)^2 - \left[ \frac{1}{K-1} \sum_{k=1}^{K} \Xi_i(k) \right]^2},
- <br/>
- \end{equation*}
- <br/>
- where \(\Xi_i(k)\) denotes the \(k\)-th return time of a random walk starting and returning to node \(i\), and \(K\) is the total number of recorded return times. The random walk is unbiased, meaning that at each step, the walker chooses among all neighbors with equal probability, independent of node degree. This ensures that the standard deviation of return times reflects the node's position in the network rather than its degree. Nodes with lower second-order centrality values are considered more central in the network.
- <br/>
+ measures a node's importance as the standard deviation of return times of an unbiased random walk that starts and returns to the node [2]. For a node \(i\), the centrality \(c_{\mathrm{second}}(i)\) is defined as\begin{equation*}c_{\mathrm{second}}(i) = \sqrt{\frac{1}{K-1} \sum_{k=1}^{K} \Xi_i(k)^2 - \left[ \frac{1}{K-1} \sum_{k=1}^{K} \Xi_i(k) \right]^2},\end{equation*}where \(\Xi_i(k)\) denotes the \(k\)-th return time of a random walk starting and returning to node \(i\), and \(K\) is the total number of recorded return times. The random walk is unbiased, meaning that at each step, the walker chooses among all neighbors with equal probability, independent of node degree. This ensures that the standard deviation of return times reflects the node's position in the network rather than its degree. Nodes with lower second-order centrality values are considered more central in the network.\vfill
 </p>
 <h3>
  References

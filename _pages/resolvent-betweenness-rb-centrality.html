@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Resolvent betweenness (RB) centrality
  </i>
- , also known as \(f\)-betweenness, is a variant of betweenness centrality that quantifies the intermediate role of a node based on the matrix resolvent [2].
- <br/>
- Given the adjacency matrix \(A\), the matrix resolvent is defined as
- <br/>
- \[
- <br/>
- f(A) = \sum_{k=0}^{\infty}s^k A^k = (I - sA)^{-1},
- <br/>
- \]
- <br/>
- where \(s\) is a penalty factor satisfying \(s \in \left(0, \frac{1}{λ_{\max}}\right)\), with \(λ_{\max}\) being the largest eigenvalue of \(A\). The parameter \(s\) downweights longer walks, reflecting the intuition that short paths contribute more to communicability. Estrada and Higham [2] suggest that a reasonable choice is \(s = \frac{1}{N-1}\), based on comparison with the complete graph \(K_N\).
- <br/>
- The entry \(f(A)_{jl}\) measures the communicability between nodes \(j\) and \(l\). The resolvent betweenness of node \(i\), denoted \(c_{RB}(i)\), quantifies the overall relative change in communicability between all pairs of nodes when node \(i\) is removed, i.e.,
- <br/>
- \[
- <br/>
- c_{RB}(i) = \frac{1}{(N-1)(N-2)}
- <br/>
- \sum_{j \neq i} \sum_{\substack{l \neq i \\ l \neq j}}
- <br/>
- \frac{f(A)_{jl} - f(A - E(i))_{jl}}{f(A)_{jl}},
- <br/>
- \]
- <br/>
- where \(E(i)\) is the \(N \times N\) matrix with nonzero entries only in row and column \(i\), matching the positions of nonzero entries in \(A\). In other words, \(A - E(i)\) corresponds to the adjacency matrix obtained by removing all edges incident to node \(i\).
- <br/>
- Thus, resolvent betweenness (RB) centrality captures the importance of node \(i\) in maintaining communicability across the network.
- <br/>
+ , also known as \(f\)-betweenness, is a variant of betweenness centrality that quantifies the intermediate role of a node based on the matrix resolvent [2].  Given the adjacency matrix \(A\), the matrix resolvent is defined as\[f(A) = \sum_{k=0}^{\infty}s^k A^k = (I - sA)^{-1},\]where \(s\) is a penalty factor satisfying \(s \in \left(0, \frac{1}{λ_{\max}}\right)\), with \(λ_{\max}\) being the largest eigenvalue of \(A\). The parameter \(s\) downweights longer walks, reflecting the intuition that short paths contribute more to communicability. Estrada and Higham [2] suggest that a reasonable choice is \(s = \frac{1}{N-1}\), based on comparison with the complete graph \(K_N\).  The entry \(f(A)_{jl}\) measures the communicability between nodes \(j\) and \(l\). The resolvent betweenness of node \(i\), denoted \(c_{RB}(i)\), quantifies the overall relative change in communicability between all pairs of nodes when node \(i\) is removed, i.e.,\[c_{RB}(i) = \frac{1}{(N-1)(N-2)} \sum_{j \neq i} \sum_{\substack{l \neq i \\ l \neq j}} \frac{f(A)_{jl} - f(A - E(i))_{jl}}{f(A)_{jl}},\]where \(E(i)\) is the \(N \times N\) matrix with nonzero entries only in row and column \(i\), matching the positions of nonzero entries in \(A\). In other words, \(A - E(i)\) corresponds to the adjacency matrix obtained by removing all edges incident to node \(i\).  Thus, resolvent betweenness (RB) centrality captures the importance of node \(i\) in maintaining communicability across the network.
 </p>
 <h3>
  References

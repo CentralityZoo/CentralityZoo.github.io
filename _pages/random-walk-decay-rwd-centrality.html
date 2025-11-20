@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Random Walk Decay
  </i>
@@ -24,30 +23,11 @@ search: true
  <i>
   decay centrality
  </i>
- measure [3], reformulated within the framework of random walks. The centrality value \( c_{RWD}(i) \) for a node \( i \) in a graph \( G \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{RWD}(i) = β(G) \sum_{t=0}^{\infty} a^{t} P_i(t),
- <br/>
- \end{equation*}
- <br/>
- where \( a \in (0,1) \) is a decay parameter that controls the influence of longer walks, \( P_i(t) \) denotes the probability that node \( i \) is visited for the first time at step \( t \) of a random walk starting from a uniformly selected node, and \( β(G) \) is a normalization constant determined by the graph structure; it is typically defined as the total sum of node weights,
- <br/>
- \[
- <br/>
- β(G) = \sum_{v \in \mathcal{N}} b(v),
- <br/>
- \]
- <br/>
- where \( b(v) \ge 0 \) denotes the weight of node \( v \). In the special case of an unweighted graph, this reduces to \( β(G) = N\), the number of nodes in \( G \).
- <br/>
- The RWD centrality can be interpreted as a weighted expectation of first-visit probabilities, where nodes reached earlier in the random walk contribute more strongly due to the exponential decay factor \( a^{t} \). W\k{a}s et al. [2] showed that random walk decay centrality behaves similarly to PageRank, but differs in that it accounts only for the
+ measure [3], reformulated within the framework of random walks. The centrality value \( c_{RWD}(i) \) for a node \( i \) in a graph \( G \) is defined as\begin{equation*}c_{RWD}(i) = β(G) \sum_{t=0}^{\infty} a^{t} P_i(t),\end{equation*}where \( a \in (0,1) \) is a decay parameter that controls the influence of longer walks, \( P_i(t) \) denotes the probability that node \( i \) is visited for the first time at step \( t \) of a random walk starting from a uniformly selected node, and \( β(G) \) is a normalization constant determined by the graph structure; it is typically defined as the total sum of node weights,\[β(G) = \sum_{v \in \mathcal{N}} b(v),\]where \( b(v) \ge 0 \) denotes the weight of node \( v \). In the special case of an unweighted graph, this reduces to \( β(G) = N\), the number of nodes in \( G \).The RWD centrality can be interpreted as a weighted expectation of first-visit probabilities, where nodes reached earlier in the random walk contribute more strongly due to the exponential decay factor \( a^{t} \). W\k{a}s et al. [2] showed that random walk decay centrality behaves similarly to PageRank, but differs in that it accounts only for the
  <i>
   first
  </i>
  visit of the random walk to each node, rather than all subsequent visits. This property can make it more suitable in settings where early reachability or first-time discovery of nodes is of primary interest.
- <br/>
 </p>
 <h3>
  References

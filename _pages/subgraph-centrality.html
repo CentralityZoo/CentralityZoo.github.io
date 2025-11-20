@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Subgraph centrality
  </i>
@@ -28,16 +27,7 @@ search: true
  <i>
   closed
  </i>
- if its starting and ending nodes coincide [2]. The centrality \(c_s(i)\) of node \(i\) is the sum of weighted closed walks of all lengths starting and ending at node \(i\)
- <br/>
- \begin{equation*}
- <br/>
- c_{s}(i) = \sum_{k=0}^{\infty}{\frac{(A^k)_{ii}}{k!}}=[e^A]_{ii}=\sum_{j=1}^{N}{\left( v_j(i) \right)^2e^{λ_j}},
- <br/>
- \end{equation*}
- <br/>
- where \(A\) denotes the adjacency matrix of the graph \(G\), \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) associated with the eigenvalue \(λ_j\) of \(A\).
- <br/>
+ if its starting and ending nodes coincide [2]. The centrality \(c_s(i)\) of node \(i\) is the sum of weighted closed walks of all lengths starting and ending at node \(i\)\begin{equation*}c_{s}(i) = \sum_{k=0}^{\infty}{\frac{(A^k)_{ii}}{k!}}=[e^A]_{ii}=\sum_{j=1}^{N}{\left( v_j(i) \right)^2e^{λ_j}},\end{equation*}where \(A\) denotes the adjacency matrix of the graph \(G\), \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) associated with the eigenvalue \(λ_j\) of \(A\).
 </p>
 <h3>
  References

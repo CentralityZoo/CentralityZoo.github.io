@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   total communicability centrality
  </i>
- (TCC) quantifies how effectively each node communicates with all other nodes in a network [2]. It extends the concept of subgraph centrality, which evaluates all possible closed walks of different lengths. The centrality of node \(i\), \(c_{\mathrm{TTC}}(i)\), is defined as the sum of weighted walks of all lengths starting at node \(i\) and ending at any node \(j\):
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{TTC}}(i) = \sum_{k=0}^{\infty} \sum_{j=1}^{N} \frac{(A^k)_{ij}}{k!}
- <br/>
- = \sum_{j=1}^{N} [e^A]_{ij}
- <br/>
- = \sum_{j=1}^{N} \sum_{l=1}^{N} v_j(i) v_l(i) e^{λ_j},
- <br/>
- \end{equation*}
- <br/>
- where \(A\) is the adjacency matrix, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\). Benzi and Klymko [2] show that for networks with a large spectral gap (\(λ_1 \gg λ_2\)), the TTC and subgraph centralities converge to the eigenvector centrality, and they illustrate graph types for which TTC and subgraph centrality yield identical node rankings.
- <br/>
+ (TCC) quantifies how effectively each node communicates with all other nodes in a network [2]. It extends the concept of subgraph centrality, which evaluates all possible closed walks of different lengths. The centrality of node \(i\), \(c_{\mathrm{TTC}}(i)\), is defined as the sum of weighted walks of all lengths starting at node \(i\) and ending at any node \(j\):\begin{equation*}c_{\mathrm{TTC}}(i) = \sum_{k=0}^{\infty} \sum_{j=1}^{N} \frac{(A^k)_{ij}}{k!} = \sum_{j=1}^{N} [e^A]_{ij} = \sum_{j=1}^{N} \sum_{l=1}^{N} v_j(i) v_l(i) e^{λ_j},\end{equation*}where \(A\) is the adjacency matrix, \(v_j(i)\) is the \(i\)-th component of the eigenvector \(v_j\) corresponding to eigenvalue \(λ_j\) of \(A\). Benzi and Klymko [2] show that for networks with a large spectral gap (\(λ_1 \gg λ_2\)), the TTC and subgraph centralities converge to the eigenvector centrality, and they illustrate graph types for which TTC and subgraph centrality yield identical node rankings.
 </p>
 <h3>
  References

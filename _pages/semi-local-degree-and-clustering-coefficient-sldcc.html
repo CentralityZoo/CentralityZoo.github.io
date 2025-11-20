@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   semi-local degree and clustering coefficient
  </i>
- (SLDCC) is a hybrid centrality measure that evaluates the influence of a node based on its degree, clustering coefficient and the clustering coefficients of its second-level neighbors [2]. Berahmand et al. [2] argue that a node with high degree but low clustering coefficient can be considered a structural hole in the network, bridging otherwise disconnected regions. Furthermore, if the sum of the clustering coefficients of a node's second-level neighbors is high, it indicates that these neighbors reside in a densely connected part of the network.
- <br/>
- The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{SLDCC}(i) = \frac{d_i}{c_i + \frac{1}{d_i}} + \sum_{j \in \mathcal{N}^{(2)}(i)} c_j,
- <br/>
- \]
- <br/>
- where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), and \(\mathcal{N}^{(2)}(i)\) denotes the set of second-level neighbors of \(i\).
- <br/>
- Thus, the SLDCC measure combines three aspects: the degree of the node, the negative effect of its own clustering coefficient, and the positive effect of the clustering coefficients of its second-level neighbors.
- <br/>
+ (SLDCC) is a hybrid centrality measure that evaluates the influence of a node based on its degree, clustering coefficient and the clustering coefficients of its second-level neighbors [2]. Berahmand
+ <i>
+  et al.
+ </i>
+ [2] argue that a node with high degree but low clustering coefficient can be considered a structural hole in the network, bridging otherwise disconnected regions. Furthermore, if the sum of the clustering coefficients of a node's second-level neighbors is high, it indicates that these neighbors reside in a densely connected part of the network.The centrality of node \(i\) is defined as\[c_{SLDCC}(i) = \frac{d_i}{c_i + \frac{1}{d_i}} + \sum_{j \in \mathcal{N}^{(2)}(i)} c_j,\]where \(d_i\) and \(c_i\) are the degree and clustering coefficient of node \(i\), and \(\mathcal{N}^{(2)}(i)\) denotes the set of second-level neighbors of \(i\). Thus, the SLDCC measure combines three aspects: the degree of the node, the negative effect of its own clustering coefficient, and the positive effect of the clustering coefficients of its second-level neighbors.
 </p>
 <h3>
  References

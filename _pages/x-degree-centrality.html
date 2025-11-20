@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   X-degree centrality
  </i>
@@ -24,40 +23,15 @@ search: true
  <i>
   non-backtracking
  </i>
- path is a sequence of edges in which the path never immediately revisits the previous node: for a path \(v_1 \to v_2 \to \dots \to v_m\), we require \(v_{k+1} \neq v_{k-1}\) for all \(k = 2,\dots,m-1\).
- <br/>
- Let \(G\) be a graph with adjacency matrix \(A\) and node degrees \(d_j = \sum_k a_{jk}\). For node \(i\), let \(F\) be the NB matrix of the star graph centered at \(i\), \(D\) the matrix with rows indexed by edges not incident to \(i\) and columns by edges incident to \(i\), and \(E\) the matrix with rows indexed by edges incident to \(i\) and columns by edges not incident to \(i\). The entries of \(D\) and \(E\) enforce the non-backtracking condition:
- <br/>
- \[
- <br/>
- D_{k \to l, i \to j} = a_{ik} a_{ij} (1 - δ_{kj}), \qquad
- <br/>
- E_{i \to j, k \to l} = a_{ik} a_{ij} (1 - δ_{kj}),
- <br/>
- \]
- <br/>
- where \(δ_{kj}\) is the Kronecker delta preventing immediate backtracking.
- <br/>
- Define \(X = D F E\) and \(P = \begin{bmatrix} 0 &amp; I \\ I &amp; 0 \end{bmatrix}\). The
+ path is a sequence of edges in which the path never immediately revisits the previous node: for a path \(v_1 \to v_2 \to \dots \to v_m\), we require \(v_{k+1} \neq v_{k-1}\) for all \(k = 2,\dots,m-1\).Let \(G\) be a graph with adjacency matrix \(A\) and node degrees \(d_j = \sum_k a_{jk}\). For node \(i\), let \(F\) be the NB matrix of the star graph centered at \(i\), \(D\) the matrix with rows indexed by edges not incident to \(i\) and columns by edges incident to \(i\), and \(E\) the matrix with rows indexed by edges incident to \(i\) and columns by edges not incident to \(i\). The entries of \(D\) and \(E\) enforce the non-backtracking condition:\[D_{k \to l, i \to j} = a_{ik} a_{ij} (1 - δ_{kj}), \qquadE_{i \to j, k \to l} = a_{ik} a_{ij} (1 - δ_{kj}),\]where \(δ_{kj}\) is the Kronecker delta preventing immediate backtracking.Define \(X = D F E\) and \(P = \begin{bmatrix} 0 &amp; I \\ I &amp; 0 \end{bmatrix}\). The
  <i>
   X
  </i>
- -degree centrality of node \(i\) is
- <br/>
- \[
- <br/>
- c_{X\text{-degree}}(i) = \mathbf{1}^T P X \mathbf{1}
- <br/>
- = \Big( \sum_j a_{ij} (d_j - 1) \Big)^2 - \sum_j a_{ij} (d_j - 1)^2,
- <br/>
- \]
- <br/>
- where \(\mathbf{1}\) is the all-ones vector. This measure captures the node’s importance in supporting non-backtracking paths using only local degree information and serves as an upper bound for the
+ -degree centrality of node \(i\) is\[c_{X\text{-degree}}(i) = \mathbf{1}^T P X \mathbf{1} = \Big( \sum_j a_{ij} (d_j - 1) \Big)^2 - \sum_j a_{ij} (d_j - 1)^2,\]where \(\mathbf{1}\) is the all-ones vector. This measure captures the node’s importance in supporting non-backtracking paths using only local degree information and serves as an upper bound for the
  <i>
   X
  </i>
  -non-backtracking centrality, providing a computationally simpler approximation.
- <br/>
 </p>
 <h3>
  References

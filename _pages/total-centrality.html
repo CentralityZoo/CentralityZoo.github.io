@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Total centrality
  </i>
- is an induced (vitality) centrality measure in which the sum of centrality scores is a graph invariant [2]. Let \(G_i\) denote the subgraph obtained by removing node \(i\) from \(G\). The total centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{T}(i) = \sum_{j \in \mathcal{N}} c(j,G) - \sum_{j \in \mathcal{N} \setminus \{i\}} c(j,G_i)
- <br/>
- = c(i,G) + \sum_{j \in \mathcal{N} \setminus \{i\}} \bigl( c(j,G) - c(j,G_i) \bigr),
- <br/>
- \end{equation*}
- <br/>
- where \(c(i,G)\) is the endogenous centrality of node \(i\) in \(G\), that is, its standard centrality measure (e.g., degree, closeness, or betweenness) computed on the original graph. For example, if the underlying centrality \(c(i,G)\) is the degree \(d_i\), then the total degree centrality equals \(2 d_i\).
- <br/>
- Total centrality accounts for both the node’s own centrality and its contribution to the centrality of other nodes.
- <br/>
+ is an induced (vitality) centrality measure in which the sum of centrality scores is a graph invariant [2]. Let \(G_i\) denote the subgraph obtained by removing node \(i\) from \(G\). The total centrality of node \(i\) is defined as\begin{equation*}c_{T}(i) = \sum_{j \in \mathcal{N}} c(j,G) - \sum_{j \in \mathcal{N} \setminus \{i\}} c(j,G_i) = c(i,G) + \sum_{j \in \mathcal{N} \setminus \{i\}} \bigl( c(j,G) - c(j,G_i) \bigr),\end{equation*}where \(c(i,G)\) is the endogenous centrality of node \(i\) in \(G\), that is, its standard centrality measure (e.g., degree, closeness, or betweenness) computed on the original graph. For example, if the underlying centrality \(c(i,G)\) is the degree \(d_i\), then the total degree centrality equals \(2 d_i\). Total centrality accounts for both the node’s own centrality and its contribution to the centrality of other nodes.
 </p>
 <h3>
  References

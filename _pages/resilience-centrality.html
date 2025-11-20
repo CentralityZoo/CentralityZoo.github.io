@@ -16,58 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Resilience centrality
  </i>
- quantifies the ability of a single node to affect the overall resilience of a networked system [2]. Specifically, the resilience centrality \(c_{R}(i)\) of node \(i\) measures the importance of the node to system resilience by evaluating the relative change in resilience after its removal:
- <br/>
- \[
- <br/>
- c_{R}(i) = \frac{β_{\text{eff}}(G) - β_{\text{eff}}(G_i)}{β_{\text{eff}}(G)},
- <br/>
- \]
- <br/>
- where \(G_i\) denotes the subgraph obtained by removing node \(i\), and \(β_{\text{eff}}(G)\) captures the influence of the network structure on system resilience, defined as
- <br/>
- \[
- <br/>
- β_{\text{eff}}(G) = \frac{\langle d^2 \rangle}{\langle d \rangle},
- <br/>
- \]
- <br/>
- with \(\langle d \rangle = \frac{1}{N} \sum_{i=1}^{N} d_i\) being the average degree of the network, and \(\langle k^2 \rangle = \frac{1}{N} \sum_{i=1}^{N} d_i^2\) being the average squared degree.
- <br/>
- For
+ quantifies the ability of a single node to affect the overall resilience of a networked system [2]. Specifically, the resilience centrality \(c_{R}(i)\) of node \(i\) measures the importance of the node to system resilience by evaluating the relative change in resilience after its removal:\[c_{R}(i) = \frac{β_{\text{eff}}(G) - β_{\text{eff}}(G_i)}{β_{\text{eff}}(G)},\]where \(G_i\) denotes the subgraph obtained by removing node \(i\), and \(β_{\text{eff}}(G)\) captures the influence of the network structure on system resilience, defined as\[β_{\text{eff}}(G) = \frac{\langle d^2 \rangle}{\langle d \rangle},\]with \(\langle d \rangle = \frac{1}{N} \sum_{i=1}^{N} d_i\) being the average degree of the network, and \(\langle k^2 \rangle = \frac{1}{N} \sum_{i=1}^{N} d_i^2\) being the average squared degree.For
  <i>
   directed networks
  </i>
- , resilience centrality is expressed as
- <br/>
- \[
- <br/>
- c_{R}(i) = \frac{\sum_{j=1}^N (a_{ij} d_i^{\text{in}} + a_{ji} d_i^{\text{out}}) + d_i^{\text{in}} d_i^{\text{out}}}{\sum_{j=1}^N d_j^{\text{in}} d_j^{\text{out}}} - \frac{d_i^{\text{in}} + d_i^{\text{out}}}{\sum_{j=1}^N d_j^{\text{in}}},
- <br/>
- \]
- <br/>
- where \(d_i^{\text{in}}\) and \(d_i^{\text{out}}\) denote the in-degree and out-degree of node \(i\), respectively.
- <br/>
- For
+ , resilience centrality is expressed as\[c_{R}(i) = \frac{\sum_{j=1}^N (a_{ij} d_i^{\text{in}} + a_{ji} d_i^{\text{out}}) + d_i^{\text{in}} d_i^{\text{out}}}{\sum_{j=1}^N d_j^{\text{in}} d_j^{\text{out}}} - \frac{d_i^{\text{in}} + d_i^{\text{out}}}{\sum_{j=1}^N d_j^{\text{in}}},\]where \(d_i^{\text{in}}\) and \(d_i^{\text{out}}\) denote the in-degree and out-degree of node \(i\), respectively.For
  <i>
   undirected networks
  </i>
- , the expression simplifies to
- <br/>
- \[
- <br/>
- c_{R}(i) = \frac{2 \sum_{j=1}^N a_{ij} d_j + d_i^2}{\sum_{j=1}^N d_j^2} - \frac{2 d_i}{\sum_{j=1}^N d_j},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\).
- <br/>
- Resilience centrality has been applied to epidemic spreading dynamics modeled by the SIS process and validated by comparing its predictions with node importance rankings derived from system state changes and simulated collapse scenarios [2].
- <br/>
+ , the expression simplifies to\[c_{R}(i) = \frac{2 \sum_{j=1}^N a_{ij} d_j + d_i^2}{\sum_{j=1}^N d_j^2} - \frac{2 d_i}{\sum_{j=1}^N d_j}.\]Resilience centrality has been applied to epidemic spreading dynamics modeled by the SIS process and validated by comparing its predictions with node importance rankings derived from system state changes and simulated collapse scenarios [2].
 </p>
 <h3>
  References

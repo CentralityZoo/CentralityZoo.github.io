@@ -16,24 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Rapid identifying method
  </i>
- (RIM) is designed to efficiently identify a fraction of highly influential nodes based on node degree and network structure [2]. The core idea of RIM is to start from randomly selected seed nodes and iteratively move toward neighbors with higher degrees, under the assumption that high-degree nodes are more likely to play key roles in spreading dynamics. By exploring multiple such paths and selecting the most connected nodes discovered, RIM balances randomness with structural importance.
- <br/>
- The method proceeds as follows:
- <br/>
+ (RIM) is designed to efficiently identify a fraction of highly influential nodes based on node degree and network structure [2]. The core idea of RIM is to start from randomly selected seed nodes and iteratively move toward neighbors with higher degrees, under the assumption that high-degree nodes are more likely to play key roles in spreading dynamics. By exploring multiple such paths and selecting the most connected nodes discovered, RIM balances randomness with structural importance.  The method proceeds as follows:
  <ol>
-  <br/>
   <li>
    <i>
     Seed Selection:
    </i>
    randomly select \(m\) seed nodes \(s_i\), where \(i = 1, 2, \dots, m\).
   </li>
-  <br/>
   <li>
    <i>
     Greedy Expansion:
@@ -44,24 +38,21 @@ search: true
     \]
     If multiple neighbors share the same highest degree, one is chosen at random. This process generates a total of \(m \times j\) candidate nodes.
   </li>
-  <br/>
   <li>
    <i>
     Target Selection:
    </i>
    rank the \(m \times j\) candidate nodes by degree and select the top \(j\) nodes as the final target set \(T_j\).
   </li>
-  <br/>
   <li>
    Repeat steps 1-3 for \(n\) independent iterations.
   </li>
-  <br/>
  </ol>
- <br/>
- The final RIM score of each node is determined by counting the number of times it appears in the top \(j\) sets across all \(n\) iterations, with nodes appearing more frequently considered more influential.
- <br/>
- Song et al. [2] consider the parameters \(m = 1\), \(n = 500\), and \(j \in \{5, 10\}\). The performance of RIM is typically evaluated using the susceptible-infected-recovered (SIR) model and compared against four classical centrality measures.
- <br/>
+ The final RIM score of each node is determined by counting the number of times it appears in the top \(j\) sets across all \(n\) iterations, with nodes appearing more frequently considered more influential.  Song
+ <i>
+  et al.
+ </i>
+ [2] consider the parameters \(m = 1\), \(n = 500\), and \(j \in \{5, 10\}\). The performance of RIM is typically evaluated using the susceptible-infected-recovered (SIR) model and compared against four classical centrality measures.
 </p>
 <h3>
  References

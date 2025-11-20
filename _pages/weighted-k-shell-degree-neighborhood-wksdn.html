@@ -16,37 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   weighted \textit{k
  </i>
- -shell degree neighborhood} (WKSDN) is a parameter-free hybrid centrality measure that integrates both the degree and \(k\)-shell index of nodes in a network [2]. Unlike the weighted \(k\)-shell degree (Wksd) measure proposed by Namtirtha et al. [3], Maji's formulation estimates the weight of each edge \((i,j)\) as
- <br/>
- \[
- <br/>
- w_{ij} = (k_s(i) + k_s(j)) + λ (d_i + d_j),
- <br/>
- \]
- <br/>
- where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell index of node \(i\), respectively. The parameter \(λ\) serves as a normalization factor and is defined as
- <br/>
- \[
- <br/>
- λ = \frac{\sum_{i=1}^{N} k_s(i)}{\sum_{i=1}^{N} d_i}.
- <br/>
- \]
- <br/>
- The centrality of node \(i\) is then calculated as the sum of the weights of all its incident edges:
- <br/>
- \[
- <br/>
- c_{\mathrm{WKSDN}}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
- <br/>
+ -shell degree neighborhood} (WKSDN) is a parameter-free hybrid centrality measure that integrates both the degree and \(k\)-shell index of nodes in a network [2]. Unlike the weighted \(k\)-shell degree (Wksd) measure proposed by Namtirtha
+ <i>
+  et al.
+ </i>
+ [3], Maji's formulation estimates the weight of each edge \((i,j)\) as\[w_{ij} = (k_s(i) + k_s(j)) + λ (d_i + d_j),\]where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell index of node \(i\), respectively. The parameter \(λ\) serves as a normalization factor and is defined as\[λ = \frac{\sum_{i=1}^{N} k_s(i)}{\sum_{i=1}^{N} d_i}.\]The centrality of node \(i\) is then calculated as the sum of the weights of all its incident edges:\[c_{\mathrm{WKSDN}}(i) = \sum_{j \in \mathcal{N}(i)} w_{ij},\]where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
 </p>
 <h3>
  References

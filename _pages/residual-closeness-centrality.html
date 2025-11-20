@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Residual closeness centrality
  </i>
- , also known as Dangalchev closeness centrality, evaluates node closeness after the removal of nodes or edges, with shortest-path lengths weighted by an exponential decay [2]. Let \(G_i\) denote the subgraph of \(G\) obtained by removing node \(i\). Then the residual closeness centrality of node \(i\) equals
- <br/>
- \begin{equation*}
- <br/>
- c_{residual}(i) = \sum_{j \neq k \neq i}\frac{1}{2^{d_{jk}(G_i)}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{jk}(G_i)\) denote the shortest-path distance between nodes \(j\) and \(k\) in \(G_i\). Thus, residual closeness reflects the distance-based importance of a node by quantifying the effect of its removal on the overall connectivity of the network.
- <br/>
+ , also known as Dangalchev closeness centrality, evaluates node closeness after the removal of nodes or edges, with shortest-path lengths weighted by an exponential decay [2]. Let \(G_i\) denote the subgraph of \(G\) obtained by removing node \(i\). Then the residual closeness centrality of node \(i\) equals\begin{equation*}c_{residual}(i) = \sum_{j \neq k \neq i}\frac{1}{2^{d_{jk}(G_i)}},\end{equation*}where \(d_{jk}(G_i)\) denote the shortest-path distance between nodes \(j\) and \(k\) in \(G_i\). Thus, residual closeness reflects the distance-based importance of a node by quantifying the effect of its removal on the overall connectivity of the network.
 </p>
 <h3>
  References

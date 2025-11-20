@@ -16,32 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Transportation centrality
  </i>
- (TC) is a variant of betweenness centrality that incorporates traffic flow dynamics in transportation networks [2]. Let \(P_{s,t}\) denote the set of all simple paths between nodes \(s\) and \(t\), and \(P^i_{s,t}\) the subset of those paths that pass through node \(i\). The transportation centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{TC}}(i) = \frac{1}{(N-1)(N-2)}
- <br/>
- \sum_{s \neq i \neq t}
- <br/>
- \frac{\sum_{p \in P^i_{s,t}} e^{-β C^p_{s,t}}}
- <br/>
- {\sum_{p \in P_{s,t}} e^{-β C^p_{s,t}}},
- <br/>
- \end{equation*}
- <br/>
- where \(C^p_{s,t}\) denotes the total cost of path \(p\) from node \(s\) to node \(t\), which may include travel distance, travel time, or other generalized measures of effort. The parameter \(β \ge 0\) regulates the sensitivity of the model to path costs, with larger values of \(β\) exponentially reducing the contribution of higher-cost paths.
- <br/>
- The transportation centrality assumes that the probability of selecting a path \(p\) decreases exponentially with its cost \(C^p_{s,t}\). In the limiting case \(β \to \infty\), transportation centrality converges to classical betweenness centrality, as only the lowest-cost paths dominate. When \(β = 0\), all paths are equally likely, and the measure reduces to the
+ (TC) is a variant of betweenness centrality that incorporates traffic flow dynamics in transportation networks [2]. Let \(P_{s,t}\) denote the set of all simple paths between nodes \(s\) and \(t\), and \(P^i_{s,t}\) the subset of those paths that pass through node \(i\). The transportation centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{TC}}(i) = \frac{1}{(N-1)(N-2)} \sum_{s \neq i \neq t} \frac{\sum_{p \in P^i_{s,t}} e^{-β C^p_{s,t}}}{\sum_{p \in P_{s,t}} e^{-β C^p_{s,t}}},\end{equation*}where \(C^p_{s,t}\) denotes the total cost of path \(p\) from node \(s\) to node \(t\), which may include travel distance, travel time, or other generalized measures of effort. The parameter \(β \ge 0\) regulates the sensitivity of the model to path costs, with larger values of \(β\) exponentially reducing the contribution of higher-cost paths.The transportation centrality assumes that the probability of selecting a path \(p\) decreases exponentially with its cost \(C^p_{s,t}\). In the limiting case \(β \to \infty\), transportation centrality converges to classical betweenness centrality, as only the lowest-cost paths dominate. When \(β = 0\), all paths are equally likely, and the measure reduces to the
  <i>
   all-path betweenness centrality (ABC)
  </i>
  proposed by Piraveenan and Saripada [2].
- <br/>
 </p>
 <h3>
  References

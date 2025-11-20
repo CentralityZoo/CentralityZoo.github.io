@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   third Laplacian energy centrality
  </i>
- (LC) is an eigenvalue-based method for identifying influential nodes in complex networks, derived from the concept of Laplacian energy [2]. It represents a special case of the \(k\)-th Laplacian energy centrality with \(k = 3\). The centrality \(c_{LC}(i)\) of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{LC}(i) = E^k_L(G) - E^k_L(G_i),
- <br/>
- \]
- <br/>
- where \(G_i\) denotes the subgraph of \(G\) obtained by removing node \(i\), and \(E^k_L(G)\) is the \(k\)-th Laplacian energy of the network \(G\), given by
- <br/>
- \[
- <br/>
- E^k_L(G) = \sum_{j=1}^{N} μ_j^k,
- <br/>
- \]
- <br/>
- where \(μ_1, \dots, μ_N\) are the eigenvalues of the Laplacian matrix of \(G\).
- <br/>
- Zhao and Sun [2] demonstrated that the case \(k = 3\) yields superior performance in identifying influential nodes compared with other values of \(k\). The third Laplacian energy centrality is particularly effective for detecting influential spreaders in complex networks and is typically evaluated using the susceptible-infected-recovered (SIR) epidemic model.
- <br/>
+ (LC) is an eigenvalue-based method for identifying influential nodes in complex networks, derived from the concept of Laplacian energy [2]. It represents a special case of the \(k\)-th Laplacian energy centrality with \(k = 3\). The centrality \(c_{LC}(i)\) of node \(i\) is defined as\[c_{LC}(i) = E^k_L(G) - E^k_L(G_i),\]where \(G_i\) denotes the subgraph of \(G\) obtained by removing node \(i\), and \(E^k_L(G)\) is the \(k\)-th Laplacian energy of the network \(G\), given by\[E^k_L(G) = \sum_{j=1}^{N} μ_j^k,\]where \(μ_1, \dots, μ_N\) are the eigenvalues of the Laplacian matrix of \(G\).  Zhao and Sun [2] demonstrated that the case \(k = 3\) yields superior performance in identifying influential nodes compared with other values of \(k\). The third Laplacian energy centrality is particularly effective for detecting influential spreaders in complex networks and is typically evaluated using the susceptible-infected-recovered (SIR) epidemic model.
 </p>
 <h3>
  References

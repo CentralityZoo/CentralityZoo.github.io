@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   truncated curvature index
  </i>
- is a simplified version of the curvature index that limits the computation to simplices of dimension \(d \leq 2\), i.e., cliques of size up to three [2]. For a node \(i\), it is defined as
- <br/>
- \[
- <br/>
- K_{\mathrm{trunc}}(i) = \sum_{k=0}^{2} (-1)^k \frac{V_{k-1}(i)}{k+1} =1 - \frac{d_i}{2} + \frac{t_i}{3},
- <br/>
- \]
- <br/>
- where \(V_k(i)\) denotes the number of \((k{+}1)\)-cliques incident to node \(i\), \(d_i\) is the degree of node \(i\) and \(t_i\) is the number of triangles passing through node \(i\).
- <br/>
- The truncated curvature index is particularly useful for analyzing large-scale networks where computing higher-dimensional cliques is computationally expensive, yet the essential topological and curvature properties of nodes are still captured.
- <br/>
+ is a simplified version of the curvature index that limits the computation to simplices of dimension \(d \leq 2\), i.e., cliques of size up to three [2]. For a node \(i\), it is defined as\[K_{\mathrm{trunc}}(i) = \sum_{k=0}^{2} (-1)^k \frac{V_{k-1}(i)}{k+1} =1 - \frac{d_i}{2} + \frac{t_i}{3},\]where \(V_k(i)\) denotes the number of \((k{+}1)\)-cliques incident to node \(i\), \(d_i\) is the degree of node \(i\) and \(t_i\) is the number of triangles passing through node \(i\).  The truncated curvature index is particularly useful for analyzing large-scale networks where computing higher-dimensional cliques is computationally expensive, yet the essential topological and curvature properties of nodes are still captured.
 </p>
 <h3>
  References

@@ -16,31 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   semi-local iterative algorithm
  </i>
- (semi-IA) is an iterative centrality measure in which the importance of a node depends on the importance of other nodes, weighted by both the shortest-path distance and the number of shortest paths (NSPs) connecting them [2].
- <br/>
- For a node \(i\), the update rule at iteration \(t+1\) is defined as
- <br/>
- \[
- <br/>
- X_i[t+1] = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{n_{ij}^{γ}}{d_{ij}} X_j'[t], \quad X_i[0] = 1, \quad i = 1, \dots, N,
- <br/>
- \]
- <br/>
- where \(\mathcal{N}^{(\leq l)}(i)\) is the set of nodes within distance \(l\) from node \(i\), \(n_{ij}\) is the number of shortest paths between \(i\) and \(j\), \(0 \leq γ \leq 1\) is the NSP weighting factor, and \(X_j'[t]\) is the normalized influence of node \(j\) at iteration \(t\):
- <br/>
- \[
- <br/>
- X_j'[t] = \frac{X_j[t]}{\| X[t] \|}.
- <br/>
- \]
- <br/>
- Luan et al. [2] suggest setting the truncated radius \(l = 3\) for networks with fewer than 1000 nodes, and \(l = 5\) for larger networks, with \(γ = 0.2\). The semi-IA centrality of node \(i\) is the value \(\tilde{X}_i=\lim_{t \rightarrow \infty}X_i[t]\) at the steady state of the iteration.
- <br/>
+ (semi-IA) is an iterative centrality measure in which the importance of a node depends on the importance of other nodes, weighted by both the shortest-path distance and the number of shortest paths (NSPs) connecting them [2]. For a node \(i\), the update rule at iteration \(t+1\) is defined as\[X_i[t+1] = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{n_{ij}^{γ}}{d_{ij}} X_j'[t], \quad X_i[0] = 1, \quad i = 1, \dots, N,\]where \(\mathcal{N}^{(\leq l)}(i)\) is the set of nodes within distance \(l\) from node \(i\), \(n_{ij}\) is the number of shortest paths between \(i\) and \(j\), \(0 \leq γ \leq 1\) is the NSP weighting factor, and \(X_j'[t]\) is the normalized influence of node \(j\) at iteration \(t\):\[X_j'[t] = \frac{X_j[t]}{\| X[t] \|}.\]Luan
+ <i>
+  et al.
+ </i>
+ [2] suggest setting the truncated radius \(l = 3\) for networks with fewer than 1000 nodes, and \(l = 5\) for larger networks, with \(γ = 0.2\). The semi-IA centrality of node \(i\) is the value \(X̃_i=\lim_{t \rightarrow \infty}X_i[t]\) at the steady state of the iteration.
 </p>
 <h3>
  References

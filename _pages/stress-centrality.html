@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Stress centrality
  </i>
- quantifies the amount of "stress" a node experiences due to the network's activity, quantified by how often the node lies on the shortest paths connecting pairs of other nodes [2]. For a node \(i\), the stress centrality, denoted by \(c_{Stress}(i)\), is defined as the total number of shortest paths between all pairs of nodes that pass through \(i\):
- <br/>
- \begin{equation*}
- <br/>
- c_{Stress}(i) = \sum_{j \neq k \neq i} σ_{jk}(i),
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}(i)\) denotes the number of shortest paths from node \(j\) to node \(k\) that pass through node \(i\).
- <br/>
+ quantifies the amount of "stress" a node experiences due to the network's activity, quantified by how often the node lies on the shortest paths connecting pairs of other nodes [2]. For a node \(i\), the stress centrality, denoted by \(c_{Stress}(i)\), is defined as the total number of shortest paths between all pairs of nodes that pass through \(i\):\begin{equation*}c_{Stress}(i) = \sum_{j \neq k \neq i} σ_{jk}(i),\end{equation*}where \(σ_{jk}(i)\) denotes the number of shortest paths from node \(j\) to node \(k\) that pass through node \(i\).
 </p>
 <h3>
  References

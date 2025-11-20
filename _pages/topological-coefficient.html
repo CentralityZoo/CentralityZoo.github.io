@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   topological coefficient
  </i>
- quantifies the extent to which a node shares its neighbors with other nodes in the network [2]. For a given node \(i\), the topological coefficient is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{top}}(i) = \frac{\sum_{j=1}^N |\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i)| \cdot |\{v: \mathcal{N}(i) \cap \mathcal{N}(v) \neq \emptyset\}|},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of \(i\).
- <br/>
- The topological coefficient ranges from 0 to 1. A value of \(c_{\mathrm{top}}(i) = 0\) indicates that node \(i\) does not share any neighbors with other nodes,
- <br/>
- while higher values indicate that a larger fraction of \(i\)'s neighbors are shared with other nodes. The coefficient equals 1 if and only if every neighbor of \(i\) is shared with every node that shares at least one neighbor with \(i\). Intuitively, nodes with a high topological coefficient are embedded in tightly interconnected neighborhoods, whereas nodes with low values are more topologically isolated.
- <br/>
+ quantifies the extent to which a node shares its neighbors with other nodes in the network [2]. For a given node \(i\), the topological coefficient is defined as\begin{equation*}c_{\mathrm{top}}(i) = \frac{\sum_{j=1}^N |\mathcal{N}(i) \cap \mathcal{N}(j)|}{|\mathcal{N}(i)| \cdot |\{v: \mathcal{N}(i) \cap \mathcal{N}(v) \neq \emptyset\}|},\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of \(i\).  The topological coefficient ranges from 0 to 1. A value of \(c_{\mathrm{top}}(i) = 0\) indicates that node \(i\) does not share any neighbors with other nodes, while higher values indicate that a larger fraction of \(i\)'s neighbors are shared with other nodes. The coefficient equals 1 if and only if every neighbor of \(i\) is shared with every node that shares at least one neighbor with \(i\). Intuitively, nodes with a high topological coefficient are embedded in tightly interconnected neighborhoods, whereas nodes with low values are more topologically isolated.
 </p>
 <h3>
  References

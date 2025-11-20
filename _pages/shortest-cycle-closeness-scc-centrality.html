@@ -16,28 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Shortest cycle closeness
  </i>
- (SCC) centrality is a variation of closeness centrality that accounts for the lengths of the shortest cycles involving a node [2]. Zhou et al. introduce the concept of the
+ (SCC) centrality is a variation of closeness centrality that accounts for the lengths of the shortest cycles involving a node [2]. Zhou
+ <i>
+  et al.
+ </i>
+ introduce the concept of the
  <i>
   shortest cycle
  </i>
- containing two nodes, which provides an alternative to the shortest path by effectively forming two independent paths between the nodes.
- <br/>
- For node \(i\), the SCC centrality \(c_{SCC}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{SCC}(i) = \frac{1}{\sum_{j=1}^{N} l_{ij}},
- <br/>
- \]
- <br/>
- where \(l_{ij}\) is the length of the shortest cycle that contains both nodes \(i\) and \(j\). If no cycle exists between \(i\) and \(j\), then \(l_{ij} = d_{ij} + N\), where \(d_{ij}\) is the shortest path distance between \(i\) and \(j\), and \(N\) is the total number of nodes in the network.
- <br/>
- The SCC centrality generalizes traditional closeness centrality by emphasizing nodes that participate in short cycles, thereby capturing robustness in networks where direct shortest paths may be unavailable.
- <br/>
+ containing two nodes, which provides an alternative to the shortest path by effectively forming two independent paths between the nodes.  For node \(i\), the SCC centrality \(c_{SCC}(i)\) is defined as\[c_{SCC}(i) = \frac{1}{\sum_{j=1}^{N} l_{ij}},\]where \(l_{ij}\) is the length of the shortest cycle that contains both nodes \(i\) and \(j\). If no cycle exists between \(i\) and \(j\), then \(l_{ij} = d_{ij} + N\), where \(d_{ij}\) is the shortest path distance between \(i\) and \(j\), and \(N\) is the total number of nodes in the network.The SCC centrality generalizes traditional closeness centrality by emphasizing nodes that participate in short cycles, thereby capturing robustness in networks where direct shortest paths may be unavailable.
 </p>
 <h3>
  References

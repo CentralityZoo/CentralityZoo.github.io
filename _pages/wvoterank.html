@@ -16,15 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   WVoteRank
  </i>
  centrality is a modification of VoteRank that incorporates both the number of neighbors and the weight of each link [2]. Each node \(i\) is represented by the tuple \((s_i, v_i)\), where \(s_i\) is the voting score and \(v_i\) is the voting ability, initialized as \((s_i, v_i) = (0, 1)\) for all \(i \in \mathcal{N}\). The voting procedure iteratively performs the following steps:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Vote:
@@ -35,14 +32,12 @@ search: true
     \end{equation*}
     where \(w_{ji}\) is the weight of the link from node \(j\) to node \(i\) and \(d_i\) is the degree of node \(i\).
   </li>
-  <br/>
   <li>
    <i>
     Select:
    </i>
    The node \(k\) with the highest voting score \(s_k\) is elected. Node \(k\) will not participate in subsequent voting turns, i.e., its voting ability is set to zero (\(v_k = 0\)).
   </li>
-  <br/>
   <li>
    <i>
     Update:
@@ -53,11 +48,8 @@ search: true
     \end{equation*}
     where \(f\) is typically set to the inverse of the average degree of the network, i.e. \(f=1/\langle d \rangle\).
   </li>
-  <br/>
  </ol>
- <br/>
  WVoteRank prioritizes nodes that are both well-connected and linked through high-weight edges, ensuring that influential nodes are identified while accounting for the propagation of influence through their neighbors.
- <br/>
 </p>
 <h3>
  References

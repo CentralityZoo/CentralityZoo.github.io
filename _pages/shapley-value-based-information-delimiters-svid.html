@@ -16,22 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Shapley Value based Information Delimiters
  </i>
- (SVID) is a group-based, game-theoretic centrality measure that uses the Shapley value to quantify each node's contribution to network connectivity and information flow [2]. The method targets nodes whose removal would either increase shortest-path distances among remaining nodes or reduce the number of alternative paths connecting them. Intuitively, nodes with fewer common neighbors are more critical, as they limit the availability of alternative paths in the network.
- <br/>
- Saxena et al. [2] propose an efficient algorithm to rank nodes by their marginal contributions across all possible coalitions. The marginal contribution of a link \((i,j)\) to the Shapley value of nodes \(i\) and \(j\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- \text{MC}(i,j) = \frac{1}{(K+1)(K+2)},
- <br/>
- \end{equation*}
- <br/>
- where \(K\) is the number of common neighbors shared by nodes \(i\) and \(j\). At each iteration, the algorithm selects the node with the highest Shapley value, removes it from the graph \(G\), and reduces the Shapley values of its neighbors according to their marginal contributions. The final ranking reflects each node’s positional power and functional influence in maintaining network connectivity.
- <br/>
+ (SVID) is a group-based, game-theoretic centrality measure that uses the Shapley value to quantify each node's contribution to network connectivity and information flow [2]. The method targets nodes whose removal would either increase shortest-path distances among remaining nodes or reduce the number of alternative paths connecting them. Intuitively, nodes with fewer common neighbors are more critical, as they limit the availability of alternative paths in the network.  Saxena
+ <i>
+  et al.
+ </i>
+ [2] propose an efficient algorithm to rank nodes by their marginal contributions across all possible coalitions. The marginal contribution of a link \((i,j)\) to the Shapley value of nodes \(i\) and \(j\) is defined as\begin{equation*}\text{MC}(i,j) = \frac{1}{(K+1)(K+2)},\end{equation*}where \(K\) is the number of common neighbors shared by nodes \(i\) and \(j\). At each iteration, the algorithm selects the node with the highest Shapley value, removes it from the graph \(G\), and reduces the Shapley values of its neighbors according to their marginal contributions. The final ranking reflects each node’s positional power and functional influence in maintaining network connectivity.
 </p>
 <h3>
  References

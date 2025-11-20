@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Rumor centrality
  </i>
- quantifies the likelihood that a node is the source of information spread under the susceptible-infected (SI) model [2, 3].
- <br/>
- For a tree-structured infected subgraph \(G_N\) of \(N\) nodes, the rumor centrality of a candidate source node \(v\) is defined as
- <br/>
- \[
- <br/>
- R(v, G_N) = \frac{N!}{\prod_{u \in G_N} T^v_u},
- <br/>
- \]
- <br/>
- where \(T^v_u\) is the number of nodes in the subtree rooted at \(u\) when the tree is rooted at \(v\). The rumor centrality
- <br/>
- \(R(v, G_N)\) counts the number of infection sequences consistent with the SI model if \(v\) were the source.
- <br/>
- In regular trees, maximizing \(R(v, G_N)\) yields the exact maximum-likelihood rumor source (the
+ quantifies the likelihood that a node is the source of information spread under the susceptible-infected (SI) model [2, 3]. For a tree-structured infected subgraph \(G_N\) of \(N\) nodes, the rumor centrality of a candidate source node \(v\) is defined as\[R(v, G_N) = \frac{N!}{\prod_{u \in G_N} T^v_u},\]where \(T^v_u\) is the number of nodes in the subtree rooted at \(u\) when the tree is rooted at \(v\). The rumor centrality\(R(v, G_N)\) counts the number of infection sequences consistent with the SI model if \(v\) were the source.In regular trees, maximizing \(R(v, G_N)\) yields the exact maximum-likelihood rumor source (the
  <i>
   rumor center
  </i>
- ).
- <br/>
- For irregular trees, a randomized estimator weighted by \(R(v, G_N)\) is used, and for general graphs, \(R(v, G_N)\) is approximated on the breadth-first search (BFS) tree rooted at \(v\).
- <br/>
- Nodes with higher rumor centrality are more plausible spread origins and tend to be more influential in diffusion processes.
- <br/>
+ ). For irregular trees, a randomized estimator weighted by \(R(v, G_N)\) is used, and for general graphs, \(R(v, G_N)\) is approximated on the breadth-first search (BFS) tree rooted at \(v\). Nodes with higher rumor centrality are more plausible spread origins and tend to be more influential in diffusion processes.
 </p>
 <h3>
  References

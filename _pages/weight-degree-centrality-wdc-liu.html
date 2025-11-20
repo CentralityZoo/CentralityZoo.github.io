@@ -16,37 +16,27 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   weight degree centrality
  </i>
- (WDC) quantifies the influence of a node by considering both its own degree and the degrees of its neighbors [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{Wdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} d_j - d_i \right) d_i^{α},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\), while \(α\) is a tunable parameter that regulates the contribution of node \(i\)'s degree relative to its neighbors. Liu et al. [2] suggest setting \(α = |r|\), where \(r\) is the degree assortativity coefficient. This allows the centrality measure to adapt to the network type: in
+ (WDC) quantifies the influence of a node by considering both its own degree and the degrees of its neighbors [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{Wdc}(i) = \left( \sum_{j \in \mathcal{N}(i)} d_j - d_i \right) d_i^{α},\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\), while \(α\) is a tunable parameter that regulates the contribution of node \(i\)'s degree relative to its neighbors. Liu
+ <i>
+  et al.
+ </i>
+ [2] suggest setting \(α = |r|\), where \(r\) is the degree assortativity coefficient. This allows the centrality measure to adapt to the network type: in
  <i>
   assortative
  </i>
- networks (\(r&gt;0\)), high-degree nodes connecting to other high-degree nodes are emphasized;
- <br/>
- in
+ networks (\(r&gt;0\)), high-degree nodes connecting to other high-degree nodes are emphasized; in
  <i>
   disassortative
  </i>
- networks (\(r&lt;0\)), high-degree nodes connecting to low-degree nodes are emphasized;
- <br/>
- and in
+ networks (\(r&lt;0\)), high-degree nodes connecting to low-degree nodes are emphasized; and in
  <i>
   neutral
  </i>
  networks (\(r \approx 0\)), node degrees have uniform influence.
- <br/>
 </p>
 <h3>
  References

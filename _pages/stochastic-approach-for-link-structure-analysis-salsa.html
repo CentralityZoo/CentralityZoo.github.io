@@ -16,55 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Stochastic Approach for Link Structure Analysis
  </i>
- (SALSA) [2] is a variant of HITS centrality designed to mitigate the Tightly Knit Community (TKC) effect, in which rankings are biased toward small, highly interconnected communities. Unlike HITS, which directly uses the adjacency matrix \(A\), SALSA normalizes \(A\) based on node out-degrees.
- <br/>
- Formally, let \(D = \mathrm{diag}(d_1, \dots, d_N)\) be the diagonal matrix of node out-degrees, where \(d_i = \sum_{j=1}^N a_{ij}\). The row-normalized adjacency matrix \(\bar{A} = D^{-1} A\) is a row-stochastic matrix, where each row represents a probability distribution over the outgoing edges of the corresponding node. Thus, \(\bar{A}\) serves as the transition matrix of a Markov chain corresponding to a random walk on the network.
- <br/>
- SALSA computes hub and authority scores of nodes via
- <br/>
- \begin{equation*}
- <br/>
- \begin{cases}
- <br/>
- h = a \cdot \bar{A}^T, \\
- <br/>
- a = h \cdot \bar{A},
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(h\) and \(a\) are the hub and authority score vectors, respectively.
- <br/>
- SALSA is based on random walks on the bipartite graph \(\hat{G} = (\mathcal{N}_{hub}, \mathcal{N}_{authority}, E)\), where
- <br/>
- \[
- <br/>
- \mathcal{N}_{hub} = \{v_h \mid \sum_{j=1}^N a_{v_h j} &gt; 0\}, \quad
- <br/>
- \mathcal{N}_{authority} = \{v_a \mid \sum_{j=1}^N a_{j v_a} &gt; 0\}, \quad
- <br/>
- E = \{(v_h, v_a) \mid a_{v_h v_a} = 1\}.
- <br/>
- \]
- <br/>
- With \(\bar{A} = D^{-1}A\) the row-normalized adjacency matrix, the hub and authority scores are given by the stationary distributions of the Markov chains
- <br/>
- \[
- <br/>
- \bar{A} \bar{A}^T \quad (\text{hub-hub chain}), \qquad
- <br/>
- \bar{A}^T \bar{A} \quad (\text{authority-authority chain}).
- <br/>
- \]
- <br/>
- Boldi and Vigna [3] observe that SALSA does not require iterative computation. One first identifies the connected components of the symmetric graphs \(A^T A\) (for authorities) and \(A A^T\) (for hubs). A node’s SALSA score is then calculated as the product of its in-degree fraction within its component and the component’s size relative to the total number of nodes \(N\) in \(G\).
- <br/>
+ (SALSA) [2] is a variant of HITS centrality designed to mitigate the Tightly Knit Community (TKC) effect, in which rankings are biased toward small, highly interconnected communities. Unlike HITS, which directly uses the adjacency matrix \(A\), SALSA normalizes \(A\) based on node out-degrees.Formally, let \(D = \mathrm{diag}(d_1, \dots, d_N)\) be the diagonal matrix of node out-degrees, where \(d_i = \sum_{j=1}^N a_{ij}\). The row-normalized adjacency matrix \(\bar{A} = D^{-1} A\) is a row-stochastic matrix, where each row represents a probability distribution over the outgoing edges of the corresponding node. Thus, \(\bar{A}\) serves as the transition matrix of a Markov chain corresponding to a random walk on the network.SALSA computes hub and authority scores of nodes via\begin{equation*}\begin{cases}h = a \cdot \bar{A}^T, \\a = h \cdot \bar{A},\end{cases}\end{equation*}where \(h\) and \(a\) are the hub and authority score vectors, respectively.SALSA is based on random walks on the bipartite graph \(\hat{G} = (\mathcal{N}_{hub}, \mathcal{N}_{authority}, E)\), where\[\mathcal{N}_{hub} = \{v_h \mid \sum_{j=1}^N a_{v_h j} &gt; 0\}, \quad\mathcal{N}_{authority} = \{v_a \mid \sum_{j=1}^N a_{j v_a} &gt; 0\}, \quadE = \{(v_h, v_a) \mid a_{v_h v_a} = 1\}.\]With \(\bar{A} = D^{-1}A\) the row-normalized adjacency matrix, the hub and authority scores are given by the stationary distributions of the Markov chains\[\bar{A} \bar{A}^T \quad (\text{hub-hub chain}), \qquad\bar{A}^T \bar{A} \quad (\text{authority-authority chain}).\]Boldi and Vigna [3] observe that SALSA does not require iterative computation. One first identifies the connected components of the symmetric graphs \(A^T A\) (for authorities) and \(A A^T\) (for hubs). A node’s SALSA score is then calculated as the product of its in-degree fraction within its component and the component’s size relative to the total number of nodes \(N\) in \(G\).
 </p>
 <h3>
  References

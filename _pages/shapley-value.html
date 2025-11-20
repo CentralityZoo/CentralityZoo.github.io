@@ -16,29 +16,20 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  A class of game-theoretic network centrality measures based on the
  <i>
   Shapley value
  </i>
- from the cooperative game theory is discussed in [2]. The Shapley value \(SV(i)\) of node \(i\) is defined as the average marginal contribution of \(i\) to all possible coalitions of nodes \(C \subseteq \mathcal{N} \setminus \{i\}\):
- <br/>
- \begin{equation*}
- <br/>
- SV(i) = \sum_{C \subseteq \mathcal{N} \setminus \{i\}} \frac{(|C|-1)!(|\mathcal{N}|-|C|)!}{|\mathcal{N}|!} \left[ v(C \cup \{ i \}) - v(C) \right],
- <br/>
- \end{equation*}
- <br/>
- where \(v\) is a
+ from the cooperative game theory is discussed in [2]. The Shapley value \(SV(i)\) of node \(i\) is defined as the average marginal contribution of \(i\) to all possible coalitions of nodes \(C \subseteq \mathcal{N} \setminus \{i\}\):\begin{equation*} SV(i) = \sum_{C \subseteq \mathcal{N} \setminus \{i\}} \frac{(|C|-1)!(|\mathcal{N}|-|C|)!}{|\mathcal{N}|!} \left[ v(C \cup \{ i \}) - v(C) \right],\end{equation*}where \(v\) is a
  <i>
   characteristic function
  </i>
- that assigns to every coalition \(C\) a real number representing the value or performance of the coalition [3].
- <br/>
- Michalak et al. [2] proposed efficient linear-time algorithms to compute Shapley value-based centralities for specific definitions of the characteristic function \(v\):
- <br/>
+ that assigns to every coalition \(C\) a real number representing the value or performance of the coalition [3].Michalak
+ <i>
+  et al.
+ </i>
+ [2] proposed efficient linear-time algorithms to compute Shapley value-based centralities for specific definitions of the characteristic function \(v\):
  <ol>
-  <br/>
   <li>
    <i>
     Game 1:
@@ -49,7 +40,6 @@ search: true
     \end{equation*}
     where \(d_i\) is the degree of node \(i\).
   </li>
-  <br/>
   <li>
    <i>
     Game 2:
@@ -60,7 +50,6 @@ search: true
     \end{equation*}
     For \(k = 1\), this game is equivalent to Game 1.
   </li>
-  <br/>
   <li>
    <i>
     Game 3:
@@ -71,9 +60,7 @@ search: true
     \end{equation*}
     where \(s_i(d_{\max})\) denotes the set of nodes within distance \(d_{\max}\) from node \(i\).
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

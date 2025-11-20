@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   X-non-backtracking centrality
  </i>
- quantifies the effect of a node on the largest eigenvalue of the non-backtracking (NB) matrix of a network [2]. For node \(i\), let \(B'\) be the NB matrix after removing \(i\). The NB matrix of the original graph can be partitioned as
- <br/>
- \[
- <br/>
- B = \begin{bmatrix} B' &amp; D \\ E &amp; F \end{bmatrix},
- <br/>
- \]
- <br/>
- where \(F\) is the NB matrix of the star graph centered at \(i\), \(D\) has rows indexed by edges not incident to \(i\) and columns by edges incident to \(i\), and \(E\) has rows indexed by edges incident to \(i\) and columns by edges not incident to \(i\).
- <br/>
- Define \(X = D F E\) with entries \(X_{k \rightarrow l, i \rightarrow j} = a_{ik} a_{ij} (1 - δ_{kj})\) and \(P = \begin{bmatrix} 0 &amp; I \\ I &amp; 0 \end{bmatrix}\), where \(δ_{kj}\) is the Kronecker delta. Let \(v_1\) be the right eigenvector of \(B'\) and \(v_1^j = \sum_k a_{jk} v_{k \rightarrow j}\). Then the
+ quantifies the effect of a node on the largest eigenvalue of the non-backtracking (NB) matrix of a network [2]. For node \(i\), let \(B'\) be the NB matrix after removing \(i\). The NB matrix of the original graph can be partitioned as\[B = \begin{bmatrix} B' &amp; D \\ E &amp; F \end{bmatrix},\]where \(F\) is the NB matrix of the star graph centered at \(i\), \(D\) has rows indexed by edges not incident to \(i\) and columns by edges incident to \(i\), and \(E\) has rows indexed by edges incident to \(i\) and columns by edges not incident to \(i\).Define \(X = D F E\) with entries \(X_{k \rightarrow l, i \rightarrow j} = a_{ik} a_{ij} (1 - δ_{kj})\) and \(P = \begin{bmatrix} 0 &amp; I \\ I &amp; 0 \end{bmatrix}\), where \(δ_{kj}\) is the Kronecker delta. Let \(v_1\) be the right eigenvector of \(B'\) and \(v_1^j = \sum_k a_{jk} v_{k \rightarrow j}\). Then the
  <i>
   X
  </i>
- -NB centrality \(c_{X\text{-}NB}(i)\) of node \(i\) is
- <br/>
- \[
- <br/>
- c_{X\text{-}NB}(i) = v_1^T P X v_1 = \Big( \sum_j a_{ij} v_1^j \Big)^2 - \sum_j a_{ij} (v_1^j)^2,
- <br/>
- \]
- <br/>
- where \(a_{ij}\) are adjacency matrix entries. Thus, X-non-backtracking centrality captures the impact of \(i\) on non-backtracking paths and network connectivity.
- <br/>
+ -NB centrality \(c_{X\text{-}NB}(i)\) of node \(i\) is\[c_{X\text{-}NB}(i) = v_1^T P X v_1 = \Big( \sum_j a_{ij} v_1^j \Big)^2 - \sum_j a_{ij} (v_1^j)^2,\]where \(a_{ij}\) are adjacency matrix entries. Thus, X-non-backtracking centrality captures the impact of \(i\) on non-backtracking paths and network connectivity.
 </p>
 <h3>
  References

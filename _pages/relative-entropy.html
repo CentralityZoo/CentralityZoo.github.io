@@ -16,32 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Relative entropy
  </i>
- is a hybrid measure that integrates multiple centrality indices to evaluate node importance using linear programming and Kullback-Leibler divergence [2]. Suppose there are \(m\) centrality measures, each represented as a discrete distribution \(u_j = (u_{j1}, \dots, u_{jN})\) for \(j=1,\dots,m\), where \(u_{ji} \ge 0\) and \(\sum_{i=1}^N u_{ji} = 1\).
- <br/>
- The relative entropy of the nodes, denoted by \(w = (w_1, \dots, w_N)\), is obtained by solving the linear programming problem
- <br/>
- \begin{equation*}
- <br/>
- \min_{w_1, \dots, w_N} \sum_{j=1}^m \sum_{i=1}^N w_i \log_2 \frac{w_i}{u_{ji}}, \quad
- <br/>
- \text{subject to } \sum_{i=1}^N w_i = 1, \quad w_i &gt; 0 \ \forall i.
- <br/>
- \end{equation*}
- <br/>
- The solution for node \(i\) is given by the normalized geometric mean of its centrality values:
- <br/>
- \begin{equation*}
- <br/>
- w_i = \frac{\prod_{j=1}^m (u_{ji})^{1/m}}{\sum_{k=1}^N \prod_{j=1}^m (u_{jk})^{1/m}}.
- <br/>
- \end{equation*}
- <br/>
- Chen et al. [2] apply relative entropy using \(m=4\) centrality measures: degree, closeness, betweenness, and Burt's constraint coefficient. By computing the normalized geometric mean of these measures for each node, the approach produces a single composite score \(w_i\) that reflects the node’s overall importance across multiple centrality perspectives.
- <br/>
+ is a hybrid measure that integrates multiple centrality indices to evaluate node importance using linear programming and Kullback-Leibler divergence [2]. Suppose there are \(m\) centrality measures, each represented as a discrete distribution \(u_j = (u_{j1}, \dots, u_{jN})\) for \(j=1,\dots,m\), where \(u_{ji} \ge 0\) and \(\sum_{i=1}^N u_{ji} = 1\). The relative entropy of the nodes, denoted by \(w = (w_1, \dots, w_N)\), is obtained by solving the linear programming problem\begin{equation*}\min_{w_1, \dots, w_N} \sum_{j=1}^m \sum_{i=1}^N w_i \log_2 \frac{w_i}{u_{ji}}, \quad\text{subject to } \sum_{i=1}^N w_i = 1, \quad w_i &gt; 0 \ \forall i.\end{equation*}The solution for node \(i\) is given by the normalized geometric mean of its centrality values:\begin{equation*}w_i = \frac{\prod_{j=1}^m (u_{ji})^{1/m}}{\sum_{k=1}^N \prod_{j=1}^m (u_{jk})^{1/m}}.\end{equation*}Chen
+ <i>
+  et al.
+ </i>
+ [2] apply relative entropy using \(m=4\) centrality measures: degree, closeness, betweenness, and Burt's constraint coefficient. By computing the normalized geometric mean of these measures for each node, the approach produces a single composite score \(w_i\) that reflects the node’s overall importance across multiple centrality perspectives.
 </p>
 <h3>
  References

@@ -16,56 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Silent node rank
  </i>
- (SNR), also known as LurkerRank (LR) [2], is a spectral centrality measure designed to identify nodes that play a passive role in information networks, which are the nodes that consume more information than they produce and often remain unnoticed [3]. Such silent nodes typically have low connectivity and are common in many systems, including leechers in P2P networks or lurkers in online social networks.
- <br/>
- While the in-degree/out-degree ratio provides a simple measure of silence, it ignores the influence of neighbors and often produces many nodes with identical scores. SNR improves upon this by incorporating neighbor behavior: a node is considered more silent if its in-neighbors are active and its out-neighbors are themselves silent. This network-aware approach yields a more accurate and diversified ranking of silent nodes.
- <br/>
- Formally, the SNR score \(r_i\) of node \(i\) in a weighted, directed network is given by
- <br/>
- \begin{equation*}
- <br/>
- \begin{split}
- <br/>
- r_i &amp;= α \Bigg(
- <br/>
- \frac{1}{d_i^{\mathrm{out}} + 1}
- <br/>
- \sum_{j \in \mathcal{N}^{\mathrm{in}}(i)} w_{ji} \frac{d_j^{\mathrm{out}} {+} 1}{d_j^{\mathrm{in}} {+} 1} r_j
- <br/>
- \Bigg)
- <br/>
- \Bigg(
- <br/>
- 1 {+} \frac{d_i^{\mathrm{in}} {+} 1}{\sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} (d_j^{\mathrm{in}} {+} 1)}
- <br/>
- \sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} w_{ij} \frac{d_j^{\mathrm{in}} {+} 1}{d_j^{\mathrm{out}} {+} 1} r_j
- <br/>
- \Bigg) \\
- <br/>
- &amp;\quad + \frac{1{-}α}{N},
- <br/>
- \end{split}
- <br/>
- \end{equation*}
- <br/>
- where \(w_{ij}\) is the edge weight, \(α\) is the damping factor, \(\mathcal{N}^{\mathrm{in}}(i)\) and \(\mathcal{N}^{\mathrm{out}}(i)\) are the in- and out-neighbors of \(i\), and \(d_j^{\mathrm{in}}\) and \(d_j^{\mathrm{out}}\) are the in- and out-degrees of node \(j\). The first term downweights the influence of node \(i\)’s in-neighbors based on its out-degree, while the second term boosts the score according to how silent its out-neighbors are, adjusted by \(i\)’s in-degree.
- <br/>
- For undirected and unweighted networks, the SNR score simplifies to
- <br/>
- \begin{equation*}
- <br/>
- r_i = α \left( \frac{1}{d_i + 1} \sum_{j \in \mathcal{N}(i)} r_j \right)
- <br/>
- \left( 1 + \frac{d_i + 1}{d_i + \sum_{j \in \mathcal{N}(i)} d_j} \sum_{j \in \mathcal{N}(i)} r_j \right)
- <br/>
- + \frac{1-α}{N}.
- <br/>
- \end{equation*}
- <br/>
+ (SNR), also known as LurkerRank (LR) [2], is a spectral centrality measure designed to identify nodes that play a passive role in information networks, which are the nodes that consume more information than they produce and often remain unnoticed [3]. Such silent nodes typically have low connectivity and are common in many systems, including leechers in P2P networks or lurkers in online social networks.While the in-degree/out-degree ratio provides a simple measure of silence, it ignores the influence of neighbors and often produces many nodes with identical scores. SNR improves upon this by incorporating neighbor behavior: a node is considered more silent if its in-neighbors are active and its out-neighbors are themselves silent. This network-aware approach yields a more accurate and diversified ranking of silent nodes.Formally, the SNR score \(r_i\) of node \(i\) in a weighted, directed network is given by\begin{equation*}\begin{split}r_i &amp;= α \Bigg(\frac{1}{d_i^{\mathrm{out}} + 1} \sum_{j \in \mathcal{N}^{\mathrm{in}}(i)} w_{ji} \frac{d_j^{\mathrm{out}} {+} 1}{d_j^{\mathrm{in}} {+} 1} r_j \Bigg)\Bigg(1 {+} \frac{d_i^{\mathrm{in}} {+} 1}{\sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} (d_j^{\mathrm{in}} {+} 1)} \sum_{j \in \mathcal{N}^{\mathrm{out}}(i)} w_{ij} \frac{d_j^{\mathrm{in}} {+} 1}{d_j^{\mathrm{out}} {+} 1} r_j\Bigg) \\&amp;\quad + \frac{1{-}α}{N},\end{split}\end{equation*}where \(w_{ij}\) is the edge weight, \(α\) is the damping factor, \(\mathcal{N}^{\mathrm{in}}(i)\) and \(\mathcal{N}^{\mathrm{out}}(i)\) are the in- and out-neighbors of \(i\), and \(d_j^{\mathrm{in}}\) and \(d_j^{\mathrm{out}}\) are the in- and out-degrees of node \(j\). The first term downweights the influence of node \(i\)’s in-neighbors based on its out-degree, while the second term boosts the score according to how silent its out-neighbors are, adjusted by \(i\)’s in-degree.For undirected and unweighted networks, the SNR score simplifies to\begin{equation*}r_i = α \left( \frac{1}{d_i + 1} \sum_{j \in \mathcal{N}(i)} r_j \right)\left( 1 + \frac{d_i + 1}{d_i + \sum_{j \in \mathcal{N}(i)} d_j} \sum_{j \in \mathcal{N}(i)} r_j \right)+ \frac{1-α}{N}.\end{equation*}
 </p>
 <h3>
  References

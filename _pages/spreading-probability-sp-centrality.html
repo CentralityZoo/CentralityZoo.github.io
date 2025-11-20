@@ -16,21 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   spreading probability
  </i>
- (SP) centrality is a hybrid measure that incorporates shortest distances, the number of shortest paths, and the transmission rate to quantify node influence [2]. The SP centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{SP}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}^{(\leq l)}(i)\) is the set of nodes within \(l\) hops from node \(i\), \(σ_{ij}\) is the number of shortest paths between nodes \(i\) and \(j\), \(\langle d \rangle\) is the average degree of the network, and \(d_{ij}\) is the shortest distance from node \(i\) to node \(j\). Bao et al. [2] consider \(l=3\) and use \(\frac{1}{\langle d \rangle}\) to approximate the transmission rate \(β\). Hence, the term \(σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}}\) approximates the probability that node \(j\) is infected by node \(i\). SP centrality assigns higher values to nodes that can reach many others through multiple short paths, reflecting both local connectivity and spreading potential within the network.
- <br/>
+ (SP) centrality is a hybrid measure that incorporates shortest distances, the number of shortest paths, and the transmission rate to quantify node influence [2]. The SP centrality of node \(i\) is defined as\begin{equation*}c_{SP}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}},\end{equation*}where \(\mathcal{N}^{(\leq l)}(i)\) is the set of nodes within \(l\) hops from node \(i\), \(σ_{ij}\) is the number of shortest paths between nodes \(i\) and \(j\), \(\langle d \rangle\) is the average degree of the network, and \(d_{ij}\) is the shortest distance from node \(i\) to node \(j\). Bao
+ <i>
+  et al.
+ </i>
+ [2] consider \(l=3\) and use \(\frac{1}{\langle d \rangle}\) to approximate the transmission rate \(β\). Hence, the term \(σ_{ij} \left( \frac{1}{\langle d \rangle} \right)^{d_{ij}}\) approximates the probability that node \(j\) is infected by node \(i\). SP centrality assigns higher values to nodes that can reach many others through multiple short paths, reflecting both local connectivity and spreading potential within the network.
 </p>
 <h3>
  References

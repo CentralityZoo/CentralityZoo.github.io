@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted
   <i>
@@ -24,26 +23,7 @@ search: true
   </i>
   -shell decomposition
  </i>
- (Wks)
- <br/>
- extends the classical \(k\)-shell method by incorporating edge weights [2]. The motivation is to identify central nodes not only by their position in the network core but also by the strength of their connections. For nodes \(i\) and \(j\), the potential edge weight is defined as
- <br/>
- \[
- <br/>
- w_{ij} = d_i + d_j,
- <br/>
- \]
- <br/>
- where \(d_i\) denotes the degree of node \(i\). The weighted degree of node \(i\) is then
- <br/>
- \[
- <br/>
- k^w_i = α d_i + (1 - α) \sum_{j \in \mathcal{N}(i)} w_{ij} = α d_i + (1-α)d_i^2 +(1-α) \sum_{j \in \mathcal{N}(i)} d_j,
- <br/>
- \]
- <br/>
- with \(α \in (0,1)\) as a tunable parameter (typically \(α = 0.5\)) and \(\mathcal{N}(i)\) as the set of neighbors of node \(i\). The Wks centrality is obtained by performing \(k\)-shell decomposition using the weighted degree \(k^w\), allowing nodes with stronger connectivity to be placed more accurately within the core-periphery structure.
- <br/>
+ (Wks) extends the classical \(k\)-shell method by incorporating edge weights [2]. The motivation is to identify central nodes not only by their position in the network core but also by the strength of their connections. For nodes \(i\) and \(j\), the potential edge weight is defined as\[w_{ij} = d_i + d_j,\]where \(d_i\) denotes the degree of node \(i\). The weighted degree of node \(i\) is then\[k^w_i = α d_i + (1 - α) \sum_{j \in \mathcal{N}(i)} w_{ij} = α d_i + (1-α)d_i^2 +(1-α) \sum_{j \in \mathcal{N}(i)} d_j,\]with \(α \in (0,1)\) as a tunable parameter (typically \(α = 0.5\)) and \(\mathcal{N}(i)\) as the set of neighbors of node \(i\). The Wks centrality is obtained by performing \(k\)-shell decomposition using the weighted degree \(k^w\), allowing nodes with stronger connectivity to be placed more accurately within the core-periphery structure.
 </p>
 <h3>
  References

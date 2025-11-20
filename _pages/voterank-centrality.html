@@ -16,23 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   VoteRank\(^{++
  </i>
- \)} method is an enhanced variant of the VoteRank algorithm designed to identify a set of influential nodes that are broadly distributed across a network [2]. Each node \(i\) is characterized by a tuple \((s_i, v_i)\), where \(s_i\) denotes its voting score and \(v_i\) its voting ability. Initially, these values are assigned as
- <br/>
- \[
- <br/>
- (s_i, v_i) = \left( 0, \log\left(1 + \frac{d_i}{d_{\max}}\right) \right),
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\) and \(d_{\max}=\max_j{d_j}\) is the maximum degree in the network. The algorithm proceeds iteratively through the following steps:
- <br/>
+ \)} method is an enhanced variant of the VoteRank algorithm designed to identify a set of influential nodes that are broadly distributed across a network [2]. Each node \(i\) is characterized by a tuple \((s_i, v_i)\), where \(s_i\) denotes its voting score and \(v_i\) its voting ability. Initially, these values are assigned as\[(s_i, v_i) = \left( 0, \log\left(1 + \frac{d_i}{d_{\max}}\right) \right),\]where \(d_i\) is the degree of node \(i\) and \(d_{\max}=\max_j{d_j}\) is the maximum degree in the network. The algorithm proceeds iteratively through the following steps:
  <ol>
-  <br/>
   <li>
    <i>
     Vote:
@@ -43,25 +32,24 @@ search: true
     \]
     where \(a_{ji}\) is the element of the adjacency matrix of the network.
   </li>
-  <br/>
   <li>
    <i>
     Select:
    </i>
    the node \(k\) with the highest voting score \(s_k\) is selected as an influential node. This node is then excluded from subsequent voting rounds by setting its voting ability \(v_k = 0\).
   </li>
-  <br/>
   <li>
    <i>
     Update:
    </i>
-   the voting abilities of nodes that voted for node \(k\) are reduced to \(λ v_i\), where \(λ \in [0,1]\) is a suppressing factor. For nodes within two hops of \(k\), the voting ability is reduced to \(\sqrt{λ} v_i\). Following Liu et al. [2], the suppressing factor is typically set to \(λ = 0.1\).
+   the voting abilities of nodes that voted for node \(k\) are reduced to \(λ v_i\), where \(λ \in [0,1]\) is a suppressing factor. For nodes within two hops of \(k\), the voting ability is reduced to \(\sqrt{λ} v_i\). Following Liu
+   <i>
+    et al.
+   </i>
+   [2], the suppressing factor is typically set to \(λ = 0.1\).
   </li>
-  <br/>
  </ol>
- <br/>
  Nodes with high VoteRank\(^{++}\) scores are thus identified as influential spreaders that are not only central but also spatially dispersed, ensuring broad network coverage.
- <br/>
 </p>
 <h3>
  References

@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Rank centrality
  </i>
- is a spectral ranking algorithm for directed graphs that aggregates pairwise comparisons to derive a global ranking of nodes [2]. The method constructs a random walk on the comparison graph, where at each step the transition probability from node \( i \) to node \( j \) is proportional to the empirical probability that \( i \) beats \( j \) in pairwise comparisons. The transition probabilities are normalized by the maximum out-degree to ensure that the resulting matrix is stochastic. Formally, the random walk is described by an \( N \times N \) time-independent transition matrix \( P \) with elements
- <br/>
- \begin{equation*}
- <br/>
- p_{ij} =
- <br/>
- \begin{cases}
- <br/>
- \dfrac{A_{ij}}{d_{\max}}, &amp; \text{if } i \neq j, \\[6pt]
- <br/>
- 1 - \dfrac{1}{d_{\max}} \sum_{k \neq i} A_{ik}, &amp; \text{if } i = j,
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \( A_{ij} = \dfrac{a_{ij}}{a_{ij} + a_{ji}} \) denotes the empirical probability that node \( i \) is preferred over node \( j \), and \( d_{\max} \) is the maximum out-degree among all nodes. Intuitively, the random walk tends to remain longer on nodes that perform well across comparisons. The rank centrality of a node corresponds to the stationary distribution \( \boldsymbol{π} \) satisfying \( \boldsymbol{π} = \boldsymbol{π} P \), which represents the relative importance of each node in the network as determined by the random walk.
- <br/>
+ is a spectral ranking algorithm for directed graphs that aggregates pairwise comparisons to derive a global ranking of nodes [2]. The method constructs a random walk on the comparison graph, where at each step the transition probability from node \( i \) to node \( j \) is proportional to the empirical probability that \( i \) beats \( j \) in pairwise comparisons. The transition probabilities are normalized by the maximum out-degree to ensure that the resulting matrix is stochastic. Formally, the random walk is described by an \( N \times N \) time-independent transition matrix \( P \) with elements\begin{equation*} p_{ij} =\begin{cases}\dfrac{A_{ij}}{d_{\max}}, &amp; \text{if } i \neq j, \\[6pt]1 - \dfrac{1}{d_{\max}} \sum_{k \neq i} A_{ik}, &amp; \text{if } i = j,\end{cases}\end{equation*}where \( A_{ij} = \dfrac{a_{ij}}{a_{ij} + a_{ji}} \) denotes the empirical probability that node \( i \) is preferred over node \( j \), and \( d_{\max} \) is the maximum out-degree among all nodes. Intuitively, the random walk tends to remain longer on nodes that perform well across comparisons. The rank centrality of a node corresponds to the stationary distribution \( \boldsymbol{π} \) satisfying \( \boldsymbol{π} = \boldsymbol{π} P \), which represents the relative importance of each node in the network as determined by the random walk.
 </p>
 <h3>
  References

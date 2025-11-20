@@ -16,34 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Vertex entanglement
  </i>
- (VE) is an induced centrality measure designed to quantify the influence of individual nodes based on their impact on the network's functional diversity [2]. To evaluate the influence of a node \(v \in \mathcal{N}\), the network is locally perturbed to form the \(v\)-control network \(G_v\), where \(v\) and its neighbors are merged into a super-vertex represented as a fully connected probabilistic graph. The original total link weights are evenly redistributed within the super-vertex, while the remainder of the network remains unchanged.
- <br/>
- The VE score \(c_{VE}(v)\) of node \(v\) is defined as the change in spectral entropy caused by this local perturbation:
- <br/>
- \[
- <br/>
- c_{VE}(v) = S(G) - S(G_v),
- <br/>
- \]
- <br/>
- where \(S(G)\) and \(S(G_v)\) denote the von Neumann entropies of the original and perturbed networks, respectively. The spectral entropy of \(G\) is computed from a density matrix \(ρ\) derived from the network Laplacian \(L(G)\):
- <br/>
- \[
- <br/>
- ρ = \frac{e^{-τ L(G)}}{\mathrm{tr}(e^{-τ L(G)})}, \qquad
- <br/>
- S(G) = -\mathrm{tr}(ρ \log ρ),
- <br/>
- \]
- <br/>
- with \(τ &gt; 0\) being a diffusion time parameter that controls the scale of information propagation.
- <br/>
- Intuitively, VE quantifies how strongly a single node affects the global structure and information flow in the network. Nodes with high VE substantially influence network connectivity and functional diversity, highlighting their critical role. The VE method has been validated on various empirical networks, including social, biological, and infrastructure systems, demonstrating its effectiveness in identifying critical nodes for network dismantling and capturing functional diversity.
- <br/>
+ (VE) is an induced centrality measure designed to quantify the influence of individual nodes based on their impact on the network's functional diversity [2]. To evaluate the influence of a node \(v \in \mathcal{N}\), the network is locally perturbed to form the \(v\)-control network \(G_v\), where \(v\) and its neighbors are merged into a super-vertex represented as a fully connected probabilistic graph. The original total link weights are evenly redistributed within the super-vertex, while the remainder of the network remains unchanged.  The VE score \(c_{VE}(v)\) of node \(v\) is defined as the change in spectral entropy caused by this local perturbation:\[c_{VE}(v) = S(G) - S(G_v),\]where \(S(G)\) and \(S(G_v)\) denote the von Neumann entropies of the original and perturbed networks, respectively. The spectral entropy of \(G\) is computed from a density matrix \(ρ\) derived from the network Laplacian \(L(G)\):\[ρ = \frac{e^{-τ L(G)}}{\mathrm{tr}(e^{-τ L(G)})}, \qquadS(G) = -\mathrm{tr}(ρ \log ρ),\]with \(τ &gt; 0\) being a diffusion time parameter that controls the scale of information propagation.  Intuitively, VE quantifies how strongly a single node affects the global structure and information flow in the network. Nodes with high VE substantially influence network connectivity and functional diversity, highlighting their critical role. The VE method has been validated on various empirical networks, including social, biological, and infrastructure systems, demonstrating its effectiveness in identifying critical nodes for network dismantling and capturing functional diversity.
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Randomized shortest paths (RSP) net betweenness centrality
  </i>
@@ -24,46 +23,11 @@ search: true
  <i>
   net flow
  </i>
- , so that opposing flows along the same edge partially cancel each other. This can provide a more meaningful measure of node importance in directed networks where bidirectional flows exist.
- <br/>
- The RSP net betweenness of node \(i\), denoted \(c_{\mathrm{RSPnet}}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{RSPnet}}(i) = \sum_{s=1}^{N}\sum_{t=1}^{N} \sum_{(i,j) \in \mathcal{L}} \left| \bar{η}_{ij}(s,t) - \bar{η}_{ji}(s,t) \right|
- <br/>
- = \sum_{(i,j) \in \mathcal{L}} \bar{η}_{ij}^{\mathrm{net}},
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- \bar{η}_{ij}^{\mathrm{net}} = e^T \big| N^{ij} - N^{ji} \big| e,
- <br/>
- \quad
- <br/>
- N^{ij} = w_{ij} \left( \frac{z_{si} z_{jt}}{z_{st}} - \frac{z_{ti} z_{jt}}{z_{tt}} \right),
- <br/>
- \]
- <br/>
- and \(z_{st}\) are the elements of the fundamental matrix
- <br/>
- \[
- <br/>
- Z = (I - W)^{-1} = \left( I - D^{-1}A \odot e^{-β C} \right)^{-1}.
- <br/>
- \]
- <br/>
- Here, \(A\) is the adjacency matrix, \(D\) is the diagonal matrix of row sums of \(A\), and \(C\) is the cost matrix, whose elements represent the traversal cost, or distance, between adjacent nodes.
- <br/>
- In the limit \(β \to 0\), the RSP net betweenness converges to the
+ , so that opposing flows along the same edge partially cancel each other. This can provide a more meaningful measure of node importance in directed networks where bidirectional flows exist.The RSP net betweenness of node \(i\), denoted \(c_{\mathrm{RSPnet}}(i)\), is defined as\begin{equation*}c_{\mathrm{RSPnet}}(i) = \sum_{s=1}^{N}\sum_{t=1}^{N} \sum_{(i,j) \in \mathcal{L}} \left| \bar{η}_{ij}(s,t) - \bar{η}_{ji}(s,t) \right|= \sum_{(i,j) \in \mathcal{L}} \bar{η}_{ij}^{\mathrm{net}},\end{equation*}where\[\bar{η}_{ij}^{\mathrm{net}} = e^T \big| N^{ij} - N^{ji} \big| e, \quadN^{ij} = w_{ij} \left( \frac{z_{si} z_{jt}}{z_{st}} - \frac{z_{ti} z_{jt}}{z_{tt}} \right),\]and \(z_{st}\) are the elements of the fundamental matrix\[Z = (I - W)^{-1} = \left( I - D^{-1}A \odot e^{-β C} \right)^{-1}.\]Here, \(A\) is the adjacency matrix, \(D\) is the diagonal matrix of row sums of \(A\), and \(C\) is the cost matrix, whose elements represent the traversal cost, or distance, between adjacent nodes. In the limit \(β \to 0\), the RSP net betweenness converges to the
  <i>
   current flow betweenness
  </i>
  centrality, highlighting the equivalence between random-walk and electrical-flow interpretations of betweenness in this regime [2].
- <br/>
 </p>
 <h3>
  References

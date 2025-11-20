@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Routing betweenness centrality
  </i>
- (RBC) is a generalization of traditional betweenness, load and flow betweenness centralities [2]. RBC quantifies the extent to which nodes are exposed to network traffic under any loop-free routing strategy. The RBC score of a node \(i\), denoted \(c_{\mathrm{RBC}}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{RBC}}(i) = \sum_{j,k \in \mathcal{N}} δ_{j,k}(i) \, T(j,k),
- <br/>
- \]
- <br/>
- where \(δ_{j,k}(i)\) is the probability (or expected fraction of traffic) that a packet sent from node \(j\) to node \(k\) passes through node \(i\). The value of \(δ_{j,k}(i)\) depends on the routing strategy: for deterministic shortest-path routing, \(δ_{j,k}(i) = 1\) if node \(i\) lies on the shortest path between \(j\) and \(k\), and \(0\) otherwise; for probabilistic or load-balanced routing, \(δ_{j,k}(i)\) represents the fraction of traffic routed through \(i\) according to the chosen routing algorithm.  The term \(T(j,k)\) denotes the number of packets sent from source node \(j\) to target node \(k\) and is usually defined by the traffic model. For uniform traffic scenarios, \(T(j,k) = 1\) for all node pairs.
- <br/>
- Compared to standard betweenness centrality, RBC accounts for both the routing probabilities and traffic volume, and it includes contributions from communications originating from or destined to the node under consideration.
- <br/>
+ (RBC) is a generalization of traditional betweenness, load and flow betweenness centralities [2]. RBC quantifies the extent to which nodes are exposed to network traffic under any loop-free routing strategy. The RBC score of a node \(i\), denoted \(c_{\mathrm{RBC}}(i)\), is defined as\[c_{\mathrm{RBC}}(i) = \sum_{j,k \in \mathcal{N}} δ_{j,k}(i) \, T(j,k),\]where \(δ_{j,k}(i)\) is the probability (or expected fraction of traffic) that a packet sent from node \(j\) to node \(k\) passes through node \(i\). The value of \(δ_{j,k}(i)\) depends on the routing strategy: for deterministic shortest-path routing, \(δ_{j,k}(i) = 1\) if node \(i\) lies on the shortest path between \(j\) and \(k\), and \(0\) otherwise; for probabilistic or load-balanced routing, \(δ_{j,k}(i)\) represents the fraction of traffic routed through \(i\) according to the chosen routing algorithm.  The term \(T(j,k)\) denotes the number of packets sent from source node \(j\) to target node \(k\) and is usually defined by the traffic model. For uniform traffic scenarios, \(T(j,k) = 1\) for all node pairs.  Compared to standard betweenness centrality, RBC accounts for both the routing probabilities and traffic volume, and it includes contributions from communications originating from or destined to the node under consideration.
 </p>
 <h3>
  References

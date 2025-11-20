@@ -16,32 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   weighted h-index
  </i>
- is an extension of the classical h-index to weighted networks [2]. First, the weight \(w_{ij}\) of the edge \((i,j)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- w_{ij} = d_i d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\).
- <br/>
- Next, each neighbor \(j\) of node \(i\) is conceptually cloned \(d_j\) times. Each cloned neighbor \(j_c\) is assigned a virtual edge weight \(w_{ij_c} = w_{ij}\), effectively repeating the original edge weight \(d_j\) times.
- <br/>
- The weighted h-index \(c_{wh}(i)\) of node \(i\) is then calculated as
- <br/>
- \begin{equation*}
- <br/>
- c_{wh}(i) = H(w_{ij_1,1}, \dots, w_{ij_1,d_{j_1}}, \dots, w_{ij_{d_i},1}, \dots, w_{ij_{d_i},d_{j_{d_i}}}),
- <br/>
- \end{equation*}
- <br/>
- where \(H\) is the
+ is an extension of the classical h-index to weighted networks [2]. First, the weight \(w_{ij}\) of the edge \((i,j)\) is defined as\begin{equation*}w_{ij} = d_i d_j,\end{equation*}where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\).  Next, each neighbor \(j\) of node \(i\) is conceptually cloned \(d_j\) times. Each cloned neighbor \(j_c\) is assigned a virtual edge weight \(w_{ij_c} = w_{ij}\), effectively repeating the original edge weight \(d_j\) times.  The weighted h-index \(c_{wh}(i)\) of node \(i\) is then calculated as\begin{equation*}c_{wh}(i) = H(w_{ij_1,1}, \dots, w_{ij_1,d_{j_1}}, \dots, w_{ij_{d_i},1}, \dots, w_{ij_{d_i},d_{j_{d_i}}}),\end{equation*}where \(H\) is the
  <i>
   h
  </i>
@@ -50,7 +29,6 @@ search: true
   h
  </i>
  -index reflects both the degrees of a node’s neighbors and the multiplicity of their connections, capturing a more nuanced measure of local influence.
- <br/>
 </p>
 <h3>
  References

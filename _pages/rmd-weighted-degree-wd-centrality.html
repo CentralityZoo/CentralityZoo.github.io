@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   RMD-weighted degree
@@ -25,20 +24,11 @@ search: true
  <i>
   remaining minimum degree (RMD) decomposition
  </i>
- [2]. The RMD decomposition iteratively removes the node with the minimum degree, capturing the structural importance of nodes in both local and global contexts.
- <br/>
- Yang et al. [2] proposed that a node's influence largely depends on the importance of its neighbors. Accordingly, the RMD-weighted degree of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{RMD}(i) = \sum_{j \in \mathcal{N}(i)} \frac{Iter(j)}{MaxIter},
- <br/>
- \]
- <br/>
- where \(Iter(j)\) is the iteration at which node \(j\) is removed during the RMD decomposition, and \(MaxIter\) is the total number of iterations.
- <br/>
- This formulation distinguishes the contributions of each neighbor and simultaneously accounts for both local connectivity and the global network structure. Nodes with high RMD-weighted degree are those connected to neighbors that are removed late in the RMD process, indicating structurally important and influential positions in the network.
- <br/>
+ [2]. The RMD decomposition iteratively removes the node with the minimum degree, capturing the structural importance of nodes in both local and global contexts.Yang
+ <i>
+  et al.
+ </i>
+ [2] proposed that a node's influence largely depends on the importance of its neighbors. Accordingly, the RMD-weighted degree of node \(i\) is defined as\[c_{RMD}(i) = \sum_{j \in \mathcal{N}(i)} \frac{Iter(j)}{MaxIter},\]where \(Iter(j)\) is the iteration at which node \(j\) is removed during the RMD decomposition, and \(MaxIter\) is the total number of iterations. This formulation distinguishes the contributions of each neighbor and simultaneously accounts for both local connectivity and the global network structure. Nodes with high RMD-weighted degree are those connected to neighbors that are removed late in the RMD process, indicating structurally important and influential positions in the network.
 </p>
 <h3>
  References

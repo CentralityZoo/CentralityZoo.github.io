@@ -16,44 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted LeaderRank
  </i>
- is an extension of the LeaderRank algorithm that incorporates a weighted mechanism to account for node in-degrees [2]. Similar to LeaderRank, Weighted LeaderRank introduces a ground node \(g=N+1\) that connects bidirectionally to all nodes in the network \(G\). The weight of the link from the ground node to node \(i\), denoted \(w_{gi}\), is proportional to the in-degree of \(i\).
- <br/>
- Initially, each node (except the ground node) is assigned one unit of resource, which is then distributed to its neighbors according to the link weights. The resource dynamics at discrete time \(t+1\) are described by
- <br/>
- \begin{equation*}
- <br/>
- s_i[t+1] = \sum_{j=1}^{N+1} \frac{w_{ji}}{\sum_{l=1}^{N+1} w_{jl}} \, s_j[t],
- <br/>
- \end{equation*}
- <br/>
- where the link weights \(w_{ji}\) are defined as
- <br/>
- \[
- <br/>
- w_{ji} =
- <br/>
- \begin{cases}
- <br/>
- a_{ji}, &amp; \text{if } g \notin \{i,j\}, \\
- <br/>
- 1, &amp; \text{if } g = i \neq j, \\
- <br/>
- (d_i^{\mathrm{in}})^α, &amp; \text{if } g = j \neq i, \\
- <br/>
- 0, &amp; \text{if } g = i = j,
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- with \(d_i^{\mathrm{in}}\) being the in-degree of node \(i\) and \(α\) a tunable parameter (e.g., \(α = 1\)).
- <br/>
- This formulation ensures that nodes with high in-degree receive larger contributions from the ground node. As with LeaderRank, the steady-state scores \(\Tilde{s}_i =\lim_{t \to \infty}s_i[t]\) quantify the influence of each node in the network.
- <br/>
+ is an extension of the LeaderRank algorithm that incorporates a weighted mechanism to account for node in-degrees [2]. Similar to LeaderRank, Weighted LeaderRank introduces a ground node \(g=N+1\) that connects bidirectionally to all nodes in the network \(G\). The weight of the link from the ground node to node \(i\), denoted \(w_{gi}\), is proportional to the in-degree of \(i\).  Initially, each node (except the ground node) is assigned one unit of resource, which is then distributed to its neighbors according to the link weights. The resource dynamics at discrete time \(t+1\) are described by\begin{equation*}s_i[t+1] = \sum_{j=1}^{N+1} \frac{w_{ji}}{\sum_{l=1}^{N+1} w_{jl}} \, s_j[t],\end{equation*}where the link weights \(w_{ji}\) are defined as\[w_{ji} =\begin{cases}a_{ji}, &amp; \text{if } g \notin \{i,j\}, \\1, &amp; \text{if } g = i \neq j, \\(d_i^{\mathrm{in}})^α, &amp; \text{if } g = j \neq i, \\0, &amp; \text{if } g = i = j,\end{cases}\]with \(d_i^{\mathrm{in}}\) being the in-degree of node \(i\) and \(α\) a tunable parameter (e.g., \(α = 1\)).  This formulation ensures that nodes with high in-degree receive larger contributions from the ground node. As with LeaderRank, the steady-state scores \(s̃_i =\lim_{t \to \infty}s_i[t]\) quantify the influence of each node in the network.
 </p>
 <h3>
  References

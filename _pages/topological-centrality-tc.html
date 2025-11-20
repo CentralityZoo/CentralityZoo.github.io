@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Topological centrality
  </i>
- (TC) is a network centrality measure that iteratively captures the relative importance of both nodes and edges, accounting for their mutual influence [2]. Initially, all nodes are assigned the same centrality value:
- <br/>
- \[
- <br/>
- c_{\mathrm{TC}}(i, 0) = 1, \quad \forall i.
- <br/>
- \]
- <br/>
- At each iteration step \(t+1\), the centrality of a node \(i\) is updated based on the influence of its neighbors and the weights of the edges connecting them:
- <br/>
- \[
- <br/>
- c_{\mathrm{TC}}(i, t+1) = c_{\mathrm{TC}}(i, t) + \sum_{j \in \mathcal{N}(i)} w_{ij}(t) \, c_{\mathrm{TC}}(j, t),
- <br/>
- \]
- <br/>
- where \(w_{ij}(t)\) denotes the weight of the edge between nodes \(i\) and \(j\) at iteration \(t\), with \(w_{ij}(0) = w_{ij}\).
- <br/>
- The edge weights are updated at each step based on the current centrality values of their incident nodes:
- <br/>
- \[
- <br/>
- w_{ij}(t+1) = c_{\mathrm{TC}}(i, t+1) + c_{\mathrm{TC}}(j, t+1).
- <br/>
- \]
- <br/>
- To ensure stability and comparability, node centralities and edge weights are normalized at each iteration by their respective maximum values. The process is repeated until the node centralities converge, yielding the final topological centrality scores.
- <br/>
+ (TC) is a network centrality measure that iteratively captures the relative importance of both nodes and edges, accounting for their mutual influence [2]. Initially, all nodes are assigned the same centrality value:\[c_{\mathrm{TC}}(i, 0) = 1, \quad \forall i.\]At each iteration step \(t+1\), the centrality of a node \(i\) is updated based on the influence of its neighbors and the weights of the edges connecting them:\[c_{\mathrm{TC}}(i, t+1) = c_{\mathrm{TC}}(i, t) + \sum_{j \in \mathcal{N}(i)} w_{ij}(t) \, c_{\mathrm{TC}}(j, t),\]where \(w_{ij}(t)\) denotes the weight of the edge between nodes \(i\) and \(j\) at iteration \(t\), with \(w_{ij}(0) = w_{ij}\).The edge weights are updated at each step based on the current centrality values of their incident nodes:\[w_{ij}(t+1) = c_{\mathrm{TC}}(i, t+1) + c_{\mathrm{TC}}(j, t+1).\]To ensure stability and comparability, node centralities and edge weights are normalized at each iteration by their respective maximum values. The process is repeated until the node centralities converge, yielding the final topological centrality scores.
 </p>
 <h3>
  References

@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Resolvent centrality
  </i>
- , also known as \(f\)-centrality, is a variant of subgraph centrality that measures node importance by counting the number of closed walks in a graph with a non-factorial scaling function [2]. Given the adjacency matrix \(A\), the matrix resolvent is defined as
- <br/>
- \[
- <br/>
- f(A) = \sum_{k=0}^{\infty} s^k A^k = (I - sA)^{-1},
- <br/>
- \]
- <br/>
- where \(s\) is a penalty factor chosen such that \(s \in (0, 1/λ_{\max})\), with \(λ_{\max}\) being the largest eigenvalue of \(A\). Estrada and Higham [2] suggest that a reasonable choice for \(s\) is \(s = 1/(N-1)\), motivated by comparing closed walk counts to those in the complete graph \(K_N\).
- <br/>
- The resolvent centrality \(c_{\mathrm{res}}(i)\) of node \(i\) is then given by the diagonal entry
- <br/>
- \[
- <br/>
- c_{\mathrm{res}}(i) = f(A)_{ii} = \sum_{k=1}^{N} \frac{N-1}{N-1 - λ_k} \, v_k^2(i),
- <br/>
- \]
- <br/>
- where \(v_k(i)\) is the \(i\)-th component of the eigenvector \(v_k\) corresponding to the eigenvalue \(λ_k\) of \(A\). Thus, resolvent centrality captures the participation of node \(i\) in walks of all lengths, with longer walks penalized according to \(s\).
- <br/>
+ , also known as \(f\)-centrality, is a variant of subgraph centrality that measures node importance by counting the number of closed walks in a graph with a non-factorial scaling function [2]. Given the adjacency matrix \(A\), the matrix resolvent is defined as\[f(A) = \sum_{k=0}^{\infty} s^k A^k = (I - sA)^{-1},\]where \(s\) is a penalty factor chosen such that \(s \in (0, 1/λ_{\max})\), with \(λ_{\max}\) being the largest eigenvalue of \(A\). Estrada and Higham [2] suggest that a reasonable choice for \(s\) is \(s = 1/(N-1)\), motivated by comparing closed walk counts to those in the complete graph \(K_N\).The resolvent centrality \(c_{\mathrm{res}}(i)\) of node \(i\) is then given by the diagonal entry\[c_{\mathrm{res}}(i) = f(A)_{ii} = \sum_{k=1}^{N} \frac{N-1}{N-1 - λ_k} \, v_k^2(i),\]where \(v_k(i)\) is the \(i\)-th component of the eigenvector \(v_k\) corresponding to the eigenvalue \(λ_k\) of \(A\). Thus, resolvent centrality captures the participation of node \(i\) in walks of all lengths, with longer walks penalized according to \(s\).
 </p>
 <h3>
  References

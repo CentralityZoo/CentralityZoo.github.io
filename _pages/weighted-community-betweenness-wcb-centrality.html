@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted community betweenness
  </i>
- (WCB) centrality is a centrality measure that integrates a node’s betweenness centrality at both the global network level and within its local community [2]. Let the graph \(G\) have a community structure consisting of \(K\) non-overlapping communities \(C_1, \dots, C_K\). This measure highlights the importance of nodes based on their contributions to both global connectivity and local community structure.
- <br/>
- The centrality \(c_{\textsc{WCB}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{WCB}}(i) = (1-μ_{C_l})\, c_b(i,C_l) + μ_{C_l}\, c_b(i,G),
- <br/>
- \end{equation*}
- <br/>
- where \(C_l\) is the community to which node \(i\) belongs, \(c_b(i,C_l)\) is the local betweenness centrality of node \(i\) within \(C_l\), and \(c_b(i,G)\) is the global betweenness centrality of node \(i\) in the entire graph \(G\). The weighting factor \(μ_{C_l}\) quantifies the relative importance of global connectivity by reflecting the proportion of inter-community links, and is calculated as
- <br/>
- \begin{equation*}
- <br/>
- μ_{C_l} = \frac{\sum_{i \in C_l} \sum_{j \in C_l} a_{ij}}{\sum_{i=1}^N \sum_{j=1}^N a_{ij}},
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ij}\) are the elements of the adjacency matrix of \(G\).
- <br/>
+ (WCB) centrality is a centrality measure that integrates a node’s betweenness centrality at both the global network level and within its local community [2]. Let the graph \(G\) have a community structure consisting of \(K\) non-overlapping communities \(C_1, \dots, C_K\). This measure highlights the importance of nodes based on their contributions to both global connectivity and local community structure.The centrality \(c_{\textsc{WCB}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\textsc{WCB}}(i) = (1-μ_{C_l})\, c_b(i,C_l) + μ_{C_l}\, c_b(i,G),\end{equation*}where \(C_l\) is the community to which node \(i\) belongs, \(c_b(i,C_l)\) is the local betweenness centrality of node \(i\) within \(C_l\), and \(c_b(i,G)\) is the global betweenness centrality of node \(i\) in the entire graph \(G\). The weighting factor \(μ_{C_l}\) quantifies the relative importance of global connectivity by reflecting the proportion of inter-community links, and is calculated as\begin{equation*}μ_{C_l} = \frac{\sum_{i \in C_l} \sum_{j \in C_l} a_{ij}}{\sum_{i=1}^N \sum_{j=1}^N a_{ij}},\end{equation*}where \(a_{ij}\) are the elements of the adjacency matrix of \(G\).
 </p>
 <h3>
  References

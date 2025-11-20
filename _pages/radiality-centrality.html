@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Radiality centrality
  </i>
- measures how efficiently a node’s ties reach other nodes, emphasizing outward paths [2, 3]. The radiality centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Radiality}}(i) = \frac{\sum_{j \neq i} \left( d_G + 1 - d_{ij} \right)}{N-1},
- <br/>
- \end{equation*}
- <br/>
- where \(d_G\) is the diameter of \(G\) and \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). High radiality indicates that a node is, on average, close to other nodes relative to the network diameter, while low radiality indicates a peripheral position. For undirected networks, radiality centrality coincides with integration centrality.
- <br/>
+ measures how efficiently a node’s ties reach other nodes, emphasizing outward paths [2, 3]. The radiality centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{Radiality}}(i) = \frac{\sum_{j \neq i} \left( d_G + 1 - d_{ij} \right)}{N-1},\end{equation*}where \(d_G\) is the diameter of \(G\) and \(d_{ij}\) is the length of the shortest path from node \(i\) to node \(j\). High radiality indicates that a node is, on average, close to other nodes relative to the network diameter, while low radiality indicates a peripheral position. For undirected networks, radiality centrality coincides with integration centrality.\vfill
 </p>
 <h3>
  References

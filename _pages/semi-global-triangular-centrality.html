@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   semi-global triangular centrality
  </i>
- evaluates node importance based on the number of triangles associated with a node and its extended neighborhood, including nodes up to two hops away [2]. For a node \(i \in \mathcal{N}\), the centrality \(c_{st}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{st}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i) \cup \{i\}} \frac{\Delta(j)}{2^{d_{ij}}},
- <br/>
- \]
- <br/>
- where \(\Delta(j)\) is the number of triangles that include node \(j\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within distance \(r=2\) from node \(i\).
- <br/>
- The semi-global triangular centrality was validated using the susceptible-infected-recovered (SIR) epidemic model on nine real-world networks and outperformed ten classical centrality measures in identifying effective spreaders.
- <br/>
+ evaluates node importance based on the number of triangles associated with a node and its extended neighborhood, including nodes up to two hops away [2]. For a node \(i \in \mathcal{N}\), the centrality \(c_{st}(i)\) is defined as\[c_{st}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i) \cup \{i\}} \frac{\Delta(j)}{2^{d_{ij}}},\]where \(\Delta(j)\) is the number of triangles that include node \(j\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within distance \(r=2\) from node \(i\).  The semi-global triangular centrality was validated using the susceptible-infected-recovered (SIR) epidemic model on nine real-world networks and outperformed ten classical centrality measures in identifying effective spreaders.
 </p>
 <h3>
  References

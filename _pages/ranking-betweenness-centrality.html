@@ -16,26 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Ranking-betweenness centrality
  </i>
- evaluates the importance of nodes in urban networks by combining random-walk betweenness with an adapted PageRank algorithm (APA) [2]. Unlike classical random-walk betweenness, which assumes equal probability of starting a random walk from any node, ranking-betweenness centrality weights these random walks according to the APA-derived importance of each starting node.
- <br/>
- Formally, the ranking-betweenness centrality of node \(i\), denoted \(c_{rb}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{rb}(i) = \sum_{s \neq t} π_s \, σ_{st}(i),
- <br/>
- \]
- <br/>
- where \(σ_{st}(i)\) is the expected fraction of random-walk paths from node \(s\) to node \(t\) that pass through node \(i\), and \(π_s\) is the APA-based starting probability of node \(s\).  The APA probability scores are computed using an
+ evaluates the importance of nodes in urban networks by combining random-walk betweenness with an adapted PageRank algorithm (APA) [2]. Unlike classical random-walk betweenness, which assumes equal probability of starting a random walk from any node, ranking-betweenness centrality weights these random walks according to the APA-derived importance of each starting node.  Formally, the ranking-betweenness centrality of node \(i\), denoted \(c_{rb}(i)\), is defined as\[c_{rb}(i) = \sum_{s \neq t} π_s \, σ_{st}(i),\]where \(σ_{st}(i)\) is the expected fraction of random-walk paths from node \(s\) to node \(t\) that pass through node \(i\), and \(π_s\) is the APA-based starting probability of node \(s\).  The APA probability scores are computed using an
  <i>
   adapted PageRank algorithm
  </i>
  , where the starting probabilities can be set according to external information about node relevance. If no such information is available, a uniform starting probability is used for all nodes, so that the random walks are unbiased with respect to their starting points.
- <br/>
 </p>
 <h3>
  References

@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted formal concept analysis
  </i>
- (WFCA) centrality applies the principles of formal concept analysis (FCA) to rank nodes in a network [2]. Let \(\mathbb{K} = (O, K, I)\) denote a formal context, where \(O = \mathcal{N}\) is a set of objects, \(K\) is a set of attributes, and \(I \subseteq O \times K\) is a binary relation between objects and attributes. A pair \((T, P)\), with \(T \subseteq O\) and \(P \subseteq K\), forms a formal concept if every object \(t \in T\) possesses all attributes in \(P\), and every attribute \(p \in P\) is shared by all objects in \(T\).
- <br/>
- In the case of a graph \(G\) without external attributes, the attribute set is taken as \(K = \mathcal{N}\), and a formal concept \((T, P)\) corresponds to a subset of nodes \(T \subseteq \mathcal{N}\) that share a common set of neighbors \(P\). The WFCA centrality of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{WFCA}(i) = \sum_{\substack{(T,P): \\ i \in P}} \frac{|T|}{|P|}.
- <br/>
- \end{equation*}
- <br/>
- Hence, the WFCA centrality captures global structure by ranking nodes according to the number of nodes sharing their neighbor set (\(|T|\)) relative to the size of that set (\(|P|\)).
- <br/>
+ (WFCA) centrality applies the principles of formal concept analysis (FCA) to rank nodes in a network [2]. Let \(\mathbb{K} = (O, K, I)\) denote a formal context, where \(O = \mathcal{N}\) is a set of objects, \(K\) is a set of attributes, and \(I \subseteq O \times K\) is a binary relation between objects and attributes. A pair \((T, P)\), with \(T \subseteq O\) and \(P \subseteq K\), forms a formal concept if every object \(t \in T\) possesses all attributes in \(P\), and every attribute \(p \in P\) is shared by all objects in \(T\).In the case of a graph \(G\) without external attributes, the attribute set is taken as \(K = \mathcal{N}\), and a formal concept \((T, P)\) corresponds to a subset of nodes \(T \subseteq \mathcal{N}\) that share a common set of neighbors \(P\). The WFCA centrality of node \(i\) is then defined as\begin{equation*}c_{WFCA}(i) = \sum_{\substack{(T,P): \\ i \in P}} \frac{|T|}{|P|}.\end{equation*}Hence, the WFCA centrality captures global structure by ranking nodes according to the number of nodes sharing their neighbor set (\(|T|\)) relative to the size of that set (\(|P|\)).
 </p>
 <h3>
  References

@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   weighted \(k\)-short node-disjoint paths (WKPaths) centrality
  </i>
- was introduced by White and Smith [2] as a variant of closeness centrality. Rather than considering all shortest paths between nodes, WKPaths considers the set of \(k\)-short paths, defined as all paths of length at most \(k\) with no shared intermediate nodes. The WKPaths centrality of a node \(i\), denoted \(c_{WKPaths}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{WKPaths}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}} \sum_{P \in \mathcal{P}_k(j,i)} δ^{-|P|},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{P}_k(j,i)\) is the set of \(k\)-short paths from node \(j\) to node \(i\), \(|P|\) is the length of path \(P\), and \(δ\) is a scalar weighting factor with \(1 \leq δ \leq \infty\) (e.g., \(δ = 2\)). Shorter paths contribute more heavily to the centrality due to the exponential decay factor \(δ^{-|P|}\).
- <br/>
+ was introduced by White and Smith [2] as a variant of closeness centrality. Rather than considering all shortest paths between nodes, WKPaths considers the set of \(k\)-short paths, defined as all paths of length at most \(k\) with no shared intermediate nodes. The WKPaths centrality of a node \(i\), denoted \(c_{WKPaths}(i)\), is defined as\begin{equation*}c_{WKPaths}(i) = \frac{1}{N} \sum_{j \in \mathcal{N}} \sum_{P \in \mathcal{P}_k(j,i)} δ^{-|P|},\end{equation*}where \(\mathcal{P}_k(j,i)\) is the set of \(k\)-short paths from node \(j\) to node \(i\), \(|P|\) is the length of path \(P\), and \(δ\) is a scalar weighting factor with \(1 \leq δ \leq \infty\) (e.g., \(δ = 2\)). Shorter paths contribute more heavily to the centrality due to the exponential decay factor \(δ^{-|P|}\).
 </p>
 <h3>
  References

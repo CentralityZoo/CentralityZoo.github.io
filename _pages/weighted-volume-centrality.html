@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted volume centrality
  </i>
- (WVC) is an extension of volume centrality that incorporates both the distance between nodes and their clustering coefficients [2]. The centrality score \(c_{WV}(i)\) of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{WV}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_j \left[1 - c(j)\right]}{2^{d_{ij}}},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes located within a topological distance \(r\) from node \(i\) (excluding \(i\) itself), \(d_j\) is the degree of node \(j\), \(c(j)\) is its clustering coefficient and \(d_{ij}\) represents the shortest-path distance between nodes \(i\) and \(j\).
- <br/>
- The exponential term \(2^{-d_{ij}}\) serves as a distance-decay factor, giving higher weight to nearby nodes. Kim and Yoneki [2] demonstrated that, for \(r \geq 2\), weighted volume centrality provides a good approximation of closeness centrality while requiring significantly lower computational cost.
- <br/>
+ (WVC) is an extension of volume centrality that incorporates both the distance between nodes and their clustering coefficients [2]. The centrality score \(c_{WV}(i)\) of node \(i\) is defined as\[c_{WV}(i) = \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{d_j \left[1 - c(j)\right]}{2^{d_{ij}}},\]where \(\mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes located within a topological distance \(r\) from node \(i\) (excluding \(i\) itself), \(d_j\) is the degree of node \(j\), \(c(j)\) is its clustering coefficient and \(d_{ij}\) represents the shortest-path distance between nodes \(i\) and \(j\). The exponential term \(2^{-d_{ij}}\) serves as a distance-decay factor, giving higher weight to nearby nodes. Kim and Yoneki [2] demonstrated that, for \(r \geq 2\), weighted volume centrality provides a good approximation of closeness centrality while requiring significantly lower computational cost.
 </p>
 <h3>
  References

@@ -16,39 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   similarity-based PageRank
  </i>
- is a variant of the PageRank algorithm designed to identify influential nodes by guiding random walks according to the structural similarity between nodes [2, 3].
- <br/>
- Let \(d_{\max}\) denote the largest degree in the graph \(G\). For each node \(i\), a \((d_{\max}+1)\)-dimensional vector is constructed containing the degree of node \(i\) and the degrees of its \(|\mathcal{N}(i)|\) neighbors; any remaining entries are set to a small constant \(10^{-8}\). The vector entries are
+ is a variant of the PageRank algorithm designed to identify influential nodes by guiding random walks according to the structural similarity between nodes [2, 3]. Let \(d_{\max}\) denote the largest degree in the graph \(G\). For each node \(i\), a \((d_{\max}+1)\)-dimensional vector is constructed containing the degree of node \(i\) and the degrees of its \(|\mathcal{N}(i)|\) neighbors; any remaining entries are set to a small constant \(10^{-8}\). The vector entries are
  <i>
   sorted
  </i>
- to ensure a consistent alignment for KL-divergence computation. This vector is then normalized to form a probability vector \(p(i)\).
- <br/>
- The dissimilarity between nodes \(i\) and \(j\) is quantified using the symmetric Kullback-Leibler (KL) divergence:
- <br/>
- \[
- <br/>
- r_{ij} = D_{\mathrm{KL}}(p(i)\,\|\,p(j)) + D_{\mathrm{KL}}(p(j)\,\|\,p(i)),
- <br/>
- \]
- <br/>
- where larger values of \(r_{ij}\) indicate greater structural differences between nodes \(i\) and \(j\).
- <br/>
- The structural similarity between nodes \(i\) and \(j\) is defined as
- <br/>
- \[
- <br/>
- s_{ij} = 1 - \frac{r_{ij}}{r_{\max}+1},
- <br/>
- \]
- <br/>
- where \(r_{\max} = \max_{(i,j)} r_{ij}\). Higher structural similarity \(s_{ij}\) corresponds to a higher probability of transition between adjacent nodes. The resulting similarity matrix \(S = [s_{ij}]\) is then used to generate the transition probability matrix \(P\) for the PageRank algorithm, which in turn determines the importance of each node.
- <br/>
+ to ensure a consistent alignment for KL-divergence computation. This vector is then normalized to form a probability vector \(p(i)\). The dissimilarity between nodes \(i\) and \(j\) is quantified using the symmetric Kullback-Leibler (KL) divergence:\[r_{ij} = D_{\mathrm{KL}}(p(i)\,\|\,p(j)) + D_{\mathrm{KL}}(p(j)\,\|\,p(i)),\]where larger values of \(r_{ij}\) indicate greater structural differences between nodes \(i\) and \(j\).The structural similarity between nodes \(i\) and \(j\) is defined as\[s_{ij} = 1 - \frac{r_{ij}}{r_{\max}+1},\]where \(r_{\max} = \max_{(i,j)} r_{ij}\). Higher structural similarity \(s_{ij}\) corresponds to a higher probability of transition between adjacent nodes. The resulting similarity matrix \(S = [s_{ij}]\) is then used to generate the transition probability matrix \(P\) for the PageRank algorithm, which in turn determines the importance of each node.
 </p>
 <h3>
  References

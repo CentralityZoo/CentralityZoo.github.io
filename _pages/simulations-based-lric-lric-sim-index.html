@@ -16,14 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Simulations-based LRIC
  </i>
- (LRIC-sim) quantifies the influence of nodes through chain reactions in the network, also referred to as domino or contagion effects [2]. Similar to LRIC, each node \(i\) has a threshold \(q_i\) that represents the level of influence required from a subset of its neighbors to become affected.
- <br/>
- In each simulation step \(t\), \(k\) nodes are randomly selected to malfunction, which may trigger a cascade of failures represented by the sequence \(S_t\). The influence of node \(i\) on node \(j\) is quantified as the fraction of simulation runs in which the failure of \(i\) causes the failure of \(j\), considering only cases where \(i\) is pivotal, meaning that if \(i\) had not failed, \(j\) would not have appeared in the sequence \(S_t\). The LRIC-sim centrality of node \(i\) is then obtained by aggregating its indirect influence across all other nodes in the network, capturing the overall potential of \(i\) to trigger cascading failures.
- <br/>
+ (LRIC-sim) quantifies the influence of nodes through chain reactions in the network, also referred to as domino or contagion effects [2]. Similar to LRIC, each node \(i\) has a threshold \(q_i\) that represents the level of influence required from a subset of its neighbors to become affected.  This threshold can be specified externally based on domain knowledge or determined from the network structure, for instance, as a function of the degree of each node. A group of nodes \(\Omega(i) \subset \mathcal{N}\) is called
+ <i>
+  critical
+ </i>
+ for node \(i\) if their collective influence exceeds the threshold \(q_i\), i.e.,\begin{equation*}\sum_{k \in \Omega(i)} a_{ki} \geq q_i.\end{equation*}A node \(k\) is termed
+ <i>
+  pivotal
+ </i>
+ for the group \(\Omega(i)\) if its removal renders the group non-critical.In each simulation step \(t\), \(k\) nodes are randomly selected to malfunction, which may trigger a cascade of failures represented by the sequence \(S_t\). The influence of node \(i\) on node \(j\) is quantified as the fraction of simulation runs in which the failure of \(i\) causes the failure of \(j\), considering only cases where \(i\) is pivotal, meaning that if \(i\) had not failed, \(j\) would not have appeared in the sequence \(S_t\). The LRIC-sim centrality of node \(i\) is then obtained by aggregating its indirect influence across all other nodes in the network, capturing the overall potential of \(i\) to trigger cascading failures.
 </p>
 <h3>
  References

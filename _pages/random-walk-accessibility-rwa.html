@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Random-walk accessibility
  </i>
- (RWA) quantifies the diversity of nodes that can be reached via random walks from a given node [2]. The RWA score of node \(i\) is defined as the exponential of the Shannon entropy of transition probabilities:
- <br/>
- \begin{equation*}
- <br/>
- c_{RWA}(i) = \exp \Bigg( -\sum_{j} M_{ij} \log M_{ij} \Bigg),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \begin{equation*}
- <br/>
- M = \frac{1}{e} \sum_{k=1}^{\infty} \frac{P^k}{k!} = \frac{e^P}{e}.
- <br/>
- \end{equation*}
- <br/>
- Here, \(M\) incorporates walks of all lengths, weighted by the inverse factorial of their lengths, and \(P\) is the row-normalized adjacency matrix of the network (\(P_{ij} = a_{ij} / \sum_{k=1}^N a_{ik}\)).
- <br/>
- Random-walk accessibility reflects both the number of nodes that can be reached from \(i\) and the diversity of paths leading to them, giving higher scores to nodes with more evenly distributed access across the network.
- <br/>
+ (RWA) quantifies the diversity of nodes that can be reached via random walks from a given node [2]. The RWA score of node \(i\) is defined as the exponential of the Shannon entropy of transition probabilities:\begin{equation*}c_{RWA}(i) = \exp \Bigg( -\sum_{j} M_{ij} \log M_{ij} \Bigg),\end{equation*}where \begin{equation*}M = \frac{1}{e} \sum_{k=1}^{\infty} \frac{P^k}{k!} = \frac{e^P}{e}.\end{equation*}Here, \(M\) incorporates walks of all lengths, weighted by the inverse factorial of their lengths, and \(P\) is the row-normalized adjacency matrix of the network (\(P_{ij} = a_{ij} / \sum_{k=1}^N a_{ik}\)).Random-walk accessibility reflects both the number of nodes that can be reached from \(i\) and the diversity of paths leading to them, giving higher scores to nodes with more evenly distributed access across the network.
 </p>
 <h3>
  References

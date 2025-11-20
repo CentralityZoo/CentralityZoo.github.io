@@ -16,34 +16,25 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   SingleDiscount
  </i>
  is a degree-discount heuristic for identifying influential nodes in a network [2]. The method proceeds iteratively as follows:
- <br/>
  <ol>
-  <br/>
   <li>
    Identify the node with the highest degree in the current network.
   </li>
-  <br/>
   <li>
    Select this node as an influential node and remove it from the network.
   </li>
-  <br/>
   <li>
    Update the degrees of all remaining nodes to account for the removal.
   </li>
-  <br/>
   <li>
    Repeat the process until the desired number of influential nodes is selected.
   </li>
-  <br/>
  </ol>
- <br/>
  Hence, SingleDiscount considers the diminishing influence of neighboring nodes once a high-degree node has been selected.
- <br/>
 </p>
 <h3>
  References

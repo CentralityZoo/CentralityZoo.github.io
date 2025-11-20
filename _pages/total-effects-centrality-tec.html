@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Total effects centrality
  </i>
- (TEC) quantifies the cumulative influence of a node across the network, accounting for the number and length of all paths connecting nodes [2]. The \(N \times N\) matrix of interpersonal effects is computed as
- <br/>
- \[
- <br/>
- W^{\infty} = \lim_{α \to 1} \big[(I + α W + α^2 W^2 + \dots)(1-α)\big] = \lim_{α \to 1} (I - α W)^{-1} (1-α),
- <br/>
- \]
- <br/>
- where \(W\) is the \(N \times N\) row-normalized adjacency matrix with self-loops.
- <br/>
- The total effect of node \(i\) on other nodes corresponds to column \(i\) of \(W^{\infty}\), and the total effects centrality of node \(i\) is the average of these effects:
- <br/>
- \begin{equation*}
- <br/>
- c_{TEC}(i) = \frac{\sum_{j \neq i} (W^{\infty})_{ji}}{N-1}.
- <br/>
- \end{equation*}
- <br/>
- Total effects centrality is closely related to Katz centrality [2], reflecting both direct and indirect influences of a node.
- <br/>
+ (TEC) quantifies the cumulative influence of a node across the network, accounting for the number and length of all paths connecting nodes [2]. The \(N \times N\) matrix of interpersonal effects is computed as\[W^{\infty} = \lim_{α \to 1} \big[(I + α W + α^2 W^2 + \dots)(1-α)\big] = \lim_{α \to 1} (I - α W)^{-1} (1-α),\]where \(W\) is the \(N \times N\) row-normalized adjacency matrix with self-loops.The total effect of node \(i\) on other nodes corresponds to column \(i\) of \(W^{\infty}\), and the total effects centrality of node \(i\) is the average of these effects:\begin{equation*}c_{TEC}(i) = \frac{\sum_{j \neq i} (W^{\infty})_{ji}}{N-1}.\end{equation*}Total effects centrality is closely related to Katz centrality [2], reflecting both direct and indirect influences of a node.
 </p>
 <h3>
  References

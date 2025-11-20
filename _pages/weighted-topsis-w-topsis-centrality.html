@@ -16,58 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Weighted TOPSIS (w-TOPSIS)
  </i>
- is a hybrid centrality measure that extends the classical TOPSIS method by incorporating attribute weights [2]. Let \(R\) be the normalized \(N \times m\) decision matrix, where each entry \(r_{ij}\) characterizes the normalized influence of node \(i\) with respect to centrality metric \(j\). Hu et al. [2] consider \(m=3\) metrics: degree, betweenness and closeness centralities.
- <br/>
- The weights \(w_j\) for each centrality metric are derived based on the node spreading capability in the SIR model. Let \(F_i(t)\) denote the average number of infected and recovered nodes at time \(t\) if node \(i\) is initially infected, with spreading probability \(α=0.3\), recovery probability \(β=1\), and \(t=100\). The auxiliary variable \(v_{ij}\) aligns the normalized centrality with spreading influence:
- <br/>
- \[
- <br/>
- v_{ij} = \left| \frac{r_{ij}}{\sum_{l=1}^N r_{lj}} - \frac{F_i(t)}{\sum_{l=1}^N F_l(t)} \right|^{-1}.
- <br/>
- \]
- <br/>
- The weight of metric \(j\) is then defined as
- <br/>
- \[
- <br/>
- w_j = \frac{\sum_{i=1}^N v_{ij}}{\sum_{i=1}^N \sum_{j=1}^m v_{ij}}.
- <br/>
- \]
- <br/>
- The positive and negative ideal solutions are defined as
- <br/>
- \[
- <br/>
- A^{+} = \bigl[\max_i w_1 r_{i1}, \dots, \max_i w_m r_{im}\bigr], \quad
- <br/>
- A^{-} = \bigl[\min_i w_1 r_{i1}, \dots, \min_i w_m r_{im}\bigr].
- <br/>
- \]
- <br/>
- The w-TOPSIS centrality of node \(i\) is computed as its relative closeness to the ideal solution:
- <br/>
- \[
- <br/>
- c_{\mathrm{w-TOPSIS}}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},
- <br/>
- \]
- <br/>
- where \(S_i^{+}\) and \(S_i^{-}\) are the Euclidean distances from node \(i\) to the positive and negative ideal solutions, respectively:
- <br/>
- \[
- <br/>
- S_i^{+} = \sqrt{\sum_{j=1}^m (A_j^{+} - w_j r_{ij})^2}, \quad
- <br/>
- S_i^{-} = \sqrt{\sum_{j=1}^m (A_j^{-} - w_j r_{ij})^2}.
- <br/>
- \]
- <br/>
- Nodes with higher \(c_{\mathrm{w-TOPSIS}}(i)\) values are considered more influential, as they are simultaneously closer to the positive ideal and farther from the negative ideal solutions.
- <br/>
+ is a hybrid centrality measure that extends the classical TOPSIS method by incorporating attribute weights [2]. Let \(R\) be the normalized \(N \times m\) decision matrix, where each entry \(r_{ij}\) characterizes the normalized influence of node \(i\) with respect to centrality metric \(j\). Hu
+ <i>
+  et al.
+ </i>
+ [2] consider \(m=3\) metrics: degree, betweenness and closeness centralities.The weights \(w_j\) for each centrality metric are derived based on the node spreading capability in the SIR model. Let \(F_i(t)\) denote the average number of infected and recovered nodes at time \(t\) if node \(i\) is initially infected, with spreading probability \(α=0.3\), recovery probability \(β=1\), and \(t=100\). The auxiliary variable \(v_{ij}\) aligns the normalized centrality with spreading influence:\[v_{ij} = \left| \frac{r_{ij}}{\sum_{l=1}^N r_{lj}} - \frac{F_i(t)}{\sum_{l=1}^N F_l(t)} \right|^{-1}.\]The weight of metric \(j\) is then defined as\[w_j = \frac{\sum_{i=1}^N v_{ij}}{\sum_{i=1}^N \sum_{j=1}^m v_{ij}}.\]The positive and negative ideal solutions are defined as\[A^{+} = \bigl[\max_i w_1 r_{i1}, \dots, \max_i w_m r_{im}\bigr], \quadA^{-} = \bigl[\min_i w_1 r_{i1}, \dots, \min_i w_m r_{im}\bigr].\]The w-TOPSIS centrality of node \(i\) is computed as its relative closeness to the ideal solution:\[c_{\mathrm{w-TOPSIS}}(i) = \frac{S_i^{-}}{S_i^{-} + S_i^{+}},\]where \(S_i^{+}\) and \(S_i^{-}\) are the Euclidean distances from node \(i\) to the positive and negative ideal solutions, respectively:\[S_i^{+} = \sqrt{\sum_{j=1}^m (A_j^{+} - w_j r_{ij})^2}, \quadS_i^{-} = \sqrt{\sum_{j=1}^m (A_j^{-} - w_j r_{ij})^2}.\]Nodes with higher \(c_{\mathrm{w-TOPSIS}}(i)\) values are considered more influential, as they are simultaneously closer to the positive ideal and farther from the negative ideal solutions.
 </p>
 <h3>
  References

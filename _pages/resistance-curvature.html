@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Resistance curvature
  </i>
- is a discrete curvature measure based on the effective resistance between nodes in a network [2]. The resistance curvature of node \(i\), denoted \(c_{RC}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{RC}(i) = 1 - \frac{1}{2} \sum_{j \in \mathcal{N}(i)} ω_{ij} w_{ij},
- <br/>
- \]
- <br/>
- where \(w_{ij}\) is the weight of edge \((i,j)\), and \(ω_{ij}\) is the effective resistance between nodes \(i\) and \(j\), computed using the pseudoinverse Laplacian \(Q^{\dagger}\):
- <br/>
- \[
- <br/>
- ω_{ij} = (e_i - e_j)^T Q^{\dagger} (e_i - e_j),
- <br/>
- \]
- <br/>
- with \(e_i\) denoting the \(i\)th unit vector.
- <br/>
- Intuitively, the effective resistance \(ω_{ij}\) measures the voltage difference between nodes \(i\) and \(j\) in the network. A redundant link, which connects nodes within a densely interconnected cluster, has low relative resistance, as its removal has little effect on overall connectivity. Conversely, a link with high relative resistance is critical for maintaining connectivity between its endpoints. Hence, if the neighborhood of node \(i\) is tree-like with few short cycles, local relative resistances are high and the curvature \(c_{RC}(i)\) is small. In contrast, in densely connected regions with many short cycles, resistances are lower and \(c_{RC}(i)\) is larger, consistent with the notion of curvature.
- <br/>
+ is a discrete curvature measure based on the effective resistance between nodes in a network [2]. The resistance curvature of node \(i\), denoted \(c_{RC}(i)\), is defined as\[c_{RC}(i) = 1 - \frac{1}{2} \sum_{j \in \mathcal{N}(i)} ω_{ij} w_{ij},\]where \(w_{ij}\) is the weight of edge \((i,j)\), and \(ω_{ij}\) is the effective resistance between nodes \(i\) and \(j\), computed using the pseudoinverse Laplacian \(Q^{\dagger}\):\[ω_{ij} = (e_i - e_j)^T Q^{\dagger} (e_i - e_j),\]with \(e_i\) denoting the \(i\)th unit vector.Intuitively, the effective resistance \(ω_{ij}\) measures the voltage difference between nodes \(i\) and \(j\) in the network. A redundant link, which connects nodes within a densely interconnected cluster, has low relative resistance, as its removal has little effect on overall connectivity. Conversely, a link with high relative resistance is critical for maintaining connectivity between its endpoints. Hence, if the neighborhood of node \(i\) is tree-like with few short cycles, local relative resistances are high and the curvature \(c_{RC}(i)\) is small. In contrast, in densely connected regions with many short cycles, resistances are lower and \(c_{RC}(i)\) is larger, consistent with the notion of curvature.
 </p>
 <h3>
  References

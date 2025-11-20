@@ -16,41 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   redundancy measure
  </i>
- , originally proposed in [2], is a simplified version of Burt's redundancy [3]. The redundancy \(c_r(i)\) of a node \(i\) quantifies the average number of connections that a neighbor of \(i\) has to other neighbors of \(i\), and is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_r(i) =
- <br/>
- \begin{cases}
- <br/>
- \dfrac{\sum_{j \in \mathcal{N}(i)} \sum_{\substack{k \in \mathcal{N}(i), \ k \neq j}} a_{jk}}{d_i}, &amp; \text{if } d_i &gt; 1, \\
- <br/>
- 0, &amp; \text{otherwise,}
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(d_i = |\mathcal{N}(i)|\) is the degree of node \(i\).  As shown by Newman [4], the redundancy measure is related to the clustering coefficient \(c_{cl}(i)\) via
- <br/>
- \begin{equation*}
- <br/>
- c_r(i) = c_{cl}(i) \, (d_i - 1).
- <br/>
- \end{equation*}
- <br/>
- The redundancy measure was later independently introduced as the
+ , originally proposed in [2], is a simplified version of Burt's redundancy [3]. The redundancy \(c_r(i)\) of a node \(i\) quantifies the average number of connections that a neighbor of \(i\) has to other neighbors of \(i\), and is defined as\begin{equation*} c_r(i) = \begin{cases} \dfrac{\sum_{j \in \mathcal{N}(i)} \sum_{\substack{k \in \mathcal{N}(i), \ k \neq j}} a_{jk}}{d_i}, &amp; \text{if } d_i &gt; 1, \\0, &amp; \text{otherwise,}\end{cases}\end{equation*}where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(d_i = |\mathcal{N}(i)|\) is the degree of node \(i\).  As shown by Newman [4], the redundancy measure is related to the clustering coefficient \(c_{cl}(i)\) via\begin{equation*} c_r(i) = c_{cl}(i) \, (d_i - 1).\end{equation*}The redundancy measure was later independently introduced as the
  <i>
   local average connectivity (LAC)
  </i>
  in [5].
- <br/>
 </p>
 <h3>
  References

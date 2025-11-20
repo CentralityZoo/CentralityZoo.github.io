@@ -16,47 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   semi-local ranking centrality
  </i>
- (SLC) quantifies node influence based on random walks within the \(l\)-neighborhood of each node [2]. A node is considered influential if the random walk frequently encounters other influential nodes in its neighborhood. The SLC measure applies a PageRank-like process to capture this local and semi-local influence.
- <br/>
- At each step, the random walk either adds an immediate neighbor \(j\) of node \(i\) to the path with probability \(p_{ij}\), or stops. The probability of adding node \(j\) to the random walk starting from node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- p_{ij} = a \Biggl[ λ \frac{d_i}{d_{\max}} + (1-λ) HP(i,j) \Biggr],
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\), \(d_{\max}\) is the maximum degree in the network, and
- <br/>
- \[
- <br/>
- HP(i,j) = \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{\min(d_i, d_j)}
- <br/>
- \]
- <br/>
- measures the similarity between nodes \(i\) and \(j\), with \(\mathcal{N}(i)\) denoting the set of immediate neighbors of node \(i\).
- <br/>
- The parameter \(λ \in (0,1)\) balances the contributions of node degree and neighborhood similarity, and \(a \in (0,1)\) is a decay factor controlling the probability of continuing the random walk.
- <br/>
- Let \(S_t(i)\) denote the set of nodes visited by the \(t\)-th random walker starting from node \(i\).
- <br/>
- The semi-local ranking centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{SLC}}(i) = \sum_{t=1}^{T} |S_t(i)|,
- <br/>
- \end{equation*}
- <br/>
- where \(T\) is the total number of random walkers.
- <br/>
- Dong et al. [2] suggest using \(T=100\), \(a=0.9\), and \(λ=0.85\), with the length of each random walk limited to the network diameter.
- <br/>
+ (SLC) quantifies node influence based on random walks within the \(l\)-neighborhood of each node [2]. A node is considered influential if the random walk frequently encounters other influential nodes in its neighborhood. The SLC measure applies a PageRank-like process to capture this local and semi-local influence. At each step, the random walk either adds an immediate neighbor \(j\) of node \(i\) to the path with probability \(p_{ij}\), or stops. The probability of adding node \(j\) to the random walk starting from node \(i\) is defined as\begin{equation*}p_{ij} = a \Biggl[ λ \frac{d_i}{d_{\max}} + (1-λ) HP(i,j) \Biggr],\end{equation*}where \(d_i\) is the degree of node \(i\), \(d_{\max}\) is the maximum degree in the network, and \[HP(i,j) = \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{\min(d_i, d_j)}\] measures the similarity between nodes \(i\) and \(j\), with \(\mathcal{N}(i)\) denoting the set of immediate neighbors of node \(i\). The parameter \(λ \in (0,1)\) balances the contributions of node degree and neighborhood similarity, and \(a \in (0,1)\) is a decay factor controlling the probability of continuing the random walk.Let \(S_t(i)\) denote the set of nodes visited by the \(t\)-th random walker starting from node \(i\). The semi-local ranking centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{SLC}}(i) = \sum_{t=1}^{T} |S_t(i)|,\end{equation*}where \(T\) is the total number of random walkers. Dong
+ <i>
+  et al.
+ </i>
+ [2] suggest using \(T=100\), \(a=0.9\), and \(λ=0.85\), with the length of each random walk limited to the network diameter.
 </p>
 <h3>
  References
