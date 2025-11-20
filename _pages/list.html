@@ -1,19 +1,43 @@
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Centrality Measures</title>
-  <style>
-    body { font-family: Georgia, serif; margin: 36px; }
-    ol.centrality-list { counter-reset: item; list-style-type: none; padding-left: 0; }
-    ol.centrality-list li { margin: 0.3em 0; font-size: 1.05em; }
-    ol.centrality-list li::before { counter-increment: item; content: counter(item) ". "; color: #555; margin-right: 0.4em; }
-    a { text-decoration: none; color: #004499; }
-    a:hover { text-decoration: underline; }
-  </style>
-</head>
-<body>
-  <h1>Centrality Measures</h1>
-  <ol class="centrality-list">
+---
+title: List of Centralities
+permalink: /list/
+search: true
+---
+
+Centrality has no single definition—it depends on the network, its dynamics, and context. This has led to a “zoo” of diverse centrality measures used to analyze complex networks.
+
+<div class="image-row">
+  <figure>
+    <img src="https://centralityzoo.github.io/assets/images/zoo_image.png" alt="Zoo of Centralities" />
+  </figure>
+</div>
+
+<p>
+  This page provides a verified list of various metrics for nodes. While some, such as the clustering coefficient, are not centrality measures, they all quantify important properties of nodes within a network. Detailed descriptions will be available on their dedicated pages soon. If you have developed or contributed to a centrality measure that you believe should be included, please <a href="https://forms.gle/8mesci7x1qYaQedSA" target="_blank" rel="noopener noreferrer">submit it through this form</a>.
+</p>
+
+<style>
+  .centrality-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.3rem 1.2rem;
+    font-size: 0.63rem;
+    list-style-type: disc;
+    padding-left: 0.3rem;
+  }
+  ol {
+  margin-left: 1.2em;
+  padding-left: 0;
+  list-style-type: decimal !important;
+}
+
+ol li {
+  margin-bottom: 0.2em;
+  font-size: 0.65em;
+}
+</style>
+
+<ol class="centrality-list">
     <li><a href="/absorbing-random-walk-arw-centrality/" target="_blank">Absorbing random-walk (ARW) centrality</a></li>
     <li><a href="/access-information/" target="_blank">Access information</a></li>
     <li><a href="/adaptive-leaderrank/" target="_blank">Adaptive LeaderRank</a></li>
@@ -424,5 +448,3 @@
     <li><a href="/x-non-backtracking-x-nb-centrality/" target="_blank"><i>X</i>-non-backtracking (X-NB) centrality</a></li>
     <li><a href="/zeta-vector-centrality/" target="_blank">Zeta vector centrality</a></li>
   </ol>
-</body>
-</html>
