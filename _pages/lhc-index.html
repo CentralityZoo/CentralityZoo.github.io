@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Lhc index
  </i>
- is a hybrid approach for identifying highly influential spreaders in complex networks. It integrates both neighbor information and topological connectivity information among neighboring nodes [2]. The neighbor information is represented by the degree of a node, which reflects the number of its direct connections. The connectivity among a node’s neighbors is characterized by the number of triangular structures centered on that node, indicating how tightly its neighbors are interconnected.
- <br/>
- The centrality \( c_{\textsc{lhc}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{lhc}}(i) =
- <br/>
- \sum_{j \in \mathcal{N}(i)}
- <br/>
- \sum_{l \in \mathcal{N}^{(\leq k)}(j)}
- <br/>
- \frac{
- <br/>
- d_l \left( 1 + \frac{\Delta_l}{\Delta} \right)
- <br/>
- }{d_{jl}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}^{(\leq k)}(j) \) denotes the set of nodes within the \(k\)-hop neighbourhood of node \(j\), \( d_{jl} \) is the shortest-path distance between nodes \( j \) and \( l \), \( d_l \) is the degree of node \( l \), \( \Delta_l \) is the number of triangles including node \( l \), and \( \Delta \) is the total number of triangular structures in the network.
- <br/>
- To reduce computational complexity, Wang et al. [2] set the distance parameter to \( k = 2 \).
- <br/>
+ is a hybrid approach for identifying highly influential spreaders in complex networks. It integrates both neighbor information and topological connectivity information among neighboring nodes [2]. The neighbor information is represented by the degree of a node, which reflects the number of its direct connections. The connectivity among a node’s neighbors is characterized by the number of triangular structures centered on that node, indicating how tightly its neighbors are interconnected.The centrality \( c_{\textsc{lhc}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\textsc{lhc}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}^{(\leq k)}(j)} \frac{d_l \left( 1 + \frac{\Delta_l}{\Delta} \right)}{d_{jl}^2},\end{equation*}where \( \mathcal{N}^{(\leq k)}(j) \) denotes the set of nodes within the \(k\)-hop neighbourhood of node \(j\), \( d_{jl} \) is the shortest-path distance between nodes \( j \) and \( l \), \( d_l \) is the degree of node \( l \), \( \Delta_l \) is the number of triangles including node \( l \), and \( \Delta \) is the total number of triangular structures in the network. To reduce computational complexity, Wang
+ <i>
+  et al.
+ </i>
+ [2] set the distance parameter to \( k = 2 \).
 </p>
 <h3>
  References

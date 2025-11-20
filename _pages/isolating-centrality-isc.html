@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Isolating centrality
  </i>
- (ISC) identifies nodes that critically affect network connectivity [2]. The ISC of node \(i\), denoted \(c_{\text{ISC}}(i)\), is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{ISC}}(i) = |\mathcal{N}(i) \cap d_{δ}| \cdot |\mathcal{N}(i)|,
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(d_{δ}\) is the set of nodes with minimal degree \(δ = \min_j |\mathcal{N}(j)|= \min_j d_j\).
- <br/>
- A high ISC value indicates that the node lies between densely connected internal nodes and sparsely connected terminal nodes. Removing such central nodes can weaken or even disrupt communication paths between groups of active nodes.
- <br/>
+ (ISC) identifies nodes that critically affect network connectivity [2]. The ISC of node \(i\), denoted \(c_{\text{ISC}}(i)\), is defined as\begin{equation*}c_{\text{ISC}}(i) = |\mathcal{N}(i) \cap d_{δ}| \cdot |\mathcal{N}(i)|,\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(d_{δ}\) is the set of nodes with minimal degree \(δ = \min_j |\mathcal{N}(j)|= \min_j d_j\).  A high ISC value indicates that the node lies between densely connected internal nodes and sparsely connected terminal nodes. Removing such central nodes can weaken or even disrupt communication paths between groups of active nodes.
 </p>
 <h3>
  References

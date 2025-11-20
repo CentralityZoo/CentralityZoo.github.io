@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Improved Global Structure Model
  </i>
- (IGSM) is a variant of the GSM model in which the \(k\)-shell index is replaced by node degree [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{IGSM}(i) = e^{d_i / N} \cdot \sum_{j \neq i} \frac{d_j}{d_{ij}^{\lceil \log_2 \langle d \rangle \rceil}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\), \(\langle d \rangle\) is the average degree of the network, \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\), and \(\lceil x \rceil\) denotes the smallest integer greater than or equal to \(x\). The exponent in the denominator reduces the contribution of distant nodes while emphasizing the influence of highly connected nodes, providing a balance between local connectivity and global network structure.
- <br/>
+ (IGSM) is a variant of the GSM model in which the \(k\)-shell index is replaced by node degree [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{IGSM}(i) = e^{d_i / N} \cdot \sum_{j \neq i} \frac{d_j}{d_{ij}^{\lceil \log_2 \langle d \rangle \rceil}},\end{equation*}where \(d_i\) is the degree of node \(i\), \(\langle d \rangle\) is the average degree of the network, \(d_{ij}\) is the shortest path distance between nodes \(i\) and \(j\), and \(\lceil x \rceil\) denotes the smallest integer greater than or equal to \(x\). The exponent in the denominator reduces the contribution of distant nodes while emphasizing the influence of highly connected nodes, providing a balance between local connectivity and global network structure.
 </p>
 <h3>
  References

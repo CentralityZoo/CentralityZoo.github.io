@@ -16,39 +16,19 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   KDEC
  </i>
- method identifies influential nodes by combining the gravity model with the concept of effective distance [2]. In this model, a node's mass is given by the product of its degree and \(k\)-shell index, while the shortest-path distance is replaced by the effective distance to better capture the network's dynamic spreading pathways.
- <br/>
- Let \(\mathcal{N}^{(\leq l)}(i)\) denote set of nodes within the \(l\)-hop neighbourhood of node \(i\). The centrality \( c_{\textsc{KDEC}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{KDEC}}(i) =
- <br/>
- \sum_{j \in \mathcal{N}^{(\leq l)}(i)}
- <br/>
- \frac{m(i)\, m(j)}{\tilde{d}_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \tilde{d}_{ij} \) is the
+ method identifies influential nodes by combining the gravity model with the concept of effective distance [2]. In this model, a node's mass is given by the product of its degree and \(k\)-shell index, while the shortest-path distance is replaced by the effective distance to better capture the network's dynamic spreading pathways.Let \(\mathcal{N}^{(\leq l)}(i)\) denote set of nodes within the \(l\)-hop neighbourhood of node \(i\). The centrality \( c_{\textsc{KDEC}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\textsc{KDEC}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{m(i)\, m(j)}{d̃_{ij}^2},\end{equation*}where \( d̃_{ij} \) is the
  <i>
   effective shortest-path distance
  </i>
- proposed by Brockmann and Helbing [3]. The parameter \( m(i) \) represents the mass of node \( i \), given by
- <br/>
- \begin{equation*}
- <br/>
- m(i) = d_i \cdot k_s(i),
- <br/>
- \end{equation*}
- <br/>
- where \( d_i \) is the degree of node \( i \) and \( k_s(i) \) is its \(k\)-shell index. Zhang et al. [2] consider \( l = 2 \) as the truncated radius.
- <br/>
+ proposed by Brockmann and Helbing [3]. The parameter \( m(i) \) represents the mass of node \( i \), given by\begin{equation*}m(i) = d_i \cdot k_s(i),\end{equation*}where \( d_i \) is the degree of node \( i \) and \( k_s(i) \) is its \(k\)-shell index. Zhang
+ <i>
+  et al.
+ </i>
+ [2] consider \( l = 2 \) as the truncated radius.
 </p>
 <h3>
  References

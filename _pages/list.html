@@ -1,43 +1,19 @@
----
-title: List of Centralities
-permalink: /list/
-search: true
----
-
-Centrality has no single definition—it depends on the network, its dynamics, and context. This has led to a “zoo” of diverse centrality measures used to analyze complex networks.
-
-<div class="image-row">
-  <figure>
-    <img src="https://centralityzoo.github.io/assets/images/zoo_image.png" alt="Zoo of Centralities" />
-  </figure>
-</div>
-
-<p>
-  This page provides a verified list of various metrics for nodes. While some, such as the clustering coefficient, are not centrality measures, they all quantify important properties of nodes within a network. Detailed descriptions will be available on their dedicated pages soon. If you have developed or contributed to a centrality measure that you believe should be included, please <a href="https://forms.gle/8mesci7x1qYaQedSA" target="_blank" rel="noopener noreferrer">submit it through this form</a>.
-</p>
-
-<style>
-  .centrality-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.3rem 1.2rem;
-    font-size: 0.63rem;
-    list-style-type: disc;
-    padding-left: 0.3rem;
-  }
-  ol {
-  margin-left: 1.2em;
-  padding-left: 0;
-  list-style-type: decimal !important;
-}
-
-ol li {
-  margin-bottom: 0.2em;
-  font-size: 0.65em;
-}
-</style>
-
-<ol class="centrality-list">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Centrality Measures</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 36px; }
+    ol.centrality-list { counter-reset: item; list-style-type: none; padding-left: 0; }
+    ol.centrality-list li { margin: 0.3em 0; font-size: 1.05em; }
+    ol.centrality-list li::before { counter-increment: item; content: counter(item) ". "; color: #555; margin-right: 0.4em; }
+    a { text-decoration: none; color: #004499; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Centrality Measures</h1>
+  <ol class="centrality-list">
     <li><a href="/absorbing-random-walk-arw-centrality/" target="_blank">Absorbing random-walk (ARW) centrality</a></li>
     <li><a href="/access-information/" target="_blank">Access information</a></li>
     <li><a href="/adaptive-leaderrank/" target="_blank">Adaptive LeaderRank</a></li>
@@ -45,6 +21,7 @@ ol li {
     <li><a href="/adjusted-index-of-centrality-aic/" target="_blank">Adjusted Index of Centrality (AIC)</a></li>
     <li><a href="/algebraic-centrality/" target="_blank">Algebraic centrality</a></li>
     <li><a href="/all-around-score/" target="_blank">All-around score</a></li>
+    <li><a href="/all-subgraph-centrality/" target="_blank">All-subgraph centrality</a></li>
     <li><a href="/all-cycle-betweenness-acc-centrality/" target="_blank">All cycle betweenness (ACC) centrality</a></li>
     <li><a href="/analytic-hierarchy-process-ahp-centrality/" target="_blank">Analytic Hierarchy Process (AHP) centrality</a></li>
     <li><a href="/articlerank/" target="_blank">ArticleRank</a></li>
@@ -178,6 +155,7 @@ ol li {
     <li><a href="/game-centrality-gc/" target="_blank">Game centrality (GC)</a></li>
     <li><a href="/gateway-coefficient/" target="_blank">Gateway coefficient</a></li>
     <li><a href="/generalized-degree-centrality/" target="_blank">Generalized degree centrality</a></li>
+    <li><a href="/generalized-degree-discount-gdd/" target="_blank">Generalized degree discount (GDD)</a></li>
     <li><a href="/generalized-gravity-centrality-ggc/" target="_blank">Generalized gravity centrality (GGC)</a></li>
     <li><a href="/generalized-network-dismantling-gnd-method/" target="_blank">Generalized network dismantling (GND) method</a></li>
     <li><a href="/generalized-subgraph-centrality-gsc/" target="_blank">Generalized subgraph centrality (GSC)</a></li>
@@ -227,9 +205,9 @@ ol li {
     <li><a href="/improved-neighbors-k-core-ink/" target="_blank">Improved neighbors’ <i>k</i>-core (INK)</a></li>
     <li><a href="/improved-node-contraction-iimc-centrality/" target="_blank">Improved node contraction (IIMC) centrality</a></li>
     <li><a href="/improved-wvoterank-centrality/" target="_blank">Improved WVoteRank centrality</a></li>
+    <li><a href="/independent-cascade-rank-icr/" target="_blank">Independent cascade rank (ICR)</a></li>
     <li><a href="/independent-set-is-method/" target="_blank">Independent set (IS) method</a></li>
     <li><a href="/index-of-centrality-icentr/" target="_blank">Index of CENTRality (Icentr)</a></li>
-    <li><a href="/inf-centrality/" target="_blank">INF centrality</a></li>
     <li><a href="/infection-number/" target="_blank">Infection number</a></li>
     <li><a href="/influence-capability-ic/" target="_blank">Influence capability (IC)</a></li>
     <li><a href="/information-distance-index-idi/" target="_blank">Information distance index (IDI)</a></li>
@@ -258,6 +236,7 @@ ol li {
     <li><a href="/leverage-centrality/" target="_blank">Leverage centrality</a></li>
     <li><a href="/lhc-index/" target="_blank">Lhc index</a></li>
     <li><a href="/lin-s-index/" target="_blank">Lin's index</a></li>
+    <li><a href="/linear-threshold-centrality-ltc/" target="_blank">Linear threshold centrality (LTC)</a></li>
     <li><a href="/linearly-scaled-betweenness-centrality/" target="_blank">Linearly scaled betweenness centrality</a></li>
     <li><a href="/linerank/" target="_blank">LineRank</a></li>
     <li><a href="/link-influence-entropy-line-centrality/" target="_blank">Link influence entropy (LInE) centrality</a></li>
@@ -334,7 +313,7 @@ ol li {
     <li><a href="/normalized-local-centrality-nlc/" target="_blank">Normalized local centrality (NLC)</a></li>
     <li><a href="/normalized-wide-network-ranking-nwrank/" target="_blank">Normalized wide network ranking (NWRank)</a></li>
     <li><a href="/odd-subgraph-centrality/" target="_blank">Odd subgraph centrality</a></li>
-      <li><a href="/onion-decomposition-od/" target="_blank">Onion decomposition (OD)</a></li>
+    <li><a href="/onion-decomposition-od/" target="_blank">Onion decomposition (OD)</a></li>
     <li><a href="/outward-accessibility/" target="_blank">Outward accessibility</a></li>
     <li><a href="/p-means-centrality/" target="_blank"><i>p</i>-means centrality</a></li>
     <li><a href="/pagerank/" target="_blank">PageRank</a></li>
@@ -404,6 +383,7 @@ ol li {
     <li><a href="/support/" target="_blank">Support</a></li>
     <li><a href="/theta-centrality/" target="_blank">θ-Centrality</a></li>
     <li><a href="/third-laplacian-energy-centrality-lc/" target="_blank">Third Laplacian energy centrality (LC)</a></li>
+    <li><a href="/top-candidate-tc-method/" target="_blank">Top candidate (TC) method</a></li>
     <li><a href="/topological-centrality-tc/" target="_blank">Topological centrality (TC)</a></li>
     <li><a href="/topological-coefficient/" target="_blank">Topological coefficient</a></li>
     <li><a href="/topsis-centrality/" target="_blank">TOPSIS centrality</a></li>
@@ -435,6 +415,7 @@ ol li {
     <li><a href="/weighted-k-shell-degree-neighborhood-wksdn/" target="_blank">Weighted <i>k</i>-shell degree neighborhood (WKSDN)</a></li>
     <li><a href="/weighted-k-short-node-disjoint-paths-wkpaths-centrality/" target="_blank">Weighted <i>k</i>-short node-disjoint paths (WKPaths) centrality</a></li>
     <li><a href="/weighted-leaderrank/" target="_blank">Weighted LeaderRank</a></li>
+    <li><a href="/weighted-top-candidate-wtc-method/" target="_blank">Weighted top candidate (WTC) method</a></li>
     <li><a href="/weighted-topsis-w-topsis-centrality/" target="_blank">Weighted TOPSIS (w-TOPSIS) centrality</a></li>
     <li><a href="/weighted-volume-centrality/" target="_blank">Weighted volume centrality</a></li>
     <li><a href="/wide-ranking-wrank/" target="_blank">Wide ranking (WRank)</a></li>
@@ -443,5 +424,5 @@ ol li {
     <li><a href="/x-non-backtracking-x-nb-centrality/" target="_blank"><i>X</i>-non-backtracking (X-NB) centrality</a></li>
     <li><a href="/zeta-vector-centrality/" target="_blank">Zeta vector centrality</a></li>
   </ol>
-
-
+</body>
+</html>

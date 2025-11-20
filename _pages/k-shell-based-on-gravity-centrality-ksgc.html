@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   <i>
@@ -24,26 +23,7 @@ search: true
   </i>
   -shell based on gravity centrality
  </i>
- (KSGC) is an extension of the local gravity model that integrates both \(k\)-shell and degree centralities to identify influential nodes in complex networks [2].
- <br/>
- Let \(\mathcal{N}^{(\leq k)}(i)\) denote set of nodes within the \(k\)-hop neighbourhood of node \(i\). The centrality \( c_{\textsc{KSGC}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{KSGC}}(i) =
- <br/>
- \sum_{j \in \mathcal{N}^{(\leq k)}(i)}
- <br/>
- e^{\frac{k_s(i) - k_s(j)}{ks_{\max} - ks_{\min}}}
- <br/>
- \cdot
- <br/>
- \frac{d_i d_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( d_{ij} \) is the shortest-path distance between nodes \( i \) and \( j \), \( d_i \) is the degree of node \( i \) and \( k_s(i) \) is the \(k\)-shell index of node \( i \). The terms \( ks_{\max} \) and \( ks_{\min} \) represent the maximum and minimum \(k\)-shell values in the network, respectively. Yang and Xiao [2] consider \( l = 2 \) as the truncated radius.
- <br/>
+ (KSGC) is an extension of the local gravity model that integrates both \(k\)-shell and degree centralities to identify influential nodes in networks [2]. Let \(\mathcal{N}^{(\leq k)}(i)\) denote set of nodes within the \(k\)-hop neighbourhood of node \(i\). The centrality \( c_{\textsc{KSGC}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\textsc{KSGC}}(i) = \sum_{j \in \mathcal{N}^{(\leq k)}(i)}e^{\frac{k_s(i) - k_s(j)}{ks_{\max} - ks_{\min}}} \cdot \frac{d_i d_j}{d_{ij}^2},\end{equation*}where \( d_{ij} \) is the shortest-path distance between nodes \( i \) and \( j \), \( d_i \) is the degree of node \( i \) and \( k_s(i) \) is the \(k\)-shell index of node \( i \). The terms \( ks_{\max} \) and \( ks_{\min} \) represent the maximum and minimum \(k\)-shell values in the network, respectively. Yang and Xiao [2] consider \( l = 2 \) as the truncated radius.\vfill
 </p>
 <h3>
  References

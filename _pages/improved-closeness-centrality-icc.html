@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved closeness centrality
  </i>
- (\textsc{ICC}) is a variation of standard closeness centrality that accounts for the number of shortest paths between nodes [2].
- <br/>
- For a node \(i\), the \textsc{ICC} centrality \(c_{\textsc{ICC}}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{\textsc{ICC}}(i) = \frac{N-1}{\sum_{j \neq i} d_{ij} \left( \frac{1}{n_{ij}} \right)^{α}},
- <br/>
- \]
- <br/>
- where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), \(n_{ij}\) is the number of shortest paths connecting \(i\) and \(j\), and \(0 \leq α \leq 1\) is a tunable parameter.
- <br/>
- Luan et al. [2] show that the \textsc{ICC} performs best for \(α = 0.2\). Note that \textsc{ICC} reduces to standard closeness centrality when \(α = 0\).
- <br/>
+ (\textsc{ICC}) is a variation of standard closeness centrality that accounts for the number of shortest paths between nodes [2]. For a node \(i\), the \textsc{ICC} centrality \(c_{\textsc{ICC}}(i)\) is defined as\[c_{\textsc{ICC}}(i) = \frac{N-1}{\sum_{j \neq i} d_{ij} \left( \frac{1}{n_{ij}} \right)^{α}},\]where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), \(n_{ij}\) is the number of shortest paths connecting \(i\) and \(j\), and \(0 \leq α \leq 1\) is a tunable parameter. Luan
+ <i>
+  et al.
+ </i>
+ [2] show that the \textsc{ICC} performs best for \(α = 0.2\). Note that \textsc{ICC} reduces to standard closeness centrality when \(α = 0\).
 </p>
 <h3>
  References

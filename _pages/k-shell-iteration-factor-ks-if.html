@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   \(k\)-shell iteration factor
  </i>
- (KS-IF) ranks nodes by combining their degree and \(k\)-shell decomposition information [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{KS-IF}(i) = δ(i) d_i + \sum_{j \in \mathcal{N}(i)} δ(j) d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\) and \(δ(i)\) is the \(k\)-shell iteration factor given by
- <br/>
- \begin{equation*}
- <br/>
- δ(i) = k_s(i) \left( 1 + \frac{n(i)}{m(i)} \right).
- <br/>
- \end{equation*}
- <br/>
- Here, \(k_s(i)\) is the \(k\)-shell index of node \(i\), \(n(i)\) is the iteration at which node \(i\) is removed, and \(m(i)\) is the total number of iterations in that step. KS-IF combines node degree and \(k\)-shell position to better identify influential nodes.
- <br/>
+ (KS-IF) ranks nodes by combining their degree and \(k\)-shell decomposition information [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{KS-IF}(i) = δ(i) d_i + \sum_{j \in \mathcal{N}(i)} δ(j) d_j,\end{equation*}where \(d_i\) is the degree of node \(i\) and \(δ(i)\) is the \(k\)-shell iteration factor given by\begin{equation*}δ(i) = k_s(i) \left( 1 + \frac{n(i)}{m(i)} \right).\end{equation*}Here, \(k_s(i)\) is the \(k\)-shell index of node \(i\), \(n(i)\) is the iteration at which node \(i\) is removed, and \(m(i)\) is the total number of iterations in that step. KS-IF combines node degree and \(k\)-shell position to better identify influential nodes.
 </p>
 <h3>
  References

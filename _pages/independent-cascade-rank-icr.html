@@ -1,0 +1,56 @@
+---
+title: Independent cascade rank (ICR)
+permalink: /independent-cascade-rank-icr/
+search: true
+---
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<style>
+ body { font-family: Georgia, serif; margin: 0px; line-height: 1.6; }
+    .references { margin-top: 1.2em; }
+    .ref-item { margin-bottom: 0.5em; }
+    .ref-num { display:inline-block; width:3em; font-weight:bold; color:#333; }
+    ul { margin-left: 1.2em; }
+</style>
+<p>
+ The
+ <i>
+  Independent cascade rank
+ </i>
+ (ICR) is a centrality measure that quantifies the expected influence of a node under the independent cascade (IC) diffusion model [2, 3]. In the IC model, when a node becomes active, it has a single chance to activate each of its inactive neighbors with a probability \(p_{ij}\) associated with edge \((i,j)\). The ICR of a node \(i\) is defined as the expected number of nodes that would be activated if \(i\) were chosen as the initial seed.  Since the activation process is probabilistic, the nodes activated from a given seed set may differ in each realization, causing the node rankings to vary between executions. To obtain a stable estimate of ICR, the expected influence is typically computed by averaging over multiple simulation runs.
+</p>
+<h3>
+ References
+</h3>
+<div class="references">
+ <div class="ref-item">
+  <span class="ref-num">
+   [1]
+  </span>
+  Shvydun, S. (2025). Zoo of Centralities: Encyclopedia of Node Metrics in Complex Networks. arXiv: 2511.05122
+  <a href="https://doi.org/10.48550/arXiv.2511.05122">
+   https://doi.org/10.48550/arXiv.2511.05122
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [2]
+  </span>
+  Kempe, D., Kleinberg, J., &amp; Tardos, É. (2005, July). Influential nodes in a diffusion model for social networks. In international colloquium on automata, languages, and programming (pp. 1127-1138). Berlin, Heidelberg: Springer Berlin Heidelberg.
+  <a href="https://doi.org/10.1007/11523468_91">
+   doi: 10.1007/11523468\_91.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [3]
+  </span>
+  Riquelme, F., Gonzalez-Cantergiani, P., Molinero, X., &amp; Serna, M. (2018). Centrality measure in social networks based on linear threshold model. Knowledge-Based Systems, 140, 92-102.
+  <a href="https://doi.org/10.1016/j.knosys.2017.10.029">
+   doi: 10.1016/j.knosys.2017.10.029.
+  </a>
+ </div>
+</div>

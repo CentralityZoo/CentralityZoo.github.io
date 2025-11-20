@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   \(k\)-shell hybrid method
  </i>
- (ksh) is a centrality measure that combines the \(k\)-shell decomposition and degree information within the framework of gravitational centrality [2]. Specifically, the centrality score \( c_{\mathrm{ksh}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{ksh}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)}
- <br/>
- \frac{\sqrt{k_s(i) + k_s(j)} + μ\,d_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}^{(\leq l)}(i) \) denotes the set of nodes within the \( l \)-hop neighborhood of node \( i \), \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( k_s(i) \) and \( k_s(j) \) represent the \(k\)-shell indices of nodes \( i \) and \( j \), respectively, \( d_j \) is the degree of node \( j \), and \( μ \in (0,1) \) is a tunable parameter that balances the contributions of the two components.
- <br/>
- Namtirtha et al. [2] recommend using \( l = 3 \) and \( μ = 0.4 \) for optimal performance.
- <br/>
+ (ksh) is a centrality measure that combines the \(k\)-shell decomposition and degree information within the framework of gravitational centrality [2]. Specifically, the centrality score \( c_{\mathrm{ksh}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\mathrm{ksh}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{\sqrt{k_s(i) + k_s(j)} + μ\,d_j}{d_{ij}^2},\end{equation*}where \( \mathcal{N}^{(\leq l)}(i) \) denotes the set of nodes within the \( l \)-hop neighborhood of node \( i \), \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( k_s(i) \) and \( k_s(j) \) represent the \(k\)-shell indices of nodes \( i \) and \( j \), respectively, \( d_j \) is the degree of node \( j \), and \( μ \in (0,1) \) is a tunable parameter that balances the contributions of the two components. Namtirtha
+ <i>
+  et al.
+ </i>
+ [2] recommend using \( l = 3 \) and \( μ = 0.4 \) for optimal performance.
 </p>
 <h3>
  References

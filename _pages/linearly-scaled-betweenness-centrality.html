@@ -16,26 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Linearly scaled betweenness centrality
  </i>
- is a variant of betweenness centrality that weights shortest paths according to the relative position of intermediate nodes along the path from the source [2, 3]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{b-lin}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{d_{ji}}{d_{jk}} \frac{σ_{jk}(i)}{σ_{jk}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{jk}\) is the length of the shortest path from \(j\) to \(k\), \(σ_{jk}\) is the total number of shortest paths between \(j\) and \(k\), and \(σ_{jk}(i)\) is the number passing through \(i\). Nodes farther from the source, and thus closer to the target, contribute more to centrality. In undirected graphs, however, linearly scaled betweenness reduces to standard betweenness centrality, since the relative distances along paths in opposite directions sum to one:
- <br/>
- \[
- <br/>
- \frac{d_{ji}}{d_{jk}} + \frac{d_{ki}}{d_{kj}} = 1.
- <br/>
- \]
- <br/>
+ is a variant of betweenness centrality that weights shortest paths according to the relative position of intermediate nodes along the path from the source [2, 3]. The centrality of node \(i\) is defined as\begin{equation*}c_{b-lin}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{d_{ji}}{d_{jk}} \frac{σ_{jk}(i)}{σ_{jk}},\end{equation*}where \(d_{jk}\) is the length of the shortest path from \(j\) to \(k\), \(σ_{jk}\) is the total number of shortest paths between \(j\) and \(k\), and \(σ_{jk}(i)\) is the number passing through \(i\). Nodes farther from the source, and thus closer to the target, contribute more to centrality. In undirected graphs, however, linearly scaled betweenness reduces to standard betweenness centrality, since the relative distances along paths in opposite directions sum to one:\[\frac{d_{ji}}{d_{jk}} + \frac{d_{ki}}{d_{kj}} = 1.\]
 </p>
 <h3>
  References

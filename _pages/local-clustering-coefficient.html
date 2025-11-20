@@ -16,35 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local clustering coefficient
  </i>
- , also known simply as the clustering coefficient, of a node \(i\) measures the probability that two randomly chosen neighbors of \(i\) are connected to each other [2]. Formally, the local clustering coefficient \(c_{\mathrm{cl}}(i)\) of node \(i\) is defined as the ratio between the number of actual links among its neighbors and the number of all possible links between them:
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{cl}}(i) =
- <br/>
- \begin{cases}
- <br/>
- \dfrac{\sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(i),\, k \neq j} a_{jk}}{d_i (d_i - 1)}, &amp; \text{if } d_i &gt; 1, \\[1.0em]
- <br/>
- 0, &amp; \text{otherwise,}
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\). Thus, \(c_{\mathrm{cl}}(i)\) quantifies how close the neighborhood of node \(i\) is to forming a clique (complete subgraph).  The local clustering coefficient has been extended to weighted graphs in [3].
- <br/>
- The local clustering coefficient can be used to identify
+ , also known simply as the clustering coefficient, of a node \(i\) measures the probability that two randomly chosen neighbors of \(i\) are connected to each other [2]. Formally, the local clustering coefficient \(c_{\mathrm{cl}}(i)\) of node \(i\) is defined as the ratio between the number of actual links among its neighbors and the number of all possible links between them:\begin{equation*} c_{\mathrm{cl}}(i) =\begin{cases}\dfrac{\sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(i),\, k \neq j} a_{jk}}{d_i (d_i - 1)}, &amp; \text{if } d_i &gt; 1, \\[1.0em]0, &amp; \text{otherwise,}\end{cases}\end{equation*}where \(d_i\) is the degree of node \(i\). Thus, \(c_{\mathrm{cl}}(i)\) quantifies how close the neighborhood of node \(i\) is to forming a clique (complete subgraph).  The local clustering coefficient has been extended to weighted graphs in [3].The local clustering coefficient can be used to identify
  <i>
   structural holes
  </i>
  in a network, indicating how influential a node may be in mediating or controlling information flow between its neighbors. In many networks, it is empirically observed that the local clustering coefficient of nodes depends roughly on their degree, with high-degree nodes typically exhibiting lower clustering [2].
- <br/>
 </p>
 <h3>
  References

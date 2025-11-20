@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Lin's index
  </i>
- is an adaptation of closeness centrality for disconnected graphs [2]. For a node \(i\), it is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Lin}}(i) = \frac{\bigl| \{ j \in \mathcal{N} \mid d_{ij} &lt; \infty \} \bigr|^2}{\sum_{j \in \mathcal{N},\, d_{ij} &lt; \infty} d_{ij}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\) and the numerator is the square of the number of nodes reachable from \(i\). Squaring the numerator gives greater weight to nodes with larger reachable sets, which is particularly important in disconnected graphs. By definition, isolated nodes are assigned a centrality of 1.
- <br/>
- For connected graphs, Lin's index reduces to closeness centrality, as all nodes are reachable.
- <br/>
+ is an adaptation of closeness centrality for disconnected graphs [2]. For a node \(i\), it is defined as\begin{equation*}c_{\mathrm{Lin}}(i) = \frac{\bigl| \{ j \in \mathcal{N} \mid d_{ij} &lt; \infty \} \bigr|^2}{\sum_{j \in \mathcal{N},\, d_{ij} &lt; \infty} d_{ij}},\end{equation*}where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\) and the numerator is the square of the number of nodes reachable from \(i\). Squaring the numerator gives greater weight to nodes with larger reachable sets, which is particularly important in disconnected graphs. By definition, isolated nodes are assigned a centrality of 1.For connected graphs, Lin's index reduces to closeness centrality, as all nodes are reachable.
 </p>
 <h3>
  References

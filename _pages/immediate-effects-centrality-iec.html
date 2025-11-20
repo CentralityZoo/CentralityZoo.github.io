@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Immediate effects centrality
  </i>
- (IEC) is a variant of closeness centrality that accounts for both the lengths and strengths of sequences of interpersonal influence connecting nodes [2]. The IEC score of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{IEC}(i) = \frac{N-1}{\sum_{j \neq i} m_{ji}},
- <br/>
- \end{equation*}
- <br/>
- where \(m_{ji}\) is the mean length of the sequences of interpersonal influence from node \(i\) to node \(j\). The matrix \(M = [m_{ji}]\) is given by
- <br/>
- \[
- <br/>
- M = (I - Z + E Z_{dg}) D,
- <br/>
- \]
- <br/>
- with the following definitions: \(I\) is the \(N \times N\) identity matrix; \(D\) is diagonal with entries \(d_{ii} = 1/v_i\), where \(v_i\) is an element of the left eigenvector of \(W\); \(W\) is the normalized adjacency matrix with self-loops, with each nonzero row divided by its row sum; \(E\) is an \(N \times N\) matrix of ones; \(Z = (I - W + W^{\infty})^{-1}\); and \(Z_{dg}\) is obtained from \(Z\) by setting all off-diagonal entries to zero.
- <br/>
- IEC is the reciprocal of the mean length of influence sequences from node \(i\) to all other nodes. Larger IEC values indicate that an actor’s influence spreads more rapidly through the network.
- <br/>
+ (IEC) is a variant of closeness centrality that accounts for both the lengths and strengths of sequences of interpersonal influence connecting nodes [2]. The IEC score of node \(i\) is defined as\begin{equation*}c_{IEC}(i) = \frac{N-1}{\sum_{j \neq i} m_{ji}},\end{equation*}where \(m_{ji}\) is the mean length of the sequences of interpersonal influence from node \(i\) to node \(j\). The matrix \(M = [m_{ji}]\) is given by\[M = (I - Z + E Z_{dg}) D,\]with the following definitions: \(I\) is the \(N \times N\) identity matrix; \(D\) is diagonal with entries \(d_{ii} = 1/v_i\), where \(v_i\) is an element of the left eigenvector of \(W\); \(W\) is the normalized adjacency matrix with self-loops, with each nonzero row divided by its row sum; \(E\) is an \(N \times N\) matrix of ones; \(Z = (I - W + W^{\infty})^{-1}\); and \(Z_{dg}\) is obtained from \(Z\) by setting all off-diagonal entries to zero.IEC is the reciprocal of the mean length of influence sequences from node \(i\) to all other nodes. Larger IEC values indicate that an actor’s influence spreads more rapidly through the network.
 </p>
 <h3>
  References

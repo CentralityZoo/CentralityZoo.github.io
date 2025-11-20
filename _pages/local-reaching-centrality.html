@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local reaching centrality
  </i>
- of a node \(i\) in an unweighted directed graph \(G\) is equivalent to the \(m\)-reach centrality with \(m = N{-}1\), where \(N\) is the total number of nodes in the graph [2].
- <br/>
- It is defined as the proportion of nodes in the graph that can be reached from \(i\) following outgoing edges:
- <br/>
- \[
- <br/>
- c_{\mathrm{LR}}(i) = \frac{|\{ j \in \mathcal{N}: \sum_{k=1}^{N-1}(A^k)_{ij} &gt; 0\}|}{N-1}.
- <br/>
- \]
- <br/>
- Local reaching centrality quantifies the extent to which a node can reach other nodes in the network, providing a normalized measure of its local influence in terms of reachability.
- <br/>
- In undirected networks, all nodes within the same connected component have identical local reaching centrality, equal to the fraction of nodes in the component relative to the total number of nodes in the network.
- <br/>
+ of a node \(i\) in an unweighted directed graph \(G\) is equivalent to the \(m\)-reach centrality with \(m = N{-}1\), where \(N\) is the total number of nodes in the graph [2].  It is defined as the proportion of nodes in the graph that can be reached from \(i\) following outgoing edges:\[c_{\mathrm{LR}}(i) = \frac{|\{ j \in \mathcal{N}: \sum_{k=1}^{N-1}(A^k)_{ij} &gt; 0\}|}{N-1}.\]Local reaching centrality quantifies the extent to which a node can reach other nodes in the network, providing a normalized measure of its local influence in terms of reachability.  In undirected networks, all nodes within the same connected component have identical local reaching centrality, equal to the fraction of nodes in the component relative to the total number of nodes in the network.
 </p>
 <h3>
  References

@@ -16,37 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local dimension
  </i>
- (LD) quantifies the dimensionality of nodes in a network by examining how the volume of the neighborhood around each node scales with increasing topological distance [2]. In most spatially embedded real networks, which typically lack the small-world property, the distribution of link lengths follows a power law. Consequently, the number of nodes \(B_i(r)\) located within a topological distance \(r\) from a node \(i\) obeys the relationship
- <br/>
- \[
- <br/>
- B_i(r) \sim r^d,
- <br/>
- \]
- <br/>
- where the constant \(d\) characterizes the effective dimension of the network. Silva and Costa [2] refined this power-law relationship by allowing the dimensionality to vary locally, proposing that
- <br/>
- \[
- <br/>
- B_i(r) = α r^{D_i(r)},
- <br/>
- \]
- <br/>
- where \(D_i(r)\) represents the local dimension around node \(i\). The local dimension coefficient \(D_i(r)\) can be estimated from the slope of the \(B_i(r)\) curve on a double-logarithmic scale and is discretized as
- <br/>
- \[
- <br/>
- D_i(r) \simeq r \frac{n_i(r)}{B_i(r)},
- <br/>
- \]
- <br/>
- where \(n_i(r)\) denotes the number of nodes that are exactly at a topological distance \(r\) from the reference node \(i\). Pu et al. [3] further extended the local dimension measure by allowing the distance parameter \(r\) to vary across different nodes in the network.
- <br/>
+ (LD) quantifies the dimensionality of nodes in a network by examining how the volume of the neighborhood around each node scales with increasing topological distance [2]. In most spatially embedded real networks, which typically lack the small-world property, the distribution of link lengths follows a power law. Consequently, the number of nodes \(B_i(r)\) located within a topological distance \(r\) from a node \(i\) obeys the relationship\[B_i(r) \sim r^d,\]where the constant \(d\) characterizes the effective dimension of the network. Silva and Costa [2] refined this power-law relationship by allowing the dimensionality to vary locally, proposing that\[B_i(r) = α r^{D_i(r)},\]where \(D_i(r)\) represents the local dimension around node \(i\). The local dimension coefficient \(D_i(r)\) can be estimated from the slope of the \(B_i(r)\) curve on a double-logarithmic scale and is discretized as\[D_i(r) \simeq r \frac{n_i(r)}{B_i(r)},\]where \(n_i(r)\) denotes the number of nodes that are exactly at a topological distance \(r\) from the reference node \(i\). Pu
+ <i>
+  et al.
+ </i>
+ [3] further extended the local dimension measure by allowing the distance parameter \(r\) to vary across different nodes in the network.
 </p>
 <h3>
  References

@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Length-scaled betweenness centrality
  </i>
- (LSBC), also known as distance-scaled betweenness, is a variant of betweenness centrality that weights shortest paths inversely proportional to their length [2, 3]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{b_{dist}}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{1}{d_{jk}} \frac{σ_{jk}(i)}{σ_{jk}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{jk}\) is the length of the shortest path from \(j\) to \(k\), \(σ_{jk}\) is the total number of shortest paths between \(j\) and \(k\), and \(σ_{jk}(i)\) is the number of those paths passing through \(i\). This measure reflects the intuition that longer paths contribute less to a node's centrality.
- <br/>
+ (LSBC), also known as distance-scaled betweenness, is a variant of betweenness centrality that weights shortest paths inversely proportional to their length [2, 3]. The centrality of node \(i\) is defined as\begin{equation*}c_{b_{dist}}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{1}{d_{jk}} \frac{σ_{jk}(i)}{σ_{jk}},\end{equation*}where \(d_{jk}\) is the length of the shortest path from \(j\) to \(k\), \(σ_{jk}\) is the total number of shortest paths between \(j\) and \(k\), and \(σ_{jk}(i)\) is the number of those paths passing through \(i\). This measure reflects the intuition that longer paths contribute less to a node's centrality.
 </p>
 <h3>
  References

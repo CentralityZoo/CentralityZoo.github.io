@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Improved IMC
  </i>
- (IIMC) method [2] extends the node contraction (IMC) centrality [3] by incorporating the importance of edges in addition to nodes. The IIMC centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{IIMC}}(i) = α \, c_{\mathrm{IMC}}(i,G) + β \sum_{j \in \mathcal{N}(i)} c_{\mathrm{IMC}}((i,j), G^{*}),
- <br/>
- \]
- <br/>
- where \(c_{\mathrm{IMC}}(i,G)\) denotes the IMC centrality of node \(i\) in the original graph \(G\), \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(c_{\mathrm{IMC}}((i,j), G^{*})\) represents the IMC centrality of edge \((i,j)\) computed on the line graph \(G^{*}\) of \(G\). The parameters \(α\) and \(β\) control the relative contributions of node and edge importance. In [2], the authors recommend \(α / β = 5\) as a suitable balance between the two contributions.
- <br/>
+ (IIMC) method [2] extends the node contraction (IMC) centrality [3] by incorporating the importance of edges in addition to nodes. The IIMC centrality of node \(i\) is defined as\[c_{\mathrm{IIMC}}(i) = α \, c_{\mathrm{IMC}}(i,G) + β \sum_{j \in \mathcal{N}(i)} c_{\mathrm{IMC}}((i,j), G^{*}),\]where \(c_{\mathrm{IMC}}(i,G)\) denotes the IMC centrality of node \(i\) in the original graph \(G\), \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(c_{\mathrm{IMC}}((i,j), G^{*})\) represents the IMC centrality of edge \((i,j)\) computed on the line graph \(G^{*}\) of \(G\). The parameters \(α\) and \(β\) control the relative contributions of node and edge importance. In [2], the authors recommend \(α / β = 5\) as a suitable balance between the two contributions.
 </p>
 <h3>
  References

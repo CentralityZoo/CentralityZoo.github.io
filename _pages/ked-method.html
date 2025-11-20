@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   KED method
@@ -25,25 +24,7 @@ search: true
  <i>
   path diversity
  </i>
- , which quantifies the diversity of spreading paths originating from each node.
- <br/>
- Let \(K_i\) denote the total degree of node \(i\)'s neighbors, i.e.,
- <br/>
- \begin{equation*}
- <br/>
- K_i = \sum_{j \in \mathcal{N}(i)} k_j,
- <br/>
- \end{equation*}
- <br/>
- where \(k_j\) is the degree of neighbor \(j\) and \(\mathcal{N}(i)\) is the set of neighbors of node \(i\). The centrality of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{KED}}(i) = k_i \, E_i^α \, D_i^β,
- <br/>
- \end{equation*}
- <br/>
- where:
+ , which quantifies the diversity of spreading paths originating from each node. Let \(K_i\) denote the total degree of node \(i\)'s neighbors, i.e.,\begin{equation*}K_i = \sum_{j \in \mathcal{N}(i)} k_j,\end{equation*}where \(k_j\) is the degree of neighbor \(j\) and \(\mathcal{N}(i)\) is the set of neighbors of node \(i\). The centrality of node \(i\) is then defined as\begin{equation*}c_{\mathrm{KED}}(i) = k_i \, E_i^α \, D_i^β,\end{equation*}where:
  <ul>
   <li>
    \(k_i\) is the degree of node \(i\),
@@ -58,9 +39,11 @@ search: true
    \(α\) and \(β\) are tunable parameters that control the relative importance of path diversity \(E_i\) and neighbor influence \(D_i\).
   </li>
  </ul>
- <br/>
- Chen et al. [2] suggest using \(α = β = 1\), giving equal weight to path diversity and neighbor connectivity in the ranking.
- <br/>
+ Chen
+ <i>
+  et al.
+ </i>
+ [2] suggest using \(α = β = 1\), giving equal weight to path diversity and neighbor connectivity in the ranking.
 </p>
 <h3>
  References

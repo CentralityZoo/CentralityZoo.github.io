@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local volume dimension
  </i>
- (LVD) is a centrality measure for identifying influential nodes based on the local dimension concept [2]. For each node \(i\), the LVD centrality evaluates the total degree within a box \(V_i(l)\), defined as the sum of the degrees of all nodes at distance \(l\) from node \(i\). It is assumed that the total degree within each box follows a power-law distribution.
- <br/>
- The LVD centrality \(c_{\textsc{LVD}}(i)\) of node \(i\) is given by
- <br/>
- \[
- <br/>
- c_{\textsc{LVD}}(i) = \frac{d \ln V_i(l)}{d \ln l}.
- <br/>
- \]
- <br/>
- The LVD centrality of node \(i\) is estimated numerically as the slope of the linear regression of \(\ln V_i(l)\) against \(\ln l\).
- <br/>
+ (LVD) is a centrality measure for identifying influential nodes based on the local dimension concept [2]. For each node \(i\), the LVD centrality evaluates the total degree within a box \(V_i(l)\), defined as the sum of the degrees of all nodes at distance \(l\) from node \(i\). It is assumed that the total degree within each box follows a power-law distribution. The LVD centrality \(c_{\textsc{LVD}}(i)\) of node \(i\) is given by\[c_{\textsc{LVD}}(i) = \frac{d \ln V_i(l)}{d \ln l}.\]The LVD centrality of node \(i\) is estimated numerically as the slope of the linear regression of \(\ln V_i(l)\) against \(\ln l\).
 </p>
 <h3>
  References

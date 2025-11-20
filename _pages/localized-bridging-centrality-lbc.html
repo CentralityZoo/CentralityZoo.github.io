@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Localized bridging centrality
  </i>
- (LBC) is a variant of bridging centrality that combines a node's local brokerage and connectivity features [2]. It is defined as the product of the egocentric betweenness centrality \(c_{\mathrm{ego}}(i)\) and the bridging coefficient \(β_c(i)\):
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{LBC}}(i) = c_{\mathrm{ego}}(i) \cdot β_c(i),
- <br/>
- \end{equation*}
- <br/>
- where \(c_{\mathrm{ego}}(i)\) is the egocentric betweenness centrality of node \(i\), which is computed as the betweenness of node \(i\) in its egocentric network [3].
- <br/>
- The LBC measure identifies nodes that serve as local brokers within their immediate neighborhood while also connecting to high-degree neighbors.
- <br/>
+ (LBC) is a variant of bridging centrality that combines a node's local brokerage and connectivity features [2]. It is defined as the product of the egocentric betweenness centrality \(c_{\mathrm{ego}}(i)\) and the bridging coefficient \(β_c(i)\):\begin{equation*}c_{\mathrm{LBC}}(i) = c_{\mathrm{ego}}(i) \cdot β_c(i),\end{equation*}where \(c_{\mathrm{ego}}(i)\) is the egocentric betweenness centrality of node \(i\), which is computed as the betweenness of node \(i\) in its egocentric network [3].  The LBC measure identifies nodes that serve as local brokers within their immediate neighborhood while also connecting to high-degree neighbors.
 </p>
 <h3>
  References

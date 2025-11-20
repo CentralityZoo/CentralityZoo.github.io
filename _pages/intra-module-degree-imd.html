@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   intra-module degree
  </i>
- (IMD), also known as the within-module degree, is a community-based measure that quantifies the role of nodes within their respective communities [2]. Consider a graph \(G\) with a community structure consisting of \(K\) communities \(C_1, \dots, C_K\). Each community may have a different internal structure, ranging from fully centralized (e.g., a star) to fully decentralized (e.g., a complete graph). Nodes with similar functional roles are expected to exhibit similar relative intra-community connectivity.
- <br/>
- The intra-module degree of a node \(i\) belonging to community \(C_s\) is defined as the Z-score of its internal degree relative to other nodes in the same community:
- <br/>
- \begin{equation*}
- <br/>
- c_{IMD}(i) = \frac{k_{is} - μ_s}{ω_s},
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- k_{is} = \sum_{j \in C_s \setminus \{i\}} a_{ij}
- <br/>
- \]
- <br/>
- is the number of links from node \(i\) to other nodes in module \(C_s\), and \(μ_s\) and \(ω_s\) are the mean and standard deviation, respectively, of the internal degrees of nodes in \(C_s\). A higher intra-module degree indicates that node \(i\) is more strongly connected within its community.
- <br/>
+ (IMD), also known as the within-module degree, is a community-based measure that quantifies the role of nodes within their respective communities [2]. Consider a graph \(G\) with a community structure consisting of \(K\) communities \(C_1, \dots, C_K\). Each community may have a different internal structure, ranging from fully centralized (e.g., a star) to fully decentralized (e.g., a complete graph). Nodes with similar functional roles are expected to exhibit similar relative intra-community connectivity.The intra-module degree of a node \(i\) belonging to community \(C_s\) is defined as the Z-score of its internal degree relative to other nodes in the same community:\begin{equation*}c_{IMD}(i) = \frac{k_{is} - μ_s}{ω_s},\end{equation*}where \[k_{is} = \sum_{j \in C_s \setminus \{i\}} a_{ij}\]is the number of links from node \(i\) to other nodes in module \(C_s\), and \(μ_s\) and \(ω_s\) are the mean and standard deviation, respectively, of the internal degrees of nodes in \(C_s\). A higher intra-module degree indicates that node \(i\) is more strongly connected within its community.
 </p>
 <h3>
  References

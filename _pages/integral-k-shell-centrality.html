@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   integral \(k\)-shell
  </i>
- (IKS) centrality is an extension of the \(k\)-shell centrality that incorporates both 2-step neighborhood information and the historical \(k\)-shell values of nodes [2]. The historical \(k\)-shell of a node \(i\) is defined as the sum of its \(k\)-shell values across previous iterations of the decomposition.
- <br/>
- The integral \(k\)-shell value \(c_{IKS}(i)\) of node \(i\) is given by
- <br/>
- \begin{equation*}
- <br/>
- c_{IKS}(i) = Q_2(i) + \sum_{j=1}^{m_i} k_s^{(j)},
- <br/>
- \end{equation*}
- <br/>
- where \(Q_2(i)\) denotes the number of nodes within 2 hops of node \(i\), \(m_i\) is the iteration at which node \(i\) is removed during the \(k\)-shell decomposition, and \(k_s^{(j)}\) is the historical \(k\)-shell index assigned to the nodes removed at iteration \(j\).
- <br/>
- Nodes with high IKS values are considered influential both because of their local 2-step connectivity and their persistence in the core layers of the network during the \(k\)-shell decomposition.
- <br/>
+ (IKS) centrality is an extension of the \(k\)-shell centrality that incorporates both 2-step neighborhood information and the historical \(k\)-shell values of nodes [2]. The historical \(k\)-shell of a node \(i\) is defined as the sum of its \(k\)-shell values across previous iterations of the decomposition.  The integral \(k\)-shell value \(c_{IKS}(i)\) of node \(i\) is given by\begin{equation*}c_{IKS}(i) = Q_2(i) + \sum_{j=1}^{m_i} k_s^{(j)},\end{equation*}where \(Q_2(i)\) denotes the number of nodes within 2 hops of node \(i\), \(m_i\) is the iteration at which node \(i\) is removed during the \(k\)-shell decomposition, and \(k_s^{(j)}\) is the historical \(k\)-shell index assigned to the nodes removed at iteration \(j\).Nodes with high IKS values are considered influential both because of their local 2-step connectivity and their persistence in the core layers of the network during the \(k\)-shell decomposition.
 </p>
 <h3>
  References

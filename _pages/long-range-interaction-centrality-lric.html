@@ -16,31 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Long-Range Interaction Centrality (LRIC)
  </i>
- index is an extension of SRIC that accounts for the indirect influence of nodes [2, 3]. LRIC is based on the concepts of direct and group influence, as in SRIC, where each node \(i\) has an individual threshold of influence \(q_i\), while \(\Omega(i)\) and \(\Omega^{p}(i)\) denote, respectively, the sets of critical and pivotal neighbours of node \(i\). However, the direct influence \(c_{ij}\) of node \(i\) on node \(j\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{ij} =
- <br/>
- \begin{cases}
- <br/>
- \max_{i \in \Omega^{p}_k(j)} \frac{a_{ij}}{\sum_{h \in \Omega_k(j)} a_{hj}}, &amp; \text{if } \exists k: i \in \Omega^{p}_k(j),\\
- <br/>
- 0, &amp; \text{otherwise}.
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- The direct influence \(c_{ij}\) can be interpreted as the maximal possible influence of node \(i\) within any group \(\Omega_k(j)\) where it is pivotal. LRIC further considers the indirect influence of nodes by examining paths of length \(\leq s\) in the network of direct influences. There are three common variations of the LRIC index:
- <br/>
+ index is an extension of SRIC that accounts for the indirect influence of nodes [2, 3]. LRIC is based on the concepts of direct and group influence, as in SRIC, where each node \(i\) has an individual threshold of influence \(q_i\), while \(\Omega(i)\) and \(\Omega^{p}(i)\) denote, respectively, the sets of critical and pivotal neighbours of node \(i\). However, the direct influence \(c_{ij}\) of node \(i\) on node \(j\) is defined as\begin{equation*}c_{ij} = \begin{cases}\max_{i \in \Omega^{p}_k(j)} \frac{a_{ij}}{\sum_{h \in \Omega_k(j)} a_{hj}}, &amp; \text{if } \exists k: i \in \Omega^{p}_k(j),\\0, &amp; \text{otherwise}.\end{cases}\end{equation*}The direct influence \(c_{ij}\) can be interpreted as the maximal possible influence of node \(i\) within any group \(\Omega_k(j)\) where it is pivotal. LRIC further considers the indirect influence of nodes by examining paths of length \(\leq s\) in the network of direct influences. There are three common variations of the LRIC index:
  <ol>
-  <br/>
   <li>
    <i>
     LRIC(max)
@@ -54,7 +35,6 @@ search: true
         f(P_{i \rightarrow j}) = c_{ik_1} \times c_{k_1k_2} \times \ldots \times c_{k_{s-1}j}.
     \end{equation*}
   </li>
-  <br/>
   <li>
    <i>
     LRIC(maxmin)
@@ -67,32 +47,22 @@ search: true
     \begin{equation*}
         f(P_{i \rightarrow j}) = \min(c_{ik_1}, c_{k_1k_2}, \ldots, c_{k_{s-1}j}).
     \end{equation*}
-    In both LRIC(max) and LRIC(maxmin), the indirect influence \(\Tilde{c}_{ij}\) of node \(i\) on node \(j\) is determined by the path with the greatest strength, i.e.,
+    In both LRIC(max) and LRIC(maxmin), the indirect influence \(c̃_{ij}\) of node \(i\) on node \(j\) is determined by the path with the greatest strength, i.e.,
     \[
-        \Tilde{c}_{ij} = \max_{P_{i \rightarrow j}}f(P_{i \rightarrow j}).
+        c̃_{ij} = \max_{P_{i \rightarrow j}}f(P_{i \rightarrow j}).
     \]
   </li>
-  <br/>
   <li>
    <i>
     LRIC(PPR)
    </i>
-   : the influence \(f(P_{i \rightarrow j})\) of node \(i\) on node \(j\) along a path \(P_{i \rightarrow j}\) is determined by considering all paths between them [4]. Specifically, the indirect influence \(\tilde{c}_{ij}\) of node \(i\) on node \(j\) is quantified using the personalized PageRank (PPR) algorithm, which estimates the probability of reaching node \(j\) starting from node \(i\). This computation uses a modified graph of direct influences, where an additional link is introduced from each node \(k\) to node \(i\) with strength
+   : the influence \(f(P_{i \rightarrow j})\) of node \(i\) on node \(j\) along a path \(P_{i \rightarrow j}\) is determined by considering all paths between them [4]. Specifically, the indirect influence \(c̃_{ij}\) of node \(i\) on node \(j\) is quantified using the personalized PageRank (PPR) algorithm, which estimates the probability of reaching node \(j\) starting from node \(i\). This computation uses a modified graph of direct influences, where an additional link is introduced from each node \(k\) to node \(i\) with strength
     \begin{equation*}
         c_{ki} = N-1 - \sum_{j \neq i} c_{kj}.
     \end{equation*}
   </li>
-  <br/>
  </ol>
- <br/>
- The final LRIC score of node \(i\) is obtained by aggregating its indirect influence on all other nodes in the network. For instance, one possible aggregation is given by
- <br/>
- \[
- <br/>
- c_{\mathrm{LRIC}}(i) = \sum_{j=1}^{N} \Tilde{c}_{ij}.
- <br/>
- \]
- <br/>
+ The final LRIC score of node \(i\) is obtained by aggregating its indirect influence on all other nodes in the network. For instance, one possible aggregation is given by\[c_{\mathrm{LRIC}}(i) = \sum_{j=1}^{N} c̃_{ij}.\]The LRIC index has been applied in diverse domains, including the identification of influential countries in global food trade networks [5], analysis of financial [6, 7], global arms transfer [8], international conflict [9], and international migration networks [10], as well as the detection of key actors in terrorist networks [8] and citation networks of economic journals [11].
 </p>
 <h3>
  References
@@ -132,6 +102,63 @@ search: true
   Aleskerov, F., Meshcheryakova, N., &amp; Shvydun, S. (2020). Indirect influence assessment in the context of retail food network. In Network Algorithms, Data Mining, and Applications: NET, Moscow, Russia, May 2018 8 (pp. 143-160). Springer International Publishing.
   <a href="https://doi.org/10.1007/978-3-030-37157-9_10">
    doi: 10.1007/978-3-030-37157-9\_10.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [5]
+  </span>
+  Aleskerov, F., Sergeeva, Z., &amp; Shvydun, S. (2017). Assessment of exporting economies influence on the global food network. In Optimization Methods and Applications: In Honor of Ivan V. Sergienko's 80th Birthday (pp. 1-10). Cham: Springer International Publishing.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [6]
+  </span>
+  Aleskerov, F. , Andrievskaya, I. , Nikitina A. and Shvydun, S. (2020). Key Borrowers Detected by the Intensities of Their Interactions. Handbook of Financial Econometrics, Mathematics, Statistics, and Machine Learning (In 4 Volumes), 355-389 World Scientific: Singapore Volume 1, Chapter 9.
+  <a href="https://doi.org/10.1142/9789811202391_0009">
+   doi: 10.1142/9789811202391\_0009.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [7]
+  </span>
+  Shvydun, S. (2020). Dynamic analysis of the global financial network. In 2020 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM) (pp. 374-378). IEEE.
+  <a href="https://doi.org/10.1109/ASONAM49781.2020.9381345">
+   doi: 10.1109/ASONAM49781.2020.9381345.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [8]
+  </span>
+  Shvydun, S. (2019). Influence of Countries in the Global Arms Transfers Network: 1950–2018. In International Conference on Complex Networks and Their Applications (pp. 736-748). Cham: Springer International Publishing.
+  <a href="https://doi.org/10.1007/978-3-030-36683-4_59">
+   doi: 10.1007/978-3-030-36683-4\_59.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [9]
+  </span>
+  Aleskerov, F. T., Kurapova, M., Meshcheryakova, N., Mironyuk, M., &amp; Shvydun, S. (2016). A network approach to analysis of international conflicts. Political science (RU), (4), 111-137.
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [10]
+  </span>
+  Aleskerov, F., Meshcheryakova, N., Rezyapova, A., &amp; Shvydun, S. (2016, May). Network analysis of international migration. In International Conference on Network Analysis (pp. 177-185). Cham: Springer International Publishing.
+  <a href="https://doi.org/10.1007/978-3-319-56829-4_13">
+   doi: 10.1007/978-3-319-56829-4\_13.
+  </a>
+ </div>
+ <div class="ref-item">
+  <span class="ref-num">
+   [11]
+  </span>
+  Aleskerov, F., Badgaeva, D., Pislyakov, V., Sterligov, I., &amp; Shvydun, S. (2016). An importance of Russian and international economic journals: A network approach. Journal of the New Economic Association, 30(2), 193-205.
+  <a href="https://doi.org/10.31737/2221-2264-2016-30-2-10">
+   doi: 10.31737/2221-2264-2016-30-2-10.
   </a>
  </div>
 </div>

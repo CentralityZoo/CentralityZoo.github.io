@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Leverage centrality
  </i>
- quantifies the relative connectivity of a node compared to its neighbors [2]. For a node \(i\) with degree \(d_i\) and neighbors \(\mathcal{N}(i)\), the leverage centrality is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Leverage}}(i) = \frac{1}{d_i} \sum_{j \in \mathcal{N}(i)} \frac{d_i - d_j}{d_i + d_j}.
- <br/>
- \end{equation*}
- <br/>
- This measure identifies nodes that are more connected than their neighbors, indicating their potential to control the flow of information. Nodes with negative leverage centrality are less connected than their neighbors and are thus influenced by them. Leverage centrality can also be extended to directed graphs by computing in-leverage and out-leverage using in-degree and out-degree, respectively [2].
- <br/>
+ quantifies the relative connectivity of a node compared to its neighbors [2]. For a node \(i\) with degree \(d_i\) and neighbors \(\mathcal{N}(i)\), the leverage centrality is defined as\begin{equation*}c_{\mathrm{Leverage}}(i) = \frac{1}{d_i} \sum_{j \in \mathcal{N}(i)} \frac{d_i - d_j}{d_i + d_j}.\end{equation*}This measure identifies nodes that are more connected than their neighbors, indicating their potential to control the flow of information. Nodes with negative leverage centrality are less connected than their neighbors and are thus influenced by them. Leverage centrality can also be extended to directed graphs by computing in-leverage and out-leverage using in-degree and out-degree, respectively [2].
 </p>
 <h3>
  References

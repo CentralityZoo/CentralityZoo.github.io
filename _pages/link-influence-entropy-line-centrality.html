@@ -16,40 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Link Influence Entropy
  </i>
- (LInE) centrality quantifies the importance of each node based on the influence of the links connected to it [2]. The centrality of node \(i\) is determined by the cumulative influence of all links incident to that node:
- <br/>
- \[
- <br/>
- c_{\mathrm{LInE}}(i) = \sum_{j \in \mathcal{N}(i)} p_{ij},
- <br/>
- \]
- <br/>
- where \(p_{ij}\) represents the influence of link \((i,j)\), defined according to the change in the average shortest path length after the removal of that link:
- <br/>
- \[
- <br/>
- p_{ij} = \frac{|\langle d_G \rangle - \langle d_{G_{ij}} \rangle|}{\sum_{i \neq j} |\langle d_G \rangle - \langle d_{G_{ij}} \rangle|}.
- <br/>
- \]
- <br/>
- Here, \(\langle d_G \rangle\) denotes the average shortest path length in the original graph \(G\), and \(\langle d_{G_{ij}} \rangle\) denotes the corresponding value for the graph obtained by removing link \((i,j)\).
- <br/>
- If link \((i,j)\) acts as a bridge (i.e., its removal disconnects the graph), Singh
+ (LInE) centrality quantifies the importance of each node based on the influence of the links connected to it [2]. The centrality of node \(i\) is determined by the cumulative influence of all links incident to that node:\[c_{\mathrm{LInE}}(i) = \sum_{j \in \mathcal{N}(i)} p_{ij},\]where \(p_{ij}\) represents the influence of link \((i,j)\), defined according to the change in the average shortest path length after the removal of that link:\[p_{ij} = \frac{|\langle d_G \rangle - \langle d_{G_{ij}} \rangle|}{\sum_{i \neq j} |\langle d_G \rangle - \langle d_{G_{ij}} \rangle|}.\]Here, \(\langle d_G \rangle\) denotes the average shortest path length in the original graph \(G\), and \(\langle d_{G_{ij}} \rangle\) denotes the corresponding value for the graph obtained by removing link \((i,j)\). If link \((i,j)\) acts as a bridge (i.e., its removal disconnects the graph), Singh
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] compute \(\langle d_{G_{ij}} \rangle\) using only the largest connected component when it contains more than 80\
- <br/>
- If link \((i,j)\) is a bridge (i.e., its removal disconnects the graph), Singh
+ } [2] compute \(\langle d_{G_{ij}} \rangle\) using only the largest connected component when it contains more than 80\If link \((i,j)\) is a bridge (i.e., its removal disconnects the graph), Singh
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] compute \(\langle d_{G_{ij}} \rangle\) using the largest connected component if it contains more than 80\
- <br/>
+ } [2] compute \(\langle d_{G_{ij}} \rangle\) using the largest connected component if it contains more than 80\
 </p>
 <h3>
  References

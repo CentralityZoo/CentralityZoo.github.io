@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved neighbors’
@@ -25,20 +24,7 @@ search: true
   </i>
   -core (INK) method
  </i>
- , also known as neighborhood coreness or INK score, is an extension of the classical \(k\)-shell centrality [2, 3]. While nodes with the largest \(k\)-core values may have different spreading influence, INK accounts for the \(k\)-core values of neighboring nodes to better distinguish their influence.
- <br/>
- The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{INK}}(i) = \sum_{j \in \mathcal{N}(i)} k_s(j)^{α},
- <br/>
- \end{equation*}
- <br/>
- where \(k_s(j)\) is the \(k\)-core value of neighbor \(j\), \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(α\) is a tunable parameter controlling the contribution of neighbors’ influence.
- <br/>
- Nodes connected to influential neighbors attain higher INK scores. The parameter \(α\) modulates this effect: for \(α &lt; 1\), the influence of neighbors with large \(k\)-core values is weakened; when \(α = 1\), the INK score reduces to the sum of the neighbors’ \(k\)-core values.
- <br/>
+ , also known as neighborhood coreness or INK score, is an extension of the classical \(k\)-shell centrality [2, 3]. While nodes with the largest \(k\)-core values may have different spreading influence, INK accounts for the \(k\)-core values of neighboring nodes to better distinguish their influence. The centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{INK}}(i) = \sum_{j \in \mathcal{N}(i)} k_s(j)^{α},\end{equation*}where \(k_s(j)\) is the \(k\)-core value of neighbor \(j\), \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), and \(α\) is a tunable parameter controlling the contribution of neighbors’ influence.Nodes connected to influential neighbors attain higher INK scores. The parameter \(α\) modulates this effect: for \(α &lt; 1\), the influence of neighbors with large \(k\)-core values is weakened; when \(α = 1\), the INK score reduces to the sum of the neighbors’ \(k\)-core values.
 </p>
 <h3>
  References

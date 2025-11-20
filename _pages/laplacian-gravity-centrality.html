@@ -16,21 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Laplacian gravity centrality
  </i>
- (LGC) is an extension of the local gravity model that combines Laplacian centrality with the network structure to identify influential nodes in complex networks [2]. The centrality \(c_{\textsc{LGC}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{LGC}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{c_L(i)\, c_L(j)}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(c_L(i)\) is the Laplacian centrality of node \(i\). Zhang et al. [2] set the truncated radius to \(l = \langle d \rangle / 2\), where \(\langle d \rangle\) is the average shortest-path distance in the network.
- <br/>
+ (LGC) is an extension of the local gravity model that combines Laplacian centrality with the network structure to identify influential nodes in complex networks [2]. The centrality \(c_{\textsc{LGC}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\textsc{LGC}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{c_L(i)\, c_L(j)}{d_{ij}^2},\end{equation*}where \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(c_L(i)\) is the Laplacian centrality of node \(i\). Zhang
+ <i>
+  et al.
+ </i>
+ [2] set the truncated radius to \(l = \langle d \rangle / 2\), where \(\langle d \rangle\) is the average shortest-path distance in the network.
 </p>
 <h3>
  References

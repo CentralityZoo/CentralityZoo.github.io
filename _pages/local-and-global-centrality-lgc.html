@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Local and global centrality
  </i>
- (LGC) identifies influential nodes by integrating both local and global topological properties of a network [2]. The centrality of a node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{LGC}(i) = \frac{d_i}{N} \sum_{j \neq i} \frac{\sqrt{d_j + α}}{d_{ij}},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(α \in [0,1]\) is a parameter that controls the relative influence of neighboring node degrees (e.g., \(α=0.4\)).
- <br/>
- Nodes with high LGC scores are those that not only have many connections but are also closely connected to other well-connected nodes, making them critical for information spreading and network cohesion. The effectiveness of LGC has been evaluated on six real-world networks and validated using the Susceptible-Infected-Recovered (SIR) epidemic model.
- <br/>
+ (LGC) identifies influential nodes by integrating both local and global topological properties of a network [2]. The centrality of a node \(i\) is defined as\[c_{LGC}(i) = \frac{d_i}{N} \sum_{j \neq i} \frac{\sqrt{d_j + α}}{d_{ij}},\]where \(d_i\) is the degree of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \(α \in [0,1]\) is a parameter that controls the relative influence of neighboring node degrees (e.g., \(α=0.4\)).  Nodes with high LGC scores are those that not only have many connections but are also closely connected to other well-connected nodes, making them critical for information spreading and network cohesion. The effectiveness of LGC has been evaluated on six real-world networks and validated using the Susceptible-Infected-Recovered (SIR) epidemic model.
 </p>
 <h3>
  References

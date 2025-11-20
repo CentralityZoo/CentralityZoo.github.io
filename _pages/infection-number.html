@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   infection number
@@ -25,22 +24,7 @@ search: true
  <i>
   self-avoiding walks
  </i>
- (SAWs) in a graph \(G\), which is also referred to as the walks-based method.
- <br/>
- For the SIR (susceptible/infected/removed) model, where an infected node is removed from the network with probability \(λ = 1\) (representing either death or full recovery with immunity), the expected number of resulting infections from node \(i\) is
- <br/>
- \[
- <br/>
- I_i^{SIR} = \sum_{k=1}^{N-1} \sum_{j=1}^{N} \Bigl( 1 - (1 - β^k)^{s_{ij}^{k,0}} \Bigr)
- <br/>
- \Bigl( 1 - \sum_{t=1}^{k-1} \bigl( 1 - (1 - β^t)^{(A^t)_{ij}} \bigr) \Bigr),
- <br/>
- \]
- <br/>
- where \((A^k)_{ij}\) is the total number of paths of length \(k\) from \(i\) to \(j\), \(s_{ij}^{k,0}\) is the number of self-avoiding walks of length \(k\) from \(i\) to \(j\) and \(β\) is the infection probability.
- <br/>
- The infection number of node \(i\), considering only paths up to a maximum length \(K\), is denoted \(I_i^{SIR}(K)\). Bauer and Lizier [2] show that \(I_i^{SIR}(K)\) with \(K=4\) provides a good approximation of the true infection spread across a wide range of \(β\) values.
- <br/>
+ (SAWs) in a graph \(G\), which is also referred to as the walks-based method. For the SIR (susceptible/infected/removed) model, where an infected node is removed from the network with probability \(λ = 1\) (representing either death or full recovery with immunity), the expected number of resulting infections from node \(i\) is\[I_i^{SIR} = \sum_{k=1}^{N-1} \sum_{j=1}^{N} \Bigl( 1 - (1 - β^k)^{s_{ij}^{k,0}} \Bigr) \Bigl( 1 - \sum_{t=1}^{k-1} \bigl( 1 - (1 - β^t)^{(A^t)_{ij}} \bigr) \Bigr),\]where \((A^k)_{ij}\) is the total number of paths of length \(k\) from \(i\) to \(j\), \(s_{ij}^{k,0}\) is the number of self-avoiding walks of length \(k\) from \(i\) to \(j\) and \(β\) is the infection probability.The infection number of node \(i\), considering only paths up to a maximum length \(K\), is denoted \(I_i^{SIR}(K)\). Bauer and Lizier [2] show that \(I_i^{SIR}(K)\) with \(K=4\) provides a good approximation of the true infection spread across a wide range of \(β\) values.
 </p>
 <h3>
  References

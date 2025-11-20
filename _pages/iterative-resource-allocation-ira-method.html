@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   iterative resource allocation
  </i>
- (IRA) method ranks nodes based on the distribution of resources according to neighbors’ centrality [2]. Initially, each node is assigned a unit resource, which is then iteratively redistributed to its neighbors proportionally to their centrality. After several iterations, the resources of the nodes converge to a steady state, and the final resource values are used to measure the spreading influence of nodes.
- <br/>
- Formally, the influence of nodes is given by the principal left eigenvector of the \(N \times N\) stochastic matrix \(P\), whose elements are
- <br/>
- \begin{equation*}
- <br/>
- p_{ij} = \frac{a_{ij} c_j^{α}}{\sum_{k=1}^{N} a_{ik} c_k^{α}},
- <br/>
- \end{equation*}
- <br/>
- where \(c_j\) denotes a chosen centrality of node \(j\) and \(α\) is a tunable parameter controlling the nonlinear weighting of the centrality. Ren et al. [2] implement the IRA process by taking \(k\)-shell centrality as \(c_j\) and choosing \(α = 1\).
- <br/>
+ (IRA) method ranks nodes based on the distribution of resources according to neighbors’ centrality [2]. Initially, each node is assigned a unit resource, which is then iteratively redistributed to its neighbors proportionally to their centrality. After several iterations, the resources of the nodes converge to a steady state, and the final resource values are used to measure the spreading influence of nodes. Formally, the influence of nodes is given by the principal left eigenvector of the \(N \times N\) stochastic matrix \(P\), whose elements are\begin{equation*}p_{ij} = \frac{a_{ij} c_j^{α}}{\sum_{k=1}^{N} a_{ik} c_k^{α}},\end{equation*}where \(c_j\) denotes a chosen centrality of node \(j\) and \(α\) is a tunable parameter controlling the nonlinear weighting of the centrality. Ren
+ <i>
+  et al.
+ </i>
+ [2] implement the IRA process by taking \(k\)-shell centrality as \(c_j\) and choosing \(α = 1\).
 </p>
 <h3>
  References

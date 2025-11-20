@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   LeaderRank
  </i>
- is a parameter-free counterpart of the PageRank algorithm that is based on random walks in a graph [2]. The method introduces a ground node \(N+1\) that connects bidirectionally to every node in the network \(G\), ensuring that the network is strongly connected. To initiate the ranking process, one unit of resource is assigned to each node, except for the ground node and this resource is then evenly distributed among the neighbours of each node. Mathematically, this process is equivalent to a random walk on \(G\), where the resource \(s_i[k+1]\) at node \(i\) and discrete time \(k+1\) is updated according to
- <br/>
- \begin{equation*}
- <br/>
- s_i[k+1] = \sum_{j=1}^{N+1} \frac{a_{ji}}{d_j^{out}} \, s_j[k],
- <br/>
- \end{equation*}
- <br/>
- with \(d_j^{out}\) denoting the number of successors of node \(j\) in \(G\).
- <br/>
- The initial scores are set as \(s_{N+1}[0] = 0\) for the ground node and \(s_i[0] = 1\) for all other nodes in \(G\).
- <br/>
- At the steady state \(\lim_{k \to \infty}s[k]=\Tilde{s}\), the score of the ground node is evenly redistributed to the other nodes, yielding the final LeaderRank score
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{LeaderRank}}(i) = \Tilde{s}_i + \frac{\Tilde{s}_{N+1}}{N}.
- <br/>
- \end{equation*}
- <br/>
+ is a parameter-free counterpart of the PageRank algorithm that is based on random walks in a graph [2]. The method introduces a ground node \(N+1\) that connects bidirectionally to every node in the network \(G\), ensuring that the network is strongly connected. To initiate the ranking process, one unit of resource is assigned to each node, except for the ground node and this resource is then evenly distributed among the neighbours of each node. Mathematically, this process is equivalent to a random walk on \(G\), where the resource \(s_i[k+1]\) at node \(i\) and discrete time \(k+1\) is updated according to\begin{equation*}s_i[k+1] = \sum_{j=1}^{N+1} \frac{a_{ji}}{d_j^{out}} \, s_j[k],\end{equation*}with \(d_j^{out}\) denoting the number of successors of node \(j\) in \(G\). The initial scores are set as \(s_{N+1}[0] = 0\) for the ground node and \(s_i[0] = 1\) for all other nodes in \(G\). At the steady state \(\lim_{k \to \infty}s[k]=s̃\), the score of the ground node is evenly redistributed to the other nodes, yielding the final LeaderRank score\begin{equation*}c_{\text{LeaderRank}}(i) = s̃_i + \frac{s̃_{N+1}}{N}.\end{equation*}
 </p>
 <h3>
  References

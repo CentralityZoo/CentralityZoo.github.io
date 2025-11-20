@@ -16,40 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Index of CENTRality
  </i>
- (Icentr) is a centrality measure developed to evaluate the performance of transportation networks [2]. Icentr defines the centrality of a node based on the weights of its incident edges, which in turn depend on the distances between nodes.
- <br/>
- For unweighted networks, the centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{Icentr}(i) = \sum_{(j,k) \in \mathcal{L}} \frac{1}{2^{w(j,k)}},
- <br/>
- \]
- <br/>
- where \(\mathcal{L}\) is the set of edges in the network and
- <br/>
- \[
- <br/>
- w(j,k) =
- <br/>
- \begin{cases}
- <br/>
- \max(d_{ij}, d_{ik}), &amp; d_{ij} \neq d_{ik}, \\
- <br/>
- d_{ij} + 1, &amp; d_{ij} = d_{ik},
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- with \(d_{ij}\) denoting the shortest-path distance between nodes \(i\) and \(j\).
- <br/>
- Icentr assigns higher centrality to nodes connected via shorter paths, reflecting their greater accessibility and potential influence within the network. Mussone et al. [2] also extend Icentr to weighted networks, where both node and edge weights are considered in the computation.
- <br/>
+ (Icentr) is a centrality measure developed to evaluate the performance of transportation networks [2]. Icentr defines the centrality of a node based on the weights of its incident edges, which in turn depend on the distances between nodes.  For unweighted networks, the centrality of node \(i\) is defined as\[c_{Icentr}(i) = \sum_{(j,k) \in \mathcal{L}} \frac{1}{2^{w(j,k)}},\]where \(\mathcal{L}\) is the set of edges in the network and\[w(j,k) =\begin{cases}\max(d_{ij}, d_{ik}), &amp; d_{ij} \neq d_{ik}, \\d_{ij} + 1, &amp; d_{ij} = d_{ik},\end{cases}\]with \(d_{ij}\) denoting the shortest-path distance between nodes \(i\) and \(j\).  Icentr assigns higher centrality to nodes connected via shorter paths, reflecting their greater accessibility and potential influence within the network. Mussone
+ <i>
+  et al.
+ </i>
+ [2] also extend Icentr to weighted networks, where both node and edge weights are considered in the computation.
 </p>
 <h3>
  References

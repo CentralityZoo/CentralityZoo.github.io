@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   independent set
@@ -26,23 +25,19 @@ search: true
   independent sets
  </i>
  , which are groups of nodes in which no two nodes are directly connected. The IS method consists of the following steps:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Node ranking:
    </i>
    all nodes in the network \(G\) are ranked according to a chosen centrality measure, typically the node degree.
   </li>
-  <br/>
   <li>
    <i>
     Network coloring:
    </i>
    the network is colored using the Welsh-Powell algorithm. This algorithm assigns colors to nodes such that no two adjacent nodes share the same color. The computational complexity of this step is \(O(N^2)\).
   </li>
-  <br/>
   <li>
    <i>
     Independent set formation:
@@ -53,16 +48,13 @@ search: true
    </i>
    , guaranteeing that the selected nodes are not directly connected to one another.
   </li>
-  <br/>
   <li>
    <i>
     Spreader selection:
    </i>
    within each independent set, the node with the highest centrality is chosen as an initial spreader. This strategy ensures that multiple spreaders are both influential and spatially well-distributed across the network.
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

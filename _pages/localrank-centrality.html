@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   LocalRank centrality
  </i>
- (also called semi-local or local centrality) quantifies a node’s importance by considering both its nearest and next-nearest neighbors [2]. For a node \(i\), it is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{LR}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k),
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of \(i\), and \(n(k)=|N^{(\le 2)}(k)|\) is the number of nearest and next-nearest neighbors of node \(k\).
- <br/>
- Intuitively, LocalRank captures both the direct connectivity of a node and the connectivity of its neighbors, allowing nodes connected to highly connected neighborhoods to achieve higher centrality. This makes it more discriminative than degree centrality while remaining computationally efficient.
- <br/>
+ (also called semi-local or local centrality) quantifies a node’s importance by considering both its nearest and next-nearest neighbors [2]. For a node \(i\), it is defined as\begin{equation*}c_{\mathrm{LR}}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k),\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of \(i\), and \(n(k)=|N^{(\le 2)}(k)|\) is the number of nearest and next-nearest neighbors of node \(k\).  Intuitively, LocalRank captures both the direct connectivity of a node and the connectivity of its neighbors, allowing nodes connected to highly connected neighborhoods to achieve higher centrality. This makes it more discriminative than degree centrality while remaining computationally efficient.
 </p>
 <h3>
  References

@@ -16,40 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Local fuzzy information centrality
  </i>
- (LFIC) is a centrality measure for identifying influential nodes based on the local dimension of nodes and fuzzy theory [2].
- <br/>
- The \textsc{LFIC} centrality \(c_{\textsc{LFIC}}(i)\) of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\textsc{LFIC}}(i) = \sum_{l=1}^{K} \frac{-p_i(l) \ln p_i(l)}{l^2},
- <br/>
- \]
- <br/>
- where \(l\) is the distance from the center node \(i\), and \(K\) is the maximal box size, defined as \(K = \lceil \max_j d_{ij} / 2 \rceil\). Here, \(p_i(l)\) is the probability associated with neighbor nodes at distance \(l\) from node \(i\):
- <br/>
- \[
- <br/>
- p_i(l) = \frac{1}{e} \frac{f_i(l)}{\sum_{l=1}^{K} f_i(l)},
- <br/>
- \]
- <br/>
- with
- <br/>
- \[
- <br/>
- f_i(l) = n_i(l) \, e^{-l^2 / K^2},
- <br/>
- \]
- <br/>
- where \(n_i(l)\) is the number of nodes whose shortest-path distance from node \(i\) equals \(l\).
- <br/>
- Hence, LFIC combines local node structure with fuzzy weighting to capture the influence of nodes at varying distances from the center node.
- <br/>
+ (LFIC) is a centrality measure for identifying influential nodes based on the local dimension of nodes and fuzzy theory [2]. The \textsc{LFIC} centrality \(c_{\textsc{LFIC}}(i)\) of node \(i\) is defined as\[c_{\textsc{LFIC}}(i) = \sum_{l=1}^{K} \frac{-p_i(l) \ln p_i(l)}{l^2},\]where \(l\) is the distance from the center node \(i\), and \(K\) is the maximal box size, defined as \(K = \lceil \max_j d_{ij} / 2 \rceil\). Here, \(p_i(l)\) is the probability associated with neighbor nodes at distance \(l\) from node \(i\):\[p_i(l) = \frac{1}{e} \frac{f_i(l)}{\sum_{l=1}^{K} f_i(l)},\]with\[f_i(l) = n_i(l) \, e^{-l^2 / K^2},\]where \(n_i(l)\) is the number of nodes whose shortest-path distance from node \(i\) equals \(l\).Hence, LFIC combines local node structure with fuzzy weighting to capture the influence of nodes at varying distances from the center node.
 </p>
 <h3>
  References

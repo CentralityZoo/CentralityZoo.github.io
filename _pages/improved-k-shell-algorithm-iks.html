@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved \(k\)-shell
  </i>
- (IKS) algorithm identifies influential spreaders by combining \(k\)-shell centrality with node information entropy [2]. The entropy of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- e(i) = - \sum_{j \in \mathcal{N}(i)} \frac{d_j}{2L} \ln \left( \frac{d_j}{2L} \right),
- <br/>
- \end{equation*}
- <br/>
- where \(d_j\) is the degree of neighbor node \(j\), \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(L\) is the total number of links in the network. Node information entropy quantifies the propagation potential of a node: higher entropy indicates that the node can more effectively influence its neighbors.
- <br/>
- In the improved \(k\)-shell (IKS) method, nodes are selected iteratively based on their \(k\)-shell index and information entropy.
- <br/>
- In each iteration, the process starts from the highest \(k\)-shell, which represents the most central core, and then moves toward lower shells.
- <br/>
- From each shell, one node with the highest information entropy is selected.
- <br/>
- After one node has been chosen from every shell, a new iteration begins, starting again from the highest \(k\)-shell and moving inward.
- <br/>
- This procedure continues until all nodes are selected, ensuring that nodes chosen early are both structurally central and information-rich.
- <br/>
+ (IKS) algorithm identifies influential spreaders by combining \(k\)-shell centrality with node information entropy [2]. The entropy of node \(i\) is defined as\begin{equation*}e(i) = - \sum_{j \in \mathcal{N}(i)} \frac{d_j}{2L} \ln \left( \frac{d_j}{2L} \right),\end{equation*}where \(d_j\) is the degree of neighbor node \(j\), \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \(L\) is the total number of links in the network. Node information entropy quantifies the propagation potential of a node: higher entropy indicates that the node can more effectively influence its neighbors.In the improved \(k\)-shell (IKS) method, nodes are selected iteratively based on their \(k\)-shell index and information entropy. In each iteration, the process starts from the highest \(k\)-shell, which represents the most central core, and then moves toward lower shells. From each shell, one node with the highest information entropy is selected. After one node has been chosen from every shell, a new iteration begins, starting again from the highest \(k\)-shell and moving inward. This procedure continues until all nodes are selected, ensuring that nodes chosen early are both structurally central and information-rich.
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved
@@ -26,33 +25,24 @@ search: true
   -shell decomposition
  </i>
  (IKSD) is a variant of the standard \(k\)-shell decomposition [2], designed to better capture the hierarchical importance of nodes in a network. Unlike the standard \(k\)-shell, IKSD refines node ranking by iteratively removing nodes starting from those with the lowest degree and recalculating degrees after each removal. The process proceeds as follows:
- <br/>
  <ol>
-  <br/>
   <li>
    Initialize \(k = 1\) and consider the current graph \(G\).
   </li>
-  <br/>
   <li>
    Identify all nodes in \(G\) with the minimum degree.
   </li>
-  <br/>
   <li>
    Assign an IKSD value of \(k\) to these nodes.
   </li>
-  <br/>
   <li>
    Remove the identified nodes from the graph and update the degrees of remaining nodes.
   </li>
-  <br/>
   <li>
    Increment \(k\) and repeat steps 2-4 until all nodes have been assigned an IKSD value.
   </li>
-  <br/>
  </ol>
- <br/>
  Nodes with higher IKSD values are located in the core of the network and are considered structurally more influential, whereas nodes with lower IKSD values occupy the periphery.
- <br/>
 </p>
 <h3>
  References

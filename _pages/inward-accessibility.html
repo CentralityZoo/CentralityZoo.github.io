@@ -16,33 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   inward accessibility
  </i>
- quantifies how likely a node is to be reached from other nodes in a network after a fixed number of steps along self-avoiding walks [2]. Let \( N \) be the total number of nodes in the network, and let \( P_h(j,i) \) denote the transition probability that an agent starting from node \( j \) reaches node \( i \) in exactly \( h \) steps along a self-avoiding walk (i.e., a simple path without revisiting nodes). The inward accessibility of node \( i \) after \( h \) steps is defined as:
- <br/>
- \begin{equation*}
- <br/>
- c_{IA_h}(i)
- <br/>
- = \frac{1}{N - 1}
- <br/>
- e^{\left(
- <br/>
- -\sum_{j:\, P_h(j,i) \neq 0}
- <br/>
- \frac{P_h(j,i)}{N - 1}
- <br/>
- \log\!\left(\frac{P_h(j,i)}{N - 1}\right)
- <br/>
- \right)}.
- <br/>
- \end{equation*}
- <br/>
- The term inside the exponential represents the Shannon entropy of the distribution of probabilities that node \( i \) is reached from all other nodes after \( h \) steps. A higher entropy indicates that node \( i \) is reached with similar probabilities from many distinct sources, reflecting higher inward accessibility. The normalization factor \( 1/(N - 1) \) ensures comparability across networks of different sizes.
- <br/>
+ quantifies how likely a node is to be reached from other nodes in a network after a fixed number of steps along self-avoiding walks [2]. Let \( N \) be the total number of nodes in the network, and let \( P_h(j,i) \) denote the transition probability that an agent starting from node \( j \) reaches node \( i \) in exactly \( h \) steps along a self-avoiding walk (i.e., a simple path without revisiting nodes). The inward accessibility of node \( i \) after \( h \) steps is defined as:\begin{equation*}c_{IA_h}(i)= \frac{1}{N - 1}e^{\left(-\sum_{j:\, P_h(j,i) \neq 0}\frac{P_h(j,i)}{N - 1}\log\!\left(\frac{P_h(j,i)}{N - 1}\right)\right)}.\end{equation*}The term inside the exponential represents the Shannon entropy of the distribution of probabilities that node \( i \) is reached from all other nodes after \( h \) steps. A higher entropy indicates that node \( i \) is reached with similar probabilities from many distinct sources, reflecting higher inward accessibility. The normalization factor \( 1/(N - 1) \) ensures comparability across networks of different sizes.
 </p>
 <h3>
  References

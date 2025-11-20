@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   <i>
@@ -24,16 +23,7 @@ search: true
   </i>
   -shell Physarum centrality
  </i>
- is a hybrid measure that combines Physarum centrality and \(k\)-shell centrality to identify influential nodes in weighted networks [2]. The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{kp}(i) = c_{\mathrm{Physarum}}(i) \cdot \frac{k_s(i)}{\sum_{j=1}^N k_s(j)},
- <br/>
- \]
- <br/>
- where \(c_{\mathrm{Physarum}}(i)\) is the Physarum centrality of node \(i\) and \(k_s(i)\) is its \(k\)-shell index. This formulation weights the Physarum centrality by the relative position of the node within the \(k\)-shell decomposition, emphasizing nodes that are both structurally central and carry significant flux.
- <br/>
+ is a hybrid measure that combines Physarum centrality and \(k\)-shell centrality to identify influential nodes in weighted networks [2]. The centrality of node \(i\) is defined as\[c_{kp}(i) = c_{\mathrm{Physarum}}(i) \cdot \frac{k_s(i)}{\sum_{j=1}^N k_s(j)},\]where \(c_{\mathrm{Physarum}}(i)\) is the Physarum centrality of node \(i\) and \(k_s(i)\) is its \(k\)-shell index. This formulation weights the Physarum centrality by the relative position of the node within the \(k\)-shell decomposition, emphasizing nodes that are both structurally central and carry significant flux.
 </p>
 <h3>
  References

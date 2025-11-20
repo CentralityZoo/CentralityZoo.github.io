@@ -16,15 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved WVoteRank centrality
  </i>
  is a modification of WVoteRank that incorporates both 1-hop and 2-hop neighbors in the voting process [2]. Each node \(i\) is characterized by the tuple \((s_i, v_i)\), where \(s_i\) is the voting score and \(v_i\) is the voting ability. Initially, \((s_i, v_i) = (0,1)\) for all \(i \in \mathcal{N}\). The voting procedure iteratively performs the following steps:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Vote:
@@ -35,14 +32,12 @@ search: true
     \end{equation*}
     where \(w_{ij}\) is the weight of the edge \((i,j)\), \(d_i\) is the degree of node \(i\) and \(\mathcal{N}(j)\) denotes the neighbors of node \(j\).
   </li>
-  <br/>
   <li>
    <i>
     Select:
    </i>
    the node \(k\) with the highest voting score \(s_k\) is elected. This node is removed from subsequent voting rounds by setting its voting ability to zero, \(v_k = 0\).
   </li>
-  <br/>
   <li>
    <i>
     Update:
@@ -53,11 +48,8 @@ search: true
     \end{equation*}
     where \(f_{kj} = \frac{1}{\langle d \rangle d_{kj}}\), \(\langle d \rangle\) is the average degree of the network, and \(d_{kj}\) is the shortest-path distance from the elected node \(k\).
   </li>
-  <br/>
  </ol>
- <br/>
  The improved WVoteRank centrality accounts for both direct and indirect neighbors, ensuring that the influence of selected nodes appropriately diminishes the voting power of surrounding nodes.
- <br/>
 </p>
 <h3>
  References

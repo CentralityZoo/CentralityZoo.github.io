@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved Iterative Resource Allocation
  </i>
- (IIRA) method is an extension of the iterative resource allocation (IRA) method that incorporates both neighbor centrality and the spreading rate to evaluate node influence [2]. In IIRA, each node \(i\) is initially assigned a resource \(I_i(0)\), which is iteratively distributed to its neighbors according to their centrality and the spreading rate \(β\). After a sufficient number of iterations \(t\), the resource \(I_i(t)\) of each node approaches a steady state, and the final resource values are used to identify influential nodes.
- <br/>
- The diffusion process can be formalized using the \(N \times N\) stochastic matrix \(P\), with entries
- <br/>
- \[
- <br/>
- p_{ij} = \left( 1 - (1-β)^{d_i} \right) \frac{a_{ij} c_i}{\sum_{k=1}^N a_{ik} c_k},
- <br/>
- \]
- <br/>
- where \(a_{ij}\) is the adjacency matrix, \(c_i\) represents a chosen centrality of node \(i\), and \(d_i\) is its degree. Zhong et al. [2] set the spreading rate \(β = 0.2\) and the number of iterations \(t = 50\), demonstrating that IIRA computed using closeness centrality provides more accurate identification of influential nodes than the version based on eigenvector centrality.
- <br/>
+ (IIRA) method is an extension of the iterative resource allocation (IRA) method that incorporates both neighbor centrality and the spreading rate to evaluate node influence [2]. In IIRA, each node \(i\) is initially assigned a resource \(I_i(0)\), which is iteratively distributed to its neighbors according to their centrality and the spreading rate \(β\). After a sufficient number of iterations \(t\), the resource \(I_i(t)\) of each node approaches a steady state, and the final resource values are used to identify influential nodes.The diffusion process can be formalized using the \(N \times N\) stochastic matrix \(P\), with entries\[p_{ij} = \left( 1 - (1-β)^{d_i} \right) \frac{a_{ij} c_i}{\sum_{k=1}^N a_{ik} c_k},\]where \(a_{ij}\) is the adjacency matrix, \(c_i\) represents a chosen centrality of node \(i\), and \(d_i\) is its degree. Zhong
+ <i>
+  et al.
+ </i>
+ [2] set the spreading rate \(β = 0.2\) and the number of iterations \(t = 50\), demonstrating that IIRA computed using closeness centrality provides more accurate identification of influential nodes than the version based on eigenvector centrality.
 </p>
 <h3>
  References

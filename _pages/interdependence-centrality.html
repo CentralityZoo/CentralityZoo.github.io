@@ -16,13 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Interdependence centrality
  </i>
- considers the possibility that two nodes may influence each other through the same link [2, 3]. A typical example of such networks is a trade network, where a reduction in trade flow between two countries can lead to both economic and non-economic losses for the exporter and/or the importer.
- <br/>
- Interdependence centrality generalizes the concept of individual and group influence from the long-range interaction centrality (LRIC) [2] by introducing two node-specific parameters, \(q_i^{\mathrm{in}}\) and \(q_i^{\mathrm{out}}\), which represent the threshold levels at which node \(i\) becomes affected. Using these thresholds, the importance of a link \((i,j)\) can be evaluated in two complementary dimensions:
+ considers the possibility that two nodes may influence each other through the same link [2, 3]. A typical example of such networks is a trade network, where a reduction in trade flow between two countries can lead to both economic and non-economic losses for the exporter and/or the importer.  Interdependence centrality generalizes the concept of individual and group influence from the long-range interaction centrality (LRIC) [2] by introducing two node-specific parameters, \(q_i^{\mathrm{in}}\) and \(q_i^{\mathrm{out}}\), which represent the threshold levels at which node \(i\) becomes affected. Using these thresholds, the importance of a link \((i,j)\) can be evaluated in two complementary dimensions:
  <i>
   influence
  </i>
@@ -30,29 +27,7 @@ search: true
  <i>
   dependence
  </i>
- (the effect of \(j\) on \(i\)). The direct influence of node \(i\) on node \(j\) through link \((i,j)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{ij}^{\mathrm{in}} = \max_{\Omega_k(j):\, i \in \Omega_k^{P}(j)}
- <br/>
- \frac{w_{ij}}{\sum_{h \in \Omega_k(j)} w_{hj}},
- <br/>
- \end{equation*}
- <br/>
- where \(\Omega_k(j)\) denotes a critical group of node \(j\), and \(\Omega_k^{P}(j)\) is the subset of its pivotal nodes. The value \(c_{ij}^{\mathrm{in}} \in [0,1]\) measures the relative importance of node \(i\) for node \(j\): \(c_{ij}^{\mathrm{in}} = 0\) indicates that \(i\) has no direct influence on \(j\), while \(c_{ij}^{\mathrm{in}} = 1\) implies that node \(i\) alone can exceed the influence threshold of node \(j\).
- <br/>
- Analogously, to quantify how critical the same link \((i,j)\) is for node \(i\), we consider node \(i\)’s own influence threshold \(q_i^{\mathrm{out}}\). The direct dependence of node \(i\) on node \(j\) is given by
- <br/>
- \begin{equation*}
- <br/>
- c_{ji}^{\mathrm{out}} = \max_{\Omega_k(i):\, j \in \Omega_k^{P}(i)}
- <br/>
- \frac{w_{ij}}{\sum_{h \in \Omega_k(i)} w_{ih}},
- <br/>
- \end{equation*}
- <br/>
- where \(\Omega_k(i)\) and \(\Omega_k^{P}(i)\) are defined analogously for node \(i\). This formulation enables representing the network as a two-layer structure, consisting of an
+ (the effect of \(j\) on \(i\)). The direct influence of node \(i\) on node \(j\) through link \((i,j)\) is defined as\begin{equation*}c_{ij}^{\mathrm{in}} = \max_{\Omega_k(j):\, i \in \Omega_k^{P}(j)} \frac{w_{ij}}{\sum_{h \in \Omega_k(j)} w_{hj}},\end{equation*}where \(\Omega_k(j)\) denotes a critical group of node \(j\), and \(\Omega_k^{P}(j)\) is the subset of its pivotal nodes. The value \(c_{ij}^{\mathrm{in}} \in [0,1]\) measures the relative importance of node \(i\) for node \(j\): \(c_{ij}^{\mathrm{in}} = 0\) indicates that \(i\) has no direct influence on \(j\), while \(c_{ij}^{\mathrm{in}} = 1\) implies that node \(i\) alone can exceed the influence threshold of node \(j\).Analogously, to quantify how critical the same link \((i,j)\) is for node \(i\), we consider node \(i\)’s own influence threshold \(q_i^{\mathrm{out}}\). The direct dependence of node \(i\) on node \(j\) is given by\begin{equation*}c_{ji}^{\mathrm{out}} = \max_{\Omega_k(i):\, j \in \Omega_k^{P}(i)} \frac{w_{ij}}{\sum_{h \in \Omega_k(i)} w_{ih}},\end{equation*}where \(\Omega_k(i)\) and \(\Omega_k^{P}(i)\) are defined analogously for node \(i\). This formulation enables representing the network as a two-layer structure, consisting of an
  <i>
   influence layer
  </i>
@@ -60,10 +35,7 @@ search: true
  <i>
   dependence layer
  </i>
- , capturing how nodes are affected in return.
- <br/>
- Once the direct influence of each edge is defined, the indirect influence between nodes can be estimated along different paths that traverse both layers. Building on this framework, Shvydun [3] proposes three models to evaluate indirect influence and subsequently aggregate these estimates into the interdependence centrality measure.
- <br/>
+ , capturing how nodes are affected in return.Once the direct influence of each edge is defined, the indirect influence between nodes can be estimated along different paths that traverse both layers. Building on this framework, Shvydun [3] proposes three models to evaluate indirect influence and subsequently aggregate these estimates into the interdependence centrality measure.
 </p>
 <h3>
  References

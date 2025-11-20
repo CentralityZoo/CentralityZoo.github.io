@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local relative change of average shortest path
  </i>
- (LRASP) centrality is a modification of the average shortest path centrality (AC or RASP) [2]. Let \(G_{N_i(l)}\) denote the subgraph containing node \(i\) and all nodes within \(l\) hops from \(i\). The LRASP centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{LRASP}(i) = \frac{ASP(G'_{N_i(l)}) - ASP(G_{N_i(l)})}{ASP(G_{N_i(l)})},
- <br/>
- \end{equation*}
- <br/>
- where \(ASP(G_{N_i(l)})\) is the average shortest path length of \(G_{N_i(l)}\):
- <br/>
- \begin{equation*}
- <br/>
- ASP(G_{N_i(l)}) = \frac{\sum_{j \neq k \in N_i(l)} d_{jk}}{|N_i(l)|(|N_i(l)|-1)},
- <br/>
- \end{equation*}
- <br/>
- with \(d_{jk}\) being the shortest path distance between nodes \(j\) and \(k\) if reachable; otherwise, \(d_{jk}\) is set to the diameter of \(G_{N_i(l)}\). The subgraph \(G'_{N_i(l)}\) is obtained by removing all links adjacent to node \(i\).
- <br/>
- LRASP quantifies the relative change in average shortest path when the immediate connections of node \(i\) are removed, capturing its local structural importance. When \(l\) equals the network diameter \(d(G)\), LRASP reduces to the standard AC centrality. In [2], the authors use \(l = d(G)/2\) to balance local and semi-global structural effects.
- <br/>
+ (LRASP) centrality is a modification of the average shortest path centrality (AC or RASP) [2]. Let \(G_{N_i(l)}\) denote the subgraph containing node \(i\) and all nodes within \(l\) hops from \(i\). The LRASP centrality of node \(i\) is defined as\begin{equation*}c_{LRASP}(i) = \frac{ASP(G'_{N_i(l)}) - ASP(G_{N_i(l)})}{ASP(G_{N_i(l)})},\end{equation*}where \(ASP(G_{N_i(l)})\) is the average shortest path length of \(G_{N_i(l)}\):\begin{equation*}ASP(G_{N_i(l)}) = \frac{\sum_{j \neq k \in N_i(l)} d_{jk}}{|N_i(l)|(|N_i(l)|-1)},\end{equation*}with \(d_{jk}\) being the shortest path distance between nodes \(j\) and \(k\) if reachable; otherwise, \(d_{jk}\) is set to the diameter of \(G_{N_i(l)}\). The subgraph \(G'_{N_i(l)}\) is obtained by removing all links adjacent to node \(i\).LRASP quantifies the relative change in average shortest path when the immediate connections of node \(i\) are removed, capturing its local structural importance. When \(l\) equals the network diameter \(d(G)\), LRASP reduces to the standard AC centrality. In [2], the authors use \(l = d(G)/2\) to balance local and semi-global structural effects.
 </p>
 <h3>
  References

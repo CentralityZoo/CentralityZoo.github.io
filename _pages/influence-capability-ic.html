@@ -16,46 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Influence capability
  </i>
- (IC) is a hybrid centrality measure that integrates node position information from the \(k\)-shell decomposition with the influence of the neighborhood [2]. The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{IC}}(i) = w_1 \cdot IC_p(i) + (1 - w_1) \cdot IC_N(i),
- <br/>
- \]
- <br/>
- where \(IC_p(i)\) captures the influence of node \(i\) based on its positional attributes:
- <br/>
- \[
- <br/>
- IC_p(i) = d_r(i) + \sum_{j \in \mathcal{N}(i)} \frac{2}{π} \arctan \left( \bigl(Iter(j)\bigr)^{1/3} \right).
- <br/>
- \]
- <br/>
- Here, \(Iter(j)\) is the iteration at which node \(j\) is removed in the \(k\)-shell decomposition, and \(d_r(i)\) is the residual degree of node \(i\) after removing neighbors \(l\) with \(Iter(l) &lt; Iter(j)\).
- <br/>
- The neighborhood influence is measured by
- <br/>
- \[
- <br/>
- IC_N(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} d_l,
- <br/>
- \]
- <br/>
- which aggregates the degrees of all neighbors of node \(i\) and of their neighbors, counting each node as many times as it appears in these neighbor sets. The parameter \(w_1 \in [0,1]\) balances the contributions of \(IC_p(i)\) and \(IC_N(i)\). Wang et al. [2] suggest setting
- <br/>
- \[
- <br/>
- w_1 = \frac{1 - E_1}{2 - E_1 - E_2},
- <br/>
- \]
- <br/>
- where \(E_1\) and \(E_2\) are the entropies of the \(IC_p(i)\) and \(IC_N(i)\) distributions, respectively.
- <br/>
+ (IC) is a hybrid centrality measure that integrates node position information from the \(k\)-shell decomposition with the influence of the neighborhood [2]. The centrality of node \(i\) is defined as\[c_{\mathrm{IC}}(i) = w_1 \cdot IC_p(i) + (1 - w_1) \cdot IC_N(i),\]where \(IC_p(i)\) captures the influence of node \(i\) based on its positional attributes:\[IC_p(i) = d_r(i) + \sum_{j \in \mathcal{N}(i)} \frac{2}{π} \arctan \left( \bigl(Iter(j)\bigr)^{1/3} \right).\]Here, \(Iter(j)\) is the iteration at which node \(j\) is removed in the \(k\)-shell decomposition, and \(d_r(i)\) is the residual degree of node \(i\) after removing neighbors \(l\) with \(Iter(l) &lt; Iter(j)\).  The neighborhood influence is measured by\[IC_N(i) = \sum_{j \in \mathcal{N}(i)} \sum_{l \in \mathcal{N}(j)} d_l,\]which aggregates the degrees of all neighbors of node \(i\) and of their neighbors, counting each node as many times as it appears in these neighbor sets. The parameter \(w_1 \in [0,1]\) balances the contributions of \(IC_p(i)\) and \(IC_N(i)\). Wang
+ <i>
+  et al.
+ </i>
+ [2] suggest setting\[w_1 = \frac{1 - E_1}{2 - E_1 - E_2},\]where \(E_1\) and \(E_2\) are the entropies of the \(IC_p(i)\) and \(IC_N(i)\) distributions, respectively.
 </p>
 <h3>
  References

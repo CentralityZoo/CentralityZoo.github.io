@@ -16,45 +16,19 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved entropy-based centrality
  </i>
- is a semi-local measure that accounts for connection weights and the heterogeneity in neighbors’ degrees of confidence [2, 3, 4]. The total influence \(I(i)\) of node \(i\) is defined as a weighted sum of its direct influence \(DI(i)\) and its average indirect influence \(II(i)\) on two-hop neighbors:
- <br/>
- \begin{equation*}
- <br/>
- I(i) = φ_1 DI(i) + φ_2 II(i),
- <br/>
- \end{equation*}
- <br/>
- where \(φ_1\) and \(φ_2\) are the weights of direct and indirect influence, respectively, with \(φ_1 + φ_2 = 1\).
- <br/>
- The direct influence of node \(i\) is given by
- <br/>
- \begin{equation*}
- <br/>
- DI(i) {=} -\sum_{j \in \mathcal{N}(i)} \left(θ_1  \frac{w_{ij}}{\sum_{l \in \mathcal{N}(i)} w_{il}} \log_{10} \frac{w_{ij}}{\sum_{l \in \mathcal{N}(i)} w_{il}}
- <br/>
- {+} θ_2  \frac{d_j^β}{\sum_{l \in \mathcal{N}(i)} d_l^β} \log_{10} \frac{d_j^β}{\sum_{l \in \mathcal{N}(i)} d_l^β}\right),
- <br/>
- \end{equation*}
- <br/>
- where \(θ_1\) and \(θ_2\) are weighting coefficients with \(θ_1 + θ_2 = 1\), \(d_j\) denotes the degree of node \(j\), \(β\) is a tunable parameter representing confidence strength, \(w_{ij}\) is the weight of the edge between nodes \(i\) and \(j\), and \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
- <br/>
- The average indirect influence of node \(i\) on its two-hop neighbors \(\mathcal{N}^{(2)}(i)\) is
- <br/>
- \begin{equation*}
- <br/>
- II(i) = \frac{1}{|\mathcal{N}^{(2)}(i)|} \sum_{j \in \mathcal{N}^{(2)}(i)} \frac{\sum_{k=1}^N DI(i) DI(k)}{\sum_{k=1}^N a_{ik} a_{kj}},
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ik}\) are entries of the adjacency matrix.
- <br/>
- Peng et al. [2, 3] consider \(β=2\) and \(θ_1 = θ_2 = φ_1 = φ_2 = 0.5\), while Qiao et al. [4] suggest \(θ_1 = 0.4\), \(θ_2 = 0.6\), \(φ_1 = 0.6\), \(φ_2 = 0.4\), and \(β = 1\). For \(θ_1 = 0\) and \(β = 1\), the measure reduces to another entropy-based centrality proposed in [5].
- <br/>
+ is a semi-local measure that accounts for connection weights and the heterogeneity in neighbors’ degrees of confidence [2, 3, 4]. The total influence \(I(i)\) of node \(i\) is defined as a weighted sum of its direct influence \(DI(i)\) and its average indirect influence \(II(i)\) on two-hop neighbors:\begin{equation*}I(i) = φ_1 DI(i) + φ_2 II(i),\end{equation*}where \(φ_1\) and \(φ_2\) are the weights of direct and indirect influence, respectively, with \(φ_1 + φ_2 = 1\).  The direct influence of node \(i\) is given by\begin{equation*}DI(i) {=} -\sum_{j \in \mathcal{N}(i)} \left(θ_1  \frac{w_{ij}}{\sum_{l \in \mathcal{N}(i)} w_{il}} \log_{10} \frac{w_{ij}}{\sum_{l \in \mathcal{N}(i)} w_{il}} {+} θ_2  \frac{d_j^β}{\sum_{l \in \mathcal{N}(i)} d_l^β} \log_{10} \frac{d_j^β}{\sum_{l \in \mathcal{N}(i)} d_l^β}\right),\end{equation*}where \(θ_1\) and \(θ_2\) are weighting coefficients with \(θ_1 + θ_2 = 1\), \(d_j\) denotes the degree of node \(j\), \(β\) is a tunable parameter representing confidence strength, \(w_{ij}\) is the weight of the edge between nodes \(i\) and \(j\), and \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).  The average indirect influence of node \(i\) on its two-hop neighbors \(\mathcal{N}^{(2)}(i)\) is\begin{equation*}II(i) = \frac{1}{|\mathcal{N}^{(2)}(i)|} \sum_{j \in \mathcal{N}^{(2)}(i)} \frac{\sum_{k=1}^N DI(i) DI(k)}{\sum_{k=1}^N a_{ik} a_{kj}},\end{equation*}where \(a_{ik}\) are entries of the adjacency matrix.  Peng
+ <i>
+  et al.
+ </i>
+ [2, 3] consider \(β=2\) and \(θ_1 = θ_2 = φ_1 = φ_2 = 0.5\), while Qiao
+ <i>
+  et al.
+ </i>
+ [4] suggest \(θ_1 = 0.4\), \(θ_2 = 0.6\), \(φ_1 = 0.6\), \(φ_2 = 0.4\), and \(β = 1\). For \(θ_1 = 0\) and \(β = 1\), the measure reduces to another entropy-based centrality proposed in [5].
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   <i>
@@ -45,28 +44,26 @@ search: true
   k
  </i>
  -shell is then defined as the set of nodes that belong to the \(k\)-core but not to any higher-order \((k{+}1)\)-core. The identification of the \(k\)-shell can be performed iteratively as follows:
- <br/>
  <ol>
-  <br/>
   <li>
    Remove all nodes with degree less than 1 and their incident links. Repeat until no such nodes remain. The removed nodes constitute the \(k_s = 1\) shell.
   </li>
-  <br/>
   <li>
    Remove all nodes with degree less than 2 in the remaining network and their links. Repeat until no such nodes remain. These nodes form the \(k_s = 2\) shell.
   </li>
-  <br/>
   <li>
    Continue this iterative process for increasing \(k\) until all nodes are assigned a shell index \(k_s\).
   </li>
-  <br/>
  </ol>
- <br/>
  The
  <i>
   k
  </i>
- -shell centrality of a node \(i\) is the index \(k_s\) of the highest-order core containing \(i\) [5]. Intuitively, nodes in higher-order shells are considered more central because they are embedded in denser, more interconnected regions of the network. Kitsak et al. [6] showed that nodes with high
+ -shell centrality of a node \(i\) is the index \(k_s\) of the highest-order core containing \(i\) [5]. Intuitively, nodes in higher-order shells are considered more central because they are embedded in denser, more interconnected regions of the network. Kitsak
+ <i>
+  et al.
+ </i>
+ [6] showed that nodes with high
  <i>
   k
  </i>
@@ -79,7 +76,6 @@ search: true
   k
  </i>
  -shell index takes only a small number of discrete values, it may not always distinguish effectively between nodes in large or heterogeneous networks.
- <br/>
 </p>
 <h3>
  References

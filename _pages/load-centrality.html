@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Load centrality
  </i>
@@ -26,26 +25,9 @@ search: true
  </i>
  (TLC), was introduced by Goh
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] and later reformulated by Brandes [3].
- <br/>
- It is a flow-based variant of betweenness centrality that quantifies the extent to which a node participates in the transport of information or resources across the network.
- <br/>
- In this model, a source node sends a unit quantity of a commodity to a target node along all shortest paths connecting them.
- <br/>
- At each intermediate step, if multiple adjacent nodes are equally close to the target, the transmitted flow is divided equally among them and propagated recursively until the commodity reaches the destination.
- <br/>
- Formally, the load centrality \( c_{\mathrm{load}}(i) \) of node \( i \) is defined as the total amount of flow passing through \( i \) during all pairwise exchanges between nodes:
- <br/>
- \[
- <br/>
- c_{\mathrm{load}}(i) = \sum_{s \neq t \neq i} \ell_{st}(i),
- <br/>
- \]
- <br/>
- where \( \ell_{st}(i) \) denotes the fraction of the unit flow sent from source \( s \) to target \( t \) that passes through node \( i \). Thus, load centrality captures the node’s contribution to network traffic, assigning higher values to nodes that frequently lie on shortest paths connecting other nodes.
- <br/>
+ } [2] and later reformulated by Brandes [3]. It is a flow-based variant of betweenness centrality that quantifies the extent to which a node participates in the transport of information or resources across the network.In this model, a source node sends a unit quantity of a commodity to a target node along all shortest paths connecting them. At each intermediate step, if multiple adjacent nodes are equally close to the target, the transmitted flow is divided equally among them and propagated recursively until the commodity reaches the destination.Formally, the load centrality \( c_{\mathrm{load}}(i) \) of node \( i \) is defined as the total amount of flow passing through \( i \) during all pairwise exchanges between nodes:\[c_{\mathrm{load}}(i) = \sum_{s \neq t \neq i} \ell_{st}(i),\]where \( \ell_{st}(i) \) denotes the fraction of the unit flow sent from source \( s \) to target \( t \) that passes through node \( i \). Thus, load centrality captures the node’s contribution to network traffic, assigning higher values to nodes that frequently lie on shortest paths connecting other nodes.
 </p>
 <h3>
  References

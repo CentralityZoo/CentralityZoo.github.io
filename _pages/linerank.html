@@ -16,14 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   LineRank
  </i>
- is a flow-based centrality measure for large-scale graphs that quantifies the “flow” through each node [2]. The method first transforms the original graph \(G\) into its corresponding line graph \(L(G)\), where nodes in \(L(G)\) represent edges in \(G\). PageRank centrality is then computed on the nodes of \(L(G)\).
- <br/>
- The LineRank centrality of a node in the original graph is obtained by aggregating the stationary probabilities of its incident edges in the line graph. This value represents the total amount of flow passing through the node, capturing its importance in the propagation of information or connectivity within the network.
- <br/>
+ is a flow-based centrality measure for large-scale graphs that quantifies the “flow” through each node [2]. The method first transforms the original graph \(G\) into its corresponding line graph \(L(G)\), where nodes in \(L(G)\) represent edges in \(G\). PageRank centrality is then computed on the nodes of \(L(G)\).  The LineRank centrality of a node in the original graph is obtained by aggregating the stationary probabilities of its incident edges in the line graph. This value represents the total amount of flow passing through the node, capturing its importance in the propagation of information or connectivity within the network.
 </p>
 <h3>
  References

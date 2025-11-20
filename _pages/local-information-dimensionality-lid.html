@@ -16,51 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local information dimensionality
  </i>
- (LID) is an entropy-based, semi-local centrality measure derived from the concept of local dimension [2]. It characterizes the structural complexity of the neighborhood around each node by quantifying how local information changes with scale.
- <br/>
- For a given node \(i\), the local information dimensionality \(D_{I_i}\) is defined as
- <br/>
- \[
- <br/>
- D_{I_i} = - \frac{dI_i(r)}{d \ln r},
- <br/>
- \]
- <br/>
- where the derivative is taken with respect to the logarithm of the topological distance \(r\), which represents the scale of locality around node \(i\). The information content \(I_i(r)\) is computed based on the number of nodes \(B_i(r)\) within a topological distance \(r\) from node \(i\) as
- <br/>
- \[
- <br/>
- I_i(r) = - \frac{B_i(r)}{N}\ln \frac{B_i(r)}{N},
- <br/>
- \]
- <br/>
- where \(N\) is the total number of nodes in the network.
- <br/>
- The local information dimensionality \(D_{I_i}\) can be estimated from the slope of the relationship between \(I_i(r)\) and \(\ln r\) on a logarithmic scale, and discretized as
- <br/>
- \[
- <br/>
- D_{I_i} \simeq \frac{n_i(r)\left[1 + \ln \frac{B_i(r)}{N}\right]r}{N},
- <br/>
- \]
- <br/>
- where \(n_i(r)\) denotes the number of nodes located exactly at distance \(r\) from the reference node \(i\).
- <br/>
- The scale of locality \(r\) is typically chosen as half of the maximum shortest-path distance from node \(i\), defined as
- <br/>
- \[
- <br/>
- r = \lceil d_{\max}(i)/2 \rceil,
- <br/>
- \]
- <br/>
- where \(d_{\max}(i)\) is the maximum geodesic distance from node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.
- <br/>
+ (LID) is an entropy-based, semi-local centrality measure derived from the concept of local dimension [2]. It characterizes the structural complexity of the neighborhood around each node by quantifying how local information changes with scale.For a given node \(i\), the local information dimensionality \(D_{I_i}\) is defined as\[D_{I_i} = - \frac{dI_i(r)}{d \ln r},\]where the derivative is taken with respect to the logarithm of the topological distance \(r\), which represents the scale of locality around node \(i\). The information content \(I_i(r)\) is computed based on the number of nodes \(B_i(r)\) within a topological distance \(r\) from node \(i\) as\[I_i(r) = - \frac{B_i(r)}{N}\ln \frac{B_i(r)}{N},\]where \(N\) is the total number of nodes in the network.The local information dimensionality \(D_{I_i}\) can be estimated from the slope of the relationship between \(I_i(r)\) and \(\ln r\) on a logarithmic scale, and discretized as\[D_{I_i} \simeq \frac{n_i(r)\left[1 + \ln \frac{B_i(r)}{N}\right]r}{N},\]where \(n_i(r)\) denotes the number of nodes located exactly at distance \(r\) from the reference node \(i\).The scale of locality \(r\) is typically chosen as half of the maximum shortest-path distance from node \(i\), defined as\[r = \lceil d_{\max}(i)/2 \rceil,\]where \(d_{\max}(i)\) is the maximum geodesic distance from node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.
 </p>
 <h3>
  References

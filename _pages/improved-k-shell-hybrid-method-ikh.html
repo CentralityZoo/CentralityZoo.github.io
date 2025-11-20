@@ -16,47 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved \(k\)-shell hybrid
  </i>
  (IKH) centrality, proposed by Maji
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2], is a refined variant of the \(k\)-shell hybrid (ksh) method. It introduces a distance-dependent weighting parameter that adjusts the contribution of neighboring nodes based on their shortest path distance from the focal node, increasing sensitivity to both local and extended network structures.
- <br/>
- The centrality score \( c_{\mathrm{IKH}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{IKH}}(i) =
- <br/>
- \sum_{j \in \mathcal{N}^{(\leq l)}(i)}
- <br/>
- \frac{\sqrt{k_s(i) + k_s(j)} + μ(d_{ij}) \cdot d_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}^{(\leq l)}(i) \) is the set of nodes within the \( l \)-hop neighborhood of node \( i \),
- <br/>
- \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \),
- <br/>
- \( k_s(i) \) and \( k_s(j) \) are the \(k\)-shell indices of nodes \( i \) and \( j \),
- <br/>
- \( d_j \) is the degree of node \( j \), and
- <br/>
- \(μ(d_{ij})\) is a tunable parameter defined as
- <br/>
- \begin{equation*}
- <br/>
- μ(d_{ij}) = \frac{2(l - d_{ij} + 1)}{l(l + 1)},
- <br/>
- \end{equation*}
- <br/>
- where \( l \) is the radius of the considered neighborhood. This formulation ensures that closer nodes exert a stronger influence than more distant ones.
- <br/>
+ } [2], is a refined variant of the \(k\)-shell hybrid (ksh) method. It introduces a distance-dependent weighting parameter that adjusts the contribution of neighboring nodes based on their shortest path distance from the focal node, increasing sensitivity to both local and extended network structures.The centrality score \( c_{\mathrm{IKH}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\mathrm{IKH}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{\sqrt{k_s(i) + k_s(j)} + μ(d_{ij}) \cdot d_j}{d_{ij}^2},\end{equation*}where \( \mathcal{N}^{(\leq l)}(i) \) is the set of nodes within the \( l \)-hop neighborhood of node \( i \), \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( k_s(i) \) and \( k_s(j) \) are the \(k\)-shell indices of nodes \( i \) and \( j \), \( d_j \) is the degree of node \( j \), and \(μ(d_{ij})\) is a tunable parameter defined as\begin{equation*}μ(d_{ij}) = \frac{2(l - d_{ij} + 1)}{l(l + 1)},\end{equation*}where \( l \) is the radius of the considered neighborhood. This formulation ensures that closer nodes exert a stronger influence than more distant ones.
 </p>
 <h3>
  References

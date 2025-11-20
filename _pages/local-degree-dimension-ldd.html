@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local degree dimension
  </i>
- (\textsc{LDD}) is a centrality measure for identifying influential nodes, based on the assumption that both the number of neighbors at each topological layer and the pattern of how this number changes across layers reflect a node's importance [2].
- <br/>
- For each node \(i\), \textsc{LDD} first computes \(n_i(l)\), the number of nodes at shortest-path distance \(l\) from \(i\). Next, it analyzes how \(n_i(l)\) changes with \(l\), identifying the number of rising layers \(l_{i+}\) and declining layers \(l_{i-}\). The \textsc{LDD} score \(c_{\textsc{LDD}}(i)\) is then given by
- <br/>
- \[
- <br/>
- c_{\textsc{LDD}}(i) = d_i\, D_{i+}\, l_{i+} + D_{i-}\, l_{i-},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\), and \(D_{i+}\) and \(D_{i-}\) are the rates of increase and decrease, obtained by linear fitting of \(n_i(l)\) in the rising and declining layers, respectively.
- <br/>
- Hence, the local degree dimension (LDD) captures a node's degree as well as the upward and downward trends in the number of its neighbors, reflecting both the breadth and potential spreading speed of its influence.
- <br/>
+ (\textsc{LDD}) is a centrality measure for identifying influential nodes, based on the assumption that both the number of neighbors at each topological layer and the pattern of how this number changes across layers reflect a node's importance [2].For each node \(i\), \textsc{LDD} first computes \(n_i(l)\), the number of nodes at shortest-path distance \(l\) from \(i\). Next, it analyzes how \(n_i(l)\) changes with \(l\), identifying the number of rising layers \(l_{i+}\) and declining layers \(l_{i-}\). The \textsc{LDD} score \(c_{\textsc{LDD}}(i)\) is then given by\[c_{\textsc{LDD}}(i) = d_i\, D_{i+}\, l_{i+} + D_{i-}\, l_{i-},\]where \(d_i\) is the degree of node \(i\), and \(D_{i+}\) and \(D_{i-}\) are the rates of increase and decrease, obtained by linear fitting of \(n_i(l)\) in the rising and declining layers, respectively. Hence, the local degree dimension (LDD) captures a node's degree as well as the upward and downward trends in the number of its neighbors, reflecting both the breadth and potential spreading speed of its influence.
 </p>
 <h3>
  References

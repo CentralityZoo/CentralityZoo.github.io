@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local gravity model
  </i>
- is a variant of the gravity model in which a node’s centrality depends only on its \(l\)-hop neighborhood [2]. Let \(\mathcal{N}^{(\geq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\). The centrality \(c_{\text{Local-Gravity}}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{Local-Gravity}}(i) = \sum_{j \in \mathcal{N}^{(\geq l)}(i)} \frac{d_i\,d_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) represents the shortest path distance between nodes \(i\) and \(j\), and \(d_i\) is the degree of node \(i\).
- <br/>
- Thus, the local gravity model incorporates only local structural information within an \(l\)-hop neighborhood. When \(l\) equals the diameter of the network, the local gravity model becomes equivalent to the original gravity model.
- <br/>
+ is a variant of the gravity model in which a node’s centrality depends only on its \(l\)-hop neighborhood [2]. Let \(\mathcal{N}^{(\geq l)}(i)\) denote the set of nodes within \(l\)-hop neighborhood of node \(i\). The centrality \(c_{\text{Local-Gravity}}(i)\) of node \(i\) is defined as\begin{equation*}c_{\text{Local-Gravity}}(i) = \sum_{j \in \mathcal{N}^{(\geq l)}(i)} \frac{d_i\,d_j}{d_{ij}^2},\end{equation*}where \(d_{ij}\) represents the shortest path distance between nodes \(i\) and \(j\), and \(d_i\) is the degree of node \(i\). Thus, the local gravity model incorporates only local structural information within an \(l\)-hop neighborhood. When \(l\) equals the diameter of the network, the local gravity model becomes equivalent to the original gravity model.
 </p>
 <h3>
  References

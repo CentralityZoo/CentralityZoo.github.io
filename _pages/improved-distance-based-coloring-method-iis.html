@@ -16,47 +16,38 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   improved distance-based coloring (IIS) method
  </i>
  builds upon the independent set (IS) approach in [2] by introducing a distance constraint to further enhance the spatial dispersiveness of the selected spreaders [3]. The IIS procedure can be summarized as follows:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Node ranking:
    </i>
    all nodes are ranked based on a selected centrality measure, such as degree, betweenness, closeness, or coreness centrality.
   </li>
-  <br/>
   <li>
    <i>
     Distance-based coloring:
    </i>
    nodes are sequentially assigned colors with the rule that any two nodes sharing the same color must be separated by a network distance of at least \(r\). The parameter \(r\) can be set, for example, to the average shortest path length in the network. This step ensures that nodes with the same color are sufficiently dispersed.
   </li>
-  <br/>
   <li>
    <i>
     Independent set construction:
    </i>
    after coloring, nodes with the same color form an independent set, similar to the IS method.
   </li>
-  <br/>
   <li>
    <i>
     Spreader selection:
    </i>
    within each independent set, the node with the highest centrality is selected. Priority is often given to the set containing the node with the maximum centrality value in the network. This guarantees that the chosen spreaders are both highly influential and well-distributed.
   </li>
-  <br/>
  </ol>
- <br/>
  By introducing the distance constraint, the IIS method improves upon the IS method by reducing overlap between the influence regions of multiple spreaders, which can enhance overall spreading efficiency.
- <br/>
 </p>
 <h3>
  References

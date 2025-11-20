@@ -16,25 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   lobby index
  </i>
- , or \(l\)-index, is inspired by Hirsch’s h-index, which quantifies the scientific output of a researcher [2, 3]. For a node \(i\), the lobby centrality \(c_{\mathrm{Lobby}}(i)\) is defined as the largest integer \(k\) such that \(i\) has at least \(k\) neighbors with degree at least \(k\):
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Lobby}}(i) = \max \{ k \mid d_{i(k)} \ge k \},
- <br/>
- \end{equation*}
- <br/>
- where \(i(k)\) denotes the neighbor of \(i\) with the \(k\)-th largest degree.
- <br/>
- Several extensions of the lobby index to weighted networks have been proposed:
- <br/>
+ , or \(l\)-index, is inspired by Hirsch’s h-index, which quantifies the scientific output of a researcher [2, 3]. For a node \(i\), the lobby centrality \(c_{\mathrm{Lobby}}(i)\) is defined as the largest integer \(k\) such that \(i\) has at least \(k\) neighbors with degree at least \(k\):\begin{equation*}c_{\mathrm{Lobby}}(i) = \max \{ k \mid d_{i(k)} \ge k \},\end{equation*}where \(i(k)\) denotes the neighbor of \(i\) with the \(k\)-th largest degree.Several extensions of the lobby index to weighted networks have been proposed:
  <ol>
-  <br/>
   <li>
    The
    <i>
@@ -42,7 +29,6 @@ search: true
    </i>
    (\(c\)-index) computes the Hirsch h-index of the sequence formed by multiplying each neighbor’s strength by the weight of the connecting edge [4].
   </li>
-  <br/>
   <li>
    The
    <i>
@@ -54,9 +40,7 @@ search: true
    </i>
    (also called \(h\)-degree), which is the lobby index calculated using the strengths of the incident edges, and the weight of the edge connecting it to the node [5].
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

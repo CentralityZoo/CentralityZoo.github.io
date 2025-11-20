@@ -16,27 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local structural centrality
  </i>
- (LSC) accounts for both the number of nearest and next-nearest neighbors and their topological connections, reflecting that influence depends on local neighborhood size and connectivity [2]. The centrality \( c_{\mathrm{LSC}}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{LSC}}(i) = \sum_{j \in \mathcal{N}(i)}
- <br/>
- \left( α |\mathcal{N}^{(\leq 2)}(i)| + (1 - α) \sum_{k \in \mathcal{N}^{(\leq 2)}(j)} c_k \right),
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}^{(\leq 2)}(i) \) denotes the set of nearest and next-nearest neighbors of node \( i \),
- <br/>
- \( c_k \) is the clustering coefficient of neighbor \( k \),
- <br/>
- and \( α \) is a tunable parameter between 0 and 1. In [2], two values of \(α\) are considered: \(α = 0.2\) and \(α = 0.7\).
- <br/>
+ (LSC) accounts for both the number of nearest and next-nearest neighbors and their topological connections, reflecting that influence depends on local neighborhood size and connectivity [2]. The centrality \( c_{\mathrm{LSC}}(i) \) of node \( i \) is defined as\begin{equation*}c_{\mathrm{LSC}}(i) = \sum_{j \in \mathcal{N}(i)} \left( α |\mathcal{N}^{(\leq 2)}(i)| + (1 - α) \sum_{k \in \mathcal{N}^{(\leq 2)}(j)} c_k \right),\end{equation*}where \( \mathcal{N}^{(\leq 2)}(i) \) denotes the set of nearest and next-nearest neighbors of node \( i \), \( c_k \) is the clustering coefficient of neighbor \( k \), and \( α \) is a tunable parameter between 0 and 1. In [2], two values of \(α\) are considered: \(α = 0.2\) and \(α = 0.7\).
 </p>
 <h3>
  References

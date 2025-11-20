@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   information distance index
  </i>
- (IDI) is an entropy-based centrality measure that quantifies node importance based on its distances to all other nodes in the network [2]. The index of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{IDI}}(i) = - \sum_{j \neq i} \frac{d_{ij}}{\sum_{k=1}^N d_{ik}} \log_2 \frac{d_{ij}}{\sum_{k=1}^N d_{ik}},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest-path distance from node \(i\) to node \(j\), and \(N\) is the total number of nodes in the network.
- <br/>
- The IDI measure captures how uniformly a node is positioned with respect to all others: higher IDI values indicate nodes whose distances to the rest of the network are more evenly distributed, highlighting their central role in connecting the network.
- <br/>
+ (IDI) is an entropy-based centrality measure that quantifies node importance based on its distances to all other nodes in the network [2]. The index of node \(i\) is defined as\begin{equation*}c_{\text{IDI}}(i) = - \sum_{j \neq i} \frac{d_{ij}}{\sum_{k=1}^N d_{ik}} \log_2 \frac{d_{ij}}{\sum_{k=1}^N d_{ik}},\end{equation*}where \(d_{ij}\) is the shortest-path distance from node \(i\) to node \(j\), and \(N\) is the total number of nodes in the network.  The IDI measure captures how uniformly a node is positioned with respect to all others: higher IDI values indicate nodes whose distances to the rest of the network are more evenly distributed, highlighting their central role in connecting the network.
 </p>
 <h3>
  References

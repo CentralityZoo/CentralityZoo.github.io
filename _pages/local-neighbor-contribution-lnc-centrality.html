@@ -16,37 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   local neighbor contribution
  </i>
- (LNC) centrality quantifies node importance by combining the node’s own structural influence, based on its degree and local neighborhood size, with the aggregated contributions from its nearest and next-nearest neighbors [2]. The local neighbor contribution (LNC) centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{LNC}(i) = O_c(i) \cdot N_c(i),
- <br/>
- \end{equation*}
- <br/>
- where \(O_c(i)\) represents the node's own structural influence, determined by its degree and the connectivity of its nearest and next-nearest neighbors:
- <br/>
- \begin{equation*}
- <br/>
- O_c(i) = d_i \cdot |\mathcal{N}^{(\leq 2)}(i)| \sum_{j \in \mathcal{N}^{(\leq 2)}(i)} \frac{1}{d_j} \left(1 - \frac{1}{d_j}\right)^{|\mathcal{N}^{(\leq 2)}(i)|-1},
- <br/>
- \end{equation*}
- <br/>
- and \(N_c(i)\) represents the contribution from the nearest and next-nearest neighbors of \(i\):
- <br/>
- \begin{equation*}
- <br/>
- N_c(i) = \frac{|\mathcal{N}^{(\leq 2)}(i)|}{N-1} \sum_{j \in \mathcal{N}(i)} d_j,
- <br/>
- \end{equation*}
- <br/>
- where \(|\mathcal{N}^{(\leq 2)}(i)|\) denotes the number of nearest and next-nearest neighbors of node \(i\) and \(d_j\) is the degree of node \(j\).
- <br/>
+ (LNC) centrality quantifies node importance by combining the node’s own structural influence, based on its degree and local neighborhood size, with the aggregated contributions from its nearest and next-nearest neighbors [2]. The local neighbor contribution (LNC) centrality of node \(i\) is defined as\begin{equation*}c_{LNC}(i) = O_c(i) \cdot N_c(i),\end{equation*}where \(O_c(i)\) represents the node's own structural influence, determined by its degree and the connectivity of its nearest and next-nearest neighbors:\begin{equation*}O_c(i) = d_i \cdot |\mathcal{N}^{(\leq 2)}(i)| \sum_{j \in \mathcal{N}^{(\leq 2)}(i)} \frac{1}{d_j} \left(1 - \frac{1}{d_j}\right)^{|\mathcal{N}^{(\leq 2)}(i)|-1},\end{equation*}and \(N_c(i)\) represents the contribution from the nearest and next-nearest neighbors of \(i\):\begin{equation*}N_c(i) = \frac{|\mathcal{N}^{(\leq 2)}(i)|}{N-1} \sum_{j \in \mathcal{N}(i)} d_j,\end{equation*}where \(|\mathcal{N}^{(\leq 2)}(i)|\) denotes the number of nearest and next-nearest neighbors of node \(i\) and \(d_j\) is the degree of node \(j\).
 </p>
 <h3>
  References

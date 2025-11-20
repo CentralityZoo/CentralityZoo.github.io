@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   \(k\)-betweenness centrality
  </i>
- , also known as bounded-distance betweenness (BDBC) [2] or range-limited betweenness centrality [3], is a variant of the standard betweenness centrality in which only paths of length at most \(k\) are considered [4]. It is formally defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{k-betw}(i) = \sum_{\substack{j\neq l \neq i \\ d_{jl} \leq k}}{\frac{σ_{jl}(i)}{σ_{jl}}},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jl}\) denotes the number of shortest paths from node \(j\) to node \(l\), and \(σ_{jl}(i)\) represents the number of paths that pass through node \(i\). The rationale behind the \(k\)-betweenness centrality is that very long paths are less likely to be used in real processes and should therefore contribute less, or not at all, to a node’s centrality. By restricting attention to shorter paths, \(k\)-betweenness provides a more localized measure of a node’s role in network flow.
- <br/>
+ , also known as bounded-distance betweenness (BDBC) [2] or range-limited betweenness centrality [3], is a variant of the standard betweenness centrality in which only paths of length at most \(k\) are considered [4]. It is formally defined as\begin{equation*}c_{k-betw}(i) = \sum_{\substack{j\neq l \neq i \\ d_{jl} \leq k}}{\frac{σ_{jl}(i)}{σ_{jl}}},\end{equation*}where \(σ_{jl}\) denotes the number of shortest paths from node \(j\) to node \(l\), and \(σ_{jl}(i)\) represents the number of paths that pass through node \(i\). The rationale behind the \(k\)-betweenness centrality is that very long paths are less likely to be used in real processes and should therefore contribute less, or not at all, to a node’s centrality. By restricting attention to shorter paths, \(k\)-betweenness provides a more localized measure of a node’s role in network flow.
 </p>
 <h3>
  References
