@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Node local centrality
  </i>
- (NLC) is a centrality measure for identifying influential spreaders by combining network embedding (NE) with local network information [2].
- <br/>
- For a node \(i\), the NLC centrality \(c_{\textsc{NLC}}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{\textsc{NLC}}(i) = \sum_{j \in \mathcal{N}(i)} k_s(i) \, e^{-\|x_i - x_j\|^2},
- <br/>
- \]
- <br/>
- where \(k_s(i)\) is the \(k\)-shell index of node \(i\) and \(x_i \in \mathbb{R}^{r \times 1}\) is the vector embedding of node \(i\) obtained via the DeepWalk network representation method [3].
- <br/>
- Yang et al. [2] set the embedding dimension to \(r = N/2\). The measure captures both the hierarchical position of a node in the network (via \(k\)-shell) and its proximity in the embedded low-dimensional space, reflecting local structural similarity.
- <br/>
+ (NLC) is a centrality measure for identifying influential spreaders by combining network embedding (NE) with local network information [2]. For a node \(i\), the NLC centrality \(c_{\textsc{NLC}}(i)\) is defined as\[c_{\textsc{NLC}}(i) = \sum_{j \in \mathcal{N}(i)} k_s(i) \, e^{-\|x_i - x_j\|^2},\]where \(k_s(i)\) is the \(k\)-shell index of node \(i\) and \(x_i \in \mathbb{R}^{r \times 1}\) is the vector embedding of node \(i\) obtained via the DeepWalk network representation method [3]. Yang
+ <i>
+  et al.
+ </i>
+ [2] set the embedding dimension to \(r = N/2\). The measure captures both the hierarchical position of a node in the network (via \(k\)-shell) and its proximity in the embedded low-dimensional space, reflecting local structural similarity.
 </p>
 <h3>
  References

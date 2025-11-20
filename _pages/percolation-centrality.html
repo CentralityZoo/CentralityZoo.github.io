@@ -16,26 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Percolation centrality
  </i>
- (PC) quantifies the importance of nodes in facilitating percolation through a network, such as in epidemic spreading or information diffusion [2]. In this model, each node \(i\) is assigned a percolation state \(x_i\) with \(0 \leq x_i \leq 1\), representing the extent to which the node is percolated.
- <br/>
- The percolation centrality \(c_{PC}(i)\) of node \(i\) is defined as the fraction of ``percolated paths'', which are shortest paths whose source nodes are percolated, that pass through \(i\), i.e.,
- <br/>
- \begin{equation*}
- <br/>
- c_{PC}(i) = \frac{1}{N-2} \sum_{j \neq i \neq k} \frac{σ_{jk}(i)}{σ_{jk}} \cdot \frac{x_j}{\sum_{s=1}^{N} x_s - x_i},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}\) denotes the total number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) is the number of those paths that pass through node \(i\).  Piraveenan et al. [2] demonstrated that percolation centrality reduces to standard
+ (PC) quantifies the importance of nodes in facilitating percolation through a network, such as in epidemic spreading or information diffusion [2]. In this model, each node \(i\) is assigned a percolation state \(x_i\) with \(0 \leq x_i \leq 1\), representing the extent to which the node is percolated.  The percolation centrality \(c_{PC}(i)\) of node \(i\) is defined as the fraction of ``percolated paths'', which are shortest paths whose source nodes are percolated, that pass through \(i\), i.e.,\begin{equation*}c_{PC}(i) = \frac{1}{N-2} \sum_{j \neq i \neq k} \frac{σ_{jk}(i)}{σ_{jk}} \cdot \frac{x_j}{\sum_{s=1}^{N} x_s - x_i},\end{equation*}where \(σ_{jk}\) denotes the total number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) is the number of those paths that pass through node \(i\).  Piraveenan
+ <i>
+  et al.
+ </i>
+ [2] demonstrated that percolation centrality reduces to standard
  <i>
   betweenness centrality
  </i>
  when all nodes have the same percolation state.
- <br/>
 </p>
 <h3>
  References

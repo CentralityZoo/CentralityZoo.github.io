@@ -16,13 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Mixed degree decomposition (MDD)
  </i>
- , also referred to as the \(m\)-shell method, is an extension of the classical \(k\)-shell method that introduces a tunable parameter \(λ\) to better rank the spreading ability of nodes in complex networks [2]. MDD decomposes the network based on both the residual and exhausted degrees of nodes.
- <br/>
- The
+ , also referred to as the \(m\)-shell method, is an extension of the classical \(k\)-shell method that introduces a tunable parameter \(λ\) to better rank the spreading ability of nodes in complex networks [2]. MDD decomposes the network based on both the residual and exhausted degrees of nodes.  The
  <i>
   residual degree
  </i>
@@ -34,18 +31,7 @@ search: true
  <i>
   mixed degree
  </i>
- is then given by
- <br/>
- \begin{equation*}
- <br/>
- d_i^{(m)} = d_i^{(r)} + λ d_i^{(e)},
- <br/>
- \end{equation*}
- <br/>
- where \(λ \in [0,1]\) controls the relative contribution of exhausted links.
- <br/>
- The MDD procedure performs a \(k\)-shell decomposition using \(d_i^{(m)}\) to iteratively remove nodes. In the limiting cases, when \(λ = 0\), the MDD score reduces to the standard \(k\)-shell centrality, and when \(λ = 1\), it is equivalent to the degree centrality. Zeng and Zhang [2] suggest using \(λ = 0.7\) for optimal performance.
- <br/>
+ is then given by\begin{equation*}d_i^{(m)} = d_i^{(r)} + λ d_i^{(e)},\end{equation*}where \(λ \in [0,1]\) controls the relative contribution of exhausted links.  The MDD procedure performs a \(k\)-shell decomposition using \(d_i^{(m)}\) to iteratively remove nodes. In the limiting cases, when \(λ = 0\), the MDD score reduces to the standard \(k\)-shell centrality, and when \(λ = 1\), it is equivalent to the degree centrality. Zeng and Zhang [2] suggest using \(λ = 0.7\) for optimal performance.
 </p>
 <h3>
  References

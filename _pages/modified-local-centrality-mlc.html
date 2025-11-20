@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Modified local centrality
  </i>
- (MLC) is a semi-local centrality measure that quantifies the distal influence of a node by considering its neighbors and the neighbors of its neighbors, while adjusting for direct connections [2].  The MLC score of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{MLC}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k) - 2 \sum_{j \in \mathcal{N}(i)} |\mathcal{N}(j)|,
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and
- <br/>
- \[
- <br/>
- n(k) = |\mathcal{N}^{(\leq 2)}(k)|
- <br/>
- \]
- <br/>
- denotes the number of nearest and next-nearest neighbors of node \(k\).
- <br/>
- Intuitively, MLC captures the broader influence of a node beyond its immediate neighbors, while removing the double-counted contributions of direct connections. Nodes with high MLC values are those that not only connect to many neighbors but are also positioned in dense local neighborhoods that can facilitate spreading processes over multiple steps in the network.
- <br/>
+ (MLC) is a semi-local centrality measure that quantifies the distal influence of a node by considering its neighbors and the neighbors of its neighbors, while adjusting for direct connections [2].  The MLC score of node \(i\) is defined as\[c_{MLC}(i) = \sum_{j \in \mathcal{N}(i)} \sum_{k \in \mathcal{N}(j)} n(k) - 2 \sum_{j \in \mathcal{N}(i)} |\mathcal{N}(j)|,\]where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), and \[n(k) = |\mathcal{N}^{(\leq 2)}(k)| \] denotes the number of nearest and next-nearest neighbors of node \(k\).  Intuitively, MLC captures the broader influence of a node beyond its immediate neighbors, while removing the double-counted contributions of direct connections. Nodes with high MLC values are those that not only connect to many neighbors but are also positioned in dense local neighborhoods that can facilitate spreading processes over multiple steps in the network.
 </p>
 <h3>
  References

@@ -16,24 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   NL centrality
  </i>
- is a semi-local measure that extends the DIL centrality [2] by accounting for the contributions of second-degree neighbors and the structural importance of edges [3]. The NL centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{NL}(i) = \sum_{j \in \mathcal{N}(i)} \left[ φ(j) +
- <br/>
- \left( \frac{(d_i - \Delta_{ij} - 1)(d_j - \Delta_{ij} - 1)}{\Delta_{ij}/2 + 1} \right)
- <br/>
- \left( \frac{d_i - 1}{d_i + d_j - 2} \right) \right],
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\), \(\Delta_{ij}\) denotes the number of triangles containing the edge \((i,j)\), and \(φ(j)=|\mathcal{N}^{(\leq 2)}(j)|\) counts the number of nodes within two steps of node \(j\). The NL centrality considers both edge-level clustering and the connectivity of second-degree neighbors, capturing information beyond immediate neighbors.
- <br/>
+ is a semi-local measure that extends the DIL centrality [2] by accounting for the contributions of second-degree neighbors and the structural importance of edges [3]. The NL centrality of node \(i\) is defined as\begin{equation*}c_{NL}(i) = \sum_{j \in \mathcal{N}(i)} \left[ φ(j) + \left( \frac{(d_i - \Delta_{ij} - 1)(d_j - \Delta_{ij} - 1)}{\Delta_{ij}/2 + 1} \right)\left( \frac{d_i - 1}{d_i + d_j - 2} \right) \right],\end{equation*}where \(\mathcal{N}(i)\) is the set of neighbors of node \(i\), \(d_i\) is the degree of node \(i\), \(\Delta_{ij}\) denotes the number of triangles containing the edge \((i,j)\), and \(φ(j)=|\mathcal{N}^{(\leq 2)}(j)|\) counts the number of nodes within two steps of node \(j\). The NL centrality considers both edge-level clustering and the connectivity of second-degree neighbors, capturing information beyond immediate neighbors.
 </p>
 <h3>
  References

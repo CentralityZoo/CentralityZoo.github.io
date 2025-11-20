@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   mixed gravitational centrality
@@ -25,18 +24,7 @@ search: true
  <i>
   improved gravitational centrality
  </i>
- , represents an enhanced formulation of the classical gravitational centrality measure. In this variant, the mass of the focal node is determined by its \(k\)-shell index, while the masses of its neighboring nodes are characterized by their degrees [2]. The centrality score \( c_{\mathrm{MGC}}(i) \) for node \( i \) is expressed as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{MGC}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{k_s(i)\,d_j}{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \), \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( k_s(i) \) is the \(k\)-shell index of node \( i \), and \( d_j \) is the degree of node \( j \).
- <br/>
- The mixed gravitational centrality integrates the hierarchical structure of the network, captured by the \(k\)-shell decomposition, with local connectivity information, represented by node degrees, thereby providing a more comprehensive quantification of node influence within complex networks.
- <br/>
+ , represents an enhanced formulation of the classical gravitational centrality measure. In this variant, the mass of the focal node is determined by its \(k\)-shell index, while the masses of its neighboring nodes are characterized by their degrees [2]. The centrality score \( c_{\mathrm{MGC}}(i) \) for node \( i \) is expressed as\begin{equation*}c_{\mathrm{MGC}}(i) = \sum_{j \in \mathcal{N}(i)} \frac{k_s(i)\,d_j}{d_{ij}^2},\end{equation*}where \( \mathcal{N}(i) \) denotes the set of neighbors of node \( i \), \( d_{ij} \) is the shortest path distance between nodes \( i \) and \( j \), \( k_s(i) \) is the \(k\)-shell index of node \( i \), and \( d_j \) is the degree of node \( j \). The mixed gravitational centrality integrates the hierarchical structure of the network, captured by the \(k\)-shell decomposition, with local connectivity information, represented by node degrees, thereby providing a more comprehensive quantification of node influence within complex networks.
 </p>
 <h3>
  References

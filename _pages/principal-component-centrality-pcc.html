@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Principal component centrality
  </i>
- (PCC) is a spectral measure of node influence that generalizes eigenvector centrality by incorporating multiple leading eigenvectors of the adjacency matrix, rather than relying solely on the dominant one [2]. Each node is represented in the eigenspace spanned by the top \(p\) eigenvectors of the adjacency matrix, and its importance is quantified as the weighted Euclidean distance of its coordinates from the origin, where the weights correspond to the associated eigenvalues.
- <br/>
- Formally, let \(A\) be the \(N \times N\) adjacency matrix of graph \(G\) and \(X_p\) be the \(N \times p\) matrix of the top \(p\) eigenvectors \(v_1, \dots, v_p\) corresponding to eigenvalues \(λ_1, \dots, λ_p\) with \(|λ_1| \ge |λ_2| \ge \cdots \ge |λ_p|\). Then, the PCC vector is defined as
- <br/>
- \[
- <br/>
- c_{PCC} = \sqrt{ (A X_p \circ A X_p) u },
- <br/>
- \]
- <br/>
- where \(\circ\) denotes the Hadamard (element-wise) product and \(u\) is a \(p \times 1\) vector of ones. Equivalently, the PCC score of node \(i\) is
- <br/>
- \[
- <br/>
- c_{PCC}(i) = \sqrt{\sum_{k=1}^p \big((AX_p)_{ik}\big)^2} = \sqrt{\sum_{k=1}^p \big(λ_k (v_i)_k\big)^2}.
- <br/>
- \]
- <br/>
- When \(p=1\), PCC reduces to a scaled version of eigenvector centrality. Nodes farther from the origin in this weighted eigenspace are considered more central, reflecting stronger contributions along the most significant structural directions of the network.
- <br/>
+ (PCC) is a spectral measure of node influence that generalizes eigenvector centrality by incorporating multiple leading eigenvectors of the adjacency matrix, rather than relying solely on the dominant one [2]. Each node is represented in the eigenspace spanned by the top \(p\) eigenvectors of the adjacency matrix, and its importance is quantified as the weighted Euclidean distance of its coordinates from the origin, where the weights correspond to the associated eigenvalues.Formally, let \(A\) be the \(N \times N\) adjacency matrix of graph \(G\) and \(X_p\) be the \(N \times p\) matrix of the top \(p\) eigenvectors \(v_1, \dots, v_p\) corresponding to eigenvalues \(λ_1, \dots, λ_p\) with \(|λ_1| \ge |λ_2| \ge \cdots \ge |λ_p|\). Then, the PCC vector is defined as\[c_{PCC} = \sqrt{ (A X_p \circ A X_p) u },\]where \(\circ\) denotes the Hadamard (element-wise) product and \(u\) is a \(p \times 1\) vector of ones. Equivalently, the PCC score of node \(i\) is\[c_{PCC}(i) = \sqrt{\sum_{k=1}^p \big((AX_p)_{ik}\big)^2} = \sqrt{\sum_{k=1}^p \big(λ_k (v_i)_k\big)^2}.\]When \(p=1\), PCC reduces to a scaled version of eigenvector centrality. Nodes farther from the origin in this weighted eigenspace are considered more central, reflecting stronger contributions along the most significant structural directions of the network.
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Physarum centrality
  </i>
@@ -24,58 +23,7 @@ search: true
  <i>
   Physarum polycephalum
  </i>
- [2]. The organism can be modeled as an undirected weighted network, where each link represents a tube and each node represents a junction between tubes. The weight \(w_{ij}\) denotes the length of link \((i,j)\).
- <br/>
- The core idea is that, during exploration for optimal paths, long and narrow tubes tend to weaken, while short and wide tubes strengthen due to positive feedback from flux. The Physarum dynamically adjusts flux through its network to identify efficient paths connecting two specified nodes.
- <br/>
- For each source node \(s\) and target node \(t\) (representing food sources), the flux \(Q_{ij}^{st}\) through link \((i,j)\) is determined according to Poiseuille flow:
- <br/>
- \[
- <br/>
- Q_{ij}^{st} = \frac{D_{ij}}{w_{ij}}(p_i - p_j),
- <br/>
- \]
- <br/>
- where \(p_i\) is the pressure at node \(i\) and \(D_{ij}\) is the conductivity of link \((i,j)\). Assuming flow conservation at each node, the network satisfies the Poisson equation:
- <br/>
- \[
- <br/>
- \sum_{j=1}^N \frac{D_{ij}}{w_{ij}}(p_i - p_j) =
- <br/>
- \begin{cases}
- <br/>
- -I_0 &amp; \text{for } i = s,\\
- <br/>
- I_0 &amp; \text{for } i = t,\\
- <br/>
- 0 &amp; \text{otherwise,}
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- where \(I_0\) is the total flux from the source (typically \(I_0=1\)). The conductivities are initialized as \(D_{ij} = 0.5\) and updated over time according to
- <br/>
- \[
- <br/>
- \frac{d}{dt} D_{ij} = \frac{(1+a)(Q_{ij}^{st})^μ}{1 + a (Q_{ij}^{st})^μ} - α D_{ij},
- <br/>
- \]
- <br/>
- where \(α\) is the decay rate of the tube (e.g.  \(α=0.05\)), \(μ = 27\) and \(a = 2\). The flux \(Q_{ij}^{st}\) is iteratively updated, and the model is terminated after \(4 \log N\) iterations.
- <br/>
- Finally, the Physarum centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{Physarum}}(i) = \sum_{j \in \mathcal{N}(i)} c_{ij}, \quad
- <br/>
- c_{ij} = \sum_{s \neq t} Q_{ij}^{st},
- <br/>
- \]
- <br/>
- where \(c_{ij}\) represents the criticality of link \((i,j)\), computed as the total flux through the link across all source-target pairs.
- <br/>
+ [2]. The organism can be modeled as an undirected weighted network, where each link represents a tube and each node represents a junction between tubes. The weight \(w_{ij}\) denotes the length of link \((i,j)\). The core idea is that, during exploration for optimal paths, long and narrow tubes tend to weaken, while short and wide tubes strengthen due to positive feedback from flux. The Physarum dynamically adjusts flux through its network to identify efficient paths connecting two specified nodes. For each source node \(s\) and target node \(t\) (representing food sources), the flux \(Q_{ij}^{st}\) through link \((i,j)\) is determined according to Poiseuille flow:\[Q_{ij}^{st} = \frac{D_{ij}}{w_{ij}}(p_i - p_j),\]where \(p_i\) is the pressure at node \(i\) and \(D_{ij}\) is the conductivity of link \((i,j)\). Assuming flow conservation at each node, the network satisfies the Poisson equation:\[\sum_{j=1}^N \frac{D_{ij}}{w_{ij}}(p_i - p_j) =\begin{cases}-I_0 &amp; \text{for } i = s,\\I_0 &amp; \text{for } i = t,\\0 &amp; \text{otherwise,}\end{cases}\]where \(I_0\) is the total flux from the source (typically \(I_0=1\)). The conductivities are initialized as \(D_{ij} = 0.5\) and updated over time according to\[\frac{d}{dt} D_{ij} = \frac{(1+a)(Q_{ij}^{st})^μ}{1 + a (Q_{ij}^{st})^μ} - α D_{ij},\]where \(α\) is the decay rate of the tube (e.g.  \(α=0.05\)), \(μ = 27\) and \(a = 2\). The flux \(Q_{ij}^{st}\) is iteratively updated, and the model is terminated after \(4 \log N\) iterations.Finally, the Physarum centrality of node \(i\) is defined as\[c_{\mathrm{Physarum}}(i) = \sum_{j \in \mathcal{N}(i)} c_{ij}, \quadc_{ij} = \sum_{s \neq t} Q_{ij}^{st},\]where \(c_{ij}\) represents the criticality of link \((i,j)\), computed as the total flux through the link across all source-target pairs.
 </p>
 <h3>
  References

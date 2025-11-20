@@ -16,34 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Mapping Entropy Betweenness
  </i>
- (MEB) extends the concept of mapping entropy by weighting nodes with betweenness centrality instead of degree centrality [2]. The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{MEB}}(i) = - BC_i \sum_{j \in \mathcal{N}(i)} \log BC_j,
- <br/>
- \end{equation*}
- <br/>
- where \(BC_i\) is the
+ (MEB) extends the concept of mapping entropy by weighting nodes with betweenness centrality instead of degree centrality [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{\text{MEB}}(i) = - BC_i \sum_{j \in \mathcal{N}(i)} \log BC_j,\end{equation*}where \(BC_i\) is the
  <i>
   normalized betweenness centrality
  </i>
- of node \(i\), and \(\mathcal{N}(i)\) denotes its set of neighbors. The normalized betweenness centrality is computed as
- <br/>
- \begin{equation*}
- <br/>
- BC_i = \frac{\sum_{j\neq k \neq i} \frac{σ_{jk}(i)}{σ_{jk}}}{N^2 - 3N + 2},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}\) denotes the number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) represents the number of paths that pass through node \(i\).
- <br/>
- The MEB centrality highlights nodes with high betweenness that are also connected to other high-betweenness neighbors, emphasizing their key role in facilitating information flow.
- <br/>
+ of node \(i\), and \(\mathcal{N}(i)\) denotes its set of neighbors. The normalized betweenness centrality is computed as\begin{equation*}BC_i = \frac{\sum_{j\neq k \neq i} \frac{σ_{jk}(i)}{σ_{jk}}}{N^2 - 3N + 2},\end{equation*} where \(σ_{jk}\) denotes the number of shortest paths from node \(j\) to node \(k\), and \(σ_{jk}(i)\) represents the number of paths that pass through node \(i\).The MEB centrality highlights nodes with high betweenness that are also connected to other high-betweenness neighbors, emphasizing their key role in facilitating information flow.
 </p>
 <h3>
  References

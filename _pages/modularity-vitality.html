@@ -16,34 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Modularity vitality
  </i>
- is a community-based centrality measure that quantifies the contribution of a node to the overall modularity of a network [2].
- <br/>
- Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities (Magelinski et al. [2] employ the Leiden community detection algorithm).
- <br/>
- Given a community partition \(C\), the modularity vitality \(c_{MV}(i)\) of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{MV}(i) = Q(G, C) - Q(G_i, C \setminus \{i\}),
- <br/>
- \end{equation*}
- <br/>
- where \(Q(G, C)\) denotes the modularity of the network \(G\) under partition \(C\), and \(G_i\) is the graph obtained by removing node \(i\) from \(G\).  Importantly, the community structure \(C\) is
+ is a community-based centrality measure that quantifies the contribution of a node to the overall modularity of a network [2].  Assume that the network \(G\) has a community structure consisting of \(K &gt; 1\) communities (Magelinski
+ <i>
+  et al.
+ </i>
+ [2] employ the Leiden community detection algorithm).  Given a community partition \(C\), the modularity vitality \(c_{MV}(i)\) of node \(i\) is defined as\begin{equation*}c_{MV}(i) = Q(G, C) - Q(G_i, C \setminus \{i\}),\end{equation*}where \(Q(G, C)\) denotes the modularity of the network \(G\) under partition \(C\), and \(G_i\) is the graph obtained by removing node \(i\) from \(G\).  Importantly, the community structure \(C\) is
  <i>
   not recomputed
  </i>
- after the removal of node \(i\); modularity is recalculated using the same partition excluding \(i\).
- <br/>
- A positive modularity vitality \(c_{MV}(i)\) indicates that node \(i\) enhances the modular structure of the network, functioning as a community hub.
- <br/>
- Conversely, a negative \(c_{MV}(i)\) suggests that the node weakens modularity, typically acting as a bridge between communities.
- <br/>
- Thus, modularity vitality not only measures the importance of a node but also distinguishes between hub-like and bridge-like roles within the network.
- <br/>
+ after the removal of node \(i\); modularity is recalculated using the same partition excluding \(i\).A positive modularity vitality \(c_{MV}(i)\) indicates that node \(i\) enhances the modular structure of the network, functioning as a community hub.  Conversely, a negative \(c_{MV}(i)\) suggests that the node weakens modularity, typically acting as a bridge between communities.  Thus, modularity vitality not only measures the importance of a node but also distinguishes between hub-like and bridge-like roles within the network.
 </p>
 <h3>
  References

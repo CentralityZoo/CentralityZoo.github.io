@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   outward accessibility
  </i>
- quantifies the ability of a node to reach other nodes in a network after a fixed number of steps along self-avoiding walks [2]. Let \( N \) be the total number of nodes in the network, and let \( P_h(i,j) \) denote the transition probability that an agent starting from node \( i \) reaches node \( j \) in exactly \( h \) steps along a self-avoiding walk (i.e., a simple path without revisiting nodes). The outward accessibility of node \( i \) after \( h \) steps is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{OA_h}(i)
- <br/>
- = \frac{1}{N - 1}
- <br/>
- e^{\left(
- <br/>
- -\sum_{j:\, P_h(i,j) \neq 0}
- <br/>
- P_h(i,j) \log P_h(i,j)
- <br/>
- \right)}.
- <br/>
- \end{equation*}
- <br/>
- The expression inside the exponential represents the Shannon entropy of the transition probability distribution for node \( i \). A higher entropy indicates that node \( i \) can reach many other nodes through distinct paths with similar probabilities, reflecting greater accessibility. The normalization factor \( 1/(N - 1) \) ensures that the measure is comparable across networks of different sizes.
- <br/>
+ quantifies the ability of a node to reach other nodes in a network after a fixed number of steps along self-avoiding walks [2]. Let \( N \) be the total number of nodes in the network, and let \( P_h(i,j) \) denote the transition probability that an agent starting from node \( i \) reaches node \( j \) in exactly \( h \) steps along a self-avoiding walk (i.e., a simple path without revisiting nodes). The outward accessibility of node \( i \) after \( h \) steps is defined as\begin{equation*}c_{OA_h}(i)= \frac{1}{N - 1}e^{\left(-\sum_{j:\, P_h(i,j) \neq 0} P_h(i,j) \log P_h(i,j)\right)}.\end{equation*}The expression inside the exponential represents the Shannon entropy of the transition probability distribution for node \( i \). A higher entropy indicates that node \( i \) can reach many other nodes through distinct paths with similar probabilities, reflecting greater accessibility. The normalization factor \( 1/(N - 1) \) ensures that the measure is comparable across networks of different sizes.
 </p>
 <h3>
  References

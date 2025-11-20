@@ -16,42 +16,14 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Non-backtracking (NB) centrality
  </i>
- is a spectral measure designed to mitigate localization effects, where a hub with high centrality artificially inflates the centrality of its neighbors, which in turn feed back and further exaggerate the hub's centrality [2].
- <br/>
- The NB centrality is defined using the \(L \times L\) non-symmetric
+ is a spectral measure designed to mitigate localization effects, where a hub with high centrality artificially inflates the centrality of its neighbors, which in turn feed back and further exaggerate the hub's centrality [2]. The NB centrality is defined using the \(L \times L\) non-symmetric
  <i>
   non-backtracking matrix
  </i>
- \(B\), where each row and column corresponds to a directed edge \((i,j)\), with elements
- <br/>
- \[
- <br/>
- B_{(k,l),(i,j)} = δ_{jk} (1 - δ_{il}),
- <br/>
- \]
- <br/>
- and \(δ_{jk}\) is the Kronecker delta. The element \(v_{(j,i)}\) of the leading eigenvector of \(B\) represents the centrality of node \(j\) ignoring contributions from node \(i\). The full non-backtracking centrality of node \(i\) is then
- <br/>
- \begin{equation*}
- <br/>
- c_{NB}(i) = \sum_{j \in \mathcal{N}(i)} a_{ji} \, v_{(j,i)}.
- <br/>
- \end{equation*}
- <br/>
- The non-backtracking centrality can be efficiently computed as the first \(N\) elements of the leading eigenvector of the \(2N \times 2N\) matrix
- <br/>
- \[
- <br/>
- M = \begin{bmatrix} A &amp; I - D \\ I &amp; 0 \end{bmatrix},
- <br/>
- \]
- <br/>
- where \(A\) is the adjacency matrix, \(I\) is the \(N \times N\) identity matrix, and \(D\) is the diagonal matrix of node degrees.
- <br/>
+ \(B\), where each row and column corresponds to a directed edge \((i,j)\), with elements\[B_{(k,l),(i,j)} = δ_{jk} (1 - δ_{il}),\]and \(δ_{jk}\) is the Kronecker delta. The element \(v_{(j,i)}\) of the leading eigenvector of \(B\) represents the centrality of node \(j\) ignoring contributions from node \(i\). The full non-backtracking centrality of node \(i\) is then\begin{equation*}c_{NB}(i) = \sum_{j \in \mathcal{N}(i)} a_{ji} \, v_{(j,i)}.\end{equation*}The non-backtracking centrality can be efficiently computed as the first \(N\) elements of the leading eigenvector of the \(2N \times 2N\) matrix\[M = \begin{bmatrix} A &amp; I - D \\ I &amp; 0 \end{bmatrix},\]where \(A\) is the adjacency matrix, \(I\) is the \(N \times N\) identity matrix, and \(D\) is the diagonal matrix of node degrees.
 </p>
 <h3>
  References

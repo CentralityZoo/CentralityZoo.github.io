@@ -16,29 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   neighbor distance centrality
  </i>
- is a specific case of neighborhood centrality [2], obtained by using degree centrality as the benchmark measure, a decay parameter \(a = 0.2\), and considering neighbors up to two steps (\(n = 2\)) away [3].
- <br/>
- Formally, for a node \(i\), the neighbor distance centrality is defined as
- <br/>
- \begin{equation}
- <br/>
- c_{nd}(i) = d_i + \sum_{j \in \mathcal{N}^{(1)}(i)} (0.2) d_j + + \sum_{j \in \mathcal{N}^{(2)}(i)} (0.2)^2 d_j,
- <br/>
- \end{equation}
- <br/>
- where \(d_i\) is the degree centrality of node \(i\) and \(\mathcal{N}^{(k)}(i)\) denotes the set of \(k\)-hop neighbors.
- <br/>
- The neighbor distance centrality captures the influence of a node by combining its own degree with the degrees of its immediate and secondary neighbors, with contributions decaying with distance. Liu
+ is a specific case of neighborhood centrality [2], obtained by using degree centrality as the benchmark measure, a decay parameter \(a = 0.2\), and considering neighbors up to two steps (\(n = 2\)) away [3].Formally, for a node \(i\), the neighbor distance centrality is defined as\begin{equation}c_{nd}(i) = d_i + \sum_{j \in \mathcal{N}^{(1)}(i)} (0.2) d_j + + \sum_{j \in \mathcal{N}^{(2)}(i)} (0.2)^2 d_j,\end{equation}where \(d_i\) is the degree centrality of node \(i\) and \(\mathcal{N}^{(k)}(i)\) denotes the set of \(k\)-hop neighbors.The neighbor distance centrality captures the influence of a node by combining its own degree with the degrees of its immediate and secondary neighbors, with contributions decaying with distance. Liu
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] reported that this configuration achieves high performance in identifying influential nodes in various network structures.
- <br/>
+ } [2] reported that this configuration achieves high performance in identifying influential nodes in various network structures.
 </p>
 <h3>
  References

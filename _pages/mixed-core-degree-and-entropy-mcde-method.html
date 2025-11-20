@@ -16,38 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   mixed core, degree, and entropy
  </i>
- (MCDE) method is a hybrid centrality measure that combines \(k\)-shell and degree centralities with a weighted entropy measure [2]. The entropy of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- H(i) = \sum_{k=0}^{k_{max}} p_k(i) \log_2 p_k(i),
- <br/>
- \end{equation*}
- <br/>
- where \(k_{\max}\) denotes the maximum \(k\)-shell index in the network and \(p_k(i)\) is the fraction of node \(i\)'s neighbors in the \(k\)th core,
- <br/>
- \begin{equation*}
- <br/>
- p_k(i) = \frac{|\{ j \in \mathcal{N}(i) : k_s(j) = k \}|}{d_i}.
- <br/>
- \end{equation*}
- <br/>
- The MCDE centrality of node \(i\) is then given by
- <br/>
- \begin{equation*}
- <br/>
- c_{MCDE}(i) = α k_s(i) + β d_i + γ H(i),
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree, \(k_s(i)\) is the \(k\)-shell score, and \(α, β, γ\) are weights controlling the contribution of each component. Sheikhahmadi and Nematbakhsh [2] suggest \(α = β = γ = 1\).
- <br/>
- Three variations of MCDE have also been proposed:
+ (MCDE) method is a hybrid centrality measure that combines \(k\)-shell and degree centralities with a weighted entropy measure [2]. The entropy of node \(i\) is defined as\begin{equation*}H(i) = \sum_{k=0}^{k_{max}} p_k(i) \log_2 p_k(i),\end{equation*}where \(k_{\max}\) denotes the maximum \(k\)-shell index in the network and \(p_k(i)\) is the fraction of node \(i\)'s neighbors in the \(k\)th core,\begin{equation*}p_k(i) = \frac{|\{ j \in \mathcal{N}(i) : k_s(j) = k \}|}{d_i}.\end{equation*}The MCDE centrality of node \(i\) is then given by\begin{equation*}c_{MCDE}(i) = α k_s(i) + β d_i + γ H(i),\end{equation*}where \(d_i\) is the degree, \(k_s(i)\) is the \(k\)-shell score, and \(α, β, γ\) are weights controlling the contribution of each component. Sheikhahmadi and Nematbakhsh [2] suggest \(α = β = γ = 1\).Three variations of MCDE have also been proposed:
  <ul>
   <li>
    <i>
@@ -71,7 +44,6 @@ search: true
    : combines the MCDWE and MCSDE approaches.
   </li>
  </ul>
- <br/>
 </p>
 <h3>
  References

@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   ModuLand centrality
  </i>
- quantifies a node's importance based on its role within the influence-function-based community landscape constructed by the NodeLand algorithm [2]. For each node \(k\), NodeLand computes an influence function \(f_k\) by iteratively building the set \(A_k\) of nodes strongly influenced by \(k\). Starting from \(A_k = \{k\}\), neighboring nodes are added one at a time only if their inclusion increases the density of the subgraph induced by \(A_k\). This process continues until no further improvement in density is possible.
- <br/>
- The ModuLand centrality \(c_{\mathrm{ModuLand}}(i)\) of node \(i\) is then defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{ModuLand}}(i) = \sum_{j=1}^{N} c(i,j) = \sum_{j=1}^{N} \sum_{k=1}^{N} f_k(i,j),
- <br/>
- \]
- <br/>
- where
- <br/>
- \[
- <br/>
- f_k(i,j) =
- <br/>
- \begin{cases}
- <br/>
- w_{ij}, &amp; \text{if } (i,j) \in A_k,\\
- <br/>
- 0, &amp; \text{otherwise,}
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- and \(w_{ij}\) is the weight of edge \((i,j)\). This formulation captures how strongly node \(i\) participates in regions of high influence across the network, reflecting its centrality in the overlapping community landscape.
- <br/>
+ quantifies a node's importance based on its role within the influence-function-based community landscape constructed by the NodeLand algorithm [2]. For each node \(k\), NodeLand computes an influence function \(f_k\) by iteratively building the set \(A_k\) of nodes strongly influenced by \(k\). Starting from \(A_k = \{k\}\), neighboring nodes are added one at a time only if their inclusion increases the density of the subgraph induced by \(A_k\). This process continues until no further improvement in density is possible.The ModuLand centrality \(c_{\mathrm{ModuLand}}(i)\) of node \(i\) is then defined as\[c_{\mathrm{ModuLand}}(i) = \sum_{j=1}^{N} c(i,j) = \sum_{j=1}^{N} \sum_{k=1}^{N} f_k(i,j),\]where\[f_k(i,j) =\begin{cases}w_{ij}, &amp; \text{if } (i,j) \in A_k,\\0, &amp; \text{otherwise,}\end{cases}\]and \(w_{ij}\) is the weight of edge \((i,j)\). This formulation captures how strongly node \(i\) participates in regions of high influence across the network, reflecting its centrality in the overlapping community landscape.
 </p>
 <h3>
  References

@@ -16,31 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   mixed core, semi-local degree, and weighted entropy
  </i>
- (MCSDWE) method combines the MCDWE and MCSDE approaches to produce a fully weighted, semi-local centrality measure [2]. The centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{MCSDWE}(i) = α k_s(i) + β \, c_{\mathrm{LR}}(i) + γ H(i),
- <br/>
- \]
- <br/>
- where \(k_s(i)\) is the \(k\)-shell index, \(c_{\mathrm{LR}}(i)\) is the LocalRank centrality of node \(i\) [3], and \(α, β, γ\) are weights controlling the contributions of each component (Sheikhahmadi and Nematbakhsh [2] suggest \(α = β = γ = 1\)).  The weighted entropy \(H(i)\) is given by
- <br/>
- \[
- <br/>
- H(i) = \sum_{k=0}^{k_{\max}} \frac{p_k(i) \log_2 p_k(i)}{k_{\max} - |\{r : \exists j \in \mathcal{N}(i), k_s(j) = r\}| + 1},
- <br/>
- \]
- <br/>
- where \(p_k(i)\) is the fraction of neighbors of node \(i\) in the \(k\)th shell and \(k_{\max}\) denotes the maximum \(k\)-shell index in the network.
- <br/>
- MCSDWE integrates local, semi-local, and hierarchical neighborhood information, providing a comprehensive and nuanced assessment of node influence in complex networks.
- <br/>
+ (MCSDWE) method combines the MCDWE and MCSDE approaches to produce a fully weighted, semi-local centrality measure [2]. The centrality of node \(i\) is defined as\[c_{MCSDWE}(i) = α k_s(i) + β \, c_{\mathrm{LR}}(i) + γ H(i),\]where \(k_s(i)\) is the \(k\)-shell index, \(c_{\mathrm{LR}}(i)\) is the LocalRank centrality of node \(i\) [3], and \(α, β, γ\) are weights controlling the contributions of each component (Sheikhahmadi and Nematbakhsh [2] suggest \(α = β = γ = 1\)).  The weighted entropy \(H(i)\) is given by\[H(i) = \sum_{k=0}^{k_{\max}} \frac{p_k(i) \log_2 p_k(i)}{k_{\max} - |\{r : \exists j \in \mathcal{N}(i), k_s(j) = r\}| + 1},\]where \(p_k(i)\) is the fraction of neighbors of node \(i\) in the \(k\)th shell and \(k_{\max}\) denotes the maximum \(k\)-shell index in the network.  MCSDWE integrates local, semi-local, and hierarchical neighborhood information, providing a comprehensive and nuanced assessment of node influence in complex networks.
 </p>
 <h3>
  References

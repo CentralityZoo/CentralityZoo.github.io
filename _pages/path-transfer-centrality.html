@@ -16,32 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Path-transfer centrality
  </i>
- , also called entropy path centrality (EPTC), is an entropy-based measure that quantifies node importance based on the way traffic flows through a network [2].The key idea is that flows originating from highly central nodes spread broadly and evenly through the network, whereas flows from less central nodes are concentrated along fewer paths and reach fewer nodes.
- <br/>
- Consider a flow originating at node \(i\). At each step, the flow may either stop at the current node \(j\) or transfer to an unvisited neighbor \(k\). The overall probability \(p_{ij}\) that a flow starting at \(i\) ends at \(j\) is the sum of probabilities over all simple paths from \(i\) to \(j\):
- <br/>
- \begin{equation*}
- <br/>
- p_{ij} = \sum_{l=1}^{K(i,j)} σ_l(j) \prod_{t=0}^{|P_l(i,j)|-1} τ_l(u_t),
- <br/>
- \end{equation*}
- <br/>
- where \(K(i,j)\) is the number of simple paths from \(i\) to \(j\), \(P_l(i,j)\) denotes the \(l\)th path, \(σ_l(j)\) is the stopping probability at \(j\) along path \(P_l(i,j)\), and \(τ_l(u_t)\) is the transition probability from node \(u_t\) to the next node in that path.
- <br/>
- The path-transfer centrality of node \(i\) is then given by the Shannon entropy of the flow distribution:
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{PT}}(i) = -\sum_{j=1}^N p_{ij} \log p_{ij}.
- <br/>
- \end{equation*}
- <br/>
- Nodes with high path-transfer centrality are those from which flows can reach many other nodes with relatively uniform probability, highlighting their structural importance in facilitating traffic or information spread.
- <br/>
+ , also called entropy path centrality (EPTC), is an entropy-based measure that quantifies node importance based on the way traffic flows through a network [2].The key idea is that flows originating from highly central nodes spread broadly and evenly through the network, whereas flows from less central nodes are concentrated along fewer paths and reach fewer nodes.Consider a flow originating at node \(i\). At each step, the flow may either stop at the current node \(j\) or transfer to an unvisited neighbor \(k\). The overall probability \(p_{ij}\) that a flow starting at \(i\) ends at \(j\) is the sum of probabilities over all simple paths from \(i\) to \(j\):\begin{equation*}p_{ij} = \sum_{l=1}^{K(i,j)} σ_l(j) \prod_{t=0}^{|P_l(i,j)|-1} τ_l(u_t),\end{equation*}where \(K(i,j)\) is the number of simple paths from \(i\) to \(j\), \(P_l(i,j)\) denotes the \(l\)th path, \(σ_l(j)\) is the stopping probability at \(j\) along path \(P_l(i,j)\), and \(τ_l(u_t)\) is the transition probability from node \(u_t\) to the next node in that path.  The path-transfer centrality of node \(i\) is then given by the Shannon entropy of the flow distribution:\begin{equation*}c_{\text{PT}}(i) = -\sum_{j=1}^N p_{ij} \log p_{ij}.\end{equation*}Nodes with high path-transfer centrality are those from which flows can reach many other nodes with relatively uniform probability, highlighting their structural importance in facilitating traffic or information spread.
 </p>
 <h3>
  References

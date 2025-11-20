@@ -16,38 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Nieminen's closeness centrality
  </i>
- , originally designed for weakly connected directed graphs, measures a node's centrality by combining the total distance from node \(i\) to all other reachable nodes with the ability to reach a large number of nodes [2]. Let \(RP(i)\) denote the set of nodes reachable from \(i\) in the network \(G\). By definition, \(i \in RP(i)\). Then, the Nieminen's closeness centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{Nieminen}(i) =
- <br/>
- \begin{cases}
- <br/>
- \sum_{j \in RP(i)} \left(|RP(i)| - d_{ij} \right), &amp; \text{if } |RP(i)| \geq 2,\\
- <br/>
- 0, &amp; \text{otherwise}.
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) denotes the shortest-path distance between nodes \(i\) and \(j\).
- <br/>
- For unweighted and strongly connected networks, the Nieminen's closeness centrality can be expressed as
- <br/>
- \[
- <br/>
- c_{Nieminen}(i) = N^2 - \sum_{j=1}^N d_{ij},
- <br/>
- \]
- <br/>
- which is directly related to the sum of shortest-path distances from node \(i\) to all other nodes. In this case, the ranking of nodes by Nieminen's closeness is identical to the ranking obtained from the closeness centrality.
- <br/>
+ , originally designed for weakly connected directed graphs, measures a node's centrality by combining the total distance from node \(i\) to all other reachable nodes with the ability to reach a large number of nodes [2]. Let \(RP(i)\) denote the set of nodes reachable from \(i\) in the network \(G\). By definition, \(i \in RP(i)\). Then, the Nieminen's closeness centrality of node \(i\) is defined as\begin{equation*}c_{Nieminen}(i) =\begin{cases}\sum_{j \in RP(i)} \left(|RP(i)| - d_{ij} \right), &amp; \text{if } |RP(i)| \geq 2,\\0, &amp; \text{otherwise}.\end{cases}\end{equation*}where \(d_{ij}\) denotes the shortest-path distance between nodes \(i\) and \(j\).For unweighted and strongly connected networks, the Nieminen's closeness centrality can be expressed as\[c_{Nieminen}(i) = N^2 - \sum_{j=1}^N d_{ij},\]which is directly related to the sum of shortest-path distances from node \(i\) to all other nodes. In this case, the ranking of nodes by Nieminen's closeness is identical to the ranking obtained from the closeness centrality.
 </p>
 <h3>
  References

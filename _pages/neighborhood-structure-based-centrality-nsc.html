@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   neighborhood structure-based centrality
  </i>
- (NSC) is a hybrid measure that integrates the Lobby index (\(l\)-index) and the \(k\)-shell centrality of a node and its neighbors [2]. For a node \(i \in \mathcal{N}\), the NSC score \(c_{NSC}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{NSC}(i) = \frac{c_{Lobby}(i)}{\langle c_{Lobby} \rangle} + \frac{k_s(i)}{\langle k_s \rangle}
- <br/>
- + \sum_{j \in \mathcal{N}(i)} \left( \frac{c_{Lobby}(j)}{\langle c_{Lobby} \rangle} + \frac{k_s(j)}{\langle k_s \rangle} \right),
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(c_{Lobby}(i)\) is the Lobby index [3] of node \(i\), \(k_s(i)\) is its \(k\)-shell centrality, and \(\langle c_{Lobby} \rangle\) and \(\langle k_s \rangle\) are the mean values of the Lobby index and \(k\)-shell centrality, respectively.
- <br/>
- Nodes with high NSC values are characterized by both strong individual influence (high Lobby index and/or \(k\)-shell index) and connections to other influential nodes, rendering them especially important for spreading processes and the structural integrity of the network.
- <br/>
+ (NSC) is a hybrid measure that integrates the Lobby index (\(l\)-index) and the \(k\)-shell centrality of a node and its neighbors [2]. For a node \(i \in \mathcal{N}\), the NSC score \(c_{NSC}(i)\) is defined as\[c_{NSC}(i) = \frac{c_{Lobby}(i)}{\langle c_{Lobby} \rangle} + \frac{k_s(i)}{\langle k_s \rangle} + \sum_{j \in \mathcal{N}(i)} \left( \frac{c_{Lobby}(j)}{\langle c_{Lobby} \rangle} + \frac{k_s(j)}{\langle k_s \rangle} \right),\]where \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\), \(c_{Lobby}(i)\) is the Lobby index [3] of node \(i\), \(k_s(i)\) is its \(k\)-shell centrality, and \(\langle c_{Lobby} \rangle\) and \(\langle k_s \rangle\) are the mean values of the Lobby index and \(k\)-shell centrality, respectively.  Nodes with high NSC values are characterized by both strong individual influence (high Lobby index and/or \(k\)-shell index) and connections to other influential nodes, rendering them especially important for spreading processes and the structural integrity of the network.
 </p>
 <h3>
  References

@@ -16,30 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Markov centrality
  </i>
- , also known as random-walk closeness [2], is based on the concept of mean first passage time (MFPT) in a Markov chain [3]. The MFPT \(m_{ij}\) from node \(i\) to node \(j\) is the expected number of steps required to reach \(j\) for the first time starting from \(i\):
- <br/>
- \begin{equation*}
- <br/>
- m_{ij} = \sum_{n=1}^{\infty} n \cdot f_{ij}^{(n)},
- <br/>
- \end{equation*}
- <br/>
- where \(f_{ij}^{(n)}\) is the probability that the chain first reaches \(j\) in exactly \(n\) steps.
- <br/>
- The Markov centrality of node \(i\) is defined as the inverse of the average MFPT to \(i\) from a set of root nodes \(R\) (e.g., \(R = \mathcal{N} \setminus \{i\}\)):
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Markov}}(i) = \frac{1}{\frac{1}{|R|}\sum_{j \in R} m_{ji}}.
- <br/>
- \end{equation*}
- <br/>
- This measure applies to both directed and undirected graphs. Intuitively, \(m_{ij}\) represents an average distance from \(i\) to \(j\) under random-walk dynamics, so Markov centrality can be interpreted as an averaged random-walk closeness centrality.
- <br/>
+ , also known as random-walk closeness [2], is based on the concept of mean first passage time (MFPT) in a Markov chain [3]. The MFPT \(m_{ij}\) from node \(i\) to node \(j\) is the expected number of steps required to reach \(j\) for the first time starting from \(i\):\begin{equation*}m_{ij} = \sum_{n=1}^{\infty} n \cdot f_{ij}^{(n)},\end{equation*}where \(f_{ij}^{(n)}\) is the probability that the chain first reaches \(j\) in exactly \(n\) steps.The Markov centrality of node \(i\) is defined as the inverse of the average MFPT to \(i\) from a set of root nodes \(R\) (e.g., \(R = \mathcal{N} \setminus \{i\}\)):\begin{equation*}c_{\mathrm{Markov}}(i) = \frac{1}{\frac{1}{|R|}\sum_{j \in R} m_{ji}}.\end{equation*}This measure applies to both directed and undirected graphs. Intuitively, \(m_{ij}\) represents an average distance from \(i\) to \(j\) under random-walk dynamics, so Markov centrality can be interpreted as an averaged random-walk closeness centrality.
 </p>
 <h3>
  References

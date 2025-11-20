@@ -16,59 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Multiple Local Attributes Weighted Centrality
  </i>
- (LWC) is an extension of the MABIE framework [2] that incorporates local structural information to evaluate node importance in complex networks [3]. LWC integrates four local metrics: the degree, two-hop degree, clustering coefficient and two-hop clustering coefficient (the sum of the clustering coefficients of a node's neighbors).
- <br/>
- For a network with \(N\) nodes, LWC constructs an \(N \times 4\) decision matrix
- <br/>
- \[
- <br/>
- R =
- <br/>
- \begin{bmatrix}
- <br/>
- r_{11} &amp; r_{12} &amp; r_{13} &amp; r_{14} \\
- <br/>
- r_{21} &amp; r_{22} &amp; r_{23} &amp; r_{24} \\
- <br/>
- \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
- <br/>
- r_{N1} &amp; r_{N2} &amp; r_{N3} &amp; r_{N4} \\
- <br/>
- \end{bmatrix},
- <br/>
- \]
- <br/>
- where \(r_{ij} = \frac{c_j(i)}{\sum_{k=1}^N c_j(k)}\) and \(c_j(i)\) denotes the \(j\)-th local attribute of node \(i\).
- <br/>
- The information entropy of each attribute is computed as
- <br/>
- \[
- <br/>
- E_j = -\frac{1}{\ln N} \sum_{i=1}^N r_{ij} \ln r_{ij},
- <br/>
- \]
- <br/>
- which quantifies the discriminative power of the \(j\)-th metric. Lower entropy values indicate greater variability among nodes and stronger ability to distinguish influential nodes.
- <br/>
- The LWC centrality of node \(i\) is then defined as a weighted sum of the normalized attributes:
- <br/>
- \[
- <br/>
- c_{\mathrm{LWC}}(i) = \sum_{j=1}^{4} w_j r_{ij}, \quad
- <br/>
- w_j = \frac{1 - E_j}{\sum_{k=1}^{4} (1 - E_k)},
- <br/>
- \]
- <br/>
- where \(w_j\) is the weight of the \(j\)-th attribute, computed from its entropy.
- <br/>
- Nodes with high LWC values are those that simultaneously exhibit strong local connectivity and high structural influence in their immediate and extended neighborhoods, making them critical for spreading processes or network cohesion.
- <br/>
+ (LWC) is an extension of the MABIE framework [2] that incorporates local structural information to evaluate node importance in complex networks [3]. LWC integrates four local metrics: the degree, two-hop degree, clustering coefficient and two-hop clustering coefficient (the sum of the clustering coefficients of a node's neighbors).  For a network with \(N\) nodes, LWC constructs an \(N \times 4\) decision matrix\[R = \begin{bmatrix} r_{11} &amp; r_{12} &amp; r_{13} &amp; r_{14} \\r_{21} &amp; r_{22} &amp; r_{23} &amp; r_{24} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ r_{N1} &amp; r_{N2} &amp; r_{N3} &amp; r_{N4} \\ \end{bmatrix},\]where \(r_{ij} = \frac{c_j(i)}{\sum_{k=1}^N c_j(k)}\) and \(c_j(i)\) denotes the \(j\)-th local attribute of node \(i\).  The information entropy of each attribute is computed as\[E_j = -\frac{1}{\ln N} \sum_{i=1}^N r_{ij} \ln r_{ij},\]which quantifies the discriminative power of the \(j\)-th metric. Lower entropy values indicate greater variability among nodes and stronger ability to distinguish influential nodes.  The LWC centrality of node \(i\) is then defined as a weighted sum of the normalized attributes:\[c_{\mathrm{LWC}}(i) = \sum_{j=1}^{4} w_j r_{ij}, \quad w_j = \frac{1 - E_j}{\sum_{k=1}^{4} (1 - E_k)},\]where \(w_j\) is the weight of the \(j\)-th attribute, computed from its entropy.  Nodes with high LWC values are those that simultaneously exhibit strong local connectivity and high structural influence in their immediate and extended neighborhoods, making them critical for spreading processes or network cohesion.
 </p>
 <h3>
  References

@@ -16,59 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   multi-local dimension (MLD) centrality
  </i>
- is a variant of the local dimension measure for identifying influential spreaders in complex networks [2]. MLD evaluates the structural information around a node by considering concentric boxes of increasing radius. For a given node \(i\), the box radius \(l\) ranges from 1 to the maximum shortest-path distance from \(i\).
- <br/>
- The proportion of nodes within a box of radius \(l\) is
- <br/>
- \begin{equation*}
- <br/>
- μ_i(l) = \frac{N_i(l)}{N},
- <br/>
- \end{equation*}
- <br/>
- where \(N_i(l)\) is the number of nodes covered by the box, and \(N\) is the total number of nodes in the network. Based on \(μ_i(l)\), the generalized partition function \(Z_i(q,l)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- Z_i(q,l) =
- <br/>
- \begin{cases}
- <br/>
- μ_i(l)^q, &amp; q \notin \{0,1\},\\[1mm]
- <br/>
- 1/μ_i(l), &amp; q = 0,\\[1mm]
- <br/>
- μ_i(l)\, \log_2 μ_i(l), &amp; q = 1,
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- where \(q \in \mathbb{R}\) is a tunable parameter controlling the emphasis on different structural scales.
- <br/>
- The multi-local dimension \(c_{\textsc{MLD}}(i,q)\) of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\textsc{MLD}}(i,q) =
- <br/>
- \begin{cases}
- <br/>
- \displaystyle \lim_{l \to 0} \frac{\log_2 Z_i(q,l)}{(q-1)\, \log_2 l}, &amp; q \neq 1,\\[1mm]
- <br/>
- \displaystyle \lim_{l \to 0} \frac{Z_i(q,l)}{\log_2 l}, &amp; q = 1.
- <br/>
- \end{cases}
- <br/>
- \end{equation*}
- <br/>
- In practice, \(c_{\textsc{MLD}}(i,q)\) is estimated numerically as the slope of a linear regression: if \(q \neq 1\), the regression is of \(\frac{\log_2 Z_i(q,l)}{q-1}\) versus \(\log_2 l\); if \(q = 1\), it is of \(Z_i(q,l)\) versus \(\log_2 l\). Wen et al. [2] show that \textsc{MLD} reduces to the local information dimensionality (LID) [3] when \(q=1\), and to the local dimension measure [4] when \(q=0\).
- <br/>
+ is a variant of the local dimension measure for identifying influential spreaders in complex networks [2]. MLD evaluates the structural information around a node by considering concentric boxes of increasing radius. For a given node \(i\), the box radius \(l\) ranges from 1 to the maximum shortest-path distance from \(i\).The proportion of nodes within a box of radius \(l\) is\begin{equation*}μ_i(l) = \frac{N_i(l)}{N},\end{equation*}where \(N_i(l)\) is the number of nodes covered by the box, and \(N\) is the total number of nodes in the network. Based on \(μ_i(l)\), the generalized partition function \(Z_i(q,l)\) is defined as\begin{equation*}Z_i(q,l) = \begin{cases}μ_i(l)^q, &amp; q \notin \{0,1\},\\[1mm]1/μ_i(l), &amp; q = 0,\\[1mm]μ_i(l)\, \log_2 μ_i(l), &amp; q = 1,\end{cases}\end{equation*}where \(q \in \mathbb{R}\) is a tunable parameter controlling the emphasis on different structural scales.The multi-local dimension \(c_{\textsc{MLD}}(i,q)\) of node \(i\) is then defined as\begin{equation*}c_{\textsc{MLD}}(i,q) = \begin{cases}\displaystyle \lim_{l \to 0} \frac{\log_2 Z_i(q,l)}{(q-1)\, \log_2 l}, &amp; q \neq 1,\\[1mm]\displaystyle \lim_{l \to 0} \frac{Z_i(q,l)}{\log_2 l}, &amp; q = 1.\end{cases}\end{equation*}In practice, \(c_{\textsc{MLD}}(i,q)\) is estimated numerically as the slope of a linear regression: if \(q \neq 1\), the regression is of \(\frac{\log_2 Z_i(q,l)}{q-1}\) versus \(\log_2 l\); if \(q = 1\), it is of \(Z_i(q,l)\) versus \(\log_2 l\). Wen
+ <i>
+  et al.
+ </i>
+ [2] show that \textsc{MLD} reduces to the local information dimensionality (LID) [3] when \(q=1\), and to the local dimension measure [4] when \(q=0\).
 </p>
 <h3>
  References

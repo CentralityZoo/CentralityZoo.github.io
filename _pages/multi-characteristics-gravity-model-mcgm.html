@@ -16,75 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   multi-characteristics gravity model
  </i>
- (MCGM) is a variant of the local gravity model designed to identify influential spreaders in complex networks. In this model, a node’s mass is determined by a combination of three structural features: degree, \(k\)-shell index and eigenvector centrality [2].
- <br/>
- Let \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes whose shortest-path distance from \(i\) is less than or equal to \(l\). The centrality \(c_{\text{MCGM}}(i)\) of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\text{MCGM}}(i) =
- <br/>
- \sum_{j \in \mathcal{N}^{(\leq l)}(i)}
- <br/>
- \frac{
- <br/>
- \left(
- <br/>
- \frac{d_i}{d_{\max}}
- <br/>
- + \frac{α\, k_s(i)}{ks_{\max}}
- <br/>
- + \frac{ev(i)}{ev_{\max}}
- <br/>
- \right)
- <br/>
- \left(
- <br/>
- \frac{d_j}{d_{\max}}
- <br/>
- + \frac{α\, k_s(j)}{ks_{\max}}
- <br/>
- + \frac{ev(j)}{ev_{\max}}
- <br/>
- \right)
- <br/>
- }{d_{ij}^2},
- <br/>
- \end{equation*}
- <br/>
- where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\); \(d_i\), \(k_s(i)\), and \(ev(i)\) denote the degree, \(k\)-shell index and eigenvector centrality of node \(i\), respectively. The terms \(d_{\max}\), \(ks_{\max}\) and \(ev_{\max}\) represent the corresponding maximum values across all nodes in the network.
- <br/>
- The coefficient \(α\) adjusts the relative influence of the \(k\)-shell index and is computed as
- <br/>
- \begin{equation*}
- <br/>
- α =
- <br/>
- \frac{
- <br/>
- \max \left(
- <br/>
- \frac{d_{\text{mid}}}{d_{\max}},
- <br/>
- \frac{ev_{\text{mid}}}{ev_{\max}}
- <br/>
- \right)
- <br/>
- }{
- <br/>
- \frac{ks_{\text{mid}}}{ks_{\max}}
- <br/>
- },
- <br/>
- \end{equation*}
- <br/>
- where \(d_{\text{mid}}\), \(ks_{\text{mid}}\), and \(ev_{\text{mid}}\) denote the median values of the degree, \(k\)-shell index and eigenvector centrality, respectively.  Li and Huang [2] consider \(l = 2\) as the truncated radius.
- <br/>
+ (MCGM) is a variant of the local gravity model designed to identify influential spreaders in complex networks. In this model, a node’s mass is determined by a combination of three structural features: degree, \(k\)-shell index and eigenvector centrality [2]. Let \(\mathcal{N}^{(\leq l)}(i)\) denote the set of nodes whose shortest-path distance from \(i\) is less than or equal to \(l\). The centrality \(c_{\text{MCGM}}(i)\) of node \(i\) is then defined as\begin{equation*}c_{\text{MCGM}}(i) = \sum_{j \in \mathcal{N}^{(\leq l)}(i)} \frac{\left( \frac{d_i}{d_{\max}} + \frac{α\, k_s(i)}{ks_{\max}} + \frac{ev(i)}{ev_{\max}} \right)\left( \frac{d_j}{d_{\max}} + \frac{α\, k_s(j)}{ks_{\max}} + \frac{ev(j)}{ev_{\max}} \right)}{d_{ij}^2},\end{equation*}where \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\); \(d_i\), \(k_s(i)\), and \(ev(i)\) denote the degree, \(k\)-shell index and eigenvector centrality of node \(i\), respectively. The terms \(d_{\max}\), \(ks_{\max}\) and \(ev_{\max}\) represent the corresponding maximum values across all nodes in the network.The coefficient \(α\) adjusts the relative influence of the \(k\)-shell index and is computed as\begin{equation*}α = \frac{\max \left( \frac{d_{\text{mid}}}{d_{\max}}, \frac{ev_{\text{mid}}}{ev_{\max}} \right)}{\frac{ks_{\text{mid}}}{ks_{\max}}},\end{equation*}where \(d_{\text{mid}}\), \(ks_{\text{mid}}\), and \(ev_{\text{mid}}\) denote the median values of the degree, \(k\)-shell index and eigenvector centrality, respectively.  Li and Huang [2] consider \(l = 2\) as the truncated radius.
 </p>
 <h3>
  References

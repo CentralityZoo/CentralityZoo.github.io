@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   maximal clique centrality
@@ -25,22 +24,7 @@ search: true
  <i>
   maximal clique
  </i>
- is a fully connected subgraph that is not contained in any larger fully connected subgraph. Let \(S_i\) denote the set of maximal cliques containing node \(i\). The MCC of node \(i\) is then defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{MCC}}(i) = \sum_{C \in S_i} (|C|-1)!,
- <br/>
- \end{equation*}
- <br/>
- where \(|C|\) is the size of clique \(C\).  Under this definition, the MCC of an isolated node is \(1\). For a node \(i\) whose neighbors are all disconnected (i.e., there is no edge between any two neighbors of node \(i\)), the MCC reduces to the degree of node \(i\):
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{MCC}}(i) = \sum_{j=1}^{N} a_{ij} = d_i.
- <br/>
- \end{equation*}
- <br/>
+ is a fully connected subgraph that is not contained in any larger fully connected subgraph. Let \(S_i\) denote the set of maximal cliques containing node \(i\). The MCC of node \(i\) is then defined as\begin{equation*}c_{\mathrm{MCC}}(i) = \sum_{C \in S_i} (|C|-1)!,\end{equation*}where \(|C|\) is the size of clique \(C\).  Under this definition, the MCC of an isolated node is \(1\). For a node \(i\) whose neighbors are all disconnected (i.e., there is no edge between any two neighbors of node \(i\)), the MCC reduces to the degree of node \(i\):\begin{equation*}c_{\mathrm{MCC}}(i) = \sum_{j=1}^{N} a_{ij} = d_i.\end{equation*}
 </p>
 <h3>
  References

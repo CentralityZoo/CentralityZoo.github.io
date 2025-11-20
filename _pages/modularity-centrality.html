@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Modularity centrality
  </i>
- is a spectral measure of node importance that quantifies a node’s contribution to the modular (community) structure of a network [2]. It is based on the modularity matrix \(M\), whose elements are defined as
- <br/>
- \[
- <br/>
- M_{ij} = A_{ij} - \frac{d_i d_j}{2L},
- <br/>
- \]
- <br/>
- where \(A_{ij}\) is the adjacency matrix, \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), respectively, and \(L\) is the total number of edges in the network.
- <br/>
- The centrality of a node is determined by the corresponding component in the leading eigenvector of \(M\), i.e., the eigenvector associated with the eigenvalue of largest magnitude. Nodes with larger components in this eigenvector play a stronger role in reinforcing the network’s modular structure, indicating higher importance within their communities. Hence, modularity centrality provides a measure of how central or influential a node is in maintaining the community organization of the network.
- <br/>
+ is a spectral measure of node importance that quantifies a node’s contribution to the modular (community) structure of a network [2]. It is based on the modularity matrix \(M\), whose elements are defined as\[M_{ij} = A_{ij} - \frac{d_i d_j}{2L},\]where \(A_{ij}\) is the adjacency matrix, \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), respectively, and \(L\) is the total number of edges in the network.The centrality of a node is determined by the corresponding component in the leading eigenvector of \(M\), i.e., the eigenvector associated with the eigenvalue of largest magnitude. Nodes with larger components in this eigenvector play a stronger role in reinforcing the network’s modular structure, indicating higher importance within their communities. Hence, modularity centrality provides a measure of how central or influential a node is in maintaining the community organization of the network.
 </p>
 <h3>
  References

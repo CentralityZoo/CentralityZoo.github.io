@@ -16,33 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   node importance contribution correlation matrix
  </i>
- (NICCM) method extends node centrality analysis by considering that a node contributes unevenly to the importance of both adjacent and non-adjacent nodes within a limited radius [2]. This measure incorporates the influence of a node on others based on their shortest-path distance and the relative change in their centrality upon node removal.
- <br/>
- The NICCM centrality of node \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{NICCM}}(i) = c_{h}(i) \cdot \left( \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{c_{h}(j)\,δ_{ij}}{d_{ij}} \right),
- <br/>
- \]
- <br/>
- where \(c_{h}(i)\) is the harmonic centrality of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \( \mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within radius \(r\) from node \(i\). The contribution probability \(δ_{ij}\) quantifies the extent to which node \(i\) affects node \(j\) and is given by
- <br/>
- \[
- <br/>
- δ_{ij} = \frac{\Delta I_j}{\sum_{k \in  \mathcal{N}^{(\leq r)}(i)} \Delta I_k},
- <br/>
- \]
- <br/>
- where \(\Delta I_j\) represents the change in the harmonic centrality of node \(j\) after the removal of node \(i\) from the network \(G\). Following Hu et al. [2], the radius parameter is typically set to \(r = 2\).
- <br/>
- Nodes with high NICCM values exert strong influence on the importance of both nearby and moderately distant nodes, reflecting their broader structural impact on network connectivity.
- <br/>
+ (NICCM) method extends node centrality analysis by considering that a node contributes unevenly to the importance of both adjacent and non-adjacent nodes within a limited radius [2]. This measure incorporates the influence of a node on others based on their shortest-path distance and the relative change in their centrality upon node removal.The NICCM centrality of node \(i\) is defined as\[c_{\mathrm{NICCM}}(i) = c_{h}(i) \cdot \left( \sum_{j \in \mathcal{N}^{(\leq r)}(i)} \frac{c_{h}(j)\,δ_{ij}}{d_{ij}} \right),\]where \(c_{h}(i)\) is the harmonic centrality of node \(i\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\), and \( \mathcal{N}^{(\leq r)}(i)\) denotes the set of nodes within radius \(r\) from node \(i\). The contribution probability \(δ_{ij}\) quantifies the extent to which node \(i\) affects node \(j\) and is given by\[δ_{ij} = \frac{\Delta I_j}{\sum_{k \in  \mathcal{N}^{(\leq r)}(i)} \Delta I_k},\]where \(\Delta I_j\) represents the change in the harmonic centrality of node \(j\) after the removal of node \(i\) from the network \(G\). Following Hu
+ <i>
+  et al.
+ </i>
+ [2], the radius parameter is typically set to \(r = 2\).Nodes with high NICCM values exert strong influence on the importance of both nearby and moderately distant nodes, reflecting their broader structural impact on network connectivity.
 </p>
 <h3>
  References

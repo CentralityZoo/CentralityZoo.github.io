@@ -16,20 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Pairwise disconnectivity centrality
  </i>
- quantifies the topological importance of a node by comparing the number of ordered node pairs that are reachable before and after its removal [2]. A node is more central if its removal disconnects a larger fraction of node pairs. Formally, the centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{pd}}(i) = \frac{n_G - n_{G_i}}{n_G},
- <br/>
- \end{equation*}
- <br/>
- where \(n_G\) is the total number of ordered pairs of nodes connected by at least one directed path in the graph \(G\), and \(G_i\) denotes the graph obtained by removing node \(i\).
- <br/>
+ quantifies the topological importance of a node by comparing the number of ordered node pairs that are reachable before and after its removal [2]. A node is more central if its removal disconnects a larger fraction of node pairs. Formally, the centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{pd}}(i) = \frac{n_G - n_{G_i}}{n_G},\end{equation*}where \(n_G\) is the total number of ordered pairs of nodes connected by at least one directed path in the graph \(G\), and \(G_i\) denotes the graph obtained by removing node \(i\).
 </p>
 <h3>
  References

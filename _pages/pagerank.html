@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   PageRank
  </i>
- algorithm evaluates the relative importance of nodes based on the concept of a random walk with restart [2, 3]. According to PageRank, the importance \(c_{PR}(i)\) of node \(i\) depends on the probability that it be visited by a random walker, that is,
- <br/>
- \begin{equation*}
- <br/>
- c_{PR}(i) = α \sum_{j=1}^{N} a_{ji} \frac{c_{PR}(j)}{\sum_{k=1}^{N} a_{jk}} + \frac{1 - α}{N},
- <br/>
- \end{equation*}
- <br/>
- where \(a_{ji}\) denotes the element of the adjacency matrix \(A\) indicating a directed link from node \(j\) to node \(i\).
- <br/>
- The parameter \(α \in [0,1]\) is the damping factor representing the probability that the random walker follows an outgoing link from the current node rather than teleporting to a randomly chosen node. In practice, \(α\) is typically set to \(0.85\), balancing exploration through the network structure and random teleportation to ensure ergodicity and convergence of the ranking vector. When \(α = 1\), the walker never teleports, and the process reduces to a pure random walk on the network, with the PageRank vector given by the principal eigenvector of the column-normalized adjacency matrix \(P\), where \(P_{ij} = a_{ji} / \sum_{k=1}^{N} a_{jk}\). The PageRank score \(c_{PR}(i)\) of node \(i\) represents the stationary probability that a random walker occupies node \(i\) in the long-term limit.
- <br/>
+ algorithm evaluates the relative importance of nodes based on the concept of a random walk with restart [2, 3]. According to PageRank, the importance \(c_{PR}(i)\) of node \(i\) depends on the probability that it be visited by a random walker, that is,\begin{equation*}c_{PR}(i) = α \sum_{j=1}^{N} a_{ji} \frac{c_{PR}(j)}{\sum_{k=1}^{N} a_{jk}} + \frac{1 - α}{N},\end{equation*}where \(a_{ji}\) denotes the element of the adjacency matrix \(A\) indicating a directed link from node \(j\) to node \(i\). The parameter \(α \in [0,1]\) is the damping factor representing the probability that the random walker follows an outgoing link from the current node rather than teleporting to a randomly chosen node. In practice, \(α\) is typically set to \(0.85\), balancing exploration through the network structure and random teleportation to ensure ergodicity and convergence of the ranking vector. When \(α = 1\), the walker never teleports, and the process reduces to a pure random walk on the network, with the PageRank vector given by the principal eigenvector of the column-normalized adjacency matrix \(P\), where \(P_{ij} = a_{ji} / \sum_{k=1}^{N} a_{jk}\). The PageRank score \(c_\mathrm{PR}(i)\) of node \(i\) represents the stationary probability that a random walker occupies node \(i\) in the long-term limit, and is given by the principal eigenvector of the stochastic matrix\[P_\mathrm{PR} = α D^{-1} A + (1-α) \frac{1}{N} \mathbf{1}_N \mathbf{1}_N^\top,\]where \(D\) is the \(N \times N\) diagonal out-degree matrix, \(\mathbf{1}_N\) denotes the \(N \times 1\) vector of ones.
 </p>
 <h3>
  References

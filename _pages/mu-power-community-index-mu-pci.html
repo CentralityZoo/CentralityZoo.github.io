@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   \(μ\)-Power Community Index
  </i>
- (\(μ\)-PCI) was introduced by Katsaros et al. [2, 3] to identify nodes situated in densely connected regions of a network, which are therefore likely to act as influential spreaders. This metric combines the concepts of betweenness centrality, which captures nodes that lie on numerous communication paths between pairs of nodes, and the transitive network density reflected by the coreness measure.
- <br/>
- Let \(\mathcal{N}^{(μ)}(i)\) denote the \(μ\)-hop neighborhood of node \(i\). The centrality of node \(i\), denoted by \(c_{μ\text{-}PCI}(i)\), is defined as the largest integer \(k\) such that there exist at least \(μ k\) nodes in \(\mathcal{N}^{(μ)}(i)\) whose degree is greater than or equal to \(k\), while all remaining nodes in \(\mathcal{N}^{(μ)}(i)\) have a degree less than or equal to \(k\):
- <br/>
- \begin{equation*}
- <br/>
- c_{μ\text{-}PCI}(i) = \max \left\{ k : \left| \{ j \in \mathcal{N}^{(μ)}(i) \, : \, d_j \geq k \} \right| \geq μ k \right\},
- <br/>
- \end{equation*}
- <br/>
- where \(d_i\) is the degree of node \(i\). This definition highlights two key components: the parameter \(μ\), which controls the extent of the local neighborhood considered, and the degree threshold \(k\), which represents the structural strength of node \(i\)’s surroundings. A higher \(c_{μ\text{-}PCI}(i)\) value indicates that node \(i\) is embedded within a densely interconnected region where many neighboring nodes also possess high degrees, suggesting a strong potential for local influence.
- <br/>
+ (\(μ\)-PCI) was introduced by Katsaros
+ <i>
+  et al.
+ </i>
+ [2, 3] to identify nodes situated in densely connected regions of a network, which are therefore likely to act as influential spreaders. This metric combines the concepts of betweenness centrality, which captures nodes that lie on numerous communication paths between pairs of nodes, and the transitive network density reflected by the coreness measure.Let \(\mathcal{N}^{(μ)}(i)\) denote the \(μ\)-hop neighborhood of node \(i\). The centrality of node \(i\), denoted by \(c_{μ\text{-}PCI}(i)\), is defined as the largest integer \(k\) such that there exist at least \(μ k\) nodes in \(\mathcal{N}^{(μ)}(i)\) whose degree is greater than or equal to \(k\), while all remaining nodes in \(\mathcal{N}^{(μ)}(i)\) have a degree less than or equal to \(k\):\begin{equation*}c_{μ\text{-}PCI}(i) = \max \left\{ k : \left| \{ j \in \mathcal{N}^{(μ)}(i) \, : \, d_j \geq k \} \right| \geq μ k \right\},\end{equation*}where \(d_i\) is the degree of node \(i\). This definition highlights two key components: the parameter \(μ\), which controls the extent of the local neighborhood considered, and the degree threshold \(k\), which represents the structural strength of node \(i\)’s surroundings. A higher \(c_{μ\text{-}PCI}(i)\) value indicates that node \(i\) is embedded within a densely interconnected region where many neighboring nodes also possess high degrees, suggesting a strong potential for local influence.
 </p>
 <h3>
  References

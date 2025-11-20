@@ -16,49 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   normalized wide network ranking
  </i>
- (NWRank) is a variation of WRank that incorporates the mutual reinforcement feature of HITS and the weight normalization feature of PageRank [2]. Unlike WRank, which distributes node scores evenly among incident links, NWRank assigns link weights proportional to the neighboring nodes’ degree and the betweenness centrality of the link.
- <br/>
- Let \(Z\) be the \(L \times N\) link-node matrix with elements
- <br/>
- \[
- <br/>
- z_{li} =
- <br/>
- \begin{cases}
- <br/>
- α \frac{d_l}{\sum_{j \in \mathcal{N}(i)}{d_{(i,j)}}} + (1-α) \dfrac{bc_l}{\sum_{j \in \mathcal{N}(i)} bc_{(i,j)}}, &amp; i \in l, \\
- <br/>
- 0, &amp; \text{otherwise},
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) the set of neighbors of node \(i\), \(d_l\) denotes the degree of the node at the other end of link \(l\), \(bc_l\) is the edge betweenness centrality of link \(l\), and \(α = 0.5\).
- <br/>
- Let \(W\) be the \(N \times L\) binary node-link incidence matrix with elements
- <br/>
- \[
- <br/>
- w_{il} =
- <br/>
- \begin{cases}
- <br/>
- 1, &amp; \text{if node } i \text{ is incident to link } l, \\[0.8em]
- <br/>
- 0, &amp; \text{otherwise}.
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- The principal eigenvector of \(WZ\) defines the NWRank centrality of the nodes. The NWRank algorithm preserves the mutual reinforcement between nodes and links, analogous to HITS, while normalizing the contributions of each link in a manner similar to PageRank. Links that connect highly central nodes or have high betweenness receive greater weight in determining node centrality.
- <br/>
+ (NWRank) is a variation of WRank that incorporates the mutual reinforcement feature of HITS and the weight normalization feature of PageRank [2]. Unlike WRank, which distributes node scores evenly among incident links, NWRank assigns link weights proportional to the neighboring nodes’ degree and the betweenness centrality of the link. Let \(Z\) be the \(L \times N\) link-node matrix with elements\[z_{li} =\begin{cases}α \frac{d_l}{\sum_{j \in \mathcal{N}(i)}{d_{(i,j)}}} + (1-α) \dfrac{bc_l}{\sum_{j \in \mathcal{N}(i)} bc_{(i,j)}}, &amp; i \in l, \\0, &amp; \text{otherwise},\end{cases}\]where \(\mathcal{N}(i)\) the set of neighbors of node \(i\), \(d_l\) denotes the degree of the node at the other end of link \(l\), \(bc_l\) is the edge betweenness centrality of link \(l\), and \(α = 0.5\). Let \(W\) be the \(N \times L\) binary node-link incidence matrix with elements\[w_{il} =\begin{cases}1, &amp; \text{if node } i \text{ is incident to link } l, \\[0.8em]0, &amp; \text{otherwise}.\end{cases}\]The principal eigenvector of \(WZ\) defines the NWRank centrality of the nodes. The NWRank algorithm preserves the mutual reinforcement between nodes and links, analogous to HITS, while normalizing the contributions of each link in a manner similar to PageRank. Links that connect highly central nodes or have high betweenness receive greater weight in determining node centrality.
 </p>
 <h3>
  References

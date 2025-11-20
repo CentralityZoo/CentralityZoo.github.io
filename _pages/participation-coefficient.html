@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   participation coefficient
  </i>
- is a community-based measure that quantifies how evenly a node's links are distributed among different communities (modules) [2]. Consider a graph \(G\) with a community structure consisting of \(K\) communities \(C_1, \dots, C_K\). For example, [3] applied the participation coefficient to networks whose communities were detected using the Louvain algorithm. The participation coefficient quantifies how a node's links are distributed within its own module compared to other modules:
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{Part.coeff}}(i) = 1 - \sum_{s=1}^{K} \left( \frac{d_{is}}{d_i} \right)^2
- <br/>
- = 1 - \sum_{s=1}^{K} \left( \frac{\sum_{j \in C_s \setminus \{i\}} a_{ij}}{d_i} \right)^2,
- <br/>
- \end{equation*}
- <br/>
- where \(d_{is}\) is the number of links from node \(i\) to nodes in module \(C_s\), and \(d_i\) is the degree of node \(i\).
- <br/>
- The participation coefficient \(c_{\mathrm{Part.coeff}}(i)\) approaches 1 when a node's links are uniformly distributed across all modules, and is close to 0 when all links are confined within its own module. While the participation coefficient was originally intended to describe the roles of nodes within community-structured networks, it has also proven useful for identifying highly connected hub nodes in real-world networks [4].
- <br/>
+ is a community-based measure that quantifies how evenly a node's links are distributed among different communities (modules) [2]. Consider a graph \(G\) with a community structure consisting of \(K\) communities \(C_1, \dots, C_K\). For example, [3] applied the participation coefficient to networks whose communities were detected using the Louvain algorithm. The participation coefficient quantifies how a node's links are distributed within its own module compared to other modules:\begin{equation*}c_{\mathrm{Part.coeff}}(i) = 1 - \sum_{s=1}^{K} \left( \frac{d_{is}}{d_i} \right)^2 = 1 - \sum_{s=1}^{K} \left( \frac{\sum_{j \in C_s \setminus \{i\}} a_{ij}}{d_i} \right)^2,\end{equation*}where \(d_{is}\) is the number of links from node \(i\) to nodes in module \(C_s\), and \(d_i\) is the degree of node \(i\). The participation coefficient \(c_{\mathrm{Part.coeff}}(i)\) approaches 1 when a node's links are uniformly distributed across all modules, and is close to 0 when all links are confined within its own module. While the participation coefficient was originally intended to describe the roles of nodes within community-structured networks, it has also proven useful for identifying highly connected hub nodes in real-world networks [4].
 </p>
 <h3>
  References

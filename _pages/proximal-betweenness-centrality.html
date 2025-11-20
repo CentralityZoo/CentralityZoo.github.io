@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Proximal betweenness centrality
  </i>
@@ -24,23 +23,15 @@ search: true
  <i>
   penultimate
  </i>
- position along a shortest path [2, 3]. The proximal betweenness centrality of a node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{pr.betw}}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{b_{jk}(i)}{σ_{jk}},
- <br/>
- \end{equation*}
- <br/>
- where \(σ_{jk}\) denotes the total number of shortest paths from node \(j\) to node \(k\), and \(b_{jk}(i)\) is the number of those paths in which node \(i\) occupies the
+ position along a shortest path [2, 3]. The proximal betweenness centrality of a node \(i\) is defined as\begin{equation*}c_{\mathrm{pr.betw}}(i) = \sum_{j=1}^{N} \sum_{k=1}^{N} \frac{b_{jk}(i)}{σ_{jk}},\end{equation*}where \(σ_{jk}\) denotes the total number of shortest paths from node \(j\) to node \(k\), and \(b_{jk}(i)\) is the number of those paths in which node \(i\) occupies the
  <i>
   penultimate
  </i>
  position. In this context, a node \(i\) is considered penultimate if it lies either directly before the destination node \(k\) (proximal to the target) or directly after the source node \(j\) (proximal to the source) on a shortest path. Following Borgatti
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2], two variants of proximal betweenness centrality can be distinguished:
+ } [2], two variants of proximal betweenness centrality can be distinguished:
  <ul>
   <li>
    <i>
@@ -63,7 +54,6 @@ search: true
    the source node \(j\) on shortest paths terminating at node \(k\).
   </li>
  </ul>
- <br/>
 </p>
 <h3>
  References

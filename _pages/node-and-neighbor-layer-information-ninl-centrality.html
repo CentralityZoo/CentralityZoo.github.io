@@ -16,33 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   node and neighbor layer information
  </i>
- (NINL) centrality identifies influential nodes by combining degree information of a node and its neighbors up to \(r\) hops [2].
- <br/>
- First, a radius \(r\) is defined based on the average path length of the network, capturing the influence of the surrounding environment. The 0-order \textsc{NINL} score of node \(i\) is defined as
- <br/>
- \[
- <br/>
- \textsc{NINL}_0(i) = d_i + \sum_{j \in \mathcal{N}^{(\leq r)}(i)} d_j,
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\) and \(\mathcal{N}^{(\leq r)}(i)\) denotes all neighbors of \(i\) within \(r\) hops.
- <br/>
- To incorporate higher-order neighbor influence, the \(p\)-order \textsc{NINL} score is recursively defined as
- <br/>
- \[
- <br/>
- \textsc{NINL}_p(i) = \sum_{j \in \mathcal{N}(i)} \textsc{NINL}_{p-1}(j).
- <br/>
- \]
- <br/>
- Zhu and Wang [2] experimentally set \(p = 3\). This iterative aggregation captures both the local and slightly broader network environment around each node, providing a more comprehensive measure of influence. We note that as the order \(p\) increases, the \textsc{NINL} scores converge to the eigenvector centrality, since higher-order iterations progressively incorporate the influence of more distant neighbors throughout the network.
- <br/>
+ (NINL) centrality identifies influential nodes by combining degree information of a node and its neighbors up to \(r\) hops [2]. First, a radius \(r\) is defined based on the average path length of the network, capturing the influence of the surrounding environment. The 0-order \textsc{NINL} score of node \(i\) is defined as\[\textsc{NINL}_0(i) = d_i + \sum_{j \in \mathcal{N}^{(\leq r)}(i)} d_j,\]where \(d_i\) is the degree of node \(i\) and \(\mathcal{N}^{(\leq r)}(i)\) denotes all neighbors of \(i\) within \(r\) hops. To incorporate higher-order neighbor influence, the \(p\)-order \textsc{NINL} score is recursively defined as\[\textsc{NINL}_p(i) = \sum_{j \in \mathcal{N}(i)} \textsc{NINL}_{p-1}(j).\]Zhu and Wang [2] experimentally set \(p = 3\). This iterative aggregation captures both the local and slightly broader network environment around each node, providing a more comprehensive measure of influence. We note that as the order \(p\) increases, the \textsc{NINL} scores converge to the eigenvector centrality, since higher-order iterations progressively incorporate the influence of more distant neighbors throughout the network.
 </p>
 <h3>
  References

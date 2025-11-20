@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   PathRank
  </i>
- is a centrality measure that quantifies a node's importance based on all simple paths terminating at it [2]. Let \(P^{(1)}_{ij}, P^{(2)}_{ij}, \dots, P^{(s_{ij})}_{ij}\) denote the set of simple paths from node \(i\) to node \(j\) of length at most \(K\). Each path contributes to the centrality of node \(j\) with a weight inversely proportional to the square of its length:
- <br/>
- \[
- <br/>
- b_{ij} = \sum_{s=1}^{s_{ij}} \frac{1}{|P^{(s)}_{ij}|^2},
- <br/>
- \]
- <br/>
- where \(|P^{(s)}_{ij}|\) is the length of the \(s\)-th path. This weighting emphasizes shorter paths, reflecting their greater significance in connectivity.  The PathRank centrality of node \(j\) is obtained by summing these contributions over all source nodes:
- <br/>
- \[
- <br/>
- c_{PathRank}(j) = \sum_{i=1}^{N} b_{ij}.
- <br/>
- \]
- <br/>
- Thus, PathRank accumulates the influence of all paths terminating at a node, giving higher weight to shorter paths.  In practice, a maximum path length of \(K = 5\) is typically used [2].
- <br/>
+ is a centrality measure that quantifies a node's importance based on all simple paths terminating at it [2]. Let \(P^{(1)}_{ij}, P^{(2)}_{ij}, \dots, P^{(s_{ij})}_{ij}\) denote the set of simple paths from node \(i\) to node \(j\) of length at most \(K\). Each path contributes to the centrality of node \(j\) with a weight inversely proportional to the square of its length:\[b_{ij} = \sum_{s=1}^{s_{ij}} \frac{1}{|P^{(s)}_{ij}|^2},\]where \(|P^{(s)}_{ij}|\) is the length of the \(s\)-th path. This weighting emphasizes shorter paths, reflecting their greater significance in connectivity.  The PathRank centrality of node \(j\) is obtained by summing these contributions over all source nodes:\[c_{PathRank}(j) = \sum_{i=1}^{N} b_{ij}.\]Thus, PathRank accumulates the influence of all paths terminating at a node, giving higher weight to shorter paths.  In practice, a maximum path length of \(K = 5\) is typically used [2].
 </p>
 <h3>
  References

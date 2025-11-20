@@ -16,16 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Meta-centrality
  </i>
- is a hybrid centrality measure that integrates multiple centrality rankings using the Borda count from social choice theory [2]. Given \(n\) rankings of nodes derived from different centrality measures, the method aims to select the most informative rankings and aggregate them into a single meta-centrality score. For example, Madotto \&amp; Liu [2] consider \(n=8\) measures for weighted networks: degree, strength, closeness, eigenvector, PageRank, \(k\)-shell, weighted \(k\)-shell, and expected force.
- <br/>
- The Borda count aggregation-based meta-centrality proceeds in three steps:
- <br/>
+ is a hybrid centrality measure that integrates multiple centrality rankings using the Borda count from social choice theory [2]. Given \(n\) rankings of nodes derived from different centrality measures, the method aims to select the most informative rankings and aggregate them into a single meta-centrality score. For example, Madotto \&amp; Liu [2] consider \(n=8\) measures for weighted networks: degree, strength, closeness, eigenvector, PageRank, \(k\)-shell, weighted \(k\)-shell, and expected force.The Borda count aggregation-based meta-centrality proceeds in three steps:
  <ol>
-  <br/>
   <li>
    <i>
     Slicing
@@ -41,7 +36,6 @@ search: true
     \end{align*}
     with thresholds \(t_b = 0.8\) and \(t_s = 0.3\).
   </li>
-  <br/>
   <li>
    <i>
     Selection
@@ -51,7 +45,6 @@ search: true
         E(x_i) = \frac{1}{|x_i|}\sum_{j \in x_i} \frac{m_{ij}}{\sum_j m_{ij}} \log \frac{m_{ij}}{\sum_j m_{ij}}.
     \]
   </li>
-  <br/>
   <li>
    <i>
     Aggregation
@@ -62,9 +55,7 @@ search: true
     \]
     where \(τ_j(i)\) is the position of node \(i\) in ranking \(j\).
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

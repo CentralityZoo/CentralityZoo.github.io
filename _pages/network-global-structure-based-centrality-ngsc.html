@@ -16,25 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   network global structure-based centrality
  </i>
- (NGSC) is a hybrid method designed to identify the most effective spreaders in a network by combining the degree and \(k\)-shell index of a node and its neighbors [2]. For a node \(i \in \mathcal{N}\), the NGSC score \(c_{NGSC}(i)\) is defined as
- <br/>
- \begin{align*}
- <br/>
- c_{NGSC}(i)
- <br/>
- &amp;= \sum_{j \in \mathcal{N}(i)} \Bigl[ (w_1 k_s(i) + w_2 d_i) + (w_1 k_s(j) + w_2 d_j) \Bigr] \nonumber \\
- <br/>
- &amp;= d_i \,(w_1 k_s(i) + w_2 d_i) + \sum_{j \in \mathcal{N}(i)} \left( w_1 k_s(j) + w_2 d_j \right),
- <br/>
- \end{align*}
- <br/>
- where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell index of node \(i\), respectively, \(\mathcal{N}(i)\) is the set of neighbors of \(i\), and \(w_1\) and \(w_2\) are tunable parameters weighting the contributions of the \(k\)-shell and degree.  Experimentally, Namtirtha et al. [2] suggest parameter ranges \(w_1 \in [0.2, 0.4], w_2 = 0.9\) or \(w_1 = 0.9, w_2 \in [0.2, 0.4]\), depending on the network’s density and percolation threshold.
- <br/>
+ (NGSC) is a hybrid method designed to identify the most effective spreaders in a network by combining the degree and \(k\)-shell index of a node and its neighbors [2]. For a node \(i \in \mathcal{N}\), the NGSC score \(c_{NGSC}(i)\) is defined as\begin{align*}c_{NGSC}(i) &amp;= \sum_{j \in \mathcal{N}(i)} \Bigl[ (w_1 k_s(i) + w_2 d_i) + (w_1 k_s(j) + w_2 d_j) \Bigr] \nonumber \\&amp;= d_i \,(w_1 k_s(i) + w_2 d_i) + \sum_{j \in \mathcal{N}(i)} \left( w_1 k_s(j) + w_2 d_j \right),\end{align*}where \(d_i\) and \(k_s(i)\) denote the degree and \(k\)-shell index of node \(i\), respectively, \(\mathcal{N}(i)\) is the set of neighbors of \(i\), and \(w_1\) and \(w_2\) are tunable parameters weighting the contributions of the \(k\)-shell and degree.  Experimentally, Namtirtha
+ <i>
+  et al.
+ </i>
+ [2] suggest parameter ranges \(w_1 \in [0.2, 0.4], w_2 = 0.9\) or \(w_1 = 0.9, w_2 \in [0.2, 0.4]\), depending on the network’s density and percolation threshold.
 </p>
 <h3>
  References

@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Map equation centrality
  </i>
@@ -24,24 +23,11 @@ search: true
  <i>
   map equation
  </i>
- [2]. It quantifies the importance of a node based on how much it contributes to the overall description length of flow on the network.
- <br/>
- Assume that the network \(G\) has a non-overlapping community structure represented by the partition \(M\). The map equation centrality \(c_{ME}(i)\) of node \(i\) measures the reduction in the average codeword length if node \(i\) is silenced, meaning that when a random walker visits \(i\), no codeword for \(i\) is transmitted. Formally,
- <br/>
- \begin{equation*}
- <br/>
- c_{ME}(i) = L(G, M) - L^{*}_i(G, M),
- <br/>
- \end{equation*}
- <br/>
- where \(L(G, M)\) denotes the optimal description length of flow for the original network under partition \(M\), and \(L^{*}_i(G, M)\) is the optimal description length when node \(i\) is silenced.
- <br/>
- Hence, \(c_{ME}(i)\) represents the
+ [2]. It quantifies the importance of a node based on how much it contributes to the overall description length of flow on the network.  Assume that the network \(G\) has a non-overlapping community structure represented by the partition \(M\). The map equation centrality \(c_{ME}(i)\) of node \(i\) measures the reduction in the average codeword length if node \(i\) is silenced, meaning that when a random walker visits \(i\), no codeword for \(i\) is transmitted. Formally,\begin{equation*}c_{ME}(i) = L(G, M) - L^{*}_i(G, M),\end{equation*}where \(L(G, M)\) denotes the optimal description length of flow for the original network under partition \(M\), and \(L^{*}_i(G, M)\) is the optimal description length when node \(i\) is silenced.  Hence, \(c_{ME}(i)\) represents the
  <i>
   marginal contribution
  </i>
  of node \(i\) to the total information cost of describing flow on the network. Nodes with higher \(c_{ME}(i)\) values are more important for maintaining the network’s information flow structure, while nodes with lower or negative values have less or even disruptive influence on modular information dynamics.
- <br/>
 </p>
 <h3>
  References

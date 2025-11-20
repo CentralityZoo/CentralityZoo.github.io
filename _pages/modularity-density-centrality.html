@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Modularity density centrality
  </i>
- is a variant of modularity centrality based on the spectral optimization of modularity density [2]. Unlike modularity centrality, which relies on the modularity matrix \(M\), modularity density centrality is derived from the kernel matrix \(K\) defined as
- <br/>
- \[
- <br/>
- K = σ I + 2A - D,
- <br/>
- \]
- <br/>
- where \(I\) is the identity matrix, \(D\) is the diagonal degree matrix, and \(σ\) is a real number chosen sufficiently large to make \(K\) positive definite. The centrality of a node is determined by the corresponding component in the leading eigenvector of \(K\), i.e., the eigenvector associated with the eigenvalue of largest magnitude.
- <br/>
- Standard modularity suffers from a resolution limit, which can prevent the detection of smaller communities and may overemphasize node degree rather than the structural role of nodes. Modularity density centrality addresses this limitation by optimizing a spectral relaxation of modularity density using \(K\). The centrality score of a node is given by its component in the dominant eigenvector of \(K\), reflecting how strongly the node contributes to the network's community structure under the modularity density criterion.
- <br/>
+ is a variant of modularity centrality based on the spectral optimization of modularity density [2]. Unlike modularity centrality, which relies on the modularity matrix \(M\), modularity density centrality is derived from the kernel matrix \(K\) defined as\[K = σ I + 2A - D,\]where \(I\) is the identity matrix, \(D\) is the diagonal degree matrix, and \(σ\) is a real number chosen sufficiently large to make \(K\) positive definite. The centrality of a node is determined by the corresponding component in the leading eigenvector of \(K\), i.e., the eigenvector associated with the eigenvalue of largest magnitude.Standard modularity suffers from a resolution limit, which can prevent the detection of smaller communities and may overemphasize node degree rather than the structural role of nodes. Modularity density centrality addresses this limitation by optimizing a spectral relaxation of modularity density using \(K\). The centrality score of a node is given by its component in the dominant eigenvector of \(K\), reflecting how strongly the node contributes to the network's community structure under the modularity density criterion.
 </p>
 <h3>
  References

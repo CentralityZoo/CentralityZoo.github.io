@@ -16,44 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Multi-criteria influence maximization
  </i>
- (MCIM) method is an iterative hybrid method that selects \(k\) influential nodes using the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) [2]. In MCIM, an \(N \times 4\) decision matrix \(R\) is constructed as
- <br/>
- \[
- <br/>
- R = \begin{bmatrix}
- <br/>
- d_1 &amp; IDS_1 &amp; -DO_1 &amp; -IDO_1 \\
- <br/>
- d_2 &amp; IDS_2 &amp; -DO_2 &amp; -IDO_2 \\
- <br/>
- \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
- <br/>
- d_N &amp; IDS_N &amp; -DO_N &amp; -IDO_N \\
- <br/>
- \end{bmatrix},
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\), \(IDS_i\) is the entropy-based ranking measure (ERM) [3], and \(DO_i\) and \(IDO_i\) denote the direct overlap and indirect overlap of node \(i\), respectively:
- <br/>
- \[
- <br/>
- DO_i = \sum_{j \in \mathcal{N}(i)} s_j,
- <br/>
- \quad
- <br/>
- IDO_i = \sum_{j \in \mathcal{N}(i)} s_j \, |\mathcal{N}(i) \cap \mathcal{N}(j)|,
- <br/>
- \]
- <br/>
- with \(s_j = 1\) if node \(j\) is in the seed set \(S\) and \(s_j = 0\) otherwise.
- <br/>
- Initially, the seed set \(S\) contains the nodes with the highest degree, which are then removed from the decision matrix \(R\). At each iteration, the most important node \(u\) is selected from \(R\) using the TOPSIS method. The selected node \(u\) is added to \(S\) and removed from \(R\), and the values of \(DO\) and \(IDO\) for the remaining nodes are updated accordingly. This process continues until either \(|S| = k\), meaning \(k\) nodes have been selected, or \(S = \mathcal{N}\), meaning all nodes have been added to the seed set.
- <br/>
+ (MCIM) method is an iterative hybrid method that selects \(k\) influential nodes using the Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS) [2]. In MCIM, an \(N \times 4\) decision matrix \(R\) is constructed as\[R = \begin{bmatrix}d_1 &amp; IDS_1 &amp; -DO_1 &amp; -IDO_1 \\d_2 &amp; IDS_2 &amp; -DO_2 &amp; -IDO_2 \\\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\d_N &amp; IDS_N &amp; -DO_N &amp; -IDO_N \\\end{bmatrix},\]where \(d_i\) is the degree of node \(i\), \(IDS_i\) is the entropy-based ranking measure (ERM) [3], and \(DO_i\) and \(IDO_i\) denote the direct overlap and indirect overlap of node \(i\), respectively:\[DO_i = \sum_{j \in \mathcal{N}(i)} s_j, \quad IDO_i = \sum_{j \in \mathcal{N}(i)} s_j \, |\mathcal{N}(i) \cap \mathcal{N}(j)|,\]with \(s_j = 1\) if node \(j\) is in the seed set \(S\) and \(s_j = 0\) otherwise.Initially, the seed set \(S\) contains the nodes with the highest degree, which are then removed from the decision matrix \(R\). At each iteration, the most important node \(u\) is selected from \(R\) using the TOPSIS method. The selected node \(u\) is added to \(S\) and removed from \(R\), and the values of \(DO\) and \(IDO\) for the remaining nodes are updated accordingly. This process continues until either \(|S| = k\), meaning \(k\) nodes have been selected, or \(S = \mathcal{N}\), meaning all nodes have been added to the seed set.
 </p>
 <h3>
  References

@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Normalized local centrality
  </i>
- (NLC) considers the topology of the local network around a node as well as the influence feedback of the node’s nearest neighbor nodes [2]. The centrality \(c_{NLC}(i)\) of node \(i\) is given by
- <br/>
- \begin{equation*}
- <br/>
- c_{NLC}(i) = \sum_{j \in \mathcal{N}(i)}{Q(j)|\mathcal{N}^{(\leq 2)}(j)|},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}^{(\leq 2)}(j)\) denotes the set of nearest and next nearest neighbors of node \(j\) and \(Q(j)\) is the influence feedback of nearest neighbor node \(j\) with
- <br/>
- \begin{equation*}
- <br/>
- Q(j) = \sum_{l \in \mathcal{N}^{(\leq 2)}(j)}{\left(\frac{d_l}{\sqrt{\sum_{u \in \mathcal{N}^{(\leq 2)}(j)}{d_u^2}}} + \frac{c_l}{\sqrt{\sum_{u \in \mathcal{N}^{(\leq 2)}(j)}{c_u^2}}} \right)},
- <br/>
- \end{equation*}
- <br/>
- where \(d_l\) and \(c_l\) are the degree and the clustering coefficient of node \(l\). Hence, \(Q(j)\) is the normalized sum of the number of nodes in the local network and the local clustering coefficient that denotes the tightness of node topology connections, which represents the local structural attribute of the network.
- <br/>
+ (NLC) considers the topology of the local network around a node as well as the influence feedback of the node’s nearest neighbor nodes [2]. The centrality \(c_{NLC}(i)\) of node \(i\) is given by\begin{equation*}c_{NLC}(i) = \sum_{j \in \mathcal{N}(i)}{Q(j)|\mathcal{N}^{(\leq 2)}(j)|},\end{equation*}where \(\mathcal{N}^{(\leq 2)}(j)\) denotes the set of nearest and next nearest neighbors of node \(j\) and \(Q(j)\) is the influence feedback of nearest neighbor node \(j\) with  \begin{equation*}Q(j) = \sum_{l \in \mathcal{N}^{(\leq 2)}(j)}{\left(\frac{d_l}{\sqrt{\sum_{u \in \mathcal{N}^{(\leq 2)}(j)}{d_u^2}}} + \frac{c_l}{\sqrt{\sum_{u \in \mathcal{N}^{(\leq 2)}(j)}{c_u^2}}} \right)},\end{equation*}where \(d_l\) and \(c_l\) are the degree and the clustering coefficient of node \(l\). Hence, \(Q(j)\) is the normalized sum of the number of nodes in the local network and the local clustering coefficient that denotes the tightness of node topology connections, which represents the local structural attribute of the network.
 </p>
 <h3>
  References

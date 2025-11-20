@@ -16,23 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   probabilistic-jumping random walk
  </i>
- (\textsc{PJRW}) centrality simulates the propagation of messages in a network by randomly spreading them from nodes to their neighbors [2]. Inspired by the PageRank algorithm, \textsc{PJRW} starts from a randomly selected node and, at each step, either jumps to a random node in the graph \(G\) with probability \(p_c\) or moves to one of the current node's neighbors with probability \(1 - p_c\). The total number of visits to each node \(i\) during this process defines its centrality.
- <br/>
- Unlike PageRank, which relies on the stationary distribution of a random walk, Yu et al. [2] impose a maximum of \(5 \sqrt{N}\) messages and a fixed number of \(50 \sqrt{L}\) steps for each message, where \(N\) is the number of nodes and \(L\) is the number of edges. Consequently, multiple iterations of PJRW may produce different centrality values. The probability of selecting a random node is set as
- <br/>
- \[
- <br/>
- p_c = \frac{\langle d^2 \rangle - \langle d \rangle}{\langle d \rangle} \frac{\log_{10} N}{10 \sqrt{N}},
- <br/>
- \]
- <br/>
- where \(\langle d \rangle\) and \(\langle d^2 \rangle\) are the average degree and the second-order average degree of the network, respectively.
- <br/>
+ (\textsc{PJRW}) centrality simulates the propagation of messages in a network by randomly spreading them from nodes to their neighbors [2]. Inspired by the PageRank algorithm, \textsc{PJRW} starts from a randomly selected node and, at each step, either jumps to a random node in the graph \(G\) with probability \(p_c\) or moves to one of the current node's neighbors with probability \(1 - p_c\). The total number of visits to each node \(i\) during this process defines its centrality.Unlike PageRank, which relies on the stationary distribution of a random walk, Yu
+ <i>
+  et al.
+ </i>
+ [2] impose a maximum of \(5 \sqrt{N}\) messages and a fixed number of \(50 \sqrt{L}\) steps for each message, where \(N\) is the number of nodes and \(L\) is the number of edges. Consequently, multiple iterations of PJRW may produce different centrality values. The probability of selecting a random node is set as\[p_c = \frac{\langle d^2 \rangle - \langle d \rangle}{\langle d \rangle} \frac{\log_{10} N}{10 \sqrt{N}},\]where \(\langle d \rangle\) and \(\langle d^2 \rangle\) are the average degree and the second-order average degree of the network, respectively.\vfill
 </p>
 <h3>
  References

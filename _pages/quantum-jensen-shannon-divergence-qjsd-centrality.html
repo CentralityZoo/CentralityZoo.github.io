@@ -16,40 +16,22 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Quantum Jensen-Shannon Divergence (QJSD) centrality
  </i>
- is a quantum-inspired measure of node importance based on the evolution of quantum walks on a graph [2]. Rossi et al. define two quantum walks where node \(i\) is initially set to be in phase and in antiphase with respect to the other nodes. The QJSD centrality \(c_{QJSD}(i)\) quantifies how the initial phase of node \(i\) influences the evolution of the quantum walks by computing the
+ is a quantum-inspired measure of node importance based on the evolution of quantum walks on a graph [2]. Rossi
+ <i>
+  et al.
+ </i>
+ define two quantum walks where node \(i\) is initially set to be in phase and in antiphase with respect to the other nodes. The QJSD centrality \(c_{QJSD}(i)\) quantifies how the initial phase of node \(i\) influences the evolution of the quantum walks by computing the
  <i>
   Quantum Jensen-Shannon divergence
  </i>
- (QJSD) \(D_{JS}\) between the density operators \(ρ_i\) and \(σ_i\) representing the corresponding quantum states:
- <br/>
- \[
- <br/>
- c_{QJSD}(i) = D_{JS}(ρ_i, σ_i).
- <br/>
- \]
- <br/>
- Rossi et al. [2] show that when the quantum walk is defined using the normalized Laplacian as the generator, the QJSD centrality can be expressed analytically as
- <br/>
- \[
- <br/>
- c_{QJSD}(i) = 1 - \frac{1}{2}\log_2(μ_0+1) + \frac{μ_0}{2} \log_2 \frac{μ_0}{μ_0 + 1},
- <br/>
- \]
- <br/>
- where
- <br/>
- \[
- <br/>
- μ_0 = \left( 1 - \frac{d_i}{L} \right)^2,
- <br/>
- \]
- <br/>
- with \(d_i\) the degree of node \(i\) and \(L\) the total number of links in the graph. This expression quantifies how much the initial phase of node \(i\) affects the evolution of the quantum walk compared to its antiphase counterpart.
- <br/>
+ (QJSD) \(D_{JS}\) between the density operators \(ρ_i\) and \(σ_i\) representing the corresponding quantum states:\[c_{QJSD}(i) = D_{JS}(ρ_i, σ_i).\]Rossi
+ <i>
+  et al.
+ </i>
+ [2] show that when the quantum walk is defined using the normalized Laplacian as the generator, the QJSD centrality can be expressed analytically as\[c_{QJSD}(i) = 1 - \frac{1}{2}\log_2(μ_0+1) + \frac{μ_0}{2} \log_2 \frac{μ_0}{μ_0 + 1},\]where\[μ_0 = \left( 1 - \frac{d_i}{L} \right)^2,\]with \(d_i\) the degree of node \(i\) and \(L\) the total number of links in the graph. This expression quantifies how much the initial phase of node \(i\) affects the evolution of the quantum walk compared to its anti-phase counterpart.
 </p>
 <h3>
  References

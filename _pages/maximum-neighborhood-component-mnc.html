@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   Maximum Neighborhood Component
  </i>
- (MNC) centrality quantifies the importance of a node based on the internal connectivity structure among its immediate neighbors [2].
- <br/>
- For a given node \( i \), let its neighborhood be denoted by \( \mathcal{N}(i) \), that is, the set of nodes directly connected to \( i \).
- <br/>
- The neighborhood \( \mathcal{N}(i) \) induces a subgraph \( G_{\mathcal{N}(i)} \) composed solely of these neighboring nodes and the edges between them. The MNC centrality \( c_{\mathrm{MNC}}(i) \) of node \( i \) is then defined as the size of the largest connected component within this induced subgraph, formally expressed as:
- <br/>
- \[
- <br/>
- c_{\mathrm{MNC}}(i)
- <br/>
- = \max_{\substack{C \subseteq \mathcal{N}(i)\\ C\text{ is connected in } G_{\mathcal{N}(i)} }}|C|.
- <br/>
- \]
- <br/>
- Intuitively, the MNC centrality measures how well the neighbors of a node are connected to each other.
- <br/>
- Nodes whose neighbors form a densely connected group (i.e., a large maximum connected component) receive higher MNC scores, reflecting their structural significance within the network.
- <br/>
+ (MNC) centrality quantifies the importance of a node based on the internal connectivity structure among its immediate neighbors [2]. For a given node \( i \), let its neighborhood be denoted by \( \mathcal{N}(i) \), that is, the set of nodes directly connected to \( i \). The neighborhood \( \mathcal{N}(i) \) induces a subgraph \( G_{\mathcal{N}(i)} \) composed solely of these neighboring nodes and the edges between them. The MNC centrality \( c_{\mathrm{MNC}}(i) \) of node \( i \) is then defined as the size of the largest connected component within this induced subgraph, formally expressed as:\[c_{\mathrm{MNC}}(i)= \max_{\substack{C \subseteq \mathcal{N}(i)\\ C\text{ is connected in } G_{\mathcal{N}(i)} }}|C|.\]Intuitively, the MNC centrality measures how well the neighbors of a node are connected to each other. Nodes whose neighbors form a densely connected group (i.e., a large maximum connected component) receive higher MNC scores, reflecting their structural significance within the network.
 </p>
 <h3>
  References

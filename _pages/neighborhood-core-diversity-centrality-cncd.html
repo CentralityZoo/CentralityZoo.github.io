@@ -16,33 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   neighborhood core diversity centrality
  </i>
- (Cncd) is inspired by the extended neighborhood coreness (ENC) [2] and incorporates information entropy to quantify path diversity [3].
- <br/>
- First, the path diversity \(p(i)\) of node \(i\) is defined as the ratio of its degree \(d_i\) to the sum of the degrees of its neighbors:
- <br/>
- \[
- <br/>
- p(i) = \frac{d_i}{\sum_{j \in \mathcal{N}(i)} d_j}.
- <br/>
- \]
- <br/>
- The \textsc{Cncd} centrality \(c_{\textsc{Cncd}}(i)\) of node \(i\) is then defined as
- <br/>
- \[
- <br/>
- c_{\textsc{Cncd}}(i) = c_{nc+}(i) + δ \, \frac{\sum_{j \in \mathcal{N}(i)} p(j) \ln p(j)}{\ln(1/d_i)} \, \frac{\sum_{j \in \mathcal{N}(i)} c_{nc+}(j)}{c_{nc+}(i)},
- <br/>
- \]
- <br/>
- where \(c_{nc+}(i)\) is the extended neighborhood coreness of node \(i\) as defined in [2] and \(δ\) is a tunable parameter (e.g., \(δ = 2\)).
- <br/>
- The Cncd measure captures both the coreness of a node and the diversity of paths in its local neighborhood, providing a more nuanced evaluation of influence in complex networks.
- <br/>
+ (Cncd) is inspired by the extended neighborhood coreness (ENC) [2] and incorporates information entropy to quantify path diversity [3]. First, the path diversity \(p(i)\) of node \(i\) is defined as the ratio of its degree \(d_i\) to the sum of the degrees of its neighbors:\[p(i) = \frac{d_i}{\sum_{j \in \mathcal{N}(i)} d_j}.\]The \textsc{Cncd} centrality \(c_{\textsc{Cncd}}(i)\) of node \(i\) is then defined as\[c_{\textsc{Cncd}}(i) = c_{nc+}(i) + δ \, \frac{\sum_{j \in \mathcal{N}(i)} p(j) \ln p(j)}{\ln(1/d_i)} \, \frac{\sum_{j \in \mathcal{N}(i)} c_{nc+}(j)}{c_{nc+}(i)},\]where \(c_{nc+}(i)\) is the extended neighborhood coreness of node \(i\) as defined in [2] and \(δ\) is a tunable parameter (e.g., \(δ = 2\)).The Cncd measure captures both the coreness of a node and the diversity of paths in its local neighborhood, providing a more nuanced evaluation of influence in complex networks.
 </p>
 <h3>
  References

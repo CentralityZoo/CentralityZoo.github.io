@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Mutual information
  </i>
- is a local centrality measure that evaluates a node's importance based on the information content associated with its edges [2]. Specifically, the mutual information \(I(i)\) of node \(i\) is defined as the sum of the mutual information between node \(i\) and its neighbors:
- <br/>
- \[
- <br/>
- I(i) = \sum_{j \in \mathcal{N}(i)} I(i,j) = \sum_{j \in \mathcal{N}(i)} (\ln d_i - \ln d_j) = \sum_{j \in \mathcal{N}(i)} \ln \frac{d_i}{d_j},
- <br/>
- \]
- <br/>
- where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), respectively.
- <br/>
- Nodes with higher mutual information are considered more important, as they contain more structural information relative to their neighbors.
- <br/>
+ is a local centrality measure that evaluates a node's importance based on the information content associated with its edges [2]. Specifically, the mutual information \(I(i)\) of node \(i\) is defined as the sum of the mutual information between node \(i\) and its neighbors:\[I(i) = \sum_{j \in \mathcal{N}(i)} I(i,j) = \sum_{j \in \mathcal{N}(i)} (\ln d_i - \ln d_j) = \sum_{j \in \mathcal{N}(i)} \ln \frac{d_i}{d_j},\]where \(d_i\) and \(d_j\) are the degrees of nodes \(i\) and \(j\), respectively. Nodes with higher mutual information are considered more important, as they contain more structural information relative to their neighbors.
 </p>
 <h3>
  References

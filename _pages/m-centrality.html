@@ -16,43 +16,15 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   M-centrality
  </i>
- evaluates the influence of a node by combining local information from its neighborhood with global information about its position in the network [2].
- <br/>
- The centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{M}(i) = μ \, k_s(i) + (1-μ) \, \Delta D(i),
- <br/>
- \end{equation*}
- <br/>
- where \(k_s(i)\) is the \(k\)-shell centrality of node \(i\), representing its global importance, and \(\Delta D(i)\) captures local degree variation:
- <br/>
- \begin{equation*}
- <br/>
- \Delta D(i) = \sum_{j \in \mathcal{N}(i)} d_i \left| \frac{d_j - d_i}{\sum_{l \in \mathcal{N}(i)} d_l} \right|,
- <br/>
- \end{equation*}
- <br/>
- with \(\mathcal{N}(i)\) denoting the set of neighbors of node \(i\), and \(d_j\) the degree of neighbor \(j\).
- <br/>
- The parameter \(μ \in [0,1]\) balances the contributions of the global (\(k\)-shell) and local (degree variation) measures.
- <br/>
- Ibnoulouafi et al. [2] suggest setting \(μ\) based on the relative entropies of the two distributions:
- <br/>
- \begin{equation*}
- <br/>
- μ = \frac{1 - E_1}{2 - E_1 - E_2},
- <br/>
- \end{equation*}
- <br/>
- where \(E_1\) and \(E_2\) are the entropies of the \(k\)-shell centrality and \(\Delta D(i)\) distributions, respectively.
- <br/>
+ evaluates the influence of a node by combining local information from its neighborhood with global information about its position in the network [2]. The centrality of node \(i\) is defined as\begin{equation*}c_{M}(i) = μ \, k_s(i) + (1-μ) \, \Delta D(i),\end{equation*}where \(k_s(i)\) is the \(k\)-shell centrality of node \(i\), representing its global importance, and \(\Delta D(i)\) captures local degree variation:\begin{equation*}\Delta D(i) = \sum_{j \in \mathcal{N}(i)} d_i \left| \frac{d_j - d_i}{\sum_{l \in \mathcal{N}(i)} d_l} \right|,\end{equation*}with \(\mathcal{N}(i)\) denoting the set of neighbors of node \(i\), and \(d_j\) the degree of neighbor \(j\).  The parameter \(μ \in [0,1]\) balances the contributions of the global (\(k\)-shell) and local (degree variation) measures. Ibnoulouafi
+ <i>
+  et al.
+ </i>
+ [2] suggest setting \(μ\) based on the relative entropies of the two distributions:\begin{equation*}μ = \frac{1 - E_1}{2 - E_1 - E_2},\end{equation*}where \(E_1\) and \(E_2\) are the entropies of the \(k\)-shell centrality and \(\Delta D(i)\) distributions, respectively.
 </p>
 <h3>
  References

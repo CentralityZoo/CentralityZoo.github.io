@@ -16,39 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   node information dimension
  </i>
- (NID) is a centrality measure for identifying influential nodes based on the local dimension framework [2]. Let \(d_{\max}(i) = \max_j d_{ij}\) denote the maximal shortest-path distance between node \(i\) and all other nodes in the network. Similar to the local dimension (LD) in [3], the local dimension coefficient \(d_j(r)\) is computed for each topological distance scale \(r = 1, \dots, d_{\max}(i)\) as
- <br/>
- \[
- <br/>
- d_j(r) = j \frac{n_r(j)}{B_r(j)}, \quad \forall j = 1, \dots, S_i(r),
- <br/>
- \]
- <br/>
- where \(B_r(j)\) is the number of nodes within distance \(j\) from node \(i\) with respect to topological distance scale \(r\), \(n_r(j)\) is the number of nodes at exact distance \(j\) from node \(i\), and \(S_i(r) = \lceil d_{\max}(i)/r \rceil\).
- <br/>
- The information entropy of node \(i\) at distance \(r\) is
- <br/>
- \[
- <br/>
- I_i(r) = - \sum_{j=1}^{S_i(r)} \frac{d_j(r)}{\sum_{k=1}^{S_i(r)} d_k(r)} \ln \frac{d_j(r)}{\sum_{k=1}^{S_i(r)} d_k(r)}.
- <br/>
- \]
- <br/>
- The node information dimension of node \(i\) is then defined as
- <br/>
- \[
- <br/>
- c_{\textsc{NID}}(i) = -\lim_{r \to 0} \frac{I_i(r)}{\ln r}.
- <br/>
- \]
- <br/>
- The NID centrality of node \(i\) is estimated numerically as the slope of the linear regression of \(I_i(r)\) against \(\ln r\).
- <br/>
+ (NID) is a centrality measure for identifying influential nodes based on the local dimension framework [2]. Let \(d_{\max}(i) = \max_j d_{ij}\) denote the maximal shortest-path distance between node \(i\) and all other nodes in the network. Similar to the local dimension (LD) in [3], the local dimension coefficient \(d_j(r)\) is computed for each topological distance scale \(r = 1, \dots, d_{\max}(i)\) as\[d_j(r) = j \frac{n_r(j)}{B_r(j)}, \quad \forall j = 1, \dots, S_i(r),\]where \(B_r(j)\) is the number of nodes within distance \(j\) from node \(i\) with respect to topological distance scale \(r\), \(n_r(j)\) is the number of nodes at exact distance \(j\) from node \(i\), and \(S_i(r) = \lceil d_{\max}(i)/r \rceil\). The information entropy of node \(i\) at distance \(r\) is\[I_i(r) = - \sum_{j=1}^{S_i(r)} \frac{d_j(r)}{\sum_{k=1}^{S_i(r)} d_k(r)} \ln \frac{d_j(r)}{\sum_{k=1}^{S_i(r)} d_k(r)}.\]The node information dimension of node \(i\) is then defined as\[c_{\textsc{NID}}(i) = -\lim_{r \to 0} \frac{I_i(r)}{\ln r}.\]The NID centrality of node \(i\) is estimated numerically as the slope of the linear regression of \(I_i(r)\) against \(\ln r\).
 </p>
 <h3>
  References

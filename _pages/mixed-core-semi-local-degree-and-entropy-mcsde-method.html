@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   mixed core, semi-local degree, and entropy
  </i>
- (MCSDE) method [2] is a variant of MCDE that replaces the standard degree \(d_i\) with the LocalRank (semi-local) centrality. For node \(i\), the centrality is defined as
- <br/>
- \[
- <br/>
- c_{MCSDE}(i) = α k_s(i) + β \ c_{\mathrm{LR}}(i) + γ H(i),
- <br/>
- \]
- <br/>
- where \(k_s(i)\) is the \(k\)-shell index, \(c_{\mathrm{LR}}(i)\) is the LocalRank centrality of node \(i\), which is defined in [3], \(α, β, γ\) are weights controlling the contributions of each component (Sheikhahmadi and Nematbakhsh [2] suggest \(α = β = γ = 1\)), and \(H(i)\) is the entropy of node \(i\):
- <br/>
- \[
- <br/>
- H(i) = \sum_{k=0}^{k_{\max}} p_k(i) \log_2 p_k(i),
- <br/>
- \]
- <br/>
- with \(k_{\max}\) being the maximum \(k\)-shell index in the network and \(p_k(i)\) denoting the fraction of neighbors of node \(i\) in the \(k\)th shell. MCSDE integrates semi-local neighborhood information with hierarchical node structure, improving the identification of nodes that are critical for spreading processes and network connectivity.
- <br/>
+ (MCSDE) method [2] is a variant of MCDE that replaces the standard degree \(d_i\) with the LocalRank (semi-local) centrality. For node \(i\), the centrality is defined as\[c_{MCSDE}(i) = α k_s(i) + β \ c_{\mathrm{LR}}(i) + γ H(i),\]where \(k_s(i)\) is the \(k\)-shell index, \(c_{\mathrm{LR}}(i)\) is the LocalRank centrality of node \(i\), which is defined in [3], \(α, β, γ\) are weights controlling the contributions of each component (Sheikhahmadi and Nematbakhsh [2] suggest \(α = β = γ = 1\)), and \(H(i)\) is the entropy of node \(i\):\[H(i) = \sum_{k=0}^{k_{\max}} p_k(i) \log_2 p_k(i),\]with \(k_{\max}\) being the maximum \(k\)-shell index in the network and \(p_k(i)\) denoting the fraction of neighbors of node \(i\) in the \(k\)th shell. MCSDE integrates semi-local neighborhood information with hierarchical node structure, improving the identification of nodes that are critical for spreading processes and network connectivity.
 </p>
 <h3>
  References

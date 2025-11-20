@@ -16,70 +16,22 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Multi-Attribute Ranking Method Based on Information Entropy
  </i>
- (MABIE) is a hybrid centrality measure that integrates both local and global information of a network using four classical centrality metrics: degree centrality (DC), harmonic centrality (HC), betweenness centrality (BC), and correlation centrality (CoC) [2].
- <br/>
- MABIE constructs an \(N \times 4\) multi-attribute node-importance decision matrix
- <br/>
- \[
- <br/>
- R =
- <br/>
- \begin{bmatrix}
- <br/>
- r_{11} &amp; r_{12} &amp; r_{13} &amp; r_{14} \\
- <br/>
- r_{21} &amp; r_{22} &amp; r_{23} &amp; r_{24} \\
- <br/>
- \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
- <br/>
- r_{N1} &amp; r_{N2} &amp; r_{N3} &amp; r_{N4} \\
- <br/>
- \end{bmatrix},
- <br/>
- \]
- <br/>
- where \(r_{ij} = \frac{c_j(i)}{\sum_{k=1}^N c_j(k)}\) and \(c_j(i)\) denotes the \(j\)-th centrality value of node \(i\), with \(j \in \{\mathrm{DC}, \mathrm{HC}, \mathrm{BC}, \mathrm{CoC}\}\). Thus, matrix \(R\) contains the normalized centrality values of all nodes.
- <br/>
- The information entropy vector \(E = (E_1, E_2, E_3, E_4)\) quantifies the information content of each centrality metric and is defined as
- <br/>
- \[
- <br/>
- E_j = -\frac{1}{\ln N} \sum_{i=1}^N r_{ij} \ln r_{ij}.
- <br/>
- \]
- <br/>
- Specifically, it measures the degree of differentiation among nodes with respect to each metric: higher entropy values correspond to a more uniform (and thus less informative) distribution of centrality values, whereas lower entropy values indicate greater variability and stronger discriminative power.
- <br/>
- The MABIE centrality of node \(i\) is then defined as a weighted linear combination of the normalized centrality measures:
- <br/>
- \[
- <br/>
- c_{\mathrm{MABIE}}(i) = \sum_{j=1}^4 w_j r_{ij},
- <br/>
- \]
- <br/>
- where the weight \(w_j\) represents the relative importance of the \(j\)-th centrality measure and is computed as
- <br/>
- \[
- <br/>
- w_j = \frac{1 - E_j}{\sum_{k=1}^{4} (1 - E_k)}.
- <br/>
- \]
- <br/>
- While Wenli
+ (MABIE) is a hybrid centrality measure that integrates both local and global information of a network using four classical centrality metrics: degree centrality (DC), harmonic centrality (HC), betweenness centrality (BC), and correlation centrality (CoC) [2]. MABIE constructs an \(N \times 4\) multi-attribute node-importance decision matrix\[R = \begin{bmatrix} r_{11} &amp; r_{12} &amp; r_{13} &amp; r_{14} \\r_{21} &amp; r_{22} &amp; r_{23} &amp; r_{24} \\ \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\ r_{N1} &amp; r_{N2} &amp; r_{N3} &amp; r_{N4} \\ \end{bmatrix},\]where \(r_{ij} = \frac{c_j(i)}{\sum_{k=1}^N c_j(k)}\) and \(c_j(i)\) denotes the \(j\)-th centrality value of node \(i\), with \(j \in \{\mathrm{DC}, \mathrm{HC}, \mathrm{BC}, \mathrm{CoC}\}\). Thus, matrix \(R\) contains the normalized centrality values of all nodes.The information entropy vector \(E = (E_1, E_2, E_3, E_4)\) quantifies the information content of each centrality metric and is defined as\[E_j = -\frac{1}{\ln N} \sum_{i=1}^N r_{ij} \ln r_{ij}.\]Specifically, it measures the degree of differentiation among nodes with respect to each metric: higher entropy values correspond to a more uniform (and thus less informative) distribution of centrality values, whereas lower entropy values indicate greater variability and stronger discriminative power.The MABIE centrality of node \(i\) is then defined as a weighted linear combination of the normalized centrality measures:\[c_{\mathrm{MABIE}}(i) = \sum_{j=1}^4 w_j r_{ij},\]where the weight \(w_j\) represents the relative importance of the \(j\)-th centrality measure and is computed as\[w_j = \frac{1 - E_j}{\sum_{k=1}^{4} (1 - E_k)}.\]While Wenli
+ <i>
+  \textit{et al.
+ </i>
+ } [2] originally considered four centrality measures, the MABIE framework can be extended to any number \(K\) of centrality metrics. Building on this concept, Zhang
  <i>
   et al.
  </i>
- [2] originally considered four centrality measures, the MABIE framework can be extended to any number \(K\) of centrality metrics. Building on this concept, Zhang et al. [3] proposed the
+ [3] proposed the
  <i>
   Multiple Local Attributes Weighted Centrality
  </i>
  (LWC). LWC extends the MABIE framework by incorporating local structural information through four metrics: degree, two-hop degree, clustering coefficient, and two-hop clustering coefficient (the sum of the clustering coefficients of a node's neighbors).
- <br/>
 </p>
 <h3>
  References

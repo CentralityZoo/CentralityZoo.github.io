@@ -16,31 +16,19 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   neighborhood centrality
  </i>
- quantifies the influence of a node by aggregating its own centrality and that of its neighbors up to \( n \) steps away [2]. Let \( f \) denote a benchmark centrality measure. Then, the neighborhood centrality \( c_{nc}(i) \) of node \( i \) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{nc}(i) = f(i) + \sum_{k=1}^n \sum_{j \in \mathcal{N}^{(k)}(i)} a^k f(j),
- <br/>
- \end{equation*}
- <br/>
- where \( a \in [0,1] \) is a decay parameter and \( \mathcal{N}^{(k)}(i) \) is the set of \( k \)-hop neighbors of node \( i \).
- <br/>
- Liu
+ quantifies the influence of a node by aggregating its own centrality and that of its neighbors up to \( n \) steps away [2]. Let \( f \) denote a benchmark centrality measure. Then, the neighborhood centrality \( c_{nc}(i) \) of node \( i \) is defined as\begin{equation*}c_{nc}(i) = f(i) + \sum_{k=1}^n \sum_{j \in \mathcal{N}^{(k)}(i)} a^k f(j),\end{equation*}where \( a \in [0,1] \) is a decay parameter and \( \mathcal{N}^{(k)}(i) \) is the set of \( k \)-hop neighbors of node \( i \).Liu
  <i>
-  et al.
+  \textit{et al.
  </i>
- [2] considered degree or \(k\)-shell centrality as the benchmark \( f \) and reported the highest performance for neighborhood centrality with \( n = 2 \) and \( a &gt; 0.2 \). When \( f \) is defined as the degree centrality with \( n = 2 \) and \( a = 0.2 \), the measure is referred to as the
+ } [2] considered degree or \(k\)-shell centrality as the benchmark \( f \) and reported the highest performance for neighborhood centrality with \( n = 2 \) and \( a &gt; 0.2 \). When \( f \) is defined as the degree centrality with \( n = 2 \) and \( a = 0.2 \), the measure is referred to as the
  <i>
   neighbor distance centrality
  </i>
  [3].
- <br/>
 </p>
 <h3>
  References

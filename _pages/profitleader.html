@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   ProfitLeader
  </i>
- (PL) centrality evaluates node importance based on the capacity to provide resources to neighbors [2]. For each neighbor \(j \in \mathcal{N}(i)\), the available resource from \(i\) to \(j\) is denoted \(AR(i,j)\), and the sharing probability based on similarity is \(SP(i,j)\). The centrality of \(i\) is defined as
- <br/>
- \[
- <br/>
- c_{PL}(i) = \sum_{j \in \mathcal{N}(i)} AR(i,j) \cdot SP(i,j)
- <br/>
- = \sum_{j \in \mathcal{N}(i)} \left( |\mathcal{N}(i)| {+} \sum_{k \in \mathcal{N}(i) \setminus \mathcal{N}(j)} |\mathcal{N}(k)| \right) \cdot \frac{|\mathcal{N}(i) {\cap} \mathcal{N}(j)|}{|\mathcal{N}(i) {\cup} \mathcal{N}(j)|},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of \(i\). Nodes achieve high centrality scores if they provide substantial resources to many similar neighbors, reflecting both connectivity and neighborhood overlap.
- <br/>
+ (PL) centrality evaluates node importance based on the capacity to provide resources to neighbors [2]. For each neighbor \(j \in \mathcal{N}(i)\), the available resource from \(i\) to \(j\) is denoted \(AR(i,j)\), and the sharing probability based on similarity is \(SP(i,j)\). The centrality of \(i\) is defined as\[c_{PL}(i) = \sum_{j \in \mathcal{N}(i)} AR(i,j) \cdot SP(i,j) = \sum_{j \in \mathcal{N}(i)} \left( |\mathcal{N}(i)| {+} \sum_{k \in \mathcal{N}(i) \setminus \mathcal{N}(j)} |\mathcal{N}(k)| \right) \cdot \frac{|\mathcal{N}(i) {\cap} \mathcal{N}(j)|}{|\mathcal{N}(i) {\cup} \mathcal{N}(j)|},\]where \(\mathcal{N}(i)\) denotes the set of neighbors of \(i\). Nodes achieve high centrality scores if they provide substantial resources to many similar neighbors, reflecting both connectivity and neighborhood overlap.
 </p>
 <h3>
  References

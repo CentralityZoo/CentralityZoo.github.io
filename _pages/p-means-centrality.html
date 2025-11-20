@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   <i>
@@ -28,25 +27,7 @@ search: true
  <i>
   p
  </i>
- -means centrality is then defined as
- <br/>
- \[
- <br/>
- c_{p\text{-means}}(i) =
- <br/>
- \begin{cases}
- <br/>
- \displaystyle \left( \frac{\sum_{j \neq i} d_{ji}^p}{N-1} \right)^{-\frac{1}{p}}, &amp; \text{if } p \neq 0,\\[2mm]
- <br/>
- \displaystyle \left( \prod_{j \neq i} d_{ji} \right)^{-\frac{1}{N-1}}, &amp; \text{if } p = 0,
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- where \(d_{ji}\) is the shortest-path distance from node \(j\) to node \(i\), and \(N\) is the total number of nodes.
- <br/>
- By varying \(p\), p-means centrality interpolates between several classical measures:
+ -means centrality is then defined as\[c_{p\text{-means}}(i) =\begin{cases} \displaystyle \left( \frac{\sum_{j \neq i} d_{ji}^p}{N-1} \right)^{-\frac{1}{p}}, &amp; \text{if } p \neq 0,\\[2mm]\displaystyle \left( \prod_{j \neq i} d_{ji} \right)^{-\frac{1}{N-1}}, &amp; \text{if } p = 0,\end{cases}\]where \(d_{ji}\) is the shortest-path distance from node \(j\) to node \(i\), and \(N\) is the total number of nodes.  By varying \(p\), p-means centrality interpolates between several classical measures:
  <ul>
   <li>
    \(p = 1\) corresponds to closeness centrality;
@@ -61,13 +42,11 @@ search: true
    \(p \to -\infty\) yields the same node ranking as degree centrality.
   </li>
  </ul>
- <br/>
  The performance of
  <i>
   p
  </i>
  -means centrality has been evaluated using the susceptible-infected-recovered (SIR) model. Additionally, Andrade and Rêgo [2] investigated the values of \(p\) for which p-means centrality satisfies the size, density, and score monotonicity axioms.
- <br/>
 </p>
 <h3>
  References

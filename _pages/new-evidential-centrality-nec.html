@@ -16,100 +16,18 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   New evidential centrality
  </i>
- (NEC) is a hybrid measure based on Dempster-Shafer evidence theory that combines a node's degree with the global network structure, as quantified by shortest path distances [2].
- <br/>
- NEC addresses limitations of the existing evidential centrality (EVC), which was originally designed for weighted networks [3].
- <br/>
- The concept of evidential centrality is analogous to multi-attribute decision making (MADM), in which multiple factors are combined to obtain a final ranking of nodes.
- <br/>
- For each node \(i\), NEC computes two basic probability assignments (BPAs): one based on degree and one based on shortest paths.
- <br/>
- The degree-based BPA is defined as
- <br/>
- \begin{equation*}
- <br/>
- M_k(i) = \bigl(m_{ki}(h), m_{ki}(l), m_{ki}(θ)\bigr),
- <br/>
- \end{equation*}
- <br/>
- where
- <br/>
- \[
- <br/>
- m_{ki}(h) = \frac{d_i - d_{\min}}{d_{\max} - d_{\min} + μ}, \quad
- <br/>
- m_{ki}(l) = \frac{d_{\max} - d_i}{d_{\max} - d_{\min} + μ}, \quad
- <br/>
- m_{ki}(θ) = 1 - m_{ki}(h) - m_{ki}(l),
- <br/>
- \]
- <br/>
- with \(d_i\) the degree of node \(i\), \(d_{\min}\) and \(d_{\max}\) the minimum and maximum degrees in the network, \(μ \in (0,1)\) a small constant, and \(θ = \{h,l\}\) the frame of discernment. Here, \(m_{ki}(h)\) and \(m_{ki}(l)\) represent the degrees of belief that node \(i\) has high or low influence based on its degree, while \(m_{ki}(θ)\) captures the remaining uncertainty.
- <br/>
- The shortest path-based BPA is defined as
- <br/>
- \begin{equation*}
- <br/>
- M_d(i) = \frac{1}{N} \sum_{j=1}^{N}
- <br/>
- \bigl(m^j_{di}(h), m^j_{di}(l), m^j_{di}(θ)\bigr),
- <br/>
- \end{equation*}
- <br/>
- where the mass functions for each target node \(j\) are
- <br/>
- \begin{align*}
- <br/>
- m^j_{di}(h) &amp;= \frac{d_{ij} - \min_k(d_{ik})}
- <br/>
- {\max_k(d_{ik}) - \min_k(d_{ik}) + ε},\\
- <br/>
- m^j_{di}(l) &amp;= \frac{\max_k(d_{ik}) - d_{ij}}
- <br/>
- {\max_k(d_{ik}) - \min_k(d_{ik}) + ε},\\
- <br/>
- m^j_{di}(θ) &amp;= 1 - m^j_{di}(h) - m^j_{di}(l),
- <br/>
- \end{align*}
- <br/>
- with \(d_{ij}\) denoting the shortest path distance from node \(i\) to node \(j\),
- <br/>
- \(ε \in (0,1)\), and \(k\) ranging over all nodes in the network.
- <br/>
- Wei et al.\ [3] use \(μ = ε = 0.5\).
- <br/>
- The combined influence of node \(i\) is obtained by merging the degree- and shortest path-based BPAs using a modified Dempster's rule of combination \(\oplus\):
- <br/>
- \begin{equation*}
- <br/>
- M(i) = M_k(i) \oplus M_d(i) = \bigl(m_i(h), m_i(l), m_i(θ)\bigr),
- <br/>
- \end{equation*}
- <br/>
- where \(m_i(h)\), \(m_i(l)\), and \(m_i(θ)\) denote the resulting masses assigned to hypotheses \(h\), \(l\), and \(θ\), respectively. This fusion of \(M_k(i)\) and \(M_d(i)\) produces a single BPA for node \(i\), integrating information from both local connectivity (degree) and global position (shortest paths).
- <br/>
- Finally, the NEC centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{NEC}}(i) = m_i(h) - m_i(l).
- <br/>
- \end{equation*}
- <br/>
- An extension of NEC, called
+ (NEC) is a hybrid measure based on Dempster-Shafer evidence theory that combines a node's degree with the global network structure, as quantified by shortest path distances [2]. NEC addresses limitations of the existing evidential centrality (EVC), which was originally designed for weighted networks [3]. The concept of evidential centrality is analogous to multi-attribute decision making (MADM), in which multiple factors are combined to obtain a final ranking of nodes. For each node \(i\), NEC computes two basic probability assignments (BPAs): one based on degree and one based on shortest paths. The degree-based BPA is defined as\begin{equation*}M_k(i) = \bigl(m_{ki}(h), m_{ki}(l), m_{ki}(θ)\bigr),\end{equation*}where\[m_{ki}(h) = \frac{d_i - d_{\min}}{d_{\max} - d_{\min} + μ}, \quadm_{ki}(l) = \frac{d_{\max} - d_i}{d_{\max} - d_{\min} + μ}, \quadm_{ki}(θ) = 1 - m_{ki}(h) - m_{ki}(l),\]with \(d_i\) the degree of node \(i\), \(d_{\min}\) and \(d_{\max}\) the minimum and maximum degrees in the network, \(μ \in (0,1)\) a small constant, and \(θ = \{h,l\}\) the frame of discernment. Here, \(m_{ki}(h)\) and \(m_{ki}(l)\) represent the degrees of belief that node \(i\) has high or low influence based on its degree, while \(m_{ki}(θ)\) captures the remaining uncertainty.The shortest path-based BPA is defined as\begin{equation*}M_d(i) = \frac{1}{N} \sum_{j=1}^{N} \bigl(m^j_{di}(h), m^j_{di}(l), m^j_{di}(θ)\bigr),\end{equation*}where the mass functions for each target node \(j\) are\begin{align*}m^j_{di}(h) &amp;= \frac{d_{ij} - \min_k(d_{ik})}{\max_k(d_{ik}) - \min_k(d_{ik}) + ε},\\m^j_{di}(l) &amp;= \frac{\max_k(d_{ik}) - d_{ij}}{\max_k(d_{ik}) - \min_k(d_{ik}) + ε},\\m^j_{di}(θ) &amp;= 1 - m^j_{di}(h) - m^j_{di}(l),\end{align*}with \(d_{ij}\) denoting the shortest path distance from node \(i\) to node \(j\), \(ε \in (0,1)\), and \(k\) ranging over all nodes in the network. Wei
+ <i>
+  et al.
+ </i>
+ \ [3] use \(μ = ε = 0.5\).The combined influence of node \(i\) is obtained by merging the degree- and shortest path-based BPAs using a modified Dempster's rule of combination \(\oplus\):\begin{equation*}M(i) = M_k(i) \oplus M_d(i) = \bigl(m_i(h), m_i(l), m_i(θ)\bigr),\end{equation*}where \(m_i(h)\), \(m_i(l)\), and \(m_i(θ)\) denote the resulting masses assigned to hypotheses \(h\), \(l\), and \(θ\), respectively. This fusion of \(M_k(i)\) and \(M_d(i)\) produces a single BPA for node \(i\), integrating information from both local connectivity (degree) and global position (shortest paths). Finally, the NEC centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{NEC}}(i) = m_i(h) - m_i(l).\end{equation*}An extension of NEC, called
  <i>
   Multi-Evidence Centrality
  </i>
- (MeC), was proposed by Mo and Deng in [4].
- <br/>
- MeC integrates four centrality measures: degree, betweenness, harmonic, and correlation within the evidential framework.
- <br/>
- Each measure contributes a basic probability assignment (BPA) reflecting different aspects of node importance, and the BPAs are fused using Dempster's rule of combination to compute a single, comprehensive centrality score for each node.
- <br/>
+ (MeC), was proposed by Mo and Deng in [4]. MeC integrates four centrality measures: degree, betweenness, harmonic, and correlation within the evidential framework. Each measure contributes a basic probability assignment (BPA) reflecting different aspects of node importance, and the BPAs are fused using Dempster's rule of combination to compute a single, comprehensive centrality score for each node.
 </p>
 <h3>
  References

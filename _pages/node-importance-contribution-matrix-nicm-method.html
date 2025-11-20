@@ -16,25 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   node importance contribution matrix
  </i>
- (NICM) method evaluates node influence by combining a node’s betweenness centrality with the contributions of its neighbors [2].
- <br/>
- For a node \(i\), the \textsc{NICM} centrality \(c_{\textsc{NICM}}(i)\) is defined as
- <br/>
- \[
- <br/>
- c_{\textsc{NICM}}(i) = c_b(i) + \sum_{j \in \mathcal{N}(i)} \frac{c_b(j)}{d_j},
- <br/>
- \]
- <br/>
- where \(c_b(i)\) is the betweenness centrality of node \(i\), \(d_j\) is the degree of neighbor node \(j\), and \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).
- <br/>
- The NICM measure captures both the node’s own centrality and the distributed influence of its neighbors, reflecting the combined effect of local connectivity and network position.
- <br/>
+ (NICM) method evaluates node influence by combining a node’s betweenness centrality with the contributions of its neighbors [2]. For a node \(i\), the \textsc{NICM} centrality \(c_{\textsc{NICM}}(i)\) is defined as\[c_{\textsc{NICM}}(i) = c_b(i) + \sum_{j \in \mathcal{N}(i)} \frac{c_b(j)}{d_j},\]where \(c_b(i)\) is the betweenness centrality of node \(i\), \(d_j\) is the degree of neighbor node \(j\), and \(\mathcal{N}(i)\) denotes the set of neighbors of node \(i\).  The NICM measure captures both the node’s own centrality and the distributed influence of its neighbors, reflecting the combined effect of local connectivity and network position.
 </p>
 <h3>
  References

@@ -16,22 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Malatya centrality
  </i>
- is a local centrality measure that evaluates a node's importance relative to the degrees of its neighbors [2]. For a node \(i\), it is defined as
- <br/>
- \[
- <br/>
- c_{Malatya}(i) = \sum_{j \in \mathcal{N}(i)} \frac{|\mathcal{N}(i)|}{|\mathcal{N}(j)|}=d_i\sum_{j \in \mathcal{N}(i)} \frac{1}{d_j},
- <br/>
- \]
- <br/>
- where \(\mathcal{N}(i)\) denotes the set of neighbors of nodes \(i\) and \(d_i\) is the degree of node \(i\).
- <br/>
- Malatya centrality assigns higher centrality to nodes that have more connections than their neighbors, highlighting nodes that are locally more connected than their immediate surroundings.
- <br/>
+ is a local centrality measure that evaluates a node's importance relative to the degrees of its neighbors [2]. For a node \(i\), it is defined as\[c_{Malatya}(i) = \sum_{j \in \mathcal{N}(i)} \frac{|\mathcal{N}(i)|}{|\mathcal{N}(j)|}=d_i\sum_{j \in \mathcal{N}(i)} \frac{1}{d_j},\]where \(\mathcal{N}(i)\) denotes the set of neighbors of nodes \(i\) and \(d_i\) is the degree of node \(i\). Malatya centrality assigns higher centrality to nodes that have more connections than their neighbors, highlighting nodes that are locally more connected than their immediate surroundings.
 </p>
 <h3>
  References

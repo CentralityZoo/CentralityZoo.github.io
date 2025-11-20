@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   neighborhood density
  </i>
- quantifies the connectivity among a node's neighbors [2]. Takes and Kosters observe that neighbors of prominent nodes tend to share more connections than those of regular nodes. For node \(i\), the neighborhood density \(c_{ND}(i)\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{ND}(i) = 1 - \sum_{j \in \mathcal{N}(i)} \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{(|\mathcal{N}(j)| - 1) |\mathcal{N}(i)|},
- <br/>
- \end{equation*}
- <br/>
- where \(|\mathcal{N}(i) \cap \mathcal{N}(j)|\) counts the number of neighbors shared by nodes \(i\) and \(j\), and the denominator normalizes the measure so that it is independent of the degrees of \(i\) and \(j\). The neighborhood density is minimal when all neighbors of \(i\) are fully connected, and increases as fewer neighbor pairs are connected.
- <br/>
+ quantifies the connectivity among a node's neighbors [2]. Takes and Kosters observe that neighbors of prominent nodes tend to share more connections than those of regular nodes. For node \(i\), the neighborhood density \(c_{ND}(i)\) is defined as\begin{equation*}c_{ND}(i) = 1 - \sum_{j \in \mathcal{N}(i)} \frac{|\mathcal{N}(i) \cap \mathcal{N}(j)|}{(|\mathcal{N}(j)| - 1) |\mathcal{N}(i)|},\end{equation*}where \(|\mathcal{N}(i) \cap \mathcal{N}(j)|\) counts the number of neighbors shared by nodes \(i\) and \(j\), and the denominator normalizes the measure so that it is independent of the degrees of \(i\) and \(j\). The neighborhood density is minimal when all neighbors of \(i\) are fully connected, and increases as fewer neighbor pairs are connected.
 </p>
 <h3>
  References

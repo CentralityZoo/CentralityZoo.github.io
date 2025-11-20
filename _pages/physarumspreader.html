@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   PhysarumSpreader
  </i>
@@ -28,32 +27,11 @@ search: true
  <i>
   Physarum polycephalum
  </i>
- [2]. Similarly to LeaderRank, PhysarumSpreader introduces a ground node \(g=N+1\) connected bidirectionally to every node. The weight \(w_{ig}\) of the link from node \(i\) to the ground node \(g\) is defined as
- <br/>
- \[
- <br/>
- w_{ig} =
- <br/>
- \begin{cases}
- <br/>
- \frac{\sum_{j=1}^{N} w_{ij}}{d_i}, &amp; \text{if } d_i &gt; 0,\\[2mm]
- <br/>
- 1, &amp; \text{if } d_i = 0,
- <br/>
- \end{cases}
- <br/>
- \]
- <br/>
- where \(d_i\) is the degree of node \(i\). The reverse weight \(w_{gi}\) is set equal to \(w_{ig}\) to allow bidirectional flux between node \(i\) and the ground node.
- <br/>
- PhysarumSpreader iteratively proceeds as follows:
- <br/>
+ [2]. Similarly to LeaderRank, PhysarumSpreader introduces a ground node \(g=N+1\) connected bidirectionally to every node. The weight \(w_{ig}\) of the link from node \(i\) to the ground node \(g\) is defined as\[w_{ig} =\begin{cases}\frac{\sum_{j=1}^{N} w_{ij}}{d_i}, &amp; \text{if } d_i &gt; 0,\\[2mm]1, &amp; \text{if } d_i = 0,\end{cases}\]where \(d_i\) is the degree of node \(i\). The reverse weight \(w_{gi}\) is set equal to \(w_{ig}\) to allow bidirectional flux between node \(i\) and the ground node.PhysarumSpreader iteratively proceeds as follows:
  <ol>
-  <br/>
   <li>
    Initialize all nodes (except the ground node) with a unit of resource: \(I_i(0) = 1\), \(\forall i \neq g\), and set the ground node’s score to zero: \(I_g(0) = 0\).
   </li>
-  <br/>
   <li>
    At each discrete time step \(k\), distribute each node’s flux to its neighbors along outgoing edges according to their weights \(Q_{ij}(k)\):
     \[
@@ -61,32 +39,26 @@ search: true
     \]
     where \(D_{ij}(k)\) is the conductivity of edge \((i,j)\) at time \(k\). Initially, \(D_{ij}(0) = 1\) for all edges.
   </li>
-  <br/>
   <li>
    Update the conductivity matrix based on the flux through each edge \((i,j)\) (\(i,j \neq g\)):
     \[
         D_{ij}(k+1) = \frac{D_{ij}(k) + Q_{ij}(k)}{2}.
     \]
   </li>
-  <br/>
   <li>
    Update the resource of each node according to the incoming flux:
     \[
         I_i(k+1) = \sum_{j=1}^{N+1} Q_{ji}(k) I_j(k).
     \]
   </li>
-  <br/>
   <li>
    Repeat steps 2--4 until a steady state \(t_c\) is reached. The centrality of node \(i\) is then
     \[
         c_{PS}(i) = I_i(t_c) + \frac{I_g(t_c)}{N}.
     \]
   </li>
-  <br/>
  </ol>
- <br/>
  PhysarumSpreader is applicable to both directed and undirected networks, and can handle weighted or unweighted edges. Nodes with high PhysarumSpreader centrality correspond to those that accumulate the most resource flux in the network, reflecting their structural importance and influence in propagating flow throughout the system.
- <br/>
 </p>
 <h3>
  References

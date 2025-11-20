@@ -16,28 +16,10 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  <i>
   Mediative effects centrality
  </i>
- (MEC) quantifies the extent to which a node channels or transmits the influence of other nodes, reflecting its mediating role within the network [2]. The MEC score of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{MEC}(i) = \frac{\sum_{k \neq i} \tilde{t}_{(k)i}}{N-1},
- <br/>
- \end{equation*}
- <br/>
- where \(\tilde{t}_{(k)i}\) quantifies the contribution of node \(i\) in transmitting the impersonal effects of node \(k\):
- <br/>
- \begin{equation*}
- <br/>
- \tilde{t}_{(k)i} = \frac{\sum_{j \neq i \neq k} t_{(k)ji}}{(N-2) t_{(k)ii}}.
- <br/>
- \end{equation*}
- <br/>
- Here, \(t_{(k)ji}\) is the \((i,j)\) entry of \(T_{(k)} = (I - W_{(k)})^{-1}\), where \(W_{(k)}\) is the \((N-1) \times (N-1)\) matrix obtained by removing the \(k\)th row and column from the \(N \times N\) row-normalized adjacency matrix \(W\).
- <br/>
+ (MEC) quantifies the extent to which a node channels or transmits the influence of other nodes, reflecting its mediating role within the network [2]. The MEC score of node \(i\) is defined as\begin{equation*}c_{MEC}(i) = \frac{\sum_{k \neq i} t̃_{(k)i}}{N-1},\end{equation*}where \(t̃_{(k)i}\) quantifies the contribution of node \(i\) in transmitting the impersonal effects of node \(k\):\begin{equation*}t̃_{(k)i} = \frac{\sum_{j \neq i \neq k} t_{(k)ji}}{(N-2) t_{(k)ii}}.\end{equation*}Here, \(t_{(k)ji}\) is the \((i,j)\) entry of \(T_{(k)} = (I - W_{(k)})^{-1}\), where \(W_{(k)}\) is the \((N-1) \times (N-1)\) matrix obtained by removing the \(k\)th row and column from the \(N \times N\) row-normalized adjacency matrix \(W\).
 </p>
 <h3>
  References

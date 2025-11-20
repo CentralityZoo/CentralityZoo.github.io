@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   message-passing approach
@@ -25,50 +24,11 @@ search: true
  <i>
   locally tree-like
  </i>
- , so that the infection events along different paths are approximately independent.
- <br/>
- Let \(H_{ij}\) denote the probability that node \(j\), reached by following an edge from node \(i\),
+ , so that the infection events along different paths are approximately independent.  Let \(H_{ij}\) denote the probability that node \(j\), reached by following an edge from node \(i\),
  <i>
   does not
  </i>
- trigger a large-scale epidemic, given the transmissibility \(T\). These probabilities satisfy the recursive relation
- <br/>
- \begin{equation*}
- <br/>
- H_{ij} = 1 - T + T \prod_{k \in \mathcal{N}(j) \setminus \{i\}} H_{jk},
- <br/>
- \end{equation*}
- <br/>
- where \(\mathcal{N}(j)\) is the set of neighbors of node \(j\). This equation can be solved iteratively for all links in the network.
- <br/>
- The probability that a seed node \(i\) triggers a global epidemic is then
- <br/>
- \begin{equation*}
- <br/>
- P_i = 1 - \prod_{j \in \mathcal{N}(i)} H_{ij},
- <br/>
- \end{equation*}
- <br/>
- which represents the likelihood that infection spreads from node \(i\) to a significant fraction of the network. Under the tree-like approximation, the expected fraction of nodes infected when an epidemic occurs starting from node \(i\) can be estimated as
- <br/>
- \begin{equation*}
- <br/>
- S_i = \frac{1}{N} \left( 1 + \sum_{\substack{j \neq i}} P_j \right),
- <br/>
- \end{equation*}
- <br/>
- where the sum approximates the contribution of all other nodes.
- <br/>
- Finally, an influence score for node \(i\) can be defined as
- <br/>
- \begin{equation*}
- <br/>
- ρ_i = P_i \, S_i,
- <br/>
- \end{equation*}
- <br/>
- which combines the probability that an epidemic occurs with the expected fraction of nodes affected. This measure provides a ranking of nodes according to their spreading potential within the network, under the locally tree-like assumption.
- <br/>
+ trigger a large-scale epidemic, given the transmissibility \(T\). These probabilities satisfy the recursive relation\begin{equation*}H_{ij} = 1 - T + T \prod_{k \in \mathcal{N}(j) \setminus \{i\}} H_{jk},\end{equation*}where \(\mathcal{N}(j)\) is the set of neighbors of node \(j\). This equation can be solved iteratively for all links in the network.  The probability that a seed node \(i\) triggers a global epidemic is then\begin{equation*}P_i = 1 - \prod_{j \in \mathcal{N}(i)} H_{ij},\end{equation*}which represents the likelihood that infection spreads from node \(i\) to a significant fraction of the network. Under the tree-like approximation, the expected fraction of nodes infected when an epidemic occurs starting from node \(i\) can be estimated as\begin{equation*}S_i = \frac{1}{N} \left( 1 + \sum_{\substack{j \neq i}} P_j \right),\end{equation*}where the sum approximates the contribution of all other nodes.  Finally, an influence score for node \(i\) can be defined as\begin{equation*}ρ_i = P_i \, S_i,\end{equation*}which combines the probability that an epidemic occurs with the expected fraction of nodes affected. This measure provides a ranking of nodes according to their spreading potential within the network, under the locally tree-like assumption.
 </p>
 <h3>
  References

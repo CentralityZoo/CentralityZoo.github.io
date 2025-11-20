@@ -16,7 +16,6 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   pivotal index
@@ -25,23 +24,11 @@ search: true
  <i>
   influence threshold
  </i>
- \(q_i\), which specifies the level of accumulated influence required for the node to become affected (e.g., \(q_i = 3\)).
- <br/>
- A subset of nodes \(\Omega(i) \subset \mathcal{N}\) is called
+ \(q_i\), which specifies the level of accumulated influence required for the node to become affected (e.g., \(q_i = 3\)).  A subset of nodes \(\Omega(i) \subset \mathcal{N}\) is called
  <i>
   critical
  </i>
- for node \(i\) if the total influence exerted by the members of \(\Omega(i)\) on \(i\) meets or exceeds its threshold value:
- <br/>
- \begin{equation*}
- <br/>
- \sum_{k \in \Omega(i)} w_{ki} \geq q_i,
- <br/>
- \end{equation*}
- <br/>
- where \(w_{ki}\) denotes the influence weight of node \(k\) on node \(i\).
- <br/>
- A node \(k\) is said to be
+ for node \(i\) if the total influence exerted by the members of \(\Omega(i)\) on \(i\) meets or exceeds its threshold value:\begin{equation*}\sum_{k \in \Omega(i)} w_{ki} \geq q_i,\end{equation*}where \(w_{ki}\) denotes the influence weight of node \(k\) on node \(i\).  A node \(k\) is said to be
  <i>
   pivotal
  </i>
@@ -49,32 +36,11 @@ search: true
  <i>
   pivotal influence index
  </i>
- \(c_{PI}(i)\) of node \(i\) is defined as the total number of pivotal groups for that node:
- <br/>
- \[
- <br/>
- c_{PI}(i) = \sum_{\Omega(i) \subseteq \mathcal{N}(i)} |\Omega(i)| \cdot |\Omega^{p}(i)|.
- <br/>
- \]
- <br/>
- Since the number of possible critical groups can grow exponentially with network size, resulting in high computational complexity, a practical variant of the pivotal index considers only subsets of size up to \(k\). Aleskerov and Yakuba [2] also proposed an
+ \(c_{PI}(i)\) of node \(i\) is defined as the total number of pivotal groups for that node:\[c_{PI}(i) = \sum_{\Omega(i) \subseteq \mathcal{N}(i)} |\Omega(i)| \cdot |\Omega^{p}(i)|.\]Since the number of possible critical groups can grow exponentially with network size, resulting in high computational complexity, a practical variant of the pivotal index considers only subsets of size up to \(k\). Aleskerov and Yakuba [2] also proposed an
  <i>
   order-\(k\) extension
  </i>
- of the pivotal index that accounts for indirect influences. In this extension, influence is evaluated over \((k{+}1)\)-hop neighborhoods, where link strength is defined as the maximum bottleneck capacity among all \((k{+}1)\)-length paths.
- <br/>
- For unweighted networks, the pivotal influence index \(c_{PI}(i)\) of node \(i\) simplifies to
- <br/>
- \[
- <br/>
- c_{PI}(i) = \bigl(\lceil q_i \rceil\bigr)^2 \binom{d_i}{\lceil q_i \rceil},
- <br/>
- \]
- <br/>
- where \(d_i\) denotes the degree of node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.
- <br/>
- The pivotal index has been applied in various contexts, including the identification of influential countries in global food trade networks [3] and oil trade networks [4], analysis of trade relations among economic sectors across countries [5], and bibliometric studies of publications on Parkinson’s disease [6].
- <br/>
+ of the pivotal index that accounts for indirect influences. In this extension, influence is evaluated over \((k{+}1)\)-hop neighborhoods, where link strength is defined as the maximum bottleneck capacity among all \((k{+}1)\)-length paths.  For unweighted networks, the pivotal influence index \(c_{PI}(i)\) of node \(i\) simplifies to\[c_{PI}(i) = \bigl(\lceil q_i \rceil\bigr)^2 \binom{d_i}{\lceil q_i \rceil},\]where \(d_i\) denotes the degree of node \(i\), and \(\lceil \cdot \rceil\) denotes the ceiling function.The pivotal index has been applied in various contexts, including the identification of influential countries in global food trade networks [3] and oil trade networks [4], analysis of trade relations among economic sectors across countries [5], and bibliometric studies of publications on Parkinson’s disease [6].
 </p>
 <h3>
  References

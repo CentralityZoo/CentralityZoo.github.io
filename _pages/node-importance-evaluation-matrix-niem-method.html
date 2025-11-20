@@ -16,23 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   node importance evaluation matrix
  </i>
- (NIEM) method assesses the relative importance of nodes in a network by integrating both degree and harmonic centrality measures [2]. This approach captures not only a node's local connectivity but also its accessibility to other nodes within the network.
- <br/>
- Formally, the NIEM centrality of node \(i\), denoted as \(c_{\mathrm{NIEM}}(i)\), is defined as
- <br/>
- \[
- <br/>
- c_{\mathrm{NIEM}}(i) = c_{h}(i) \cdot \left( \sum_{j \in \mathcal{N}(i)} \frac{c_{h}(j) \, d_j}{\langle d \rangle} \right),
- <br/>
- \]
- <br/>
- where \(c_{h}(i)\) is the harmonic centrality of node \(i\), \(d_i\) denotes its degree, \(\mathcal{N}(i)\) represents the set of its neighboring nodes, and \(\langle d \rangle\) is the average degree of the network. The first term \(c_h(i)\) reflects the global influence of node \(i\) based on shortest-path distances, while the summation term accounts for the contributions of its neighbors weighted by their degree and harmonic centrality. Nodes with high NIEM values are efficiently reachable and well connected to other central nodes.
- <br/>
+ (NIEM) method assesses the relative importance of nodes in a network by integrating both degree and harmonic centrality measures [2]. This approach captures not only a node's local connectivity but also its accessibility to other nodes within the network.Formally, the NIEM centrality of node \(i\), denoted as \(c_{\mathrm{NIEM}}(i)\), is defined as\[c_{\mathrm{NIEM}}(i) = c_{h}(i) \cdot \left( \sum_{j \in \mathcal{N}(i)} \frac{c_{h}(j) \, d_j}{\langle d \rangle} \right),\]where \(c_{h}(i)\) is the harmonic centrality of node \(i\), \(d_i\) denotes its degree, \(\mathcal{N}(i)\) represents the set of its neighboring nodes, and \(\langle d \rangle\) is the average degree of the network. The first term \(c_h(i)\) reflects the global influence of node \(i\) based on shortest-path distances, while the summation term accounts for the contributions of its neighbors weighted by their degree and harmonic centrality. Nodes with high NIEM values are efficiently reachable and well connected to other central nodes.
 </p>
 <h3>
  References

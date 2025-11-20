@@ -16,31 +16,25 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   partition-based spreaders identification (PBSI) method
  </i>
  is a community-aware algorithm for identifying influential nodes in a network [2]. It assumes that the network \(G\) has a community structure consisting of \(K\) communities, denoted by \(C_1, \dots, C_K\).  The PBSI procedure consists of two main steps:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Community detection and node ranking:
    </i>
    the network is partitioned into communities using a community detection algorithm, specifically the Louvain method. Within each community, nodes are ranked according to their gravity centrality [3].
   </li>
-  <br/>
   <li>
    <i>
     Spreader selection:
    </i>
    a total of \(m\) spreaders are selected from different communities. If \(m \leq K\), one node with the highest gravity centrality is chosen from each of the \(m\) largest communities. If \(m &gt; K\), a number of nodes \(n_i\) is selected from each community \(C_i\), proportional to its size, such that \(\sum_{i=1}^K n_i = m\). In all cases, the nodes with the highest gravity centrality within each community are selected.
   </li>
-  <br/>
  </ol>
- <br/>
 </p>
 <h3>
  References

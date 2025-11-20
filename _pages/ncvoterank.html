@@ -16,15 +16,12 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   NCVoteRank
  </i>
  centrality is a modification of VoteRank that incorporates the coreness values of neighbors into the voting process [2]. Each node \(i\) is represented by the tuple \((s_i, v_i)\), where \(s_i\) is the voting score and \(v_i\) is the voting ability, initialized as \((s_i, v_i) = (0, 1)\) for all \(i \in \mathcal{N}\). The voting procedure iteratively performs the following steps:
- <br/>
  <ol>
-  <br/>
   <li>
    <i>
     Vote:
@@ -39,14 +36,12 @@ search: true
    </i>
    -core (INK) score of node \(j\), which is defined in [3, 4], while \(θ\) is a parameter. Kumar and Panda [2] suggest \(θ = 0.5\).
   </li>
-  <br/>
   <li>
    <i>
     Select:
    </i>
    The node \(k\) with the highest voting score \(s_k\) is elected. Node \(k\) will not participate in subsequent voting turns, meaning its voting ability is set to zero (\(v_k = 0\)).
   </li>
-  <br/>
   <li>
    <i>
     Update:
@@ -57,11 +52,8 @@ search: true
     \end{equation*}
     where \(f = 1 / \langle d \rangle\) for 1-hop neighbors and \(f = 1 / (2 \langle d \rangle)\) for 2-hop neighbors, with \(\langle d \rangle\) denoting the average degree of the network.
   </li>
-  <br/>
  </ol>
- <br/>
  NCVoteRank identifies influential nodes by combining local coreness information with iterative voting, ensuring that nodes with high coreness and connectivity are prioritized while the influence of selected nodes propagates through their neighbors.
- <br/>
 </p>
 <h3>
  References

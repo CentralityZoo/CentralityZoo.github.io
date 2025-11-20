@@ -16,29 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  Lawyer [2] proposed a
  <i>
   modified version of the expected force
  </i>
- , denoted ExF\(^M\), which incorporates the degree \(d_i\) of the node \(i\) as
- <br/>
- \[
- <br/>
- c_{\text{ExF}^M}(i) = \log(α d_i) \, c_{\text{ExF}}(i),
- <br/>
- \]
- <br/>
- where \(α &gt; 1\) is a scaling parameter (e.g., \(α = 2\)) and \(c_{\text{ExF}}(i)\) is the original expected force of node \(i\), defined by
- <br/>
- \[
- <br/>
- c_{\text{ExF}}(i) = - \sum_{j=1}^J \frac{D_j}{\sum_{k=1}^J D_k} \log \frac{D_j}{\sum_{k=1}^J D_k}.
- <br/>
- \]
- <br/>
- Here, \(D_j\) denotes the degree of cluster \(j\), i.e., the total number of neighbors of nodes in the cluster, and \(j = 1, \dots, J\) enumerate all possible clusters of infected nodes after \(x=2\) transmission events, assuming no recovery. ExF\(^M\) thus adjusts the original expected force by giving additional weight to the seed node’s degree, capturing both its local connectivity and the potential spreading capacity of its early infections.
- <br/>
+ , denoted ExF\(^M\), which incorporates the degree \(d_i\) of the node \(i\) as\[c_{\text{ExF}^M}(i) = \log(α d_i) \, c_{\text{ExF}}(i),\]where \(α &gt; 1\) is a scaling parameter (e.g., \(α = 2\)) and \(c_{\text{ExF}}(i)\) is the original expected force of node \(i\), defined by\[c_{\text{ExF}}(i) = - \sum_{j=1}^J \frac{D_j}{\sum_{k=1}^J D_k} \log \frac{D_j}{\sum_{k=1}^J D_k}.\]Here, \(D_j\) denotes the degree of cluster \(j\), i.e., the total number of neighbors of nodes in the cluster, and \(j = 1, \dots, J\) enumerate all possible clusters of infected nodes after \(x=2\) transmission events, assuming no recovery. ExF\(^M\) thus adjusts the original expected force by giving additional weight to the seed node’s degree, capturing both its local connectivity and the potential spreading capacity of its early infections.
 </p>
 <h3>
  References

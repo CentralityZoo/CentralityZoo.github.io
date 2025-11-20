@@ -16,21 +16,11 @@ search: true
     ul { margin-left: 1.2em; }
 </style>
 <p>
- <br/>
  The
  <i>
   IMC method
  </i>
- is a centrality measure based on node contraction [2]. In node contraction, a node and its neighboring nodes are merged into a single new node. If a node is central, contracting it will result in a more compact network structure. The IMC centrality of node \(i\) is defined as
- <br/>
- \begin{equation*}
- <br/>
- c_{\mathrm{IMC}}(i) = 1 - \frac{\partial(G)}{\partial(G_{i})},
- <br/>
- \end{equation*}
- <br/>
- where \(\partial(G) = \frac{N-1}{\sum_{i \neq j} d_{ij}}\) is the agglomeration degree of the graph \(G\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\) and \(G_i\) denotes the graph obtained by removing node \(i\). A graph has a high agglomeration degree if its nodes are well connected, such that the average distance between nodes is small. Thus, nodes whose removal significantly reduces \(\partial(G)\) are considered more central according to the IMC measure.
- <br/>
+ is a centrality measure based on node contraction [2]. In node contraction, a node and its neighboring nodes are merged into a single new node. If a node is central, contracting it will result in a more compact network structure. The IMC centrality of node \(i\) is defined as\begin{equation*}c_{\mathrm{IMC}}(i) = 1 - \frac{\partial(G)}{\partial(G_{i})},\end{equation*}where \(\partial(G) = \frac{N-1}{\sum_{i \neq j} d_{ij}}\) is the agglomeration degree of the graph \(G\), \(d_{ij}\) is the shortest-path distance between nodes \(i\) and \(j\) and \(G_i\) denotes the graph obtained by removing node \(i\). A graph has a high agglomeration degree if its nodes are well connected, such that the average distance between nodes is small. Thus, nodes whose removal significantly reduces \(\partial(G)\) are considered more central according to the IMC measure.
 </p>
 <h3>
  References
